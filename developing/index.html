@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="../img/favicon.ico">
+
+    
+    <title>Developing - NHS BSA Digital</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link href="../css/highlight.min.css" rel="stylesheet">
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">NHS BSA Digital</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="..">Playbook</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../values/">Values</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../design/">Design</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Developing</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../about/">About</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../design/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../about/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#developing">Developing</a></li>
+            <li class="second-level"><a href="#source-control">Source control</a></li>
+                
+            <li class="second-level"><a href="#development-environment">Development environment</a></li>
+                
+                <li class="third-level"><a href="#builds">Builds</a></li>
+            <li class="second-level"><a href="#documentation">Documentation</a></li>
+                
+                <li class="third-level"><a href="#readme">README</a></li>
+                <li class="third-level"><a href="#comments">Comments</a></li>
+            <li class="second-level"><a href="#technology-choice">Technology choice</a></li>
+                
+            <li class="second-level"><a href="#clean-code">Clean code</a></li>
+                
+                <li class="third-level"><a href="#test-driven-development">Test Driven Development</a></li>
+                <li class="third-level"><a href="#bugs">Bugs</a></li>
+                <li class="third-level"><a href="#technical-debt">Technical debt</a></li>
+                <li class="third-level"><a href="#refactoring">Refactoring</a></li>
+                <li class="third-level"><a href="#style-guide">Style guide</a></li>
+            <li class="second-level"><a href="#continuous-integration">Continuous Integration</a></li>
+                
+                <li class="third-level"><a href="#automated-code-quality-checks">Automated code quality checks</a></li>
+                <li class="third-level"><a href="#code-reviews">Code reviews</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+<div class="watermark"></div>
+<h1 id="developing">Developing</h1>
+<h2 id="source-control">Source control</h2>
+<p>We follow <a href="https://www.gov.uk/service-manual/technology/maintaining-version-control-in-coding">GDS guidance on maintaining version controlled code</a>.</p>
+<p>We use <a href="https://git-scm.com/">Git</a> and <a href="https://gitlab.com/nhsbsa">Gitlab</a> for production code.
+We are migrating our legacy codebase from <a href="https://subversion.apache.org/">Subversion</a>.</p>
+<div class="admonition note">
+<p><a href="https://bsa2468.atlassian.net/wiki/spaces/DEVCOP/pages/1292731315/Git">Read more on Git setup</a></p>
+</div>
+<h2 id="development-environment">Development environment</h2>
+<p>We are agnostic on tool choice, but they must be configured to work well as a team (such as using agreed code styles). The most popular IDEs in use are Eclipse and IntelliJ. If you choose to use Eclipse, there is a pre-built version of Eclipse for Windows.</p>
+<div class="admonition note">
+<p><a href="https://bsa2468.atlassian.net/wiki/spaces/DEVCOP/pages/1288177029/Eclipse">Read more on Eclipse setup</a></p>
+</div>
+<h3 id="builds">Builds</h3>
+<p>We use <a href="https://maven.apache.org/">Maven</a> as our build tool.</p>
+<div class="admonition note">
+<p><a href="https://bsa2468.atlassian.net/wiki/spaces/DEVCOP/pages/1287980347/Maven">Read more on Maven setup</a></p>
+</div>
+<h2 id="documentation">Documentation</h2>
+<h3 id="readme">README</h3>
+<p>We document our code with a README at the root of each code repository.</p>
+<p>README should include:</p>
+<ol>
+<li>Description of the capabilities/features</li>
+<li>How to build</li>
+<li>How to configure</li>
+<li>How to run</li>
+</ol>
+<h3 id="comments">Comments</h3>
+<p>We follow 'Clean Code' rules for comments:</p>
+<ol>
+<li>Always try to explain yourself in code.</li>
+<li>Don't be redundant.</li>
+<li>Don't add obvious noise. This includes 'bugfix #' comments</li>
+<li>Don't use closing brace comments.</li>
+<li>Don't comment out code. Just remove.</li>
+<li>Use as explanation of intent.</li>
+<li>Use as clarification of code.</li>
+<li>Use as warning of consequences.</li>
+</ol>
+<h2 id="technology-choice">Technology choice</h2>
+<p>TODO</p>
+<h2 id="clean-code">Clean code</h2>
+<p>We recommend that every developer reads <a href="https://www.amazon.co.uk/dp/0132350882">Clean Code: A Handbook of Agile Software Craftsmanship</a> by Robert Martin (a.k.a. Uncle Bob).</p>
+<h3 id="test-driven-development">Test Driven Development</h3>
+<p>We strongly encourage Test Driven Development, but it is not enforced.</p>
+<div class="admonition note">
+<p class="admonition-title">Java</p>
+<p>We write unit tests in JUnit 4
+We </p>
+</div>
+<h3 id="bugs">Bugs</h3>
+<p>When we get things wrong, defects are raised in <a href="https://bsa2468.atlassian.net/secure/BrowseProjects.jspa">Jira</a>.</p>
+<p>We try to fix bugs within the same sprint. This is to avoid an ever growing backlog of bugs:
+Fix it or cancel as <em>low-priority/won't fix</em>.</p>
+<h3 id="technical-debt">Technical debt</h3>
+<p>We sometimes have to get things out of the door when we're not completely happy with the way it's working. When this happens we record it as <em>technical debt</em>.</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>We need a policy on how we handle tech debt</p>
+</div>
+<h3 id="refactoring">Refactoring</h3>
+<p>We try to follow the scouting rule of <em>leave it in a better state than we found it</em>.</p>
+<div class="admonition note">
+<p><a href="https://refactoring.guru/refactoring">Read more on refactoring</a></p>
+</div>
+<h3 id="style-guide">Style guide</h3>
+<p>We use the <a href="http://google.github.io/styleguide/">Google style guides</a>.</p>
+<h2 id="continuous-integration">Continuous Integration</h2>
+<p>We perform Continuous Integration builds on every push to a <em>feature</em> branch.</p>
+<p>A CI build will:</p>
+<ul>
+<li>Compile</li>
+<li>Unit Test (Maven Surefire)</li>
+<li>Integration Test (Maven Failsafe)</li>
+<li>Enforce automated code quality rules</li>
+</ul>
+<p>We use Gitlab-CI for our build pipeline. This allows us to run downstream dependencies such as a database in a Docker container.</p>
+<h3 id="automated-code-quality-checks">Automated code quality checks</h3>
+<p>We use SonarQube to enforce code quality according to static analysis and code test coverage quality gate.</p>
+<h3 id="code-reviews">Code reviews</h3>
+<p>We have a full blown explanation of the official code review process <a href="https://bsa2468.atlassian.net/wiki/spaces/DEVCOP/pages/748585914/How+to+make+changes+in+production+code+with+Gitlab+code+review">here</a>, which boils down to one thing: <em>Every code change is reviewed by someone who didn’t write it</em>. Gitlab provides a great interface for giving feedback, but nothing beats a face to face chat.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
