@@ -1,0 +1,66 @@
+{% extends "_nhsuk-template.njk" %}
+
+{% set htmlClasses = 'no-js' %}
+
+{% from "header/macro.njk" import header as appHeader %}
+{# {% from "breadcrumbs/macro.njk" import appBreadcrumbs %} #}
+{% from "footer/macro.njk" import footer as oglFooter %}
+
+
+{% block head %}
+<!--[if lte IE 8]><link href="/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<meta property="og:title" content="{{ title }}">
+{% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
+<meta property="og:image" content="/images/opengraph-image.png">
+{% endblock %}
+
+{% block pageTitle %}
+  {% if title %}{{ title }} - {% endif %}{{ app.serviceName or app.productName }} - NHSBSA
+{% endblock %}
+
+{% block header %}
+  {{ appHeader({
+    homepageUrl: app.url or "/",
+    productName: app.productName,
+    serviceName: app.serviceName
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% set mainClasses = mainClasses | default("nhsuk-main-wrapper--auto-spacing") %}
+
+{{ oglFooter({
+  "links": [
+    {
+      "URL": "https://www.nhs.uk/nhs-sites/",
+      "label": "NHS sites"
+    },
+    {
+      "URL": "https://www.nhs.uk/about-us/",
+      "label": "About us"
+    },
+    {
+      "URL": "https://www.nhs.uk/contact-us/",
+      "label": "Contact us"
+    },
+    {
+      "URL": "https://www.nhs.uk/about-us/sitemap/",
+      "label": "Sitemap"
+    },
+    {
+      "URL": "https://www.nhs.uk/our-policies/",
+      "label": "Our policies"
+    }
+  ]
+})}}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <script src="/javascripts/nhsuk.js"></script>
+    <script src="/javascripts/application.js"></script>
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

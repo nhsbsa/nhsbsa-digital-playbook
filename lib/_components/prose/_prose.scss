@@ -1,0 +1,209 @@
+.app-prose {
+  @include nhsuk-font($size: false);
+
+  h1:not([class]) {
+    @extend %nhsuk-heading-xl;
+    max-width: 40rem;
+  }
+
+  h2:not([class]) {
+    @extend %nhsuk-heading-l;
+    max-width: 40rem;
+  }
+
+  h3:not([class]) {
+    @extend %nhsuk-heading-m;
+    max-width: 40rem;
+  }
+
+  h4:not([class]) {
+    @extend %nhsuk-heading-s;
+    max-width: 40rem;
+  }
+
+  h5:not([class]) {
+    @include nhsuk-font($size: 19);
+    @include nhsuk-responsive-margin(4, "bottom");
+    margin-top: 0;
+    color: $nhsuk-secondary-text-color;
+  }
+
+  h6:not([class]) {
+    @include nhsuk-font($size: 16);
+    @include nhsuk-responsive-margin(4, "bottom");
+    margin-top: 0;
+    color: $nhsuk-secondary-text-color;
+  }
+
+  p,
+  dl,
+  blockquote p {
+    @extend %nhsuk-body-m;
+    max-width: 40rem;
+  }
+
+  > blockquote {
+    @extend .nhsuk-inset-text;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  abbr {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  code { 
+    // TODO color mixin not working here
+    background-color: #ffffff;
+    font-family: monospace;
+    padding: 2px nhsuk-spacing(1);
+    // this is also used for the text in the code snippets on _prism.scss
+    color: 	#d14;
+  }
+
+  mark {
+    background-color:	#ffeb3b;
+  }
+
+  strong,
+  b,
+  dt {
+    @include nhsuk-typography-weight-bold;
+  }
+
+  dd + dt {
+    margin-top: nhsuk-spacing(4);
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  ol {
+    @extend %nhsuk-list;
+    @extend %nhsuk-list--number;
+    max-width: 40rem;
+  }
+
+  ul:not([class]),
+  .table-of-contents ul {
+    @extend %nhsuk-list;
+    @extend %nhsuk-list--bullet;
+    max-width: 40rem;
+  }
+
+  a:not([class]) {
+    // TODO see if we need an nhsuk-link
+    @extend %govuk-link;
+  }
+
+  hr {
+    @extend %nhsuk-section-break;
+    @extend %nhsuk-section-break--visible;
+    @extend %nhsuk-section-break--xl;
+  }
+
+  table {
+    @extend .nhsuk-table;
+    @include nhsuk-responsive-margin(8, "bottom");
+    @include nhsuk-responsive-margin(8, "top");
+
+    tr {
+      @extend .nhsuk-table__row !optional;
+    }
+
+    tbody {
+      @extend .nhsuk-table__body !optional;
+    }
+
+    thead {
+      @extend .nhsuk-table__head !optional;
+    }
+
+    th {
+      // TODO see if we need an nhs style
+      @extend .govuk-table__header;
+      padding: nhsuk-spacing(2);
+    }
+
+    td {
+      // TODO see if we need an nhs style
+      @extend .govuk-table__cell;
+      padding: nhsuk-spacing(2);
+    }
+
+    td *:first-child {
+      margin-top: 0;
+    }
+
+    td *:last-child {
+      margin-bottom: 0;
+    }
+
+    th:first-child,
+    td:first-child {
+      padding-left: 0;
+    }
+  }
+
+  pre { 
+    // TODO nhsuk color mixin
+    @extend %nhsuk-body-m;
+    background-color: #ffffff;
+    padding: nhsuk-spacing(4);
+    overflow: scroll;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  pre + h2 {
+    padding-top: nhsuk-spacing(4);
+  }
+
+  pre + h3,
+  pre + h4 {
+    padding-top: nhsuk-spacing(2);
+  }
+
+  img {
+    @include nhsuk-responsive-margin(4, "bottom");
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    outline: 1px solid rgba($nhsuk-border-color, 0.5);
+    outline-offset: -1px;
+  }
+
+  .footnote-backref {
+    text-decoration: none;
+  }
+
+  .header-anchor {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: normal;
+    color: nhsuk-color("mid-grey");
+    margin-right: 0.1em;
+
+    @media (min-width: 1050px) {
+      position: absolute;
+      margin-left: -1em;
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $nhsuk-link-hover-color;
+    }
+  }
+
+  .table-of-contents {
+    > ul > li {
+      font-weight: bold;
+    }
+  }
+}

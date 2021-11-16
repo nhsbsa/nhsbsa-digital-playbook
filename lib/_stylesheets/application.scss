@@ -1,0 +1,5 @@
+$nhsuk-global-styles: true;
+
+@import "node_modules/nhsuk-frontend/packages/nhsuk";
+@import "node_modules/nhsuk-frontend/packages/core/all";
+@import "custom.scss";

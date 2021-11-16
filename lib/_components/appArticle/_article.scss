@@ -1,0 +1,22 @@
+.app-article__description {
+  color: $nhsuk-secondary-text-color;
+  margin: 0 0 nhsuk-spacing(2);
+}
+
+.app-article__body {
+  @include nhsuk-responsive-margin(8, "bottom");
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.app-article__footer {
+  @include nhsuk-font($size: 16, $line-height: 1.5);
+  border-top: 1px solid $nhsuk-border-color;
+  padding-top: nhsuk-spacing(2);
+  // TODO nhs version of this mixin
+  @include govuk-media-query($from: "tablet") {
+    max-width: 66%;
+  }
+}
