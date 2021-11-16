@@ -4,7 +4,8 @@
   "description": "Playbook for NHSBSA Digital projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nhsbsa/nhsbsa-digital-playbook/issues"
   },
-  "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme"
+  "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
