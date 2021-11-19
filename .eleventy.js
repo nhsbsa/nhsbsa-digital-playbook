@@ -1,4 +1,3 @@
-
 module.exports = function(eleventyConfig) {
     
   // Template libraries
@@ -8,6 +7,10 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
+  eleventyConfig.addPlugin(require('eleventy-plugin-toc'), {
+    tags: ['h2', 'h3'],
+    wrapper: 'div'
+  });
   eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
     outputDir: "_site/stylesheets"

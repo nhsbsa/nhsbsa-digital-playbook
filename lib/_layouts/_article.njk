@@ -15,7 +15,9 @@
     }
   }) %}
   <div class="nhsuk-grid-row">
-  
+    <aside class="nhsuk-grid-column-one-third sticky-nav">
+      {{ content | toc | safe }}
+    </aside>
     <div class="nhsuk-grid-column-two-thirds nhsbsa-layout__main">
       {{ appProse({
         prose: content

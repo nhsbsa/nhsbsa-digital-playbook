@@ -7,6 +7,12 @@ a, p, div, span {
   font-family: Frutiger W01, Arial, Sans-serif;
 }
 
+.sticky-nav {
+  position: sticky;
+  overflow: auto;
+  top: 40px;
+}
+
 /* links */
 a {
   color: #005eb8;
