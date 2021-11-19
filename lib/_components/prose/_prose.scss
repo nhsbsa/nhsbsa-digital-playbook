@@ -94,7 +94,7 @@
   }
 
   a:not([class]) {
-    // TODO see if we need an nhsuk-link
+    // TODO see if we need an govuk-link
     @extend %govuk-link;
   }
 
@@ -123,13 +123,13 @@
 
     th {
       // TODO see if we need an nhs style
-      @extend .govuk-table__header;
+      @extend .nhsuk-table__header !optional;
       padding: nhsuk-spacing(2);
     }
 
     td {
       // TODO see if we need an nhs style
-      @extend .govuk-table__cell;
+      @extend .nhsuk-table__cell !optional;
       padding: nhsuk-spacing(2);
     }
 

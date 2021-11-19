@@ -54,8 +54,8 @@ $icon-size: 40px;
     width: 100%;
     height: $icon-size;
     margin-bottom: 0; // BUG: Safari 10 on macOS seems to add an implicit margin.
-    padding: govuk-spacing(1);
-    padding-left: $icon-size - govuk-spacing(1);
+    padding: nhsuk-spacing(1);
+    padding-left: $icon-size - nhsuk-spacing(1);
     border: 2px solid govuk-colour("white");
     border-radius: 0; // Safari 10 on iOS adds implicit border rounding.
     background: transparent;
@@ -77,7 +77,7 @@ $icon-size: 40px;
   }
 
   .app-site-search__input--show-all-values {
-    padding: govuk-spacing(1) 34px govuk-spacing(1) govuk-spacing(1);
+    padding: nhsuk-spacing(1) 34px nhsuk-spacing(1) nhsuk-spacing(1);
     cursor: pointer;
   }
 
@@ -85,7 +85,7 @@ $icon-size: 40px;
     display: inline-block;
     position: absolute;
     z-index: -1;
-    top: govuk-spacing(2);
+    top: nhsuk-spacing(2);
     right: 8px;
     width: 24px;
     height: 24px;
@@ -126,7 +126,7 @@ $icon-size: 40px;
   .app-site-search__option {
     display: block;
     position: relative;
-    padding: govuk-spacing(2);
+    padding: nhsuk-spacing(2);
     border-bottom: solid govuk-colour("mid-grey");
     border-width: 1px 0;
     cursor: pointer;
@@ -195,12 +195,12 @@ $icon-size: 40px;
 
   .app-site-search--section {
     display: block;
-    @include govuk-font($size: 16);
+    @include nhsuk-font($size: 16);
     color: $govuk-secondary-text-colour;
   }
 
   .app-site-search__aliases {
-    margin-left: govuk-spacing(1);
+    margin-left: nhsuk-spacing(1);
 
     &::before {
       content: "(";
@@ -213,8 +213,8 @@ $icon-size: 40px;
 
   .app-site-search__separator {
     display: inline-block;
-    margin-right: govuk-spacing(1);
-    margin-left: govuk-spacing(1);
+    margin-right: nhsuk-spacing(1);
+    margin-left: nhsuk-spacing(1);
   }
 }
 

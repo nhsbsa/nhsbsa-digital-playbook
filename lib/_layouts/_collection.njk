@@ -1,7 +1,7 @@
 {% extends "_base.njk" %}
 
-{% from "contents-list/macro.njk" import contentsList %}
-{% from "pagination/macro.njk" import pagination as appPagination %}
+{% from "document-list/macro.njk" import appDocumentList %}
+{% from "appPagination/macro.njk" import appPagination %}
 {% from "prose/macro.njk" import appProse %}
 {% from "hero/macro.njk" import hero %}
 
@@ -25,7 +25,7 @@
             <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
               {{ posts.title or app.posts.title or "Posts" }}
             </h2>
-            {{ contentsList({
+            {{ appDocumentList({
               classes: "nhsuk-!-margin-bottom-6",
               items: pagination.items
             }) }}
