@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Test at the NHSBSA"
-description: "How we test at the NHSBSA"
-tags: home
+title: "Clean code"
+description: "How we write code at the NHSBSA"
+tags: dev
 ---
 
 ## Introduction
