@@ -1,0 +1,101 @@
+{% from "header/macro.njk" import header %}
+{% from "skip-link/macro.njk" import skipLink %}
+{% from "footer/macro.njk" import footer as oglFooter %}
+
+<!DOCTYPE html>
+<html lang="{{ htmlLang | default('en') }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="{{ scriptNonce }}">
+    
+    {# TO DO - Find out if need to replace or delete
+    <meta name="theme-color" content="{{ themeColor | default('#0b0c0c') }}"> {# Hardcoded value of $nhsuk-black #}
+    {# Ensure that older IE versions always render with the correct rendering engine #}
+    
+    <title{% if pageTitleLang %} lang="{{ pageTitleLang }}"{% endif %}>{% block pageTitle %}NHSBSA{% endblock %}</title>
+
+    <!-- New NHSUK asset and font -->
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    <!-- /. -->
+
+    {% block headIcons %}
+      <!-- NHS Icons -->
+      <link rel="shortcut icon" href="{{ baseUrl }}/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="{{ baseUrl }}/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="{{ baseUrl }}/favicons/favicon.svg" color="#005eb8">
+      <link rel="icon" sizes="192x192" href="{{ baseUrl }}/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="{{ baseUrl }}/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="{{ baseUrl }}/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="{{ baseUrl }}/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="{{ baseUrl }}/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="{{ baseUrl }}/favicons/largetile-310x310.png">
+    {% endblock %}
+
+    {% block head %}{% endblock %}
+    {# The default og:image is added below head so that scrapers see any custom metatags first, and this is just a fallback #}
+    {# image url needs to be absolute e.g. http://wwww.domain.com/.../open-graph.png #}
+    <meta property="og:image" content="{{ assetUrl | default('/assets') }}/images/open-graph.png">
+  </head>
+  <body class="{{ bodyClasses }}" {%- for attribute, value in bodyAttributes %} {{attribute}}="{{value}}"{% endfor %}>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% block bodyStart %}{% endblock %}
+
+    {% block skipLink %}
+      {{ skipLink({
+        href: '#main-content',
+        text: 'Skip to main content'
+      }) }}
+    {% endblock %}
+
+    {% block header %}
+      {{ header({}) }}
+    {% endblock %}
+
+    {% block main %}
+      {% block beforeContent %}{% endblock %}
+      <div class="nhsuk-width-container {{ containerClasses }}">
+        <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        {% block content %}{% endblock %}
+        </main>
+      </div>
+    {% endblock %}
+
+    {% block footer %}
+      {{ oglFooter({
+        "links": [
+        {
+        "URL": "https://www.nhs.uk/nhs-sites/",
+        "label": "NHS sites"
+        },
+        {
+        "URL": "https://www.nhs.uk/about-us/",
+        "label": "About us"
+        },
+        {
+        "URL": "https://www.nhs.uk/contact-us/",
+        "label": "Contact us"
+        },
+        {
+        "URL": "/sitemap",
+        "label": "Sitemap"
+        },
+        {
+        "URL": "https://www.nhs.uk/our-policies/",
+        "label": "Our policies"
+        }
+        ]
+        })}}
+    {% endblock %}
+
+    {% block bodyEnd %}{% endblock %}
+  </body>
+</html>

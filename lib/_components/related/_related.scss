@@ -1,0 +1,26 @@
+.app-related {
+  border-top: 2px solid nhsuk-color("blue");
+  padding-top: nhsuk-spacing(3);
+}
+
+.app-related__body {
+  @include nhsuk-font(16);
+}
+
+.app-related__list {
+  @extend %nhsuk-list;
+}
+
+.app-related__list-item {
+  @include nhsuk-font(16);
+  margin-top: nhsuk-spacing(3);
+}
+
+.app-related__list-item-title {
+  @include nhsuk-font(16);
+  margin: 0 0 nhsuk-spacing(1);
+}
+
+.app-related__list-item-description {
+  margin: 0 0 nhsuk-spacing(1);
+}

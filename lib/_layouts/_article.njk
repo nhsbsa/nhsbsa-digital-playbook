@@ -1,0 +1,37 @@
+{% extends "_base.njk" %}
+
+{% from "appArticle/macro.njk" import appArticle %}
+{% from "related/macro.njk" import appRelated %}
+{% from "prose/macro.njk" import appProse %}
+
+{% block content %}
+  {% call appArticle({
+    header: {
+      title: title | widont
+    },
+    footer: {
+      date: page.date,
+      modified: modified if modified
+    }
+  }) %}
+  <div class="nhsuk-grid-row">
+    <aside class="nhsuk-grid-column-one-third sticky-nav">
+      {{ content | toc | safe }}
+    </aside>
+    <div class="nhsuk-grid-column-two-thirds nhsbsa-layout__main">
+      {{ appProse({
+        prose: content
+      }) }}
+    </div>
+
+    {% if related %}
+    <div class="nhsuk-grid-column-one-third">
+      {{ appRelated({
+        title: related.title or "Related links",
+        items: related.items
+      }) }}
+    </div>
+    {% endif %}
+  </div>
+  {% endcall %}
+{% endblock %}
