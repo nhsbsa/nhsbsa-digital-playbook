@@ -23,11 +23,12 @@
         {% if pagination %}
           <section class="nhsuk-grid-column-two-thirds">
             <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
-              {{ posts.title or app.posts.title or "Posts" }}
+              {{ posts.title or app.posts.title or "Articles" }}
             </h2>
             {{ appDocumentList({
               classes: "nhsuk-!-margin-bottom-6",
-              items: pagination.items
+              items: pagination.items,
+              order: paginationOrder
             }) }}
             {{ appPagination({
               previous: {

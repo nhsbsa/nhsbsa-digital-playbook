@@ -3,6 +3,7 @@ layout: article
 title: "Clean code"
 description: "How we write code at the NHSBSA"
 tags: dev
+order: 10
 ---
 
 ## Introduction

@@ -27,8 +27,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'))
   eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'))
   eleventyConfig.addFilter('widont', require('./lib/_filters/widont'))
-
-  // pass through
+  eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'))
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/*.js": "/javascripts"});

@@ -6,4 +6,5 @@ pagination:
   data: collections.home
   size: 50
   alias: articles
+paginationOrder: home
 ---

@@ -1,6 +1,6 @@
 {% if params.items.length > 0 %}
   <ol class="app-document-list{%- if params.classes %} {{ params.classes }}{% endif %}">
-  {% for item in params.items %}
+  {% for item in params.items | sortByOrder(params.order) %}
     <li class="app-document-list__item">
       <h2 class="app-document-list__item-title">
         <a class="nhsuk-link" href="{{ item.url | url | pretty }}">{{ item.data.title }}</a>
