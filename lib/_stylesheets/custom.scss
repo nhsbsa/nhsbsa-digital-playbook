@@ -8,9 +8,18 @@ a, p, div, span {
 }
 
 .sticky-nav {
-  position: sticky;
   overflow: auto;
   top: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .sticky-nav {
+    position: sticky;
+    overflow: auto;
+    top: 40px;
+    margin-bottom: 0px;
+  }
 }
 
 /* links */
