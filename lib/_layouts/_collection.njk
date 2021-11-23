@@ -1,0 +1,66 @@
+{% extends "_base.njk" %}
+
+{% from "document-list/macro.njk" import appDocumentList %}
+{% from "appPagination/macro.njk" import appPagination %}
+{% from "prose/macro.njk" import appProse %}
+{% from "hero/macro.njk" import hero %}
+
+{% block main %}
+  {{ hero({
+    heading: "NHSBSA Digital Playbook",
+    text: "How we design, build and run services at the NHSBSA"
+  }) }}
+
+  <div class="nhsuk-width-container">
+    {% block beforeContent %}{% endblock %}
+    <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+    {% block content %}
+      {{ appProse({
+        prose: content
+      }) }}
+      <div class="nhsuk-grid-row">
+        {# Paginate posts if front matter includes the pagination key #}
+        {% if pagination %}
+          <section class="nhsuk-grid-column-two-thirds">
+            <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
+              {{ posts.title or app.posts.title or "Articles" }}
+            </h2>
+            {{ appDocumentList({
+              classes: "nhsuk-!-margin-bottom-6",
+              items: pagination.items,
+              order: paginationOrder
+            }) }}
+            {{ appPagination({
+              previous: {
+                text: "Previous",
+                href: pagination.href.previous
+              } if pagination.href.previous,
+              next: {
+                text: 'Next',
+                href: pagination.href.next
+              } if pagination.href.next,
+              selected: pagination.pageNumber,
+              items: pagination.hrefs
+            }) }}
+          </section>
+        {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
+        {% elif eleventyNavigation.key == "home" %}
+          <div class="nhsuk-grid-column-full">
+            <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
+              {{ sections.title or app.sections.title or "Sections" }}
+            </h2>
+          </div>
+          {% for item in collections.all | eleventyNavigation("home") %}
+            <section class="nhsuk-grid-column-one-half nhsuk-!-margin-bottom-6">
+              <h3 class="nhsuk-heading-m nhsuk-!-margin-bottom-1">
+                <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
+              </h3>
+              <p class="nhsuk-body">{{ item.excerpt }}</p>
+            </section>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endblock %}
+    </main>
+  </div>
+{% endblock %}
