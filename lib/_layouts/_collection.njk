@@ -22,7 +22,7 @@
         {# Paginate posts if front matter includes the pagination key #}
         {% if pagination %}
           <section class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
+            <h2 class="nhsuk-heading-l">
               {{ posts.title or app.posts.title or "Articles" }}
             </h2>
             {{ appCard({
@@ -45,13 +45,13 @@
         {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
         {% elif eleventyNavigation.key == "home" %}
           <div class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
+            <h2 class="nhsuk-heading-l">
               {{ sections.title or app.sections.title or "Sections" }}
             </h2>
           </div>
           {% for item in collections.all | eleventyNavigation("home") %}
-            <section class="nhsuk-grid-column-one-half nhsuk-!-margin-bottom-6">
-              <h3 class="nhsuk-heading-m nhsuk-!-margin-bottom-1">
+            <section class="nhsuk-grid-column-one-half">
+              <h3 class="nhsuk-heading-m">
                 <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
               </h3>
               <p class="nhsuk-body">{{ item.excerpt }}</p>

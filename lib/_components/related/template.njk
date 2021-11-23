@@ -1,4 +1,4 @@
-<aside class="app-related{%- if params.classes %} {{ params.classes }}{% endif %} nhsuk-!-display-none-print" role="complementary">
+<aside class="app-related{%- if params.classes %} {{ params.classes }}{% endif %}" role="complementary">
   <h2 class="nhsuk-heading-s nhsuk-!-margin-bottom-2" id="{{ params.name }}-title">{{ params.title }}</h2>
   {% if params.content.html or params.content.text %}
   <div class="nhsuk-body-s">
@@ -19,7 +19,7 @@
     {% endfor %}
     {% if params.more %}
       <li>
-        <a href="{{ params.more.href }}" class="nhsuk-link nhsuk-!-font-weight-bold">More <span class="nhsuk-visually-hidden">in {{ params.title }}</span></a>
+        <a href="{{ params.more.href }}" class="nhsuk-link">More <span class="nhsuk-visually-hidden">in {{ params.title }}</span></a>
       </li>
     {% endif %}
     </ul>
