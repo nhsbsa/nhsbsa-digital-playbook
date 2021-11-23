@@ -1,6 +1,6 @@
 {% extends "_base.njk" %}
 
-{% from "document-list/macro.njk" import appDocumentList %}
+{% from "appCard/macro.njk" import appCard %}
 {% from "appPagination/macro.njk" import appPagination %}
 {% from "prose/macro.njk" import appProse %}
 {% from "hero/macro.njk" import hero %}
@@ -21,12 +21,11 @@
       <div class="nhsuk-grid-row">
         {# Paginate posts if front matter includes the pagination key #}
         {% if pagination %}
-          <section class="nhsuk-grid-column-two-thirds">
+          <section class="nhsuk-grid-column-full">
             <h2 class="nhsuk-heading-l nhsuk-!-font-size-27">
               {{ posts.title or app.posts.title or "Articles" }}
             </h2>
-            {{ appDocumentList({
-              classes: "nhsuk-!-margin-bottom-6",
+            {{ appCard({
               items: pagination.items,
               order: paginationOrder
             }) }}
