@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'"
   },
   "repository": {
     "type": "git",
