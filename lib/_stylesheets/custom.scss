@@ -134,6 +134,14 @@ a.nhsuk-footer__list-item-link:visited {
   }
 }
 
+// Code blocks
+
+code,
+code > span,
+.token {
+  font-family: monospace !important;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
