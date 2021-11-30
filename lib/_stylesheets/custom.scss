@@ -11,14 +11,12 @@ a, p, div, span {
   overflow: auto;
   top: 40px;
   margin-bottom: 40px;
-  width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .sticky-nav {
     position: sticky;
     margin-bottom: 0px;
-    width: 33.33%;
   }
 }
 
@@ -66,6 +64,7 @@ a:focus {
   outline: 4px solid transparent;
   text-decoration: none;
 }
+/* /. */
 
 /* footer links */
 a.nhsuk-footer__list-item-link {
@@ -75,6 +74,7 @@ a.nhsuk-footer__list-item-link {
 a.nhsuk-footer__list-item-link:visited {
   color: #4c6272;
 }
+/* /. */
 
 /* search input */
 // space between header and input on smaller devices
@@ -115,6 +115,7 @@ a.nhsuk-footer__list-item-link:visited {
 {
   border-bottom: 2px solid #005eb8;
 }
+/* /. */
 
 // Style changes for the sidenav within a post
 @media only screen and (min-width: 898px) {
@@ -122,8 +123,7 @@ a.nhsuk-footer__list-item-link:visited {
     position: relative;
 
     &__main {
-      float: left;
-      width: 100%;
+      float: right;
     }
 
     .table-of-contents {
@@ -132,13 +132,6 @@ a.nhsuk-footer__list-item-link:visited {
       width: 280px;
     }
   }
-}
-
-@media only screen and (min-width: 1200px) {
- .nhsbsa-layout__main {
-   float: right;
-   width: 66.66%;
- }
 }
 
 // Code blocks
