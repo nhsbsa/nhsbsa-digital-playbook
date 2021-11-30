@@ -57,7 +57,15 @@
     {% endblock %}
 
     {% block header %}
-      {{ header({}) }}
+      {{ header({
+        "transactionalService": {
+            "name": "Register with a GP",
+            "href": "https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/"
+          },
+          "showNav": "false",
+          "showSearch": "false"
+        })
+      }}
     {% endblock %}
 
     {% block main %}

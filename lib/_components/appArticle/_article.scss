@@ -15,8 +15,4 @@
   @include nhsuk-font($size: 16, $line-height: 1.5);
   border-top: 1px solid $nhsuk-border-color;
   padding-top: nhsuk-spacing(2);
-  // TODO nhs version of this mixin
-  @include govuk-media-query($from: "tablet") {
-    max-width: 66%;
-  }
 }
