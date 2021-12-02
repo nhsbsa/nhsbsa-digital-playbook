@@ -4,6 +4,12 @@
 {% from "related/macro.njk" import appRelated %}
 {% from "prose/macro.njk" import appProse %}
 
+{% block header %}
+  {{ appArticleHeader({
+    containerClasses: "nhsuk-width-container-fluid"
+  }) }}
+{% endblock %}
+
 {% block content %}
   {% call appArticle({
     header: {
