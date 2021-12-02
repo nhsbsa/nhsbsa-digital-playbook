@@ -194,16 +194,15 @@ a.nhsuk-footer__list-item-link:visited {
 		clear: both;
 		margin-left: 408px;
 		width: calc(100% - 408px);
-	}
-	p {
-		font-size: 16px;
-		margin-bottom: 10px;
-		&:last-of-type {
-			margin-bottom: 0px;
+		p {
+			font-size: 16px;
+			margin-bottom: 10px;
+			&:last-of-type {
+				margin-bottom: 0px;
+			}
 		}
 	}
 }
-
 
 /* Code Examples */
 
@@ -269,6 +268,7 @@ pre[class*="language-"] {
 :not(pre)>code[class*="language-"],
 pre[class*="language-"] {
   	background: #fff;
+	border: 1px solid #aeb7bd;
 }
 
 :not(pre)>code[class*="language-"] {
@@ -285,7 +285,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-	color: #999;
+	color: #666;
 }
 
 .namespace {
@@ -334,7 +334,7 @@ pre[class*="language-"] {
 .token.regex,
 .token.important,
 .token.variable {
-	color: #e90;
+	color: #000080 !important;
 }
 
 .token.important,
