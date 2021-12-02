@@ -182,13 +182,21 @@ a.nhsuk-footer__list-item-link:visited {
 	}
 }
 
+.nhsbsa-article--date {
+	border-top: 1px solid #d8dde0;
+	padding-top: 16px;
+	width: 100%;
+}
+
 @media only screen and (min-width: 1200px) {
 	.nhsbsa-article--date {
 		float: left;
 		clear: both;
 		margin-left: 408px;
+		width: calc(100% - 408px);
 	}
 	p {
+		font-size: 16px;
 		margin-bottom: 10px;
 		&:last-of-type {
 			margin-bottom: 0px;
