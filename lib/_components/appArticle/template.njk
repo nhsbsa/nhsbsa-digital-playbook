@@ -1,10 +1,4 @@
 <div class="nhsuk-grid-row">
-  {% if params.header %}
-  <div class="nhsuk-grid-column-full">
-    <h1 class="nhsuk-heading-xl">{{ params.header.title }}</h1>
-  </div>
-  {% endif %}
-
   <div class="nhsuk-grid-column-full">
     {{- caller() if caller -}}
     
