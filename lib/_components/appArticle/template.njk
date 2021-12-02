@@ -7,16 +7,20 @@
 
   <div class="nhsuk-grid-column-full">
     {{- caller() if caller -}}
+    
+    {% if params.footer %}
+      <div class="nhsbsa-article--date">
+        {% if params.footer.date %}
+          <p>
+            Published <time datetime="{{ params.footer.date | date }}">{{ params.footer.date | date("d LLLL y") }}</time>
+          </p>
+        {% endif %}
+        {% if params.footer.modified %}
+          <p>
+            Last updated <time datetime="{{ params.footer.modified | date }}">{{ params.footer.modified | date("d LLLL y") }}</time>
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
-
-  {% if params.footer %}
-  <div class="nhsuk-grid-column-full">
-    {% if params.footer.date %}
-      Published <time datetime="{{ params.footer.date | date }}">{{ params.footer.date | date("d LLLL y") }}</time><br>
-    {% endif %}
-    {% if params.footer.modified %}
-      Last updated <time datetime="{{ params.footer.modified | date }}">{{ params.footer.modified | date("d LLLL y") }}</time>
-    {% endif %}
-  </footer>
-  {% endif %}
 </div>
