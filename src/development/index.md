@@ -8,6 +8,5 @@ collection_tag: dev
 pagination:
   data: collections.dev
   size: 50
-  alias: articles
 ---
 
