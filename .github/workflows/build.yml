@@ -29,7 +29,7 @@ jobs:
         with:
           publish_dir: ./_site/nhsbsa-digital-playbook
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
+          exclude_assets: '_redirects'
 
       - name: Deploy Netlify
         if: contains(github.ref, 'develop')

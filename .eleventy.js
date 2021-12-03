@@ -29,18 +29,21 @@ module.exports = function(eleventyConfig) {
     includeDoctype: true
 })
   // filters
-  eleventyConfig.addFilter('date', require('./lib/_filters/date'))
-  eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'))
-  eleventyConfig.addFilter('includes', require('./lib/_filters/includes'))
-  eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'))
-  eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'))
-  eleventyConfig.addFilter('slug', require('./lib/_filters/slug'))
-  eleventyConfig.addFilter('sort', require('./lib/_filters/sort'))
-  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'))
-  eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'))
-  eleventyConfig.addFilter('widont', require('./lib/_filters/widont'))
-  eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'))
+  eleventyConfig.addFilter('date', require('./lib/_filters/date'));
+  eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
+  eleventyConfig.addFilter('includes', require('./lib/_filters/includes'));
+  eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));
+  eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'));
+  eleventyConfig.addFilter('slug', require('./lib/_filters/slug'));
+  eleventyConfig.addFilter('sort', require('./lib/_filters/sort'));
+  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'));
+  eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'));
+  eleventyConfig.addFilter('widont', require('./lib/_filters/widont'));
+  eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'));
+
+  // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
+  eleventyConfig.addPassthroughCopy({"lib/_netlify": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/*.js": "/javascripts"});
 
