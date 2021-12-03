@@ -9,7 +9,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
   eleventyConfig.addPlugin(require('eleventy-plugin-toc'), {
     tags: ['h2', 'h3'],
-    wrapper: 'div'
+    wrapper: 'div',
+    wrapperClass: 'nhsbsa-sticky-nav__list'
   });
   eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
     watch: ['lib/_stylesheets/*.{scss,sass}'],

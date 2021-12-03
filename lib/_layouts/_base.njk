@@ -4,6 +4,7 @@
 {% set homeUrl = app.url or '/' | url %}
 
 {% from "header/macro.njk" import header as appHeader %}
+{% from "appArticleHeader/macro.njk" import appArticleHeader %}
 {# {% from "breadcrumbs/macro.njk" import appBreadcrumbs %} #}
 {% from "footer/macro.njk" import footer as oglFooter %}
 
@@ -17,7 +18,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  {% if title %}{{ title }} - {% endif %}{{ app.serviceName or app.productName }} - NHSBSA
+  {% if title %}{{ title }} {% endif %}{{ app.serviceName or app.productName }} - NHSBSA
 {% endblock %}
 
 {% block header %}
@@ -31,7 +32,8 @@
 {% block beforeContent %}
 {% endblock %}
 
-{% set mainClasses = mainClasses | default("nhsuk-main-wrapper--auto-spacing") %}
+{% set mainClasses = mainClasses %}
+{% set containerClasses = containerClasses | default("nhsuk-width-container-fluid") %}
 
 {{ oglFooter({
   "links": [

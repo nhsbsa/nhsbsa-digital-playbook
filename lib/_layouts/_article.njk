@@ -4,6 +4,12 @@
 {% from "related/macro.njk" import appRelated %}
 {% from "prose/macro.njk" import appProse %}
 
+{% block header %}
+  {{ appArticleHeader({
+    containerClasses: "nhsuk-width-container-fluid"
+  }) }}
+{% endblock %}
+
 {% block content %}
   {% call appArticle({
     header: {
@@ -14,11 +20,16 @@
       modified: modified if modified
     }
   }) %}
-  <div class="nhsuk-grid-row">
-    <aside class="nhsuk-grid-column-one-third sticky-nav">
+    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       {{ content | toc | safe }}
-    </aside>
-    <div class="nhsuk-grid-column-two-thirds nhsbsa-layout__main">
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <h1 class="nhsuk-heading-xl">
+        {{ title }}
+      </h1>
+      
       {{ appProse({
         prose: content
       }) }}
@@ -32,6 +43,5 @@
       }) }}
     </div>
     {% endif %}
-  </div>
   {% endcall %}
 {% endblock %}
