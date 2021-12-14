@@ -1,0 +1,20 @@
+{% extends "_base.njk" %}
+
+{% from "prose/macro.njk" import appProse %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    {% block beforeContent %}{% endblock %}
+    <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-three-quarters">
+                {% block content %}
+                {{ appProse({
+                    prose: content
+                }) }}
+                {% endblock %}            
+            </div>
+        </div>
+    </main>
+  </div>
+{% endblock %}
