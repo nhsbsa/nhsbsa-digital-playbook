@@ -79,6 +79,14 @@ Maven `artifact id` should follow `kebab-case` and this convention:
 
 > `{optional service sub-group}-{service}-{function}-{type}`
 
+ Unit tests run by Maven Surefire plugin should follow the convention:
+
+ > `*Test.java`
+
+Integration tests run by Maven Failsafe plugin should follow the convention:
+
+> `*IT.java`
+
 ### NPM
 
 Package.json `name` should be `kebab-case` with this convention:
