@@ -24,6 +24,8 @@ Reasons may include:
 
 Adhere to best practice secure logging techniques as defined in the [OWASP logging cheatsheet][owasp_logging_cheatsheet]
 
+We also use the [NCSC guidance for logging for security purposes][ncsc_logging_security_purposes]
+
 Logging must adhere to the [Protective Monitoring Standard][nhsbsa_protective_monitoring_standard]. In particular, consult the security focussed monitoring standard to understand the various security events that must be logged.
 
 ## Data protection
@@ -66,36 +68,6 @@ In Java, we use [Slf4J][java_slf4j] as our logging API, with [Logback][java_logb
 In Node, we use [Winston][node_winston] for logging.
 
 We use UTF-8 encoding and output in JSON for simpler integration into [Datadog][datadog], our centralised log collation service.
-
-Never print logging information direct to 'system output' except through configuration of a logging library. For instance, avoid statements like this:
-
-```java [g1:Java]
-System.out.println("A useful log statement");
-```
-
-```javascript [g1:Javascript]
-console.log("A useful log statement");
-```
-
-Logging libraries should provide data as arguments to log messages with placeholders. This has performance benefits in languages such as Java, but also allows data to be sanitised within the library. For instance, use this form:
-
-```java [g1:Java]
-logger.info("Here is some data - {}", data);
-```
-
-```javascript [g1:Javascript]
-logger.log('info', 'Here is some data -  %s', data);
-```
-
-and avoid this form:
-
-```java [g1:Java]
-logger.info("Here is some data - " + data);
-```
-
-```javascript [g1:Javascript]
-logger.log('info', 'Here is some data - ' + data);
-```
 
 ## Logging levels
 
@@ -148,7 +120,39 @@ The following meta information must not be logged:
   Client held session IDs should not be logged, as this opens a security risk. 
   If tracing session interactions is required, then it is permissable to log a secure hash of the session ID.
 
-## Content
+## Logging Guidance
+
+Never print logging information direct to 'system output' except through configuration of a logging library. For instance, avoid statements like this:
+
+```java [g1:Java]
+System.out.println("A useful log statement");
+```
+
+```javascript [g1:Javascript]
+console.log("A useful log statement");
+```
+
+Logging libraries should provide data as arguments to log messages with placeholders. This has performance benefits in languages such as Java, but more importantly it allows data to be sanitised within the library. For instance, use this form:
+
+```java [g1:Java]
+logger.info("Here is some data - {}", data);
+```
+
+```javascript [g1:Javascript]
+logger.log('info', 'Here is some data -  %s', data);
+```
+
+and avoid this form:
+
+```java [g1:Java]
+logger.info("Here is some data - " + data);
+```
+
+```javascript [g1:Javascript]
+logger.log('info', 'Here is some data - ' + data);
+```
+
+### Content
 
 Log entries should represent atomic events with enough contextual information to understand that event.
 
@@ -190,7 +194,7 @@ logger.info("State change to [{}] for case [{}]", case.getState(), case.getId())
 logger.info("State change to [%s] for case [%s]", case.state, case.id);
 ```
 
-## Error cases
+### Error cases
 
 Exceptions should be logged with a full stack trace
 
@@ -226,6 +230,7 @@ A review of log events must be undertaken prior to any minor release. A log revi
 ## References
 
 * [OWASP logging cheatsheet][owasp_logging_cheatsheet]
+* [NCSC guidance for logging for security purposes][ncsc_logging_security_purposes]
 * [Protective Monitoring Standard][nhsbsa_protective_monitoring_standard]
 * [ICO logging guidance][ico_logging_guidance]
 * [Guidance for Coding with Personal Data][nhsbsa_guidance_for_coding_with_personal_data]
@@ -236,6 +241,7 @@ A review of log events must be undertaken prior to any minor release. A log revi
 * [Datadog][datadog]
 
 [owasp_logging_cheatsheet]: <https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html>
+[ncsc_logging_security_purposes]: <https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes>
 [nhsbsa_protective_monitoring_standard]: <https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard>
 [ico_logging_guidance]: <https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-le-processing/accountability-and-governance/logging/>
 [nhsbsa_guidance_for_coding_with_personal_data]: <https://bsa2468.atlassian.net/wiki/spaces/KB/pages/659914927/Guidance+for+Coding+with+Personal+Data>

@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Peer review"
+description: "The process for reviewing changes in production code"
 tags: dev
 order: 10
 ---

@@ -67,7 +67,7 @@ Merge/pull requests should be raised with `natural` case and this convention:
 
 For language constructs refer to the standard language style guides.
 
-## Package managers
+## Package managers and build tools
 
 ### Maven
 
@@ -79,7 +79,7 @@ Maven `artifact id` should follow `kebab-case` and this convention:
 
 > `{optional service sub-group}-{service}-{function}-{type}`
 
- Unit tests run by Maven Surefire plugin should follow the convention:
+Unit tests run by Maven Surefire plugin should follow the convention:
 
  > `*Test.java`
 
