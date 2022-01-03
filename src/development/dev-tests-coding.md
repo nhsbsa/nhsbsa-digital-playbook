@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Writing clean tests"
-tags: dev
+tags: dev_testing
 order: 10
 ---
 For a great article on writing clean tests in Java, read this article:
@@ -18,11 +18,17 @@ Have you ever reviewed code and spent more time trying to understand the test co
 
 This page shows small improvements that can be made to lower the bar for comprehension.
 
-## Use succinct test names
+## Naming
 
-Test cases should be named using some form of BDD syntax. The usual `Given-When-Then` can be overly verbose. Consider using the more succinct `Should-When` syntax, or even simple `Should`.
+Fields SHOULD be named to clarify their meaning within the test.
 
-Here are some example test case names for a function that sorts by user email address
+When using mocking frameworks clearly identify mock objects and argument captors. E.g. Mocks can be prefixed with 'mock...' and Captors can be suffixed with '...Captor'
+
+### Naming test cases
+
+Test cases should be named using some form of BDD syntax. The usual `Given-When-Then` can be overly verbose. Consider using the more succinct `Should-When` syntax, or even a simple `Should`.
+
+Here are some example test case names against a function that sorts by user email address
 
 | Style | Example |
 | ----- | ------- |
@@ -35,7 +41,7 @@ Most importantly, the name should be unambiguous and clear.
 
 Some frameworks rely on method names to identify test cases. In others, such as JUnit4/5 we use annotations, and so there's no benefit to adding the keyword _test_.
 
-## Structure 'given-when-then' with comments
+## Structure 'given-when-then' code with comments
 
 Our test cases should use a standard BDD structure of:
 
@@ -76,7 +82,7 @@ Its a frequently used pattern to define test fixture data at the top of a class 
   If you were reading such a test, you'd probably skip all of the initialisation code and come back to it after having read the test cases themselves.
 * No explicit intent
   As you read the test cases, you will need to go back to the shared data and keep in your head what user1 and user2 are being used for. How they are used is down to the test case. The lack of intent from the field definitions means the reader has to keep this context in their head.
-  
+
 A better approach is to declare the fixture within the test.
 
 ## Create fixture data in factory methods
@@ -95,7 +101,7 @@ A very simple solution to this is to use simple factory methods at the bottom of
 Use methods with clear names and intent to create fixture data when it is needed.
 Name the created fixture objects to further clarify the intent within the test.
 
-### Use fixture data to test one thing
+## Test one thing
 
 If you adopt Test Driven Development (TDD) you should find that your test cases are lean, with just enough fixture data to test a single additional requirement.
 
@@ -106,6 +112,14 @@ Its important that the reader of a test only needs to see the data items that ar
 Consider what is actually needed to satisfy the case under test and nothing more.
 
 If you are worried about something else happening then write a test case for that specific scenario.
+
+## Make assertions with appropriate matchers
+
+Assertions should be simple and clear with failure messages that identify the error. This is done by selecting appropriate matchers.
+
+Be specific.
+
+It can be easier to learn and use just a few of the matchers in an assertion framework. But by taking some time to read all the options available, the failure messages can be much more informative.
 
 ## Avoid asserting equality with complex objects
 
@@ -122,13 +136,9 @@ Asserting equality with complex objects leads to these issues:
 
 Make assertions with appropriate matchers rather than comparing complex objects with equality.
 
-## Make assertions with appropriate matchers
+## Test DSL
 
-Assertions should be simple and clear with failure messages that identify the error. This is done by selecting appropriate matchers.
-
-Be specific.
-
-It can be easier to learn and use just a few of the matchers in an assertion framework. But by taking some time to read all the options available, the failure messages can be much more informative.
+A test Domain Specific Language is a useful technique that may be re-used across a test suite, removing boilerplate and improving clarity.
 
 ## References
 
