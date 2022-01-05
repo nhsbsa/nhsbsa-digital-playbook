@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Guidance for Coding with Personal Data"
+title: "Guidance for coding with personal data"
 tags: dev
 order: 11
 ---
