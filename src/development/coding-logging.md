@@ -53,7 +53,7 @@ From ICO guidance:
 
 Data used in log entries must not include Personally Identifiable Information except for internal system IDs. Logging IDs allows individuals to be identified if necessary by cross reference to a transactional data store. Access to production data stores is controlled.
 
-For full guidance on use of PII, refer to [Guidance for Coding with Personal Data][nhsbsa_guidance_for_coding_with_personal_data].
+For full guidance on use of PII, refer to [Guidance for coding with Personal Data](/development/coding-securely-personal-data).
 
 ## Tools
 
@@ -117,7 +117,7 @@ The following meta information should be logged:
 The following meta information must not be logged:
 
 * client session ID
-  Client held session IDs should not be logged, as this opens a security risk. 
+  Client held session IDs should not be logged, as this opens a security risk.
   If tracing session interactions is required, then it is permissable to log a secure hash of the session ID.
 
 ## Logging Guidance
@@ -244,7 +244,6 @@ A review of log events must be undertaken prior to any minor release. A log revi
 [ncsc_logging_security_purposes]: <https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes>
 [nhsbsa_protective_monitoring_standard]: <https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard>
 [ico_logging_guidance]: <https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-le-processing/accountability-and-governance/logging/>
-[nhsbsa_guidance_for_coding_with_personal_data]: <https://bsa2468.atlassian.net/wiki/spaces/KB/pages/659914927/Guidance+for+Coding+with+Personal+Data>
 [java_slf4j]: <https://www.slf4j.org/>
 [java_logback]: <https://logback.qos.ch/>
 [java_lombok]: <https://projectlombok.org/>

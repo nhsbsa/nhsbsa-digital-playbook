@@ -50,7 +50,7 @@ __But__ first consider, do you always want to run integration tests in your buil
 </profiles>
 ```
 
-You may now run integration tests by switching on the it profile:
+You may now run integration tests by switching on the `it` profile:
 
 ```bash
 mvn -Pit clean install
