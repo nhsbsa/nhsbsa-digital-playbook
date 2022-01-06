@@ -1,7 +1,7 @@
 {% extends "_base.njk" %}
 
 {% from "appArticle/macro.njk" import appArticle %}
-{% from "related/macro.njk" import appRelated %}
+{% from "appCard/macro.njk" import appCard with context %}
 {% from "prose/macro.njk" import appProse %}
 
 {% block header %}
@@ -30,18 +30,19 @@
         {{ title }}
       </h1>
       
-      {{ appProse({
+      {% call appProse({
         prose: content
+      }) -%}
+      {% if related %}
+      <h2 class="nhsuk-heading-l">
+        {{ related.title or "Related articles" }}
+      </h2>
+      {{ appCard({
+        items: collections[related.tag],
+        order: related.tag
       }) }}
+      {% endif %}
+      {%- endcall %}
     </div>
-
-    {% if related %}
-    <div class="nhsuk-grid-column-one-third">
-      {{ appRelated({
-        title: related.title or "Related links",
-        items: related.items
-      }) }}
-    </div>
-    {% endif %}
   {% endcall %}
 {% endblock %}

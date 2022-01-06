@@ -6,6 +6,8 @@ tags: [home, dev]
 order:
     dev: 1
     home: 100
+related:
+  tag: 11ty
 ---
 
 ## Introduction

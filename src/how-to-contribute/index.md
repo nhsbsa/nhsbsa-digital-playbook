@@ -1,10 +1,9 @@
 ---
 layout: article
 title: "How to contribute to the playbook"
-tags: home
+tags: [home, 11ty]
 order: 1000
 ---
-
 ## Information architecture
 
 The playbook is written using two _types_ of file:
