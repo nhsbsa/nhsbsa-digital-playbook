@@ -9,11 +9,9 @@
 							{{ item.data.title }}
 						</a>
 					</h2>
-
 					{% if item.data.description %}
 					<p class="nhsuk-card__description">{{ item.data.description | markdown("inline") | safe }}</p>
 					{% endif %}
-
 					{% if item.date %}
 					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="{{ item.date | date }}">{{ item.date | date("d LLLL y") }}</time>	
 					{% endif %}
