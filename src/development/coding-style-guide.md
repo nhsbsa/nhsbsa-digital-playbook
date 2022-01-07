@@ -1,8 +1,9 @@
 ---
 layout: article
-title: "Code style guide"
+title: "Style guides"
+description: "Setup formatting rules in your IDE right from the start"
 tags: dev
-order: 10
+order: 4
 ---
 All code should adopt the language specific style guide linked here. However, consistent code style within a repository codebase is preferable to piecemeal adoption of a standard. If your project has not yet adopted a standard style, reserve some _technical debt_ time to apply the style across all the codebase in one pass.
 

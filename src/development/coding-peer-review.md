@@ -3,7 +3,7 @@ layout: article
 title: "Peer review"
 description: "The process for reviewing changes in production code"
 tags: dev
-order: 10
+order: 8
 ---
 Here we define the process for reviewing changes in production code using Git and Gitlab.
 

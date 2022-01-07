@@ -1,12 +1,11 @@
 ---
-layout: collection
-title: "Testing by developers"
+layout: article
+title: "Testing"
+description: "We always write automated tests around our code"
 tags: dev
-order: 11
-collection_tag: dev_testing
-pagination:
-  data: collections.dev_testing
-  size: 50
+order: 6
+related:
+  tag: dev_testing
 ---
 ## Test scope for developers
 
