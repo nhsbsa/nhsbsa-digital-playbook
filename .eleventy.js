@@ -12,9 +12,13 @@ module.exports = function(eleventyConfig) {
     wrapper: 'div',
     wrapperClass: 'nhsbsa-sticky-nav__list'
   });
-  eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
+  eleventyConfig.addPlugin(require("eleventy-plugin-dart-sass"), {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
-    outputDir: "_site/stylesheets"
+    sassLocation: "lib/_stylesheets/",
+    sassIndexFile: "application.scss",
+    outDir: "_site/",
+    outPath: "stylesheets",
+    outFileName: "application.css"
   });
 
   // filters
