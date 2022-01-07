@@ -12,7 +12,7 @@
     
     
     
-    <title>Common advice  - NHSBSA
+    <title>Technologies used in the playbook  - NHSBSA
 </title>
 
     <!-- New NHSUK asset and font -->
@@ -37,8 +37,8 @@
 
 <!--[if lte IE 8]><link href="/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!--><link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-<meta property="og:title" content="Common advice">
-<meta property="og:description" name="description" content="This applies to everyone"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Technologies used in the playbook">
+<meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,45 +71,43 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#more">More</a></li><li><a href="#even-more">Even more</a></li><li><a href="#finally">Finally</a></li></ol>
+        <ol><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
       </div>
     </div>
 
     <div class="nhsbsa-article-content">
       <h1 class="nhsuk-heading-xl">
-        Common advice
+        Technologies used in the playbook
       </h1>
       
-<h2 id="introduction" tabindex="-1"><a class="header-anchor" href="#introduction">Introduction</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="more" tabindex="-1"><a class="header-anchor" href="#more">More</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="even-more" tabindex="-1"><a class="header-anchor" href="#even-more">Even more</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="finally" tabindex="-1"><a class="header-anchor" href="#finally">Finally</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      <h2 class="nhsuk-heading-l">
-        Related articles
-      </h2>
-      	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<h2 class="nhsuk-card__heading nhsuk-heading-m">
-						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/">
-							How to contribute to the playbook
-						</a>
-					</h2>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-06T14:36:46.306Z">6 January 2022</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
+<p>The playbook uses these technologies to generate the playbook.</p>
+<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
+<p>The source files for the Playbook are held in a <a href="https://git-scm.com/">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook">Github</a>.</p>
+<ul>
+<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Git tutorial</a></li>
+</ul>
+<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
+<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
+<ul>
+<li><a href="https://commonmark.org/help/tutorial/">Markdown tutorial</a></li>
+</ul>
+<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
+<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/">documentation</a> to find out what’s possible.</p>
+<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
+<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook">Github</a></li>
+<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Git tutorial</a></li>
+<li><a href="https://spec.commonmark.org/0.30/">Markdown</a></li>
+<li><a href="https://commonmark.org/help/tutorial/">Markdown tutorial</a></li>
+<li><a href="https://www.11ty.dev/docs/">Eleventy</a></li>
+</ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-01-06T14:36:46.306Z">6 January 2022</time>
+            Published <time datetime="2022-01-07T10:58:28.809Z">7 January 2022</time>
           </p>
       </div>
   </div>

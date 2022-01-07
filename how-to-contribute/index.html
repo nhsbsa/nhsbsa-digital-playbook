@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#information-architecture">Information architecture</a></li><li><a href="#writing-an-article-file">Writing an article file</a></li><li><a href="#writing-a-collection-file">Writing a collection file</a></li><li><a href="#using-tags-and-order-in-collections">Using tags and order in collections</a><ol><li><a href="#tags">Tags</a></li><li><a href="#order">Order</a></li><li><a href="#multiple-tags">Multiple tags</a></li></ol></li><li><a href="#tips">Tips</a><ol><li><a href="#adopt-clear-file-names">Adopt clear file names</a></li><li><a href="#use-directories-to-organise-the-articles">Use directories to organise the articles</a></li><li><a href="#use-headings-to-structure-content">Use headings to structure content</a></li></ol></li><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#information-architecture">Information architecture</a><ol><li><a href="#home-content">Home content</a></li><li><a href="#section-content">Section content</a></li><li><a href="#additional-content">Additional content</a></li></ol></li><li><a href="#writing-an-article-file">Writing an article file</a><ol><li><a href="#content">Content</a></li><li><a href="#linking-to-related-articles">Linking to related articles</a></li><li><a href="#using-tags-and-order">Using tags and order</a></li></ol></li><li><a href="#tips">Tips</a><ol><li><a href="#adopt-clear-file-names">Adopt clear file names</a></li><li><a href="#use-directories-to-organise-the-articles">Use directories to organise the articles</a></li><li><a href="#use-headings-to-structure-content">Use headings to structure content</a></li></ol></li><li><a href="#references">References</a></li></ol>
       </div>
     </div>
 
@@ -81,67 +81,89 @@
       </h1>
       
 <h2 id="information-architecture" tabindex="-1"><a class="header-anchor" href="#information-architecture">Information architecture</a></h2>
-<p>The playbook is written using two <em>types</em> of file:</p>
+<p>We have a Miro board that describes the intended structure for the Playbook.</p>
+<p>We generally have three levels in our heirarchy:</p>
 <ul>
-<li>
-<p>Article<br>
-An article contains the real content of the playbook.<br>
-We use <a href="https://commonmark.org/help/tutorial/">Markdown</a> to structure and format the content.</p>
+<li>Home</li>
+<li>Section</li>
+<li>Additional detail</li>
+</ul>
+<h3 id="home-content" tabindex="-1"><a class="header-anchor" href="#home-content">Home content</a></h3>
+<p>The home page displays a list of articles that are jumping off points into different sections. These include</p>
+<ul>
+<li><em>Role based content</em>
+<ul>
+<li>Delivery (including agile)</li>
+<li>Content Design</li>
+<li>Research</li>
+<li>Design</li>
+<li>Architecture</li>
+<li>Development</li>
+<li>Test</li>
+<li>Platform</li>
+<li>Support</li>
+</ul>
 </li>
-<li>
-<p>Collection<br>
-A collection contains links to a group of qsimilar articles. The articles are layed out as ‘cards’ showing the title, description and last modified date.</p>
+<li><em>People and ways of working content including</em>
+<ul>
+<li>Communities</li>
+<li>Our people</li>
+<li>Admin</li>
+<li>Meetings</li>
+</ul>
 </li>
 </ul>
-<p>Articles define the order in which they appear and can be shared across more than one collection using tags.</p>
+<h3 id="section-content" tabindex="-1"><a class="header-anchor" href="#section-content">Section content</a></h3>
+<p>Each section will contain further articles related to a section heading.</p>
+<h3 id="additional-content" tabindex="-1"><a class="header-anchor" href="#additional-content">Additional content</a></h3>
+<p>For more extensive and detailed content we may link from section articles into further specialist articles.</p>
+<p>For instance the <em>Developer/testing</em> section article links to articles about <em>writing clean tests</em>, or <em>writing integration tests</em>.</p>
 <h2 id="writing-an-article-file" tabindex="-1"><a class="header-anchor" href="#writing-an-article-file">Writing an article file</a></h2>
 <ul>
 <li>
-<p>Create a new file <em>somewhere</em> under the <code>/src</code> directory.</p>
+<p>Create a new file <em>somewhere</em> under the <code>/src</code> directory. Name it with a <code>.md</code> file extension.</p>
+<p>e.g. <code>my-article.md</code></p>
 </li>
 <li>
-<p>Add this standard snippet of text</p>
+<p>Add this standard snippet of text at the top</p>
 </li>
 </ul>
-<pre class="language-markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span><br><span class="token font-matter yaml language-yaml">layout: article<br>title: "Your title here"<br>description: "Your description here"<br>tags: your-tag-here<br>order: numeric-order</span><br><span class="token punctuation">---</span></span><br><span class="token title important"><span class="token punctuation">##</span> First heading</span></code></pre>
+<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span><br><span class="token key atrule">layout</span><span class="token punctuation">:</span> article<br><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Your title here"</span><br><span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Your description here"</span><br><span class="token key atrule">tags</span><span class="token punctuation">:</span> your<span class="token punctuation">-</span>tag<span class="token punctuation">-</span>here<br><span class="token key atrule">order</span><span class="token punctuation">:</span> numeric<span class="token punctuation">-</span>order<br><span class="token punctuation">---</span></code></pre>
 <ul>
 <li>
-<p>Amend the <a href="https://www.11ty.dev/docs/data-frontmatter/">frontmatter</a> with the correct <code>title</code>, <code>description</code>, <code>tags</code> and <code>order</code>.</p>
+<p>Amend the [frontmatter][11ty_frontmatter] with the correct <code>title</code>, <code>description</code>, <code>tags</code> and <code>order</code>.<br>
+<code>tags</code> and <code>order</code> control where this article will appear as related articles elsewhere in the site. This is covered later in this how-to.</p>
 </li>
 <li>
 <p>Write your content</p>
 </li>
 </ul>
-<h2 id="writing-a-collection-file" tabindex="-1"><a class="header-anchor" href="#writing-a-collection-file">Writing a collection file</a></h2>
+<h3 id="content" tabindex="-1"><a class="header-anchor" href="#content">Content</a></h3>
+<p>Content should come after the last <code>---</code> in the front matter and use <a href="https://spec.commonmark.org/0.30/">Markdown</a> syntax.</p>
+<p>Content is usually written in plain text using Markdown to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
+<ul>
+<li><a href="https://commonmark.org/help/tutorial/">Markdown tutorial</a></li>
+</ul>
+<h3 id="linking-to-related-articles" tabindex="-1"><a class="header-anchor" href="#linking-to-related-articles">Linking to related articles</a></h3>
+<p>You <em>can</em> link to other articles just by using the <a href="https://commonmark.org/help/tutorial/07-links.html">Markdown links</a> syntax in your prose.</p>
+<p>You can also display a group of related articles, by adding a ‘related’ attribute to your front matter:</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">related</span><span class="token punctuation">:</span><br>  <span class="token key atrule">tag</span><span class="token punctuation">:</span> another<span class="token punctuation">-</span>tag</code></pre>
+<p>In this example, we will display all articles that have the tag, <code>another-tag</code>. If you look at the bottom of this article, you can see how rfelated articles appear.</p>
+<h3 id="using-tags-and-order" tabindex="-1"><a class="header-anchor" href="#using-tags-and-order">Using tags and order</a></h3>
 <ul>
 <li>
-<p>Create a new directory <em>somewhere</em> under the <code>/src</code> directory</p>
+<p><strong>Tags</strong><br>
+The <code>tags</code> attribute should be defined if you want the file to appear in ‘related’ articles. For articles to appear on the homepage, use <code>home</code>.</p>
 </li>
 <li>
-<p>Create a file called <code>index.md</code> in that directory</p>
+<p><strong>Order</strong><br>
+The numeric <code>order</code> attribute should be defined to control where this article appears amongst others with the same tag… Low values come first.</p>
 </li>
 <li>
-<p>Add this standard snippet of text</p>
+<p><strong>Multiple tags</strong><br>
+You can define multiple tags using this syntax so that the file appears in multiple collections.</p>
 </li>
 </ul>
-<pre class="language-markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span><br><span class="token font-matter yaml language-yaml">layout: collection<br>title: "Your title here"<br>description: "Your description here"<br>tags: home<br>order: numeric-order<br>collection_tag: your-collection-tag<br>pagination:<br>    data: collections.your-collection-tag<br>    size: 50</span><br><span class="token punctuation">---</span></span><br><span class="token title important"><span class="token punctuation">##</span> First heading</span></code></pre>
-<ul>
-<li>
-<p>Amend the <a href="https://www.11ty.dev/docs/data-frontmatter/">frontmatter</a> with the correct <code>title</code>, <code>description</code>, <code>tags</code> and <code>order</code>.<br>
-Note that the <code>tags</code> and <code>order</code> attributes refer to the collection you want <em>this collection</em> to appear in. In most cases, you should use the <code>home</code> tag to show your new collection on the playbook homepage.</p>
-</li>
-<li>
-<p>Amend the <a href="https://www.11ty.dev/docs/data-frontmatter/">frontmatter</a> with the correct <code>collection_tag</code> and <code>pagination.data</code>.<br>
-The <code>pagination.data</code> value must start with <code>collection.</code> as this is part of the underlying framework.</p>
-</li>
-</ul>
-<h2 id="using-tags-and-order-in-collections" tabindex="-1"><a class="header-anchor" href="#using-tags-and-order-in-collections">Using tags and order in collections</a></h2>
-<h3 id="tags" tabindex="-1"><a class="header-anchor" href="#tags">Tags</a></h3>
-<p>The <code>tags</code> attribute should be defined in both file types (collection or article). If you want the file to appear in the homepage, use the <code>home</code> tag.</p>
-<h3 id="order" tabindex="-1"><a class="header-anchor" href="#order">Order</a></h3>
-<p>The numeric <code>order</code> attribute should be defined in both file types (collection or article). The value will be compared against the <code>order</code> of other articles in a collection to determine where it appears. Low values come first.</p>
-<h3 id="multiple-tags" tabindex="-1"><a class="header-anchor" href="#multiple-tags">Multiple tags</a></h3>
-<p>You can define multiple tags using this syntax so that the file appears in multiple collections.</p>
 <pre class="language-markdown"><code class="language-markdown">tags: [home, dev]</code></pre>
 <p>Sometimes you may want to apply a different order in the different collections however. In this case you should use this syntax:</p>
 <pre class="language-markdown"><code class="language-markdown">order:<br>    home: 1<br>    dev: 100</code></pre>
@@ -152,35 +174,34 @@ The <code>pagination.data</code> value must start with <code>collection.</code> 
 <h3 id="use-directories-to-organise-the-articles" tabindex="-1"><a class="header-anchor" href="#use-directories-to-organise-the-articles">Use directories to organise the articles</a></h3>
 <p>Directories aren’t specifically needed, but they make it easier for playbook authors to organise the information.</p>
 <h3 id="use-headings-to-structure-content" tabindex="-1"><a class="header-anchor" href="#use-headings-to-structure-content">Use headings to structure content</a></h3>
-<p><a href="https://commonmark.org/help/tutorial/04-headings.html">Headings</a> will display in the navigable <em>table of contents</em> and can be bookmarked by our users.</p>
-<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
-<p>The playbook uses these technologies to generate the playbook.</p>
-<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
-<p>The source files for the Playbook are held in a <a href="https://git-scm.com/">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook">Github</a>.</p>
-<ul>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Git tutorial</a></li>
-</ul>
-<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
-<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
-<ul>
-<li><a href="https://commonmark.org/help/tutorial/">Markdown tutorial</a></li>
-</ul>
-<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
-<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/">documentation</a> to find out what’s possible.</p>
-<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
+<p>[Headings][commonmark_tutorial_headings] will display in the navigable <em>table of contents</em> and can be bookmarked by our users.</p>
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
-<li><a href="https://git-scm.com/">Git</a></li>
-<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook">Github</a></li>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Git tutorial</a></li>
 <li><a href="https://spec.commonmark.org/0.30/">Markdown</a></li>
 <li><a href="https://commonmark.org/help/tutorial/">Markdown tutorial</a></li>
-<li><a href="https://www.11ty.dev/docs/">Eleventy</a></li>
 </ul>
+      <h2 class="nhsuk-heading-l">
+        Related articles
+      </h2>
+      	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<h2 class="nhsuk-card__heading nhsuk-heading-m">
+						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/playbook-technologies/">
+							Technologies used in the playbook
+						</a>
+					</h2>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-07T10:58:28.809Z">7 January 2022</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-01-06T14:36:46.306Z">6 January 2022</time>
+            Published <time datetime="2022-01-07T10:58:28.809Z">7 January 2022</time>
           </p>
       </div>
   </div>
