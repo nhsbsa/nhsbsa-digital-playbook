@@ -3,27 +3,58 @@ layout: article
 title: "How to contribute to the playbook"
 tags: [home, 11ty]
 order: 1000
+related:
+  tag: playbook
 ---
 ## Information architecture
 
-The playbook is written using two _types_ of file:
+We have a Miro board that describes the intended structure for the Playbook.
 
-* Article
-  An article contains the real content of the playbook.
-  We use [Markdown][commonmark_tutorial] to structure and format the content.
+We generally have three levels in our heirarchy:
 
-* Collection
-  A collection contains links to a group of qsimilar articles. The articles are layed out as 'cards' showing the title, description and last modified date.
+* Home
+* Section
+* Additional detail
 
-Articles define the order in which they appear and can be shared across more than one collection using tags.
+### Home content
+
+The home page displays a list of articles that are jumping off points into different sections. These include
+
+* _Role based content_
+  * Delivery (including agile)
+  * Content Design
+  * Research
+  * Design
+  * Architecture
+  * Development
+  * Test
+  * Platform
+  * Support
+* _People and ways of working content including_
+  * Communities
+  * Our people
+  * Admin
+  * Meetings
+
+### Section content
+
+Each section will contain further articles related to a section heading.
+
+### Additional content
+
+For more extensive and detailed content we may link from section articles into further specialist articles. 
+
+For instance the _Developer/testing_ section article links to articles about _writing clean tests_, or _writing integration tests_.
 
 ## Writing an article file
 
-* Create a new file _somewhere_ under the `/src` directory.
+* Create a new file _somewhere_ under the `/src` directory. Name it with a `.md` file extension.
 
-* Add this standard snippet of text
+  e.g. `my-article.md`
 
-```markdown
+* Add this standard snippet of text at the top
+
+```yaml
 ---
 layout: article
 title: "Your title here"
@@ -31,55 +62,44 @@ description: "Your description here"
 tags: your-tag-here
 order: numeric-order
 ---
-## First heading
 ```
 
 * Amend the [frontmatter][11ty_frontmatter] with the correct `title`, `description`, `tags` and `order`.
+  `tags` and `order` control where this article will appear as related articles elsewhere in the site. This is covered later in this how-to.
 
 * Write your content
 
-## Writing a collection file
+### Content
 
-* Create a new directory _somewhere_ under the `/src` directory
+Content should come after the last `---` in the front matter and use [Markdown][commonmark] syntax.
 
-* Create a file called `index.md` in that directory
+Content is usually written in plain text using Markdown to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of `.md`.
 
-* Add this standard snippet of text
+* [Markdown tutorial][commonmark_tutorial]
 
-```markdown
----
-layout: collection
-title: "Your title here"
-description: "Your description here"
-tags: home
-order: numeric-order
-collection_tag: your-collection-tag
-pagination:
-    data: collections.your-collection-tag
-    size: 50
----
-## First heading
+### Linking to related articles
+
+You _can_ link to other articles just by using the [Markdown links][commonmark_tutorial_links] syntax in your prose.
+
+You can also display a group of related articles, by adding a 'related' attribute to your front matter:
+
+```yaml
+related:
+  tag: another-tag
 ```
 
-* Amend the [frontmatter][11ty_frontmatter] with the correct `title`, `description`, `tags` and `order`.
-  Note that the `tags` and `order` attributes refer to the collection you want _this collection_ to appear in. In most cases, you should use the `home` tag to show your new collection on the playbook homepage.
+In this example, we will display all articles that have the tag, `another-tag`. If you look at the bottom of this article, you can see how rfelated articles appear.
 
-* Amend the [frontmatter][11ty_frontmatter] with the correct `collection_tag` and `pagination.data`.
-  The `pagination.data` value must start with `collection.` as this is part of the underlying framework.
+### Using tags and order
 
-## Using tags and order in collections
+* __Tags__
+  The `tags` attribute should be defined if you want the file to appear in 'related' articles. For articles to appear on the homepage, use `home`.
 
-### Tags
+* __Order__
+  The numeric `order` attribute should be defined to control where this article appears amongst others with the same tag.. Low values come first.
 
-The `tags` attribute should be defined in both file types (collection or article). If you want the file to appear in the homepage, use the `home` tag.
-
-### Order
-
-The numeric `order` attribute should be defined in both file types (collection or article). The value will be compared against the `order` of other articles in a collection to determine where it appears. Low values come first.
-
-### Multiple tags
-
-You can define multiple tags using this syntax so that the file appears in multiple collections.
+* __Multiple tags__
+  You can define multiple tags using this syntax so that the file appears in multiple collections.
 
 ```markdown
 tags: [home, dev]
@@ -109,42 +129,11 @@ Directories aren't specifically needed, but they make it easier for playbook aut
 
 [Headings][commonmark_tutorial_headings] will display in the navigable _table of contents_ and can be bookmarked by our users.
 
-## Technologies
-
-The playbook uses these technologies to generate the playbook.
-
-### Git and Github
-
-The source files for the Playbook are held in a [Git][git] repository hosted at [Github][github_nhsbsa_digital_playbook].
-
-* [Git tutorial][git_tutorial]
-
-### Markdown
-
-Content is usually written in plain text using [Markdown][commonmark] to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of `.md`.
-
-* [Markdown tutorial][commonmark_tutorial]
-
-### Eleventy
-
-We use a tool called _Eleventy_ to generate the playbook documentation. If you need more functionality than we've described here, take a look at their [documentation][11ty] to find out what's possible.
-
-If you want to enhance the playbook with more advanced features, you'll find most of the source under the `/lib` folder in Github.
-
 ## References
 
-* [Git][git]
-* [Github][github_nhsbsa_digital_playbook]
-* [Git tutorial][git_tutorial]
 * [Markdown][commonmark]
 * [Markdown tutorial][commonmark_tutorial]
-* [Eleventy][11ty]
 
-[github_nhsbsa_digital_playbook]: <https://github.com/nhsbsa/nhsbsa-digital-playbook>
-[Git]: <https://git-scm.com/>
-[git_tutorial]: <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
 [commonmark]: <https://spec.commonmark.org/0.30/>
 [commonmark_tutorial]: <https://commonmark.org/help/tutorial/>
-[commonmark_tutorial_headings]: <https://commonmark.org/help/tutorial/04-headings.html>
-[11ty]: <https://www.11ty.dev/docs/>
-[11ty_frontmatter]: <https://www.11ty.dev/docs/data-frontmatter/>
+[commonmark_tutorial_links]: <https://commonmark.org/help/tutorial/07-links.html>
