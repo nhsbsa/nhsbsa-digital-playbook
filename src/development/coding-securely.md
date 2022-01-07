@@ -1,41 +1,14 @@
 ---
 layout: article
 title: "Secure development"
-tags: dev
-order: 11
+description: "Security is everyone's responsibility"
+tags: [dev, security]
+order: 
+  dev: 2
+  security: 1
+related:
+  tag: dev-security
 ---
-## Who should I talk to about Security in the NHSBSA?
-
-'Security' is a wide ranging topic, and the NHSBSA have a number of different roles to support us build and deliver our services securely.
-
-### Information Security
-
-Information Security are responsible for:
-
-* Handling security incidents
-  * [Raise a security incident][nhsbsa_report_security_incident]
-  * [Report a phishing attempt][nhsbsa_phishing]
-* Security assurance
-  * [NHSBSA security policies, standards and guidance][nhsbsa_security_policies_standards_guidance]
-  * [Request security assurance][nhsbsa_request_security_assurance]
-  * [Find out about our secure data transfer service, EGRESS][nhsbsa_security_egress]
-* Business continuity
-
-### Information Governance
-
-Information Governance (IG) are responsible for
-
-* Data protection / GDPR requirements
-* Data Protection Impact Assessments
-  * [Find out about DPIAs][nhsbsa_security_dpia]
-
-### Security Operations
-
-Security Operations (SecOps) are responsible for:
-
-* IT Health Checks
-* Security architecture
-
 ## NCSC guidance
 
 We follow NCSC's [8 principles of secure development and deployment][ncsc_8_principles].
@@ -108,13 +81,6 @@ Production code must be written in accordance with good security practices as de
 * [NCSC 8 principles of secure development and deployment][ncsc_8_principles]
 * [OWASP Top 10 web application security risks][owasp_top_ten_risks]
 * [OWASP top 10 proactive controls][owasp_top_ten_proactive_controls]
-
-[nhsbsa_report_security_incident]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/How%20to%20raise%20a%20Security%20Incident.aspx>
-[nhsbsa_phishing]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/Phishing,-What-is-it-.aspx>
-[nhsbsa_request_security_assurance]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/Request-Security-Assurance-Work.aspx>
-[nhsbsa_security_policies_standards_guidance]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/NHS-BSA-Information-Security-Policies.aspx?csf=1&e=yie8VY>
-[nhsbsa_security_dpia]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/DPIA.aspx>
-[nhsbsa_security_egress]: <https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/What-is-Egress-and-how-can-I-get-access-.aspx>
 
 [ncsc_8_principles]: <https://www.ncsc.gov.uk/collection/developers-collection>
 [ncsc_secure_development_is_everyones_concern]: <https://www.ncsc.gov.uk/collection/developers-collection/principles/secure-development-is-everyones-concern>

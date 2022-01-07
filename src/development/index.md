@@ -1,12 +1,11 @@
 ---
-layout: collection
-title: "Development at the NHSBSA"
+layout: article
+title: "Development"
 description: "How we develop at the NHSBSA"
 tags: home
 order: 10
-collection_tag: dev
-pagination:
-  data: collections.dev
-  size: 50
+related:
+  title: Articles
+  tag: dev
 ---
 

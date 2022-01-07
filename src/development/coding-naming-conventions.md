@@ -1,8 +1,9 @@
 ---
 layout: article
 title: "Naming conventions"
+description: "Naming things well from the start can avoid a lot of confusion as a project matures"
 tags: dev
-order: 10
+order: 3
 ---
 It is important to adopt a naming convention:
 

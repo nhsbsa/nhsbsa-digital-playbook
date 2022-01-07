@@ -1,8 +1,10 @@
 ---
 layout: article
-title: "Guidance for coding with personal data"
-tags: dev
-order: 11
+title: "Coding with personal data"
+tags: [dev-security, security]
+order: 
+  dev-security: 2
+  security: 2
 ---
 ## Glossary
 
@@ -159,7 +161,7 @@ Considerations
 
 ### Is Personal Data secured?
 
-Transport and storage of Personal Data must be secure. It  is beyond the scope of this guidance to go into depth on this topic. 
+Transport and storage of Personal Data must be secure. It  is beyond the scope of this guidance to go into depth on this topic.
 
 #### Recommended references
 

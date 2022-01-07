@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Coding"
-description: "Advice on writing code at the NHSBSA"
+description: "What do we value when writing code..."
 tags: dev
-order: 10
+order: 1
 ---
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 > _Martin Fowler_

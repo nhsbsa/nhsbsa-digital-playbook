@@ -2,7 +2,7 @@
 layout: article
 title: "Logging"
 tags: dev
-order: 10
+order: 5
 ---
 Understand the reason for logging within a component and write log statements appropriate to these reasons.
 

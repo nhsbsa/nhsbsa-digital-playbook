@@ -2,7 +2,7 @@
 layout: article
 title: "Code quality assurance"
 tags: dev
-order: 10
+order: 7
 ---
 ## SonarQube
 
