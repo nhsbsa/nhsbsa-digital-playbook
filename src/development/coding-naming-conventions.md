@@ -14,14 +14,96 @@ It is important to adopt a naming convention:
 
 Terms used in the naming conventions are:
 
-| Term | Description | example |
-| ---- | ----------- | ------- |
-| Service area | The high level area of a service | <ul><li>`citizen`</li><li>`coporate`</li><li>`primary-care`</li><li>`workforce`</li><li>`insight`</li><li>`platform`</li><li>`dhsc`</li></ul> |
-| Service sub-group | For grouping within a service area | <ul><li>`hwhc` for _Help with Health Costs_ sub-group within Citizen Services</li></ul> |
-| Service      | Adopt a succinct or abbreviated service name | <ul><li>`ihs` for _Immigration Health Surcharge_</li></ul> |
-| Function     | The operational function of a repository or component. | <ul><li>`apply` for an application form</li><li>`dwp` for an integration layer with Department for Works and Pensions</li></ul> |
-| Type         | The type of component, repository or change | For components:<ul><li>`frontend` or `ui` for a web frontend</li><li>`api` for an RESTful API</li><li>`lambda` for an AWS lambda</li><li>`prototype` for prototype code</li><li>`poc` for proof of concept</li></ul>For infrastructure:<ul><li>`config` for externalised configuration</li><li>`terraform` for terraform</li></ul>For tests:<ul><li>`acceptance-test`</li><li>`api-test`</li><li>`accessibility-test`</li><li>`performance-test`</li><li>`security-test`</li><li>`manual-tests`</li></ul>For managed changes:<ul><li>`feature`</li><li>`bug`</li></ul> |
-| Change ID | The identifier for a change, usually a Jira ticket such as a story, task, sub-task or bug | <ul><li>`LISD-1234` as an example task in the Low Income Scheme service</li></ul>
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Description</th>
+    <th>example</th>
+  </tr>
+  <tr>
+    <td>Service area</td>
+    <td>The high level area of a service</td>
+    <td>
+        <ul>
+            <li><code>citizen</code></li>
+            <li><code>coporate</code></li>
+            <li><code>primary-care</code></li>
+            <li><code>workforce</code></li>
+            <li><code>insight</code></li>
+            <li><code>platform</code></li>
+            <li><code>dhsc</code></li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Service sub-group</td>
+    <td>For grouping within a service area</td>
+    <td>
+      <ul>
+        <li><code>hwhc</code> for <em>Help with Health Costs</em> sub-group within Citizen Services</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Service</td>
+    <td>Adopt a succinct or abbreviated service name</td>
+    <td>
+      <ul>
+        <li><code>ihs</code> for <em>Immigration Health Surcharge</em></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Function</td>
+    <td>The operational function of a repository or component</td>
+    <td>
+      <ul>
+        <li><code>apply</code> for an application form</li>
+        <li><code>dwp</code> for an integration layer with Department for Works and Pensions</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>The type of component, repository or change</td>
+    <td>
+      For components:
+      <ul>
+        <li><code>frontend</code> or </code>ui</code> for a web frontend</li>
+        <li><code>api</code> for an RESTful API</li>
+        <li><code>lambda</code> for an AWS lambda</li>
+        <li><code>prototype</code> for prototype code</li>
+        <li><code>poc</code> for proof of concept</li>
+        </ul>For infrastructure:<ul>
+        <li><code>config</code> for externalised configuration</li>
+        <li><code>terraform</code> for terraform</li>
+        </ul>
+      For tests:
+      <ul>
+        <li><code>acceptance-test</code></li>
+        <li><code>api-test</code></li>
+        <li><code>accessibility-test</code></li>
+        <li><code>performance-test</code></li>
+        <li><code>security-test</code></li>
+        <li><code>manual-tests</code></li>
+      </ul>
+      For managed changes:
+      <ul>
+        <li><code>feature</code></li>
+        <li><code>bug</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Change ID</td>
+    <td>The identifier for a change, usually a Jira ticket such as a story, task, sub-task or bug</td>
+    <td>
+      <ul>
+        <li><code>LISD-1234</code> as an example task in the Low Income Scheme service</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### Case
 
