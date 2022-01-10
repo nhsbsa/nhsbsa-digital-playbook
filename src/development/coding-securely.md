@@ -36,7 +36,7 @@ We follow NCSC's [8 principles of secure development and deployment][ncsc_8_prin
 * [Protect your code repository][ncsc_protect_your_code_repository]
   TODO - Git repo access control
 
-*  [Secure the build and deployment pipeline][ncsc_secure_the_build_and_deployment_pipeline]
+* [Secure the build and deployment pipeline][ncsc_secure_the_build_and_deployment_pipeline]
   TODO - CI/CD
 
 * [Continually test your security][ncsc_continually_test_your_security]
