@@ -20,7 +20,14 @@ module.exports = function(eleventyConfig) {
     outPath: "stylesheets",
     outFileName: "application.css"
   });
-
+  eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
+    name: 'external-links',
+    regex: /^(([a-z]+:)|(\/\/))/i,  // Regex that test if href is external
+    target: "_blank",
+    rel: "noopener",
+    extensions: [".html"],
+    includeDoctype: true
+})
   // filters
   eleventyConfig.addFilter('date', require('./lib/_filters/date'))
   eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'))
