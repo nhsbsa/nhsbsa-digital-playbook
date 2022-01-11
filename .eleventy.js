@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
     name: 'external-links',
-    regex: /^(([a-z]+:)|(\/\/))/i,  // Regex that test if href is external
+    regex: /^((http[s]?:)|(\/\/))/i,  // Regex that test if href is external
     target: "_blank",
     rel: "noopener",
     extensions: [".html"],
