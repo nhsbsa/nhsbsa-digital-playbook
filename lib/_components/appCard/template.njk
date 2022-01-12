@@ -1,7 +1,7 @@
 {% if params.items.length > 0 %}
 	<ul class="nhsuk-grid-row nhsuk-card-group{%- if params.classes %} {{ params.classes }}{% endif %}">
 		{% for item in params.items | sortByOrder(params.order) %}
-		<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
 			<div class="nhsuk-card nhsuk-card--clickable">
 				<div class="nhsuk-card__content">
 					<h2 class="nhsuk-card__heading nhsuk-heading-m">
