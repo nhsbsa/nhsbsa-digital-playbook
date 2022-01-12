@@ -1,9 +1,6 @@
 name: Build Eleventy
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   build:
@@ -26,8 +23,18 @@ jobs:
           npm ci
           npm run build          
 
-      - name: Deploy
+      - name: Deploy GH Pages
+        if: contains(github.ref, 'main')
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_site/nhsbsa-digital-playbook
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          exclude_assets: '_redirects'
+
+      - name: Deploy Netlify
+        if: contains(github.ref, 'develop')
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./_site
+          publish_branch: netlify
           github_token: ${{ secrets.GITHUB_TOKEN }}

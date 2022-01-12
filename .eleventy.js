@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
     sassLocation: "lib/_stylesheets/",
     sassIndexFile: "application.scss",
-    outDir: "_site/",
+    outDir: "_site/nhsbsa-digital-playbook/",
     outPath: "stylesheets",
     outFileName: "application.css"
   });
@@ -29,26 +29,34 @@ module.exports = function(eleventyConfig) {
     includeDoctype: true
 })
   // filters
-  eleventyConfig.addFilter('date', require('./lib/_filters/date'))
-  eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'))
-  eleventyConfig.addFilter('includes', require('./lib/_filters/includes'))
-  eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'))
-  eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'))
-  eleventyConfig.addFilter('slug', require('./lib/_filters/slug'))
-  eleventyConfig.addFilter('sort', require('./lib/_filters/sort'))
-  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'))
-  eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'))
-  eleventyConfig.addFilter('widont', require('./lib/_filters/widont'))
-  eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'))
+  eleventyConfig.addFilter('date', require('./lib/_filters/date'));
+  eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
+  eleventyConfig.addFilter('includes', require('./lib/_filters/includes'));
+  eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));
+  eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'));
+  eleventyConfig.addFilter('slug', require('./lib/_filters/slug'));
+  eleventyConfig.addFilter('sort', require('./lib/_filters/sort'));
+  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'));
+  eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'));
+  eleventyConfig.addFilter('widont', require('./lib/_filters/widont'));
+  eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'));
+
+  // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
+  eleventyConfig.addPassthroughCopy({"lib/_netlify": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/*.js": "/javascripts"});
+  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("src/**/*.png");
+  eleventyConfig.addPassthroughCopy("src/**/*.docx");
 
   return {
     dir: {
       input: "src",
       includes: "_includes",
-      layouts: "_layouts"
+      layouts: "_layouts",
+      output: "_site/nhsbsa-digital-playbook"
     },
     markdownTemplateEngine: "njk",
     dataTemplateEngine: 'njk',
