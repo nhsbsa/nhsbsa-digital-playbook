@@ -6,6 +6,7 @@ _site/
 
 ### VS Code ###
 .vscode/
+workspace.code-workspace
 
 ### OSX ###
 .DS_Store
