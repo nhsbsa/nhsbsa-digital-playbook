@@ -12,7 +12,7 @@
     
     
     
-    <title>Technologies used in the playbook  - NHSBSA
+    <title>API Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Technologies used in the playbook">
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="API Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in API testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#api-test">API Test</a></li></ol>
       </div>
     </div>
 
@@ -85,32 +85,21 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Technologies used in the playbook
+        API Test Tech Stack
       </h1>
       
-<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
-<p>The playbook uses these technologies to generate the playbook.</p>
-<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
-<p>The source files for the Playbook are held in a <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a>.</p>
+<h3 id="api-test" tabindex="-1"><a class="header-anchor" href="#api-test">API Test</a></h3>
 <ul>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
-</ul>
-<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
-<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
-<ul>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-</ul>
-<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
-<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">documentation</a> to find out what’s possible.</p>
-<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a></li>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
-<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-<li><a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">Eleventy</a></li>
+<li>
+<p>All our API testing is performed using the free open source Karate tool.<br>
+This is available from the <a href="https://github.com/karatelabs/karate" target="_blank" rel="noopener">Karate website</a>.</p>
+</li>
+<li>
+<p>All API tests must be run through automated Karate tests. Manual API tests should not be used as a substitute.</p>
+</li>
+<li>
+<p>No other API test tools should be used for API testing.</p>
+</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">

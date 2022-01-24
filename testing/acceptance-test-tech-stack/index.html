@@ -12,7 +12,7 @@
     
     
     
-    <title>Technologies used in the playbook  - NHSBSA
+    <title>Acceptance Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Technologies used in the playbook">
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Acceptance Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in acceptance testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#acceptance-test">Acceptance Test</a></li></ol>
       </div>
     </div>
 
@@ -85,32 +85,29 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Technologies used in the playbook
+        Acceptance Test Tech Stack
       </h1>
       
-<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
-<p>The playbook uses these technologies to generate the playbook.</p>
-<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
-<p>The source files for the Playbook are held in a <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a>.</p>
+<h3 id="acceptance-test" tabindex="-1"><a class="header-anchor" href="#acceptance-test">Acceptance Test</a></h3>
 <ul>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
+<li>BDD Cucumber for all our manual and automated test suites, scenarios and cases.</li>
 </ul>
-<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
-<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
+<h4 id="automation" tabindex="-1"><a class="header-anchor" href="#automation">Automation</a></h4>
 <ul>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
+<li>Automation using Java and Selenium for our UI and web based services. This is our long term framework choice.</li>
+<li>Automation using Ruby and Watir for some of our UI and web based services. This is in our short term plans and will be replaced by the Java / Selenium going forward with any new services.</li>
 </ul>
-<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
-<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">documentation</a> to find out what’s possible.</p>
-<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<h4 id="ides" tabindex="-1"><a class="header-anchor" href="#ides">IDEs</a></h4>
 <ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a></li>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
-<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-<li><a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">Eleventy</a></li>
+<li>Java: Eclipse or the preferred IntelliJ.</li>
+<li>Ruby: Atom</li>
+</ul>
+<h4 id="out-of-scope-for-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#out-of-scope-for-acceptance-testing">Out of scope for acceptance testing</a></h4>
+<p>We do not promote or support the usage of the following:</p>
+<ul>
+<li>Selenium IDE: record and playback tools are too instable for our acceptance testing and with flexibility for change in our services these tools would be difficult to maintain.</li>
+<li>Any other programming language binding: due to the NHSBSA tester skillsets and resourcing plans no other language is supported in the test community.</li>
+<li>Ruby Mine: we work predominantly with open source tools and technologies with very little licensed products used in our testing. As Ruby is on our short term plans then investment in using Rubymine is not sustainable.</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">

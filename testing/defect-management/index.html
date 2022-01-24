@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Defect Management  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Defect Management">
+<meta property="og:description" name="description" content="How to raise, manage and retest defects in the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#how%2C-what-and-when-do-we-raise-defects%3F">How, what and when do we raise defects?</a></li><li><a href="#defect-evidence">Defect evidence</a></li><li><a href="#release-acceptance">Release acceptance</a><ol><li><a href="#acceptance-test-defects">Acceptance test defects</a></li><li><a href="#accessibility-defects">Accessibility defects</a></li><li><a href="#defect-classification-and-release-standard">Defect classification and release standard</a></li></ol></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Defect Management
+      </h1>
+      
+<h2 id="how%2C-what-and-when-do-we-raise-defects%3F" tabindex="-1"><a class="header-anchor" href="#how%2C-what-and-when-do-we-raise-defects%3F">How, what and when do we raise defects?</a></h2>
+<p>All defects regardless of the test framework must be logged in the NHSBSA approved tool, Jira.</p>
+<p>The only exemption to the above is if the issue is communicated, discussed and can be fixed quicker than raising the defect in Jira.</p>
+<p>Every defect needs to be assessed. If the defect after consultation with developers is minor and can be fixed quickly then these do not need formally raising. This saves time as the defect raising process can often take longer than the fix.</p>
+<p>Please be aware though the above process must not be used as a way of avoiding raising defects.</p>
+<p>If the fix is to be completed later than 1 hour from raising it then a formal defect needs raising to avoid compliancy or forgetfulness.</p>
+<p>All formally raised defects within the NHSBSA must be raised in Jira and are owned by the testers on the project.</p>
+<p>Testers must own and maintain the defect triage and management process.</p>
+<p>Testers must endeavour to promote defect resolution within sprint planning sessions, especially with Accessibility error defects.</p>
+<h2 id="defect-evidence" tabindex="-1"><a class="header-anchor" href="#defect-evidence">Defect evidence</a></h2>
+<p>All automation tests as standard must have screenshot capture incorporated and active on execution.</p>
+<p>Screenshots do not need to be stored for successful tests. Successful tests can and will be re-run if the need arises for this evidence.</p>
+<p>For unsuccessful and failed tests, screenshots must be kept and stored in the defect in Jira.</p>
+<p>During script development, no current central or cloud solution exists for the storage of this material so these should be stored locally. The management of these screenshots is then at the discretion of the automation tester.</p>
+<p>During pipeline execution, screenshots must not be active as the storage for this material is not available in the pipeline infrastructure.</p>
+<h2 id="release-acceptance" tabindex="-1"><a class="header-anchor" href="#release-acceptance">Release acceptance</a></h2>
+<h3 id="acceptance-test-defects" tabindex="-1"><a class="header-anchor" href="#acceptance-test-defects">Acceptance test defects</a></h3>
+<p>The following defect severity must be adhered to with acceptance test defects:</p>
+<h4 id="high-level-defects" tabindex="-1"><a class="header-anchor" href="#high-level-defects">High level defects</a></h4>
+<p>These are defects that include:</p>
+<ul>
+<li>A workaround would require significant additional user effort.</li>
+<li>Impacts a large number of users and crucial user goals.</li>
+<li>Some loss of revenue and / or loss or reputation as a consequence of multiple users and / or customers experience the outage.</li>
+<li>A workaround and/or fix should be prioritised</li>
+</ul>
+<p>The inclusion of high severity defects in releases must not be released without valid justification and risk(s) approved by Product Owner or Delivery Manager.</p>
+<h4 id="medium-level-defects" tabindex="-1"><a class="header-anchor" href="#medium-level-defects">Medium level defects</a></h4>
+<p>These are defects that include:</p>
+<ul>
+<li>A workaround would require moderate additional user effort.</li>
+<li>Impacts a moderate number of users and no crucial user goals.</li>
+<li>It is possible to fix at a future point without impacting users or operations.</li>
+<li>Is needed prior to business acceptance.</li>
+</ul>
+<p>The inclusion of 3 or more medium severity defects in releases must not be released without valid justification and risk(s) approved by Product Owner or Delivery Manager.</p>
+<h4 id="low-level-defects" tabindex="-1"><a class="header-anchor" href="#low-level-defects">Low level defects</a></h4>
+<p>These are defects that include:</p>
+<ul>
+<li>A workaround would require very low additional user effort.</li>
+<li>Minor operational and user impact and no user goals are affected.</li>
+<li>Does not cause serious confusion to the user.</li>
+<li>Is not needed prior to business acceptance.</li>
+</ul>
+<p>Low level defects do not need approval for release but every effort should be made to resolve all defects before release.</p>
+<h3 id="accessibility-defects" tabindex="-1"><a class="header-anchor" href="#accessibility-defects">Accessibility defects</a></h3>
+<p>These issues must be logged by issue and not screen, tool or stage.</p>
+<p>Raising defects by screen, tool or stage will not give a true representation of accessibility compliance.</p>
+<ul>
+<li>
+<p>Screen affected is an attribute to be included in raised defects to specify affected areas.</p>
+</li>
+<li>
+<p>Stage is not needed in defects as this is for framework guidance.</p>
+</li>
+<li>
+<p>Tools should be specified in the defect using the below prefixes.</p>
+</li>
+</ul>
+<p>Defects by issue will also allow us to collate metrics and do analysis on common and replicated issues and where they occur.</p>
+<p>All defect prefixes should include the tool and defect type:</p>
+<ul>
+<li>WE - Wave error</li>
+<li>WA - Wave alert</li>
+<li>LE - Lighthouse error</li>
+<li>AE - Axe error</li>
+<li>AA - Axe alert</li>
+<li>ME - Manual checklist error</li>
+<li>SR - Screen Reader error</li>
+<li>SREC - Speech Recognition error</li>
+<li>PDF - PDF document error</li>
+<li>WORD - Word document error</li>
+<li>EXCEL - Excel document error</li>
+<li>PP - Powerpoint document error</li>
+</ul>
+<h3 id="defect-classification-and-release-standard" tabindex="-1"><a class="header-anchor" href="#defect-classification-and-release-standard">Defect classification and release standard</a></h3>
+<h4 id="high-level-defects-1" tabindex="-1"><a class="header-anchor" href="#high-level-defects-1">High level defects</a></h4>
+<p>These include:</p>
+<ul>
+<li>Wave Errors</li>
+<li>Wave Contrast Errors</li>
+<li>Lighthouse mobile test with result under 100</li>
+<li>Lighthouse desktop test with result under 100</li>
+<li>Axe Critical</li>
+<li>Axe Serious</li>
+<li>Any Manual Checklist errors/failures</li>
+<li>Any Screen Reader Checklist errors/failures</li>
+<li>Any Speech Recognition errors/failures</li>
+</ul>
+<p>These defects must be fixed before release.</p>
+<p>If issues are not fixed then either:</p>
+<ul>
+<li>
+<p>The release does not occur or</p>
+</li>
+<li>
+<p>Valid justifications are given to add into the defects and accessibility report to identify and cover such risks to legal legislation.</p>
+</li>
+<li>
+<p>These risks are signed off by the delivery manager or product owner on behalf of the NHSBSA.</p>
+</li>
+<li>
+<p>All outstanding issues must be included in accessibility statement.</p>
+</li>
+</ul>
+<h4 id="medium-level-defects-1" tabindex="-1"><a class="header-anchor" href="#medium-level-defects-1">Medium level defects</a></h4>
+<p>These include:</p>
+<ul>
+<li>Wave Alerts</li>
+<li>Axe Moderate</li>
+<li>Axe Minor</li>
+<li>Axe Review</li>
+</ul>
+<p>Must be raised and a fix planned.</p>
+<p>Under project discretion to plan fix into a release.</p>
+<p>These are often issues where a problem has been found but a workaround can help to lessen the impact of the problem. Justification and evidence that this workaround does not negatively affect users must be available.</p>
+<h4 id="low-level-defects-1" tabindex="-1"><a class="header-anchor" href="#low-level-defects-1">Low level defects</a></h4>
+<p>These include:</p>
+<ul>
+<li>Wave Features</li>
+<li>Wave Structural Elements</li>
+<li>Wave HTML &amp; Aria</li>
+</ul>
+<p>These should be raised as low level defects and to be addressed by the project before full compliance can be claimed.</p>
+<p>The aim of all services has to be fix all accessibility issues. No project can claim full compliance to WCAG 2.1 ‘AA’ standard until all issues High, Medium and Low are fixed or justified.</p>
+<p>Please remember: when defects and issues are closed please ensure the project knows to remove these issues from the website’s accessibility statement.</p>
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>

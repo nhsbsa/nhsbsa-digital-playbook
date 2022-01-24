@@ -12,7 +12,7 @@
     
     
     
-    <title>Technologies used in the playbook  - NHSBSA
+    <title>Accessibility Checkers  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Technologies used in the playbook">
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Accessibility Checkers">
+<meta property="og:description" name="description" content="Automated accessibility checkers in use at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#wave">Wave</a></li><li><a href="#axe-devtools">Axe Devtools</a></li><li><a href="#lighthouse">Lighthouse</a></li></ol>
       </div>
     </div>
 
@@ -85,33 +85,66 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Technologies used in the playbook
+        Accessibility Checkers
       </h1>
       
-<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
-<p>The playbook uses these technologies to generate the playbook.</p>
-<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
-<p>The source files for the Playbook are held in a <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a>.</p>
+<h2 id="wave" tabindex="-1"><a class="header-anchor" href="#wave">Wave</a></h2>
+<p>Wave is a free open source tool that can be downloaded as a plugin for Chrome, Firefox and Edge.</p>
+<p>To download it please go to <a href="https://wave.webaim.org/" target="_blank" rel="noopener">Wave download page</a></p>
+<p>Wave runs by simply selecting the Wave extension icon (grey W icon) from the toolbar menu. It will then scan the page that is open for any accessibility issues.</p>
+<p>Wave reports its findings in 6 categories:</p>
 <ul>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
+<li>Errors - Issues that will impact certain users, failures to meet WCAG.</li>
+<li>Contrast Errors - Text that does not meet WCAG contrast requirements.</li>
+<li>Alerts - Elements that may cause issues.</li>
+<li>Features - Elements that improve accessibility when implemented correctly.</li>
+<li>Structural Elements - identifies hidden elements, lists regions and headings in order.</li>
+<li>Aria - Present accessibility information, reduces accessibility when used incorrectly.</li>
 </ul>
-<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
-<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
+<p>Errors, Contrast Errors and Alerts are issues that Wave has found that contradict accessibility guidance.</p>
+<p>Features, Structural Elements and Aria are parts of the website that need to be reviewed to check that they are accessible.</p>
+<h2 id="axe-devtools" tabindex="-1"><a class="header-anchor" href="#axe-devtools">Axe Devtools</a></h2>
+<p>Axe is available as a licenced tool as well as the open source offering, Axe Devtools.</p>
+<p>Install Axe DevTools from the <a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Chrome Web Store</a></p>
+<p>Axe DevTools runs from the Chrome DevTools panel. You can access this three ways:</p>
 <ul>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
+<li>Use CMD + SHIFT + C on your keyboard</li>
+<li>Right click on the page and choose ‘Inspect’</li>
+<li>Click the menu icon three vertical dots in the top right of your browser screen, select more tools then developer tools.</li>
 </ul>
-<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
-<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">documentation</a> to find out what’s possible.</p>
-<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<p>Chrome Dev Tools has options for Elements, Console, Sources etc. One of those options is ‘more tabs’ which is marked by two small right facing arrows &gt;&gt;. Choose the ‘more tabs’ option, and then choose ‘axe DevTools’.</p>
+<p>The first time you use Axe DevTools you will need to answer some questions. It is just analytics data for Deque to find out how their tool is being used.</p>
+<p>Choose the ‘scan all of my page’ option to run the tests.</p>
+<p>Axe DevTools reports five types of issues:</p>
 <ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a></li>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
-<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-<li><a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">Eleventy</a></li>
+<li>Critical</li>
+<li>Serious</li>
+<li>Moderate</li>
+<li>Minor</li>
+<li>Needs Review</li>
 </ul>
+<p>All of the above are issues that Axe has found on the page so these all need logging as defects.</p>
+<p>If you click on ‘highlight’ this will also help to identify on the page where the issue has been found.</p>
+<p>You can then select each issue in the list and Axe will give a breakdown of the issue and guidance on how to fix this.</p>
+<p>To find out how and what we classify Axe accessibility defects please visit our accessibility defect standard page, link provided.</p>
+<h2 id="lighthouse" tabindex="-1"><a class="header-anchor" href="#lighthouse">Lighthouse</a></h2>
+<p>Lighthouse is an open source offering available through dev tools.</p>
+<p>Lighthouse runs from the Chrome DevTools panel. You can access this three ways:</p>
+<ul>
+<li>Use CMD + SHIFT + C on your keyboard</li>
+<li>Right click on the page and choose ‘Inspect’</li>
+<li>Click the menu icon three vertical dots in the top right of your browser screen, select more tools then developer tools.</li>
+</ul>
+<p>Chrome Dev Tools has options for Elements, Console, Sources etc. One of those options is ‘more tabs’ which is marked by two small right facing arrows &gt;&gt;. Choose the ‘more tabs’ option, and then choose ‘Lighthouse’.</p>
+<p>Make sure only Accessibility is selected in the categories list. Then run each test separately for Mobile and Desktop.</p>
+<p>Lighthouse then scans the page and reports:</p>
+<ul>
+<li>Score out of 100</li>
+<li>Issues list</li>
+</ul>
+<p>Any score under 100 represents that the website has accessibility issues.</p>
+<p>Click on any issue to see a screenshot and description of the issue.</p>
+<p>To find out how and what we classify Lighthouse accessibility defects please visit our accessibility defect standard page, link provided.</p>
     </div>
       <div class="nhsbsa-article--date">
           <p>

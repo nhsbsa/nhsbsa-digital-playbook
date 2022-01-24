@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Acceptance Testing  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Acceptance Testing">
+<meta property="og:description" name="description" content="How &amp;amp; why we acceptance test in the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#what-is-acceptance-testing%3F">What is acceptance testing?</a></li><li><a href="#why-do-you-write-in-a-user-centric-way%3F">Why do you write in a user centric way?</a></li><li><a href="#whats-included-in-acceptance-tests%3F">Whats included in acceptance tests?</a></li><li><a href="#how-are-acceptance-tests-structured%3F">How are acceptance tests structured?</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Acceptance Testing
+      </h1>
+      
+<h2 id="what-is-acceptance-testing%3F" tabindex="-1"><a class="header-anchor" href="#what-is-acceptance-testing%3F">What is acceptance testing?</a></h2>
+<p>‘Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system’. ISQTB</p>
+<p>All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests. The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.​​​​​​​</p>
+<p>Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person. All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don’t press this or click that like in more traditional test plans and scripts. We talk as the user would express a scenario or situation ‘Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC’.</p>
+<p>Only in circumstances where these actions are needed to prove a clear acceptance criteria can they be used.</p>
+<h2 id="why-do-you-write-in-a-user-centric-way%3F" tabindex="-1"><a class="header-anchor" href="#why-do-you-write-in-a-user-centric-way%3F">Why do you write in a user centric way?</a></h2>
+<p>Everything we do whether it is designing a new service or testing it involves the users and what they need or require.</p>
+<p>There is no use for a service that disrupts, confuses or stops the user from using it to get want they want or need in the quickest time possible.</p>
+<p>So to be able to assure our services meet these needs then we identify clear acceptance criteria expressing these needs and then our tests validate and assure these needs have been met.</p>
+<p>Of course user needs change and evolve, so therefore our tests need to be able to do this so we created our framework to be easy to understand, adaptable and easy to maintain so that flexibility and change can be incorporated anytime this happens.</p>
+<p>Within each project there is a need to perform testing which can be linked to the following requirements:</p>
+<p>Ability to provide stakeholder with information that system under development works as described in product requirements<br>
+Ability to conform to the following GDS Service Standards</p>
+<ul>
+<li>Standard 6   - Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.</li>
+<li>Standard 7 - Evaluate what user data and information the digital service will be providing or storing and address the security level, legal responsibilities, privacy issues and risks associated with the service (consulting with experts where appropriate).</li>
+<li>Standard 10 -  Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.<br>
+Utilising an Automation Test Framework to test Front end, Back end and API services is recognised as a way to provide consistent tests that can reused and validate functionality and regression testing</li>
+</ul>
+<h2 id="whats-included-in-acceptance-tests%3F" tabindex="-1"><a class="header-anchor" href="#whats-included-in-acceptance-tests%3F">Whats included in acceptance tests?</a></h2>
+<p>All acceptance tests in the NHSBSA provide assurance by testing the following:</p>
+<ul>
+<li>Functionality / behaviour of a service according to acceptance criteria.</li>
+<li>Validation of service inputs must include Valid, Invalid, None entry &amp; Verification scenarios (e.g. field lengths, acceptance levels).</li>
+<li>User Journeys, happy and unhappy paths, service scope limitations or redirects.</li>
+<li>Boundary Value Analysis and Equivalence Partitioning test methods are implemented to test range and limits of services.</li>
+<li>Integration with other services or providers.</li>
+<li>Regression to ensure the continued assurance of all the service is not affected by any change or improvement.</li>
+</ul>
+<h2 id="how-are-acceptance-tests-structured%3F" tabindex="-1"><a class="header-anchor" href="#how-are-acceptance-tests-structured%3F">How are acceptance tests structured?</a></h2>
+<p>All of our tests are created in user centric BDD using Cucumber. Whether these are manual or automated tests all scripts, scenarios and cases are produced in the same format.</p>
+<p>We employ an ‘automation by default’ approach to testing so unless not possible or constrained then tests must be automated. Over 90% of our current acceptance tests are automated.</p>
+<p>We also use the following in our tests:</p>
+<ul>
+<li>Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.</li>
+<li>User Centric BDD - BDD uses human-readable descriptions of software user requirements as the basis for software tests. Each test is based on a user story written in the formally specified clear natural English language. User Centric BDD ensures all test scenarios written in Gherkin syntax are from a users perspective and phased as a user would describe a scenario or circumstance.</li>
+<li>Gherkin - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. Each keyword helps the user and tester to understand the requirements and scenarios more clearly, these keywords include Given (pre-condition), When (action), Then (result).</li>
+<li>Selenium -  a collection of language specific bindings to drive a browser - the way it is meant to be driven.</li>
+<li>Java - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
+<li>Ruby - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
+<li>Dedicated use of Test Environments:<br>
+Legacy - test environments not in the cloud use environments in our legacy infrastructure.<br>
+AWS Cloud - test environments in CI/CD pipelines are used.<br>
+Local environments - where a test environment is not setup, running an application locally on a PC/Mac can provide access to developed systems. This may also be used where access to specific scenarios can not be achieved in the test environments due to governance restrictions.</li>
+</ul>
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>

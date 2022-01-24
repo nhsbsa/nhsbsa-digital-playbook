@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Accessibility Testing  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Accessibility Testing">
+<meta property="og:description" name="description" content="How &amp;amp; why we accessibility test in the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#why-do-we-accessibility-test-in-the-nhsbsa">Why do we accessibility test in the NHSBSA</a></li><li><a href="#accessibility-testing-framework">Accessibility testing framework</a><ol><li><a href="#stage-1---automated-checkers">Stage 1 - Automated checkers</a></li><li><a href="#stage-2---manual-checklist-%26-assistive-technologies">Stage 2 - Manual checklist &amp; Assistive Technologies</a></li><li><a href="#stage-3---accessibility-statements">Stage 3 - Accessibility Statements</a></li></ol></li><li><a href="#what-to-raise-as-issues">What to raise as issues</a></li><li><a href="#scope-of-testing">Scope of testing</a></li><li><a href="#reporting">Reporting</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Accessibility Testing
+      </h1>
+      
+<h2 id="why-do-we-accessibility-test-in-the-nhsbsa" tabindex="-1"><a class="header-anchor" href="#why-do-we-accessibility-test-in-the-nhsbsa">Why do we accessibility test in the NHSBSA</a></h2>
+<p>New regulations came into force for public sector bodies on 23 September 2018. These regulations meant all websites or mobile apps must be accessible in four key areas: ‘perceivable, operable, understandable and robust’.</p>
+<p>The full name of the regulations is: Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+<p>The 2018 regulations build on the existing obligations to people who have a disability under the Equality Act 2010 (or the Disability Discrimination Act 1995 in Northern Ireland). This states that all UK service providers must consider ‘reasonable adjustments’ for disabled people.</p>
+<p>To ensure we meet this legislation an accessibility framework was developed and this has quickly become one of the core test frameworks the test community uses to ensure every product or service is accessible.</p>
+<p>This means testing to ensure services meet WCAG guidelines to 2.1 ‘AA’ standard as well as ensuring our services can be used by anyone with any accessibility needs.</p>
+<p>To meet this legislation the NHSBSA has to adhere to the Web Content Accessibility Guidelines (WCAG) 2.1 and achieve at minimum ‘AA’ standard.</p>
+<p>WCAG 2.1 guidelines can be found here: https://www.w3.org/TR/WCAG21/#keyboard-accessible</p>
+<p>The accessibility standard levels are as follows:</p>
+<ul>
+<li>
+<p>Level A – the most basic web accessibility features</p>
+</li>
+<li>
+<p>Level AA – deals with the biggest and most common barriers for disabled users</p>
+</li>
+<li>
+<p>Level AAA – the highest (and most complex) level of web accessibility</p>
+</li>
+</ul>
+<p>All our websites have to meet at minimum ‘AA’ standard on all websites but we should be aiming for the highest ‘AAA’ level whether the website is internal or externally facing, for 1 user or a million users.​​​​​​​</p>
+<p>We assure our services are accessible by combining both automated and manual testing tools and techniques in order to meet our users needs.</p>
+<p>There is more information / guidance on WCAG 2.1 available on this github account: WCAG 2.1 guidelines​​​​​​​</p>
+<h2 id="accessibility-testing-framework" tabindex="-1"><a class="header-anchor" href="#accessibility-testing-framework">Accessibility testing framework</a></h2>
+<p>Our accessibility test framework is a combination of manual and automated testing techniques.<br>
+No one technique alone will fully test or find all issues so the combination ensures our test coverage is relevant and as comprehensive as we can make it.</p>
+<h3 id="stage-1---automated-checkers" tabindex="-1"><a class="header-anchor" href="#stage-1---automated-checkers">Stage 1 - Automated checkers</a></h3>
+<p>There are many different tools and checkers available both in the licensed and open source markets. Just because a tool is licensed does not mean it assures a higher or better quality of results than a free offering, each tool should be investigated for their benefits and weaknesses.</p>
+<p>No one tool will give you full perfect checks on the guidelines either, many tools only actually find 40% or below of issues that exist on your website. Therefore a combined approach of mixed tools will give you better initial results to build upon.</p>
+<p>The NHSBSA tests using the following automated checkers based upon research and audits we have performed:</p>
+<ul>
+<li>Accessibility Browser Plugins: Wave, Axe and Lighthouse.</li>
+</ul>
+<h3 id="stage-2---manual-checklist-%26-assistive-technologies" tabindex="-1"><a class="header-anchor" href="#stage-2---manual-checklist-%26-assistive-technologies">Stage 2 - Manual checklist &amp; Assistive Technologies</a></h3>
+<p>To widen our testing coverage we also need to manually check on various accessibility focus areas where we have encountered either WCAG conflicts or issues from audits.</p>
+<ul>
+<li>Manual Checklist</li>
+</ul>
+<p>Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.</p>
+<p>To test this we use the following assistive technologies to test our services:</p>
+<ul>
+<li>Screen Readers</li>
+<li>Speech Recognition</li>
+<li>Screen Magnifiers</li>
+</ul>
+<h3 id="stage-3---accessibility-statements" tabindex="-1"><a class="header-anchor" href="#stage-3---accessibility-statements">Stage 3 - Accessibility Statements</a></h3>
+<p>Each website must by law have an accurate and up to date accessibility statement.</p>
+<p>The creation and updating of all accessibility statements is a team responsibility but testers are involved in adding and updating the issues and WCAG contradictions.</p>
+<p>These issues are those that have been found, raised but they are or can not be fixed for some reason. These have to be included in the statements.</p>
+<p>It is a testers responsibility to ensure the following with statements:</p>
+<ul>
+<li>All issues outstanding are included in the statements</li>
+<li>The issues are in natural english language and not tool or technical jargon.</li>
+<li>Each issue has a related WCAG 2.1 compliance failure criteria.</li>
+<li>All wording is in line with BSA accessibility standards (please see the accessibility standards area).</li>
+<li>All issues have a fix date (this has to be agreed by the project).</li>
+</ul>
+<p>All the tools we use in our Accessibility Framework have been chosen after studying research and guidance provide by GDS, NHS service manual and BSA Test and Service Design communities.</p>
+<h2 id="what-to-raise-as-issues" tabindex="-1"><a class="header-anchor" href="#what-to-raise-as-issues">What to raise as issues</a></h2>
+<p>All websites should be using the latest version of the government toolkit in order to reach ‘AA’ compliance at least.</p>
+<p>Please check the accessibility testing defect management page for how to raise any accessibility defects.</p>
+<h2 id="scope-of-testing" tabindex="-1"><a class="header-anchor" href="#scope-of-testing">Scope of testing</a></h2>
+<p>Accessibility testing must be performed on all new UI screens and any that have been amended. For regression purposes we also need at least two existing screens not affected by any changes to be retested.</p>
+<p>In release reports this breakdown must be clear in the release focus section and in the accessibility report all tested (new or retested) screens must be highlighted in green.</p>
+<h2 id="reporting" tabindex="-1"><a class="header-anchor" href="#reporting">Reporting</a></h2>
+<p>All accessibility tests results must be recorded in an Accessibility Test Report, this report is used as evidence in the event of an accessibility audit.</p>
+      <h2 class="nhsuk-heading-l">
+        Related articles
+      </h2>
+      	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<h2 class="nhsuk-card__heading nhsuk-heading-m">
+						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing/accessibility-checkers/">
+							Accessibility Checkers
+						</a>
+					</h2>
+					<p class="nhsuk-card__description">Automated accessibility checkers in use at the NHSBSA</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<h2 class="nhsuk-card__heading nhsuk-heading-m">
+						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing/checklists-assistive-technologies/">
+							Checklists &amp; Assistive Technologies
+						</a>
+					</h2>
+					<p class="nhsuk-card__description">Checklists and Assistive technologies in use at the NHSBSA</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>

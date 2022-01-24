@@ -12,7 +12,7 @@
     
     
     
-    <title>Test at the NHSBSA  - NHSBSA
+    <title>Compatibility Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Test at the NHSBSA">
-<meta property="og:description" name="description" content="How we test at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Compatibility Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in Compatibility testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#more">More</a></li><li><a href="#even-more">Even more</a></li><li><a href="#finally">Finally</a></li></ol>
+        <ol><li><a href="#compatibility-testing">Compatibility Testing</a></li></ol>
       </div>
     </div>
 
@@ -85,21 +85,32 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Test at the NHSBSA
+        Compatibility Test Tech Stack
       </h1>
       
-<h2 id="introduction" tabindex="-1"><a class="header-anchor" href="#introduction">Introduction</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="more" tabindex="-1"><a class="header-anchor" href="#more">More</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="even-more" tabindex="-1"><a class="header-anchor" href="#even-more">Even more</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-<h2 id="finally" tabindex="-1"><a class="header-anchor" href="#finally">Finally</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<h3 id="compatibility-testing" tabindex="-1"><a class="header-anchor" href="#compatibility-testing">Compatibility Testing</a></h3>
+<ul>
+<li>All compatibility testing must use the NHSBSA Saucelabs service and account.</li>
+<li>No other service or account should be used as this would violate security and IG rules.</li>
+<li>Compatibility testing must be performed using automated user journeys that respresent or test as much of the service as possible.</li>
+<li>If automation is not possible then manual testing must be performed.</li>
+<li>Compatibility testing must be performed as regular as possible with every release containing compatibility testing.</li>
+</ul>
+<h4 id="automation" tabindex="-1"><a class="header-anchor" href="#automation">Automation</a></h4>
+<ul>
+<li>We run our selenium user journey tests through the Saucelabs service on the relevant browser, tablet or phone.</li>
+<li>The coverage of browsers, tablets and phones can be found in the compatibility test coverage section.</li>
+</ul>
+<h4 id="manual" tabindex="-1"><a class="header-anchor" href="#manual">Manual</a></h4>
+<ul>
+<li>When automation is not possible the manual testing feature must be used.</li>
+<li>For particular browser testing (Chrome on iOS and Samsung Internet on Android) you will need to manually test as the platform does not allow automation.</li>
+<li>This is where the Saucelabs service can be used to use virtual machines for browsers and devices as well as real devices to test user journeys if automation test can not be performed.</li>
+</ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-01-12T10:21:06.539Z">12 January 2022</time>
+            Published <time datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>
           </p>
       </div>
   </div>

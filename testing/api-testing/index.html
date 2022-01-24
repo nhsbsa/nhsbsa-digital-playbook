@@ -12,7 +12,7 @@
     
     
     
-    <title>Technologies used in the playbook  - NHSBSA
+    <title>API Testing  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Technologies used in the playbook">
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="API Testing">
+<meta property="og:description" name="description" content="How we test API’s in the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#technologies">Technologies</a><ol><li><a href="#git-and-github">Git and Github</a></li><li><a href="#markdown">Markdown</a></li><li><a href="#eleventy">Eleventy</a></li></ol></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#what-are-api%E2%80%99s%3F">What are API’s?</a></li><li><a href="#why-do-we-do-api-testing%3F">Why do we do API testing?</a></li><li><a href="#how-do-we-api-test%3F">How do we API Test?</a></li></ol>
       </div>
     </div>
 
@@ -85,33 +85,30 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Technologies used in the playbook
+        API Testing
       </h1>
       
-<h2 id="technologies" tabindex="-1"><a class="header-anchor" href="#technologies">Technologies</a></h2>
-<p>The playbook uses these technologies to generate the playbook.</p>
-<h3 id="git-and-github" tabindex="-1"><a class="header-anchor" href="#git-and-github">Git and Github</a></h3>
-<p>The source files for the Playbook are held in a <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> repository hosted at <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a>.</p>
+<h2 id="what-are-api%E2%80%99s%3F" tabindex="-1"><a class="header-anchor" href="#what-are-api%E2%80%99s%3F">What are API’s?</a></h2>
+<p>APIs (Application Programming Interfaces) are the connections between different systems or layers of an application. Applications often have three layers: a data layer, a service (API) layer, and a presentation (UI) layer. The API layer contains the business logic of an application - the rules of how users can interact with services, data or functions of the service.</p>
+<p>API testing consists of make requests to a single or sometimes multiple API endpoints and validating the response - whether for performance, security, functional correctness, or just a status check.</p>
+<p>These requests can be in the form of create POST, return GET, update PUT and delete DELETE requests.</p>
+<p>Often front end aplications or services are driven from these actions.</p>
+<p>There can be private, public or partner API’s.</p>
+<p>A public API is exactly that available on the internet for anyone to use.<br>
+A private API is used only between applications and services.</p>
+<h2 id="why-do-we-do-api-testing%3F" tabindex="-1"><a class="header-anchor" href="#why-do-we-do-api-testing%3F">Why do we do API testing?</a></h2>
+<p>There are many benefits in performing API testing these include:</p>
 <ul>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
+<li>Early testing: Once the logic has been built into an API we can test and validate these for correctness in responses and data. We don’t have to wait for full services or UI’s to be built before being tested.</li>
+<li>Easier to maintain: With the dynamic nature of UI’s and how much they are altered and changed due to the ways they are accessed, API’s are quicker and easier to create, edit and maintain even in an agile environment.</li>
+<li>Faster to fix: When API tests fail the cause and origin of the failure can be much easier located, this makes the resolution and retesting of the issue easier and quicker to perform.</li>
+<li>Speed and Coverage: API tests are quicker in execution than UI testing. This means we can increase and test more coverage in less time than UI tests. This also means we will find more bugs in less time and be able to fix these quicker.</li>
 </ul>
-<h3 id="markdown" tabindex="-1"><a class="header-anchor" href="#markdown">Markdown</a></h3>
-<p>Content is usually written in plain text using <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
-<ul>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-</ul>
-<h3 id="eleventy" tabindex="-1"><a class="header-anchor" href="#eleventy">Eleventy</a></h3>
-<p>We use a tool called <em>Eleventy</em> to generate the playbook documentation. If you need more functionality than we’ve described here, take a look at their <a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">documentation</a> to find out what’s possible.</p>
-<p>If you want to enhance the playbook with more advanced features, you’ll find most of the source under the <code>/lib</code> folder in Github.</p>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">Github</a></li>
-<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank" rel="noopener">Git tutorial</a></li>
-<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-<li><a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener">Eleventy</a></li>
-</ul>
+<h2 id="how-do-we-api-test%3F" tabindex="-1"><a class="header-anchor" href="#how-do-we-api-test%3F">How do we API Test?</a></h2>
+<p>The test community approved open source tool for API testing is Karate. Karate allows you script web-service calls using cucumber features.</p>
+<p>Using the familiar Given, When and Then syntax Karate goes further and allows you set variables and use JSON or XML in your features</p>
+<p>Karate allows to write complete end to end web-service scenarios without writing any code.</p>
+<p>For more information on Karate please visit the <a href="https://github.com/karatelabs/karate" target="_blank" rel="noopener">Karate github webpage</a></p>
     </div>
       <div class="nhsbsa-article--date">
           <p>

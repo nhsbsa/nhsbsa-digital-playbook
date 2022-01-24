@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Compatibility Testing  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Compatibility Testing">
+<meta property="og:description" name="description" content="How &amp;amp; why we compatibility test in the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#why-we-compatibility-test-at-the-nhsbsa">Why we compatibility test at the NHSBSA</a></li><li><a href="#how-we-compatibility-test">How we compatibility test</a><ol><li><a href="#local-execution">Local execution</a></li><li><a href="#ci%2Fcd-pipeline-execution">CI/CD Pipeline execution</a></li></ol></li><li><a href="#how-often-do-i-run-compatibility-tests%3F">How often do I run compatibility tests?</a></li><li><a href="#test-results">Test Results</a></li><li><a href="#test-reporting">Test Reporting</a></li><li><a href="#after-testing">After Testing</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Compatibility Testing
+      </h1>
+      
+<h2 id="why-we-compatibility-test-at-the-nhsbsa" tabindex="-1"><a class="header-anchor" href="#why-we-compatibility-test-at-the-nhsbsa">Why we compatibility test at the NHSBSA</a></h2>
+<p>Within each project especially those based in the digital workspace the need to perform Compatibility testing is linked to the following requirements:</p>
+<ul>
+<li>Ability to provide stakeholder’s with information about their application regarding functionality, usability and consistency.</li>
+<li>Ability to analyse the system in different OS environments as well as with different mobile devices (Phones, Tablets).</li>
+<li>Ability to conform to the following GDS Service Standards on performance and durability.
+<ul>
+<li>Standard 6   - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.</li>
+<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.</li>
+<li>Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.</li>
+</ul>
+</li>
+</ul>
+<p>To meet the GDS Standard 10 your testing on your project needs to “work with the devices and browsers your users use” GDS Website.</p>
+<p>To ensure our services meet these requirements we run tests that are representative of the services. These are end to end / user journey tests that will represent how the service behaves using the various browsers, devices and phones.</p>
+<p>Our compatibility coverage is based upon all of the following key requirements:</p>
+<ul>
+<li>GDS - minimum coverage standards.</li>
+<li>NHSBSA - technology infrastructure and support.</li>
+<li>USER RESEARCH - project user base research on browsers and devices used, Google Analytics.</li>
+</ul>
+<p>All three of the above form our NHSBSA compatibility test coverage and standards.</p>
+<p>All NHSBSA projects need to comply with the Test Standards on coverage of browsers and devices, this coverage standard can be found on the NHSBSA Compatibility testing coverage page.</p>
+<p>No other coverage will be accepted unless agreed as an exemption with your Test Lead.</p>
+<h2 id="how-we-compatibility-test" tabindex="-1"><a class="header-anchor" href="#how-we-compatibility-test">How we compatibility test</a></h2>
+<p>Within the NHSBSA we have provisioned compatibility services from Saucelabs. This enables us to run tests both manually and automated through various browsers, devices and phones. No other compatibility testing service is approved for use as they do not meet our coverage requirements.</p>
+<p>We also do not approve the use of seperate tools or licences for the same compatibility service. The NHSBSA has provisioned a central service offering that will meet the needs for all the test community.</p>
+<p>There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.</p>
+<h3 id="local-execution" tabindex="-1"><a class="header-anchor" href="#local-execution">Local execution</a></h3>
+<p>This is where the tests are started and run from the tester’s machine by manually entering an execution command on the command line.</p>
+<p>Local execution of tests through the Saucelabs service runs all tests through the cloud based test environments (which is a standard requirement for NHSBSA test sign off). It executes from the same command line statement structure as automation tests but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the browser, device or phone much easier, it is also better for maintainability and code quality that these are not hard coded into test scripts.</p>
+<p>In order to run tests through Saucelabs the machine used for testing needs to be one of the following:</p>
+<ul>
+<li>Windows laptop connected to AONVPN.</li>
+<li>Mac laptop connected to Open VPN</li>
+<li>For Mac users the Saucelabs connect proxy then needs installing.</li>
+</ul>
+<p>Only by using the above will Saucelabs be able to access the AWS Test Environments.</p>
+<p>All tests during development should be run using this method as it can give fast feedback about the tests and the service.</p>
+<h3 id="ci%2Fcd-pipeline-execution" tabindex="-1"><a class="header-anchor" href="#ci%2Fcd-pipeline-execution">CI/CD Pipeline execution</a></h3>
+<p>In pipeline based projects it will also be possible to run tests either by utilising a schedule or a trigger.</p>
+<p>By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.</p>
+<p>By using a trigger either manually (via the play triangle icon) for a job or automatic in the triggering this will allow tests to be run on the latest deployed version of the service in the test environment.</p>
+<p>The tests will run through the compatibility service Saucelabs and utilise the cloud tst environment.</p>
+<h2 id="how-often-do-i-run-compatibility-tests%3F" tabindex="-1"><a class="header-anchor" href="#how-often-do-i-run-compatibility-tests%3F">How often do I run compatibility tests?</a></h2>
+<p>Compatibility tests should be run as often as possible and once these tests have been built into the CI/CD pipeline then these can be run on every build or release.</p>
+<p>At present much of this testing is still manual in execution so we require compatibility tests to be run for every release. This allows early and fast feedback to be provided to the teams if problems arise.</p>
+<p>Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.</p>
+<h2 id="test-results" tabindex="-1"><a class="header-anchor" href="#test-results">Test Results</a></h2>
+<p>For all digital projects the minimum range of devices to test upon are those specified in the NHSBSA compatibility test coverage.</p>
+<p>Following licensing with Saucelabs we will be able to run tests on over 2000 browsers and devices.</p>
+<p>This greatly increases the range of ‘real user’ experiences that Test can perform on the various platforms before release.</p>
+<p>The results from the end to end / user journey tests must then be fed into the compatibility reports.</p>
+<h2 id="test-reporting" tabindex="-1"><a class="header-anchor" href="#test-reporting">Test Reporting</a></h2>
+<p>Following execution a Compatibility test completion report will need creating which will show the the coverage, result and any issues faced in the testing.</p>
+<p>This report will be a ‘living’ document that will be under constant review and update as the compatibility of the service is regularly executed for each release.</p>
+<h2 id="after-testing" tabindex="-1"><a class="header-anchor" href="#after-testing">After Testing</a></h2>
+<p>When all testing has been completed on Saucelabs please ensure the all test evidence (screenshots, videos etc) has been extracted from the compatibility tool/service.</p>
+<p>All test material will stay within the tool for a duration of X days before being removed. After execution every device used is cleared of data used.</p>
+<p>Please make sure that you are closing the SauceLab connect proxy tunnel after the test execution.</p>
+      <h2 class="nhsuk-heading-l">
+        Related articles
+      </h2>
+      	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<h2 class="nhsuk-card__heading nhsuk-heading-m">
+						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing/compatibility-test-coverage/">
+							Compatibility test coverage
+						</a>
+					</h2>
+					<p class="nhsuk-card__description">The minimum coverage we test compatibility for at the NHSBSA</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-01-24T10:09:22.104Z">24 January 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>
