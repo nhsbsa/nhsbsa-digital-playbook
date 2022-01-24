@@ -71,16 +71,16 @@ Fixtures are data-sets that you use to test certain scenarios with your code.
 
 Its a frequently used pattern to define test fixture data at the top of a class and re-use it for the different cases. There are a few problems with this approach:
 
-* Cross test pollution
+* __Cross test pollution__
   Using this pattern introduces the risk that someone forgets to initialise fixture data between tests. The action of one test can then affect another.
-* Meaningless names
+* __Meaningless names__
   Shared fixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3.
   Numeric suffixes convey no meaning at all. We can presume some of the tests need multiple users, but there is no context about why we need more than one.
   Meaningless names are confusing when used within the test case
-* Noise
+* __Noise__
   Shared fixture data is usually placed as boilerplate at the top of the test class.
   If you were reading such a test, you'd probably skip all of the initialisation code and come back to it after having read the test cases themselves.
-* No explicit intent
+* __No explicit intent__
   As you read the test cases, you will need to go back to the shared data and keep in your head what user1 and user2 are being used for. How they are used is down to the test case. The lack of intent from the field definitions means the reader has to keep this context in their head.
 
 A better approach is to declare the fixture within the test.
@@ -91,15 +91,33 @@ If we’ve decided to avoid shared fixture data, then won’t we end up with lot
 
 A very simple solution to this is to use simple factory methods at the bottom of the test class.
 
-* Less verbose
+* __Less verbose__
   Exposing a method that only takes the argument that varies for the test case means all the default boilerplate is handled in one place, out of the way.
-* Clear intent
+* __Clear intent__
   Exposing multiple methods to describe different situations can clearly express why a fixture object is being created.
-* Clear naming
+* __Clear naming__
   As objects are created within the test, they can be assigned to variables that suit the test case.
 
 Use methods with clear names and intent to create fixture data when it is needed.
 Name the created fixture objects to further clarify the intent within the test.
+
+## Testing with date and time
+
+When code is dependent on date or time, your tests must take control of time so they can test all the different flows and expectations.
+
+We don't hardcode fixture data to specific dates/times far in the future. This test will fail one day and another poor developer will have to come along and mop up the problem.
+
+There are two common approaches to testing with time:
+
+* __Offset input data__
+  Use system date and/or time and adjust with an offset to create values in fixture data. The code will apply logic based on the current system time and the input data. This is a simple approach that works well in most cases.
+
+* __Control system time__
+  Sometimes you can't use fixture data: For example, in the [Greeter kata](https://github.com/wix/tdd-katas), a salutation changes through the course of the day. We obviously can't write tests that only pass in the morning. Instead we need to control system time.
+  
+  Most languages have a way to control system time in code.
+  * [Java](https://www.baeldung.com/java-override-system-time)
+  * [Javascript using Jest](https://codewithhugo.com/mocking-the-current-date-in-jest-tests/)
 
 ## Test one thing
 
@@ -127,11 +145,11 @@ You sometimes see a complex object being built up and used to test equality in a
 
 Asserting equality with complex objects leads to these issues:
 
-* Obscurity
+* __Obscurity__
   It is difficult for the reviewer to understand what is being asserted as objects often have a lot of data within them. It is difficult to know which part of the object data is the being asserted.
-* Untraceable errors
+* __Untraceable errors__
   When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.
-* Fragilility
+__* Fragilility__
   A change in the object created by the function under test will necessitate a refactor of the test to supply matching data into the expectation.
 
 Make assertions with appropriate matchers rather than comparing complex objects with equality.
