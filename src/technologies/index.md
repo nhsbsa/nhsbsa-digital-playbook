@@ -4,7 +4,7 @@ title: "Technologies"
 description: "Find out what our technology stacks are"
 tags: [home, dev]
 order: 
-  home: 10
+  home: 40
   dev: 100
 related:
   tag: tech
