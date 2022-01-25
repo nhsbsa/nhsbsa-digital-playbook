@@ -1,12 +1,16 @@
 ---
 layout: article
-title: "Testing"
+title: "Testing in general"
 description: "How we test at the NHSBSA"
 tags: test
-order: 10
+order: 1
 ---
 
 ## Introduction
+
+Quality assurance (QA) testing is the process of ensuring that your service is of the highest possible quality for your users. Testing uses different tools, technologies and frameworks to prevent issues with your service and to ensure great user experience for all users.
+
+Testers will provide assurance through the design, develop and execute tests on new and existing services. Key responsibilities of this role is to assure quality and consistent attention to detail in all testing performed.
 
 In the NHSBSA we test to our five core frameworks: 
 - Acceptance 
@@ -16,7 +20,7 @@ In the NHSBSA we test to our five core frameworks:
 - Performance
 
 All of our tests are created, developed, excuted and maintained to our test standards. 
-These standards can be found on the Test Community [confluence](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1706623220/NHSBSA+TEST+STANDARDS) and [sharepoint](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/NHSBSA-Test-Standards.aspx) websites.
+These standards can be found on the Test Community [confluence](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1706623220/NHSBSA+TEST+STANDARDS) and [sharepoint](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/NHSBSA-Test-Standards.aspx) websites. 
 
 ## Acceptance Testing
 

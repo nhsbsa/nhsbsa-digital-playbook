@@ -2,7 +2,7 @@
 layout: article
 title: "Performance Testing"
 description: "How & why we performance test in the NHSBSA"
-tags: test
+tags: test-frameworks
 order: 10
 ---
 
