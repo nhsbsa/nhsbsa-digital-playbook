@@ -11,12 +11,12 @@ Reasons may include:
 * __Application support__
   Logs can be used to track down issues in production. It should be possible to read logs and understand the flow through a programme to help track down where something may have gone wrong.
 * __Application monitoring__
-  Logs can be monitored and used to trigger alerts when something goes wrong.Logs should be monitored for application errors and security events at a minimum. Client errors may not be actively monitored, although they should be logged.
+  Logs can be monitored and used to trigger alerts when something goes wrong. Logs should be monitored for application errors and security events at a minimum. Client errors may not be actively monitored, although they should be logged.
 * __Application profiling__
   Logs can be used to understand how an application is behaving in production. For instance to identify bottlenecks or performance issues.
 * __Audit__
   Care must be taken when considering logging for audit purposes. __Personally Identifiable Information must not be recorded in logs__. Logs should only contain an audit of events, identified by system generated IDs. For instance:
-  `User [id] logged into [application-a]`
+  `User: [id] logged into application: [application-a]`
 * __Management information__
   Care must be taken when using logs for management information. The production database is a more accurate source of truth. However logs can provide a useful picture of how an application is behaving.
 
@@ -160,26 +160,18 @@ Log entries should represent atomic events with enough contextual information to
 * Contextual information should include the application flow and logic that caused the event
 * Contextual information should include enough data to identify what caused the event
 
-```java [g1:Java]
-logger.info("User {} successfully authenticated", user.getId())
-```
-
-```java [g1:Javascript]
-logger.info("User %s successfully authenticated", user.id)
-```
-
-Data used in log entries should be wrapped in delimiters to facilitate parsing
+Data used in log entries should be prefixed with a contextual keyword (e.g. `User:`) and wrapped in delimiters (e.g. `[]`) to facilitate parsing
 
 * Depending on the capability of the logging library, delimiters may be automatically included for data items.
 * Parsing of logged data should be verified with a working example script
 * Don’t leave log parsing until its needed to resolve a live issue. A working script that parses data according to the defined delimiters will verify that the data can be parsed and used.
 
 ```java [g1:Javascript]
-logger.info("User [{}] successfully authenticated", user.getId())
+logger.info("User: [{}] successfully authenticated", user.getId())
 ```
 
 ```java [g1:Javascript]
-logger.info("User [%s] successfully authenticated", user.id)
+logger.info("User: [%s] successfully authenticated", user.id)
 ```
 
 Data in log statements should be placed in order of relevance to the event
