@@ -10,7 +10,7 @@ Producing accessibile web sites and applications is a fundamental aspect of fron
 
 The Government service manual explains more about [making your service accessible][making_your_service_accessible].
 
-The NHS service manual also provides guideance on [accessibility][nhs_accessibility] including specific advice on [design][nhs_accessibility_design] and [development][nhs_accessibility_development].
+The NHS service manual also provides guidance on [accessibility][nhs_accessibility] including specific advice on [design][nhs_accessibility_design] and [development][nhs_accessibility_development].
 
 As a frontend developer at the NHSBSA you should:
 
@@ -28,11 +28,13 @@ Both NHS and Gov frontends are implemented in Node.js and Nunjucks. Our preferen
 
 We occasionally need to adopt non-standard patterns when user research proves specific difficulties with the standard patterns. Any new pattern should be user tested and then fed back into the NHS or Gov design system and frontend package.
 
-## Welsh
+## Multi-lingual support
 
-Services should understand whether they have a statutory duty to provide a Welsh language service. In these cases, the UI should be coded to allow localisation of content from the start. Localising content becomes increasingly more difficult if not considered upfront.
+You may also need to support content in many different languages. The UI should be coded with this in mind from the start. Localising content becomes increasingly more difficult if not considered upfront. Most platforms have inbuilt features or extensions to support it.
 
-The Welsh Language Commisioner's Office are available for advice and provide a [bilingual design guide][wlc_bilingual_design_guide]:
+Externalise content in whole sentences, with placeholders for dynamic content: Do not decompose content into sentance fragments as this could break grammar rules when translated to a different language.
+
+Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner's Office are available for advice and provide a [bilingual design guide][wlc_bilingual_design_guide]:
 
 * The website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.
 * It should always be possible and easy to switch from one language to the other on every page, going straight to the same page in the other language.
@@ -41,17 +43,15 @@ The Welsh Language Commisioner's Office are available for advice and provide a [
 * E-mail addresses should be either language neutral or bilingual, e.g. post@cyg-wlc.wales or separate Welsh and English versions should be available which will reach the
 same mailbox.
 
-Also, consider defining externalising content as whole sentences, with placeholders for dynamic content: Do not add dynamic content in a way that would break a grammar when written in a different language.
-
 ## General guidance
 
-* Our web application must function correctly on the range of browsers and devices specified in the latest [Government compatibility guideance][gov_browser_compatibility].
+* Our web application must function correctly on the range of browsers and devices specified in the latest [Government compatibility guidance][gov_browser_compatibility].
 
 * Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See [Wikipedia Post/Redirect/Get][wikipedia_prg] for more on this pattern.
 
 * HTML markup must contain id attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.
 
-* URLs must be agreed by a Content Designer and align to NHS Design Standards
+* URLs must be agreed by a Content Designer and align to [URL design standards][gov_url_standards]
 
 * Prototype code mustn't be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don't require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.
 
@@ -61,6 +61,7 @@ Also, consider defining externalising content as whole sentences, with placehold
 [gov_design_system]: <https://design-system.service.gov.uk/>
 [gov_frontend]: <https://github.com/alphagov/govuk-frontend>
 [gov_browser_compatibility]: <https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices>
+[gov_url_standards]: <https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk>
 [nhs_service_manual]: <https://service-manual.nhs.uk/>
 [nhs_design_system]: <https://service-manual.nhs.uk/design-system>
 [nhs_frontend]: <https://github.com/nhsuk/nhsuk-frontend>
