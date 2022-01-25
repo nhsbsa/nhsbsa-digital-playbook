@@ -2,7 +2,7 @@
 layout: article
 title: "Compatibility Testing"
 description: "How & why we compatibility test in the NHSBSA"
-tags: test
+tags: test-frameworks
 order: 10
 related:
   tag: compatibility-framework
