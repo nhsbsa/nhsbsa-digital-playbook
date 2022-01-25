@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "eleventy-plugin-external-links": "^1.1.2",
