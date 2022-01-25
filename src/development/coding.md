@@ -62,7 +62,7 @@ Production application code should be written according to principles defined in
 * __Port binding__ - Export services via port binding
 * __Concurrency__ - Scale out via the process model
 * __Disposability__ - Maximize robustness with fast startup and graceful shutdown
-* __Dev/prod parity__ -  Keep development, staging, and production as similar as possible
+* __Dev/prod parity__ - Keep development, staging, and production as similar as possible
 * __Logs__ - Treat logs as event streams
 * __Admin processes__ - Run admin/management tasks as one-off processes
 

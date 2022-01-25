@@ -39,7 +39,7 @@ A direct identifier is a piece of data that by itself will identify someone.
 
 ### Indirect Identifiers
 
-You need to use the information in combination with the information below or other information.  If in doubt please contact Information Governance.
+You need to use the information in combination with the information below or other information. If in doubt please contact Information Governance.
 
 This list is meant to be helpful but not comprehensive.
 
@@ -81,24 +81,24 @@ This list is meant to be helpful but not comprehensive.
 * Summary statistical information with values above an agreed value e.g. 5
 * Personal data that has been anonymised to the NHSBSA Anonymisation standard
 * Information that does not relate to a person e.g. is about an inanimate object / concept and no individual can be linked to it e.g. by ownership or use
-* Information about the deceased.  This can remain confidential e.g. Prescription and dental data or medical reports.
+* Information about the deceased. This can remain confidential e.g. Prescription and dental data or medical reports.
 
 ### Special Categories of Personal data
 
 The use of the following types of personal data is prohibited unless permitted by law (GDPR Article 9):
 
-* Physical /mental Health or Condition
-* Sexual Life
-* Sexual Orientation
-* Family / Lifestyle/ Social Circumstances e.g. a social care record
+* Physical / mental health or condition
+* Sexual life
+* Sexual orientation
+* Family / lifestyle/ social circumstances e.g. a social care record
 * Religion or other beliefs
 * Trade union membership
-* Racial / Ethnic origin
-* Biometric information e.g. fingerprint, face, Iris etc.
+* Racial / ethnic origin
+* Biometric information e.g. fingerprint, face, iris etc.
 * Physical description
 * Genetic data – can be personal data for more than one person
-* Offences committed / Alleged to have been committed
-* Criminal proceedings/outcomes/sentences
+* Offences committed / alleged to have been committed
+* Criminal proceedings / outcomes / sentences
 
 ## Development Considerations
 
@@ -153,7 +153,7 @@ Sending an automated email obviously includes the Personal Data of email address
 Considerations
 
 * Email is insecure
-  * Do you know if the recipient's email provider uses secure transport and storage.?
+  * Do you know if the recipient's email provider uses secure transport and storage?
   * Do you know if the recipient will download the email to a secure location?
   * Some email providers guarantee secure transport and storage when sent internally (e.g. NHS Mail). This doesn't guarantee the email is secure once it has been delivered
 * Keep Personal Data to a minimum in emails.
@@ -161,7 +161,7 @@ Considerations
 
 ### Is Personal Data secured?
 
-Transport and storage of Personal Data must be secure. It  is beyond the scope of this guidance to go into depth on this topic.
+Transport and storage of Personal Data must be secure. It is beyond the scope of this guidance to go into depth on this topic.
 
 #### Recommended references
 
