@@ -10,7 +10,7 @@ order: 10
 
 'Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system'. ISQTB
 
-All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests. The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.​​​​​​​
+All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests. The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.
 
 Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person. All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don't press this or click that like in more traditional test plans and scripts. We talk as the user would express a scenario or situation 'Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC'.
 
@@ -18,7 +18,7 @@ Only in circumstances where these actions are needed to prove a clear acceptance
 
 ## Why do you write in a user centric way?
 
-Everything we do whether it is designing a new service or testing it involves the users and what they need or require. 
+Everything we do whether it is designing a new service or testing it involves the users and what they need or require.
 
 There is no use for a service that disrupts, confuses or stops the user from using it to get want they want or need in the quickest time possible.
 
@@ -45,7 +45,7 @@ All acceptance tests in the NHSBSA provide assurance by testing the following:
 - User Journeys, happy and unhappy paths, service scope limitations or redirects.
 - Boundary Value Analysis and Equivalence Partitioning test methods are implemented to test range and limits of services.
 - Integration with other services or providers.
-- Regression to ensure the continued assurance of all the service is not affected by any change or improvement. 
+- Regression to ensure the continued assurance of all the service is not affected by any change or improvement.
 
 ## How are acceptance tests structured?
 
@@ -55,7 +55,7 @@ We employ an 'automation by default' approach to testing so unless not possible 
 
 We also use the following in our tests:
 
-- Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand. 
+- Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.
 - User Centric BDD - BDD uses human-readable descriptions of software user requirements as the basis for software tests. Each test is based on a user story written in the formally specified clear natural English language. User Centric BDD ensures all test scenarios written in Gherkin syntax are from a users perspective and phased as a user would describe a scenario or circumstance.
 - Gherkin - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. Each keyword helps the user and tester to understand the requirements and scenarios more clearly, these keywords include Given (pre-condition), When (action), Then (result).
 - Selenium - a collection of language specific bindings to drive a browser - the way it is meant to be driven.
