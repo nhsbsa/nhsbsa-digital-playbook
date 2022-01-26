@@ -24,6 +24,14 @@ We use these languages:
 * __Python__ (currently in ‘assess’)
   We are looking at Python for some Machine Learning/AI projects. Its also used in some of our platform scripts.
 
+## Data stores
+
+We use these data stores:
+
+* RDBMS using [PostgreSQL][postgresql] and [AWS RDS][aws_rds_postgresql]. Schemas managed by [Liquibase][liquibase]
+* Key-value store using [AWS DynamoDB][aws_dynamodb]
+* Caching with [Redis][redis]
+
 ## Platforms
 
 We use these platforms:
@@ -36,3 +44,9 @@ We use these platforms:
 
 * __On prem Websphere and Oracle__
   We have a legacy estate based on Websphere and Oracle, though functional development is rare within Digital, we do actively maintain them.
+
+[postgresql]: <https://www.postgresql.org/>
+[aws_rds_postgresql]: <https://aws.amazon.com/rds/postgresql/>
+[liquibase]: <https://liquibase.org/>
+[aws_dynamodb]: <https://aws.amazon.com/dynamodb/>
+[redis]: <https://redis.io/>
