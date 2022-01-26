@@ -131,6 +131,23 @@ Consider what is actually needed to satisfy the case under test and nothing more
 
 If you are worried about something else happening then write a test case for that specific scenario.
 
+## Test coverage
+
+Coverage tools can be a useful guide to see if you have missed a branch in execution. But they aren't a substitute for thinking through the requirements and ensuring they are 'covered' by tests. Remember to consider the test as a specification for the expected behaviour.
+
+When testing consider the following:
+
+* __Null or missing arguments__
+  It can be useful to make assertions on input args to ensure you're getting what you expect
+  Avoid _if_ conditions that check for _null and empty_: This results in 4 branches in execution, which you have to test. Instead prefer a library method that encapsulates this condition check and simplifies the logic.
+* __Exceptions__
+  Your tests should be explicit about exception handling.
+  Don't log expected exceptions in your tests as this will create noise for future developers
+* __Empty collections__
+  Iterating over an empty collection can result in cleaner code than having a conditional check. But make sure you test for expected behaviour when an empty collection is provided.
+* __Boundary conditions__
+  Always test the edges
+
 ## Make assertions with appropriate matchers
 
 Assertions should be simple and clear with failure messages that identify the error. This is done by selecting appropriate matchers.

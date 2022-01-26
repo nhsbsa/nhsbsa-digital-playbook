@@ -19,13 +19,24 @@ Developers are responsible for testing the code they write. We require two types
   We do not normally write _full stack_ integration tests, as these are covered by our automation testers.
   For more information, refer to this [guidance on writing integration tests](/development/dev-tests-integration).
 
-## Test Driven Development
+## Test Driven Development (red, green, refactor)
 
 We encourage Developers to adopt Test Driven Development. This means writing tests alongside production code in an iterative fashion according to these TDD rules:
 
 * You may not write production code until you have written a failing unit test.
 * You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
 * You may not write more production code than is sufficient to pass the currently failing test.
+
+You may find it useful to think of this as _Red_, _Green_, _Refactor_. The red, green, refactor approach helps to compartmentalize your focus into three phases:
+
+* __Red__
+  Think about what you want to develop
+* __Green__
+  Think about how to make your tests pass
+* __Refactor__
+  Think about how to improve your existing implementation
+
+Note that we're don't write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you: Its better to write things down than forget them. But we're not defining an entire specification before we write the functional code. TDD is an iterative and incremental process.
 
 ## Test code principles
 
