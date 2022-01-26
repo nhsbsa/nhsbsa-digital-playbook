@@ -2,7 +2,7 @@
 layout: article
 title: "Compatibility test coverage"
 description: "The minimum coverage we test compatibility for at the NHSBSA"
-tags: compatibility-framework
+tags: "compatibility_framework"
 ---
 
 Please find on this page the NHSBSA compatibility testing coverage needed to meet NHSBSA test standards GDS service standard 4. Page information correct as at 17/01/22.
