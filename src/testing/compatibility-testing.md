@@ -5,7 +5,7 @@ description: "How & why we compatibility test in the NHSBSA"
 tags: test-frameworks
 order: 10
 related:
-  tag: compatibility-framework
+  tag: "compatibility_framework"
 ---
 
 ## Why we compatibility test at the NHSBSA
