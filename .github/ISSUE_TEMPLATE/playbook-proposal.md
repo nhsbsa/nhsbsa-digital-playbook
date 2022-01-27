@@ -1,6 +1,6 @@
 ---
 name: Playbook proposal
-about: Describe this issue template's purpose here.
+about: Propose new content for the playbook.
 title: ''
 labels: ''
 assignees: ''
