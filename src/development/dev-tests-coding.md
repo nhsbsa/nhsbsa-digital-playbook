@@ -69,7 +69,7 @@ If you're unable to add just these three comments in the right order within your
 
 Fixtures are data-sets that you use to test certain scenarios with your code.
 
-Its a frequently used pattern to define test fixture data at the top of a class and re-use it for the different cases. There are a few problems with this approach:
+A frequently used pattern is to define test fixture data at the top of a class and re-use it for the different cases. There are a few problems with this approach:
 
 * __Cross test pollution__
   Using this pattern introduces the risk that someone forgets to initialise fixture data between tests. The action of one test can then affect another.
@@ -125,11 +125,7 @@ If you adopt Test Driven Development (TDD) you should find that your test cases 
 
 If you find that each additional test case is actually performing all the previous steps to initialise your fixtures, then you're probably doing too much work, and diluting the intent of the tests.
 
-Its important that the reader of a test only needs to see the data items that are required to test the one thing that has changed since the previous test case.
-
-Consider what is actually needed to satisfy the case under test and nothing more.
-
-If you are worried about something else happening then write a test case for that specific scenario.
+The reader of a test need only see the data required to test one case. Consider what is actually needed to satisfy the test case and nothing more. If you are covering something else then write a different test case for that specific scenario.
 
 ## Test coverage
 
