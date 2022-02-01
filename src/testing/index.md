@@ -1,9 +1,9 @@
 ---
 layout: collection
-title: "Testing at the NHSBSA"
+title: "Testing"
 description: "How we test at the NHSBSA"
 tags: home
-order: 10
+order: 30
 collection_tag: test
 pagination:
   data: collections.test
