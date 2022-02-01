@@ -1,0 +1,38 @@
+.app-beta__container {
+	border-bottom: 1px solid #d8dde0;
+	padding: 8px 0
+}
+
+.app-beta__content {
+	display: table;
+	margin-bottom: 0
+}
+
+.app-beta__content .app-beta__tag {
+	display: block;
+	margin-right: 8px
+}
+
+.app-beta__text {
+	font-weight: 400;
+	font-size: 14px;
+	font-size: .875rem;
+	line-height: 1.2;
+	display: table-cell;
+	vertical-align: baseline
+}
+
+@media (min-width: 40.0625em) {
+	.app-beta__text {
+		font-size: 16px;
+		font-size: 1rem;
+		line-height: 1.2
+	}
+}
+
+@media print {
+	.app-beta__text {
+		font-size: 14pt;
+		line-height: 1.2
+	}
+}
