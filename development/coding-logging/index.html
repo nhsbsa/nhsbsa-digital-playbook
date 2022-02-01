@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Logging  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Logging">
+<meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#security">Security</a></li><li><a href="#data-protection">Data protection</a></li><li><a href="#tools">Tools</a></li><li><a href="#logging-levels">Logging levels</a></li><li><a href="#meta-information">Meta information</a></li><li><a href="#logging-guidance">Logging Guidance</a><ol><li><a href="#content">Content</a></li><li><a href="#error-cases">Error cases</a></li></ol></li><li><a href="#log-review">Log review</a></li><li><a href="#references">References</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Logging
+      </h1>
+      
+<p>Understand the reason for logging within a component and write log statements appropriate to these reasons.</p>
+<p>Reasons may include:</p>
+<ul>
+<li><strong>Application support</strong><br>
+Logs can be used to track down issues in production. It should be possible to read logs and understand the flow through a programme to help track down where something may have gone wrong.</li>
+<li><strong>Application monitoring</strong><br>
+Logs can be monitored and used to trigger alerts when something goes wrong. Logs should be monitored for application errors and security events at a minimum. Client errors may not be actively monitored, although they should be logged.</li>
+<li><strong>Application profiling</strong><br>
+Logs can be used to understand how an application is behaving in production. For instance to identify bottlenecks or performance issues.</li>
+<li><strong>Audit</strong><br>
+Care must be taken when considering logging for audit purposes. <strong>Personally Identifiable Information must not be recorded in logs</strong>. Logs should only contain an audit of events, identified by system generated IDs. For instance:<br>
+<code>User: [id] logged into application: [application-a]</code></li>
+<li><strong>Management information</strong><br>
+Care must be taken when using logs for management information. The production database is a more accurate source of truth. However logs can provide a useful picture of how an application is behaving.</li>
+</ul>
+<h2 id="security" tabindex="-1"><a class="header-anchor" href="#security">Security</a></h2>
+<p>Adhere to best practice secure logging techniques as defined in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP logging cheatsheet</a></p>
+<p>We also use the <a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes" target="_blank" rel="noopener">NCSC guidance for logging for security purposes</a></p>
+<p>Logging must adhere to the <a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard" target="_blank" rel="noopener">Protective Monitoring Standard</a>. In particular, consult the security focussed monitoring standard to understand the various security events that must be logged.</p>
+<h2 id="data-protection" tabindex="-1"><a class="header-anchor" href="#data-protection">Data protection</a></h2>
+<p>Data access events must be logged in accordance with <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-le-processing/accountability-and-governance/logging/" target="_blank" rel="noopener">ICO logging guidance</a>.</p>
+<p>At a minimum, the following events must be logged:</p>
+<ul>
+<li>Collection</li>
+<li>Alteration</li>
+<li>Consultation</li>
+<li>Disclosure (including transfers)</li>
+<li>Combination</li>
+<li>Erasure</li>
+</ul>
+<p>From ICO guidance:</p>
+<blockquote>
+<p>“It is important that you do not record the data itself in your logs of erasure, as there is no need to retain a duplicate record of what you have erased. The requirement is to produce metadata which displays, for example, what a specific person on a specific date erased. The ‘what’ does not have to detail the content of the record/information that has been deleted – it can simply record that record X was updated by a specific individual.”</p>
+</blockquote>
+<p>Data access event logs must include the reason for access and the system ID of the person who accessed the data, including recipient IDs in cases of disclosure.</p>
+<p>From ICO guidance:</p>
+<blockquote>
+<p>“Logs must also record, where possible, the identity of the person who accessed (consulted) the data, the reason for the access, and the date and time of any associated action. You should also record the identity of any recipients, in cases of disclosure – this is particularly important as you will need to inform the recipients if you delete, amend or restrict the processing of this data following a request from the individual.”</p>
+</blockquote>
+<p>Data used in log entries must not include Personally Identifiable Information except for internal system IDs. Logging IDs allows individuals to be identified if necessary by cross reference to a transactional data store. Access to production data stores is controlled.</p>
+<p>For full guidance on use of PII, refer to <a href="/development/coding-securely-personal-data">Guidance for coding with Personal Data</a>.</p>
+<h2 id="tools" tabindex="-1"><a class="header-anchor" href="#tools">Tools</a></h2>
+<p>We make use of logging libraries that simplify adherance to good practice:</p>
+<ul>
+<li>Logging standard meta data (see below)</li>
+<li>Separation of log statements from output channel</li>
+<li>Logging with rich data formats</li>
+</ul>
+<p>In Java, we use <a href="https://www.slf4j.org/" target="_blank" rel="noopener">Slf4J</a> as our logging API, with <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a> as the logging implementation. We use the <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a> <code>@slf4j</code> annotation to ease creation of the logger in code.</p>
+<p>In Node, we use <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">Winston</a> for logging.</p>
+<p>We use UTF-8 encoding and output in JSON for simpler integration into <a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a>, our centralised log collation service.</p>
+<h2 id="logging-levels" tabindex="-1"><a class="header-anchor" href="#logging-levels">Logging levels</a></h2>
+<p>The following standard logging levels should be used:</p>
+<ul>
+<li><code>DEBUG</code> is used for development purposes only.<br>
+Do not rely on DEBUG to understand any potential production issue. DEBUG output must not be allowed on production systems as this exposes the risk of logging PII from library code such as object mappers and ORM frameworks</li>
+<li><code>INFO</code> is used to present normal application flow.<br>
+For example
+<ul>
+<li>On startup/shutdown it is helpful to log configuration properties although secrets and sensitive data must not be logged</li>
+<li>On successful authentication</li>
+<li>On creation/change of user privileges</li>
+<li>On entry to/exit from the public interface to an application</li>
+<li>On calls to/response from a downstream service</li>
+<li>On notable business logic</li>
+<li>On failed input validation (although WARN may be used instead)</li>
+</ul>
+</li>
+<li><code>WARN</code> is used to present undesirable but non-critical errors in application flow<br>
+For example:
+<ul>
+<li>On failed authentication</li>
+<li>On failed authorisation</li>
+<li>On client error</li>
+<li>On server error that is recoverable</li>
+<li>On session management failures<br>
+Events logged at WARN are candidates for monitoring so that alerts may be raised after multiple events</li>
+</ul>
+</li>
+<li><code>ERROR</code> is used to present errors in application flow that require immediate attention<br>
+For example:
+<ul>
+<li>On server error that is unrecoverable</li>
+<li>On failed output validation (e.g. database failed to insert)</li>
+<li>On failed application startup/shutdown<br>
+All events logged at ERROR should be monitored so that alerts may be raised after a single event</li>
+</ul>
+</li>
+</ul>
+<h2 id="meta-information" tabindex="-1"><a class="header-anchor" href="#meta-information">Meta information</a></h2>
+<p>The following meta information should be logged:</p>
+<ul>
+<li>unique ID per log statement</li>
+<li>timestamp in ISO8601 format with minimum milliseconds precision and timezone information</li>
+<li>unique host identifier</li>
+<li>containerised environments should uniquely identify the container</li>
+<li>application/system name</li>
+<li>application specific <em>category</em> e.g. class name</li>
+<li>process ID</li>
+<li>thread ID</li>
+<li>unique request ID</li>
+<li>unique correlation ID for requests that span multiple applications and services</li>
+</ul>
+<p>The following meta information must not be logged:</p>
+<ul>
+<li>client session ID<br>
+Client held session IDs should not be logged, as this opens a security risk.<br>
+If tracing session interactions is required, then it is permissable to log a secure hash of the session ID.</li>
+</ul>
+<h2 id="logging-guidance" tabindex="-1"><a class="header-anchor" href="#logging-guidance">Logging Guidance</a></h2>
+<p>Never print logging information direct to ‘system output’ except through configuration of a logging library. For instance, avoid statements like this:</p>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-326" checked><label for="group-326-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-326"><label for="group-326-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-326-tab-0" name="group-326" checked>
+<pre class="language-java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A useful log statement"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-326-tab-1" name="group-326">
+<pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"A useful log statement"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+<p>Logging libraries should provide data as arguments to log messages with placeholders. This has performance benefits in languages such as Java, but more importantly it allows data to be sanitised within the library. For instance, use this form:</p>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-331" checked><label for="group-331-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-331"><label for="group-331-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-331-tab-0" name="group-331" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - {}"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-331-tab-1" name="group-331">
+<pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data -  %s'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+<p>and avoid this form:</p>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-336" checked><label for="group-336-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-336"><label for="group-336-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-336-tab-0" name="group-336" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - "</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-336-tab-1" name="group-336">
+<pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data - '</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+<h3 id="content" tabindex="-1"><a class="header-anchor" href="#content">Content</a></h3>
+<p>Log entries should represent atomic events with enough contextual information to understand that event.</p>
+<ul>
+<li>It should not be necessary to cross reference one log entry with another to understand it.</li>
+<li>Contextual information should include the application flow and logic that caused the event</li>
+<li>Contextual information should include enough data to identify what caused the event</li>
+</ul>
+<p>Data used in log entries should be prefixed with a contextual keyword (e.g. <code>User:</code>) and wrapped in delimiters (e.g. <code>[]</code>) to facilitate parsing</p>
+<ul>
+<li>Depending on the capability of the logging library, delimiters may be automatically included for data items.</li>
+<li>Parsing of logged data should be verified with a working example script</li>
+<li>Don’t leave log parsing until its needed to resolve a live issue. A working script that parses data according to the defined delimiters will verify that the data can be parsed and used.</li>
+</ul>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-381" checked><label for="group-381-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-381"><label for="group-381-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-381-tab-0" name="group-381" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"User: [{}] successfully authenticated"</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<input type="radio" id="group-381-tab-1" name="group-381">
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"User: [%s] successfully authenticated"</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span>id<span class="token punctuation">)</span></code></pre>
+</div>
+<p>Data in log statements should be placed in order of relevance to the event</p>
+<ul>
+<li>When reviewing log files it is very helpful to see data in priority order within a single log statement so that the most important aspect of the event is read first. For instance, you may want to search for all log events on a particular case by ID. Once that is done, the actual case ID become less relevant than the thing that happened to it.</li>
+</ul>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-393" checked><label for="group-393-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-393"><label for="group-393-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-393-tab-0" name="group-393" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"State change to [{}] for case [{}]"</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-393-tab-1" name="group-393">
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"State change to [%s] for case [%s]"</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>state<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+<h3 id="error-cases" tabindex="-1"><a class="header-anchor" href="#error-cases">Error cases</a></h3>
+<p>Exceptions should be logged with a full stack trace</p>
+<ul>
+<li>Some Exceptions will contain additional information that should also be logged.<br>
+For example, Java SQLExceptions can contain a chain of other SQLExceptions. Ideally all of the exceptions should be logged</li>
+<li>Exceptions should not be logged and then thrown.<br>
+The log and throw anti-pattern creates noisy logs with duplicate log entries for a single event.</li>
+<li>When throwing exceptions, the original exception should be passed into the new one to allow a full stack trace to be logged at the point the exception is handled</li>
+</ul>
+<p>Applications should provide a top level exception handler so that all exceptions are logged. Asynchronous code must be guarded to ensure that exceptions do not propagate and break further calls by the calling framework.</p>
+<p>Known errors should be logged with a unique error code to identify them. This requires the development team to create and maintain a catalogue of known system errors and codes</p>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-424" checked><label for="group-424-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-424"><label for="group-424-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+</ul>
+<input type="radio" id="group-424-tab-0" name="group-424" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"[{}] status change [{}] > [{}] disallowed for case [{}]"</span><span class="token punctuation">,</span> <br>    <span class="token class-name">ServiceErrors</span><span class="token punctuation">.</span>CASE_INVALID_STATUS_CHANGE<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> newStatus<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-424-tab-1" name="group-424">
+<pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"[%s] status change [%s] > [%s] disallowed for case [%s]"</span><span class="token punctuation">,</span> <br>    ServiceErrors<span class="token punctuation">.</span><span class="token constant">CASE_INVALID_STATUS_CHANGE</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>status<span class="token punctuation">,</span> newStatus<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+<h2 id="log-review" tabindex="-1"><a class="header-anchor" href="#log-review">Log review</a></h2>
+<p>A review of log events must be undertaken prior to any minor release. A log review should show:</p>
+<ul>
+<li>application flow is descernable from reading logs alone: Do you know what’s happening from reading the logs</li>
+<li>all potential application errors are being logged and with enough contextual information to identify the cause of the error</li>
+<li>all potential client errors are being logged and with enough contextual information to identify the cause of the error</li>
+<li>all security events are being logged</li>
+</ul>
+<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP logging cheatsheet</a></li>
+<li><a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes" target="_blank" rel="noopener">NCSC guidance for logging for security purposes</a></li>
+<li><a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard" target="_blank" rel="noopener">Protective Monitoring Standard</a></li>
+<li><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-le-processing/accountability-and-governance/logging/" target="_blank" rel="noopener">ICO logging guidance</a></li>
+<li>[Guidance for Coding with Personal Data][nhsbsa_guidance_for_coding_with_personal_data]</li>
+<li><a href="https://www.slf4j.org/" target="_blank" rel="noopener">Slf4J</a></li>
+<li><a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a></li>
+<li><a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a></li>
+<li><a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">Winston</a></li>
+<li><a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a></li>
+</ul>
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-02-01T12:02:15.432Z">1 February 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>

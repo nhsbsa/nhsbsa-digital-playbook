@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Coding with personal data  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Coding with personal data">
+<meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#glossary">Glossary</a></li><li><a href="#background">Background</a><ol><li><a href="#direct-identifiers">Direct identifiers</a></li><li><a href="#indirect-identifiers">Indirect Identifiers</a></li><li><a href="#what-is-not-personal-data">What is not Personal Data</a></li><li><a href="#special-categories-of-personal-data">Special Categories of Personal data</a></li></ol></li><li><a href="#development-considerations">Development Considerations</a><ol><li><a href="#is-personal-data-required%3F">Is Personal Data required?</a></li><li><a href="#is-personal-data-sent-to-uncontrolled-locations%3F">Is Personal Data sent to uncontrolled locations?</a></li><li><a href="#is-personal-data-secured%3F">Is Personal Data secured?</a></li><li><a href="#is-personal-data-being-used-as-intended%3F">Is Personal Data being used as intended?</a></li><li><a href="#anonymisation-and-pseudonymisation">Anonymisation and pseudonymisation</a></li></ol></li><li><a href="#references">References</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Coding with personal data
+      </h1>
+      
+<h2 id="glossary" tabindex="-1"><a class="header-anchor" href="#glossary">Glossary</a></h2>
+<table>
+  <tr>
+    <th>Personal Data</th>
+    <td>Personal data is Information that relates to living individuals that can by identified or singled out directly or indirectly by anyone. Individuals can be identified by various means including, name, address, an identification number, location data, and an online identifier such as cookies or IP address or to one or more factors specific to their physical, physiological, genetic, mental, economic, cultural or social identity.</td>
+  </tr>
+  <tr>
+    <th>Confidential Data</th>
+    <td>Confidential data relates to information given with an expectation it would remain confidential e.g. what you say to your GP or Dentist or someone offering you counselling. So information about a patient’s care and their physical and mental health would be confidential.</td>
+  </tr>
+</table>
+<h2 id="background" tabindex="-1"><a class="header-anchor" href="#background">Background</a></h2>
+<p>Software Developers must ensure that data protection regulations are adhered to when creating software solutions. This guidance is intended to cover the basic aspects of data protection that must be considered when handling Personal Data.</p>
+<p>Regulations require us to understand when personal data is being captured, to identify the risks to the person whose data it is, and to take appropriate steps to secure the data. The Special Categories of personal data defined in this section are always considered high risk.</p>
+<h3 id="direct-identifiers" tabindex="-1"><a class="header-anchor" href="#direct-identifiers">Direct identifiers</a></h3>
+<p>A direct identifier is a piece of data that by itself will identify someone.</p>
+<ul>
+<li>General identifiers e.g. NHS Number or National Insurance Number</li>
+<li>Biometric information e.g. fingerprint, face, Iris etc.</li>
+<li>Local identifiers e.g. Pension number, employment number, login id, Pseudonymised identifiers etc.</li>
+<li>Email address</li>
+<li>Home phone number</li>
+<li>Mobile phone or device number</li>
+<li>Online identifiers e.g. IP address, event logs</li>
+</ul>
+<h3 id="indirect-identifiers" tabindex="-1"><a class="header-anchor" href="#indirect-identifiers">Indirect Identifiers</a></h3>
+<p>You need to use the information in combination with the information below or other information. If in doubt please contact Information Governance.</p>
+<p>This list is meant to be helpful but not comprehensive.</p>
+<ul>
+<li>Name</li>
+<li>Address</li>
+<li>Postcode (it can be a direct identifier if in a rural area with a low population density)</li>
+<li>Date of Birth</li>
+<li>Age</li>
+<li>Sex</li>
+<li>Marital Status</li>
+<li>Gender</li>
+<li>Living habits e.g. recorded by a smart meter or internet of things devices</li>
+<li>Professional training/awards</li>
+<li>Income/financial/Tax situation</li>
+<li>Physical description</li>
+<li>Website Cookies or technologies that achieve the same result e.g. Beacons</li>
+<li>Location Data (Travel/GPS/GSM data)</li>
+<li>Device MAC address (Wireless interface)</li>
+<li>Singled out in statistical information</li>
+<li>Unique mannerisms, ways or writing or unique ways of talking</li>
+<li>The way you walk (everyone is unique)</li>
+<li>Education/ professional training</li>
+<li>Employment / Career history</li>
+<li>Financial affairs</li>
+<li>Signature</li>
+<li>Genetic data – can be personal data for more than one person</li>
+<li>Offences committed / Alleged to have been committed</li>
+<li>Criminal proceedings/outcomes/sentences</li>
+<li>Physical /mental Health or Condition</li>
+<li>Sexual Life</li>
+<li>Sexual Orientation</li>
+<li>Family / Lifestyle/ Social Circumstances e.g. a social care record</li>
+<li>Religion or other beliefs</li>
+<li>Trade union membership</li>
+<li>Racial / Ethnic origin</li>
+</ul>
+<h3 id="what-is-not-personal-data" tabindex="-1"><a class="header-anchor" href="#what-is-not-personal-data">What is not Personal Data</a></h3>
+<ul>
+<li>Summary statistical information with values above an agreed value e.g. 5</li>
+<li>Personal data that has been anonymised to the NHSBSA Anonymisation standard</li>
+<li>Information that does not relate to a person e.g. is about an inanimate object / concept and no individual can be linked to it e.g. by ownership or use</li>
+<li>Information about the deceased. This can remain confidential e.g. Prescription and dental data or medical reports.</li>
+</ul>
+<h3 id="special-categories-of-personal-data" tabindex="-1"><a class="header-anchor" href="#special-categories-of-personal-data">Special Categories of Personal data</a></h3>
+<p>The use of the following types of personal data is prohibited unless permitted by law (GDPR Article 9):</p>
+<ul>
+<li>Physical / mental health or condition</li>
+<li>Sexual life</li>
+<li>Sexual orientation</li>
+<li>Family / lifestyle/ social circumstances e.g. a social care record</li>
+<li>Religion or other beliefs</li>
+<li>Trade union membership</li>
+<li>Racial / ethnic origin</li>
+<li>Biometric information e.g. fingerprint, face, iris etc.</li>
+<li>Physical description</li>
+<li>Genetic data – can be personal data for more than one person</li>
+<li>Offences committed / alleged to have been committed</li>
+<li>Criminal proceedings / outcomes / sentences</li>
+</ul>
+<h2 id="development-considerations" tabindex="-1"><a class="header-anchor" href="#development-considerations">Development Considerations</a></h2>
+<h3 id="is-personal-data-required%3F" tabindex="-1"><a class="header-anchor" href="#is-personal-data-required%3F">Is Personal Data required?</a></h3>
+<p>There is most often a valid business or user need for us to capture and store personal data.</p>
+<p>As a software development team, you should be enabled to challenge the need to store any personal data if you don’t agree.</p>
+<h3 id="is-personal-data-sent-to-uncontrolled-locations%3F" tabindex="-1"><a class="header-anchor" href="#is-personal-data-sent-to-uncontrolled-locations%3F">Is Personal Data sent to uncontrolled locations?</a></h3>
+<p>The core design of a software solution usually entails transporting data over secure HTTPs storing in an encrypted database. However, there are other locations that can be overlooked.</p>
+<h4 id="logs" tabindex="-1"><a class="header-anchor" href="#logs">Logs</a></h4>
+<p>There are very few reasons for software to log personal data. Data protection regulation mandates that data held for an individual must be removed according to its data retention schedule. This becomes very difficult if it has been logged in a file, and that file has potentially been backed up in long term storage. With advancements in log storage and analysis tools (e.g. Datadog), once logged it becomes very difficult to remove that data.</p>
+<p>It is always easier not to log any personal data.</p>
+<p>Considerations:</p>
+<ul>
+<li>Do not pass personal data directly through to anything that logs to a file (or any other destination).
+<ul>
+<li>This includes System.out/System.err calls</li>
+</ul>
+</li>
+<li>Exclude or redact personal data in toString() methods.
+<ul>
+<li>It is very easy to pass a composite object into a log statement and not to realise that nested, personal data will be logged.</li>
+<li>Use a library such as bsa-redact for a simple approach to redacting personal data</li>
+</ul>
+</li>
+<li>Make use of log appenders that recognise personal data prefixes in log statements and obscure/remove them
+<ul>
+<li>This technique is not recommended as a primary mechanism as it relies on logging the data with appropriate markup to identify the personal data</li>
+<li>It can be useful to catch unexpected logging of private data such as usernames and passwords</li>
+</ul>
+</li>
+<li>Do not log Personal Data at debug level
+<ul>
+<li>Debug level can be turned on in production environments in order to track down production issues</li>
+<li>It is always safer not to log any personal data</li>
+<li>If debug logging of personal data is required, use a different technique, such as turning off data redaction with a system property.</li>
+</ul>
+</li>
+<li>Review your logs
+<ul>
+<li>Prior to going live with software, always take time to review the logs to check personal data is not being logged</li>
+<li>Review logs on every release to ensure Personal Data doesn’t creep in somehow.</li>
+</ul>
+</li>
+</ul>
+<h4 id="google-analytics-(or-equivalent)" tabindex="-1"><a class="header-anchor" href="#google-analytics-(or-equivalent)">Google Analytics (or equivalent)</a></h4>
+<p>The <a href="https://marketingplatform.google.com/about/analytics/terms/us/" target="_blank" rel="noopener">terms and conditions of Google Analytics (GA)</a> are very clear on the prohibition of sending Personally Identifiable Information to their servers (see section 7).</p>
+<p>Considerations:</p>
+<ul>
+<li>Never use Personal Data in a URL</li>
+<li>Sophisticated use of GA increases the risk of accidentally sending Personal Data
+<ul>
+<li>If you are using Tag Manager or equivalent to send additional data to GA, ensure it does not include Personal Data</li>
+</ul>
+</li>
+</ul>
+<h4 id="email" tabindex="-1"><a class="header-anchor" href="#email">Email</a></h4>
+<p>Sending an automated email obviously includes the Personal Data of email address. However, there are risks associated with email that must be considered with respect to securing Personal Data</p>
+<p>Considerations</p>
+<ul>
+<li>Email is insecure
+<ul>
+<li>Do you know if the recipient’s email provider uses secure transport and storage?</li>
+<li>Do you know if the recipient will download the email to a secure location?</li>
+<li>Some email providers guarantee secure transport and storage when sent internally (e.g. NHS Mail). This doesn’t guarantee the email is secure once it has been delivered</li>
+</ul>
+</li>
+<li>Keep Personal Data to a minimum in emails.</li>
+<li>Always seek advice from Information Governance when sending automated emails</li>
+</ul>
+<h3 id="is-personal-data-secured%3F" tabindex="-1"><a class="header-anchor" href="#is-personal-data-secured%3F">Is Personal Data secured?</a></h3>
+<p>Transport and storage of Personal Data must be secure. It is beyond the scope of this guidance to go into depth on this topic.</p>
+<h4 id="recommended-references" tabindex="-1"><a class="header-anchor" href="#recommended-references">Recommended references</a></h4>
+<ul>
+<li><a href="https://www.ncsc.gov.uk/guidance/security-design-principles-digital-services-main" target="_blank" rel="noopener">https://www.ncsc.gov.uk/guidance/security-design-principles-digital-services-main</a></li>
+</ul>
+<h3 id="is-personal-data-being-used-as-intended%3F" tabindex="-1"><a class="header-anchor" href="#is-personal-data-being-used-as-intended%3F">Is Personal Data being used as intended?</a></h3>
+<h4 id="privacy-policy" tabindex="-1"><a class="header-anchor" href="#privacy-policy">Privacy Policy</a></h4>
+<p>Personal Data must be used in accordance to how we tell our users in the Privacy Policy.</p>
+<p>Considerations:</p>
+<ul>
+<li>Is the software doing anything different to what the privacy notice says.
+<ul>
+<li>If so then we have an issue to be resolved.</li>
+<li>See the NHSBSA Privacy Policy here: <a href="https://www.nhsbsa.nhs.uk/yourinformation" target="_blank" rel="noopener">https://www.nhsbsa.nhs.uk/yourinformation</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="data-retention" tabindex="-1"><a class="header-anchor" href="#data-retention">Data retention</a></h4>
+<p>Personal Data must be removed according to the service’s data retention schedule.</p>
+<p>See the BSA Data Retention Schedule here: <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2018-06/NHSBSARM012%20Retention%20Schedule_0.xls" target="_blank" rel="noopener">https://www.nhsbsa.nhs.uk/sites/default/files/2018-06/NHSBSARM012 Retention Schedule_0.xls</a></p>
+<p>Considerations:</p>
+<ul>
+<li>Sometimes projects are permitted to pass into production without a data retention solution on the condition that it will be in place according to the retention schedule.
+<ul>
+<li>I.e. If data must be deleted 6 months from capture, then the team have 6 months from go-live to produce a solution</li>
+<li>Ensure that an approach to data retention is understood and feasible within the timescales, even though the implementation is not ready</li>
+</ul>
+</li>
+<li>Ensure that stored data is deleted according to its schedule regardless of whether the user clicked on a final submit button
+<ul>
+<li>Online application forms sometimes store data before it is actually submitted by the user into the business service.</li>
+<li>For whatever reason, the user may never choose to submit that data.</li>
+<li>Even this un-submitted data must be deleted according to a schedule.</li>
+</ul>
+</li>
+</ul>
+<h3 id="anonymisation-and-pseudonymisation" tabindex="-1"><a class="header-anchor" href="#anonymisation-and-pseudonymisation">Anonymisation and pseudonymisation</a></h3>
+<p>A potentially useful definition of anonymisation is an irreversible method for removing the means to identify an individual from a dataset, even in the presence of additional information. In the same fashion, pseudonymisation is a method for removing the means to identify an individual from a dataset, reversible by applying additional information (potentially by linking to another dataset).</p>
+<p>Although forming any link between datasets may suggest that only pseudonymisation is possible, we can retain links between anonymous datasets using destructive encoding.</p>
+<p>For example, take a dataset in which all direct identifiers have been stripped except for a unique, direct identifier (such as an NHS number) which is destructively encoded in a reproducible manner. At this stage it is important to ensure that a combination of indirect identifiers which remain in the data cannot be used to identify an individual.</p>
+<p>If another dataset is stripped of direct identifiers and the same unique, direct identifier is destructively encoded in the same manner, the link between the two datasets is preserved while safeguarding against individual identification. Crucially, the second (and any subsequent datasets) must not, when cross-referenced, allow the identification of an individual. If this were the case then the data sources would instead be pseudonymised.</p>
+<p>Thus, links between datasets do not necessarily preclude anonymisation. This could be useful, for example, in conducting anonymous research across datasets from several organisations.</p>
+<p>As per Information Governance guidance, it is often better to use destructive encoding to anonymise data in this fashion than delete them if there are likely to be data integrity issues.</p>
+<p>It is possible that over time, this kind of destructive encoding may still be cracked, especially after the advent of quantum computing. If relatively low granularity data is held for an extended period, the probability that the data can still be declared as truly anonymous will decrease over time.</p>
+<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<ul>
+<li><a href="https://marketingplatform.google.com/about/analytics/terms/us/" target="_blank" rel="noopener">Google Analytics (GA) terms and conditions</a></li>
+</ul>
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-02-01T12:02:15.432Z">1 February 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>

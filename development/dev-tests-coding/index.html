@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta property="csp-nonce" content="">
+    
+    
+    
+    
+    <title>Writing clean tests  - NHSBSA
+</title>
+
+    
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+    
+
+      
+      <link rel="shortcut icon" href="/nhsbsa-digital-playbook/favicons/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/favicons/apple-touch-icon-180x180.png">
+      <link rel="mask-icon" href="/nhsbsa-digital-playbook/favicons/favicon.svg&quot; color=&quot;#005eb8">
+      <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/favicons/favicon-192x192.png">
+      <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/favicons/mediumtile-144x144.png">
+      <meta name="msapplication-TileColor" content="#005eb8">
+      <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/favicons/smalltile-70x70.png">
+      <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/favicons/mediumtile-150x150.png">
+      <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/favicons/widetile-310x150.png">
+      <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/favicons/largetile-310x310.png">
+
+
+<link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
+<meta property="og:title" content="Writing clean tests">
+<meta property="og:image" content="/images/opengraph-image.png">
+    
+    
+    <meta property="og:image" content="/assets/images/open-graph.png">
+  </head>
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+  
+
+
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+      </a>    </div>
+    </div>
+
+</header>
+
+
+      <div class="nhsuk-width-container nhsuk-width-container-fluid">
+        <main class="nhsuk-main-wrapper " id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
+      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#background">Background</a></li><li><a href="#naming">Naming</a><ol><li><a href="#naming-test-cases">Naming test cases</a></li></ol></li><li><a href="#structure-%E2%80%98given-when-then%E2%80%99-code-with-comments">Structure ‘given-when-then’ code with comments</a></li><li><a href="#avoid-shared-fixture-data">Avoid shared fixture data</a></li><li><a href="#create-fixture-data-in-factory-methods">Create fixture data in factory methods</a></li><li><a href="#testing-with-date-and-time">Testing with date and time</a></li><li><a href="#test-one-thing">Test one thing</a></li><li><a href="#test-coverage">Test coverage</a></li><li><a href="#make-assertions-with-appropriate-matchers">Make assertions with appropriate matchers</a></li><li><a href="#avoid-asserting-equality-with-complex-objects">Avoid asserting equality with complex objects</a></li><li><a href="#test-dsl">Test DSL</a></li><li><a href="#references">References</a></li></ol>
+      </div>
+    </div>
+
+    <div class="nhsbsa-article-content">
+      <div class="nhsuk-back-link nhsuk-back-link-js">
+        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      
+      <h1 class="nhsuk-heading-xl">
+        Writing clean tests
+      </h1>
+      
+<p>For a great article on writing clean tests in Java, read this article:</p>
+<blockquote>
+<p><a href="https://phauer.com/2019/modern-best-practices-testing-java/" target="_blank" rel="noopener">Modern Best Practices for Testing in Java</a></p>
+</blockquote>
+<h2 id="background" tabindex="-1"><a class="header-anchor" href="#background">Background</a></h2>
+<p>Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.</p>
+<p>A clean test is one that can be easily read and understood. Writing clean tests is important as it removes barriers to understanding and helps to ensure that the functional code is doing what is intended.</p>
+<p>Have you ever reviewed code and spent more time trying to understand the test code than the functional code. Have you ever given up on really trying to understand the test and just accepted the change? After all, the author probably knew what they were doing, right?</p>
+<p>This page shows small improvements that can be made to lower the bar for comprehension.</p>
+<h2 id="naming" tabindex="-1"><a class="header-anchor" href="#naming">Naming</a></h2>
+<p>Fields SHOULD be named to clarify their meaning within the test.</p>
+<p>When using mocking frameworks clearly identify mock objects and argument captors. E.g. Mocks can be prefixed with ‘mock…’ and Captors can be suffixed with ‘…Captor’</p>
+<h3 id="naming-test-cases" tabindex="-1"><a class="header-anchor" href="#naming-test-cases">Naming test cases</a></h3>
+<p>Test cases should be named using some form of BDD syntax. The usual <code>Given-When-Then</code> can be overly verbose. Consider using the more succinct <code>Should-When</code> syntax, or even a simple <code>Should</code>.</p>
+<p>Here are some example test case names against a function that sorts by user email address</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>given-when-then</td>
+<td>givenMultipleUsersWhenMappedToViewThenSortedByEmail</td>
+</tr>
+<tr>
+<td>should-when</td>
+<td>shouldSortByEmailWhenMultipleUsers</td>
+</tr>
+<tr>
+<td>should</td>
+<td>multipleUsersShouldSortByEmail</td>
+</tr>
+<tr>
+<td>statement</td>
+<td>multipleUsersSortedByEmail</td>
+</tr>
+</tbody>
+</table>
+<p>Most importantly, the name should be unambiguous and clear.</p>
+<p>Some frameworks rely on method names to identify test cases. In others, such as JUnit4/5 we use annotations, and so there’s no benefit to adding the keyword <em>test</em>.</p>
+<h2 id="structure-%E2%80%98given-when-then%E2%80%99-code-with-comments" tabindex="-1"><a class="header-anchor" href="#structure-%E2%80%98given-when-then%E2%80%99-code-with-comments">Structure ‘given-when-then’ code with comments</a></h2>
+<p>Our test cases should use a standard BDD structure of:</p>
+<ul>
+<li><code>Given</code> - to set up fixture data as pre-conditions</li>
+<li><code>When</code> - to call the method under test</li>
+<li><code>Then</code> - make assertions on the actual response (and verify any mock interactions)</li>
+</ul>
+<p>This is also sometimes referred to as <code>Arrange</code>, <code>Act</code>, <code>Assert</code></p>
+<p>For frameworks that do not impose this structure in their API, reasability of tests will improve immensely by following the very simple process of grouping the three sections using comments.</p>
+<pre class="language-java"><code class="language-java"><span class="token comment">//given</span><br><br><span class="token comment">//when</span><br><br><span class="token comment">//then</span></code></pre>
+<p>There is no need to write anything beside the comments as they are simply delimiters. The point is to show the clean structure of your test.</p>
+<p>If you’re unable to add just these three comments in the right order within your test code, then your test probably isn’t clean.</p>
+<h2 id="avoid-shared-fixture-data" tabindex="-1"><a class="header-anchor" href="#avoid-shared-fixture-data">Avoid shared fixture data</a></h2>
+<p>Fixtures are data-sets that you use to test certain scenarios with your code.</p>
+<p>A frequently used pattern is to define test fixture data at the top of a class and re-use it for the different cases. There are a few problems with this approach:</p>
+<ul>
+<li><strong>Cross test pollution</strong><br>
+Using this pattern introduces the risk that someone forgets to initialise fixture data between tests. The action of one test can then affect another.</li>
+<li><strong>Meaningless names</strong><br>
+Shared fixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3.<br>
+Numeric suffixes convey no meaning at all. We can presume some of the tests need multiple users, but there is no context about why we need more than one.<br>
+Meaningless names are confusing when used within the test case</li>
+<li><strong>Noise</strong><br>
+Shared fixture data is usually placed as boilerplate at the top of the test class.<br>
+If you were reading such a test, you’d probably skip all of the initialisation code and come back to it after having read the test cases themselves.</li>
+<li><strong>No explicit intent</strong><br>
+As you read the test cases, you will need to go back to the shared data and keep in your head what user1 and user2 are being used for. How they are used is down to the test case. The lack of intent from the field definitions means the reader has to keep this context in their head.</li>
+</ul>
+<p>A better approach is to declare the fixture within the test.</p>
+<h2 id="create-fixture-data-in-factory-methods" tabindex="-1"><a class="header-anchor" href="#create-fixture-data-in-factory-methods">Create fixture data in factory methods</a></h2>
+<p>If we’ve decided to avoid shared fixture data, then won’t we end up with lots of object creation code within our tests? Yes, you can. This is ok if object creation can be done with clear intent in a one liner. But even using lombok builders, object creation can often span multiple lines which leads to needless boilerplate.</p>
+<p>A very simple solution to this is to use simple factory methods at the bottom of the test class.</p>
+<ul>
+<li><strong>Less verbose</strong><br>
+Exposing a method that only takes the argument that varies for the test case means all the default boilerplate is handled in one place, out of the way.</li>
+<li><strong>Clear intent</strong><br>
+Exposing multiple methods to describe different situations can clearly express why a fixture object is being created.</li>
+<li><strong>Clear naming</strong><br>
+As objects are created within the test, they can be assigned to variables that suit the test case.</li>
+</ul>
+<p>Use methods with clear names and intent to create fixture data when it is needed.<br>
+Name the created fixture objects to further clarify the intent within the test.</p>
+<h2 id="testing-with-date-and-time" tabindex="-1"><a class="header-anchor" href="#testing-with-date-and-time">Testing with date and time</a></h2>
+<p>When code is dependent on date or time, your tests must take control of time so they can test all the different flows and expectations.</p>
+<p>We don’t hardcode fixture data to specific dates/times far in the future. This test will fail one day and another poor developer will have to come along and mop up the problem.</p>
+<p>There are two common approaches to testing with time:</p>
+<ul>
+<li>
+<p><strong>Offset input data</strong><br>
+Use system date and/or time and adjust with an offset to create values in fixture data. The code will apply logic based on the current system time and the input data. This is a simple approach that works well in most cases.</p>
+</li>
+<li>
+<p><strong>Control system time</strong><br>
+Sometimes you can’t use fixture data: For example, in the <a href="https://github.com/wix/tdd-katas" target="_blank" rel="noopener">Greeter kata</a>, a salutation changes through the course of the day. We obviously can’t write tests that only pass in the morning. Instead we need to control system time.</p>
+<p>Most languages have a way to control system time in code.</p>
+<ul>
+<li><a href="https://www.baeldung.com/java-override-system-time" target="_blank" rel="noopener">Java</a></li>
+<li><a href="https://codewithhugo.com/mocking-the-current-date-in-jest-tests/" target="_blank" rel="noopener">Javascript using Jest</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="test-one-thing" tabindex="-1"><a class="header-anchor" href="#test-one-thing">Test one thing</a></h2>
+<p>If you adopt Test Driven Development (TDD) you should find that your test cases are lean, with just enough fixture data to test a single additional requirement.</p>
+<p>If you find that each additional test case is actually performing all the previous steps to initialise your fixtures, then you’re probably doing too much work, and diluting the intent of the tests.</p>
+<p>The reader of a test need only see the data required to test one case. Consider what is actually needed to satisfy the test case and nothing more. If you are covering something else then write a different test case for that specific scenario.</p>
+<h2 id="test-coverage" tabindex="-1"><a class="header-anchor" href="#test-coverage">Test coverage</a></h2>
+<p>Coverage tools can be a useful guide to see if you have missed a branch in execution. But they aren’t a substitute for thinking through the requirements and ensuring they are ‘covered’ by tests. Remember to consider the test as a specification for the expected behaviour.</p>
+<p>When testing consider the following:</p>
+<ul>
+<li><strong>Null or missing arguments</strong><br>
+It can be useful to make assertions on input args to ensure you’re getting what you expect<br>
+Avoid <em>if</em> conditions that check for <em>null and empty</em>: This results in 4 branches in execution, which you have to test. Instead prefer a library method that encapsulates this condition check and simplifies the logic.</li>
+<li><strong>Exceptions</strong><br>
+Your tests should be explicit about exception handling.<br>
+Don’t log expected exceptions in your tests as this will create noise for future developers</li>
+<li><strong>Empty collections</strong><br>
+Iterating over an empty collection can result in cleaner code than having a conditional check. But make sure you test for expected behaviour when an empty collection is provided.</li>
+<li><strong>Boundary conditions</strong><br>
+Always test the edges</li>
+</ul>
+<h2 id="make-assertions-with-appropriate-matchers" tabindex="-1"><a class="header-anchor" href="#make-assertions-with-appropriate-matchers">Make assertions with appropriate matchers</a></h2>
+<p>Assertions should be simple and clear with failure messages that identify the error. This is done by selecting appropriate matchers.</p>
+<p>Be specific.</p>
+<p>It can be easier to learn and use just a few of the matchers in an assertion framework. But by taking some time to read all the options available, the failure messages can be much more informative.</p>
+<h2 id="avoid-asserting-equality-with-complex-objects" tabindex="-1"><a class="header-anchor" href="#avoid-asserting-equality-with-complex-objects">Avoid asserting equality with complex objects</a></h2>
+<p>You sometimes see a complex object being built up and used to test equality in a matcher. In Java, this ultimately defers to .equals().</p>
+<p>Asserting equality with complex objects leads to these issues:</p>
+<ul>
+<li><strong>Obscurity</strong><br>
+It is difficult for the reviewer to understand what is being asserted as objects often have a lot of data within them. It is difficult to know which part of the object data is the being asserted.</li>
+<li><strong>Untraceable errors</strong><br>
+When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.<br>
+<strong>* Fragilility</strong><br>
+A change in the object created by the function under test will necessitate a refactor of the test to supply matching data into the expectation.</li>
+</ul>
+<p>Make assertions with appropriate matchers rather than comparing complex objects with equality.</p>
+<h2 id="test-dsl" tabindex="-1"><a class="header-anchor" href="#test-dsl">Test DSL</a></h2>
+<p>A test Domain Specific Language is a useful technique that may be re-used across a test suite, removing boilerplate and improving clarity.</p>
+<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<ul>
+<li><a href="https://phauer.com/2019/modern-best-practices-testing-java/" target="_blank" rel="noopener">Modern Best Practices for Testing in Java</a></li>
+</ul>
+    </div>
+      <div class="nhsbsa-article--date">
+          <p>
+            Published <time datetime="2022-02-01T12:02:15.432Z">1 February 2022</time>
+          </p>
+      </div>
+  </div>
+</div>
+        </main>
+      </div>
+
+      <footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility">Accessibility</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.js"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js"></script>
+  </body>
+</html>
