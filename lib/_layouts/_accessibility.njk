@@ -2,9 +2,16 @@
 
 {% from "prose/macro.njk" import appProse %}
 
+{% block header %}
+  {{ appHeader({
+    homeHref: homeUrl,
+    productName: app.productName,
+    serviceName: app.serviceName
+  }) }}
+{% endblock %}
+
 {% block main %}
   <div class="nhsuk-width-container">
-    {% block beforeContent %}{% endblock %}
     <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-three-quarters">
