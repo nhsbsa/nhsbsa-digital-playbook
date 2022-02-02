@@ -19,7 +19,7 @@ We need a minimum level of documentation for all our project repositories. A [st
   The Code of conduct explains our expectations on behaviour from member of the community.
   It is based on the [Contributor Covenant code of conduct][contributor_covenant_coc]
 * __CONTRIBUTING.MD__
-  A brief explanation of how to contribute back to the repository. Closed source projects shuld amend the issue management section to reference Jira.
+  A brief explanation of how to contribute back to the repository. Closed source projects should amend the issue management section to reference Jira.
 * __LICENCE.txt__
   We use [Apache 2][licence_apache2] licence for code and [Open Government Licence v3][licence_ogl3] for content.
 * __SECURITY.md__
