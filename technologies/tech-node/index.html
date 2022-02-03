@@ -70,7 +70,9 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-      
+      <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#ide">IDE</a></li><li><a href="#build">Build</a></li><li><a href="#application">Application</a></li><li><a href="#testing">Testing</a></li></ol>
+      </div>
     </div>
 
     <div class="nhsbsa-article-content">
@@ -86,10 +88,48 @@
         Node.js
       </h1>
       
+<p>Here’s a list of our preferred technology choices when implementing in<br>
+JavaScript. We’re not prescriptive in these choices, but have a good reason to<br>
+deviate from the norm. If you there’s a better option, raise it at the<br>
+Developer Community.</p>
+<h2 id="ide" tabindex="-1"><a class="header-anchor" href="#ide">IDE</a></h2>
+<p>Choose whatever you’re comfortable with, so as long as you can perform your<br>
+job, though our developers tend to opt for <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>.</p>
+<h2 id="build" tabindex="-1"><a class="header-anchor" href="#build">Build</a></h2>
+<ul>
+<li>Code coverage provided by <a href="https://jestjs.io/" target="_blank" rel="noopener">Jest</a></li>
+<li>Static analysis with SonarQube</li>
+<li><a href="https://www.npmjs.com/package/sass" target="_blank" rel="noopener">Sass</a> for CSS preprocessing and building CSS assets</li>
+<li><a href="https://gulpjs.com/" target="_blank" rel="noopener">Gulp</a> is used for building clientside JavaScript assets</li>
+<li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> can be used as a superset of JavaScript to provide more confidence</li>
+<li><a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a> for opinionated code formatting</li>
+</ul>
+<h2 id="application" tabindex="-1"><a class="header-anchor" href="#application">Application</a></h2>
+<p>Our standard JavaScript based application stack is built on Node.js.</p>
+<ul>
+<li>Environment variables and secrets are provided using <a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener">dotenv</a></li>
+<li>User interfaces using the <a href="https://service-manual.nhs.uk/design-system" target="_blank" rel="noopener">NHS Frontend toolkit</a> and <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener">Nunjucks</a> for templating</li>
+<li>Web services with <a href="http://expressjs.com/" target="_blank" rel="noopener">express</a></li>
+<li>Session handling with <a href="https://www.npmjs.com/package/express-session" target="_blank" rel="noopener">express-session</a> and <a href="https://www.npmjs.com/package/connect-redis" target="_blank" rel="noopener">connect-redis</a> if using Redis as a session store</li>
+<li><a href="https://www.npmjs.com/package/redis" target="_blank" rel="noopener">Redis</a> client if using Redis as a database</li>
+<li>Security with <a href="https://helmetjs.github.io/" target="_blank" rel="noopener">Helmet</a> and <a href="https://www.npmjs.com/package/csurf" target="_blank" rel="noopener">csurf</a> to prevent CSRF</li>
+<li>Dates and times are manipulated using <a href="https://moment.github.io/luxon/#/?id=luxon" target="_blank" rel="noopener">Luxon</a> or <a href="https://date-fns.org/" target="_blank" rel="noopener">date-fns</a> and not moment.js</li>
+<li>Logging provided by <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a>, <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> and <a href="https://www.npmjs.com/package/winston-daily-rotate-file" target="_blank" rel="noopener">winston-daily-rotate-file</a> for log rotation in live environments</li>
+<li><a href="https://www.npmjs.com/package/node-fetch" target="_blank" rel="noopener">Node Fetch</a> to perform HTTP requests</li>
+<li><a href="https://www.npmjs.com/package/cookie-parser" target="_blank" rel="noopener">cookie-parser</a> for working with cookies</li>
+<li><a href="https://www.npmjs.com/package/i18n" target="_blank" rel="noopener">I18n</a> for providing internationalisation</li>
+</ul>
+<h2 id="testing" tabindex="-1"><a class="header-anchor" href="#testing">Testing</a></h2>
+<ul>
+<li><a href="https://jestjs.io/" target="_blank" rel="noopener">Jest</a> is our core testing framework</li>
+<li><a href="https://www.npmjs.com/package/supertest" target="_blank" rel="noopener">SuperTest</a> is used to provide high level HTTP testing of web services</li>
+<li><a href="https://www.npmjs.com/package/redis-mock" target="_blank" rel="noopener">redis-mock</a> for mocking of Redis in tests</li>
+<li><a href="https://eslint.org/" target="_blank" rel="noopener">ESLint</a> to ensure we’re using JavaScript correctly</li>
+</ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-01T12:02:15.436Z">1 February 2022</time>
+            Published <time datetime="2022-02-03T12:17:40.153Z">3 February 2022</time>
           </p>
       </div>
   </div>
