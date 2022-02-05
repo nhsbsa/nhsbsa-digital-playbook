@@ -17,7 +17,7 @@ Developers are responsible for testing the code they write. We require two types
   A test for a unit of functionality that depends on an external resource, such as a database.
   We test against external resources and dependencies that reflect a production environment, but there is potential to mock external APIs with tools such as mock-server or wire-mock.
   We do not normally write _full stack_ integration tests, as these are covered by our automation testers.
-  For more information, refer to this [guidance on writing integration tests](/development/dev-tests-integration).
+  For more information, refer to this [guidance on writing integration tests](dev-tests-integration).
 
 ## Test Driven Development (red, green, refactor)
 
@@ -47,7 +47,7 @@ Note that we're don't write all the tests upfront. You may find it practical to 
 * Tests must be written with the same care as production code.
   Tests must change as production code evolves. The dirtier the tests, the harder they are to change. The more tangled the test code, the more likely it is that you will spend more time cramming new tests into the suite than it takes to write the new production code. As you modify the production code, old tests start to fail, and the mess in the test code makes it hard to get those tests to pass again. So the tests become viewed as an ever-increasing liability.
   Tests cases should follow clean code principles with the intent being easily understood.
-  For more information, refer to this [guidance on writing clean tests](/development/dev-tests-coding).
+  For more information, refer to this [guidance on writing clean tests](dev-tests-coding).
 
 * Tests should be fast
   Test should run quickly. When they run slow, you won’t want to run them frequently. If you don’t run them frequently, you won’t find problems early enough to fix them easily. You won’t feel as free to clean up the code. Eventually the code will begin to rot.
