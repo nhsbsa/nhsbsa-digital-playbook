@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Writing READMEs"
+permalink: "development/readme-guidance/"
 tags: dev_docs
 order: 1
 ---
