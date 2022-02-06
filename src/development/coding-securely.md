@@ -19,7 +19,7 @@ We follow NCSC's [8 principles of secure development and deployment][ncsc_8_prin
 
 * [Keep your security knowledge sharp][ncsc_keep_your_security_knowledge_sharp]
   * You should understand the [OWASP top 10 web application security risks][owasp_top_ten_risks] and [OWASP top 10 proactive controls][owasp_top_ten_proactive_controls]
-  * We are comitted to the continuing professional development of our staff, with access to [Pluralsight](../cpd/pluralsight) training platform and a dedicated 4 hours every 2 weeks for self-directed learning
+  * We are comitted to the continuing professional development of our staff, with access to [Pluralsight](../../cpd/pluralsight) training platform and a dedicated 4 hours every 2 weeks for self-directed learning
 
 * [Produce clean & maintainable code][ncsc_produce_clean_maintainable_code]
   * [Naming conventions](../coding-naming-conventions/)
