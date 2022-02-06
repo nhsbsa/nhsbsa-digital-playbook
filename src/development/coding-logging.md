@@ -53,7 +53,7 @@ From ICO guidance:
 
 Data used in log entries must not include Personally Identifiable Information except for internal system IDs. Logging IDs allows individuals to be identified if necessary by cross reference to a transactional data store. Access to production data stores is controlled.
 
-For full guidance on use of PII, refer to [Guidance for coding with Personal Data](coding-securely-personal-data/).
+For full guidance on use of PII, refer to [Guidance for coding with Personal Data](../coding-securely-personal-data/).
 
 ## Tools
 

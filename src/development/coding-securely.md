@@ -22,13 +22,13 @@ We follow NCSC's [8 principles of secure development and deployment][ncsc_8_prin
   * We are comitted to the continuing professional development of our staff, with access to [Pluralsight](../cpd/pluralsight) training platform and a dedicated 4 hours every 2 weeks for self-directed learning
 
 * [Produce clean & maintainable code][ncsc_produce_clean_maintainable_code]
-  * [Naming conventions](coding-naming-conventions/)
-  * [Coding guidance](coding/)
-  * [Logging guidance](coding-logging/)
-  * [Guidance for coding with Personal Data](coding-securely-personal-data/).
-  * [Testing by developers](dev-tests/)
-  * [Peer review](coding-peer-review/)
-  * [Code quality assurance](coding-quality-assurance/)
+  * [Naming conventions](../coding-naming-conventions/)
+  * [Coding guidance](../coding/)
+  * [Logging guidance](../coding-logging/)
+  * [Guidance for coding with Personal Data](../coding-securely-personal-data/).
+  * [Testing by developers](../dev-tests/)
+  * [Peer review](../coding-peer-review/)
+  * [Code quality assurance](../coding-quality-assurance/)
 
 * [Secure your development environment][ncsc_secure_your_development_environment]
   TODO - Development environment
