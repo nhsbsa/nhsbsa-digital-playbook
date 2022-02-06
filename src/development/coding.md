@@ -39,7 +39,7 @@ The [Refactoring Guru][refactoring_guru] website covers design patterns in an en
 
 We advise all developers to read the seminal book _[Clean Code: A Handbook of Agile Software Craftsmanship][goodreads_cleancode]_ by Robert C. Martin.
 
-To get an idea of the scope of Robert Martin's book, take a look at the [chapter headings](../clean-code)
+To get an idea of the scope of Robert Martin's book, take a look at the [chapter headings](../coding-clean-code)
 
 ## Code smells and refactoring
 
