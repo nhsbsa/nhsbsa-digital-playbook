@@ -14,7 +14,7 @@ We need a minimum level of documentation for all our project repositories. A [st
 
 * __README.md__
   A README explains the purpose of the repository, how to build, run and use it.
-  See our [guidance on writing READMEs](dev-documentation-readme/)
+  See our [guidance on writing READMEs](../dev-documentation-readme/)
 * __CODE_OF_CONDUCT.md__
   The Code of conduct explains our expectations on behaviour from member of the community.
   It is based on the [Contributor Covenant code of conduct][contributor_covenant_coc]
