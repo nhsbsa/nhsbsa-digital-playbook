@@ -12,7 +12,7 @@
     
     
     
-    <title>Acceptance Test Tech Stack  - NHSBSA
+    <title>Checklists &amp; Assistive Technologies  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Acceptance Test Tech Stack">
-<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in acceptance testing"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Checklists &amp; Assistive Technologies">
+<meta property="og:description" name="description" content="Checklists and Assistive technologies in use at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#acceptance-test">Acceptance Test</a></li></ol>
+        <ol><li><a href="#checklists">Checklists</a><ol><li><a href="#manual-checklist">Manual Checklist</a></li><li><a href="#screen-reader-checklist">Screen Reader Checklist</a></li><li><a href="#where-to-get-these-tools">Where to get these tools</a></li></ol></li></ol>
       </div>
     </div>
 
@@ -85,34 +85,44 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Acceptance Test Tech Stack
+        Checklists &amp; Assistive Technologies
       </h1>
       
-<h3 id="acceptance-test" tabindex="-1"><a class="header-anchor" href="#acceptance-test">Acceptance Test</a></h3>
+<h2 id="checklists" tabindex="-1"><a class="header-anchor" href="#checklists">Checklists</a></h2>
+<p>To widen our testing coverage we manually check on various accessibility focus areas where accessibility issues are likely to occur or where we have encountered either WCAG conflicts or issues from audits.</p>
+<h3 id="manual-checklist" tabindex="-1"><a class="header-anchor" href="#manual-checklist">Manual Checklist</a></h3>
+<p>Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.</p>
+<p>This checklist compromises of 28 areas including non java script operation, titles, urls and tab indexes where manual tests can identify issues that would affect the usability of a service but are still within the scope of WCAG guidelines.</p>
+<h3 id="screen-reader-checklist" tabindex="-1"><a class="header-anchor" href="#screen-reader-checklist">Screen Reader Checklist</a></h3>
+<p>To complement the manual and automated checks we also use assistive technologies to test if the services work and operate correctly for users of screen readers, speech recognition or screen magnifiers.</p>
+<p>These tests including a checklist for screen readers to look into accessibility focus areas as well as testing representative user journeys with assistive technologies.</p>
+<p>We use the following assistive technologies to test our services:</p>
 <ul>
-<li>BDD Cucumber for all our manual and automated test suites, scenarios and cases.</li>
+<li>Screen Readers (NVDA on Windows and Voice Over on Macs)</li>
+<li>Speech Recognition (Dragon on Windows and Voice Control on Macs)</li>
+<li>Screen Magnifiers (Zoom and magnifers on both machine types)</li>
 </ul>
-<h4 id="automation" tabindex="-1"><a class="header-anchor" href="#automation">Automation</a></h4>
+<h3 id="where-to-get-these-tools" tabindex="-1"><a class="header-anchor" href="#where-to-get-these-tools">Where to get these tools</a></h3>
 <ul>
-<li>Automation using Java and Selenium for our UI and web based services. This is our long term framework choice.</li>
-<li>Automation using Ruby and Watir for some of our UI and web based services. This is in our short term plans and will be replaced by the Java / Selenium going forward with any new services.</li>
-</ul>
-<h4 id="ides" tabindex="-1"><a class="header-anchor" href="#ides">IDEs</a></h4>
-<ul>
-<li>Java: Eclipse or the preferred IntelliJ.</li>
-<li>Ruby: Atom</li>
-</ul>
-<h4 id="out-of-scope-for-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#out-of-scope-for-acceptance-testing">Out of scope for acceptance testing</a></h4>
-<p>We do not promote or support the usage of the following:</p>
-<ul>
-<li>Selenium IDE: record and playback tools are too instable for our acceptance testing and with flexibility for change in our services these tools would be difficult to maintain.</li>
-<li>Any other programming language binding: due to the NHSBSA tester skillsets and resourcing plans no other language is supported in the test community.</li>
-<li>Ruby Mine: we work predominantly with open source tools and technologies with very little licensed products used in our testing. As Ruby is on our short term plans then investment in using Rubymine is not sustainable.</li>
+<li>
+<p>Screen Readers:<br>
+NVDA - To download it please go to <a href="https://www.nvaccess.org/download/" target="_blank" rel="noopener">NVDA download page</a><br>
+Voice Over - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Over’ or press the command &amp; F5 keys.</p>
+</li>
+<li>
+<p>Speech Recognition:<br>
+Dragon - This is a licenced tool and to request a licence please contact you NHSBSA test lead.<br>
+Voice Control - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Control’.</p>
+</li>
+<li>
+<p>Magnifiers:<br>
+These are both available on Windows and Macs. You can also use the Zoom feature in Chrome, Firefox and Edge.</p>
+</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-06T17:25:47.905Z">6 February 2022</time>
+            Published <time datetime="2022-02-08T17:35:15.212Z">8 February 2022</time>
           </p>
       </div>
   </div>

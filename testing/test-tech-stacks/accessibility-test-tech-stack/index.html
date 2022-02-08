@@ -12,7 +12,7 @@
     
     
     
-    <title>Clean code  - NHSBSA
+    <title>Accessibility Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Clean code">
-<meta property="og:description" name="description" content="Clean code summary"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Accessibility Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in accessibility testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#general-rules">General rules</a></li><li><a href="#design-rules">Design rules</a></li><li><a href="#understandability-tips">Understandability tips</a></li><li><a href="#names-rules">Names rules</a></li><li><a href="#functions-rules">Functions rules</a></li><li><a href="#comments-rules">Comments rules</a></li><li><a href="#source-code-structure">Source code structure</a></li><li><a href="#objects-and-data-structures">Objects and data structures</a></li></ol>
+        <ol><li><a href="#accessibility-test">Accessibility Test</a></li></ol>
       </div>
     </div>
 
@@ -85,104 +85,34 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Clean code
+        Accessibility Test Tech Stack
       </h1>
       
-<p>Chapter headings from <em><a href="https://www.goodreads.com/en/book/show/3735293-clean-code" target="_blank" rel="noopener">Clean Code: A Handbook of Agile Software Craftsmanship</a></em></p>
-<h2 id="general-rules" tabindex="-1"><a class="header-anchor" href="#general-rules">General rules</a></h2>
+<h3 id="accessibility-test" tabindex="-1"><a class="header-anchor" href="#accessibility-test">Accessibility Test</a></h3>
 <ul>
-<li>Follow standard conventions</li>
-<li>Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible</li>
-<li>Boy scout rule. Leave the campground cleaner than you found it</li>
-<li>Always find root cause. Always look for the root cause of a problem</li>
+<li>All of our accessibility testing must adhere to using the following tools, technologies and using the NHSBSA accessibility toolkit.</li>
 </ul>
-<h2 id="design-rules" tabindex="-1"><a class="header-anchor" href="#design-rules">Design rules</a></h2>
+<h4 id="automation---checkers" tabindex="-1"><a class="header-anchor" href="#automation---checkers">Automation - checkers</a></h4>
 <ul>
-<li>Keep configurable data at high levels</li>
-<li>Prefer polymorphism to if/else or switch/case</li>
-<li>Separate multi-threading code</li>
-<li>Prevent over-configurability</li>
-<li>Use dependency injection</li>
-<li>Follow Law of Demeter. A class should know only its direct dependencies</li>
+<li>Wave (free open source chrome or firefox plugin).</li>
+<li>Axe (free open source chrome or firefox plugin).</li>
+<li>Lighthouse (free open source chrome or firefox plugin)).</li>
 </ul>
-<h2 id="understandability-tips" tabindex="-1"><a class="header-anchor" href="#understandability-tips">Understandability tips</a></h2>
+<h4 id="assistive-technologies" tabindex="-1"><a class="header-anchor" href="#assistive-technologies">Assistive Technologies</a></h4>
 <ul>
-<li>Be consistent. If you do something a certain way, do all similar things in the same way</li>
-<li>Use proper and consitent spacing (both new lines, indentations and whitespaces)</li>
-<li>Use explanatory variables</li>
-<li>Encapsulate boundary conditions. Boundary conditions are hard to keep track of. Put the processing for them in one place</li>
-<li>Prefer dedicated value objects to primitive type</li>
-<li>Avoid logical dependency. Don’t write methods which works correctly depending on something else in the same class</li>
-<li>Avoid negative conditionals</li>
+<li>Screen Readers: Mac based Voice Over (free pre-installed on macOS) and Windows based NVDA (free open source).</li>
+<li>Speech Recognition: Mac based Voice Control (free pre-installed on macOS) and Windows based Dragon (licensed, please contact test lead).</li>
 </ul>
-<h2 id="names-rules" tabindex="-1"><a class="header-anchor" href="#names-rules">Names rules</a></h2>
+<h4 id="out-of-scope-for-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#out-of-scope-for-acceptance-testing">Out of scope for acceptance testing</a></h4>
+<p>We do not promote or support the usage of the following:</p>
 <ul>
-<li>Choose descriptive and unambiguous names</li>
-<li>Make meaningful distinction</li>
-<li>Use pronounceable names</li>
-<li>Use searchable names</li>
-<li>Replace magic numbers with named constants</li>
-<li>Avoid encodings. Don’t append prefixes or type information</li>
-<li>Choose parts of speech well</li>
-<li>Verb for method. (Do/Get)</li>
-<li>Noun for class. (Car/Bus)</li>
-<li>Predicate for bools. (IsBlue)</li>
-<li>The scope rule</li>
-<li>Variables should be shorter if the scope they are used in is small</li>
-<li>Classes and methods should be the opposite</li>
-</ul>
-<h2 id="functions-rules" tabindex="-1"><a class="header-anchor" href="#functions-rules">Functions rules</a></h2>
-<ul>
-<li>Functions should be small. 4 or fewer lines is best</li>
-<li>Do one thing</li>
-<li>Use descriptive names</li>
-<li>Prefer fewer arguments</li>
-<li>Have no side effects</li>
-<li>Don’t use flag arguments</li>
-<li>Classes hide in long functions</li>
-<li>Making functions small will save everyone time</li>
-</ul>
-<h2 id="comments-rules" tabindex="-1"><a class="header-anchor" href="#comments-rules">Comments rules</a></h2>
-<ul>
-<li>Always try to explain yourself in code</li>
-<li>Don’t be redundant</li>
-<li>Don’t add obvious noise</li>
-<li>Don’t use closing brace comments</li>
-<li>Don’t comment out code. Just remove</li>
-<li>Use as explanation of intent</li>
-<li>Use as clarification of code</li>
-<li>Use as warning of consequences</li>
-</ul>
-<h2 id="source-code-structure" tabindex="-1"><a class="header-anchor" href="#source-code-structure">Source code structure</a></h2>
-<ul>
-<li>Separate concepts vertically</li>
-<li>Related code should appear vertically dense</li>
-<li>Declare variables close to their usage</li>
-<li>Dependent functions should be close</li>
-<li>Similar functions should be close</li>
-<li>Place functions in the downward direction</li>
-<li>Keep lines short</li>
-<li>Don’t use horizontal alignment</li>
-<li>Use white space to associate related things and disassociate weakly related</li>
-<li>Don’t break indentation</li>
-</ul>
-<h2 id="objects-and-data-structures" tabindex="-1"><a class="header-anchor" href="#objects-and-data-structures">Objects and data structures</a></h2>
-<ul>
-<li>Hide internal structure</li>
-<li>Prefer data structures</li>
-<li>Avoid hybrids structures (half object and half data)</li>
-<li>Should be small</li>
-<li>Do one thing</li>
-<li>Small number of instance variables</li>
-<li>Base class should know nothing about their derivatives</li>
-<li>Better to have many functions than to pass some code into a function to select a behavior</li>
-<li>Prefer non-static methods to static methods</li>
-<li>Always consider using enums over ints</li>
+<li>Any other automated checkers, the tools above have been chosen due to their accuracy, support and fit.</li>
+<li>Any other screen reader or speech recognition tool. There are many different versions of these tools but these have been recommended by DAC and are part of the GDS test coverage. Using other versions may also affect our coverage and quality of this testing.</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-08T17:35:15.208Z">8 February 2022</time>
+            Published <time datetime="2022-02-08T17:35:15.212Z">8 February 2022</time>
           </p>
       </div>
   </div>

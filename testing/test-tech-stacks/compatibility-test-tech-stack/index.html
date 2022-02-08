@@ -12,7 +12,7 @@
     
     
     
-    <title>Checklists &amp; Assistive Technologies  - NHSBSA
+    <title>Compatibility Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Checklists &amp; Assistive Technologies">
-<meta property="og:description" name="description" content="Checklists and Assistive technologies in use at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Compatibility Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in Compatibility testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#checklists">Checklists</a><ol><li><a href="#manual-checklist">Manual Checklist</a></li><li><a href="#screen-reader-checklist">Screen Reader Checklist</a></li><li><a href="#where-to-get-these-tools">Where to get these tools</a></li></ol></li></ol>
+        <ol><li><a href="#compatibility-testing">Compatibility Testing</a></li></ol>
       </div>
     </div>
 
@@ -85,44 +85,32 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Checklists &amp; Assistive Technologies
+        Compatibility Test Tech Stack
       </h1>
       
-<h2 id="checklists" tabindex="-1"><a class="header-anchor" href="#checklists">Checklists</a></h2>
-<p>To widen our testing coverage we manually check on various accessibility focus areas where accessibility issues are likely to occur or where we have encountered either WCAG conflicts or issues from audits.</p>
-<h3 id="manual-checklist" tabindex="-1"><a class="header-anchor" href="#manual-checklist">Manual Checklist</a></h3>
-<p>Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.</p>
-<p>This checklist compromises of 28 areas including non java script operation, titles, urls and tab indexes where manual tests can identify issues that would affect the usability of a service but are still within the scope of WCAG guidelines.</p>
-<h3 id="screen-reader-checklist" tabindex="-1"><a class="header-anchor" href="#screen-reader-checklist">Screen Reader Checklist</a></h3>
-<p>To complement the manual and automated checks we also use assistive technologies to test if the services work and operate correctly for users of screen readers, speech recognition or screen magnifiers.</p>
-<p>These tests including a checklist for screen readers to look into accessibility focus areas as well as testing representative user journeys with assistive technologies.</p>
-<p>We use the following assistive technologies to test our services:</p>
+<h3 id="compatibility-testing" tabindex="-1"><a class="header-anchor" href="#compatibility-testing">Compatibility Testing</a></h3>
 <ul>
-<li>Screen Readers (NVDA on Windows and Voice Over on Macs)</li>
-<li>Speech Recognition (Dragon on Windows and Voice Control on Macs)</li>
-<li>Screen Magnifiers (Zoom and magnifers on both machine types)</li>
+<li>All compatibility testing must use the NHSBSA Saucelabs service and account.</li>
+<li>No other service or account should be used as this would violate security and IG rules.</li>
+<li>Compatibility testing must be performed using automated user journeys that respresent or test as much of the service as possible.</li>
+<li>If automation is not possible then manual testing must be performed.</li>
+<li>Compatibility testing must be performed as regular as possible with every release containing compatibility testing.</li>
 </ul>
-<h3 id="where-to-get-these-tools" tabindex="-1"><a class="header-anchor" href="#where-to-get-these-tools">Where to get these tools</a></h3>
+<h4 id="automation" tabindex="-1"><a class="header-anchor" href="#automation">Automation</a></h4>
 <ul>
-<li>
-<p>Screen Readers:<br>
-NVDA - To download it please go to <a href="https://www.nvaccess.org/download/" target="_blank" rel="noopener">NVDA download page</a><br>
-Voice Over - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Over’ or press the command &amp; F5 keys.</p>
-</li>
-<li>
-<p>Speech Recognition:<br>
-Dragon - This is a licenced tool and to request a licence please contact you NHSBSA test lead.<br>
-Voice Control - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Control’.</p>
-</li>
-<li>
-<p>Magnifiers:<br>
-These are both available on Windows and Macs. You can also use the Zoom feature in Chrome, Firefox and Edge.</p>
-</li>
+<li>We run our selenium user journey tests through the Saucelabs service on the relevant browser, tablet or phone.</li>
+<li>The coverage of browsers, tablets and phones can be found in the compatibility test coverage section.</li>
+</ul>
+<h4 id="manual" tabindex="-1"><a class="header-anchor" href="#manual">Manual</a></h4>
+<ul>
+<li>When automation is not possible the manual testing feature must be used.</li>
+<li>For particular browser testing (Chrome on iOS and Samsung Internet on Android) you will need to manually test as the platform does not allow automation.</li>
+<li>This is where the Saucelabs service can be used to use virtual machines for browsers and devices as well as real devices to test user journeys if automation test can not be performed.</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-06T17:25:47.905Z">6 February 2022</time>
+            Published <time datetime="2022-02-08T17:35:15.212Z">8 February 2022</time>
           </p>
       </div>
   </div>

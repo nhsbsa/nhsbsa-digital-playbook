@@ -12,7 +12,7 @@
     
     
     
-    <title>Security  - NHSBSA
+    <title>Compatibility test capability  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Security">
-<meta property="og:description" name="description" content="Security is everyone’s responsibility"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Compatibility test capability">
+<meta property="og:description" name="description" content="Compatibility test capability with Saucelabs"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#who-should-i-talk-to-about-security-in-the-nhsbsa%3F">Who should I talk to about Security in the NHSBSA?</a><ol><li><a href="#information-security">Information Security</a></li><li><a href="#information-governance">Information Governance</a></li><li><a href="#security-operations">Security Operations</a></li></ol></li></ol>
+        <ol><li><a href="#browser-based-coverage">Browser based coverage</a><ol><li><a href="#windows">Windows</a></li><li><a href="#mac">Mac</a></li></ol></li><li><a href="#tablet-based-coverage">Tablet based coverage</a><ol><li><a href="#ios">iOS</a></li></ol></li></ol>
       </div>
     </div>
 
@@ -85,80 +85,60 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Security
+        Compatibility test capability
       </h1>
       
-<h2 id="who-should-i-talk-to-about-security-in-the-nhsbsa%3F" tabindex="-1"><a class="header-anchor" href="#who-should-i-talk-to-about-security-in-the-nhsbsa%3F">Who should I talk to about Security in the NHSBSA?</a></h2>
-<p>‘Security’ is a wide ranging topic, and the NHSBSA have a number of different roles to support us build and deliver our services securely.</p>
-<h3 id="information-security" tabindex="-1"><a class="header-anchor" href="#information-security">Information Security</a></h3>
-<p>Information Security are responsible for:</p>
+<p>For mobile and tablet testing you should always test on a real device before resorting to a virtual machine.<br>
+Real devices give a more realistic user experience.</p>
+<p>Please do not install, remove or change any settings on any apps or browsers on the devices. They have all been configured to the correct browser versions.</p>
+<p>After every session please close all browsers and remove all data.</p>
+<h2 id="browser-based-coverage" tabindex="-1"><a class="header-anchor" href="#browser-based-coverage">Browser based coverage</a></h2>
+<p>All of these tests are performed on virtual machines.</p>
+<h3 id="windows" tabindex="-1"><a class="header-anchor" href="#windows">Windows</a></h3>
+<p>All the below can be tested through automation with Selenium and manually).</p>
 <ul>
-<li>Handling security incidents
+<li>IE version 11</li>
+<li>Edge latest version 96</li>
+<li>Edge latest version-1 95</li>
+<li>Chrome latest version 97</li>
+<li>Chrome latest version-1 96</li>
+<li>Firefox latest version 96</li>
+<li>Firefox latest version-1 95</li>
+</ul>
+<h3 id="mac" tabindex="-1"><a class="header-anchor" href="#mac">Mac</a></h3>
+<p>All the below can be tested through automation with Selenium and manually.</p>
 <ul>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/How%20to%20raise%20a%20Security%20Incident.aspx" target="_blank" rel="noopener">Raise a security incident</a></li>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/Phishing,-What-is-it-.aspx" target="_blank" rel="noopener">Report a phishing attempt</a></li>
+<li>Safari version 12</li>
+<li>Safari version 13</li>
+<li>Safari version 14</li>
+<li>Safari version 15</li>
+<li>Chrome latest version version 97</li>
+<li>Chrome latest version-1 version 96</li>
+<li>Firefox latest version version 96</li>
+<li>Firefox latest version-1 version 95</li>
 </ul>
-</li>
-<li>Security assurance
+<h2 id="tablet-based-coverage" tabindex="-1"><a class="header-anchor" href="#tablet-based-coverage">Tablet based coverage</a></h2>
+<p>All of these tests are performed on private and public devices.</p>
+<p>Private devices are NHSBSA controlled and have a green phone and eye symbol next to the device name.</p>
+<h3 id="ios" tabindex="-1"><a class="header-anchor" href="#ios">iOS</a></h3>
 <ul>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/NHS-BSA-Information-Security-Policies.aspx?csf=1&amp;e=yie8VY" target="_blank" rel="noopener">NHSBSA security policies, standards and guidance</a></li>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/Request-Security-Assurance-Work.aspx" target="_blank" rel="noopener">Request security assurance</a></li>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/What-is-Egress-and-how-can-I-get-access-.aspx" target="_blank" rel="noopener">Find out about our secure data transfer service, EGRESS</a></li>
+<li>Safari version 12<br>
+(Tests can be run through automation, manual testing must be performed on public devices with this iOS version)</li>
+<li>Safari version 13<br>
+(Tests can be run through automation, manual testing can be performed on public devices as well as iPad 9.7 2017)</li>
+<li>Safari version 14<br>
+(Tests can be run through automation, manual testing can be performed on public devices as well as iPad 10.2 2020)</li>
+<li>Safari version 15<br>
+(Tests can be run through automation, manual testing can be performed on public devices as well as iPad 10.2 2021)</li>
+<li>Chrome latest version 97<br>
+(Tests can not be run through automation, testing must be performed manually on public devices as well as all three private devices)</li>
+<li>Chrome latest version 96<br>
+(This testing is not possible until the next chrome browser version is released)</li>
 </ul>
-</li>
-<li>Business continuity</li>
-</ul>
-<h3 id="information-governance" tabindex="-1"><a class="header-anchor" href="#information-governance">Information Governance</a></h3>
-<p>Information Governance (IG) are responsible for</p>
-<ul>
-<li>Data protection / GDPR requirements</li>
-<li>Data Protection Impact Assessments
-<ul>
-<li><a href="https://nhsbsauk.sharepoint.com/sites/InformationSecurity/SitePages/DPIA.aspx" target="_blank" rel="noopener">Find out about DPIAs</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="security-operations" tabindex="-1"><a class="header-anchor" href="#security-operations">Security Operations</a></h3>
-<p>Security Operations (SecOps) are responsible for:</p>
-<ul>
-<li>IT Health Checks</li>
-<li>Security architecture</li>
-</ul>
-      <h2 class="nhsuk-heading-l">
-        Related articles
-      </h2>
-      	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<h2 class="nhsuk-card__heading nhsuk-heading-m">
-						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/coding-securely/">
-							Secure development
-						</a>
-					</h2>
-					<p class="nhsuk-card__description">Security is everyone’s responsibility</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-02-08T17:35:15.208Z">8 February 2022</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<h2 class="nhsuk-card__heading nhsuk-heading-m">
-						<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/coding-securely-personal-data/">
-							Coding with personal data
-						</a>
-					</h2>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-02-08T17:35:15.208Z">8 February 2022</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-08T17:35:15.208Z">8 February 2022</time>
+            Published <time datetime="2022-02-08T17:35:15.212Z">8 February 2022</time>
           </p>
       </div>
   </div>

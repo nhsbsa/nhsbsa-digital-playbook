@@ -12,7 +12,7 @@
     
     
     
-    <title>Accessibility Test Tech Stack  - NHSBSA
+    <title>API Test Tech Stack  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Accessibility Test Tech Stack">
-<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in accessibility testing"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="API Test Tech Stack">
+<meta property="og:description" name="description" content="A breakdown of the tools and technologies test use in API testing"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#accessibility-test">Accessibility Test</a></li></ol>
+        <ol><li><a href="#api-test">API Test</a></li></ol>
       </div>
     </div>
 
@@ -85,34 +85,26 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Accessibility Test Tech Stack
+        API Test Tech Stack
       </h1>
       
-<h3 id="accessibility-test" tabindex="-1"><a class="header-anchor" href="#accessibility-test">Accessibility Test</a></h3>
+<h3 id="api-test" tabindex="-1"><a class="header-anchor" href="#api-test">API Test</a></h3>
 <ul>
-<li>All of our accessibility testing must adhere to using the following tools, technologies and using the NHSBSA accessibility toolkit.</li>
-</ul>
-<h4 id="automation---checkers" tabindex="-1"><a class="header-anchor" href="#automation---checkers">Automation - checkers</a></h4>
-<ul>
-<li>Wave (free open source chrome or firefox plugin).</li>
-<li>Axe (free open source chrome or firefox plugin).</li>
-<li>Lighthouse (free open source chrome or firefox plugin)).</li>
-</ul>
-<h4 id="assistive-technologies" tabindex="-1"><a class="header-anchor" href="#assistive-technologies">Assistive Technologies</a></h4>
-<ul>
-<li>Screen Readers: Mac based Voice Over (free pre-installed on macOS) and Windows based NVDA (free open source).</li>
-<li>Speech Recognition: Mac based Voice Control (free pre-installed on macOS) and Windows based Dragon (licensed, please contact test lead).</li>
-</ul>
-<h4 id="out-of-scope-for-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#out-of-scope-for-acceptance-testing">Out of scope for acceptance testing</a></h4>
-<p>We do not promote or support the usage of the following:</p>
-<ul>
-<li>Any other automated checkers, the tools above have been chosen due to their accuracy, support and fit.</li>
-<li>Any other screen reader or speech recognition tool. There are many different versions of these tools but these have been recommended by DAC and are part of the GDS test coverage. Using other versions may also affect our coverage and quality of this testing.</li>
+<li>
+<p>All our API testing is performed using the free open source Karate tool.<br>
+This is available from the <a href="https://github.com/karatelabs/karate" target="_blank" rel="noopener">Karate website</a>.</p>
+</li>
+<li>
+<p>All API tests must be run through automated Karate tests. Manual API tests should not be used as a substitute.</p>
+</li>
+<li>
+<p>No other API test tools should be used for API testing.</p>
+</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-06T17:25:47.905Z">6 February 2022</time>
+            Published <time datetime="2022-02-08T17:35:15.212Z">8 February 2022</time>
           </p>
       </div>
   </div>
