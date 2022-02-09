@@ -9,6 +9,26 @@ JavaScript. We’re not prescriptive in these choices, but have a good reason to
 deviate from the norm. If you there’s a better option, raise it at the
 Developer Community.
 
+## Node.js versions
+
+We adopt releases as advised by [Node.js](https://nodejs.org/en/about/releases/):
+
+* We prefer Long Term Support releases which should be used when in _active_ and _maintenance_ phases
+* Projects may choose to use releases in _current_ if the features are very important and the risk is accepted
+* Projects should budget time while in the _maintenance_ phase to upgrade to the next LTS
+
+|Release|Status|Release date|Active start|Maintenance start|End of life|
+| ----- | ---- | ---------- | ---------- | --------------- | --------  |
+|v12|Maintenance LTS|2019-04-23|2019-10-21|2020-11-30|2022-04-30
+|v14|Maintenance LTS|2020-04-21|2020-10-27|2021-10-19|2023-04-30
+|v16|Active LTS|2021-04-20|2021-10-26|2022-10-18|2024-04-30
+|v17|Current|2021-10-19||2022-04-01|2022-06-01
+|v18|Pending|2022-04-19|2022-10-25|2023-10-18|2025-04-30
+
+We use [NVM](https://github.com/nvm-sh/nvm) to manage our Node.js installations:
+
+* Projects should use an `.nvmrc` file, checked in to source control, to identify the Node version in use
+
 ## IDE
 
 Choose whatever you’re comfortable with, so as long as you can perform your
