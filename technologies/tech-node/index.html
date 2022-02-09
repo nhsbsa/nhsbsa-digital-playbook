@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#ide">IDE</a></li><li><a href="#build">Build</a></li><li><a href="#application">Application</a></li><li><a href="#testing">Testing</a></li></ol>
+        <ol><li><a href="#node.js-versions">Node.js versions</a></li><li><a href="#ide">IDE</a></li><li><a href="#build">Build</a></li><li><a href="#application">Application</a></li><li><a href="#testing">Testing</a></li></ol>
       </div>
     </div>
 
@@ -92,6 +92,71 @@
 JavaScript. We’re not prescriptive in these choices, but have a good reason to<br>
 deviate from the norm. If you there’s a better option, raise it at the<br>
 Developer Community.</p>
+<h2 id="node.js-versions" tabindex="-1"><a class="header-anchor" href="#node.js-versions">Node.js versions</a></h2>
+<p>We adopt releases as advised by <a href="https://nodejs.org/en/about/releases/" target="_blank" rel="noopener">Node.js</a>:</p>
+<ul>
+<li>We prefer Long Term Support releases which should be used when in <em>active</em> and <em>maintenance</em> phases</li>
+<li>Projects may choose to use releases in <em>current</em> if the features are very important and the risk is accepted</li>
+<li>Projects should budget time while in the <em>maintenance</em> phase to upgrade to the next LTS</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Release</th>
+<th>Status</th>
+<th>Release date</th>
+<th>Active start</th>
+<th>Maintenance start</th>
+<th>End of life</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v12</td>
+<td>Maintenance LTS</td>
+<td>2019-04-23</td>
+<td>2019-10-21</td>
+<td>2020-11-30</td>
+<td>2022-04-30</td>
+</tr>
+<tr>
+<td>v14</td>
+<td>Maintenance LTS</td>
+<td>2020-04-21</td>
+<td>2020-10-27</td>
+<td>2021-10-19</td>
+<td>2023-04-30</td>
+</tr>
+<tr>
+<td>v16</td>
+<td>Active LTS</td>
+<td>2021-04-20</td>
+<td>2021-10-26</td>
+<td>2022-10-18</td>
+<td>2024-04-30</td>
+</tr>
+<tr>
+<td>v17</td>
+<td>Current</td>
+<td>2021-10-19</td>
+<td></td>
+<td>2022-04-01</td>
+<td>2022-06-01</td>
+</tr>
+<tr>
+<td>v18</td>
+<td>Pending</td>
+<td>2022-04-19</td>
+<td>2022-10-25</td>
+<td>2023-10-18</td>
+<td>2025-04-30</td>
+</tr>
+</tbody>
+</table>
+<p>We use <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">NVM</a> to manage our Node.js installations:</p>
+<ul>
+<li>Projects should use an <code>.nvmrc</code> file, checked in to source control, to identify the Node version in use</li>
+</ul>
 <h2 id="ide" tabindex="-1"><a class="header-anchor" href="#ide">IDE</a></h2>
 <p>Choose whatever you’re comfortable with, so as long as you can perform your<br>
 job, though our developers tend to opt for <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>.</p>
@@ -129,7 +194,7 @@ job, though our developers tend to opt for <a href="https://code.visualstudio.co
     </div>
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-02-08T17:35:15.208Z">8 February 2022</time>
+            Published <time datetime="2022-02-09T15:31:59.437Z">9 February 2022</time>
           </p>
       </div>
   </div>
