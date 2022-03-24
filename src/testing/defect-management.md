@@ -143,15 +143,17 @@ Under project discretion to plan fix into a release.
 
 These are often issues where a problem has been found but a workaround can help to lessen the impact of the problem. Justification and evidence that this workaround does not negatively affect users must be available.
 
-#### Low level defects
+#### Reviews
 
 These include:
 - Wave Features
 - Wave Structural Elements
 - Wave HTML & Aria
 
-These should be raised as low level defects and to be addressed by the project before full compliance can be claimed.
+Features, Structural Elements and Aria are parts of the website that need to be reviewed to check that they are accessible.
 
-The aim of all services has to be fix all accessibility issues. No project can claim full compliance to WCAG 2.1 ‘AA’ standard until all issues High, Medium and Low are fixed or justified.
+These need to be reviewed by testers and developers to ensure they are accessible and once covered can lead to full accessibility compliance to the regulations.
+
+The aim of all services has to be fix all accessibility issues. No project can claim full compliance to WCAG 2.1 ‘AA’ standard until all issues High and Medium are fixed or justified.
 
 Please remember: when defects and issues are closed please ensure the project knows to remove these issues from the website’s accessibility statement.
