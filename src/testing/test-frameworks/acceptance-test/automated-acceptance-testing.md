@@ -4,6 +4,8 @@ title: "Automated Acceptance testing"
 description: "What, how and why we automate acceptance test at the NHSBSA"
 tags: acceptance-framework
 order: 1
+related:
+  tag: automated-acceptance-testing
 ---
 
 ## What do we automate in acceptance testing?

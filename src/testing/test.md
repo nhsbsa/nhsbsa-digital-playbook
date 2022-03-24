@@ -10,7 +10,7 @@ order: 1
 
 Quality assurance (QA) testing is the process of ensuring that your service is of the highest possible quality for your users. Testing uses different tools, technologies and frameworks to prevent issues with your service and to ensure great user experience for all users.
 
-Testers will provide assurance through the design, develop and execute tests on new and existing services. Key responsibilities of this role is to assure quality and consistent attention to detail in all testing performed.
+Testers will provide assurance through the designing, developing and execution of tests on new and existing services. Key responsibilities of this role is to assure quality and consistent attention to detail in all testing performed.
 
 In the NHSBSA we test to our five core frameworks: 
 - Acceptance 
@@ -19,44 +19,53 @@ In the NHSBSA we test to our five core frameworks:
 - Compatibility
 - Performance
 
-All of our tests are created, developed, excuted and maintained to our test standards. 
+All of our tests are created, developed, executed and maintained to our test standards. 
 These standards can be found on the Test Community [confluence](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1706623220/NHSBSA+TEST+STANDARDS) and [sharepoint](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/NHSBSA-Test-Standards.aspx) websites. 
 
 ## Acceptance Testing
 
-Acceptance testing deals with the functional testing of user stories to fulfil acceptance criteria. 
-Acceptance criteria are the conditions that software must meet to be accepted by a user. 
-Testing these conditions will include happy and unhappy paths, field validations and boundary value tests. 
+Acceptance testing deals with the functional testing of user stories to fulfil acceptance criteria.
 
-All of our acceptance tests within the NHSBSA test community are created in user centric BDD using cucumber whether this is for manual or automated tests. The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.​​​​​​​
+Acceptance criteria are the conditions that software must meet to be accepted by a user.
+
+Testing these conditions will include happy and unhappy paths, field validations and boundary value tests.
+
+All of our acceptance tests within the NHSBSA test community are created in user centric BDD using cucumber whether this is for manual or automated tests.
+
+The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.​​​​​​​
+
 Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person.
-All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don't press this or click that like in more traditional test plans and scripts. 
-We talk as the user would express a scenario or situation 'Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC'.
 
-Only in circumstances where these actions are needed to prove a clear acceptance criteria can they be used.
+All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don't press this or click that like in more traditional test plans and scripts.
+
+We write our tests as the user would express a scenario or situation, for example:
+
+Given I am on the NHSBSA PPC website
+When I want to buy a 12 month PPC by card 
+Then I will able to buy a 12 month PPC by card
 
 ## Accessibility Testing
 
-New regulations came into force for public sector bodies on 23 September 2018. These regulations meant all websites or mobile apps must be accessible in four key areas: 
+New regulations came into force for public sector bodies on 23 September 2018. These regulations meant all public sector websites and mobile apps must be accessible in four key areas:
 - perceivable, operable, understandable and robust
 
-The full name of the regulations is: Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
+The full name of the regulations for reference is the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
 
 The 2018 regulations build on the existing obligations to people who have a disability under the Equality Act 2010 (or the Disability Discrimination Act 1995 in Northern Ireland). This states that all UK service providers must consider ‘reasonable adjustments’ for disabled people.
 
-To ensure we meet this legislation an accessibility framework was developed and this has quickly become one of the core test frameworks the test community uses to ensure every product or service is accessible.
+To ensure we meet this legislation an accessibility framework was developed and this has become one of the core test frameworks the test community use to ensure every product or service is accessible.
 
-This means testing to ensure services meet WCAG guidelines to 2.1 'AA' standard as well as ensuring our services can be used by anyone with any accessibility needs.
-
-To meet this legislation the NHSBSA has to adhere to the Web Content Accessibility Guidelines (WCAG) 2.1 and achieve at minimum 'AA' standard. 
+We test all of our services to ensure they meet WCAG 2.1 guidelines to 'AA' standard as well as ensuring our services can be used by anyone with accessibility needs.
 
 ## API Testing
 
-API (Application Programming Interface) testing aims to determine whether the APIs that are developed meet expectations when it comes to functionality. 
+API (Application Programming Interface) testing aims to determine whether the APIs that are developed meet expectations when it comes to functionality.
+
+These tests built in automated form help to ensure all API's used by services are fit for purpose.
 
 ## Compatibility Testing
 
-This type of testing deals with the testing of your service through different browsers, tablets and phones.
+This testing deals ensures our services are compatible and work on a variety of different browsers, tablets and phones.
 
 The need to perform Compatibility testing is linked to the following requirements:
 
@@ -74,4 +83,4 @@ The need to perform Compatibility testing is linked to the following requirement
 
 ## Performance Testing
 
-Performance testing determines how the stability, speed, scalability, and responsiveness of an application holds up under a given workload. 
+Performance testing determines how the stability, speed, scalability, and responsiveness of an application holds up under a given workload.
