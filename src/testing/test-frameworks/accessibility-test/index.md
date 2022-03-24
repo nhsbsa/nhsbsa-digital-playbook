@@ -34,46 +34,64 @@ The accessibility standard levels are as follows:
 
 All our websites have to meet at minimum 'AA' standard on all websites but we should be aiming for the highest 'AAA' level whether the website is internal or externally facing, for 1 user or a million users.​​​​​​​
 
-We assure our services are accessible by combining both automated and manual testing tools and techniques in order to meet our users needs.
+We assure all our services are accessible by combining both automated and manual testing tools and techniques in order to meet our users needs.
 
 There is more information / guidance on WCAG 2.1 available on this github account: WCAG 2.1 guidelines​​​​​​​
 
+## Whats in the scope for accessibility testing?
+
+The scope of accessibility testing includes every web based service whether this is for internal or external use or release, whether this is for 1 person or 5 million people, all our users are to catered for.
+
+Scope of accessibility coverage includes:
+- All website content, functionality and interactions.
+- Any document are uploaded, downloaded, used or displayed by the service.
+- Any authentication mechanisms used for service or website login.
+- External material/links, the service should assess the benefits and usage of using external material. Testing of this material and communication with the third parties of any issues that arise.
+- Any third party features or products that a service uses or consumes.
+- Any third party or off the shelf products used by or conjunction with a service.
+
+If any of the above scope is not covered then this must be risk approved by a delivery manager and service owner. 
+Any none coverage should also be add to the Accessibility statement(s) for transparency.
+
+
 ## Accessibility testing framework
 
-Our accessibility test framework is a combination of manual and automated testing techniques. 
-No one technique alone will fully test or find all issues so the combination ensures our test coverage is relevant and as comprehensive as we can make it.
+Our accessibility test framework is a combination of manual and automated testing techniques.
+
+No one technique alone will fully test or find all issues so using a combination ensures our test coverage is relevant and as comprehensive as we can make it.
 
 ### Stage 1 - Automated checkers
 
-There are many different tools and checkers available both in the licensed and open source markets. Just because a tool is licensed does not mean it assures a higher or better quality of results than a free offering, each tool should be investigated for their benefits and weaknesses. 
+There are many different tools and checkers available both in the licensed and open source markets. Just because a tool is licensed does not mean it assures a higher or better quality of results than a free offering, each tool we use has been investigated for their benefits and weaknesses.
 
-No one tool will give you full perfect checks on the guidelines either, many tools only actually find 40% or below of issues that exist on your website. Therefore a combined approach of mixed tools will give you better initial results to build upon.
+No one tool will give you full perfect checks on the guidelines either, many tools only actually find 40% or below of issues that exist on your website. Therefore a combined approach of mixed tools and techniques (manual and automated) will give us better results.
 
-The NHSBSA tests using the following automated checkers based upon research and audits we have performed:
+The NHSBSA tests uses the following automated checkers:
 
-- Accessibility Browser Plugins: Wave, Axe and Lighthouse.
+- Accessibility Browser Plugins: Wave, Axe and Lighthouse. (All open source)
 
 ### Stage 2 - Manual checklist & Assistive Technologies
 
-To widen our testing coverage we also need to manually check on various accessibility focus areas where we have encountered either WCAG conflicts or issues from audits. 
+To widen our testing coverage we also manually check on various accessibility patterns and focus areas where we have encountered either WCAG conflicts or issues from audits.
 
-- Manual Checklist 
+This manual checklist includes checks from screen orientation, keyboard navigation through to error handling and use of colour in services.
 
-Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems. 
+Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.
 
-To test this we use the following assistive technologies to test our services:
+To test this we implement checks using assistive technologies to test our services are operable and robust for all users. The assistive technologies we user are:
 
-- Screen Readers
-- Speech Recognition 
-- Screen Magnifiers
+- Screen Readers - NVDA on Windows and Voice Over on Mac machines.
+- Speech Recognition - Dragon on Windows and Voice Control on Mac machines.
+- Screen Magnifiers - Browser and machine based tools like Zoom features.
 
 ### Stage 3 - Accessibility Statements
 
 Each website must by law have an accurate and up to date accessibility statement.
 
-The creation and updating of all accessibility statements is a team responsibility but testers are involved in adding and updating the issues and WCAG contradictions.
+The creation and updating of all accessibility statements is a team responsibility but testers are involved in adding and updating any issues and WCAG contradictions thst may exist.
 
-These issues are those that have been found, raised but they are or can not be fixed for some reason. These have to be included in the statements.
+Issues that make their way to statements are those that have been found, raised but can not be fixed at present. 
+To be included in an accessibility statement these issues would need full justified reasoning as well as approved risk raised before the s. These have to be included in the statements.
 
 It is a testers responsibility to ensure the following with statements:
 
