@@ -12,7 +12,7 @@
     
     
     
-    <title>Manual Acceptance testing  - NHSBSA
+    <title>Test Documentation  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Manual Acceptance testing">
-<meta property="og:description" name="description" content="What, how and where we manually acceptance test at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Test Documentation">
+<meta property="og:description" name="description" content="What documentation we use at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#what-do-we-manually-acceptance-test%3F">What do we manually acceptance test?</a></li><li><a href="#why-do-we-manually-acceptance-test%3F">Why do we manually acceptance test?</a></li><li><a href="#how-do-we-manually-acceptance-test%3F">How do we manually acceptance test?</a><ol><li><a href="#code-storage-and-maintenance">Code storage and maintenance</a></li></ol></li><li><a href="#reporting-of-results-from-manual-testing">Reporting of results from manual testing</a></li></ol>
+        <ol><li><a href="#what-documentation-we-use-in-test%3F">What documentation we use in test?</a><ol><li><a href="#sprint-test-completion-reports">Sprint test completion reports</a></li></ol></li></ol>
       </div>
     </div>
 
@@ -85,38 +85,33 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Manual Acceptance testing
+        Test Documentation
       </h1>
       
-<h2 id="what-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#what-do-we-manually-acceptance-test%3F">What do we manually acceptance test?</a></h2>
-<p>By default we employ an ‘automation by default’ approach to acceptance testing so unless a test is not possible or constrained then tests must be automated. Currently over 90% of our acceptance tests are automated.</p>
-<p>The only circumstances where manual test will be accepted are:</p>
+<h2 id="what-documentation-we-use-in-test%3F" tabindex="-1"><a class="header-anchor" href="#what-documentation-we-use-in-test%3F">What documentation we use in test?</a></h2>
+<p>Within NHSBSA test we use the following documentation to support our testing, ensure quality and assure release fitness:</p>
+<ol>
+<li>Sprint test completion reports.</li>
+<li>Release test completion reports.</li>
+<li>Accessibility test report.</li>
+<li>Compatibility test report.</li>
+<li>Performance test report.</li>
+<li>Acceptance Automation reports (html reports generated from automation tests).</li>
+</ol>
+<p>All of the above reports are needed prior in order for test to sign off and approve a release.</p>
+<h3 id="sprint-test-completion-reports" tabindex="-1"><a class="header-anchor" href="#sprint-test-completion-reports">Sprint test completion reports</a></h3>
+<p>These are reports that support testers work and effort per sprint.<br>
+These reports are used to collate a sprint’s test work,effort and results which are then referenced from the release test completion.</p>
+<p>These reports include:</p>
 <ul>
-<li>when tests can not be automated due to complexity or restraints stopping the automation technology.</li>
-<li>when the benefits to test outweighs effort (this should also be approved by your test lead).</li>
-<li>exploratory testing performed before automation to allow the tester to be able to validate their automation tests.</li>
-</ul>
-<h2 id="why-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#why-do-we-manually-acceptance-test%3F">Why do we manually acceptance test?</a></h2>
-<p>Automated acceptance testing is the most efficient and cost saving test technique in software testing.</p>
-<p>Automating tests through any means (UI, API, performance or accessibility) can make a tester’s role much easier as well ensuring tests are executed quicker, more frequently and in cases more accurately.</p>
-<p>In Agile delivery, speed and iterative development is key and automated acceptance tests allow test to build, maintain and improve our testing to meet the demand whilst not compromising quality.</p>
-<p>Unfortunately though automation is not always possible so manual testing will still be part of our test frameworks.</p>
-<h2 id="how-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#how-do-we-manually-acceptance-test%3F">How do we manually acceptance test?</a></h2>
-<p>We manually test in the same form as automation does but without the code to drive the tests.<br>
-All test scripts, scenarios and cases must be written in user centric BDD using Cucumber methodology with the overall aim to validate user story acceptance criteria.</p>
-<p>All manual test scenarios must be built in feature files whilst taking advantage of the example table feature to test the base coverage explained on the Acceptance Test webpage.</p>
-<p>As with automation tests once these tests are executed and validated then these are to baselined and added to the regression pack.</p>
-<p>Regression needs to be run regularly for every change and release to ensure the continued assurance of all the service is not affected by any change or improvement.</p>
-<h3 id="code-storage-and-maintenance" tabindex="-1"><a class="header-anchor" href="#code-storage-and-maintenance">Code storage and maintenance</a></h3>
-<p>All test code must be uploaded regularly at least once daily into the relevant Git repository and named folliing the NHSBSA test standards on naming conventions.</p>
-<p>All test documentation including reports must be uploaded into the delivery team test confluence area.</p>
-<p>Please note: no test material (code, documentation, reports) must be kept on local machines. It is NHSBSA standard for all material to be uploaded into the shared and supported platforms (Git, Jira and Confluence).</p>
-<h2 id="reporting-of-results-from-manual-testing" tabindex="-1"><a class="header-anchor" href="#reporting-of-results-from-manual-testing">Reporting of results from manual testing</a></h2>
-<p>The following digital test structure must be followed in this order:</p>
-<ul>
-<li>Test Approach document.</li>
-<li>Test Suite (Scenarios and Cases) in feature files.</li>
-<li>Test Results in relevant reports (acceptance and API in sprint or release reports, accessibility in accessibility reports, performance in performance report and compatibility in compatibility report).</li>
+<li>Test Release focus / approach.</li>
+<li>Stakeholders, Resources &amp; Approvals.</li>
+<li>User Stories (in and those that may have dropped out of scope since planning).</li>
+<li>Version Management.</li>
+<li>Test Metrics &amp; results (Manual &amp; Automated).</li>
+<li>Accessibility Testing (Report and Statement).</li>
+<li>Defect Management.</li>
+<li>RAID Log. (Risks, Assumptions, Issues &amp; Dependencies).</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">

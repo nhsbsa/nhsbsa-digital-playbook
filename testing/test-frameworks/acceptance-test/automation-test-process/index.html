@@ -12,7 +12,7 @@
     
     
     
-    <title>Manual Acceptance testing  - NHSBSA
+    <title>Test Automation Process  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Manual Acceptance testing">
-<meta property="og:description" name="description" content="What, how and where we manually acceptance test at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Test Automation Process">
+<meta property="og:description" name="description" content="How we design, develop and maintaing our test automation at the NHSBSA"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
       <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
       <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#what-do-we-manually-acceptance-test%3F">What do we manually acceptance test?</a></li><li><a href="#why-do-we-manually-acceptance-test%3F">Why do we manually acceptance test?</a></li><li><a href="#how-do-we-manually-acceptance-test%3F">How do we manually acceptance test?</a><ol><li><a href="#code-storage-and-maintenance">Code storage and maintenance</a></li></ol></li><li><a href="#reporting-of-results-from-manual-testing">Reporting of results from manual testing</a></li></ol>
+        <ol><li><a href="#pre-automation">Pre-Automation</a></li><li><a href="#during-automation">During Automation</a></li><li><a href="#after-tests">After Tests</a></li><li><a href="#documentation">Documentation</a></li></ol>
       </div>
     </div>
 
@@ -85,38 +85,47 @@
       </div>
       
       <h1 class="nhsuk-heading-xl">
-        Manual Acceptance testing
+        Test Automation Process
       </h1>
       
-<h2 id="what-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#what-do-we-manually-acceptance-test%3F">What do we manually acceptance test?</a></h2>
-<p>By default we employ an ‘automation by default’ approach to acceptance testing so unless a test is not possible or constrained then tests must be automated. Currently over 90% of our acceptance tests are automated.</p>
-<p>The only circumstances where manual test will be accepted are:</p>
+<p>The following process must be followed when creating, maintaining or performing test automation.</p>
+<h3 id="pre-automation" tabindex="-1"><a class="header-anchor" href="#pre-automation">Pre-Automation</a></h3>
+<p>Before any test automation is started the following needs to be performed:</p>
 <ul>
-<li>when tests can not be automated due to complexity or restraints stopping the automation technology.</li>
-<li>when the benefits to test outweighs effort (this should also be approved by your test lead).</li>
-<li>exploratory testing performed before automation to allow the tester to be able to validate their automation tests.</li>
+<li>The testing task has been analysed and found to be testable by automation.</li>
+<li>The automation will result in efficiencies and savings in all testing performed for the task and story, this will include exploratory, acceptance and regression testing.</li>
+<li>The user story(s) have been created, reviewed and agreed by the whole delivery team, including 3 Amigos with testers.</li>
+<li>Exploratory testing has been performed on the task to ensure the test is able to be automated.</li>
 </ul>
-<h2 id="why-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#why-do-we-manually-acceptance-test%3F">Why do we manually acceptance test?</a></h2>
-<p>Automated acceptance testing is the most efficient and cost saving test technique in software testing.</p>
-<p>Automating tests through any means (UI, API, performance or accessibility) can make a tester’s role much easier as well ensuring tests are executed quicker, more frequently and in cases more accurately.</p>
-<p>In Agile delivery, speed and iterative development is key and automated acceptance tests allow test to build, maintain and improve our testing to meet the demand whilst not compromising quality.</p>
-<p>Unfortunately though automation is not always possible so manual testing will still be part of our test frameworks.</p>
-<h2 id="how-do-we-manually-acceptance-test%3F" tabindex="-1"><a class="header-anchor" href="#how-do-we-manually-acceptance-test%3F">How do we manually acceptance test?</a></h2>
-<p>We manually test in the same form as automation does but without the code to drive the tests.<br>
-All test scripts, scenarios and cases must be written in user centric BDD using Cucumber methodology with the overall aim to validate user story acceptance criteria.</p>
-<p>All manual test scenarios must be built in feature files whilst taking advantage of the example table feature to test the base coverage explained on the Acceptance Test webpage.</p>
-<p>As with automation tests once these tests are executed and validated then these are to baselined and added to the regression pack.</p>
-<p>Regression needs to be run regularly for every change and release to ensure the continued assurance of all the service is not affected by any change or improvement.</p>
-<h3 id="code-storage-and-maintenance" tabindex="-1"><a class="header-anchor" href="#code-storage-and-maintenance">Code storage and maintenance</a></h3>
-<p>All test code must be uploaded regularly at least once daily into the relevant Git repository and named folliing the NHSBSA test standards on naming conventions.</p>
-<p>All test documentation including reports must be uploaded into the delivery team test confluence area.</p>
-<p>Please note: no test material (code, documentation, reports) must be kept on local machines. It is NHSBSA standard for all material to be uploaded into the shared and supported platforms (Git, Jira and Confluence).</p>
-<h2 id="reporting-of-results-from-manual-testing" tabindex="-1"><a class="header-anchor" href="#reporting-of-results-from-manual-testing">Reporting of results from manual testing</a></h2>
-<p>The following digital test structure must be followed in this order:</p>
+<p>The automation scope and approach has been included in the project Test Approach document. Information on test documentation can be found on the test documentation page of the playbook.</p>
+<p>Setup your sprint or release test completion report for inclusion of results.</p>
+<h3 id="during-automation" tabindex="-1"><a class="header-anchor" href="#during-automation">During Automation</a></h3>
+<p>As code is not always immediately available to testers it is valid to:</p>
 <ul>
-<li>Test Approach document.</li>
-<li>Test Suite (Scenarios and Cases) in feature files.</li>
-<li>Test Results in relevant reports (acceptance and API in sprint or release reports, accessibility in accessibility reports, performance in performance report and compatibility in compatibility report).</li>
+<li>Use static creation of automation tests from the acceptance criteria in the user stories and from materials like flow charts, prototype designs etc.</li>
+<li>Use local versions of the UI screens or UI on branches if the developer is happy that the acceptance criteria has been met.</li>
+<li>Do not code from prototypes as these are throw away and should not be used to base automation upon.</li>
+<li>Not include locator elements such as id’s unless they have been provided and are accepted as final version. It is common during development that id’s can change in format and content.</li>
+<li>Setup the reporting element of your automation tests so they will output html reports on your results. Json format is not accepted. These tests will need to be linked to your sprint and your release test completion reports.</li>
+</ul>
+<p>Once code is ready for test and deloyment to the test environment (which must be in the tester’s control):</p>
+<ul>
+<li>Deploy code into the test environment and run all UI screens and tests from this environment.</li>
+<li>Revisit all scripts and add in the relevant locator elements, field names etc that may not have been accepted or ready in earlier development.</li>
+<li>Once your code is validated and meets acceptance criteria then your acceptance test can be baselined and added to your regression pack.</li>
+</ul>
+<h3 id="after-tests" tabindex="-1"><a class="header-anchor" href="#after-tests">After Tests</a></h3>
+<p>To validate automation tests all results must be output from the terminal window and also in html reports.</p>
+<p>These results must be checked for validity as tests can pass even if the actual test fails. (For example, if a happy path completes its journey through the service and does a final page assertion then it will show as passed but the test might have missed checks or routing that is vital to the journey.)</p>
+<p>Before testing can complete regression testing will need to be performed. If you have more than one test to run for a release then it is advisable to wait until all the release in scope automation tests are run before running your regression pack. It is also advisable to run regression packs out side of work hours as these may be of size and this will slow down the CI/CD infrastructure for everyone.</p>
+<p>Regression tests must be run as regular as possible within reasonable judgement of the tester. After all features are tested then regression needs to be run to check all existing functionality has not been affected.</p>
+<h3 id="documentation" tabindex="-1"><a class="header-anchor" href="#documentation">Documentation</a></h3>
+<p>The only documentation that must be created within the test automation process are:</p>
+<ul>
+<li>Sprint test completion reports</li>
+<li>Release test completion reports</li>
+<li>Project Test Approach document (reference to and keeping updated with test automation scope)</li>
+<li>Test Reporting from automation (html reports)</li>
 </ul>
     </div>
       <div class="nhsbsa-article--date">
