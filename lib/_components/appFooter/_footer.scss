@@ -59,3 +59,45 @@
     width: 25%;
   }
 }
+
+.nhsuk-ogl-footer{
+  background-color: $color_nhsuk-grey-4;
+}
+
+.nhsuk-ogl-footer--text{
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.71429;
+  padding-bottom:24px;
+  color: $nhsuk-secondary-text-color;
+  margin-bottom:0;
+  padding-bottom:24px;
+}
+
+@media (min-width: 40.0625em){
+  .nhsuk-ogl-footer--text{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.5;
+  }
+}
+
+@media print{ 
+  .nhsuk-ogl-footer--text{ 
+    font-size:14pt;
+    line-height:1.2;
+  }
+}
+
+@media (min-width: 40.0625em){
+  .nhsuk-ogl-footer--text{
+    padding-bottom:32px;
+  }
+} 
+
+.nhsuk-ogl-footer--text svg{
+  margin-right:8px;
+  position:relative;
+  top:2px;
+}
