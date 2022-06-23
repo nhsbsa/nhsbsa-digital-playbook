@@ -40,6 +40,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('totalFromRows', require('./lib/_filters/total-from-rows'));
   eleventyConfig.addFilter('widont', require('./lib/_filters/widont'));
   eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'));
+  eleventyConfig.addFilter('blank', require('./lib/_filters/blank'));
 
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
