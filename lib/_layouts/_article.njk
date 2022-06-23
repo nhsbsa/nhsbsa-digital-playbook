@@ -2,6 +2,7 @@
 
 {% from "appArticle/macro.njk" import appArticle %}
 {% from "appCard/macro.njk" import appCard with context %}
+{% from "appIssuesheet/macro.njk" import appIssuesheet %}
 {% from "prose/macro.njk" import appProse %}
 
 {% block header %}
@@ -38,6 +39,13 @@
         {{ title }}
       </h1>
       
+      {% call appIssuesheet({
+        issuesheet: issuesheet,
+        revisions: revisions,
+        title: title
+      }) %}
+      {% endcall %}
+
       {% call appProse({
         prose: content
       }) -%}

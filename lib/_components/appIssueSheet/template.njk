@@ -1,0 +1,107 @@
+{% if params.issuesheet %}
+{% set issuesheet = params.issuesheet %}
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Issue sheet
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <table>
+    {% if issuesheet.reference %}
+      <tr>
+      <th>Document reference</th>
+      <td>{{ issuesheet.reference }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.location %}
+      <tr>
+      <th>Document location</th>
+      <td>{{ issuesheet.location }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.title %}
+      <tr>
+      <th>Title</th>
+      <td>{{ params.title }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.author %}
+      <tr>
+      <th>Author</th>
+      <td>{{ issuesheet.author }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.owner %}
+      <tr>
+      <th>Owner</th>
+      <td>{{ issuesheet.owner }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.issued_to %}
+      <tr>
+      <th>Issued to</th>
+      <td>{{ issuesheet.issued_to }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.reason_issued %}
+      <tr>
+      <th>Reason issued</th>
+      <td>{{ issuesheet.reason_issued }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.review_date %}
+      <tr>
+      <th>Last reviewed</th>
+      <td>
+        <time datetime="{{ issuesheet.review_date | date }}">{{ issuesheet.date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.wellbeing_inclusion_review_date %}
+      <tr>
+      <th>Date of Wellbeing and Inclusion Analysis</th>
+      <td>
+        <time datetime="{{ issuesheet.wellbeing_inclusion_review_date | date }}">{{ issuesheet.wellbeing_inclusion_review_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.accessibility_review_date %}
+      <tr>
+      <th>Date of Accessibility Review</th>
+      <td>
+        <time datetime="{{ issuesheet.accessibility_review_date | date }}">{{ issuesheet.accessibility_review_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    </table>
+    {% if issuesheet.revisions %}
+      <h3 id="revision-history" tabindex="-1"><a class="header-anchor" href="#revision-history">Revision history</a></h3>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Date</th>
+          <th>Amended by</th>
+          <th>Approved by</th>
+          <th>Details</th>
+        </tr>
+        {% for revision in issuesheet.revisions %}
+        <tr>
+        <td>{{ revision.version | blank }}</td>
+        <td>
+          {% if revision.review_date %}
+          <time datetime="{{ revision.review_date | date }}">{{ revision.date | date("d LLLL y") }}</time>
+          {% else %}
+          -
+          {% endif %}
+        </td>
+        <td>{{ revision.amended_by | blank }}</td>
+        <td>{{ revision.approved_by | blank }}</td>
+        <td>{{ revision.details | blank }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+  </div>
+</details>
+{% endif %}
