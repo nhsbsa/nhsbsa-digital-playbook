@@ -1,5 +1,6 @@
 {% if params.issuesheet %}
 {% set issuesheet = params.issuesheet %}
+{% set review = params.review %}
 <details class="nhsuk-details nhsuk-expander">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
@@ -8,19 +9,17 @@
   </summary>
   <div class="nhsuk-details__text">
     <table>
+      <tr>
+      <th>Document location</th>
+      <td><a href="{{ params.url }}">{{ params.url }}</a></td>
+      </tr>
     {% if issuesheet.reference %}
       <tr>
       <th>Document reference</th>
       <td>{{ issuesheet.reference }}</td>
       </tr>
     {% endif %}
-    {% if issuesheet.location %}
-      <tr>
-      <th>Document location</th>
-      <td>{{ issuesheet.location }}</td>
-      </tr>
-    {% endif %}
-    {% if issuesheet.title %}
+    {% if params.title %}
       <tr>
       <th>Title</th>
       <td>{{ params.title }}</td>
@@ -50,27 +49,57 @@
       <td>{{ issuesheet.reason_issued }}</td>
       </tr>
     {% endif %}
-    {% if issuesheet.review_date %}
+    {% if issuesheet.approved_by %}
+      <tr>
+      <th>Approved by</th>
+      <td>{{ issuesheet.approved_by }}</td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.approval_date %}
+      <tr>
+      <th>Approved</th>
+      <td>
+        <time datetime="{{ issuesheet.approval_date | date }}">{{ issuesheet.approval_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.wellbeing_inclusion_approval_date %}
+      <tr>
+      <th>Date of wellbeing and inclusion analysis</th>
+      <td>
+        <time datetime="{{ issuesheet.wellbeing_inclusion_approval_date | date }}">{{ issuesheet.wellbeing_inclusion_approval_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.accessibility_approval_date %}
+      <tr>
+      <th>Date of accessibility review</th>
+      <td>
+        <time datetime="{{ issuesheet.accessibility_approval_date | date }}">{{ issuesheet.accessibility_approval_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if issuesheet.fraud_approval_date %}
+      <tr>
+      <th>Date of fraud review</th>
+      <td>
+        <time datetime="{{ issuesheet.fraud_approval_date | date }}">{{ issuesheet.fraud_approval_date | date("d LLLL y") }}</time>
+      </td>
+      </tr>
+    {% endif %}
+    {% if review.last_reviewed_date %}
       <tr>
       <th>Last reviewed</th>
       <td>
-        <time datetime="{{ issuesheet.review_date | date }}">{{ issuesheet.date | date("d LLLL y") }}</time>
+        <time datetime="{{ review.last_reviewed_date | date }}">{{ review.last_reviewed_date | date("d LLLL y") }}</time>
       </td>
       </tr>
     {% endif %}
-    {% if issuesheet.wellbeing_inclusion_review_date %}
+    {% if review.next_review_date %}
       <tr>
-      <th>Date of Wellbeing and Inclusion Analysis</th>
+      <th>Next review due</th>
       <td>
-        <time datetime="{{ issuesheet.wellbeing_inclusion_review_date | date }}">{{ issuesheet.wellbeing_inclusion_review_date | date("d LLLL y") }}</time>
-      </td>
-      </tr>
-    {% endif %}
-    {% if issuesheet.accessibility_review_date %}
-      <tr>
-      <th>Date of Accessibility Review</th>
-      <td>
-        <time datetime="{{ issuesheet.accessibility_review_date | date }}">{{ issuesheet.accessibility_review_date | date("d LLLL y") }}</time>
+        <time datetime="{{ review.next_review_date | date }}">{{ review.next_review_date | date("d LLLL y") }}</time>
       </td>
       </tr>
     {% endif %}

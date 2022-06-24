@@ -18,7 +18,8 @@
     },
     footer: {
       date: page.date,
-      modified: modified if modified
+      modified: modified if modified,
+      review: review
     }
   }) %}
     <div class="nhsbsa-sticky-nav">
@@ -37,12 +38,17 @@
       
       <h1 class="nhsuk-heading-xl">
         {{ title }}
+        {% if status and status != 'FINAL' %}
+          [{{ status }}]
+        {% endif %}
       </h1>
       
       {% call appIssuesheet({
+        title: title,
+        url: page.url,
         issuesheet: issuesheet,
-        revisions: revisions,
-        title: title
+        review: review,
+        revisions: revisions
       }) %}
       {% endcall %}
 

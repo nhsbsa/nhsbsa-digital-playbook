@@ -14,6 +14,14 @@
             Last updated <time datetime="{{ params.footer.modified | date }}">{{ params.footer.modified | date("d LLLL y") }}</time>
           </p>
         {% endif %}
+        {% if params.footer.review  %}
+          <p>
+            Last reviewed <time datetime="{{ params.footer.review.last_reviewed_date | date }}">{{ params.footer.review.last_reviewed_date | date("d LLLL y") }}</time>
+          </p>
+          <p>
+            Next review due <time datetime="{{ params.footer.review.next_review_date | date }}">{{ params.footer.review.next_review_date | date("d LLLL y") }}</time>
+          </p>
+        {% endif %}
       </div>
     {% endif %}
   </div>
