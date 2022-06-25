@@ -2,7 +2,7 @@
 
 {% from "appArticle/macro.njk" import appArticle %}
 {% from "appCard/macro.njk" import appCard with context %}
-{% from "appIssuesheet/macro.njk" import appIssuesheet %}
+{% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
 
 {% block header %}
@@ -43,7 +43,7 @@
         {% endif %}
       </h1>
       
-      {% call appIssuesheet({
+      {% call appIssueSheet({
         title: title,
         url: page.url,
         issuesheet: issuesheet,
@@ -56,9 +56,11 @@
         prose: content
       }) -%}
       {% if related %}
+      {% if related.title %}
       <h2 class="nhsuk-heading-l">
-        {{ related.title or "Related articles" }}
+        {{ related.title }}
       </h2>
+      {% endif %}
       {{ appCard({
         items: collections[related.tag],
         order: related.tag
