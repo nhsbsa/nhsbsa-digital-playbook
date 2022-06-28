@@ -91,7 +91,7 @@
 <details class="nhsuk-details nhsuk-expander">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
-      Issue sheet
+      <h2 class="nhsbsa-details__summary-heading nhsuk-heading-s">Issue sheet</h2>
     </span>
   </summary>
   <div class="nhsuk-details__text">
@@ -139,7 +139,8 @@
       </td>
       </tr>
     </table>
-      <h3 id="revision-history" tabindex="-1"><a class="header-anchor" href="#revision-history">Revision history</a></h3>
+
+      <h3 id="revision-history" tabindex="-1" class="nhsuk-heading-s"><a class="header-anchor" href="#revision-history">Revision history</a></h3>
       <table>
         <tr>
           <th>Version</th>
@@ -170,8 +171,8 @@
 <table>
 <thead>
 <tr>
-<th>field</th>
-<th>description</th>
+<th>Field</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -221,8 +222,8 @@
 <table>
 <thead>
 <tr>
-<th>field</th>
-<th>description</th>
+<th>Field</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -253,13 +254,17 @@
 <p>By example the review data on this document is configured as:</p>
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">review</span><span class="token punctuation">:</span><br>    <span class="token key atrule">last_reviewed_date</span><span class="token punctuation">:</span> <span class="token datetime number">2022-06-24</span><br>    <span class="token key atrule">review_cycle</span><span class="token punctuation">:</span> ANNUAL</code></pre>
 <table>
-<tr><th>  </th><th>  </th></tr>
-<tr><td> last_reviewed_date </td><td> ISO-8601 formatted date </td></tr>
-<tr><td> review_cycle </td><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" href="https://moment.github.io/luxon/api-docs/index.html#duration" rel="noopener">Luxon duration notation</a>. e.g. 
+<thead>
+<tr><th> Field </th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><th> last_reviewed_date </th><td> ISO-8601 formatted date </td></tr>
+<tr><th> review_cycle </th><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" href="https://moment.github.io/luxon/api-docs/index.html#duration" rel="noopener">Luxon duration notation</a>. e.g. 
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">review_cycle</span><span class="token punctuation">:</span>
       <span class="token key atrule">years</span><span class="token punctuation">:</span> 2
 </code></pre>
  </td></tr>
+</tbody>
 </table>
 
       <h2 class="nhsuk-heading-l">Improve the playbook</h2>
@@ -284,7 +289,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-06-28T08:08:39.593Z">28 June 2022</time>
+            Published <time datetime="2022-06-28T09:16:26.663Z">28 June 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-24T00:00:00.000Z">24 June 2022</time>
