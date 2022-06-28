@@ -2,6 +2,7 @@
 
 {% from "appArticle/macro.njk" import appArticle %}
 {% from "appCard/macro.njk" import appCard with context %}
+{% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
 
 {% block header %}
@@ -17,7 +18,8 @@
     },
     footer: {
       date: page.date,
-      modified: modified if modified
+      modified: modified if modified,
+      review: review
     }
   }) %}
     <div class="nhsbsa-sticky-nav">
@@ -36,15 +38,29 @@
       
       <h1 class="nhsuk-heading-xl">
         {{ title }}
+        {% if status and status != 'FINAL' %}
+          [{{ status }}]
+        {% endif %}
       </h1>
       
+      {% call appIssueSheet({
+        title: title,
+        url: page.url,
+        issuesheet: issuesheet,
+        review: review,
+        revisions: revisions
+      }) %}
+      {% endcall %}
+
       {% call appProse({
         prose: content
       }) -%}
       {% if related %}
+      {% if related.title %}
       <h2 class="nhsuk-heading-l">
-        {{ related.title or "Related articles" }}
+        {{ related.title }}
       </h2>
+      {% endif %}
       {{ appCard({
         items: collections[related.tag],
         order: related.tag
