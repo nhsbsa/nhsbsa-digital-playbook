@@ -52,7 +52,7 @@ issuesheet:
 
 ### Issue sheet settings
 
-| field | description |
+| Field | Description |
 |-------|-------------|
 | reference | document reference number inline with your team/functional structure |
 | author | job title of the document author |
@@ -67,7 +67,7 @@ issuesheet:
 
 ### Revision settings
 
-| field | description |
+| Field | Description |
 |-------|-------------|
 | version | version number |
 | date | ISO-8601 formatted date. Date of change |
@@ -88,13 +88,17 @@ review:
 ```
 
 <table>
-<tr><th>  </th><th>  </th></tr>
-<tr><td> last_reviewed_date </td><td> ISO-8601 formatted date </td></tr>
-<tr><td> review_cycle </td><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" href="https://moment.github.io/luxon/api-docs/index.html#duration">Luxon duration notation</a>. e.g. 
+<thead>
+<tr><th> Field </th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><th> last_reviewed_date </th><td> ISO-8601 formatted date </td></tr>
+<tr><th> review_cycle </th><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" href="https://moment.github.io/luxon/api-docs/index.html#duration">Luxon duration notation</a>. e.g. 
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">review_cycle</span><span class="token punctuation">:</span>
       <span class="token key atrule">years</span><span class="token punctuation">:</span> 2
 </code></pre>
  </td></tr>
+</tbody>
 </table>
 
 [nhsbsa_document_control_standard]: <https://nhsbsauk.sharepoint.com/sites/Governance/SitePages/Document-Management-and-Control.aspx?OR=Teams-HL&CT=1646726354655&params=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjAyMDcwMTgxMCJ9>
