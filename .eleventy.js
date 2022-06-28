@@ -41,6 +41,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('widont', require('./lib/_filters/widont'));
   eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'));
   eleventyConfig.addFilter('blank', require('./lib/_filters/blank'));
+  eleventyConfig.addFilter('urlEncode', require('./lib/_filters/urlEncode'));
 
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});

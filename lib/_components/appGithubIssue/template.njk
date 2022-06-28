@@ -1,0 +1,12 @@
+{% from 'input/macro.njk' import input %}
+{% from 'textarea/macro.njk' import textarea %}
+{% from "button/macro.njk" import button %}
+{% from 'action-link/macro.njk' import actionLink %}
+
+{% set href="https://github.com/nhsbsa/nhsbsa-digital-playbook/issues/new?template=" +
+    (params.issueTemplate | urlEncode) +
+    "&title=" + (params.issueTitle | urlEncode) %}
+{{ actionLink({
+  "text": params.linkText,
+  "href": href
+}) }}

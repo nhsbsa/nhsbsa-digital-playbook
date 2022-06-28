@@ -4,6 +4,7 @@
 {% from "appCard/macro.njk" import appCard with context %}
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
+{% from "appGithubIssue/macro.njk" import appGithubIssue %}
 
 {% block header %}
   {{ appArticleHeader({
@@ -66,7 +67,21 @@
         order: related.tag
       }) }}
       {% endif %}
+
       {%- endcall %}
+
+      <h2 class="nhsuk-heading-l">Improve the playbook</h2>
+      <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+        please share your suggestions.</p>
+
+      <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
+      Github is an open forum where we collect feedback.</p>
+      {{ appGithubIssue({
+        issueTemplate: "playbook-proposal.md",
+        issueTitle: "Change to page '" + page.filePathStem + "' ",
+        linkText: "Suggest a change to this page"
+        }) }}
     </div>
+
   {% endcall %}
 {% endblock %}
