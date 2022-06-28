@@ -1,3 +1,5 @@
+{% from "appBadges/macro.njk" import appBadges %}
+
 {% if params.items.length > 0 %}
 	<ul class="nhsuk-grid-row nhsuk-card-group{%- if params.classes %} {{ params.classes }}{% endif %}">
 		{% for item in params.items | sortByOrder(params.order) %}
@@ -8,6 +10,9 @@
 						<a class="nhsuk-card__link" href="{{ item.url | url | pretty }}">
 							{{ item.data.title }}
 						</a>
+						{{ appBadges({
+							badges: item.data.badges
+						}) }}
 					</h2>
 					{% if item.data.description %}
 					<p class="nhsuk-card__description">{{ item.data.description | markdown("inline") | safe }}</p>
