@@ -15,6 +15,11 @@ a.header-anchor {
   text-decoration: none;
 }
 
+.nhsbsa-details__summary-heading {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
 .header-anchor:hover::before,
 .header-anchor:focus::before {
     content: '#';
@@ -319,7 +324,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #690;
+	color: rgb(89, 125, 15);
 }
 
 .token.operator,
