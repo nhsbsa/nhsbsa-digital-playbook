@@ -1,4 +1,4 @@
 module.exports = {
-    review: require('../../lib/_computed/reviewDate'),
+    review: require('../../lib/_computed/reviewData'),
     badges: require('../../lib/_computed/badges')
 };

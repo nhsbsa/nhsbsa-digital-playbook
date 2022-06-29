@@ -1,9 +1,12 @@
 ---
 layout: article
 title: "Logging"
-tags: dev
-order: 5
+tags: [dev, standard]
+order: 
+  dev: 5
 ---
+## Logging requirements
+
 Understand the reason for logging within a component and write log statements appropriate to these reasons.
 
 Reasons may include:

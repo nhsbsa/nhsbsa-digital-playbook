@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Document control"
+description: "Add useful information so your readers can see what's changed"
 tags: [playbook]
-order: 1
-status: REVIEW
+order: 5
 review:
     last_reviewed_date: 2022-06-24
     review_cycle: ANNUAL
@@ -25,6 +25,26 @@ issuesheet:
           details: "Initial release"
 ---
 The playbook allows you to declare an issue sheet and document review information using frontmatter data.
+
+## Document status
+
+You can add a status to your document frontmatter to make it clear when an article isn't fully complete.
+
+Set the status using this frontmatter attribute:
+
+```yaml
+status: FINAL
+```
+
+Our standard statuses are:
+
+* __DRAFT__
+  The article is being written. Articles in `DRAFT` status will not be shown in related articles so you will need the URL to be able to view it.
+* __REVIEW__
+  The article is open for review. Reviewers should use [Github Issues](../github-issues) to request changes.
+* __FINAL__
+  The article has been approved and should be taken as authorised NHSBSA guidance.
+  We display article status alongside the title except for `FINAL`.
 
 ## Issue sheet
 

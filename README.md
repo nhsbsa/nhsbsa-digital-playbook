@@ -1,14 +1,14 @@
 # NHSBSA Digital Playbook
 
-The NHSBSA Digital Playbook is documentation that describes how we work when delivering Digital Services at the NHS Business Services Authority.
+The NHSBSA Digital Playbook contains documentation on how we work when delivering Digital Services at the [NHS Business Services Authority][nhsbsa_homepage].
 
-The published playbook is hosted on [Github pages][nhsbsa-digital-playbook]
+The published playbook is hosted on [Github pages][nhsbsa_digital_playbook]
 
 ## Quick start
 
 ### prerequisites
 
-* [Node 14][node_js]
+* [Node 16][node_js]
 
 ### Building the application
 
@@ -29,15 +29,17 @@ the generated content, and [Github pages][gh_pages] to host.
 
 ## Contributions
 
-We operate a [code of conduct](CODE_OF_CONDUCT.md) for all contributors.
+We operate a [code of conduct](CODE_OF_CONDUCT.md) for all [contributors](CONTRIBUTING.md).
 
-See our [contributing guide](CONTRIBUTING.md) for guidance on how to contribute.
+The playbook contains articles on [how to contribute][nhsbsa_digital_playbook_contribute]
 
 ## License
 
 Released under the [Apache 2 license](LICENCE.txt).
 
-[nhsbsa-digital-playbook]: <https://nhsbsa.github.io/nhsbsa-digital-playbook/>
+[nhsbsa_homepage]: <https://www.nhsbsa.nhs.uk/>
+[nhsbsa_digital_playbook]: <https://nhsbsa.github.io/nhsbsa-digital-playbook/>
+[nhsbsa_digital_playbook_contribute]: <https://nhsbsa.github.io/nhsbsa-digital-playbook/>
 [node_js]: <https://nodejs.org/en/>
 [eleventy]: <https://www.11ty.dev/docs/>
 [gh_actions]: <https://docs.github.com/en/actions>

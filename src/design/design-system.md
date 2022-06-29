@@ -5,20 +5,17 @@ description: "Where to start with design..."
 tags: design
 order: 1
 ---
-
 As an NHS organisation, we follow the NHS Design System and Design Principals - these can be found here: [NHS Design System][nhs_designsys]
-
 
 ## Prototyping
 
 Prototypes should be used to test user journeys - they aren't code/pixel perfect and can be iterated quickly, or thrown away. A guide to setting up the NHS Prototype Kit can be found here: [Prototyping][nhs_designsys_prototype]
 
-Prototype code is <b>not</b> intended to be used as production code. Designers make prototypes. Developers make applications.
+Prototype code is __not__ intended to be used as production code. Designers make prototypes. Developers make applications.
 
 ## Production code
 
 When prototypes have been user tested, journeys are ready to be developed ready for production. A guide to setting up the NHS Frontend Toolkit can be found here: [Frontend Toolkit][nhs_designsys_prod]
-
 
 Styles, including colour pallete can be found here: [Styles][nhs_designsys_styles]
 
