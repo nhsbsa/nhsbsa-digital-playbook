@@ -1,0 +1,9 @@
+{% from 'tag/macro.njk' import tag %}
+{% if params.badges %}
+{% for badge in params.badges %}
+  {{ tag({
+    text: badge.text,
+    classes: badge.style
+  })}}
+{% endfor %}
+{% endif %}

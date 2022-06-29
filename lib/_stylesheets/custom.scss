@@ -183,7 +183,44 @@ a.nhsuk-footer__list-item-link:visited {
 	}
 }
 
+/* Cards */
+
+.nhsuk-card__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	h1,h2,h3 {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+	strong {
+		display: inline-block;
+		margin-left: auto;
+	}
+}
+
 /* Article Content */
+
+.nhsbsa-article-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 40px;
+	h1,h2,h3 {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+	strong {
+		display: inline-block;
+		margin-left: 15px;
+	}
+}
+
+@media (min-width: 40.0625em) {
+	.nhsbsa-article-header {
+		margin-bottom: 48px;
+	}
+}
 
 .nhsbsa-article-content {
 	box-sizing: border-box;

@@ -3,6 +3,7 @@ layout: article
 title: "Document control"
 tags: [playbook]
 order: 1
+status: REVIEW
 review:
     last_reviewed_date: 2022-06-24
     review_cycle: ANNUAL

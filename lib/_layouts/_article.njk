@@ -5,6 +5,7 @@
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
 {% from "appGithubIssue/macro.njk" import appGithubIssue %}
+{% from "appBadges/macro.njk" import appBadges %}
 
 {% block header %}
   {{ appArticleHeader({
@@ -37,12 +38,14 @@
           Go back</a>
       </div>
       
-      <h1 class="nhsuk-heading-xl">
-        {{ title }}
-        {% if status and status != 'FINAL' %}
-          [{{ status }}]
-        {% endif %}
-      </h1>
+      <div class="nhsbsa-article-header">
+        <h1 class="nhsuk-heading-xl">
+          {{ title }}
+        </h1>
+        {{ appBadges({
+            badges: badges
+        }) }}
+      </div>
       
       {% call appIssueSheet({
         title: title,
