@@ -38,12 +38,14 @@
           Go back</a>
       </div>
       
-      <h1 class="nhsuk-heading-xl">
-        {{ title }}
+      <div class="nhsbsa-article-header">
+        <h1 class="nhsuk-heading-xl">
+          {{ title }}
+        </h1>
         {{ appBadges({
-          badges: badges
+            badges: badges
         }) }}
-      </h1>
+      </div>
       
       {% call appIssueSheet({
         title: title,

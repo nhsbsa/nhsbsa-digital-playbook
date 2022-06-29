@@ -6,14 +6,18 @@
 		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
 			<div class="nhsuk-card nhsuk-card--clickable">
 				<div class="nhsuk-card__content">
-					<h2 class="nhsuk-card__heading nhsuk-heading-m">
-						<a class="nhsuk-card__link" href="{{ item.url | url | pretty }}">
-							{{ item.data.title }}
-						</a>
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="{{ item.url | url | pretty }}">
+								{{ item.data.title }}
+							</a>
+						</h2>
 						{{ appBadges({
-							badges: item.data.badges
-						}) }}
-					</h2>
+								badges: item.data.badges
+							}) 
+						}}
+					</div>
+					
 					{% if item.data.description %}
 					<p class="nhsuk-card__description">{{ item.data.description | markdown("inline") | safe }}</p>
 					{% endif %}
