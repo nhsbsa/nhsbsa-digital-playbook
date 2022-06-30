@@ -8,3 +8,10 @@ pagination:
   size: 50
   alias: articles
 ---
+This website documents the specific technology, tools and processes that NHS Business Services Authority (NHSBSA) digital delivery teams use to build and operate services.
+
+It is intended to complement, not replace, existing UK Government and NHS guidance:
+
+* [NHS digital service manual](https://service-manual.nhs.uk/)
+* [UK Government service manual](https://www.gov.uk/service-manual)
+* [UK Government technology code of practice](https://www.gov.uk/guidance/the-technology-code-of-practice)

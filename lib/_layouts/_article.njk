@@ -25,8 +25,10 @@
     }
   }) %}
     <div class="nhsbsa-sticky-nav">
-      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-      {{ content | toc | safe }}
+      {% if content | toc %}
+        <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+        {{ content | toc | safe }}
+      {% endif %}
     </div>
 
     <div class="nhsbsa-article-content">
@@ -73,7 +75,7 @@
 
       {%- endcall %}
 
-      <h2 class="nhsuk-heading-l">Improve the playbook</h2>
+      <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
         please share your suggestions.</p>
 
