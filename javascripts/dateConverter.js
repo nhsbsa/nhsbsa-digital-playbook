@@ -10,7 +10,6 @@ const { DateTime } = require('luxon')
     let date;
     if (value instanceof DateTime) {
       date = value
-      console.log(date)
     } else if (value instanceof Date) {
       date = DateTime.fromJSDate(value, {
         locale: 'en-GB',

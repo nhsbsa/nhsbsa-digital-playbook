@@ -69,9 +69,9 @@
         <main class="nhsuk-main-wrapper " id="main-content" role="main">
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
-      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-      <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#security">Security</a></li><li><a href="#data-protection">Data protection</a></li><li><a href="#tools">Tools</a></li><li><a href="#logging-levels">Logging levels</a></li><li><a href="#meta-information">Meta information</a></li><li><a href="#logging-guidance">Logging Guidance</a><ol><li><a href="#content">Content</a></li><li><a href="#error-cases">Error cases</a></li></ol></li><li><a href="#log-review">Log review</a></li><li><a href="#references">References</a></li></ol>
+        <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+        <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#logging-requirements">Logging requirements</a></li><li><a href="#security">Security</a></li><li><a href="#data-protection">Data protection</a></li><li><a href="#tools">Tools</a></li><li><a href="#logging-levels">Logging levels</a></li><li><a href="#meta-information">Meta information</a></li><li><a href="#logging-guidance">Logging Guidance</a><ol><li><a href="#content">Content</a></li><li><a href="#error-cases">Error cases</a></li></ol></li><li><a href="#log-review">Log review</a></li><li><a href="#references">References</a></li></ol>
       </div>
     </div>
 
@@ -92,6 +92,7 @@
       </div>
       
 
+<h2 id="logging-requirements" tabindex="-1"><a class="header-anchor" href="#logging-requirements">Logging requirements</a></h2>
 <p>Understand the reason for logging within a component and write log statements appropriate to these reasons.</p>
 <p>Reasons may include:</p>
 <ul>
@@ -205,34 +206,34 @@ If tracing session interactions is required, then it is permissable to log a sec
 <p>Never print logging information direct to ‘system output’ except through configuration of a logging library. For instance, avoid statements like this:</p>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-326" checked><label for="group-326-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
-<li><input type="radio" name="label-group-326"><label for="group-326-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-329" checked><label for="group-329-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-329"><label for="group-329-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-326-tab-0" name="group-326" checked>
+<input type="radio" id="group-329-tab-0" name="group-329" checked>
 <pre class="language-java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A useful log statement"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-326-tab-1" name="group-326">
+<input type="radio" id="group-329-tab-1" name="group-329">
 <pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"A useful log statement"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 <p>Logging libraries should provide data as arguments to log messages with placeholders. This has performance benefits in languages such as Java, but more importantly it allows data to be sanitised within the library. For instance, use this form:</p>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-331" checked><label for="group-331-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
-<li><input type="radio" name="label-group-331"><label for="group-331-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-334" checked><label for="group-334-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-334"><label for="group-334-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-331-tab-0" name="group-331" checked>
+<input type="radio" id="group-334-tab-0" name="group-334" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - {}"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-331-tab-1" name="group-331">
+<input type="radio" id="group-334-tab-1" name="group-334">
 <pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data -  %s'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 <p>and avoid this form:</p>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-336" checked><label for="group-336-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
-<li><input type="radio" name="label-group-336"><label for="group-336-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-339" checked><label for="group-339-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-339"><label for="group-339-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-336-tab-0" name="group-336" checked>
+<input type="radio" id="group-339-tab-0" name="group-339" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - "</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-336-tab-1" name="group-336">
+<input type="radio" id="group-339-tab-1" name="group-339">
 <pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data - '</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 <h3 id="content" tabindex="-1"><a class="header-anchor" href="#content">Content</a></h3>
@@ -250,12 +251,12 @@ If tracing session interactions is required, then it is permissable to log a sec
 </ul>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-381" checked><label for="group-381-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
-<li><input type="radio" name="label-group-381"><label for="group-381-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-384" checked><label for="group-384-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-384"><label for="group-384-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-381-tab-0" name="group-381" checked>
+<input type="radio" id="group-384-tab-0" name="group-384" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"User: [{}] successfully authenticated"</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<input type="radio" id="group-381-tab-1" name="group-381">
+<input type="radio" id="group-384-tab-1" name="group-384">
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"User: [%s] successfully authenticated"</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span>id<span class="token punctuation">)</span></code></pre>
 </div>
 <p>Data in log statements should be placed in order of relevance to the event</p>
@@ -264,12 +265,12 @@ If tracing session interactions is required, then it is permissable to log a sec
 </ul>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-393" checked><label for="group-393-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
-<li><input type="radio" name="label-group-393"><label for="group-393-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-396" checked><label for="group-396-tab-0" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-396"><label for="group-396-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-393-tab-0" name="group-393" checked>
+<input type="radio" id="group-396-tab-0" name="group-396" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"State change to [{}] for case [{}]"</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-393-tab-1" name="group-393">
+<input type="radio" id="group-396-tab-1" name="group-396">
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"State change to [%s] for case [%s]"</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>state<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 <h3 id="error-cases" tabindex="-1"><a class="header-anchor" href="#error-cases">Error cases</a></h3>
@@ -285,12 +286,12 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
 <p>Known errors should be logged with a unique error code to identify them. This requires the development team to create and maintain a catalogue of known system errors and codes</p>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-424" checked><label for="group-424-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
-<li><input type="radio" name="label-group-424"><label for="group-424-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-427" checked><label for="group-427-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-427"><label for="group-427-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-424-tab-0" name="group-424" checked>
+<input type="radio" id="group-427-tab-0" name="group-427" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"[{}] status change [{}] > [{}] disallowed for case [{}]"</span><span class="token punctuation">,</span> <br>    <span class="token class-name">ServiceErrors</span><span class="token punctuation">.</span>CASE_INVALID_STATUS_CHANGE<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> newStatus<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-424-tab-1" name="group-424">
+<input type="radio" id="group-427-tab-1" name="group-427">
 <pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"[%s] status change [%s] > [%s] disallowed for case [%s]"</span><span class="token punctuation">,</span> <br>    ServiceErrors<span class="token punctuation">.</span><span class="token constant">CASE_INVALID_STATUS_CHANGE</span><span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>status<span class="token punctuation">,</span> newStatus<span class="token punctuation">,</span> <span class="token keyword">case</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 <h2 id="log-review" tabindex="-1"><a class="header-anchor" href="#log-review">Log review</a></h2>
@@ -315,7 +316,7 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
 <li><a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a></li>
 </ul>
 
-      <h2 class="nhsuk-heading-l">Improve the playbook</h2>
+      <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
         please share your suggestions.</p>
 
@@ -337,7 +338,7 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-06-29T10:57:35.264Z">29 June 2022</time>
+            Published <time datetime="2022-06-30T11:12:59.411Z">30 June 2022</time>
           </p>
       </div>
   </div>

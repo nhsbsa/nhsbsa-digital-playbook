@@ -38,7 +38,7 @@
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
 <meta property="og:title" content="Document control">
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:description" name="description" content="Add useful information so your readers can see what’s changed"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -69,9 +69,9 @@
         <main class="nhsuk-main-wrapper " id="main-content" role="main">
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
-      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-      <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#issue-sheet">Issue sheet</a><ol><li><a href="#issue-sheet-settings">Issue sheet settings</a></li><li><a href="#revision-settings">Revision settings</a></li></ol></li><li><a href="#document-review">Document review</a></li></ol>
+        <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+        <div class="nhsbsa-sticky-nav__list" >
+        <ol><li><a href="#document-status">Document status</a></li><li><a href="#issue-sheet">Issue sheet</a><ol><li><a href="#issue-sheet-settings">Issue sheet settings</a></li><li><a href="#revision-settings">Revision settings</a></li></ol></li><li><a href="#document-review">Document review</a></li></ol>
       </div>
     </div>
 
@@ -88,11 +88,7 @@
         <h1 class="nhsuk-heading-xl">
           Document control
         </h1>
-          <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
+        
       </div>
       
 <details class="nhsuk-details nhsuk-expander">
@@ -142,7 +138,7 @@
       <tr>
       <th>Next review due</th>
       <td>
-        <time datetime="2023-06-24T00:00:00.000+00:00">24 June 2023</time>
+        <time datetime="2023-06-24T00:00:00.000Z">24 June 2023</time>
       </td>
       </tr>
     </table>
@@ -170,6 +166,20 @@
 </details>
 
 <p>The playbook allows you to declare an issue sheet and document review information using frontmatter data.</p>
+<h2 id="document-status" tabindex="-1"><a class="header-anchor" href="#document-status">Document status</a></h2>
+<p>You can add a status to your document frontmatter to make it clear when an article isn’t fully complete.</p>
+<p>Set the status using this frontmatter attribute:</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">status</span><span class="token punctuation">:</span> FINAL</code></pre>
+<p>Our standard statuses are:</p>
+<ul>
+<li><strong>DRAFT</strong><br>
+The article is being written. Articles in <code>DRAFT</code> status will not be shown in related articles so you will need the URL to be able to view it.</li>
+<li><strong>REVIEW</strong><br>
+The article is open for review. Reviewers should use <a href="../github-issues">Github Issues</a> to request changes.</li>
+<li><strong>FINAL</strong><br>
+The article has been approved and should be taken as authorised NHSBSA guidance.<br>
+We display article status alongside the title except for <code>FINAL</code>.</li>
+</ul>
 <h2 id="issue-sheet" tabindex="-1"><a class="header-anchor" href="#issue-sheet">Issue sheet</a></h2>
 <p>The issue sheet provides information such as author, approver etc and complies with the <a href="https://nhsbsauk.sharepoint.com/sites/Governance/SitePages/Document-Management-and-Control.aspx?OR=Teams-HL&amp;CT=1646726354655&amp;params=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjAyMDcwMTgxMCJ9" target="_blank" rel="noopener">NHSBSA document control standard</a>.</p>
 <p>By example the issue sheet on this document is configured as:</p>
@@ -274,7 +284,7 @@
 </tbody>
 </table>
 
-      <h2 class="nhsuk-heading-l">Improve the playbook</h2>
+      <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
         please share your suggestions.</p>
 
@@ -296,13 +306,13 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-06-29T10:57:35.264Z">29 June 2022</time>
+            Published <time datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-24T00:00:00.000Z">24 June 2022</time>
           </p>
           <p>
-            Next review due <time datetime="2023-06-24T00:00:00.000+00:00">24 June 2023</time>
+            Next review due <time datetime="2023-06-24T00:00:00.000Z">24 June 2023</time>
           </p>
       </div>
   </div>

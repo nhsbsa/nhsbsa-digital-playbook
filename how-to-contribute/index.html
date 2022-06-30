@@ -69,10 +69,6 @@
         <main class="nhsuk-main-wrapper " id="main-content" role="main">
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
-      <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-      <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#information-architecture">Information architecture</a><ol><li><a href="#home-content">Home content</a></li><li><a href="#section-content">Section content</a></li><li><a href="#additional-content">Additional content</a></li></ol></li><li><a href="#writing-an-article-file">Writing an article file</a><ol><li><a href="#content">Content</a></li><li><a href="#linking-to-related-articles">Linking to related articles</a></li><li><a href="#using-tags-and-order">Using tags and order</a></li></ol></li><li><a href="#tips">Tips</a><ol><li><a href="#adopt-clear-file-names">Adopt clear file names</a></li><li><a href="#use-directories-to-organise-the-articles">Use directories to organise the articles</a></li><li><a href="#use-headings-to-structure-content">Use headings to structure content</a></li></ol></li><li><a href="#references">References</a></li></ol>
-      </div>
     </div>
 
     <div class="nhsbsa-article-content">
@@ -92,106 +88,8 @@
       </div>
       
 
-<h2 id="information-architecture" tabindex="-1"><a class="header-anchor" href="#information-architecture">Information architecture</a></h2>
-<p>We have a Miro board that describes the intended structure for the Playbook.</p>
-<p>We generally have three levels in our heirarchy:</p>
-<ul>
-<li>Home</li>
-<li>Section</li>
-<li>Additional detail</li>
-</ul>
-<h3 id="home-content" tabindex="-1"><a class="header-anchor" href="#home-content">Home content</a></h3>
-<p>The home page displays a list of articles that are jumping off points into different sections. These include</p>
-<ul>
-<li><em>Role based content</em>
-<ul>
-<li>Delivery (including agile)</li>
-<li>Content Design</li>
-<li>Research</li>
-<li>Design</li>
-<li>Architecture</li>
-<li>Development</li>
-<li>Test</li>
-<li>Platform</li>
-<li>Support</li>
-</ul>
-</li>
-<li><em>People and ways of working content including</em>
-<ul>
-<li>Communities</li>
-<li>Our people</li>
-<li>Admin</li>
-<li>Meetings</li>
-</ul>
-</li>
-</ul>
-<h3 id="section-content" tabindex="-1"><a class="header-anchor" href="#section-content">Section content</a></h3>
-<p>Each section will contain further articles related to a section heading.</p>
-<h3 id="additional-content" tabindex="-1"><a class="header-anchor" href="#additional-content">Additional content</a></h3>
-<p>For more extensive and detailed content we may link from section articles into further specialist articles.</p>
-<p>For instance the <em>Developer/testing</em> section article links to articles about <em>writing clean tests</em>, or <em>writing integration tests</em>.</p>
-<h2 id="writing-an-article-file" tabindex="-1"><a class="header-anchor" href="#writing-an-article-file">Writing an article file</a></h2>
-<ul>
-<li>
-<p>Create a new file <em>somewhere</em> under the <code>/src</code> directory. Name it with a <code>.md</code> file extension.</p>
-<p>e.g. <code>my-article.md</code></p>
-</li>
-<li>
-<p>Add this standard snippet of text at the top</p>
-</li>
-</ul>
-<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span><br><span class="token key atrule">layout</span><span class="token punctuation">:</span> article<br><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Your title here"</span><br><span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Your description here"</span><br><span class="token key atrule">tags</span><span class="token punctuation">:</span> your<span class="token punctuation">-</span>tag<span class="token punctuation">-</span>here<br><span class="token key atrule">order</span><span class="token punctuation">:</span> numeric<span class="token punctuation">-</span>order<br><span class="token punctuation">---</span></code></pre>
-<ul>
-<li>
-<p>Amend the [frontmatter][11ty_frontmatter] with the correct <code>title</code>, <code>description</code>, <code>tags</code> and <code>order</code>.<br>
-<code>tags</code> and <code>order</code> control where this article will appear as related articles elsewhere in the site. This is covered later in this how-to.</p>
-</li>
-<li>
-<p>Write your content</p>
-</li>
-</ul>
-<h3 id="content" tabindex="-1"><a class="header-anchor" href="#content">Content</a></h3>
-<p>Content should come after the last <code>---</code> in the front matter and use <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> syntax.</p>
-<p>Content is usually written in plain text using Markdown to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
-<ul>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-</ul>
-<h3 id="linking-to-related-articles" tabindex="-1"><a class="header-anchor" href="#linking-to-related-articles">Linking to related articles</a></h3>
-<p>You <em>can</em> link to other articles just by using the <a href="https://commonmark.org/help/tutorial/07-links.html" target="_blank" rel="noopener">Markdown links</a> syntax in your prose.</p>
-<p>You can also display a group of related articles, by adding a ‘related’ attribute to your front matter:</p>
-<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">related</span><span class="token punctuation">:</span><br>  <span class="token key atrule">tag</span><span class="token punctuation">:</span> another<span class="token punctuation">-</span>tag</code></pre>
-<p>In this example, we will display all articles that have the tag, <code>another-tag</code>. If you look at the bottom of this article, you can see how rfelated articles appear.</p>
-<h3 id="using-tags-and-order" tabindex="-1"><a class="header-anchor" href="#using-tags-and-order">Using tags and order</a></h3>
-<ul>
-<li>
-<p><strong>Tags</strong><br>
-The <code>tags</code> attribute should be defined if you want the file to appear in ‘related’ articles. For articles to appear on the homepage, use <code>home</code>.</p>
-</li>
-<li>
-<p><strong>Order</strong><br>
-The numeric <code>order</code> attribute should be defined to control where this article appears amongst others with the same tag… Low values come first.</p>
-</li>
-<li>
-<p><strong>Multiple tags</strong><br>
-You can define multiple tags using this syntax so that the file appears in multiple collections.</p>
-</li>
-</ul>
-<pre class="language-markdown"><code class="language-markdown">tags: [home, dev]</code></pre>
-<p>Sometimes you may want to apply a different order in the different collections however. In this case you should use this syntax:</p>
-<pre class="language-markdown"><code class="language-markdown">order:<br>    home: 1<br>    dev: 100</code></pre>
-<h2 id="tips" tabindex="-1"><a class="header-anchor" href="#tips">Tips</a></h2>
-<h3 id="adopt-clear-file-names" tabindex="-1"><a class="header-anchor" href="#adopt-clear-file-names">Adopt clear file names</a></h3>
-<p>Directory and File names are reflected in the final URL in the playbook so choose something that will read well.</p>
-<p>Use all lower case with dashes to separate words.</p>
-<h3 id="use-directories-to-organise-the-articles" tabindex="-1"><a class="header-anchor" href="#use-directories-to-organise-the-articles">Use directories to organise the articles</a></h3>
-<p>Directories aren’t specifically needed, but they make it easier for playbook authors to organise the information.</p>
-<h3 id="use-headings-to-structure-content" tabindex="-1"><a class="header-anchor" href="#use-headings-to-structure-content">Use headings to structure content</a></h3>
-<p>[Headings][commonmark_tutorial_headings] will display in the navigable <em>table of contents</em> and can be bookmarked by our users.</p>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
-<ul>
-<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
-<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
-</ul>
+<p>Instructions on building and running the playbook locally can be found on the <a href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">repository homepage</a>.</p>
+<p>For more detail on how to contribute to the playbook, read these articles:</p>
       
 	<ul class="nhsuk-grid-row nhsuk-card-group">
 		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -199,18 +97,12 @@ You can define multiple tags using this syntax so that the file appears in multi
 				<div class="nhsuk-card__content">
 					<div class="nhsuk-card__header">
 						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/document-control/">
-								Document control
-							</a>
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/github-issues/">Suggest a change</a>
 						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
+						
 					</div>
-					
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-29T10:57:35.264Z">29 June 2022</time>	
+					<p class="nhsuk-card__description">Use Github issues to suggest and manage change</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>	
 				</div>
 			</div>
 		</li>
@@ -219,21 +111,60 @@ You can define multiple tags using this syntax so that the file appears in multi
 				<div class="nhsuk-card__content">
 					<div class="nhsuk-card__header">
 						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/playbook-technologies/">
-								Technologies used in the playbook
-							</a>
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/information-architecture/">Information architecture</a>
 						</h2>
 						
 					</div>
-					
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-29T10:57:35.264Z">29 June 2022</time>	
+					<p class="nhsuk-card__description">Organise the playbook content into sections</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/writing-an-article/">Writing an article</a>
+						</h2>
+						
+					</div>
+					<p class="nhsuk-card__description">Step by step instructions on how to write a playbook article</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/document-control/">Document control</a>
+						</h2>
+						
+					</div>
+					<p class="nhsuk-card__description">Add useful information so your readers can see what’s changed</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/how-to-contribute/playbook-technologies/">Technologies used in the playbook</a>
+						</h2>
+						
+					</div>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>	
 				</div>
 			</div>
 		</li>
 	</ul>
 
 
-      <h2 class="nhsuk-heading-l">Improve the playbook</h2>
+      <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
         please share your suggestions.</p>
 
@@ -255,7 +186,7 @@ You can define multiple tags using this syntax so that the file appears in multi
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-06-29T10:57:35.264Z">29 June 2022</time>
+            Published <time datetime="2022-06-30T11:12:59.415Z">30 June 2022</time>
           </p>
       </div>
   </div>
