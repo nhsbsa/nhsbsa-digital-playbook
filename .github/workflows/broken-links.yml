@@ -1,8 +1,9 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0'
 
-name: Check markdown links
+name: Check broken links
 jobs:
   my-broken-link-checker:
     name: Check broken links
