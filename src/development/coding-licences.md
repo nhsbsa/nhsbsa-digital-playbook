@@ -74,8 +74,8 @@ Add licence information to the project descriptors.
 
 We use Open Government Licence v3 for our published content. User interfaces need a link to the [OGL V3 licence agreement][licence_ogl3] in the footer.
 
+[nhsbsa_licence_apache2]: <https://gitlab.com/nhsbsa/Libraries/nhsbsa-standard-files/-/blob/main/LICENCE.txt>
 [gov_service_manual_licence]: <https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable#licensing-your-code>
-[licence_apache2]: <https://www.apache.org/licenses/LICENSE-2.0>
 [licence_ogl3]: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>
 [licence_spdx]: <https://spdx.org/licenses/>
 [licence_spdx_apache2]: <https://spdx.org/licenses/Apache-2.0.html>

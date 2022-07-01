@@ -1,14 +1,12 @@
 ---
 layout: article
-title: "Documentation for developers"
+title: "Standard code repository files"
 tags: dev
 order: 12
 related:
   tag: dev_docs
 ---
-## Repository documentation
-
-We need a minimum level of documentation for all our project repositories. A [standard set of default documents][nhsbsa_standard_repository_documents] are available to copy.
+We need a minimum level of documentation for all our project repositories. A [standard set of file][nhsbsa_standard_repository_documents] are available to copy.
 
 ### Mandatory files
 
@@ -30,7 +28,7 @@ How to report security issues.
 * __CHANGELOG.md__
   Describes the changes made in each version.
 
-[nhsbsa_standard_repository_documents]: <https://dps-gitlab.service.nhsbsa/nhsbsa-libs/bsa-os-prototype>
+[nhsbsa_standard_repository_documents]: <https://gitlab.com/nhsbsa/Libraries/nhsbsa-standard-files>
 [contributor_covenant_coc]: <https://www.contributor-covenant.org/version/2/1/code_of_conduct/>
 [licence_apache2]: <https://www.apache.org/licenses/LICENSE-2.0>
 [licence_ogl3]: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>

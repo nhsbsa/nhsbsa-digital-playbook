@@ -72,4 +72,4 @@ Note that we're don't write all the tests upfront. You may find it practical to 
 
 * [NHSBSA Anonymisation and Pseudonymisation standard][nhsbsa_anonymisation_and_pseudonymisation_standard]
 
-[nhsbsa_anonymisation_and_pseudonymisation_standard]: </standards/NHSBSA_Anonymisation_and_Pseudonymisation_Standardv3.docx>
+[nhsbsa_anonymisation_and_pseudonymisation_standard]: <https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&web=1&e=SPLOtZ>

@@ -11,7 +11,7 @@
     <table>
       <tr>
       <th>Document location</th>
-      <td><a href="{{ params.url }}">{{ params.url }}</a></td>
+      <td><a href="{{ params.url | url }}">{{ params.url | url }}</a></td>
       </tr>
     {% if issuesheet.reference %}
       <tr>
