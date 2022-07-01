@@ -22,7 +22,7 @@ The home page displays a list of articles that are jumping off points into diffe
   * [Design](../../design)
   * Architecture
   * [Development](../../development)
-  * [Test](../../test)
+  * [Testing](../../testing)
   * Platform
   * Support
 * _People and ways of working_

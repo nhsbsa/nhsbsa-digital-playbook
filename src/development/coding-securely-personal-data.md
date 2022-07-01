@@ -183,7 +183,7 @@ Considerations:
 
 Personal Data must be removed according to the service's data retention schedule.
 
-See the BSA Data Retention Schedule here: <https://www.nhsbsa.nhs.uk/sites/default/files/2018-06/NHSBSARM012%20Retention%20Schedule_0.xls>
+See the NHSBSA records management retention schedule here: <https://www.nhsbsa.nhs.uk/our-policies/policies-and-procedures>
 
 Considerations:
 
