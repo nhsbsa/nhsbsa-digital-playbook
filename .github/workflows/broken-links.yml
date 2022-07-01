@@ -1,0 +1,15 @@
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+name: Check markdown links
+jobs:
+  my-broken-link-checker:
+    name: Check broken links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://nhsbsa.github.io/nhsbsa-digital-playbook/
+          cmd_params: "--exclude='(assets.nhs.uk/$|#|nhsbsauk.sharepoint.com|www.baeldung.com)' --buffer-size=8192 --max-connections=20 --color=always --skip-tls-verification --header='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0' --timeout=20"
