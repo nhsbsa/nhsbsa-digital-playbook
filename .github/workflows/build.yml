@@ -1,6 +1,6 @@
-name: Build Eleventy
+name: Build static site, deploy, check links
 
-on: push
+on: workflow_dispatch
 
 jobs:
   build:
@@ -38,3 +38,14 @@ jobs:
           publish_dir: ./_site
           publish_branch: netlify
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - uses: yantantether/muffet-action@main
+        if: contains(github.ref, 'main')
+        with:
+          url: "https://nhsbsa.github.io/nhsbsa-digital-playbook"
+          buffer_size: 8192
+          exclude: "assets.nhs.uk/$ nhsbsauk.sharepoint.com www.baeldung.com docs.aws.amazon.com/ec2 www.pluralsight.com dps-gitlab.service.nhsbsa #"
+          max_connections: 20
+          timeout: 30
+          header: "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0"
+
