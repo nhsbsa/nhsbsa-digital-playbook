@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
         <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
         <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#1.-author-creates-branch">1. Author creates Branch</a></li><li><a href="#2.-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a><ol><li><a href="#guidelines-for-code-changes">Guidelines for code changes</a></li></ol></li><li><a href="#3%3A-author-creates%2Fassigns-merge-request-for-review">3: Author creates/assigns Merge Request for review</a><ol><li><a href="#guidelines-for-merge-requests">Guidelines for merge requests</a></li></ol></li><li><a href="#4.-reviewer-reviews-code">4. Reviewer reviews code</a><ol><li><a href="#when-reviewing">When reviewing</a></li><li><a href="#guidelines-for-reviewing-code-quality">Guidelines for reviewing code quality</a></li></ol></li><li><a href="#5.-reviewer-add-(or-un-resolve)-comment">5. Reviewer add (or un-resolve) comment</a><ol><li><a href="#guidelines-for-comments">Guidelines for comments</a></li></ol></li><li><a href="#6.-author-reviews-comments">6. Author reviews comments</a></li><li><a href="#7.-reviewer-approves-code">7. Reviewer approves code</a></li><li><a href="#8.-merge-code">8. Merge code</a></li></ol>
+        <ol><li><a href="#1-author-creates-branch">1. Author creates Branch</a></li><li><a href="#2-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a><ol><li><a href="#guidelines-for-code-changes">Guidelines for code changes</a></li></ol></li><li><a href="#3-author-creates/assigns-merge-request-for-review">3: Author creates/assigns Merge Request for review</a><ol><li><a href="#guidelines-for-merge-requests">Guidelines for merge requests</a></li></ol></li><li><a href="#4-reviewer-reviews-code">4. Reviewer reviews code</a><ol><li><a href="#when-reviewing">When reviewing</a></li><li><a href="#guidelines-for-reviewing-code-quality">Guidelines for reviewing code quality</a></li></ol></li><li><a href="#5-reviewer-add-or-un-resolve-comment">5. Reviewer add (or un-resolve) comment</a><ol><li><a href="#guidelines-for-comments">Guidelines for comments</a></li></ol></li><li><a href="#6-author-reviews-comments">6. Author reviews comments</a></li><li><a href="#7-reviewer-approves-code">7. Reviewer approves code</a></li><li><a href="#8-merge-code">8. Merge code</a></li></ol>
       </div>
     </div>
 
@@ -98,7 +98,7 @@
 </blockquote>
 <p>The high level process is:</p>
 <p><img src="../images/code-review-process.png" alt="Code review process showing swimlanes for author and reviewer"></p>
-<h2 id="1.-author-creates-branch" tabindex="-1"><a class="header-anchor" href="#1.-author-creates-branch">1. Author creates Branch</a></h2>
+<h2 id="1-author-creates-branch" tabindex="-1"><a class="header-anchor" href="#1-author-creates-branch">1. Author creates Branch</a></h2>
 <p>All new code should be committed on a branch from the mainline production code (main).</p>
 <p>Development branches should follow the <a href="../coding-naming-conventions">naming convention</a>:</p>
 <blockquote>
@@ -108,7 +108,7 @@
 <blockquote>
 <p><code>feature/LISD-1782-private-pension-order-fix</code></p>
 </blockquote>
-<h2 id="2.-author-commits-new-code-and-pushes-branch" tabindex="-1"><a class="header-anchor" href="#2.-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a></h2>
+<h2 id="2-author-commits-new-code-and-pushes-branch" tabindex="-1"><a class="header-anchor" href="#2-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a></h2>
 <p>All changes for the ticket should be committed against the development branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.</p>
 <p>Branches should be pushed to gitlab no less than daily to ensure safe-keeping of the code.</p>
 <h3 id="guidelines-for-code-changes" tabindex="-1"><a class="header-anchor" href="#guidelines-for-code-changes">Guidelines for code changes</a></h3>
@@ -128,7 +128,7 @@ Squashing commits may allow you to remove unwanted changes<br>
 Gitlab allows commits to be squashed on merge<br>
 Forced pushes also make it difficult for your reviewer to collaborate</li>
 </ul>
-<h2 id="3%3A-author-creates%2Fassigns-merge-request-for-review" tabindex="-1"><a class="header-anchor" href="#3%3A-author-creates%2Fassigns-merge-request-for-review">3: Author creates/assigns Merge Request for review</a></h2>
+<h2 id="3-author-creates/assigns-merge-request-for-review" tabindex="-1"><a class="header-anchor" href="#3-author-creates/assigns-merge-request-for-review">3: Author creates/assigns Merge Request for review</a></h2>
 <p>A Merge Request (MR) should be created in Gitlab and either:</p>
 <ul>
 <li>assign to a different person for code review<br>
@@ -150,7 +150,7 @@ Sometimes code gains merge conflicts after the request is made. The Reviewer sho
 <li><strong>Communicate</strong><br>
 Let your reviewers know that the MR is waiting and seek acknowledgement.</li>
 </ul>
-<h2 id="4.-reviewer-reviews-code" tabindex="-1"><a class="header-anchor" href="#4.-reviewer-reviews-code">4. Reviewer reviews code</a></h2>
+<h2 id="4-reviewer-reviews-code" tabindex="-1"><a class="header-anchor" href="#4-reviewer-reviews-code">4. Reviewer reviews code</a></h2>
 <blockquote>
 <p><strong>NB: Reviewers should never sit on an active merge request without talking to the author.<br>
 If you are unable to review, seek approval to defer from the Author. The MR can then be re-assigned to another Reviewer or a deferral deadline agreed.</strong></p>
@@ -188,7 +188,7 @@ Its fine to write, commit and push new tests to illustrate a bug</li>
 Talk to the Author<br>
 There is often a fine line between coding style and good practice - have a chat with the Author over more complex issues.</li>
 </ul>
-<h2 id="5.-reviewer-add-(or-un-resolve)-comment" tabindex="-1"><a class="header-anchor" href="#5.-reviewer-add-(or-un-resolve)-comment">5. Reviewer add (or un-resolve) comment</a></h2>
+<h2 id="5-reviewer-add-or-un-resolve-comment" tabindex="-1"><a class="header-anchor" href="#5-reviewer-add-or-un-resolve-comment">5. Reviewer add (or un-resolve) comment</a></h2>
 <p>For <em>any</em> issues you find, add a descriptive comment in Gitlab. You will probably talk to the author about the contentious issues, but leave a comment regardless. Code review comments in Gitlab act as an issue tracker: If you don’t leave a comment there is a chance the issue will be forgotten.</p>
 <p>Optionally mark the MR as WIP to clarify that the MR won’t be merged until discussions resolved.</p>
 <h3 id="guidelines-for-comments" tabindex="-1"><a class="header-anchor" href="#guidelines-for-comments">Guidelines for comments</a></h3>
@@ -199,7 +199,7 @@ Direct the Author to any helpful resources, such as javadoc, reference docs or a
 <li><strong>Communicate</strong><br>
 Although the Author will receive an email from Gitlab, it is helpful to notify the Author in person or via IM for a speedy response</li>
 </ul>
-<h2 id="6.-author-reviews-comments" tabindex="-1"><a class="header-anchor" href="#6.-author-reviews-comments">6. Author reviews comments</a></h2>
+<h2 id="6-author-reviews-comments" tabindex="-1"><a class="header-anchor" href="#6-author-reviews-comments">6. Author reviews comments</a></h2>
 <p>Review the comments. If they are not clear, talk to the Reviewer.</p>
 <ul>
 <li><strong>Challenge Reviewer</strong><br>
@@ -211,7 +211,7 @@ If the reviewer had tagged the MR as WIP, remove the WIP status</li>
 <li><strong>Communicate</strong><br>
 Although the Reviewer will receive an email from Gitlab, it is helpful to notify the Reviewer in person or via IM for a speedy response</li>
 </ul>
-<h2 id="7.-reviewer-approves-code" tabindex="-1"><a class="header-anchor" href="#7.-reviewer-approves-code">7. Reviewer approves code</a></h2>
+<h2 id="7-reviewer-approves-code" tabindex="-1"><a class="header-anchor" href="#7-reviewer-approves-code">7. Reviewer approves code</a></h2>
 <p>The Reviewer should approve the code, only when all comments are resolved and they approve the change.</p>
 <blockquote>
 <p><strong>NB: Merged code is the shared responsibility of the Reviewer and the Author</strong></p>
@@ -220,7 +220,7 @@ Although the Reviewer will receive an email from Gitlab, it is helpful to notify
 <li><strong>Communicate</strong><br>
 Let the author know that you have approved. The ✅ emoji against the author’s Slack message is a quick way to let them know you’ve approved the change.</li>
 </ul>
-<h2 id="8.-merge-code" tabindex="-1"><a class="header-anchor" href="#8.-merge-code">8. Merge code</a></h2>
+<h2 id="8-merge-code" tabindex="-1"><a class="header-anchor" href="#8-merge-code">8. Merge code</a></h2>
 <p>The reviewer or author may merge approved code in the mainline branch.</p>
 <p>Note that Gitlab allows you to squash commits and to remove merged branches.</p>
 
@@ -246,7 +246,7 @@ Let the author know that you have approved. The ✅ emoji against the author’s
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-05T15:15:38.328Z">5 July 2022</time>
+            Published <time datetime="2022-07-06T08:19:48.131Z">6 July 2022</time>
           </p>
       </div>
   </div>
