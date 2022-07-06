@@ -145,7 +145,7 @@ The Reviewer should approve the code, only when all comments are resolved and th
 > __NB: Merged code is the shared responsibility of the Reviewer and the Author__
 
 * __Communicate__
-  Let the author know that you have approved. The ✅ emoji against the author's Slack message is a quick way to let them know you've approved the change.
+  Let the author know that you have approved. The :white_check_mark: emoji against the author's Slack message is a quick way to let them know you've approved the change.
 
 ## 8. Merge code
 

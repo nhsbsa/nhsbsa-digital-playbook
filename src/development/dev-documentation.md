@@ -6,7 +6,9 @@ order: 12
 related:
   tag: dev_docs
 ---
-We need a minimum level of documentation for all our project repositories. A [standard set of file][nhsbsa_standard_repository_documents] are available to copy.
+We need a minimum level of documentation for all our project repositories. 
+
+A [standard set of file][nhsbsa_standard_repository_documents] are available to copy.
 
 ### Mandatory files
 

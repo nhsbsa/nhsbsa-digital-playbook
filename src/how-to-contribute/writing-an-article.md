@@ -7,7 +7,7 @@ order: 4
 ---
 To write a new article:
 
-* Create a new file in a subdirectory of the `/src` folder. 
+* Create a new file in a subdirectory of the `/src` folder.
   Read about our [information architecture](../information-architecture) to decide which subdirectory to use.
   Name the file with a `.md` file extension.
 
@@ -116,4 +116,5 @@ Directories aren't specifically needed, but they make it easier for playbook aut
 [commonmark]: <https://spec.commonmark.org/0.30/>
 [commonmark_tutorial]: <https://commonmark.org/help/tutorial/>
 [commonmark_tutorial_links]: <https://commonmark.org/help/tutorial/07-links.html>
+[commonmark_tutorial_headings]: <https://commonmark.org/help/tutorial/04-headings.html>
 [11ty_frontmatter]: <https://www.11ty.dev/docs/data-frontmatter/>
