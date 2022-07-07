@@ -1,0 +1,101 @@
+.warning .admonition-title {
+    background-color: $color_nhsuk-yellow;
+}
+.note .admonition-title {
+    background-color: $color_nhsuk-blue;
+    color: white;
+}
+
+
+/* ==========================================================================
+   COMPONENTS / #WARNING-CALLOUT
+   ========================================================================== */
+/**
+ * 1. Uses @mixin panel-with-label from tools/_mixins.
+ * 2. Uses @mixin heading-label from tools/_mixins.
+ */
+ .admonition {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 24px;
+    padding-top: 0 !important;
+    color: #212b32;
+    /* stylelint-disable-line declaration-no-important */
+    /* [1] */
+    &.warning {
+        background-color: $color_nhsuk-pale-yellow;
+        border: 1px solid $color_nhsuk-yellow;    
+    }
+    &.note {
+        background-color: $color_nhsuk-grey-4;
+        border: 1px solid $color_nhsuk-blue;    
+    }
+  }
+  .admonition > *:first-child {
+    margin-top: 0;
+  }
+  .admonition > *:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 40.0625em) {
+    .admonition {
+      margin-bottom: 48px;
+    }
+  }
+  @media (min-width: 40.0625em) {
+    .admonition {
+      margin-top: 48px;
+    }
+  }
+  @media (min-width: 40.0625em) {
+    .admonition {
+      padding: 32px;
+    }
+  }
+  @media print {
+    .admonition {
+      border: 1px solid #212b32;
+      page-break-inside: avoid;
+    }
+  }
+  
+  .admonition-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    display: inline-block;
+    margin: 0 0 8px -33px;
+    padding: 8px 32px;
+    position: relative;
+    top: -16px;
+    color: #212b32;
+    /* [2] */
+  }
+  @media (min-width: 40.0625em) {
+    .admonition-title {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.33333;
+    }
+  }
+  @media print {
+    .admonition-title {
+      font-size: 18pt;
+      line-height: 1.15;
+    }
+  }
+  @media (max-width: 40.0525em) {
+    .admonition-title {
+      margin-left: -25px;
+      margin-right: 0;
+      padding: 8px 24px;
+      top: -8px;
+    }
+  }
+  @media print {
+    .admonition-title {
+      background: none;
+      color: #212b32;
+      top: 0;
+    }
+  }

@@ -7,7 +7,7 @@ order:
 ---
 Everything we produce or use, whether open or closed, should have an appropriate licence applied (as indicated by the [service manual][gov_service_manual_licence]). Without a licence, others (even within the NHSBSA) have no way of knowing for sure if they can use it, or how.
 
-At the NHSBSA, we use the [Apache 2 License][licence_apache2].
+At the NHSBSA, we use the [Apache 2 License][nhsbsa_licence_apache2].
 
 ## Applying the Apache 2 License to our work
 

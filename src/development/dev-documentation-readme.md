@@ -38,4 +38,4 @@ Use the [NHSBSA template for READMEs][nhsbsa_readme].
 
 Test your README instructions before you publish to make sure users can follow your documentation. Ask a member of your team to try the instructions and make sure they work
 
-[nhsbsa_readme]: <https://dps-gitlab.service.nhsbsa/nhsbsa-libs/bsa-os-prototype/-/blob/feature/open-source-default-docs/README.md>
+[nhsbsa_readme]: <https://gitlab.com/nhsbsa/Libraries/nhsbsa-standard-files/-/blob/main/README.md>

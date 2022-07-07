@@ -15,6 +15,11 @@ a.header-anchor {
   text-decoration: none;
 }
 
+blockquote {
+	@extend .nhsuk-inset-text;
+	max-width: calc(100% - 80px);
+}
+
 .nhsbsa-details__summary-heading {
 	margin-bottom: 0px;
 	margin-top: 0px;
