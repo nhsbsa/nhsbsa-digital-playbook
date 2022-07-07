@@ -119,8 +119,8 @@
         <tr>
         <td>{{ revision.version | blank }}</td>
         <td>
-          {% if revision.review_date %}
-          <time datetime="{{ revision.review_date | date }}">{{ revision.date | date("d LLLL y") }}</time>
+          {% if revision.date %}
+          <time datetime="{{ revision.date | date }}">{{ revision.date | date("d LLLL y") }}</time>
           {% else %}
           -
           {% endif %}
