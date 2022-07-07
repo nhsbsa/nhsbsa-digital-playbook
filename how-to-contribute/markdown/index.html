@@ -12,7 +12,7 @@
     
     
     
-    <title>Style guides  - NHSBSA
+    <title>Markdown  - NHSBSA
 </title>
 
     
@@ -37,8 +37,8 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Style guides">
-<meta property="og:description" name="description" content="Setup formatting rules in your IDE right from the start"><meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:title" content="Markdown">
+<meta property="og:description" name="description" content="How to enhance your documents with effective Markdown"><meta property="og:image" content="/images/opengraph-image.png">
     
     
     <meta property="og:image" content="/assets/images/open-graph.png">
@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
         <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
         <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#google-style-guides">Google style guides</a><ol><li><a href="#ide-support">IDE support</a></li></ol></li><li><a href="#nhsbsa-style-guides">NHSBSA style guides</a></li><li><a href="#references">References</a></li></ol>
+        <ol><li><a href="#abbreviations">Abbreviations</a></li><li><a href="#admonition">Admonition</a></li><li><a href="#code-tabs">Code tabs</a></li><li><a href="#highlight">Highlight</a></li><li><a href="#supertext-and-subtext">Supertext and subtext</a></li><li><a href="#tables">Tables</a></li><li><a href="#emojis">Emojis</a></li></ol>
       </div>
     </div>
 
@@ -86,37 +86,92 @@
       
       <div class="nhsbsa-article-header">
         <h1 class="nhsuk-heading-xl">
-          Style guides
+          Markdown
         </h1>
         
       </div>
       
 
-<p>All code should adopt the language specific style guide linked here. However, consistent code style within a repository codebase is preferable to piecemeal adoption of a standard. If your project has not yet adopted a standard style, reserve some <em>technical debt</em> time to apply the style across all the codebase in one pass.</p>
-<h2 id="google-style-guides" tabindex="-1"><a class="header-anchor" href="#google-style-guides">Google style guides</a></h2>
-<p>These languages adopt Google Style Guides</p>
+<p>This guide shows you some playbook specific tips. For general guidance on Markdown consult these references:</p>
 <ul>
-<li><strong>HTML/CSS</strong> <a href="https://google.github.io/styleguide/htmlcssguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/htmlcssguide.html</a>&gt;</li>
-<li><strong>Java</strong> <a href="https://google.github.io/styleguide/javaguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/javaguide.html</a></li>
-<li><strong>Javascript</strong> <a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/jsguide.html</a></li>
-<li><strong>Python</strong> <a href="https://google.github.io/styleguide/pyguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/pyguide.html</a></li>
-<li><strong>Shell (bash)</strong> <a href="https://google.github.io/styleguide/shell.xml" target="_blank" rel="noopener">https://google.github.io/styleguide/shell.xml</a></li>
-<li><strong>R</strong> <a href="https://google.github.io/styleguide/Rguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/Rguide.html</a></li>
-<li><strong>Ruby</strong> <a href="https://github.com/rubocop-hq/ruby-style-guide" target="_blank" rel="noopener">https://github.com/rubocop-hq/ruby-style-guide</a></li>
+<li><a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a></li>
+<li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
 </ul>
-<h3 id="ide-support" tabindex="-1"><a class="header-anchor" href="#ide-support">IDE support</a></h3>
-<p>Google also maintain a set of IDE configuration files to apply styles with minimal effort for a variety of IDEs.</p>
-<p>You can find these at the <a href="https://github.com/google/styleguide" target="_blank" rel="noopener">Google styleguide repository on Github</a></p>
-<h2 id="nhsbsa-style-guides" tabindex="-1"><a class="header-anchor" href="#nhsbsa-style-guides">NHSBSA style guides</a></h2>
-<p>These languages adopt NHSBSA internally defined Style Guides</p>
+<h2 id="abbreviations" tabindex="-1"><a class="header-anchor" href="#abbreviations">Abbreviations</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-abbr" target="_blank" rel="noopener">markdown-it-abbr</a> to render abbreviations.</p>
+<pre class="language-text"><code class="language-text">*[HTML]: Hyper Text Markup Language<br>*[W3C]:  World Wide Web Consortium<br>The HTML specification is maintained by the W3C.</code></pre>
+<p>renders as:</p>
+<blockquote>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+</blockquote>
+<h2 id="admonition" tabindex="-1"><a class="header-anchor" href="#admonition">Admonition</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-admonition" target="_blank" rel="noopener">markdown-it-admonition</a> to render callouts. We currently only support styling for <code>warning</code> to align with the <a href="https://service-manual.nhs.uk/design-system/components/warning-callout" target="_blank" rel="noopener">NHS warning callout</a> component</p>
+<pre class="language-md"><code class="language-md">!!! warning Warning title<br>warning detail text<br>!!!</code></pre>
+<p>renders as:</p>
+<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning title</p>
+<p>warning detail text</p>
+</div>
+</blockquote>
+<h2 id="code-tabs" tabindex="-1"><a class="header-anchor" href="#code-tabs">Code tabs</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-codetabs" target="_blank" rel="noopener">markdown-it-codetabs</a> to provide code snippets in multiple languages.</p>
+<pre class="language-text"><code class="language-text">    ```java [g1:Java]<br>    logger.info("Here is some data - {}", data);<br>    ```<br><br>    ```javascript [g1:Javascript]<br>    logger.log('info', 'Here is some data -  %s', data);<br>    ```</code></pre>
+<p>renders as:</p>
+<blockquote>
+<div class="code-tabs">
 <ul>
-<li><strong>Shell (korn)</strong> TODO by Applications Operations team</li>
-<li><strong>PL/SQL</strong> <a href="https://bsa2468.atlassian.net/wiki/spaces/IHP/pages/44704932/PLSQL+Coding+Standards" target="_blank" rel="noopener">https://bsa2468.atlassian.net/wiki/spaces/IHP/pages/44704932/PLSQL+Coding+Standards</a></li>
+<li><input type="radio" name="label-group-61" checked><label for="group-61-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-61"><label for="group-61-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<input type="radio" id="group-61-tab-0" name="group-61" checked>
+<pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - {}"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<input type="radio" id="group-61-tab-1" name="group-61">
+<pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data -  %s'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div></blockquote>
+<h2 id="highlight" tabindex="-1"><a class="header-anchor" href="#highlight">Highlight</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-mark" target="_blank" rel="noopener">markdown-it-mark</a> to provided highlight of text.</p>
+<pre class="language-text"><code class="language-text">==highlighted==</code></pre>
+<p>renders as:</p>
+<blockquote>
+<p><mark>highlighted</mark></p>
+</blockquote>
+<h2 id="supertext-and-subtext" tabindex="-1"><a class="header-anchor" href="#supertext-and-subtext">Supertext and subtext</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-sub" target="_blank" rel="noopener">markdown-it-sub</a> and <a href="https://www.npmjs.com/package/markdown-it-sup" target="_blank" rel="noopener">markdown-it-sup</a> to provide super-text and sub-text</p>
+<pre class="language-text"><code class="language-text">H~2~0<br>29^th^</code></pre>
+<p>renders as:</p>
+<blockquote>
+<p>H<sub>2</sub>0<br>
+29<sup>th</sup></p>
+</blockquote>
+<h2 id="tables" tabindex="-1"><a class="header-anchor" href="#tables">Tables</a></h2>
+<p>We use a <a href="https://github.com/redbug312/markdown-it-multimd-table" target="_blank" rel="noopener">MultiMarkdown</a> table syntax to enhance rendering of tables.</p>
+<p>This provides:</p>
 <ul>
-<li><a href="https://github.com/google/styleguide" target="_blank" rel="noopener">Google styleguide repository on Github</a></li>
+<li>Cell spans over columns</li>
+<li>Cell spans over rows</li>
+<li>Divide rows into sections</li>
+<li>Multiple table headers</li>
+<li>Table caption</li>
+<li>Block-level elements such as lists, codes…</li>
+<li>Omitted table header</li>
 </ul>
+<h2 id="emojis" tabindex="-1"><a class="header-anchor" href="#emojis">Emojis</a></h2>
+<p>We use the <a href="https://www.npmjs.com/package/markdown-it-emoji" target="_blank" rel="noopener">markdown-it-emoji</a> extension to render github supported emojis.</p>
+<p>Here are some useful examples:</p>
+<ul>
+<li>✅ <code>:white_check_mark:</code></li>
+<li>❌ <code>:x:</code></li>
+<li>❓ <code>:question:</code></li>
+<li>👍 <code>:+1:</code></li>
+<li>💯 <code>:100:</code></li>
+<li>🔧 <code>:wrench:</code></li>
+<li>🌱 <code>:seedling:</code></li>
+<li>📝 <code>:memo:</code></li>
+<li>⚠️ <code>:warning:</code></li>
+<li>⛔ <code>:no_entry:</code></li>
+</ul>
+<p>A complete list can be <a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md" target="_blank" rel="noopener">found here</a></p>
 
       <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
@@ -126,7 +181,7 @@
       Github is an open forum where we collect feedback.</p>
       
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/issues/new?template=playbook-proposal.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-style-guide&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/issues/new?template=playbook-proposal.md&amp;title=Change%20to%20page%20&#39;%2Fhow-to-contribute%2Fmarkdown&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
