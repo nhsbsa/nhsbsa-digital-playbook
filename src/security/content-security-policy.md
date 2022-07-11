@@ -36,6 +36,16 @@ If you want to learn how CSP works, check out:
 * [Google’s guidance on CSP][csp_with_google]
 * [OWASP CSP Cheat sheet][owasp_cheat_sheet_csp]
 
+!!! warning Consult a security expert
+The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.
+
+* Consult a security expert before applying values
+* Follow a sensible route to live where changes are tested in a pre-production environment
+* Thoroughly test your application against your expected devices
+
+Readers should be careful when copying and pasting code from any website, this site included. NHS Business Services Authority, its employees and its representatives accept no liability for damage caused by the misuse, either intentional or unintentional, of the information presented in its articles.
+!!!
+
 ## CSP Header
 
 Sending the standard `Content-Security-Policy` header as well as earlier `X-Content-Security-Policy` or `X-Webkit-CSP` headers causes unexpected behaviours on some browsers. Avoid using the deprecated `X-*` headers.
