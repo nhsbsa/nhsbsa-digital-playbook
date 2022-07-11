@@ -49,6 +49,7 @@ jobs:
           exclude: "assets.nhs.uk/$ nhsbsauk.sharepoint.com www.baeldung.com docs.aws.amazon.com/ec2 www.pluralsight.com dps-gitlab.service.nhsbsa nhsbsa-digital-playbook/issues/new"
           max_connections: 20
           max-connections-per-host: 2
+          rate-limit: 5
           timeout: 30
           header: "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0"
 
