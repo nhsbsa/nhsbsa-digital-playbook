@@ -71,7 +71,7 @@
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
         <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
         <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#abbreviations">Abbreviations</a></li><li><a href="#admonition">Admonition</a></li><li><a href="#code-tabs">Code tabs</a></li><li><a href="#highlight">Highlight</a></li><li><a href="#supertext-and-subtext">Supertext and subtext</a></li><li><a href="#tables">Tables</a></li><li><a href="#emojis">Emojis</a></li></ol>
+        <ol><li><a href="#abbreviations">Abbreviations</a></li><li><a href="#admonition">Admonition</a></li><li><a href="#code-tabs">Code tabs</a></li><li><a href="#definition-list">Definition list</a></li><li><a href="#highlight">Highlight</a></li><li><a href="#supertext-and-subtext">Supertext and subtext</a></li><li><a href="#tables">Tables</a></li><li><a href="#emojis">Emojis</a></li></ol>
       </div>
     </div>
 
@@ -129,6 +129,19 @@
 <input type="radio" id="group-61-tab-1" name="group-61">
 <pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data -  %s'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div></blockquote>
+<h2 id="definition-list" tabindex="-1"><a class="header-anchor" href="#definition-list">Definition list</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-deflist" target="_blank" rel="noopener">markdown-it-deflist</a> to provide definition lists, styled to match the <a href="https://service-manual.nhs.uk/design-system/components/summary-list" target="_blank" rel="noopener">NHS Summary list</a> component.</p>
+<pre class="language-text"><code class="language-text">Term 1<br>: Definition one including `nested markdown`<br>and multi line content<br><br>Term 2<br>: Definition two<br></code></pre>
+<p>renders as:</p>
+<blockquote>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition one including <code>nested markdown</code><br>
+and multi line content</dd>
+<dt>Term 2</dt>
+<dd>Definition two</dd>
+</dl>
+</blockquote>
 <h2 id="highlight" tabindex="-1"><a class="header-anchor" href="#highlight">Highlight</a></h2>
 <p>We use <a href="https://www.npmjs.com/package/markdown-it-mark" target="_blank" rel="noopener">markdown-it-mark</a> to provided highlight of text.</p>
 <pre class="language-text"><code class="language-text">==highlighted==</code></pre>
@@ -195,7 +208,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-07T09:46:42.064Z">7 July 2022</time>
+            Published <time datetime="2022-07-11T09:25:52.472Z">11 July 2022</time>
           </p>
       </div>
   </div>
