@@ -66,6 +66,29 @@ renders as:
 > logger.log('info', 'Here is some data -  %s', data);
 > ```
 
+## Definition list
+
+We use [markdown-it-deflist][markdown_it_deflist] to provide definition lists, styled to match the [NHS Summary list][nhs_summary_list] component.
+
+```text
+Term 1
+: Definition one including `nested markdown`
+and multi line content
+
+Term 2
+: Definition two
+
+```
+
+renders as:
+
+> Term 1
+> : Definition one including `nested markdown`
+> and multi line content
+>
+> Term 2
+> : Definition two
+
 ## Highlight
 
 We use [markdown-it-mark][markdown_it_mark] to provided highlight of text.
@@ -138,3 +161,4 @@ A complete list can be [found here](https://github.com/ikatyang/emoji-cheat-shee
 [markdown_it_sup]: <https://www.npmjs.com/package/markdown-it-sup>
 [github_emojis]: <https://emojipedia.org/github/>
 [nhs_warning_callout]: <https://service-manual.nhs.uk/design-system/components/warning-callout>
+[nhs_summary_list]: <https://service-manual.nhs.uk/design-system/components/summary-list>

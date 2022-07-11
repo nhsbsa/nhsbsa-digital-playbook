@@ -1,11 +1,11 @@
 {% extends "_base.njk" %}
 
 {% from "appArticle/macro.njk" import appArticle %}
+{% from "appBadges/macro.njk" import appBadges %}
 {% from "appCard/macro.njk" import appCard with context %}
+{% from "appGithubIssue/macro.njk" import appGithubIssue %}
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
-{% from "appGithubIssue/macro.njk" import appGithubIssue %}
-{% from "appBadges/macro.njk" import appBadges %}
 
 {% block header %}
   {{ appArticleHeader({
