@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
-  eleventyConfig.addPlugin(require('eleventy-plugin-toc'), {
+  eleventyConfig.addPlugin(require('eleventy-plugin-nesting-toc'), {
     tags: ['h2', 'h3'],
     wrapper: 'div',
     wrapperClass: 'nhsbsa-sticky-nav__list'
