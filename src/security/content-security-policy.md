@@ -204,6 +204,8 @@ report-uri TBD;
 
 ## MUST
 
+::: card
+
 ### default-src
 
 Reference
@@ -214,6 +216,9 @@ Guidance
 
 Recommended value
 : `'none'`
+
+:::
+::: card
 
 ### frame-ancestors
 
@@ -227,6 +232,9 @@ Guidance
 Recommended value
 :  `'none'`
 
+:::
+::: card
+
 ### base-uri
 
 Reference
@@ -238,6 +246,9 @@ Guidance
 
 Recommended value
 :  `'self'`
+
+:::
+::: card
 
 ### form-action
 
@@ -252,6 +263,9 @@ Guidance
 Recommended value
 :  `'self'`
 
+:::
+::: card
+
 ### plugin-types
 
 Reference
@@ -263,6 +277,9 @@ Guidance
 
 Recommended value
 :  `'none'`
+
+:::
+::: card
 
 ### prefetch-src
 
@@ -276,7 +293,11 @@ Guidance
 Recommended value
 :  `'none'`
 
+:::
+
 ## SHOULD
+
+::: card
 
 ### script-src
 
@@ -290,6 +311,9 @@ Guidance
 Recommended value
 :  `'self'`
 
+:::
+::: card
+
 ### style-src
 
 Reference
@@ -302,6 +326,9 @@ Guidance
 Recommended value
 : `'self'`
 
+:::
+::: card
+
 ### img-src
 
 Reference
@@ -313,6 +340,9 @@ Guidance
 
 Recommended value
 : `'self'`
+
+:::
+::: card
 
 ### font-src
 
@@ -328,6 +358,9 @@ Recommended value
   and/or
   `'self'`
 
+:::
+::: card
+
 ### report-uri
 
 Reference
@@ -339,7 +372,11 @@ Guidance
 Recommended value
 : TBD
 
+:::
+
 ## COULD
+
+::: card
 
 ### connect-src
 
@@ -354,6 +391,9 @@ Recommended value
 :  with GA/GTM
   `https://www.googletagmanager.com https://www.google-analytics.com`
 
+:::
+::: card
+
 ### media-src
 
 Reference
@@ -364,6 +404,9 @@ Guidance
 
 Recommended value
 :  CDN origin
+
+:::
+::: card
 
 ### report-to
 
@@ -376,6 +419,9 @@ Guidance
 Recommended value
 :  TBD
 
+:::
+::: card
+
 ### sandbox
 
 Reference
@@ -386,6 +432,9 @@ Guidance
 
 Recommended value
 : N/A
+
+:::
+::: card
 
 ### worker-src
 
@@ -399,6 +448,9 @@ Guidance
 Recommended value
 : N/A
 
+:::
+::: card
+
 ### manifest-src
 
 Reference
@@ -411,6 +463,9 @@ Guidance
 Recommended value
 : N/A
 
+:::
+::: card
+
 ### navigate-to
 
 Reference
@@ -422,7 +477,11 @@ Guidance
 Recommended value
 : N/A
 
+:::
+
 ## SHOULD NOT
+
+::: card
 
 ### object-src
 
@@ -437,6 +496,9 @@ Guidance
 Recommended value
 : N/A
 
+:::
+::: card
+
 ### frame-src
 
 Reference
@@ -450,6 +512,9 @@ Guidance
 Recommended value
 : N/A
 
+:::
+::: card
+
 ### child-src
 
 Reference
@@ -462,6 +527,8 @@ Guidance
 
 Recommended value
 : N/A
+
+:::
 
 ## References
 
