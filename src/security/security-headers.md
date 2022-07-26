@@ -263,8 +263,11 @@ Reference
 
 Guidance
 : Force use of HTTPS and do not downgrade to HTTP.
-  
-  The `preload` directive is an unofficial extension supported by most modern browsers. If you choose to use it, the max age MUST be set to 2 years, or it will be ignored
+
+  Avoid using `preload` unless you are intend to submit your site to the HSTS preload list that modern browsers use.
+  Adding a domain to the preload list may well affect other services operating on that domain. Always consult our security team if in doubt.
+  See <https://hstspreload.org/> for more details.
+  If you choose to use it, the max age MUST be set to 2 years, or it will be ignored
 
 Edge
 : Edge should send recommended value only if nothing sent by application
@@ -274,10 +277,6 @@ Application
 
 Recommended value
 : `max-age=31536000 ; includeSubDomains`
-
-  or
-
-  `max-age=63072000; includeSubdomains; preload`
 
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security>
