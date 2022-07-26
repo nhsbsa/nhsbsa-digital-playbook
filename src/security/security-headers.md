@@ -30,6 +30,12 @@ HTTP headers provide a way for web browsers and servers to exchange information 
 
 This guidance identifies HTTP headers that must, should and could be used in web applications, as well as those that should not and must not be used.
 
+If you want to learn more about security headers, check out:
+
+* [OWASP Secure Headers Project][owasp_secure_headers_project]
+* [OWASP HTTP Security Response Headers Cheat Sheet][owasp_http_security_response_headers_cheat_sheet]
+* [Scott Helme][scott_helme]
+
 !!! warning Consult a security expert
 The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.
 
@@ -39,6 +45,7 @@ The advice and recommended values provided here should be taken as guidance only
 
 Readers should be careful when copying and pasting code from any website, this site included. NHS Business Services Authority, its employees and its representatives accept no liability for damage caused by the misuse, either intentional or unintentional, of the information presented in its articles.
 !!!
+
 ## Terms
 
 Edge
@@ -48,13 +55,9 @@ Application
 : The application component responsible for handling HTTP requests
 
 OWASP
-: [Open Web Application Security Project][owasp]®
+: [Open Web Application Security Project][owasp]&reg;
 
 ## Security header scan
-
-- [OWASP Secure Headers Project][owasp_secure_headers_project]
-- [OWASP HTTP Security Response Headers Cheat Sheet][owasp_http_security_response_headers_cheat_sheet]
-- [Scott Helme][scott_helme]
 
 If your site is publicly available, you can make use of this [online service from securityheaders.com][securityheaders_com] to scan your web application.
 
