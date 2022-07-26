@@ -62,6 +62,8 @@ __Tick the 'hide results' option to prevent a potentially poor graded site from 
 
 ## MUST NOT
 
+::: card
+
 ### Public-Key-Pins
 
 Reference
@@ -80,6 +82,9 @@ OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins>
   
   <https://owasp.org/www-project-secure-headers/#public-key-pins>
+
+:::
+::: card
 
 ### X-AspNetMvc-Version
 
@@ -104,6 +109,9 @@ Application
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version>
 
+:::
+::: card
+
 ### X-AspNet-Version
 
 Reference
@@ -127,6 +135,9 @@ Application
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version>
 
+:::
+::: card
+
 ### X-Powered-By
 
 Reference
@@ -144,7 +155,11 @@ Application
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by>
 
+:::
+
 ## SHOULD NOT
+
+::: card
 
 ### Expect-CT
 
@@ -163,6 +178,9 @@ Application
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct>
 
+:::
+::: card
+
 ### Server
 
 Reference
@@ -179,6 +197,9 @@ Application
 
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server>
+
+:::
+::: card
 
 ### X-Permitted-Cross-Domain-Policies
 
@@ -199,9 +220,13 @@ Application
 OWASP
 : <https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies>
 
+:::
+
 ## MUST
 
 All headers below __MUST__ be used in web application responses
+
+::: card
 
 ### Referrer-Policy
 
@@ -227,6 +252,9 @@ OWASP
 
 Compatibility
 : <https://caniuse.com/referrer-policy>
+
+:::
+::: card
 
 ### Strict-Transport-Security
 
@@ -259,6 +287,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/stricttransportsecurity>
 
+:::
+::: card
+
 ### X-Content-Type-Options
 
 Reference
@@ -283,6 +314,9 @@ OWASP
 
 Compatibility
 : <https://caniuse.com/mdn-http_headers_x-content-type-options>
+
+:::
+::: card
 
 ### X-Frame-Options
 
@@ -313,6 +347,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/x-frame-options>
 
+:::
+::: card
+
 ### X-XSS-Protection
 
 Reference
@@ -338,7 +375,11 @@ OWASP
 Compatibility
 : <https://caniuse.com/mdn-http_headers_x-xss-protection>
 
+:::
+
 ## SHOULD
+
+::: card
 
 ### Content-Security-Policy
 
@@ -367,6 +408,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/mdn-http_headers_content-security-policy-report-only>
 
+:::
+::: card
+
 ### Cross-Origin-Embedder-Policy
 
 Reference
@@ -391,6 +435,9 @@ OWASP
 
 Compatibility
 : <https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy>
+
+:::
+::: card
 
 ### Cross-Origin-Opener-Policy
 
@@ -417,6 +464,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/mdn-http_headers_cross-origin-opener-policy>
 
+:::
+::: card
+
 ### Cross-Origin-Resource-Policy
 
 Reference
@@ -442,7 +492,11 @@ OWASP
 Compatibility
 : <https://caniuse.com/mdn-http_headers_cross-origin-resource-policy>
 
+:::
+
 ## COULD
+
+::: card
 
 ### Feature-Policy
 
@@ -469,6 +523,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/feature-policy>
 
+:::
+::: card
+
 ### Permissions-Policy
 
 Reference
@@ -492,6 +549,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/permissions-policy>
 
+:::
+::: card
+
 ### Clear-Site-Data
 
 Reference
@@ -514,6 +574,9 @@ OWASP
 
 Compatibility
 : <https://caniuse.com/mdn-http_headers_clear-site-data_cache>
+
+:::
+::: card
 
 ### Set-Cookie
 
@@ -550,6 +613,9 @@ OWASP
 Compatibility
 : <https://caniuse.com/mdn-http_headers_set-cookie>
 
+:::
+::: card
+
 ### X-DNS-Prefetch-Control
 
 Reference
@@ -572,6 +638,8 @@ OWASP
 
 Compatibility
 : <https://caniuse.com/mdn-http_headers_x-dns-prefetch-control>
+
+:::
 
 ## References
 
