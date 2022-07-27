@@ -70,9 +70,112 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
         <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-        <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#terms">Terms</a></li><li><a href="#security-header-scan">Security header scan</a></li><li><a href="#must-not">MUST NOT</a><ol><li><a href="#public-key-pins">Public-Key-Pins</a></li><li><a href="#x-aspnetmvc-version">X-AspNetMvc-Version</a></li><li><a href="#x-aspnet-version">X-AspNet-Version</a></li><li><a href="#x-powered-by">X-Powered-By</a></li></ol></li><li><a href="#should-not">SHOULD NOT</a><ol><li><a href="#expect-ct">Expect-CT</a></li><li><a href="#server">Server</a></li><li><a href="#x-permitted-cross-domain-policies">X-Permitted-Cross-Domain-Policies</a></li></ol></li><li><a href="#must">MUST</a><ol><li><a href="#referrer-policy">Referrer-Policy</a></li><li><a href="#strict-transport-security">Strict-Transport-Security</a></li><li><a href="#x-content-type-options">X-Content-Type-Options</a></li><li><a href="#x-frame-options">X-Frame-Options</a></li><li><a href="#x-xss-protection">X-XSS-Protection</a></li></ol></li><li><a href="#should">SHOULD</a><ol><li><a href="#content-security-policy">Content-Security-Policy</a></li><li><a href="#cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a></li><li><a href="#cross-origin-opener-policy">Cross-Origin-Opener-Policy</a></li><li><a href="#cross-origin-resource-policy">Cross-Origin-Resource-Policy</a></li></ol></li><li><a href="#could">COULD</a><ol><li><a href="#feature-policy">Feature-Policy</a></li><li><a href="#permissions-policy">Permissions-Policy</a></li><li><a href="#clear-site-data">Clear-Site-Data</a></li><li><a href="#set-cookie">Set-Cookie</a></li><li><a href="#x-dns-prefetch-control">X-DNS-Prefetch-Control</a></li></ol></li><li><a href="#references">References</a></li></ol>
-      </div>
+        <div class="nhsbsa-sticky-nav__list">
+                <ol>
+                    
+                    <li><a href="#terms">Terms</a>
+            		</li>
+
+                    <li><a href="#security-header-scan">Security header scan</a>
+            		</li>
+
+                    <li><a href="#must-not">MUST NOT</a>
+            
+                <ol>
+                    
+                    <li><a href="#public-key-pins">Public-Key-Pins</a>
+            		</li>
+
+                    <li><a href="#x-aspnetmvc-version">X-AspNetMvc-Version</a>
+            		</li>
+
+                    <li><a href="#x-aspnet-version">X-AspNet-Version</a>
+            		</li>
+
+                    <li><a href="#x-powered-by">X-Powered-By</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#should-not">SHOULD NOT</a>
+            
+                <ol>
+                    
+                    <li><a href="#expect-ct">Expect-CT</a>
+            		</li>
+
+                    <li><a href="#server">Server</a>
+            		</li>
+
+                    <li><a href="#x-permitted-cross-domain-policies">X-Permitted-Cross-Domain-Policies</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#must">MUST</a>
+            
+                <ol>
+                    
+                    <li><a href="#referrer-policy">Referrer-Policy</a>
+            		</li>
+
+                    <li><a href="#strict-transport-security">Strict-Transport-Security</a>
+            		</li>
+
+                    <li><a href="#x-content-type-options">X-Content-Type-Options</a>
+            		</li>
+
+                    <li><a href="#x-frame-options">X-Frame-Options</a>
+            		</li>
+
+                    <li><a href="#x-xss-protection">X-XSS-Protection</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#should">SHOULD</a>
+            
+                <ol>
+                    
+                    <li><a href="#content-security-policy">Content-Security-Policy</a>
+            		</li>
+
+                    <li><a href="#cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a>
+            		</li>
+
+                    <li><a href="#cross-origin-opener-policy">Cross-Origin-Opener-Policy</a>
+            		</li>
+
+                    <li><a href="#cross-origin-resource-policy">Cross-Origin-Resource-Policy</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#could">COULD</a>
+            
+                <ol>
+                    
+                    <li><a href="#feature-policy">Feature-Policy</a>
+            		</li>
+
+                    <li><a href="#permissions-policy">Permissions-Policy</a>
+            		</li>
+
+                    <li><a href="#clear-site-data">Clear-Site-Data</a>
+            		</li>
+
+                    <li><a href="#set-cookie">Set-Cookie</a>
+            		</li>
+
+                    <li><a href="#x-dns-prefetch-control">X-DNS-Prefetch-Control</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#references">References</a>
+            		</li>
+                </ol>
+            </div>
     </div>
 
     <div class="nhsbsa-article-content">
@@ -167,6 +270,12 @@
 
 <p>HTTP headers provide a way for web browsers and servers to exchange information in addition to the core request/response method and data . A subset of HTTP headers are specifically intended to improve security. Other HTTP headers although not specifically targetted at such, have security impacts and need to be considered when delivering services over HTTP.</p>
 <p>This guidance identifies HTTP headers that must, should and could be used in web applications, as well as those that should not and must not be used.</p>
+<p>If you want to learn more about security headers, check out:</p>
+<ul>
+<li><a href="https://owasp.org/www-project-secure-headers/" target="_blank" rel="noopener">OWASP Secure Headers Project</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
+<li><a href="https://scotthelme.co.uk/" target="_blank" rel="noopener">Scott Helme</a></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Consult a security expert</p>
 <p>The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.</p>
@@ -187,14 +296,10 @@
 <dd><a href="https://owasp.org/" target="_blank" rel="noopener">Open Web Application Security Project</a>®</dd>
 </dl>
 <h2 id="security-header-scan" tabindex="-1"><a class="header-anchor" href="#security-header-scan">Security header scan</a></h2>
-<ul>
-<li><a href="https://owasp.org/www-project-secure-headers/" target="_blank" rel="noopener">OWASP Secure Headers Project</a></li>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
-<li><a href="https://scotthelme.co.uk/" target="_blank" rel="noopener">Scott Helme</a></li>
-</ul>
 <p>If your site is publicly available, you can make use of this <a href="https://securityheaders.com/" target="_blank" rel="noopener">online service from securityheaders.com</a> to scan your web application.</p>
 <p><strong>Tick the ‘hide results’ option to prevent a potentially poor graded site from seeking more attention than it already has.</strong></p>
 <h2 id="must-not" tabindex="-1"><a class="header-anchor" href="#must-not">MUST NOT</a></h2>
+<div class="card">
 <h3 id="public-key-pins" tabindex="-1"><a class="header-anchor" href="#public-key-pins">Public-Key-Pins</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -219,6 +324,8 @@
 <p><a href="https://owasp.org/www-project-secure-headers/#public-key-pins" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#public-key-pins</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-aspnetmvc-version" tabindex="-1"><a class="header-anchor" href="#x-aspnetmvc-version">X-AspNetMvc-Version</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -244,6 +351,8 @@
 <p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-aspnet-version" tabindex="-1"><a class="header-anchor" href="#x-aspnet-version">X-AspNet-Version</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -269,6 +378,8 @@
 <p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-powered-by" tabindex="-1"><a class="header-anchor" href="#x-powered-by">X-Powered-By</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -282,7 +393,9 @@
 <dt>OWASP</dt>
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by</a></dd>
 </dl>
+</div>
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
+<div class="card">
 <h3 id="expect-ct" tabindex="-1"><a class="header-anchor" href="#expect-ct">Expect-CT</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -296,6 +409,8 @@
 <dt>OWASP</dt>
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct</a></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="server" tabindex="-1"><a class="header-anchor" href="#server">Server</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -309,6 +424,8 @@
 <dt>OWASP</dt>
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server</a></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-permitted-cross-domain-policies" tabindex="-1"><a class="header-anchor" href="#x-permitted-cross-domain-policies">X-Permitted-Cross-Domain-Policies</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -333,8 +450,10 @@
 <p><a href="https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies</a></p>
 </dd>
 </dl>
+</div>
 <h2 id="must" tabindex="-1"><a class="header-anchor" href="#must">MUST</a></h2>
 <p>All headers below <strong>MUST</strong> be used in web application responses</p>
+<div class="card">
 <h3 id="referrer-policy" tabindex="-1"><a class="header-anchor" href="#referrer-policy">Referrer-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -367,6 +486,8 @@
 <p><a href="https://caniuse.com/referrer-policy" target="_blank" rel="noopener">https://caniuse.com/referrer-policy</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="strict-transport-security" tabindex="-1"><a class="header-anchor" href="#strict-transport-security">Strict-Transport-Security</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -376,7 +497,10 @@
 <dt>Guidance</dt>
 <dd>
 <p>Force use of HTTPS and do not downgrade to HTTP.</p>
-<p>The <code>preload</code> directive is an unofficial extension supported by most modern browsers. If you choose to use it, the max age MUST be set to 2 years, or it will be ignored</p>
+<p>Avoid using <code>preload</code> unless you are intend to submit your site to the HSTS preload list that modern browsers use.<br>
+Adding a domain to the preload list may well affect other services operating on that domain. Always consult our security team if in doubt.<br>
+See <a href="https://hstspreload.org/" target="_blank" rel="noopener">https://hstspreload.org/</a> for more details.<br>
+If you choose to use it, the max age MUST be set to 2 years, or it will be ignored</p>
 </dd>
 <dt>Edge</dt>
 <dd>
@@ -389,8 +513,6 @@
 <dt>Recommended value</dt>
 <dd>
 <p><code>max-age=31536000 ; includeSubDomains</code></p>
-<p>or</p>
-<p><code>max-age=63072000; includeSubdomains; preload</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -402,6 +524,8 @@
 <p><a href="https://caniuse.com/stricttransportsecurity" target="_blank" rel="noopener">https://caniuse.com/stricttransportsecurity</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-content-type-options" tabindex="-1"><a class="header-anchor" href="#x-content-type-options">X-Content-Type-Options</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -434,6 +558,8 @@
 <p><a href="https://caniuse.com/mdn-http_headers_x-content-type-options" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-content-type-options</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-frame-options" tabindex="-1"><a class="header-anchor" href="#x-frame-options">X-Frame-Options</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -468,6 +594,8 @@
 <p><a href="https://caniuse.com/x-frame-options" target="_blank" rel="noopener">https://caniuse.com/x-frame-options</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-xss-protection" tabindex="-1"><a class="header-anchor" href="#x-xss-protection">X-XSS-Protection</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -500,7 +628,9 @@
 <p><a href="https://caniuse.com/mdn-http_headers_x-xss-protection" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-xss-protection</a></p>
 </dd>
 </dl>
+</div>
 <h2 id="should" tabindex="-1"><a class="header-anchor" href="#should">SHOULD</a></h2>
+<div class="card">
 <h3 id="content-security-policy" tabindex="-1"><a class="header-anchor" href="#content-security-policy">Content-Security-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -534,6 +664,8 @@
 <p><a href="https://caniuse.com/mdn-http_headers_content-security-policy-report-only" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_content-security-policy-report-only</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="cross-origin-embedder-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -566,6 +698,8 @@
 <p><a href="https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="cross-origin-opener-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-opener-policy">Cross-Origin-Opener-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -598,6 +732,8 @@
 <p><a href="https://caniuse.com/mdn-http_headers_cross-origin-opener-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-opener-policy</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="cross-origin-resource-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-resource-policy">Cross-Origin-Resource-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -630,7 +766,9 @@
 <p><a href="https://caniuse.com/mdn-http_headers_cross-origin-resource-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-resource-policy</a></p>
 </dd>
 </dl>
+</div>
 <h2 id="could" tabindex="-1"><a class="header-anchor" href="#could">COULD</a></h2>
+<div class="card">
 <h3 id="feature-policy" tabindex="-1"><a class="header-anchor" href="#feature-policy">Feature-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -663,6 +801,8 @@
 <p><a href="https://caniuse.com/feature-policy" target="_blank" rel="noopener">https://caniuse.com/feature-policy</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="permissions-policy" tabindex="-1"><a class="header-anchor" href="#permissions-policy">Permissions-Policy</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -680,6 +820,8 @@
 <dt>Compatibility</dt>
 <dd><a href="https://caniuse.com/permissions-policy" target="_blank" rel="noopener">https://caniuse.com/permissions-policy</a></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="clear-site-data" tabindex="-1"><a class="header-anchor" href="#clear-site-data">Clear-Site-Data</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -697,6 +839,8 @@
 <dt>Compatibility</dt>
 <dd><a href="https://caniuse.com/mdn-http_headers_clear-site-data_cache" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_clear-site-data_cache</a></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="set-cookie" tabindex="-1"><a class="header-anchor" href="#set-cookie">Set-Cookie</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -735,6 +879,8 @@
 <p><a href="https://caniuse.com/mdn-http_headers_set-cookie" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_set-cookie</a></p>
 </dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="x-dns-prefetch-control" tabindex="-1"><a class="header-anchor" href="#x-dns-prefetch-control">X-DNS-Prefetch-Control</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -752,6 +898,7 @@
 <dt>Compatibility</dt>
 <dd><a href="https://caniuse.com/mdn-http_headers_x-dns-prefetch-control" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-dns-prefetch-control</a></dd>
 </dl>
+</div>
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
 <li><a href="https://owasp.org/www-project-secure-headers/" target="_blank" rel="noopener">OWASP Secure Headers Project</a></li>
@@ -782,7 +929,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-11T11:16:41.893Z">11 July 2022</time>
+            Published <time datetime="2022-07-27T08:21:08.565Z">27 July 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-30T00:00:00.000Z">30 June 2022</time>

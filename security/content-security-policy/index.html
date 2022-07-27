@@ -70,9 +70,139 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">    <div class="nhsbsa-sticky-nav">
         <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
-        <div class="nhsbsa-sticky-nav__list" >
-        <ol><li><a href="#csp-header">CSP Header</a></li><li><a href="#csp-levels">CSP levels</a></li><li><a href="#browser-support">Browser support</a></li><li><a href="#csp-evaluator">CSP Evaluator</a></li><li><a href="#hash-and-nonce">Hash and nonce</a></li><li><a href="#framework-support">Framework support</a><ol><li><a href="#nodejs">Node.js</a></li><li><a href="#java/spring">Java/Spring</a></li></ol></li><li><a href="#inline-scripts">Inline scripts</a></li><li><a href="#reporting">Reporting</a></li><li><a href="#example-csp">Example CSP</a></li><li><a href="#must">MUST</a><ol><li><a href="#default-src">default-src</a></li><li><a href="#frame-ancestors">frame-ancestors</a></li><li><a href="#base-uri">base-uri</a></li><li><a href="#form-action">form-action</a></li><li><a href="#plugin-types">plugin-types</a></li><li><a href="#prefetch-src">prefetch-src</a></li></ol></li><li><a href="#should">SHOULD</a><ol><li><a href="#script-src">script-src</a></li><li><a href="#style-src">style-src</a></li><li><a href="#img-src">img-src</a></li><li><a href="#font-src">font-src</a></li><li><a href="#report-uri">report-uri</a></li></ol></li><li><a href="#could">COULD</a><ol><li><a href="#connect-src">connect-src</a></li><li><a href="#media-src">media-src</a></li><li><a href="#report-to">report-to</a></li><li><a href="#sandbox">sandbox</a></li><li><a href="#worker-src">worker-src</a></li><li><a href="#manifest-src">manifest-src</a></li><li><a href="#navigate-to">navigate-to</a></li></ol></li><li><a href="#should-not">SHOULD NOT</a><ol><li><a href="#object-src">object-src</a></li><li><a href="#frame-src">frame-src</a></li><li><a href="#child-src">child-src</a></li></ol></li><li><a href="#references">References</a></li></ol>
-      </div>
+        <div class="nhsbsa-sticky-nav__list">
+                <ol>
+                    
+                    <li><a href="#csp-header">CSP Header</a>
+            		</li>
+
+                    <li><a href="#csp-levels">CSP levels</a>
+            		</li>
+
+                    <li><a href="#browser-support">Browser support</a>
+            		</li>
+
+                    <li><a href="#csp-evaluator">CSP Evaluator</a>
+            		</li>
+
+                    <li><a href="#hash-and-nonce">Hash and nonce</a>
+            		</li>
+
+                    <li><a href="#framework-support">Framework support</a>
+            
+                <ol>
+                    
+                    <li><a href="#nodejs">Node.js</a>
+            		</li>
+
+                    <li><a href="#java/spring">Java/Spring</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#inline-scripts">Inline scripts</a>
+            		</li>
+
+                    <li><a href="#reporting">Reporting</a>
+            		</li>
+
+                    <li><a href="#example-csp">Example CSP</a>
+            		</li>
+
+                    <li><a href="#must">MUST</a>
+            
+                <ol>
+                    
+                    <li><a href="#default-src">default-src</a>
+            		</li>
+
+                    <li><a href="#frame-ancestors">frame-ancestors</a>
+            		</li>
+
+                    <li><a href="#base-uri">base-uri</a>
+            		</li>
+
+                    <li><a href="#form-action">form-action</a>
+            		</li>
+
+                    <li><a href="#plugin-types">plugin-types</a>
+            		</li>
+
+                    <li><a href="#prefetch-src">prefetch-src</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#should">SHOULD</a>
+            
+                <ol>
+                    
+                    <li><a href="#script-src">script-src</a>
+            		</li>
+
+                    <li><a href="#style-src">style-src</a>
+            		</li>
+
+                    <li><a href="#img-src">img-src</a>
+            		</li>
+
+                    <li><a href="#font-src">font-src</a>
+            		</li>
+
+                    <li><a href="#report-uri">report-uri</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#could">COULD</a>
+            
+                <ol>
+                    
+                    <li><a href="#connect-src">connect-src</a>
+            		</li>
+
+                    <li><a href="#media-src">media-src</a>
+            		</li>
+
+                    <li><a href="#upgrade-insecure-requests">upgrade-insecure-requests</a>
+            		</li>
+
+                    <li><a href="#report-to">report-to</a>
+            		</li>
+
+                    <li><a href="#sandbox">sandbox</a>
+            		</li>
+
+                    <li><a href="#worker-src">worker-src</a>
+            		</li>
+
+                    <li><a href="#manifest-src">manifest-src</a>
+            		</li>
+
+                    <li><a href="#navigate-to">navigate-to</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#should-not">SHOULD NOT</a>
+            
+                <ol>
+                    
+                    <li><a href="#object-src">object-src</a>
+            		</li>
+
+                    <li><a href="#frame-src">frame-src</a>
+            		</li>
+
+                    <li><a href="#child-src">child-src</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#references">References</a>
+            		</li>
+                </ol>
+            </div>
     </div>
 
     <div class="nhsbsa-article-content">
@@ -171,6 +301,7 @@
 <li><a href="https://www.html5rocks.com/en/tutorials/security/content-security-policy/" target="_blank" rel="noopener">Web.dev guide to CSP</a></li>
 <li><a href="https://content-security-policy.com/" target="_blank" rel="noopener">Content Security Policy quick reference guide</a></li>
 <li><a href="https://www.w3.org/TR/CSP/" target="_blank" rel="noopener">W3C Content Security Policy specification</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy" target="_blank" rel="noopener">MDN Content Security Policy reference</a></li>
 <li><a href="https://csp.withgoogle.com/docs/index.html" target="_blank" rel="noopener">Google’s guidance on CSP</a></li>
 <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP CSP Cheat sheet</a></li>
 </ul>
@@ -234,106 +365,218 @@ See this article for further detail: <a href="https://developers.google.com/tag-
 <p>This is an example CSP to use as an initial basis for development.</p>
 <p>Note:</p>
 <ul>
-<li>Use of Google Analytics and Tag Manager: Remove if not required</li>
+<li>Use of Google Analytics and Google Tag Manager: Remove if not required</li>
 <li>Use of nonce: Remove if not supported in your framework</li>
 </ul>
 <pre class="language-csp"><code class="language-csp"><span class="token directive property">default-src</span> <span class="token none keyword">'none'</span><span class="token punctuation">;</span><br><span class="token directive property">frame-ancestors</span> <span class="token none keyword">'none'</span><span class="token punctuation">;</span><br><span class="token directive property">base-uri</span> <span class="token keyword safe">'self'</span><span class="token punctuation">;</span><br><span class="token directive property">form-action</span> <span class="token keyword safe">'self'</span><span class="token punctuation">;</span><br><span class="token directive property">plugin-types</span> <span class="token none keyword">'none'</span><span class="token punctuation">;</span><br><span class="token directive property">prefetch-src</span> <span class="token none keyword">'none'</span><span class="token punctuation">;</span><br><span class="token directive property">script-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}'<span class="token punctuation">;</span><br><span class="token directive property">style-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}'<span class="token punctuation">;</span><br><span class="token directive property">img-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}' <span class="token host url">https://www.google-analytics.com</span> <span class="token host url">https://www.googletagmanager.com</span><span class="token punctuation">;</span><br><span class="token directive property">font-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}' <span class="token host url">https://assets.nhs.uk</span><span class="token punctuation">;</span><br><span class="token directive property">connect-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}' <span class="token host url">https://www.google-analytics.com</span> <span class="token host url">https://www.googletagmanager.com</span><span class="token punctuation">;</span><br><span class="token directive property">report-uri</span> TBD<span class="token punctuation">;</span></code></pre>
 <h2 id="must" tabindex="-1"><a class="header-anchor" href="#must">MUST</a></h2>
+<div class="card">
 <h3 id="default-src" tabindex="-1"><a class="header-anchor" href="#default-src">default-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/default-src/" target="_blank" rel="noopener">https://content-security-policy.com/default-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/default-src/" target="_blank" rel="noopener">https://content-security-policy.com/default-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-default-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-default-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Use a value of <code>'none'</code> which will disallow everything by default. Use other *-src directives to override as required</dd>
+<dd>
+<p>Adopt the principle of least privilege by using a value of <code>'none'</code>, setting the default for:</p>
+<ul>
+<li><a href="#script-src">script-src</a></li>
+<li><a href="#style-src">style-src</a></li>
+<li><a href="#font-src">font-src</a></li>
+<li><a href="#img-src">img-src</a></li>
+<li><a href="#connect-src">connect-src</a></li>
+<li><a href="#worker-src">worker-src</a></li>
+<li><a href="#object-src">object-src</a></li>
+<li><a href="#media-src">media-src</a></li>
+<li><a href="#manifest-src">manifest-src</a></li>
+<li><a href="#frame-src">frame-src</a></li>
+<li><a href="#prefetch-src">prefetch-src</a></li>
+<li><a href="#child-src">child-src</a></li>
+</ul>
+<p>You may then re-enable specific <code>*-src</code> directives as required.</p>
+</dd>
 <dt>Recommended value</dt>
-<dd><code>'none'</code></dd>
+<dd>
+<p><code>'none'</code></p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="frame-ancestors" tabindex="-1"><a class="header-anchor" href="#frame-ancestors">frame-ancestors</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines valid sources for embedding the resource using <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;applet&gt;</code>.<br>
-Setting this directive to <code>'none'</code> should be roughly equivalent to <code>X-Frame-Options: DENY</code></dd>
+<dd>
+<p>Defines valid sources for embedding the resource using <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;applet&gt;</code>.<br>
+Setting this directive to <code>'none'</code> should be roughly equivalent to <code>X-Frame-Options: DENY</code></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-frame-ancestors" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-frame-ancestors</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Use recommended value of <code>'none'</code></dd>
+<dd>
+<p>Use recommended value of <code>'none'</code></p>
+</dd>
 <dt>Recommended value</dt>
-<dd><code>'none'</code></dd>
+<dd>
+<p><code>'none'</code></p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="base-uri" tabindex="-1"><a class="header-anchor" href="#base-uri">base-uri</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines a set of allowed URLs which can be used in the src attribute of a HTML base tag.</dd>
+<dd>
+<p>Defines a set of allowed URLs which can be used in the src attribute of a HTML base tag.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-base-uri" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-base-uri</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Use recommended value of <code>'self'</code><br>
-Consult with security team if another base URI is required</dd>
+<dd>
+<p>Use recommended value of <code>'self'</code><br>
+Consult with security team if another base URI is required</p>
+</dd>
 <dt>Recommended value</dt>
-<dd><code>'self'</code></dd>
+<dd>
+<p><code>'self'</code></p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="form-action" tabindex="-1"><a class="header-anchor" href="#form-action">form-action</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>N/A</dd>
+<dd>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-form-action" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-form-action</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>Form actions should be handled by the same origin as the application.<br>
-Use recommended value of ‘self’<br>
+Use recommended value of <code>'self'</code><br>
 Consult with security team if another form-action is required</dd>
 <dt>Recommended value</dt>
 <dd><code>'self'</code></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="plugin-types" tabindex="-1"><a class="header-anchor" href="#plugin-types">plugin-types</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines valid MIME types for plugins invoked via <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code>. To load an <code>&lt;applet&gt;</code> you must specify <code>application/x-java-applet</code>.</dd>
+<dd>
+<p>Defines valid MIME types for plugins invoked via <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code>. To load an <code>&lt;applet&gt;</code> you must specify <code>application/x-java-applet</code>.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Use recommended value of <code>'none'</code><br>
-Consult with security team if a plugin is required</dd>
+<dd>
+<p>Use recommended value of <code>'none'</code><br>
+Consult with security team if a plugin is required</p>
+</dd>
 <dt>Recommended value</dt>
-<dd><code>'none'</code></dd>
+<dd>
+<p><code>'none'</code></p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="prefetch-src" tabindex="-1"><a class="header-anchor" href="#prefetch-src">prefetch-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines valid sources for request prefetch and prerendering, for example via the link tag with <code>rel=&quot;prefetch&quot;</code> or <code>rel=&quot;prerender&quot;</code></dd>
+<dd>
+<p>Defines valid sources for request prefetch and prerendering, for example via the link tag with <code>rel=&quot;prefetch&quot;</code> or <code>rel=&quot;prerender&quot;</code></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-prefetch-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-prefetch-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Use recommended value of <code>'none'</code><br>
-Consult with security team if prefetch is required</dd>
+<dd>
+<p>Use recommended value of <code>'none'</code><br>
+Consult with security team if prefetch is required</p>
+</dd>
 <dt>Recommended value</dt>
-<dd><code>'none'</code></dd>
+<dd>
+<p><code>'none'</code></p>
+</dd>
 </dl>
+</div>
 <h2 id="should" tabindex="-1"><a class="header-anchor" href="#should">SHOULD</a></h2>
+<div class="card">
 <h3 id="script-src" tabindex="-1"><a class="header-anchor" href="#script-src">script-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/script-src/" target="_blank" rel="noopener">https://content-security-policy.com/script-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/script-src/" target="_blank" rel="noopener">https://content-security-policy.com/script-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-script-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-script-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>Add additional domains such as Google Analytics/Tag Manager only when needed.<br>
 Avoid <code>'unsafe-inline'</code> and <code>'unsafe-eval'</code></dd>
 <dt>Recommended value</dt>
 <dd><code>'self'</code></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="style-src" tabindex="-1"><a class="header-anchor" href="#style-src">style-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/style-src/" target="_blank" rel="noopener">https://content-security-policy.com/style-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/style-src/" target="_blank" rel="noopener">https://content-security-policy.com/style-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-style-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-style-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>All styles should be defined in separate CSS files and served from the same origin.<br>
 Avoid <code>'unsafe-inline'</code></dd>
 <dt>Recommended value</dt>
 <dd><code>'self'</code></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="img-src" tabindex="-1"><a class="header-anchor" href="#img-src">img-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/img-src/" target="_blank" rel="noopener">https://content-security-policy.com/img-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/img-src/" target="_blank" rel="noopener">https://content-security-policy.com/img-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-img-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-img-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>Additional domains such as Google Analytics/Tag Manager may be needed for beacon pixels.<br>
 Avoid <code>'unsafe-inline'</code></dd>
 <dt>Recommended value</dt>
 <dd><code>'self'</code></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="font-src" tabindex="-1"><a class="header-anchor" href="#font-src">font-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/font-src/" target="_blank" rel="noopener">https://content-security-policy.com/font-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/font-src/" target="_blank" rel="noopener">https://content-security-policy.com/font-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-font-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-font-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>Fonts should be hosted by the NHS assets CDN.<br>
 Avoid <code>'unsafe-inline'</code></dd>
@@ -342,45 +585,106 @@ Avoid <code>'unsafe-inline'</code></dd>
 and/or<br>
 <code>'self'</code></dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="report-uri" tabindex="-1"><a class="header-anchor" href="#report-uri">report-uri</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Instructs the browser to POST a reports of policy failures to this URI. You can also use <code>Content-Security-Policy-Report-Only</code> as the HTTP header name to instruct the browser to only send reports (does not block anything). This directive is deprecated in CSP Level 3 in favor of the <code>report-to</code> directive.</dd>
+<dd>
+<p>Instructs the browser to POST a reports of policy failures to this URI. You can also use <code>Content-Security-Policy-Report-Only</code> as the HTTP header name to instruct the browser to only send reports (does not block anything). This directive is deprecated in CSP Level 3 in favor of the <code>report-to</code> directive.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-report-uri" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-report-uri</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>It is useful to report violations of the CSP in development and live running of a CSP.</dd>
+<dd>
+<p>It is useful to report violations of the CSP in development and live running of a CSP.</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>TBD</dd>
+<dd>
+<p>TBD</p>
+</dd>
 </dl>
+</div>
 <h2 id="could" tabindex="-1"><a class="header-anchor" href="#could">COULD</a></h2>
+<div class="card">
 <h3 id="connect-src" tabindex="-1"><a class="header-anchor" href="#connect-src">connect-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd><a href="https://content-security-policy.com/connect-src/" target="_blank" rel="noopener">https://content-security-policy.com/connect-src/</a></dd>
+<dd>
+<ul>
+<li><a href="https://content-security-policy.com/connect-src/" target="_blank" rel="noopener">https://content-security-policy.com/connect-src/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-connect-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-connect-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service.<br>
-Add additional domains such as Google Analytics/Tag Manager only when needed.</dd>
+<dd>
+<p><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service.</p>
+<p>Add additional domains such as Google Analytics/Tag Manager when needed.</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>with GA/GTM<br>
-<code>https://www.googletagmanager.com https://www.google-analytics.com</code></dd>
+<dd>
+<p>with GA/GTM<br>
+<code>https://www.googletagmanager.com https://www.google-analytics.com</code></p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="media-src" tabindex="-1"><a class="header-anchor" href="#media-src">media-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>N/A</dd>
+<dd>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/media-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/media-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-media-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-media-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
 <dd>Media can be useful, but large binary content should be served from a CDN external to the application.</dd>
 <dt>Recommended value</dt>
 <dd>CDN origin</dd>
 </dl>
+</div>
+<div class="card">
+<h3 id="upgrade-insecure-requests" tabindex="-1"><a class="header-anchor" href="#upgrade-insecure-requests">upgrade-insecure-requests</a></h3>
+<dl>
+<dt>Reference</dt>
+<dd>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests</a></li>
+<li><a href="https://www.w3.org/TR/upgrade-insecure-requests/#delivery" target="_blank" rel="noopener">https://www.w3.org/TR/upgrade-insecure-requests/#delivery</a></li>
+</ul>
+</dd>
+<dt>Guidance</dt>
+<dd>Use this directive when resources could be served over insecure HTTP, but you wish to migrate over to HTTPS without the effort of fixing the pages.</dd>
+<dt>Recommended value</dt>
+<dd>N/A</dd>
+</dl>
+</div>
+<div class="card">
 <h3 id="report-to" tabindex="-1"><a class="header-anchor" href="#report-to">report-to</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines a reporting group name defined by a Report-To HTTP response header. See the Reporting API for more info.</dd>
+<dd>
+<p>Defines a reporting group name defined by a Report-To HTTP response header. See the Reporting API for more info.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-report-to" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-report-to</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>It is useful to report violations of the CSP in development and live running of a CSP.</dd>
+<dd>
+<p>It is useful to report violations of the CSP in development and live running of a CSP.</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>TBD</dd>
+<dd>
+<p>TBD</p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="sandbox" tabindex="-1"><a class="header-anchor" href="#sandbox">sandbox</a></h3>
 <dl>
 <dt>Reference</dt>
@@ -388,84 +692,163 @@ Add additional domains such as Google Analytics/Tag Manager only when needed.</d
 <dt>Guidance</dt>
 <dd>Consult with security team</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-sandbox" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-sandbox</a></li>
+</ul>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="worker-src" tabindex="-1"><a class="header-anchor" href="#worker-src">worker-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Restricts the URLs which may be loaded as a Worker, SharedWorker or ServiceWorker.</dd>
+<dd>
+<p>Restricts the URLs which may be loaded as a Worker, SharedWorker or ServiceWorker.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-worker-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-worker-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service from a worker thread.<br>
-Otherwise avoid usage and fallback to the <code>default-src 'none';</code></dd>
+<dd>
+<p><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service from a worker thread.<br>
+Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="manifest-src" tabindex="-1"><a class="header-anchor" href="#manifest-src">manifest-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>The web app manifest is a JSON file that tells the browser about your Progressive Web App and how it should behave when installed on the user’s desktop or mobile device. A typical manifest file includes the app name, the icons the app should use, and the URL that should be opened when the app is launched.</dd>
+<dd>
+<p>The web app manifest is a JSON file that tells the browser about your Progressive Web App and how it should behave when installed on the user’s desktop or mobile device. A typical manifest file includes the app name, the icons the app should use, and the URL that should be opened when the app is launched.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-manifest-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-manifest-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Only used by progressive web applications<br>
-Otherwise avoid usage and fallback to the <code>default-src 'none';</code></dd>
+<dd>
+<p>Only used by progressive web applications<br>
+Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="navigate-to" tabindex="-1"><a class="header-anchor" href="#navigate-to">navigate-to</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Restricts the URLs that the document may navigate to by any means. For example when a link is clicked, a form is submitted, or window.location is invoked. If form-action is present then this directive is ignored for form submissions.</dd>
+<dd>
+<p>Restricts the URLs that the document may navigate to by any means. For example when a link is clicked, a form is submitted, or window.location is invoked. If form-action is present then this directive is ignored for form submissions.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-navigate-to" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-navigate-to</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Requires robust support for application to determine all potential links</dd>
+<dd>
+<p>Requires robust support for application to determine all potential links</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
+<div class="card">
 <h3 id="object-src" tabindex="-1"><a class="header-anchor" href="#object-src">object-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 <dt>Guidance</dt>
-<dd>Sources of plugins such as <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code> or <code>&lt;applet&gt;</code><br>
+<dd>
+<p>Sources of plugins such as <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code> or <code>&lt;applet&gt;</code><br>
 There are rarely any times that a modern web application will require this, so avoid usage and fallback to the <code>default-src 'none';</code><br>
-Consult with security team before use</dd>
+Consult with security team before use</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#object-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#object-src</a></li>
+</ul>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="frame-src" tabindex="-1"><a class="header-anchor" href="#frame-src">frame-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines valid sources for loading frames. In CSP Level 2 <code>frame-src</code> was deprecated in favor of the <code>child-src</code> directive. CSP Level 3, has undeprecated <code>frame-src</code> and it will continue to defer to <code>child-src</code> if not present.</dd>
+<dd>
+<p>Defines valid sources for loading frames. In CSP Level 2 <code>frame-src</code> was deprecated in favor of the <code>child-src</code> directive. CSP Level 3, has undeprecated <code>frame-src</code> and it will continue to defer to <code>child-src</code> if not present.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-frame-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-frame-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
+<dd>
+<p>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
 Social media integration may require use of iframes.<br>
-Consult with security team before use</dd>
+Consult with security team before use</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
+<div class="card">
 <h3 id="child-src" tabindex="-1"><a class="header-anchor" href="#child-src">child-src</a></h3>
 <dl>
 <dt>Reference</dt>
-<dd>Defines valid sources for web workers and nested browsing contexts loaded using elements such as <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code></dd>
+<dd>
+<p>Defines valid sources for web workers and nested browsing contexts loaded using elements such as <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src</a></li>
+<li><a href="https://www.w3.org/TR/CSP/#directive-child-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-child-src</a></li>
+</ul>
+</dd>
 <dt>Guidance</dt>
-<dd>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
+<dd>
+<p>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
 Social media integration may require use of iframes.<br>
-Consult with security team before use</dd>
+Consult with security team before use</p>
+</dd>
 <dt>Recommended value</dt>
-<dd>N/A</dd>
+<dd>
+<p>N/A</p>
+</dd>
 </dl>
+</div>
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
 <li><a href="https://www.w3.org/TR/CSP/" target="_blank" rel="noopener">W3C CSP specification</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy" target="_blank" rel="noopener">MDN Content Security Policy reference</a></li>
 <li><a href="https://www.html5rocks.com/en/tutorials/security/content-security-policy/" target="_blank" rel="noopener">Web.dev guide to CSP</a></li>
 <li><a href="https://csp.withgoogle.com/docs/index.html" target="_blank" rel="noopener">CSP with Google</a></li>
 <li><a href="https://csp.withgoogle.com/docs/strict-csp.html" target="_blank" rel="noopener">Google - Strict Content Security Policy</a></li>
 <li><a href="https://csp-evaluator.withgoogle.com/" target="_blank" rel="noopener">Google - CSP Evaluator</a></li>
 <li><a href="https://developers.google.com/tag-platform/tag-manager/web/csp" target="_blank" rel="noopener">Google Developers - Using Google Tag Manager with a Content Security Policy</a></li>
 <li><a href="https://developers.google.com/web/fundamentals/security/csp" target="_blank" rel="noopener">Google fundamentals - Content security policy</a></li>
-<li><a href="https://www.npmjs.com/package/helmet-csp" target="_blank" rel="noopener">Helmet-csp</a></li>
 <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html" target="_blank" rel="noopener">Content Security Policy - OWASP Cheat Sheet Series</a></li>
 <li><a href="https://content-security-policy.com/" target="_blank" rel="noopener">Content-Security-Policy</a></li>
 <li><a href="https://caniuse.com/?search=csp" target="_blank" rel="noopener">Can I use… CSP</a></li>
+<li><a href="https://www.npmjs.com/package/helmet-csp" target="_blank" rel="noopener">Helmet-csp</a></li>
 <li><a href="https://websec.be/blog/cspreporting/" target="_blank" rel="noopener">Should you deploy your own CSP reporting endpoint?</a></li>
 <li><a href="https://dropbox.tech/security/on-csp-reporting-and-filtering" target="_blank" rel="noopener">CSP On Reporting and Filtering</a></li>
 </ul>
@@ -492,7 +875,7 @@ Consult with security team before use</dd>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-11T11:16:41.893Z">11 July 2022</time>
+            Published <time datetime="2022-07-27T08:21:08.565Z">27 July 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-30T00:00:00.000Z">30 June 2022</time>
