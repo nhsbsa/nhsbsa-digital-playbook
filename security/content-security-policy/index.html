@@ -73,6 +73,9 @@
         <div class="nhsbsa-sticky-nav__list">
                 <ol>
                     
+                    <li><a href="#start-early">Start early</a>
+            		</li>
+
                     <li><a href="#csp-header">CSP Header</a>
             		</li>
 
@@ -218,11 +221,7 @@
         <h1 class="nhsuk-heading-xl">
           Content Security Policy
         </h1>
-          <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
+        
       </div>
       
 <details class="nhsuk-details nhsuk-expander">
@@ -244,6 +243,10 @@
       <tr>
       <th>Author</th>
       <td>Professional Lead Software Development</td>
+      </tr>
+      <tr>
+      <th>Owner</th>
+      <td>Security Operations Manager</td>
       </tr>
       <tr>
       <th>Issued to</th>
@@ -315,6 +318,8 @@
 </ul>
 <p>Readers should be careful when copying and pasting code from any website, this site included. NHS Business Services Authority, its employees and its representatives accept no liability for damage caused by the misuse, either intentional or unintentional, of the information presented in its articles.</p>
 </div>
+<h2 id="start-early" tabindex="-1"><a class="header-anchor" href="#start-early">Start early</a></h2>
+<p>Developing a site with CSP from the outset is much easier than retrofitting CSP to an existing site.</p>
 <h2 id="csp-header" tabindex="-1"><a class="header-anchor" href="#csp-header">CSP Header</a></h2>
 <p>Sending the standard <code>Content-Security-Policy</code> header as well as earlier <code>X-Content-Security-Policy</code> or <code>X-Webkit-CSP</code> headers causes unexpected behaviours on some browsers. Avoid using the deprecated <code>X-*</code> headers.</p>
 <p>Chrome dev-tools hides the <code>X-</code> style CSP response headers in preference to the standard <code>Content-Security-Policy</code>, even when they are sent. Use this curl command to test whether your site is sending the deprecated headers:</p>
@@ -875,7 +880,7 @@ Consult with security team before use</p>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-27T08:21:08.565Z">27 July 2022</time>
+            Published <time datetime="2022-08-01T12:06:10.918Z">1 August 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-30T00:00:00.000Z">30 June 2022</time>

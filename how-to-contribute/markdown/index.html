@@ -79,6 +79,15 @@
                     <li><a href="#admonition">Admonition</a>
             		</li>
 
+                    <li><a href="#cards">Cards</a>
+            
+                <ol>
+                    
+                    <li><a href="#section-heading">Section heading</a>
+            		</li>
+                </ol>
+            		</li>
+
                     <li><a href="#code-tabs">Code tabs</a>
             		</li>
 
@@ -139,6 +148,23 @@
 <p>warning detail text</p>
 </div>
 </blockquote>
+<h2 id="cards" tabindex="-1"><a class="header-anchor" href="#cards">Cards</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-container" target="_blank" rel="noopener">markdown-it-container</a> to wrap sections of content in additional <abbr title="Hyper Text Markup Language">HTML</abbr>. This is used to format content as the <a href="https://service-manual.nhs.uk/design-system/components/card" target="_blank" rel="noopener">NHS Card design component</a>.</p>
+<p>Wrap the markdown content with <code>::: card</code> and <code>:::</code> markers</p>
+<p>This is particularly effective when combined with <a href="../markdown#definition-list">definition lists</a>.</p>
+<pre class="language-text"><code class="language-text">::: card<br>### Section heading<br><br>Term 1<br>: Definition one<br><br>Term 2<br>: Definition two<br>:::</code></pre>
+<p>render as:</p>
+<blockquote>
+<div class="card">
+<h3 id="section-heading" tabindex="-1"><a class="header-anchor" href="#section-heading">Section heading</a></h3>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition one</dd>
+<dt>Term 2</dt>
+<dd>Definition two</dd>
+</dl>
+</div>
+</blockquote>
 <h2 id="code-tabs" tabindex="-1"><a class="header-anchor" href="#code-tabs">Code tabs</a></h2>
 <p>We use <a href="https://www.npmjs.com/package/markdown-it-codetabs" target="_blank" rel="noopener">markdown-it-codetabs</a> to provide code snippets in multiple languages.</p>
 <pre class="language-text"><code class="language-text">    ```java [g1:Java]<br>    logger.info("Here is some data - {}", data);<br>    ```<br><br>    ```javascript [g1:Javascript]<br>    logger.log('info', 'Here is some data -  %s', data);<br>    ```</code></pre>
@@ -146,17 +172,17 @@
 <blockquote>
 <div class="code-tabs">
 <ul>
-<li><input type="radio" name="label-group-61" checked><label for="group-61-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
-<li><input type="radio" name="label-group-61"><label for="group-61-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
+<li><input type="radio" name="label-group-102" checked><label for="group-102-tab-0" onclick="this.previousElementSibling.click()">Java</label></li>
+<li><input type="radio" name="label-group-102"><label for="group-102-tab-1" onclick="this.previousElementSibling.click()">Javascript</label></li>
 </ul>
-<input type="radio" id="group-61-tab-0" name="group-61" checked>
+<input type="radio" id="group-102-tab-0" name="group-102" checked>
 <pre class="language-java"><code class="language-java">logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Here is some data - {}"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<input type="radio" id="group-61-tab-1" name="group-61">
+<input type="radio" id="group-102-tab-1" name="group-102">
 <pre class="language-javascript"><code class="language-javascript">logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token string">'Here is some data -  %s'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div></blockquote>
 <h2 id="definition-list" tabindex="-1"><a class="header-anchor" href="#definition-list">Definition list</a></h2>
 <p>We use <a href="https://www.npmjs.com/package/markdown-it-deflist" target="_blank" rel="noopener">markdown-it-deflist</a> to provide definition lists, styled to match the <a href="https://service-manual.nhs.uk/design-system/components/summary-list" target="_blank" rel="noopener">NHS Summary list</a> component.</p>
-<pre class="language-text"><code class="language-text">Term 1<br>: Definition one including `nested markdown`<br>and multi line content<br><br>Term 2<br>: Definition two<br></code></pre>
+<pre class="language-text"><code class="language-text">Term 1<br>: Definition one including `nested markdown`<br>  and multi line content<br><br>Term 2<br>: Definition two<br></code></pre>
 <p>renders as:</p>
 <blockquote>
 <dl>
@@ -233,7 +259,7 @@ and multi line content</dd>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-07-27T08:21:08.565Z">27 July 2022</time>
+            Published <time datetime="2022-08-01T12:06:10.918Z">1 August 2022</time>
           </p>
       </div>
   </div>
