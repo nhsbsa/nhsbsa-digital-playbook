@@ -2,29 +2,30 @@
 layout: article
 title: "Security headers"
 description: "Use HTTP headers to protect our users"
-status: DRAFT
-tags: [security, draft]
-order: 
-    security: 10
+status: FINAL
+tags: [security, dev-security]
+order:
+  security: 10
+  dev-security: 4
 review:
-    review_cycle:
-      month: 6
+  review_cycle:
+    month: 6
 issuesheet:
-    reference: 
-    author: "Professional Lead Software Development"
-    owner: ""
-    issued_to: "DDaT"
-    issued_reason: "Standard"
-    approved_by: "DA"
-    approval_date: 2022-06-30
-    wellbeing_inclusion_approval_date: 
-    accessibility_approval_date: 
-    revisions:
-        - version: "1.0"
-          date: 2022-06-24
-          amended_by: "PT"
-          approved_by: "AW"
-          details: "Initial release"
+  reference: 
+  author: "Professional Lead Software Development"
+  owner:  "Security Operations Manager"
+  issued_to: "DDaT"
+  issued_reason: "Standard"
+  approved_by: "DA"
+  approval_date: 2022-06-30
+  wellbeing_inclusion_approval_date: 
+  accessibility_approval_date: 
+  revisions:
+    - version: "1.0"
+      date: 2022-06-24
+      amended_by: "PT"
+      approved_by: "AW"
+      details: "Initial release"
 ---
 HTTP headers provide a way for web browsers and servers to exchange information in addition to the core request/response method and data . A subset of HTTP headers are specifically intended to improve security. Other HTTP headers although not specifically targetted at such, have security impacts and need to be considered when delivering services over HTTP.
 
@@ -645,10 +646,11 @@ Compatibility
 
 ## References
 
-- [OWASP Secure Headers Project][owasp_secure_headers_project]
-- [OWASP HTTP Security Response Headers Cheat Sheet][owasp_http_security_response_headers_cheat_sheet]
-- [securityheaders.com][securityheaders_com]
-- [Scott Helme][scott_helme]
+* [NHSBSA Content-Security-Policy guidance](../content-security-policy)
+* [OWASP Secure Headers Project][owasp_secure_headers_project]
+* [OWASP HTTP Security Response Headers Cheat Sheet][owasp_http_security_response_headers_cheat_sheet]
+* [securityheaders.com][securityheaders_com]
+* [Scott Helme][scott_helme]
 
 [owasp]: <https://owasp.org/>
 [owasp_secure_headers_project]: <https://owasp.org/www-project-secure-headers/>

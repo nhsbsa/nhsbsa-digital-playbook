@@ -2,29 +2,30 @@
 layout: article
 title: "Content Security Policy"
 description: "Use CSP as the modern approach to securing our web applications"
-status: DRAFT
-tags: [security, draft]
-order: 
+status: FINAL
+tags: [security, dev-security]
+order:
   security: 11
+  dev-security: 4
 review:
-    review_cycle:
-      month: 6
+  review_cycle:
+    month: 6
 issuesheet:
-    reference: 
-    author: "Professional Lead Software Development"
-    owner:  ""
-    issued_to: "DDaT"
-    issued_reason: "Standard"
-    approved_by: "DA"
-    approval_date: 2022-06-30
-    wellbeing_inclusion_approval_date: 
-    accessibility_approval_date: 
-    revisions:
-        - version: "1.0"
-          date: 2022-06-24
-          amended_by: "PT"
-          approved_by: "AW"
-          details: "Initial release"
+  reference: 
+  author: "Professional Lead Software Development"
+  owner:  "Security Operations Manager"
+  issued_to: "DDaT"
+  issued_reason: "Standard"
+  approved_by: "DA"
+  approval_date: 2022-06-30
+  wellbeing_inclusion_approval_date: 
+  accessibility_approval_date: 
+  revisions:
+    - version: "1.0"
+      date: 2022-06-24
+      amended_by: "PT"
+      approved_by: "AW"
+      details: "Initial release"
 ---
 A Content Security Policy (CSP) helps prevent unwanted content from being injected/loaded into your webpages. This can mitigate cross-site scripting (XSS) vulnerabilities, clickjacking, formjacking, malicious frames, unwanted trackers, and other web client-side attacks.
 
@@ -46,6 +47,10 @@ The advice and recommended values provided here should be taken as guidance only
 
 Readers should be careful when copying and pasting code from any website, this site included. NHS Business Services Authority, its employees and its representatives accept no liability for damage caused by the misuse, either intentional or unintentional, of the information presented in its articles.
 !!!
+
+## Start early
+
+Developing a site with CSP from the outset is much easier than retrofitting CSP to an existing site.
 
 ## CSP Header
 

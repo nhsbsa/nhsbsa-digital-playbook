@@ -162,7 +162,7 @@ Asserting equality with complex objects leads to these issues:
   It is difficult for the reviewer to understand what is being asserted as objects often have a lot of data within them. It is difficult to know which part of the object data is the being asserted.
 * __Untraceable errors__
   When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.
-__* Fragilility__
+* __Fragilility__
   A change in the object created by the function under test will necessitate a refactor of the test to supply matching data into the expectation.
 
 Make assertions with appropriate matchers rather than comparing complex objects with equality.

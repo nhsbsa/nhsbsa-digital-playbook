@@ -42,6 +42,39 @@ renders as:
 > warning detail text
 > !!!
 
+## Cards
+
+We use [markdown-it-container][markdown_it_container] to wrap sections of content in additional HTML. This is used to format content as the [NHS Card design component][nhs_card].
+
+Wrap the markdown content with `::: card` and `:::` markers
+
+This is particularly effective when combined with [definition lists](../markdown#definition-list).
+
+```text
+::: card
+### Section heading
+
+Term 1
+: Definition one
+
+Term 2
+: Definition two
+:::
+```
+
+render as:
+
+> ::: card
+>
+> ### Section heading
+>
+> Term 1
+> : Definition one
+>
+> Term 2
+> : Definition two
+> :::
+
 ## Code tabs
 
 We use [markdown-it-codetabs][markdown_it_codetabs] to provide code snippets in multiple languages.
@@ -73,7 +106,7 @@ We use [markdown-it-deflist][markdown_it_deflist] to provide definition lists, s
 ```text
 Term 1
 : Definition one including `nested markdown`
-and multi line content
+  and multi line content
 
 Term 2
 : Definition two
@@ -84,7 +117,7 @@ renders as:
 
 > Term 1
 > : Definition one including `nested markdown`
-> and multi line content
+>   and multi line content
 >
 > Term 2
 > : Definition two
@@ -154,6 +187,7 @@ A complete list can be [found here](https://github.com/ikatyang/emoji-cheat-shee
 [markdown_it_admonition]: <https://www.npmjs.com/package/markdown-it-admonition>
 [markdown_it_abbr]: <https://www.npmjs.com/package/markdown-it-abbr>
 [markdown_it_codetabs]: <https://www.npmjs.com/package/markdown-it-codetabs>
+[markdown_it_container]: <https://www.npmjs.com/package/markdown-it-container>
 [markdown_it_deflist]: <https://www.npmjs.com/package/markdown-it-deflist>
 [markdown_it_emoji]: <https://www.npmjs.com/package/markdown-it-emoji>
 [markdown_it_mark]: <https://www.npmjs.com/package/markdown-it-mark>
@@ -162,3 +196,4 @@ A complete list can be [found here](https://github.com/ikatyang/emoji-cheat-shee
 [github_emojis]: <https://emojipedia.org/github/>
 [nhs_warning_callout]: <https://service-manual.nhs.uk/design-system/components/warning-callout>
 [nhs_summary_list]: <https://service-manual.nhs.uk/design-system/components/summary-list>
+[nhs_card]: <https://service-manual.nhs.uk/design-system/components/card>
