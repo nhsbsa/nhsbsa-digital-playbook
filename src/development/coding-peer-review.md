@@ -7,7 +7,9 @@ order: 8
 ---
 Here we define the process for reviewing changes in production code using Git and Gitlab.
 
-> __NB: This is a prescriptive process, and should not be deviated from without agreement from your Delivery Manager and Professional Lead__
+!!! warning This process is mandatory
+Only deviate with agreement from your Delivery Manager and Professional Lead
+!!!
 
 The high level process is:
 
