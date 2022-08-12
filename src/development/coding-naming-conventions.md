@@ -26,7 +26,7 @@ Terms used in the naming conventions are:
     <td>
         <ul>
             <li><code>citizen</code></li>
-            <li><code>coporate</code></li>
+            <li><code>corporate</code></li>
             <li><code>primary-care</code></li>
             <li><code>workforce</code></li>
             <li><code>insight</code></li>
@@ -120,11 +120,16 @@ For all cases except `natural`, acronyms should be lowercased and treated as a s
 
 ## Git
 
+::: card
+
 ### Git Repositories
 
 Git repositories should be `kebab-case` with this convention:
 
 > `{optional service sub-group}-{service}-{function}-{type}`
+
+:::
+::: card
 
 ### Git branches
 
@@ -134,11 +139,17 @@ Git Branches should be `kebab-case` with this convention:
 
 Branches should be used for one change/ticket at a time and not collated into groups.
 
+:::
+::: card
+
 ### Gitlab groups
 
 Repositories in Gitlab should be organised into ‘groups’ with `natural` case and this convention:
 
 > `{service area}/{service sub-group}/{service}`
+
+:::
+::: card
 
 ### Merge/Pull Requests
 
@@ -146,11 +157,19 @@ Merge/pull requests should be raised with `natural` case and this convention:
 
 > `{change ID} - {brief description}`
 
+:::
+
+---
+
 ## Languages
 
-For language constructs refer to the standard language style guides.
+For language constructs refer to the [standard language style guides](../coding-style-guide/).
+
+---
 
 ## Package managers and build tools
+
+::: card
 
 ### Maven
 
@@ -170,8 +189,13 @@ Integration tests run by Maven Failsafe plugin should follow the convention:
 
 > `*IT.java`
 
+:::
+::: card
+
 ### NPM
 
 Package.json `name` should be `kebab-case` with this convention:
 
 > `@nhsbsa/{optional service sub-group}-{service}-{function}-{type}`
+
+:::
