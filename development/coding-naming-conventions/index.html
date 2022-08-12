@@ -154,7 +154,7 @@
     <td>
         <ul>
             <li><code>citizen</code></li>
-            <li><code>coporate</code></li>
+            <li><code>corporate</code></li>
             <li><code>primary-care</code></li>
             <li><code>workforce</code></li>
             <li><code>insight</code></li>
@@ -243,30 +243,41 @@
 <p>For all cases except <code>natural</code>, acronyms should be lowercased and treated as a single word.</p>
 <hr>
 <h2 id="git" tabindex="-1"><a class="header-anchor" href="#git">Git</a></h2>
+<div class="card">
 <h3 id="git-repositories" tabindex="-1"><a class="header-anchor" href="#git-repositories">Git Repositories</a></h3>
 <p>Git repositories should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
 <p><code>{optional service sub-group}-{service}-{function}-{type}</code></p>
 </blockquote>
+</div>
+<div class="card">
 <h3 id="git-branches" tabindex="-1"><a class="header-anchor" href="#git-branches">Git branches</a></h3>
 <p>Git Branches should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
 <p><code>{type}/{change ID}-{brief description}</code></p>
 </blockquote>
 <p>Branches should be used for one change/ticket at a time and not collated into groups.</p>
+</div>
+<div class="card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
 <p>Repositories in Gitlab should be organised into ‘groups’ with <code>natural</code> case and this convention:</p>
 <blockquote>
 <p><code>{service area}/{service sub-group}/{service}</code></p>
 </blockquote>
+</div>
+<div class="card">
 <h3 id="merge/pull-requests" tabindex="-1"><a class="header-anchor" href="#merge/pull-requests">Merge/Pull Requests</a></h3>
 <p>Merge/pull requests should be raised with <code>natural</code> case and this convention:</p>
 <blockquote>
 <p><code>{change ID} - {brief description}</code></p>
 </blockquote>
+</div>
+<hr>
 <h2 id="languages" tabindex="-1"><a class="header-anchor" href="#languages">Languages</a></h2>
-<p>For language constructs refer to the standard language style guides.</p>
+<p>For language constructs refer to the <a href="../coding-style-guide/">standard language style guides</a>.</p>
+<hr>
 <h2 id="package-managers-and-build-tools" tabindex="-1"><a class="header-anchor" href="#package-managers-and-build-tools">Package managers and build tools</a></h2>
+<div class="card">
 <h3 id="maven" tabindex="-1"><a class="header-anchor" href="#maven">Maven</a></h3>
 <p>Maven <code>group id</code> should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
@@ -284,12 +295,16 @@
 <blockquote>
 <p><code>*IT.java</code></p>
 </blockquote>
+</div>
+<div class="card">
 <h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">NPM</a></h3>
 <p>Package.json <code>name</code> should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
 <p><code>@nhsbsa/{optional service sub-group}-{service}-{function}-{type}</code></p>
 </blockquote>
+</div>
 
+      <hr>
       <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
       <p>If you spot anything factually incorrect with this page or have ideas for improvement,
         please share your suggestions.</p>
@@ -312,7 +327,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-08-01T12:06:10.918Z">1 August 2022</time>
+            Published <time datetime="2022-08-12T10:30:17.756Z">12 August 2022</time>
           </p>
       </div>
   </div>
