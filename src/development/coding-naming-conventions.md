@@ -133,7 +133,7 @@ Git repositories should be `kebab-case` with this convention:
 
 ### Git branches
 
-Git Branches should be `kebab-case` with this convention:
+The mainline branch should be named `main`. All other branches should be `kebab-case` with this convention:
 
 > `{type}/{change ID}-{brief description}`
 
