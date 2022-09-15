@@ -122,6 +122,28 @@ renders as:
 > Term 2
 > : Definition two
 
+## Expanding details
+
+We use [markdown-it-container][markdown_it_container] to provide an [expanding details component][nhs_expanding_details].
+
+Wrap the markdown content with `::: details` and `:::` markers
+
+```md
+::: details show more
+ 
+Content here
+
+:::
+```
+
+renders as:
+
+> ::: details show more
+> 
+> Content here
+> 
+> :::
+
 ## Highlight
 
 We use [markdown-it-mark][markdown_it_mark] to provided highlight of text.
@@ -193,7 +215,7 @@ A complete list can be [found here](https://github.com/ikatyang/emoji-cheat-shee
 [markdown_it_mark]: <https://www.npmjs.com/package/markdown-it-mark>
 [markdown_it_sub]: <https://www.npmjs.com/package/markdown-it-sub>
 [markdown_it_sup]: <https://www.npmjs.com/package/markdown-it-sup>
-[github_emojis]: <https://emojipedia.org/github/>
 [nhs_warning_callout]: <https://service-manual.nhs.uk/design-system/components/warning-callout>
 [nhs_summary_list]: <https://service-manual.nhs.uk/design-system/components/summary-list>
 [nhs_card]: <https://service-manual.nhs.uk/design-system/components/card>
+[nhs_expanding_details]: <https://service-manual.nhs.uk/design-system/components/details>
