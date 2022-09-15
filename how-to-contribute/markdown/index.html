@@ -94,6 +94,9 @@
                     <li><a href="#definition-list">Definition list</a>
             		</li>
 
+                    <li><a href="#expanding-details">Expanding details</a>
+            		</li>
+
                     <li><a href="#highlight">Highlight</a>
             		</li>
 
@@ -193,6 +196,17 @@ and multi line content</dd>
 <dd>Definition two</dd>
 </dl>
 </blockquote>
+<h2 id="expanding-details" tabindex="-1"><a class="header-anchor" href="#expanding-details">Expanding details</a></h2>
+<p>We use <a href="https://www.npmjs.com/package/markdown-it-container" target="_blank" rel="noopener">markdown-it-container</a> to provide an <a href="https://service-manual.nhs.uk/design-system/components/details" target="_blank" rel="noopener">expanding details component</a>.</p>
+<p>Wrap the markdown content with <code>::: details</code> and <code>:::</code> markers</p>
+<pre class="language-md"><code class="language-md">::: details show more<br> <br>Content here<br><br>:::</code></pre>
+<p>renders as:</p>
+<blockquote>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">show more</span></summary>
+<div class="nhsuk-details__text">
+<p>Content here</p>
+</div></details>
+</blockquote>
 <h2 id="highlight" tabindex="-1"><a class="header-anchor" href="#highlight">Highlight</a></h2>
 <p>We use <a href="https://www.npmjs.com/package/markdown-it-mark" target="_blank" rel="noopener">markdown-it-mark</a> to provided highlight of text.</p>
 <pre class="language-text"><code class="language-text">==highlighted==</code></pre>
@@ -260,7 +274,7 @@ and multi line content</dd>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-08-17T15:01:22.642Z">17 August 2022</time>
+            Published <time datetime="2022-09-15T18:11:15.871Z">15 September 2022</time>
           </p>
       </div>
   </div>
