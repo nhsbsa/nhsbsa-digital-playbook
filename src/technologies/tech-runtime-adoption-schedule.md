@@ -71,10 +71,44 @@ __DECOMMISSION__
 
 <table class="alternate-even">
 <tr><th>Version</th><th>Status</th>                           <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>21</td>     <td class="t_assess"><em>ASSESS</em></td>            <td>2023-11</td><td>2024-05</td><td>2031-</td><td>-</td></tr>
+<tr><td>21</td>     <td class="t_assess"><em>ASSESS</em></td>            <td>2023-11</td><td>2024-05</td><td>2031-09</td><td>-</td></tr>
 <tr><td>17</td>     <td class="t_adopt"><em>ADOPT</em></td>     <td>2021-11</td><td>2022-05</td><td>2026-06</td><td>2029-09</td></tr>
 <tr><td>11</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2018-09</td><td>2019-03</td><td>2023-06</td><td>2026-09</td></tr>
 <tr><td>8</td>      <td class="t_decommission"><em>DECOMMISSION</em></td><td>2014-03</td><td>2015-09</td><td>2021-12</td><td>2030-12</td></tr>
+</table>
+
+### Spring Boot
+
+::: details How we work out the adoption schedule for Spring Boot
+
+We follow the [Spring Boot support](https://spring.io/projects/spring-boot#support) using these dates:
+
+* Initial release date
+* End of support date
+
+::: card
+
+__ASSESS__
+: on initial release
+
+__ADOPT__
+: 3 months after initial release
+
+__DEPRECATE__
+: 3 months before support end date
+
+__DECOMMISSION__
+: at end date
+
+:::
+
+<table class="alternate-even">
+<tr><th>Version</th><th>Status</th>                                         <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
+<tr><td>3.0.x</td>     <td class="t_assess"><em>ASSESS</em></td>            <td>2022-11-24</td><td>2023-02-24</td><td>2023-08-24</td><td>2023-11-24</td></tr>
+<tr><td>2.7.x</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-05-19</td><td>2022-08-19</td><td>2023-08-18</td><td>2023-11-18</td></tr>
+<tr><td>2.6.x</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-11-17</td><td>2022-02-17</td><td>2022-08-24</td><td>2022-11-24</td></tr>
+<tr><td>2.5.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2021-05-20</td><td>2021-08-20</td><td>2022-02-19</td><td>2022-05-19</td></tr>
+<tr><td>2.4.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2020-11-12</td><td>2021-02-12</td><td>2021-08-18</td><td>2021-11-18</td></tr>
 </table>
 
 ## Node.js
