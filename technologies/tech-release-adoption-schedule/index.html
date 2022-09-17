@@ -12,7 +12,7 @@
     
     
     
-    <title>Runtime and service adoption schedule  - NHSBSA
+    <title>Release adoption schedule  - NHSBSA
 </title>
 
     
@@ -37,7 +37,7 @@
 
 
 <link href="/nhsbsa-digital-playbook/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" >
-<meta property="og:title" content="Runtime and service adoption schedule">
+<meta property="og:title" content="Release adoption schedule">
 <meta property="og:image" content="/images/opengraph-image.png">
     
     
@@ -73,20 +73,20 @@
         <div class="nhsbsa-sticky-nav__list">
                 <ol>
                     
-                    <li><a href="#java">Java</a>
-            
-                <ol>
-                    
-                    <li><a href="#spring-boot">Spring Boot</a>
-            		</li>
-                </ol>
-            		</li>
-
                     <li><a href="#nodejs">Node.js</a>
             
                 <ol>
                     
                     <li><a href="#aws-lambda-nodejs">AWS Lambda - Node.js</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#java">Java</a>
+            
+                <ol>
+                    
+                    <li><a href="#spring-boot">Spring Boot</a>
             		</li>
                 </ol>
             		</li>
@@ -105,7 +105,7 @@
       
       <div class="nhsbsa-article-header">
         <h1 class="nhsuk-heading-xl">
-          Runtime and service adoption schedule
+          Release adoption schedule
         </h1>
           <strong class="nhsuk-tag nhsuk-tag--grey">
   DRAFT
@@ -124,11 +124,11 @@
     <table>
       <tr>
       <th>Document location</th>
-      <td><a href="/nhsbsa-digital-playbook/technologies/tech-runtime-adoption-schedule/">/nhsbsa-digital-playbook/technologies/tech-runtime-adoption-schedule/</a></td>
+      <td><a href="/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/">/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/</a></td>
       </tr>
       <tr>
       <th>Title</th>
-      <td>Runtime and service adoption schedule</td>
+      <td>Release adoption schedule</td>
       </tr>
       <tr>
       <th>Author</th>
@@ -174,7 +174,7 @@
   </div>
 </details>
 
-<p>To effectively manage change for our runtimes we maintain an adoption schedule based on these <em>phases</em>:</p>
+<p>To manage change of our runtimes and downstream services we maintain a release adoption schedule based on these <em>phases</em>:</p>
 <div class="card">
 <dl>
 <dt class="t_assess"><em>ASSESS</em></dt>
@@ -192,64 +192,6 @@ The deprecation date is a final deadline for moving off this version.</dd>
 Schedules contain information on decommissioned versions visibility.</dd>
 </dl>
 </div>
-<h2 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h2>
-<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Java</span></summary>
-<div class="nhsuk-details__text">
-<p>We follow the <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" target="_blank" rel="noopener">Java SE support roadmap</a> using these dates:</p>
-<ul>
-<li>General Availability (GA) date</li>
-<li>Premier support date</li>
-<li>Extended support date</li>
-</ul>
-<div class="card">
-<dl>
-<dt><strong>ASSESS</strong></dt>
-<dd>on GA date</dd>
-<dt><strong>ADOPT</strong></dt>
-<dd>6 months after GA</dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>3 months before premier support end date</dd>
-<dt><strong>DECOMMISSION</strong></dt>
-<dd>at premier extended end date</dd>
-</dl>
-</div>
-</div></details>
-<table class="alternate-even">
-<tr><th>Version</th><th>Status</th>                           <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>21</td>     <td class="t_assess"><em>ASSESS</em></td>            <td>2023-11</td><td>2024-05</td><td>2031-09</td><td>-</td></tr>
-<tr><td>17</td>     <td class="t_adopt"><em>ADOPT</em></td>     <td>2021-11</td><td>2022-05</td><td>2026-06</td><td>2029-09</td></tr>
-<tr><td>11</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2018-09</td><td>2019-03</td><td>2023-06</td><td>2026-09</td></tr>
-<tr><td>8</td>      <td class="t_decommission"><em>DECOMMISSION</em></td><td>2014-03</td><td>2015-09</td><td>2021-12</td><td>2030-12</td></tr>
-</table>
-<h3 id="spring-boot" tabindex="-1"><a class="header-anchor" href="#spring-boot">Spring Boot</a></h3>
-<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Spring Boot</span></summary>
-<div class="nhsuk-details__text">
-<p>We follow the <a href="https://spring.io/projects/spring-boot#support" target="_blank" rel="noopener">Spring Boot support</a> using these dates:</p>
-<ul>
-<li>Initial release date</li>
-<li>End of support date</li>
-</ul>
-<div class="card">
-<dl>
-<dt><strong>ASSESS</strong></dt>
-<dd>on initial release</dd>
-<dt><strong>ADOPT</strong></dt>
-<dd>3 months after initial release</dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>3 months before support end date</dd>
-<dt><strong>DECOMMISSION</strong></dt>
-<dd>at end date</dd>
-</dl>
-</div>
-</div></details>
-<table class="alternate-even">
-<tr><th>Version</th><th>Status</th>                                         <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>3.0.x</td>     <td class="t_assess"><em>ASSESS</em></td>            <td>2022-11-24</td><td>2023-02-24</td><td>2023-08-24</td><td>2023-11-24</td></tr>
-<tr><td>2.7.x</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-05-19</td><td>2022-08-19</td><td>2023-08-18</td><td>2023-11-18</td></tr>
-<tr><td>2.6.x</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-11-17</td><td>2022-02-17</td><td>2022-08-24</td><td>2022-11-24</td></tr>
-<tr><td>2.5.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2021-05-20</td><td>2021-08-20</td><td>2022-02-19</td><td>2022-05-19</td></tr>
-<tr><td>2.4.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2020-11-12</td><td>2021-02-12</td><td>2021-08-18</td><td>2021-11-18</td></tr>
-</table>
 <h2 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">Node.js</a></h2>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Node.js</span></summary>
 <div class="nhsuk-details__text">
@@ -266,7 +208,7 @@ Schedules contain information on decommissioned versions visibility.</dd>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Status</th>                                      <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
+<tr><th>Version</th><th>Current phase</th>                                      <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
 <tr><td>v20</td>    <td>Pending release</td>                             <td>2023-04-18</td><td>2023-10-24</td><td>2024-10-22</td><td>-</td></tr>
 <tr><td>v18</td>    <td class="t_assess"><em>ASSESS</em></td>            <td>2022-04-19</td><td>2022-10-25</td><td>2023-10-18</td><td>2025-04-30</td></tr>
 <tr><td>v16</td>    <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-04-20</td><td>2021-10-26</td><td>2022-10-18</td><td>2023-09-11</td></tr>
@@ -295,10 +237,68 @@ Schedules contain information on decommissioned versions visibility.</dd>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Status</th>                                <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
+<tr><th>Version</th><th>Current phase</th>                                <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
 <tr><td>v16</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-05-11</td><td>2022-11-11</td><td>-</td><td>-</td></tr>
 <tr><td>v14</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2021-01-27</td><td>2021-07-27</td><td>-</td><td>-</td></tr>
 <tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td><td>2020-05-18</td><td>2022-08-14</td><td>2022-11-14</td></tr>
+</table>
+<h2 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h2>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Java</span></summary>
+<div class="nhsuk-details__text">
+<p>We follow the <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" target="_blank" rel="noopener">Java SE support roadmap</a> using these dates:</p>
+<ul>
+<li>General Availability (GA) date</li>
+<li>Premier support date</li>
+<li>Extended support date</li>
+</ul>
+<div class="card">
+<dl>
+<dt><strong>ASSESS</strong></dt>
+<dd>on GA date</dd>
+<dt><strong>ADOPT</strong></dt>
+<dd>6 months after GA</dd>
+<dt><strong>DEPRECATE</strong></dt>
+<dd>3 months before premier support end date</dd>
+<dt><strong>DECOMMISSION</strong></dt>
+<dd>at premier extended end date</dd>
+</dl>
+</div>
+</div></details>
+<table class="alternate-even">
+<tr><th>Version</th><th>Current phase</th>                           <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
+<tr><td>21</td>     <td>Pending release</td>            <td>2023-11</td><td>2024-05</td><td>2031-09</td><td>-</td></tr>
+<tr><td>17</td>     <td class="t_adopt"><em>ADOPT</em></td>     <td>2021-11</td><td>2022-05</td><td>2026-06</td><td>2029-09</td></tr>
+<tr><td>11</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2018-09</td><td>2019-03</td><td>2023-06</td><td>2026-09</td></tr>
+<tr><td>8</td>      <td class="t_decommission"><em>DECOMMISSION</em></td><td>2014-03</td><td>2015-09</td><td>2021-12</td><td>2030-12</td></tr>
+</table>
+<h3 id="spring-boot" tabindex="-1"><a class="header-anchor" href="#spring-boot">Spring Boot</a></h3>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Spring Boot</span></summary>
+<div class="nhsuk-details__text">
+<p>We follow the <a href="https://spring.io/projects/spring-boot#support" target="_blank" rel="noopener">Spring Boot support</a> using these dates:</p>
+<ul>
+<li>Initial release date</li>
+<li>End of support date</li>
+</ul>
+<div class="card">
+<dl>
+<dt><strong>ASSESS</strong></dt>
+<dd>on initial release</dd>
+<dt><strong>ADOPT</strong></dt>
+<dd>3 months after initial release</dd>
+<dt><strong>DEPRECATE</strong></dt>
+<dd>3 months before support end date</dd>
+<dt><strong>DECOMMISSION</strong></dt>
+<dd>at end date</dd>
+</dl>
+</div>
+</div></details>
+<table class="alternate-even">
+<tr><th>Version</th><th>Current phase</th>                                         <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
+<tr><td>3.0.x</td>     <td>Pending release</td>                             <td>2022-11-24</td><td>2023-02-24</td><td>2023-08-24</td><td>2023-11-24</td></tr>
+<tr><td>2.7.x</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-05-19</td><td>2022-08-19</td><td>2023-08-18</td><td>2023-11-18</td></tr>
+<tr><td>2.6.x</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-11-17</td><td>2022-02-17</td><td>2022-08-24</td><td>2022-11-24</td></tr>
+<tr><td>2.5.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2021-05-20</td><td>2021-08-20</td><td>2022-02-19</td><td>2022-05-19</td></tr>
+<tr><td>2.4.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2020-11-12</td><td>2021-02-12</td><td>2021-08-18</td><td>2021-11-18</td></tr>
 </table>
 
       <hr>
@@ -310,7 +310,7 @@ Schedules contain information on decommissioned versions visibility.</dd>
       Github is an open forum where we collect feedback.</p>
       
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/issues/new?template=playbook-proposal.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Ftech-runtime-adoption-schedule&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/issues/new?template=playbook-proposal.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Ftech-release-adoption-schedule&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -324,7 +324,7 @@ Schedules contain information on decommissioned versions visibility.</dd>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-09-16T14:27:45.477Z">16 September 2022</time>
+            Published <time datetime="2022-09-17T09:22:34.060Z">17 September 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-09-14T00:00:00.000Z">14 September 2022</time>

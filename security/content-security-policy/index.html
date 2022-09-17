@@ -181,9 +181,6 @@
 
                     <li><a href="#manifest-src">manifest-src</a>
             		</li>
-
-                    <li><a href="#navigate-to">navigate-to</a>
-            		</li>
                 </ol>
             		</li>
 
@@ -293,6 +290,15 @@
         <td>PT</td>
         <td>AW</td>
         <td>Initial release</td>
+        </tr>
+        <tr>
+        <td>1.1</td>
+        <td>
+          <time datetime="2022-09-17T00:00:00.000Z">17 September 2022</time>
+        </td>
+        <td>PT</td>
+        <td>AW</td>
+        <td>CSP `navigate-to` directive removed from CSP L3 working draft</td>
         </tr>
       </table>
   </div>
@@ -750,26 +756,6 @@ Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
 </dl>
 </div>
 <div class="card">
-<h3 id="navigate-to" tabindex="-1"><a class="header-anchor" href="#navigate-to">navigate-to</a></h3>
-<dl>
-<dt>Reference</dt>
-<dd>
-<p>Restricts the URLs that the document may navigate to by any means. For example when a link is clicked, a form is submitted, or window.location is invoked. If form-action is present then this directive is ignored for form submissions.</p>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to</a></li>
-<li><a href="https://www.w3.org/TR/CSP/#directive-navigate-to" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-navigate-to</a></li>
-</ul>
-</dd>
-<dt>Guidance</dt>
-<dd>
-<p>Requires robust support for application to determine all potential links</p>
-</dd>
-<dt>Recommended value</dt>
-<dd>
-<p>N/A</p>
-</dd>
-</dl>
-</div>
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
 <div class="card">
 <h3 id="object-src" tabindex="-1"><a class="header-anchor" href="#object-src">object-src</a></h3>
@@ -793,6 +779,7 @@ Consult with security team before use</p>
 <p>N/A</p>
 </dd>
 </dl>
+</div>
 </div>
 <div class="card">
 <h3 id="frame-src" tabindex="-1"><a class="header-anchor" href="#frame-src">frame-src</a></h3>
@@ -881,7 +868,7 @@ Consult with security team before use</p>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-09-16T14:27:45.473Z">16 September 2022</time>
+            Published <time datetime="2022-09-17T09:22:34.060Z">17 September 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-30T00:00:00.000Z">30 June 2022</time>
