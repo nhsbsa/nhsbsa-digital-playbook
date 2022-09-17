@@ -185,120 +185,107 @@ Teams may choose to adopt if they understand and accept any risks involved.</dd>
 Teams should schedule migration based on the adoption date.</dd>
 <dt class="t_deprecate"><em>DEPRECATE</em></dt>
 <dd>Move off from this version.<br>
-When the next version is set for adoption, previous versions will deprecate and teams should migrate forward.<br>
-The deprecation date is a final deadline for moving off this version.</dd>
+When the next version is set for adoption, previous versions will deprecate and teams should migrate forward.</dd>
 <dt class="t_decommission"><em>DECOMMISSION</em></dt>
 <dd>Do not use this version.<br>
-Schedules contain information on decommissioned versions visibility.</dd>
+The decommission date is a final deadline for moving off this version.<br>
+Schedules contain information on decommissioned versions for visibility.</dd>
 </dl>
 </div>
 <h2 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">Node.js</a></h2>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Node.js</span></summary>
 <div class="nhsuk-details__text">
-<p>We follow the <a href="https://nodejs.org/en/about/releases/" target="_blank" rel="noopener">Node.js</a> release schedule:</p>
+<p>We follow the <a href="https://nodejs.org/en/about/releases/" target="_blank" rel="noopener">Node.js</a> release schedule.</p>
 <div class="card">
 <dl>
 <dt><strong>ASSESS</strong></dt>
-<dd>when at <em>Current LTS</em></dd>
+<dd>on <em>initial release</em></dd>
 <dt><strong>ADOPT</strong></dt>
-<dd>when at <em>Active LTS</em></dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>when at <em>Maintenance LTS</em></dd>
+<dd>at <em>active LTS start</em> (6 months after initial release)</dd>
+<dt><strong>DECOMMISSION</strong></dt>
+<dd>by <em>end of life</em></dd>
 </dl>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Current phase</th>                                      <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>v20</td>    <td>Pending release</td>                             <td>2023-04-18</td><td>2023-10-24</td><td>2024-10-22</td><td>-</td></tr>
-<tr><td>v18</td>    <td class="t_assess"><em>ASSESS</em></td>            <td>2022-04-19</td><td>2022-10-25</td><td>2023-10-18</td><td>2025-04-30</td></tr>
-<tr><td>v16</td>    <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-04-20</td><td>2021-10-26</td><td>2022-10-18</td><td>2023-09-11</td></tr>
-<tr><td>v14</td>    <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2020-04-21</td><td>2020-10-27</td><td>2021-10-19</td><td>2023-04-30</td></tr>
-<tr><td>v12</td>    <td class="t_decommission"><em>DECOMMISSION</em></td><td>2019-04-23</td><td>2019-10-21</td><td>2020-11-30</td><td>2022-04-30</td></tr>
+<tr><th>Version</th><th>Current phase</th>                               <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
+<tr><td>v20</td>    <td>Pending release</td>                             <td>2023-04-18</td>  <td>2023-10-24</td><td>2026-04-30</td></tr>
+<tr><td>v18</td>    <td class="t_assess"><em>ASSESS</em></td>            <td>2022-04-19</td>  <td>2022-10-25</td><td>2025-04-30</td></tr>
+<tr><td>v16</td>    <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-04-20</td>  <td>2021-10-26</td><td>2023-09-11</td></tr>
+<tr><td>v14</td>    <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2020-04-21</td>  <td>2020-10-27</td><td>2023-04-30</td></tr>
+<tr><td>v12</td>    <td class="t_decommission"><em>DECOMMISSION</em></td><td>2019-04-23</td>  <td>2019-10-21</td><td>2022-04-30</td></tr>
 </table>
 <h3 id="aws-lambda-nodejs" tabindex="-1"><a class="header-anchor" href="#aws-lambda-nodejs">AWS Lambda - Node.js</a></h3>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Node.js Lambdas</span></summary>
 <div class="nhsuk-details__text">
-<p>AWS Lambdas run on platforms managed by Amazon. We adhere to their release and deprecation timelines.</p>
+<p>AWS Lambdas run on platforms managed by Amazon. They publish release dates and a deprecation policy.</p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html" target="_blank" rel="noopener">AWS Lambda releases</a> specifies release dates for new runtimes</li>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy" target="_blank" rel="noopener">AWS Lambda runtime deprecation policy</a> specifies deprecration dates</li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html" target="_blank" rel="noopener">AWS Lambda releases</a></li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy" target="_blank" rel="noopener">AWS Lambda runtime deprecation policy</a></li>
 </ul>
 <div class="card">
 <dl>
 <dt><strong>ASSESS</strong></dt>
-<dd>on AWS release</dd>
+<dd>on <em>AWS release</em></dd>
 <dt><strong>ADOPT</strong></dt>
-<dd>6 months after AWS release</dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>3 months before AWS Phase 1 deprecation</dd>
+<dd>6 months after <em>AWS release</em></dd>
 <dt><strong>DECOMMISSION</strong></dt>
-<dd>at AWS Phase 1 deprecation</dd>
+<dd>by <em>AWS Phase 1 deprecation</em></dd>
 </dl>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Current phase</th>                                <th>Release</th>   <th>Adopt</th>     <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>v16</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-05-11</td><td>2022-11-11</td><td>-</td><td>-</td></tr>
-<tr><td>v14</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2021-01-27</td><td>2021-07-27</td><td>-</td><td>-</td></tr>
-<tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td><td>2020-05-18</td><td>2022-08-14</td><td>2022-11-14</td></tr>
+<tr><th>Version</th><th>Current phase</th>                         <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
+<tr><td>v16</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-05-11</td>  <td>2022-11-11</td><td>-</td></tr>
+<tr><td>v14</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2021-01-27</td>  <td>2021-07-27</td><td>-</td></tr>
+<tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td>  <td>2020-05-18</td><td>2022-11-14</td></tr>
 </table>
 <h2 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h2>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Java</span></summary>
 <div class="nhsuk-details__text">
-<p>We follow the <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" target="_blank" rel="noopener">Java SE support roadmap</a> using these dates:</p>
-<ul>
-<li>General Availability (GA) date</li>
-<li>Premier support date</li>
-<li>Extended support date</li>
-</ul>
+<p>We follow the <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" target="_blank" rel="noopener">Java SE support roadmap</a>.</p>
+<p>Our standard builds use the Temurin Java runtime which maintains its own <a href="https://adoptium.net/en-GB/support/" target="_blank" rel="noopener">release roadmap</a>.</p>
 <div class="card">
 <dl>
 <dt><strong>ASSESS</strong></dt>
-<dd>on GA date</dd>
+<dd>on <em>Java SE General Availability (GA) date</em></dd>
 <dt><strong>ADOPT</strong></dt>
-<dd>6 months after GA</dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>3 months before premier support end date</dd>
+<dd>6 months after <em>Java SE GA date</em></dd>
 <dt><strong>DECOMMISSION</strong></dt>
-<dd>at premier extended end date</dd>
+<dd>by <em>Java SE premier support end date</em></dd>
 </dl>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Current phase</th>                           <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>21</td>     <td>Pending release</td>            <td>2023-11</td><td>2024-05</td><td>2031-09</td><td>-</td></tr>
-<tr><td>17</td>     <td class="t_adopt"><em>ADOPT</em></td>     <td>2021-11</td><td>2022-05</td><td>2026-06</td><td>2029-09</td></tr>
-<tr><td>11</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2018-09</td><td>2019-03</td><td>2023-06</td><td>2026-09</td></tr>
-<tr><td>8</td>      <td class="t_decommission"><em>DECOMMISSION</em></td><td>2014-03</td><td>2015-09</td><td>2021-12</td><td>2030-12</td></tr>
+<tr><th>Version</th><th>Current phase</th>                               <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
+<tr><td>21</td>     <td>Pending release</td>                             <td>2023-11</td>     <td>2024-05</td>   <td>2028-09</td></tr>
+<tr><td>17</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-11</td>     <td>2022-05</td>   <td>2026-09</td></tr>
+<tr><td>11</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2018-09</td>     <td>2019-03</td>   <td>2023-09</td></tr>
+<tr><td>8</td>      <td class="t_decommission"><em>DECOMMISSION</em></td><td>2014-03</td>     <td>2015-09</td>   <td>2022-03</td></tr>
 </table>
 <h3 id="spring-boot" tabindex="-1"><a class="header-anchor" href="#spring-boot">Spring Boot</a></h3>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Spring Boot</span></summary>
 <div class="nhsuk-details__text">
-<p>We follow the <a href="https://spring.io/projects/spring-boot#support" target="_blank" rel="noopener">Spring Boot support</a> using these dates:</p>
-<ul>
-<li>Initial release date</li>
-<li>End of support date</li>
-</ul>
+<p>We follow the <a href="https://spring.io/projects/spring-boot#support" target="_blank" rel="noopener">Spring Boot support roadmap</a>.<br>
+Spring Boot uses a 6 month release cycle between minor versions with a 3 month overlap for <a href="https://tanzu.vmware.com/support/oss" target="_blank" rel="noopener">Open Source Software (OSS) support</a>.</p>
 <div class="card">
 <dl>
 <dt><strong>ASSESS</strong></dt>
 <dd>on initial release</dd>
 <dt><strong>ADOPT</strong></dt>
-<dd>3 months after initial release</dd>
-<dt><strong>DEPRECATE</strong></dt>
-<dd>3 months before support end date</dd>
+<dd>2 months after initial release</dd>
 <dt><strong>DECOMMISSION</strong></dt>
-<dd>at end date</dd>
+<dd>by end of OSS support date</dd>
 </dl>
 </div>
 </div></details>
 <table class="alternate-even">
-<tr><th>Version</th><th>Current phase</th>                                         <th>Release</th><th>Adopt</th> <th>Deprecate</th> <th>Decommission</th></tr>
-<tr><td>3.0.x</td>     <td>Pending release</td>                             <td>2022-11-24</td><td>2023-02-24</td><td>2023-08-24</td><td>2023-11-24</td></tr>
-<tr><td>2.7.x</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-05-19</td><td>2022-08-19</td><td>2023-08-18</td><td>2023-11-18</td></tr>
-<tr><td>2.6.x</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-11-17</td><td>2022-02-17</td><td>2022-08-24</td><td>2022-11-24</td></tr>
-<tr><td>2.5.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2021-05-20</td><td>2021-08-20</td><td>2022-02-19</td><td>2022-05-19</td></tr>
-<tr><td>2.4.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2020-11-12</td><td>2021-02-12</td><td>2021-08-18</td><td>2021-11-18</td></tr>
+<tr><th>Version</th><th>Current phase</th>                                  <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
+<tr><td>3.0.x</td>     <td>Pending release</td>                             <td>2022-11-24</td>  <td>2023-01-24</td><td>2023-11-24</td></tr>
+<tr><td>2.7.x</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-05-19</td>  <td>2022-07-19</td><td>2023-11-18</td></tr>
+<tr><td>2.6.x</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-11-17</td>  <td>2022-01-17</td><td>2022-11-24</td></tr>
+<tr><td>2.5.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2021-05-20</td>  <td>2021-07-20</td><td>2022-05-19</td></tr>
+<tr><td>2.4.x</td>     <td class="t_decommission"><em>DECOMMISSION</em></td><td>2020-11-12</td>  <td>2021-01-12</td><td>2021-11-18</td></tr>
 </table>
 
       <hr>
@@ -324,7 +311,7 @@ Schedules contain information on decommissioned versions visibility.</dd>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-09-17T09:28:06.990Z">17 September 2022</time>
+            Published <time datetime="2022-09-17T10:48:39.570Z">17 September 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-09-14T00:00:00.000Z">14 September 2022</time>
