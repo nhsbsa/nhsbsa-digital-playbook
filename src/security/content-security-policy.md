@@ -26,6 +26,11 @@ issuesheet:
       amended_by: "PT"
       approved_by: "AW"
       details: "Initial release"
+    - version: "1.1"
+      date: 2022-09-17
+      amended_by: "PT"
+      approved_by: "AW"
+      details: "CSP `navigate-to` directive removed from CSP L3 working draft"
 ---
 A Content Security Policy (CSP) helps prevent unwanted content from being injected/loaded into your webpages. This can mitigate cross-site scripting (XSS) vulnerabilities, clickjacking, formjacking, malicious frames, unwanted trackers, and other web client-side attacks.
 
@@ -540,22 +545,6 @@ Recommended value
 
 :::
 ::: card
-
-### navigate-to
-
-Reference
-: Restricts the URLs that the document may navigate to by any means. For example when a link is clicked, a form is submitted, or window.location is invoked. If form-action is present then this directive is ignored for form submissions.
-
-  * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to>
-  * <https://www.w3.org/TR/CSP/#directive-navigate-to>
-
-Guidance
-: Requires robust support for application to determine all potential links
-
-Recommended value
-: N/A
-
-:::
 
 ## SHOULD NOT
 
