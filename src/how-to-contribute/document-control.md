@@ -3,7 +3,7 @@ layout: article
 title: "Document control"
 description: "Add useful information so your readers can see what's changed"
 tags: [playbook]
-order: 5
+order: 6
 review:
     last_reviewed_date: 2022-06-24
     review_cycle: ANNUAL

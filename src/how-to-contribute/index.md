@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "How to contribute to the playbook"
+title: "Contributing to the playbook"
 tags: [home, 11ty]
 order: 1000
 related:
