@@ -3,7 +3,7 @@ layout: article
 title: "Suggest a change"
 description: "Use Github issues to suggest and manage change"
 tags: [playbook]
-order: 1
+order: 2
 ---
 ## Github Issues
 
@@ -32,6 +32,7 @@ Use NHSBSA Slack or Teams to draw attention to your suggestion and get feedback:
 
 * Is there really a need?
 * Is the proposal the right approach?
+* Are there any privacy or security concerns?
 * Can anyone help?
 
 ## Draft content

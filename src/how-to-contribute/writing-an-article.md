@@ -3,7 +3,7 @@ layout: article
 title: "Writing an article"
 description: "Step by step instructions on how to write a playbook article"
 tags: playbook
-order: 4
+order: 5
 ---
 To write a new article:
 

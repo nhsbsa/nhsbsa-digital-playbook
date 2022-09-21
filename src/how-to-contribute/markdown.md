@@ -3,7 +3,7 @@ layout: article
 title: "Markdown"
 description: "How to enhance your documents with effective Markdown"
 tags: playbook
-order: 5
+order: 6
 ---
 This guide shows you some playbook specific tips. For general guidance on Markdown consult these references:
 
