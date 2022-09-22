@@ -16,7 +16,7 @@ It is _open_. The articles are stored in an open source repository, and publishe
 
 It is _specific_ to how we work at the NHSBSA, but _general_ enough to apply across different services.
 
-It is _readable_, like a book but can  _reference_. Articles should stand alone and convey enough valuable information to be worthwhile.
+It is _readable_, like a book but also as a _reference_. Articles should stand alone and convey enough valuable information to be worthwhile.
 
 ## Users
 
@@ -33,7 +33,7 @@ We should consider these core users when writing content:
 * Guides
   To explain how to do things at the NHSBSA.
 * Tool choices
-  To clarify our preferred toolset so we don't waste time researching multiple times, and we don't diverge too far across our services
+  To clarify our preferred toolset so we don't waste time researching multiple times, and we don't diverge too far across our services.
 * Links
   We link to existing guidance where appropriate. E.g. UK Government, NHS, NCSC and worldwide SME authorities such as OWASP.
   We avoid linking to other organisations where the content is specific to them.  
@@ -41,13 +41,12 @@ We should consider these core users when writing content:
 ## What shouldn't be in the playbook?
 
 * Confidential information
-  This includes:
-  * Personally Identifiable Information such as names and email addresses
+  This includes Personally Identifiable Information such as names and email addresses
   Provide links to confidential content on the NHSBSA intranet (The Hub)
 * Project specific information
   Every project team maintains their own project documentation. This is not that.
 * In depth analysis and decision logs
-  The playbook contains how we do things, now. It doesn't need to say how we got there
+  The playbook contains how we do things, now. It doesn't need to say how we got there.
 
 ## How do I decide?
 
