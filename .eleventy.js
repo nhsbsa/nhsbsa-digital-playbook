@@ -4,6 +4,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('njk', require('./lib/_libraries/nunjucks'));
   eleventyConfig.setLibrary('md', require('./lib/_libraries/markdown'));
 
+  //collections
+  require('./lib/_javascripts/statusCollections')(eleventyConfig);
+
   // Plugins
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));

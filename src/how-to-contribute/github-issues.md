@@ -39,7 +39,8 @@ Use NHSBSA Slack or Teams to draw attention to your suggestion and get feedback:
 
 You can write some content and submit a pull request to get it published to the playbook website.
 
-By setting the article `status` as `DRAFT`, it will not appear in a referenced article and can only be viewed with a direct link.
-Articles at `REVIEW` status will appear as a referenced article but clearly marked with it's status.
+By setting the article status as `DRAFT`, it will not appear in a referenced article and can be viewed from the [the 'drafts' page](../../drafts) or with a direct link.
+
+Articles at `REVIEW` status will appear as a referenced article but clearly marked with it's status. There is also a ['review' page](../../review) linking to all articles in review.
 
 [github_issues_nhsbsa_digital_playbook]: <https://github.com/nhsbsa/nhsbsa-digital-playbook/issues>

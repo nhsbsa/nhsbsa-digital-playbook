@@ -2,7 +2,7 @@
 layout: article
 title: "Playbook content"
 description: "Deciding whether content is appropriate for the playbook"
-tags: [playbook, draft]
+tags: playbook
 order: 1
 status: DRAFT
 ---
