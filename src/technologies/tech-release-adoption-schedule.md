@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Release adoption schedule"
-tags: [tech, draft]
+description: "When to adopt software releases into production"
+tags: tech
 order: 1
 status: DRAFT
 review:
