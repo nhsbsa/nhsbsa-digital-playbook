@@ -101,6 +101,12 @@
             		</li>
 
                     <li><a href="#languages">Languages</a>
+            
+                <ol>
+                    
+                    <li><a href="#java">Java</a>
+            		</li>
+                </ol>
             		</li>
 
                     <li><a href="#package-managers-and-build-tools">Package managers and build tools</a>
@@ -237,7 +243,7 @@
 <ul>
 <li><code>Natural</code> - Using natural language standard, with spaces to separate words and capitals for initial letter and proper nouns</li>
 <li><code>kebab-case</code> - All lower case with dashes to separate words</li>
-<li><code>CamelCase</code> - Initial letters in words are uppercased, with no separators</li>
+<li><code>CamelCase</code> - Initial letters in words are uppercased, with no separators. First letter may be upper or lower.</li>
 <li><code>snake_case</code> - All lower case with underscores to separate words</li>
 </ul>
 <p>For all cases except <code>natural</code>, acronyms should be lowercased and treated as a single word.</p>
@@ -275,6 +281,14 @@
 <hr>
 <h2 id="languages" tabindex="-1"><a class="header-anchor" href="#languages">Languages</a></h2>
 <p>For language constructs refer to the <a href="../coding-style-guide/">standard language style guides</a>.</p>
+<div class="card">
+<h3 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h3>
+<p>Java <code>packages</code> should be all lower case concatenated with this convention:</p>
+<blockquote>
+<p><code>uk.nhs.nhsbsa.{service}.{function}</code></p>
+</blockquote>
+<p>Libraries may omit the <code>service</code> when shared across multiple services.</p>
+</div>
 <hr>
 <h2 id="package-managers-and-build-tools" tabindex="-1"><a class="header-anchor" href="#package-managers-and-build-tools">Package managers and build tools</a></h2>
 <div class="card">
@@ -327,7 +341,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-10-19T13:23:57.628Z">19 October 2022</time>
+            Published <time datetime="2022-10-28T08:08:48.715Z">28 October 2022</time>
           </p>
       </div>
   </div>
