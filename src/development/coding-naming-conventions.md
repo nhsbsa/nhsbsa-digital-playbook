@@ -171,7 +171,9 @@ For language constructs refer to the [standard language style guides](../coding-
 
 Java `packages` should be all lower case concatenated with this convention:
 
-> `uk.nhs.nhsbsa.{service}`
+> `uk.nhs.nhsbsa.{service}.{function}`
+
+Libraries may omit the `service` when shared across multiple services.
 
 :::
 
