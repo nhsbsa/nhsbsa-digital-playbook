@@ -111,7 +111,7 @@ Different case standards should be applied depending on usage:
 
 * `Natural` - Using natural language standard, with spaces to separate words and capitals for initial letter and proper nouns
 * `kebab-case` - All lower case with dashes to separate words
-* `CamelCase` - Initial letters in words are uppercased, with no separators
+* `CamelCase` - Initial letters in words are uppercased, with no separators. First letter may be upper or lower.
 * `snake_case` - All lower case with underscores to separate words
 
 For all cases except `natural`, acronyms should be lowercased and treated as a single word.
@@ -164,6 +164,16 @@ Merge/pull requests should be raised with `natural` case and this convention:
 ## Languages
 
 For language constructs refer to the [standard language style guides](../coding-style-guide/).
+
+::: card
+
+### Java
+
+Java `packages` should be all lower case concatenated with this convention:
+
+> `uk.nhs.nhsbsa.{service}`
+
+:::
 
 ---
 
