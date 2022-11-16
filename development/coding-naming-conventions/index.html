@@ -170,11 +170,12 @@
     </td>
   </tr>
   <tr>
-    <td>Service sub-group</td>
+    <td>Service line</td>
     <td>For grouping within a service area</td>
     <td>
       <ul>
-        <li><code>hwhc</code> for <em>Help with Health Costs</em> sub-group within Citizen Services</li>
+        <li><code>hwhc</code> for <em>Help with Health Costs</em></li>
+        <li><code>ohs</code> for <em>Overseas Healthcare Services</em></li>
       </ul>
     </td>
   </tr>
@@ -183,6 +184,7 @@
     <td>Adopt a succinct or abbreviated service name</td>
     <td>
       <ul>
+        <li><code>lis</code> for <em>Low Income Scheme</em></li>
         <li><code>ihs</code> for <em>Immigration Health Surcharge</em></li>
       </ul>
     </td>
@@ -253,7 +255,7 @@
 <h3 id="git-repositories" tabindex="-1"><a class="header-anchor" href="#git-repositories">Git Repositories</a></h3>
 <p>Git repositories should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>{optional service sub-group}-{service}-{function}-{type}</code></p>
+<p><code>{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 </div>
 <div class="card">
@@ -268,7 +270,7 @@
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
 <p>Repositories in Gitlab should be organised into ‘groups’ with <code>natural</code> case and this convention:</p>
 <blockquote>
-<p><code>{service area}/{service sub-group}/{service}</code></p>
+<p><code>{service area}/{service-line}/{service}</code></p>
 </blockquote>
 </div>
 <div class="card">
@@ -295,11 +297,11 @@
 <h3 id="maven" tabindex="-1"><a class="header-anchor" href="#maven">Maven</a></h3>
 <p>Maven <code>group id</code> should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>uk.nhs.nhsbsa.{service-area}.{optional service sub-group}.{service}</code></p>
+<p><code>uk.nhs.nhsbsa.{service-area}.{optional service-line}.{service}</code></p>
 </blockquote>
 <p>Maven <code>artifact id</code> should follow <code>kebab-case</code> and this convention:</p>
 <blockquote>
-<p><code>{optional service sub-group}-{service}-{function}-{type}</code></p>
+<p><code>{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 <p>Unit tests run by Maven Surefire plugin should follow the convention:</p>
 <blockquote>
@@ -314,7 +316,7 @@
 <h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">NPM</a></h3>
 <p>Package.json <code>name</code> should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>@nhsbsa/{optional service sub-group}-{service}-{function}-{type}</code></p>
+<p><code>@nhsbsa/{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 </div>
 
@@ -341,7 +343,7 @@
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-10-28T08:08:48.715Z">28 October 2022</time>
+            Published <time datetime="2022-11-16T18:58:17.092Z">16 November 2022</time>
           </p>
       </div>
   </div>
