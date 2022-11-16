@@ -36,11 +36,12 @@ Terms used in the naming conventions are:
     </td>
   </tr>
   <tr>
-    <td>Service sub-group</td>
+    <td>Service line</td>
     <td>For grouping within a service area</td>
     <td>
       <ul>
-        <li><code>hwhc</code> for <em>Help with Health Costs</em> sub-group within Citizen Services</li>
+        <li><code>hwhc</code> for <em>Help with Health Costs</em></li>
+        <li><code>ohs</code> for <em>Overseas Healthcare Services</em></li>
       </ul>
     </td>
   </tr>
@@ -49,6 +50,7 @@ Terms used in the naming conventions are:
     <td>Adopt a succinct or abbreviated service name</td>
     <td>
       <ul>
+        <li><code>lis</code> for <em>Low Income Scheme</em></li>
         <li><code>ihs</code> for <em>Immigration Health Surcharge</em></li>
       </ul>
     </td>
@@ -126,7 +128,7 @@ For all cases except `natural`, acronyms should be lowercased and treated as a s
 
 Git repositories should be `kebab-case` with this convention:
 
-> `{optional service sub-group}-{service}-{function}-{type}`
+> `{optional service-line}-{service}-{function}-{type}`
 
 :::
 ::: card
@@ -146,7 +148,7 @@ Branches should be used for one change/ticket at a time and not collated into gr
 
 Repositories in Gitlab should be organised into ‘groups’ with `natural` case and this convention:
 
-> `{service area}/{service sub-group}/{service}`
+> `{service area}/{service-line}/{service}`
 
 :::
 ::: card
@@ -187,11 +189,11 @@ Libraries may omit the `service` when shared across multiple services.
 
 Maven `group id` should be `kebab-case` with this convention:
 
-> `uk.nhs.nhsbsa.{service-area}.{optional service sub-group}.{service}`
+> `uk.nhs.nhsbsa.{service-area}.{optional service-line}.{service}`
 
 Maven `artifact id` should follow `kebab-case` and this convention:
 
-> `{optional service sub-group}-{service}-{function}-{type}`
+> `{optional service-line}-{service}-{function}-{type}`
 
 Unit tests run by Maven Surefire plugin should follow the convention:
 
@@ -208,6 +210,6 @@ Integration tests run by Maven Failsafe plugin should follow the convention:
 
 Package.json `name` should be `kebab-case` with this convention:
 
-> `@nhsbsa/{optional service sub-group}-{service}-{function}-{type}`
+> `@nhsbsa/{optional service-line}-{service}-{function}-{type}`
 
 :::

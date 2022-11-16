@@ -68,8 +68,8 @@ __DECOMMISSION__
 <table class="alternate-even">
 <tr><th>Version</th><th>Current phase</th>                               <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
 <tr><td>v20</td>    <td>Pending release</td>                             <td>2023-04-18</td>  <td>2023-10-24</td><td>2026-04-30</td></tr>
-<tr><td>v18</td>    <td class="t_assess"><em>ASSESS</em></td>            <td>2022-04-19</td>  <td>2022-10-25</td><td>2025-04-30</td></tr>
-<tr><td>v16</td>    <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-04-20</td>  <td>2021-10-26</td><td>2023-09-11</td></tr>
+<tr><td>v18</td>    <td class="t_adopt"><em>ADOPT</em></td>              <td>2022-04-19</td>  <td>2022-10-25</td><td>2025-04-30</td></tr>
+<tr><td>v16</td>    <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2021-04-20</td>  <td>2021-10-26</td><td>2023-09-11</td></tr>
 <tr><td>v14</td>    <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2020-04-21</td>  <td>2020-10-27</td><td>2023-04-30</td></tr>
 <tr><td>v12</td>    <td class="t_decommission"><em>DECOMMISSION</em></td><td>2019-04-23</td>  <td>2019-10-21</td><td>2022-04-30</td></tr>
 </table>
@@ -100,7 +100,7 @@ __DECOMMISSION__
 <tr><th>Version</th><th>Current phase</th>                         <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
 <tr><td>v16</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-05-11</td>  <td>2022-11-11</td><td>-</td></tr>
 <tr><td>v14</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2021-01-27</td>  <td>2021-07-27</td><td>-</td></tr>
-<tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td>  <td>2020-05-18</td><td>2022-11-14</td></tr>
+<tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td>  <td>2020-05-18</td><td>2023-03-31</td></tr>
 </table>
 
 ## Java
