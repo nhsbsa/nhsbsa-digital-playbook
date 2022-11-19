@@ -42,5 +42,8 @@
     "markdown-it-table-of-contents": "^0.6.0",
     "markdown-it-toc-done-right": "^4.2.0",
     "nhsuk-frontend": "^5.2.1"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }

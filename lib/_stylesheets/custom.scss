@@ -27,39 +27,6 @@ table.alternate-odd tr:nth-child(odd) {
 	background-color: $color_nhsuk-grey-4;
 }
 
-.nhsbsa-status-tag {
-	@extend .nhsuk-tag;
-	text-align: center; 
-    vertical-align: middle;
-}
-.tag > em {
-	@extend .nhsbsa-status-tag;
-}
-.t_assess > em {
-	@extend .nhsbsa-status-tag;
-	color: black;
-	background-color:   $color_nhsuk-pale-yellow;
-	border: 1px solid shade($color_nhsuk-pale-yellow, 10%);
-}
-.t_adopt > em {
-	@extend .nhsbsa-status-tag;
-	color: white;
-	background-color:  $color_nhsuk-green;
-	border: 1px solid shade($color_nhsuk-green, 10%);
-}
-.t_deprecate > em {
-	@extend .nhsbsa-status-tag;
-	color: black;
-	background-color:  $color_nhsuk-warm-yellow;
-	border: 1px solid shade($color_nhsuk-warm-yellow, 10%);
-}	
-.t_decommission > em {
-	@extend .nhsbsa-status-tag;
-	color: black;
-	background-color: $color_nhsuk-grey-4;
-	border: 1px solid shade($color_nhsuk-grey-4, 10%);
-}
-
 dl {
 	@include nhsuk-font($size: 19);
 	@include mq($from: tablet) {

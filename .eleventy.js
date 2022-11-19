@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
   //collections
   require('./lib/_javascripts/statusCollections')(eleventyConfig);
 
+  //data
+  const yaml = require("js-yaml");
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
   // Plugins
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
@@ -45,6 +49,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('sortByOrder', require('./lib/_filters/sortByOrder'));
   eleventyConfig.addFilter('blank', require('./lib/_filters/blank'));
   eleventyConfig.addFilter('urlEncode', require('./lib/_filters/urlEncode'));
+  eleventyConfig.addFilter('debug', require('./lib/_filters/debug'));
 
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
