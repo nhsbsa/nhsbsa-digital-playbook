@@ -4,9 +4,9 @@ title: "Release adoption schedule"
 description: "When to adopt software releases into production"
 tags: tech
 order: 1
-status: DRAFT
+status: FINAL
 review:
-    last_reviewed_date: 2022-09-14
+    last_reviewed_date: 2022-11-17
     review_cycle:
         month: 2
 issuesheet:
@@ -15,10 +15,15 @@ issuesheet:
     issued_to: "DDaT"
     issued_reason: "For information"
     revisions:
-        - version: "1.0 RC-1"
-          date: 2022-09-14
+        - version: "1.0"
+          date: 2022-11-1
           amended_by: "PT"
           approved_by: "-"
+          details: "AWS supports Node 18 Lambda"
+        - version: "1.0"
+          date: 2022-11-17
+          amended_by: "PT"
+          approved_by: "Technical Design Authority"
           details: "Initial release"
 ---
 To manage change of our runtimes and downstream services we maintain a release adoption schedule based on these _phases_:
@@ -98,8 +103,9 @@ __DECOMMISSION__
 
 <table class="alternate-even">
 <tr><th>Version</th><th>Current phase</th>                         <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
-<tr><td>v16</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-05-11</td>  <td>2022-11-11</td><td>-</td></tr>
-<tr><td>v14</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2021-01-27</td>  <td>2021-07-27</td><td>-</td></tr>
+<tr><td>v18</td>    <td class="t_assess"><em>ASSESS</em></td>      <td>2022-11-18</td>  <td>2023-05-18</td><td>-</td></tr>
+<tr><td>v16</td>    <td class="t_adopt"><em>ADOPT</em></td>        <td>2022-05-11</td>  <td>2022-11-11</td><td>-</td></tr>
+<tr><td>v14</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2021-01-27</td>  <td>2021-07-27</td><td>-</td></tr>
 <tr><td>v12</td>    <td class="t_deprecate"><em>DEPRECATE</em></td><td>2019-11-18</td>  <td>2020-05-18</td><td>2023-03-31</td></tr>
 </table>
 
@@ -186,7 +192,7 @@ __DECOMMISSION__
 
 <table class="alternate-even">
 <tr><th>Version</th><th>Current phase</th>                                  <th>Release date</th><th>Adopt from</th><th>Decommission date</th></tr>
-<tr><td>2022.0</td>     <td>Pending release</td>                             <td>2022-12-xx</td>  <td>2023-12-xx</td><td>2025-12-xx</td></tr>
+<tr><td>2022.0</td>     <td>Pending release</td>                             <td>2022-12-xx</td>  <td>2023-02-xx</td><td>2025-12-xx</td></tr>
 <tr><td>2021.0</td>     <td class="t_adopt"><em>ADOPT</em></td>              <td>2021-12-01</td>  <td>2022-02-01</td><td>2024-12-01</td></tr>
 <tr><td>2020.0</td>     <td class="t_deprecate"><em>DEPRECATE</em></td>      <td>2020-12-22</td>  <td>2021-02-22</td><td>2023-12-22</td></tr>
 </table>

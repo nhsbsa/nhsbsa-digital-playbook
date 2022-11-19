@@ -6,13 +6,14 @@ order: 20
 ---
 Here's a list of our preferred technology choices when implementing in Java. We're not prescriptive in these choices, but have a good reason to deviate from the norm. If you feel there's a better option, raise it at the Developer Community.
 
-## Java language
+## Java language versions
 
-We prefer Long Term Support releases of Java and use OpenJDK distributed as [_Temurin_ by Adoptium][adoptium] (formerly AdoptOpenJDK):
+Refer to the [Release adoption schedule](../tech-release-adoption-schedule)
 
-* [Java 8][openjdk_8]
-* [Java 11][openjdk_11]
-* [Java 17][openjdk_17]
+Java projects must:
+
+* define the source and target Java version in the Maven `pom.xml` file
+* use a Java Version Manager such as [JEnv](https://github.com/jenv/jenv) to manage Java versions in development
 
 ## IDE
 
