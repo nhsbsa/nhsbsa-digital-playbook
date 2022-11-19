@@ -329,7 +329,7 @@
 <h2 id="csp-header" tabindex="-1"><a class="header-anchor" href="#csp-header">CSP Header</a></h2>
 <p>Sending the standard <code>Content-Security-Policy</code> header as well as earlier <code>X-Content-Security-Policy</code> or <code>X-Webkit-CSP</code> headers causes unexpected behaviours on some browsers. Avoid using the deprecated <code>X-*</code> headers.</p>
 <p>Chrome dev-tools hides the <code>X-</code> style CSP response headers in preference to the standard <code>Content-Security-Policy</code>, even when they are sent. Use this curl command to test whether your site is sending the deprecated headers:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> --head <span class="token operator">&lt;</span>URL<span class="token operator">></span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--head</span> <span class="token operator">&lt;</span>URL<span class="token operator">></span></code></pre>
 <h2 id="csp-levels" tabindex="-1"><a class="header-anchor" href="#csp-levels">CSP levels</a></h2>
 <p>CSP is an evolving standard, and with each new release comes tighter controls to protect users. These are referred to as CSP Levels. We aim to provide as secure an experience as possible with the browsers available to our users.</p>
 <p>Design to Content Security Policy level 2 and above. At the time of writing, all modern browsers support Level 2. IE 11 supports parts of Level 1 and it relies on the deprecated and dangerous <code>X-Content-Security-Policy</code>. It can therefore be safely ignored from scope of the CSP.</p>
@@ -868,7 +868,7 @@ Consult with security team before use</p>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-11-17T12:03:07.932Z">17 November 2022</time>
+            Published <time datetime="2022-11-19T11:58:26.026Z">19 November 2022</time>
           </p>
           <p>
             Last reviewed <time datetime="2022-06-30T00:00:00.000Z">30 June 2022</time>
