@@ -1,0 +1,38 @@
+.nhsbsa-status-tag {
+	@extend .nhsuk-tag;
+	text-align: center; 
+    vertical-align: middle;
+}
+.tag > strong {
+	@extend .nhsbsa-status-tag;
+}
+.t_pending > strong {
+	@extend .nhsbsa-status-tag;
+	color: black;
+	background-color:   $color_nhsuk-grey-5;
+	border: 1px solid shade($color_nhsuk-grey-5, 10%);
+}
+.t_assess > strong {
+	@extend .nhsbsa-status-tag;
+	color: black;
+	background-color:   $color_nhsuk-pale-yellow;
+	border: 1px solid shade($color_nhsuk-pale-yellow, 10%);
+}
+.t_adopt > strong {
+	@extend .nhsbsa-status-tag;
+	color: white;
+	background-color:  $color_nhsuk-green;
+	border: 1px solid shade($color_nhsuk-green, 10%);
+}
+.t_deprecate > strong {
+	@extend .nhsbsa-status-tag;
+	color: black;
+	background-color:  $color_nhsuk-warm-yellow;
+	border: 1px solid shade($color_nhsuk-warm-yellow, 10%);
+}	
+.t_decommission > strong {
+	@extend .nhsbsa-status-tag;
+	color: black;
+	background-color: $color_nhsuk-grey-4;
+	border: 1px solid shade($color_nhsuk-grey-4, 10%);
+}
