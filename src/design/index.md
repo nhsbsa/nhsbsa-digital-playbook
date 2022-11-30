@@ -8,9 +8,9 @@ related:
   title: Articles
   tag: design
 ---
-## What different design roles exist at the NHS BSA?
+## What different design roles exist at the NHSBSA?
 
-The NHS BSA follows the <a href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework" target="_blank">DDaT Framework</a> and has 2 types of designer; Service Designers and Interaction Designers.
+The NHSBSA follows the <a href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework" target="_blank">DDaT Framework</a> and has 2 types of designer; Service Designers and Interaction Designers.
 
 ## Service Design
 

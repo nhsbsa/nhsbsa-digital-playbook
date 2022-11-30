@@ -127,7 +127,7 @@ Verify Feature:
     - name: dps-nexus.service.nhsbsa:8444/nhsbsa/postgres:9.6
 ```
 
-Here we have configured a dependant service of Postgres that is retrieved from the NHS BSA's own Docker repository (Nexus). This build will set us up with standard user accounts that we'll need to access the database and apply schema changes using liquibase (see below).
+Here we have configured a dependant service of Postgres that is retrieved from the NHSBSA's own Docker repository (Nexus). This build will set us up with standard user accounts that we'll need to access the database and apply schema changes using liquibase (see below).
 
 But, you may choose to use a different Docker image with a pre-populated schema to suit your needs. Here are some examples:
 
