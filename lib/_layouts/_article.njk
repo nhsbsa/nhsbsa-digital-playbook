@@ -9,8 +9,14 @@
 
 {% block header %}
   {{ appArticleHeader({
-    containerClasses: "nhsuk-width-container-fluid",
-    homeHref: homeUrl
+    "service": {
+      "name": productName,
+      "href": homeUrl
+    },
+    "showNav": "false",
+    "showSearch": "false",
+    "ariaLabel": productName,
+    "containerClasses": "nhsuk-width-container-fluid"
   }) }}
 {% endblock %}
 

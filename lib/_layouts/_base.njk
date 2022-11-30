@@ -2,6 +2,7 @@
 
 {% set htmlClasses = 'no-js' %}
 {% set homeUrl = '/' | url %}
+{% set productName = 'NHSBSA Digital Playbook' %}
 
 {% from "header/macro.njk" import header as appHeader %}
 {% from "appArticleHeader/macro.njk" import appArticleHeader %}
@@ -23,9 +24,13 @@
 
 {% block header %}
   {{ appHeader({
-    homeHref: homeUrl,
-    productName: app.productName,
-    serviceName: app.serviceName
+    "service": {
+      "name": productName,
+      "href": homeUrl
+    },
+    "showNav": "false",
+    "showSearch": "false",
+    "ariaLabel": productName
   }) }}
 {% endblock %}
 
