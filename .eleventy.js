@@ -55,7 +55,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
   eleventyConfig.addPassthroughCopy({"lib/_netlify": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/"});
-  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/*.js": "/javascripts"});
+  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/dist/*.js": "/javascripts"});
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
   eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
   eleventyConfig.addPassthroughCopy("src/**/*.png");
