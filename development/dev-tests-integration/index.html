@@ -12,7 +12,7 @@
     
     
     
-    <title>Writing integration tests  - NHSBSA
+    <title>Writing integration tests -  NHSBSA Digital Playbook - NHSBSA
 </title>
 
     
@@ -54,12 +54,14 @@
 
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container nhsuk-header__container nhsuk-width-container-fluid">
-    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/nhsbsa-digital-playbook/" aria-label="NHS homepage">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHSBSA Digital Playbook">
           <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
     <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
     <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
   </svg>
-      </a>    </div>
+        <span class="nhsuk-header__service-name">
+          NHSBSA Digital Playbook
+        </span>      </a>    </div>
     </div>
 
 </header>
@@ -158,7 +160,7 @@
 <p>Gitlab-CI runs by default within a Docker container. This allows us to add downstream services as other Docker containers with network access between our tests and the services. In our case, we’re going to run Postgres as a service within Gitlab-CI.</p>
 <p>The following code block is a snippet of configuration from a <code>gitlab-ci.yml</code> file:</p>
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">Verify Feature</span><span class="token punctuation">:</span><br>  <span class="token key atrule">stage</span><span class="token punctuation">:</span> Build<br>  <span class="token key atrule">services</span><span class="token punctuation">:</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> dps<span class="token punctuation">-</span>nexus.service.nhsbsa<span class="token punctuation">:</span>8444/nhsbsa/postgres<span class="token punctuation">:</span><span class="token number">9.6</span></code></pre>
-<p>Here we have configured a dependant service of Postgres that is retrieved from the NHS BSA’s own Docker repository (Nexus). This build will set us up with standard user accounts that we’ll need to access the database and apply schema changes using liquibase (see below).</p>
+<p>Here we have configured a dependant service of Postgres that is retrieved from the NHSBSA’s own Docker repository (Nexus). This build will set us up with standard user accounts that we’ll need to access the database and apply schema changes using liquibase (see below).</p>
 <p>But, you may choose to use a different Docker image with a pre-populated schema to suit your needs. Here are some examples:</p>
 <ul>
 <li>CRS: <code>dps-nexus.service.nhsbsa:8444/crs/crs-db</code></li>
@@ -243,7 +245,7 @@ You can use this to specify properties for local development</li>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2022-11-30T07:44:46.068Z">30 November 2022</time>
+            Published <time datetime="2022-11-30T17:20:47.966Z">30 November 2022</time>
           </p>
       </div>
   </div>
