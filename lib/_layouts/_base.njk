@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  {% if title %}{{ title }} {% endif %}{{ app.serviceName or app.productName }} - NHSBSA
+  {% if title %}{{ title }} - {% endif %} {{ serviceName or productName }} - NHSBSA
 {% endblock %}
 
 {% block header %}
