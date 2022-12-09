@@ -1,7 +1,7 @@
 const checkDataStatus = require('../lib/_computed/badges');
 
 describe('badge status unit tests', () => {
-    // Mock data
+    // default fixture
     const data = {
         status: "DRAFT",
         review: {requires_review: false}
@@ -30,10 +30,16 @@ describe('badge status unit tests', () => {
         }]);
     });
 
-    it('will return null if FINAL status and no review', () => {
+    it('will return empty if FINAL status and no review', () => {
         data.status = "FINAL";
         data.review.requires_review = false;
-        expect(checkDataStatus(data)).toEqual(null);
+        expect(checkDataStatus(data)).toEqual([]);
+    });
+
+    it('will retain user-defined badges', () => {
+        userBadges = [{text: "my-badge"}]
+        data.badges = userBadges
+        expect(checkDataStatus(data)).toEqual(userBadges);
     });
 });
 
