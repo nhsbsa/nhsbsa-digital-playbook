@@ -9,16 +9,17 @@
 
 {% block header %}
   {{ appArticleHeader({
-    homeHref: homeUrl,
-    "service": {
-      "name": productName,
-      "href": homeUrl
-    },
-    "showNav": "false",
-    "showSearch": "false",
+      homeHref: homeUrl,
+      "showNav": "false",
+      "showSearch": "false",
+      "organisation": {
+        "name": "Business Services Authority",
+        "split": "Digital Playbook"
+      },
     "ariaLabel": productName,
     "containerClasses": "nhsuk-width-container-fluid"
-  }) }}
+    })
+  }}
 {% endblock %}
 
 {% block content %}
