@@ -1,6 +1,6 @@
-# NHSBSA Digital Playbook
+# NHSBSA Digital, Data and Technology Playbook
 
-The NHSBSA Digital Playbook contains documentation on how we work when delivering Digital Services at the [NHS Business Services Authority][nhsbsa_homepage].
+The NHSBSA Digital, Data and Technology Playbook contains documentation on how we work when delivering DDaT Services at the [NHS Business Services Authority][nhsbsa_homepage].
 
 The published playbook is hosted on [Github pages][nhsbsa_digital_playbook]
 

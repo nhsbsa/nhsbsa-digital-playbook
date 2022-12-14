@@ -1,7 +1,7 @@
 {
   "name": "nhsbsa-digital-playbook",
   "version": "1.0.0",
-  "description": "Playbook for NHSBSA Digital projects",
+  "description": "Playbook for NHSBSA Digital, Data and Technology projects",
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",

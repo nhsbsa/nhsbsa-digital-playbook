@@ -7,7 +7,7 @@ pagination:
   size: 50
   alias: articles
 ---
-This website documents the specific technology, tools and processes that NHS Business Services Authority (NHSBSA) digital delivery teams use to build and operate services.
+This website documents the specific technology, tools and processes that NHS Business Services Authority (NHSBSA) Digital, Data and Technology (DDaT) delivery teams use to build and operate services.
 
 It is intended to complement, not replace, existing UK Government and NHS guidance:
 
