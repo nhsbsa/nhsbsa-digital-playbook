@@ -24,15 +24,16 @@
 
 {% block header %}
   {{ appHeader({
-    homeHref: homeUrl,
-    "service": {
-      "name": productName,
-      "href": homeUrl
-    },
-    "showNav": "false",
-    "showSearch": "false",
-    "ariaLabel": productName
-  }) }}
+      homeHref: homeUrl,
+      "showNav": "false",
+      "showSearch": "false",
+      "organisation": {
+        "name": "Business Services Authority",
+        "split": "Digital Playbook"
+      },
+      "ariaLabel": productName
+    })
+  }}
 {% endblock %}
 
 {% block beforeContent %}
