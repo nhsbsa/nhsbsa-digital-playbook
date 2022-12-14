@@ -1,6 +1,6 @@
-# Contributing to NHSBSA Digital Playbook
+# Contributing to NHSBSA Digital, Data and Technology Playbook
 
-NHSBSA Digital Playbook is released under the [Apache 2 license](LICENCE.md). If you would like to contribute
+NHSBSA Digital, Data and Technology Playbook is released under the [Apache 2 license](LICENCE.md). If you would like to contribute
 something, or simply want to hack on the code this document should help you get started.
 
 ## Code of Conduct

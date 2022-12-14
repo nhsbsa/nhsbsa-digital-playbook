@@ -2,7 +2,8 @@
 
 {% set htmlClasses = 'no-js' %}
 {% set homeUrl = '/' | url %}
-{% set productName = 'NHSBSA Digital Playbook' %}
+{% set productLongName = 'NHSBSA Digital, Data and Technology Playbook' %}
+{% set productShortName = 'DDaT Playbook' %}
 
 {% from "header/macro.njk" import header as appHeader %}
 {% from "appArticleHeader/macro.njk" import appArticleHeader %}
@@ -19,7 +20,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  {% if title %}{{ title }} - {% endif %} {{ serviceName or productName }} - NHSBSA
+  {% if title %}{{ title }} - {% endif %} {{ serviceName or productLongName }} - NHSBSA
 {% endblock %}
 
 {% block header %}
@@ -29,9 +30,9 @@
       "showSearch": "false",
       "organisation": {
         "name": "Business Services Authority",
-        "split": "Digital Playbook"
+        "split": productShortName
       },
-      "ariaLabel": productName
+      "ariaLabel": productLongName
     })
   }}
 {% endblock %}
