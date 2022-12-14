@@ -15,14 +15,14 @@ describe('reviewData empty dataset tests', () => {
 describe('reviewData functional dataset tests', () => {
     const consoleLogSpy = jest.spyOn(console, 'log');
     const data = {
-        title: "Dummy playbook page data",
+        title: "Dummy playbook page",
         review: { last_reviewed_date: DateTime.local().toISODate(), review_cycle: "ANNUAL" },
         issuesheet: { approval_date: DateTime.local().minus({ months: 2 }).toISODate() }
     };
 
     it('should not require review if last review date is this year', () => {
         const result = checkForReview(data);
-        const logMessage = "Dummy playbook page data requires review = false";
+        const logMessage = "Dummy playbook page requires review = false";
 
         expect(consoleLogSpy).toHaveBeenCalledWith(logMessage);
         expect(result).toEqual({
@@ -52,13 +52,9 @@ describe('reviewData functional dataset tests', () => {
         });
     });
 
-    it('should return empty array with default review duration when custom string cycle and log error', () => {
-        const consoleErrorSpy = jest.spyOn(console, 'error');
+    it('throws error with correct message for invalid review cycle', () => {
         data.review.review_cycle = "QUARTER";
-        const errorLogMessage = "Unknown review duration: \"QUARTER\""; // json.stringify
-        const result = checkForReview(data);
-        expect(consoleErrorSpy).toHaveBeenCalledWith(errorLogMessage);
-        expect(result).toEqual({});
+        expect(() => checkForReview(data)).toThrowError(new Error("Unknown review cycle: \"QUARTER\" on page: Dummy playbook page"));
     });
 
     it('should return valid reviewData when custom cycle', () => {
@@ -76,7 +72,7 @@ describe('reviewData functional dataset tests', () => {
         data.review.last_reviewed_date = pastLastReviewDate;
         data.review.review_cycle = "ANNUAL";
         const result = checkForReview(data);
-        const logMessage = "Dummy playbook page data requires review = true";
+        const logMessage = "Dummy playbook page requires review = true";
 
         expect(consoleLogSpy).toHaveBeenCalledWith(logMessage);
         expect(result).toEqual({
