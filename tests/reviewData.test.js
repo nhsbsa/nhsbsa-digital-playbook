@@ -3,11 +3,9 @@ const { DateTime } = require('luxon')
 
 describe('reviewData empty dataset tests', () => {
 
-    it('should return empty object if no data supplied', () => {
-        expect(checkForReview()).toEqual({});
-    });
-
-    const data = {};
+    const data = {
+        title: "Dummy playbook page"
+    };
 
     it('should return empty object if empty data object supplied', () => {
         expect(checkForReview(data)).toEqual({});
@@ -15,7 +13,7 @@ describe('reviewData empty dataset tests', () => {
 });
 
 describe('reviewData functional dataset tests', () => {
-    const consoleSpy = jest.spyOn(console, 'log');
+    const consoleLogSpy = jest.spyOn(console, 'log');
     const data = {
         title: "Dummy playbook page data",
         review: { last_reviewed_date: DateTime.local().toISODate(), review_cycle: "ANNUAL" },
@@ -26,7 +24,7 @@ describe('reviewData functional dataset tests', () => {
         const result = checkForReview(data);
         const logMessage = "Dummy playbook page data requires review = false";
 
-        expect(consoleSpy).toHaveBeenCalledWith(logMessage);
+        expect(consoleLogSpy).toHaveBeenCalledWith(logMessage);
         expect(result).toEqual({
             last_reviewed_date: DateTime.local().startOf('day'),
             next_review_date: result.last_reviewed_date.plus({ year: 1 }),
@@ -34,13 +32,53 @@ describe('reviewData functional dataset tests', () => {
         });
     });
 
+    it('should return valid reviewData when null cycle', () => {
+        data.review.review_cycle = null;
+        const result = checkForReview(data);
+        expect(result).toEqual({
+            last_reviewed_date: DateTime.local().startOf('day'),
+            next_review_date: result.last_reviewed_date.plus({ year: 1 }),
+            requires_review: false
+        });
+    });
+
+    it('should return valid reviewData when undefined cycle', () => {
+        data.review.review_cycle = undefined;
+        const result = checkForReview(data);
+        expect(result).toEqual({
+            last_reviewed_date: DateTime.local().startOf('day'),
+            next_review_date: result.last_reviewed_date.plus({ year: 1 }),
+            requires_review: false
+        });
+    });
+
+    it('should return empty array with default review duration when custom string cycle and log error', () => {
+        const consoleErrorSpy = jest.spyOn(console, 'error');
+        data.review.review_cycle = "QUARTER";
+        const errorLogMessage = "Unknown review duration: \"QUARTER\""; // json.stringify
+        const result = checkForReview(data);
+        expect(consoleErrorSpy).toHaveBeenCalledWith(errorLogMessage);
+        expect(result).toEqual({});
+    });
+
+    it('should return valid reviewData when custom cycle', () => {
+        data.review.review_cycle = { years: 2 };
+        const result = checkForReview(data);
+        expect(result).toEqual({
+            last_reviewed_date: DateTime.local().startOf('day'),
+            next_review_date: result.last_reviewed_date.plus({ year: 2 }),
+            requires_review: false
+        });
+    });
+
     it('should require review if last review date over a year old', () => {
         const pastLastReviewDate = DateTime.local().minus({ year: 1 }).toISODate();
         data.review.last_reviewed_date = pastLastReviewDate;
+        data.review.review_cycle = "ANNUAL";
         const result = checkForReview(data);
         const logMessage = "Dummy playbook page data requires review = true";
 
-        expect(consoleSpy).toHaveBeenCalledWith(logMessage);
+        expect(consoleLogSpy).toHaveBeenCalledWith(logMessage);
         expect(result).toEqual({
             last_reviewed_date: DateTime.local().startOf('day').minus({ year: 1 }),
             next_review_date: result.last_reviewed_date.plus({ year: 1 }),
