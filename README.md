@@ -22,6 +22,12 @@ npm run build
 npm start
 ```
 
+### Testing the application
+
+```bash
+npm test
+```
+
 ## Documentation
 
 This playbook uses [Eleventy][eleventy] to generate the static site, [Github actions][gh_actions] to deploy
