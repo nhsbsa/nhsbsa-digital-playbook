@@ -24,7 +24,7 @@ Consider the following:
   * SSH keys
   * Tooling API keys (SonarQube, Saucelabs, etc)
   * Internal topology
-    Don’t expose information on internal topology that could introduce vulnerabilities:
+    Don’t expose information on internal topology when not necessary:
     * Protocols
     * Hostnames
     * Ports
@@ -42,6 +42,8 @@ Consider the following:
 A sensitive data risk assessment should be recorded in the project documentation site.
 It should catalogue service specific secrets, the secret detection rule IDs and remediation steps to take if the secret is ever leaked.
 !!!
+
+---
 
 ## Dealing with committed secrets
 
@@ -63,12 +65,14 @@ If the repository has already been Open Sourced, do not rewrite history on key b
 
 This article provides an in-depth guide to removing secrets from Git history by rewriting history: [Git Clean, Git Remove file from commit - Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
 
+---
+
 ## Secrets detection tooling
 
 Use secrets detection tools to protect against mistaken commits, and to alert if they get pushed to the central repository.
 
 * [Gitleaks](https://github.com/zricethezav/gitleaks) as our secrets detection tool
-* [NHSBSA Gitleaks configuration file](https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks) to ensure rules are tested
+* [NHSBSA Gitleaks configuration file](https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks) with verified rules
 * [Pre-commit](https://pre-commit.com/) managed Git hooks to prevent local commits of secrets
 * [Gitlab-CI secrets detection](https://docs.gitlab.com/ee/user/application_security/secret_detection/) to alert in case a local pre-commit git hook has not prevented the commit
 
@@ -77,6 +81,11 @@ Use secrets detection tools to protect against mistaken commits, and to alert if
 To use the NHSBSA Gitleaks definitions:
 
 * Copy the [nhsbsa-gitleaks.toml](https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks/-/raw/main/nhsbsa-gitleaks.toml) config file into your project
+
+```bash
+wget https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks/-/raw/main/nhsbsa-gitleaks.toml
+```
+
 * Create a project specific `gitleaks.toml` file and configure it to extend the NHSBSA file
 
 ```toml
