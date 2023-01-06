@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@toycode/markdown-it-class": "^1.2.4",
@@ -27,6 +27,7 @@
     "eleventy-plugin-external-links": "^1.1.2",
     "eleventy-plugin-nesting-toc": "^1.3.0",
     "jest": "^29.3.1",
+    "js-yaml": "^4.1.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-admonition": "^1.0.4",
     "markdown-it-anchor": "^8.4.1",
@@ -44,8 +45,5 @@
     "markdown-it-table-of-contents": "^0.6.0",
     "markdown-it-toc-done-right": "^4.2.0",
     "nhsuk-frontend": "^5.2.1"
-  },
-  "dependencies": {
-    "js-yaml": "^4.1.0"
   }
 }
