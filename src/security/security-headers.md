@@ -83,7 +83,7 @@ Application
 : Application should not send this header
 
 OWASP
-: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins>
+: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins-hpkp>
   
   <https://owasp.org/www-project-secure-headers/#public-key-pins>
 
@@ -283,7 +283,7 @@ Recommended value
 : `max-age=31536000 ; includeSubDomains`
 
 OWASP
-: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security>
+: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts>
 
   <https://owasp.org/www-project-secure-headers/#http-strict-transport-security>
 
@@ -432,7 +432,7 @@ Recommended value
 : `require-corp`
 
 OWASP
-: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy>
+: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep>
 
   <https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy>
 
@@ -460,7 +460,7 @@ Recommended value
 : `same-origin`
 
 OWASP
-: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy>
+: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop>
 
   <https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy>
 
@@ -488,7 +488,7 @@ Recommended value
 : `same-site`
 
 OWASP
-: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy>
+: <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp>
 
   <https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy>
 
