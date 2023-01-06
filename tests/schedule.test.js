@@ -75,7 +75,6 @@ describe('multiple technologies with single versions releaseAdoptionSchedule', (
         }];
         
         const result = getReleaseAdoptionSchedule(data);
-
         expect(result.java).toEqual([{
             release: releaseDate,
             adopt: adoptDate,
