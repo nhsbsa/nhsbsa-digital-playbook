@@ -54,15 +54,15 @@ describe("technology phase tests - releaseAdoptionSchedule", () => {
     ]);
   });
 
-  it("should return adopt as phase when java adopt date is in the past", () => {
-    const releaseDate = DateTime.local().startOf("day").minus({ years: 1 });
-    const adoptDate = DateTime.local().startOf("day").minus({ months: 6 });
+  it("should return adopt as phase when java adopt date today", () => {
+    const today = DateTime.local().startOf("day");
+    const releaseDate = today.minus({ months: 6 });
     const data = {
       releaseAdoptionSchedule: {
         java: [
           {
             release: releaseDate,
-            adopt: adoptDate,
+            adopt: today,
           },
         ],
       },
@@ -72,8 +72,32 @@ describe("technology phase tests - releaseAdoptionSchedule", () => {
     expect(result.java).toStrictEqual([
       {
         release: releaseDate,
-        adopt: adoptDate,
+        adopt: today,
         phase: "adopt",
+      },
+    ]);
+  });
+
+  it("should return assess as phase when technology adopt date is in the future", () => {
+    const today = DateTime.local().startOf("day");
+    const releaseDate = today.minus({ months: 6 });
+    const data = {
+      releaseAdoptionSchedule: {
+        java: [
+          {
+            release: releaseDate,
+            adopt: today.plus({ days: 1 }),
+          },
+        ],
+      },
+    };
+
+    const result = getReleaseAdoptionSchedule(data);
+    expect(result.java).toStrictEqual([
+      {
+        release: releaseDate,
+        adopt: today.plus({ days: 1 }),
+        phase: "assess",
       },
     ]);
   });
