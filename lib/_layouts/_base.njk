@@ -14,7 +14,7 @@
 <!--[if gt IE 8]><!--><link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 <meta property="og:title" content="{{ title }}">
 {% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:image" content="{{ '/images/opengraph-image.png' | url }}">
 {% endblock %}
 
 {% block pageTitle %}
