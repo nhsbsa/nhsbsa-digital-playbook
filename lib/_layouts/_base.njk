@@ -4,6 +4,7 @@
 {% set homeUrl = '/' | url %}
 
 {% from "header/macro.njk" import header as appHeader %}
+{% from "hero/macro.njk" import hero %}
 {% from "appArticleHeader/macro.njk" import appArticleHeader %}
 {% from "appFooter/macro.njk" import appFooter as oglFooter %}
 {% from 'back-link/macro.njk' import backLink %}
@@ -37,6 +38,12 @@
       "ariaLabel": productLongName
     })
   }}
+  {% if heroHeading %}
+    {{ hero({
+      heading: heroHeading,
+      text: heroText
+    }) }}
+  {% endif %}
 {% endblock %}
 
 {% block beforeContent %}

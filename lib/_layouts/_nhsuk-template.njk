@@ -1,6 +1,7 @@
 {% from "header/macro.njk" import header %}
 {% from "skip-link/macro.njk" import skipLink %}
 {% from "footer/macro.njk" import footer as appFooter %}
+{% from "appPhaseBanner/macro.njk" import appPhaseBanner %}
 
 <!DOCTYPE html>
 <html lang="{{ htmlLang | default('en') }}">
@@ -67,6 +68,14 @@
           "showSearch": "false"
         })
       }}
+    {% endblock %}
+
+    {% block phaseBanner %}
+      {{ appPhaseBanner ({
+        phase: phase,
+        url: 'https://github.com/nhsbsa/nhsbsa-digital-playbook/issues',
+        fullWidth: fullwidth
+      }) }}
     {% endblock %}
 
     {% block main %}

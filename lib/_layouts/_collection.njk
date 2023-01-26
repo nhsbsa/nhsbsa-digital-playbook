@@ -3,14 +3,8 @@
 {% from "appCard/macro.njk" import appCard %}
 {% from "appPagination/macro.njk" import appPagination %}
 {% from "prose/macro.njk" import appProse %}
-{% from "hero/macro.njk" import hero %}
 
 {% block main %}
-  {{ hero({
-    heading: heroHeading,
-    text: heroText
-  }) }}
-
   <div class="nhsuk-width-container">
     {% block beforeContent %}{% endblock %}
     <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
