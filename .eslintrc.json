@@ -1,0 +1,14 @@
+{
+    "env": {
+        "commonjs": true,
+        "jest": true
+    },
+    "plugins": ["prettier"],
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "prettier/prettier": "error"
+    }
+}
