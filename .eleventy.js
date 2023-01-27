@@ -50,11 +50,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('blank', require('./lib/_filters/blank'));
   eleventyConfig.addFilter('urlEncode', require('./lib/_filters/urlEncode'));
   eleventyConfig.addFilter('debug', require('./lib/_filters/debug'));
+  eleventyConfig.addFilter('absoluteUrl', require('./lib/_filters/urls'));
+
 
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
+  eleventyConfig.addPassthroughCopy({"lib/_images": "/images"});
   eleventyConfig.addPassthroughCopy({"lib/_netlify": "/"});
-  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/"});
+  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/nhsuk-frontend/assets"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/dist/*.js": "/javascripts"});
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
   eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
