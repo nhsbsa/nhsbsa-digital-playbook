@@ -5,16 +5,20 @@
 
 {% from "header/macro.njk" import header as appHeader %}
 {% from "appArticleHeader/macro.njk" import appArticleHeader %}
-{# {% from "breadcrumbs/macro.njk" import appBreadcrumbs %} #}
 {% from "appFooter/macro.njk" import appFooter as oglFooter %}
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block head %}
-<!--[if lte IE 8]><link href="/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!--><link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-<meta property="og:title" content="{{ title }}">
-{% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
-<meta property="og:image" content="{{ '/images/opengraph-image.png' | url }}">
+    <meta property="og:url" content="{{ page.url | url | absoluteUrl }}"/>
+    <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+    <meta property="og:title" content="Design system - NHS digital service manual"/>
+    {% if description %}
+    <meta property="og:description" content="{{ description | markdown("inline") | striptags(true) }}">
+    {% endif %}
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:image" content="{{ '/images/opengraph-image.png' | url | absoluteUrl }}">
+    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
 {% endblock %}
 
 {% block pageTitle %}
