@@ -11,14 +11,13 @@
 {% block head %}
     <meta property="og:url" content="{{ page.url | url | absoluteUrl }}"/>
     <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-    <meta property="og:title" content="Design system - NHS digital service manual"/>
+    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
     {% if description %}
     <meta property="og:description" content="{{ description | markdown("inline") | striptags(true) }}">
     {% endif %}
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_GB"/>
     <meta property="og:image" content="{{ '/images/opengraph-image.png' | url | absoluteUrl }}">
-    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
 {% endblock %}
 
 {% block pageTitle %}
