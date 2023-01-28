@@ -1,78 +1,119 @@
-{% extends "_nhsuk-template.njk" %}
-
-{% set htmlClasses = 'no-js' %}
-{% set homeUrl = '/' | url %}
-
+{% from "header/macro.njk" import header %}
+{% from "skip-link/macro.njk" import skipLink %}
 {% from "header/macro.njk" import header as appHeader %}
+{% from "hero/macro.njk" import hero as appHero %}
 {% from "appArticleHeader/macro.njk" import appArticleHeader %}
 {% from "appFooter/macro.njk" import appFooter as oglFooter %}
 {% from 'back-link/macro.njk' import backLink %}
+{% set htmlClasses = 'no-js' %}
+{% set homeUrl = '/' | url %}
+{% set containerClasses = containerClasses | default("app-width-container") %}
+<html lang="{{ htmlLang | default('en') }}">
 
 {% block head %}
-    <meta property="og:url" content="{{ page.url | url | absoluteUrl }}"/>
-    <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
-    {% if description %}
-    <meta property="og:description" content="{{ description | markdown("inline") | striptags(true) }}">
-    {% endif %}
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en_GB"/>
-    <meta property="og:image" content="{{ '/images/opengraph-image.png' | url | absoluteUrl }}">
+<head>
+  {% block headStart %}
+  {% endblock %}
+
+  {% block headMeta %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ description | markdown("inline") | striptags(true) }}">
+  <meta name="robots" content="{{ robots | default('noindex') }}">
+  {% endblock %}
+  
+  {% block pageTitle %}
+  <title>
+    {% if title %}{{ title }} - {% endif %} {{ serviceName or productLongName }}
+  </title>
+  {% endblock %}
+
+  <!-- New NHSUK asset and font -->
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+  {% block headIcons %}
+  <!-- NHS Icons -->
+  <link rel="shortcut icon" href="{{ '/nhsuk-frontend/assets/favicons/favicon.ico' | url }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ '/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png' | url }}">
+  <link rel="mask-icon" href="{{ '/nhsuk-frontend/assets/favicons/favicon.svg' | url }}" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="{{ '/nhsuk-frontend/assets/favicons/favicon-192x192.png' | url }}">
+  {% endblock %}
+
+  {% block msApplicationTiles %}
+  <meta name="msapplication-TileImage" content="{{ '/nhsuk-frontend/assets/favicons/mediumtile-144x144.png' | url }}">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="{{ '/nhsuk-frontend/assets/favicons/smalltile-70x70.png' | url }}">
+  <meta name="msapplication-square150x150logo" content="{{ '/nhsuk-frontend/assets/favicons/mediumtile-150x150.png' | url }}">
+  <meta name="msapplication-wide310x150logo" content="{{ '/nhsuk-frontend/assets/favicons/widetile-310x150.png' | url }}">
+  <meta name="msapplication-square310x310logo" content="{{ '/nhsuk-frontend/assets/favicons/largetile-310x310.png' | url }}">
+  {% endblock %}
+
+  {% block openGraph %}
+  <meta property="og:url" content="{{ page.url | url | absoluteUrl }}"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:title" content="Design system - NHS digital service manual"/>
+  {% if description %}
+  <meta property="og:description" content="{{ description | markdown("inline") | striptags(true) }}">
+  {% endif %}
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:image" content="{{ '/images/opengraph-image.png' | url | absoluteUrl }}">
+  <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
+  {% endblock %}
+
+  {% block stylesheets %}
+  <link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" />
+  {% endblock %}
+
+  {% block headEnd %}
+  {% endblock %}
+</head>
 {% endblock %}
 
-{% block pageTitle %}
-  {% if title %}{{ title }} - {% endif %} {{ serviceName or productLongName }} - NHSBSA
-{% endblock %}
+<body class="{{ bodyClasses }}" {%- for attribute, value in bodyAttributes %} {{attribute}}="{{value}}"{% endfor %}>
 
-{% block header %}
-  {{ appHeader({
-      homeHref: homeUrl,
-      "showNav": "false",
-      "showSearch": "false",
-      "organisation": {
-        "name": "Business Services Authority",
-        "split": productShortName
-      },
-      "ariaLabel": productLongName
-    })
-  }}
-{% endblock %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  
+  {% block bodyStart %}{% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
+  {% block skipLink %}
+    {{ skipLink({
+      href: '#main-content',
+      text: 'Skip to main content'
+    }) }}
+  {% endblock %}
 
-{% set mainClasses = mainClasses %}
-{% set containerClasses = containerClasses | default("nhsuk-width-container-fluid") %}
+  {% block header %}
+    {{ appHeader({
+        homeHref: homeUrl,
+        ariaLabel: siteMeta.header.description,
+        showNav: false,
+        showSearch: false,
+        organisation: {
+          name: siteMeta.header.organisation,
+          descriptor: siteMeta.header.description
+        }
+      })
+    }}
+  {% endblock %}
 
-{{ oglFooter({
-  "links": [
-    {
-      "URL": "https://www.nhs.uk/nhs-sites/",
-      "label": "NHS sites"
-    },
-    {
-      "URL": "https://www.nhs.uk/about-us/",
-      "label": "About us"
-    },
-    {
-      "URL": "https://www.nhs.uk/contact-us/",
-      "label": "Contact us"
-    },
-    {
-      "URL": "https://www.nhs.uk/about-us/sitemap/",
-      "label": "Sitemap"
-    },
-    {
-      "URL": "https://www.nhs.uk/our-policies/",
-      "label": "Our policies"
-    }
-  ]
-})}}
+  {% block main %}{% endblock %}
 
-{% block bodyEnd %}
-  {% block scripts %}
+  {% block footer %}
+    {{ oglFooter({
+      "links": siteMeta.footer.links
+      })}}
+  {% endblock %}
+
+  {% block bodyEndScripts %}
     <script src="{{ '/javascripts/nhsuk.min.js' | url }}"></script>
     <script src="{{ '/javascripts/application.js' | url }}"></script>
     {% block pageScripts %}{% endblock %}
   {% endblock %}
-{% endblock %}
+
+  {% block bodyEnd %}{% endblock %}
+</body>
+</html>

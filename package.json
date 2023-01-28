@@ -48,7 +48,7 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-table-of-contents": "^0.6.0",
     "markdown-it-toc-done-right": "^4.2.0",
-    "nhsuk-frontend": "^5.2.1",
+    "nhsuk-frontend": "^6.1.2",
     "regexpp": "^3.2.0",
     "text-table": "^0.2.0"
   }
