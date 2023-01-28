@@ -3,6 +3,9 @@ $nhsuk-global-styles: true;
 
 @import "node_modules/nhsuk-frontend/packages/nhsuk";
 @import "node_modules/nhsuk-frontend/packages/core/all";
+@import 'app-reading-width';
+@import "pane.scss";
+@import "sidenav.scss";
 @import "../_components/all.scss";
 @import "codetabs.scss";
 @import "admonition.scss";

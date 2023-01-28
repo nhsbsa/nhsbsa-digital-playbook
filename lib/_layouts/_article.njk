@@ -1,50 +1,36 @@
-{% extends "_base.njk" %}
+{% if hero %}
+  {% extends "_sections.njk" %}
+{% else %}
+  {% extends "_main.njk" %}
+{% endif %}
 
-{% from "appArticle/macro.njk" import appArticle %}
+{% from "appArticleFooter/macro.njk" import appArticleFooter %}
 {% from "appBadges/macro.njk" import appBadges %}
 {% from "appCard/macro.njk" import appCard with context %}
 {% from "appGithubIssue/macro.njk" import appGithubIssue %}
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
 
-{% block header %}
-  {{ appArticleHeader({
-      homeHref: homeUrl,
-      "showNav": "false",
-      "showSearch": "false",
-      "organisation": {
-        "name": "Business Services Authority",
-        "split": productShortName
-      },
-    "ariaLabel": productLongName,
-    "containerClasses": "nhsuk-width-container-fluid"
-    })
-  }}
-{% endblock %}
-
 {% block content %}
-  {% call appArticle({
-    header: {
-      title: title | widont
-    },
-    footer: {
-      date: page.date,
-      modified: modified if modified,
-      review: review
-    }
-  }) %}
-    <div class="nhsbsa-sticky-nav">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
       {% if content | toc %}
-        <h2 class="nhsbsa-sticky-nav__heading">Contents</h2>
+        <h2 class="app-side-nav__heading">Contents</h2>
         {{ content | toc | safe }}
       {% endif %}
-    </div>
-
-    <div class="nhsbsa-article-content">
+        </nav>
+      </div>
+      
+      <div class="app-pane__main-content">
+      <div class="no-js">
       {{ backLink({
         "href": "javascript:history.back()",
         "text": "Go back"
-      }) }} 
+      }) }}
+      </div> 
       
       <div class="nhsbsa-article-header">
         <h1 class="nhsuk-heading-xl">
@@ -95,7 +81,17 @@
         issueTitle: "Change to page '" + page.filePathStem + "' ",
         linkText: "Suggest a change to this page"
         }) }}
-    </div>
 
-  {% endcall %}
+      {{ appArticleFooter({
+          date: page.date,
+          modified: modified,
+          review: review
+      }) }}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
