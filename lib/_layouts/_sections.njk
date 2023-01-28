@@ -1,0 +1,17 @@
+{% extends "_base.njk" %}
+{% block main %}
+<main id="maincontent" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+{% block hero %}
+{{ appHero({
+    heading: hero.heading,
+    text: hero.text
+}) }}
+{% endblock %}
+<section class="nhsuk-section">
+    {% block beforeContent %}{% endblock %}
+    <div class="nhsuk-width-container {{ containerClasses }}">
+        {% block content %}{% endblock %}
+    </div>
+</section>
+</main>
+{% endblock %}

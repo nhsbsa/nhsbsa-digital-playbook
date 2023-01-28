@@ -1,0 +1,13 @@
+header:
+  phase: "Beta"
+  organisation: "Business Services Authority"
+  description: "Digital, Data and Technology playbook"
+  service: "Business Services Authority DDaT playbook"
+footer:
+  links:
+    - url: "/accessibility"
+      label: "Accessibility"
+    - url: "https://www.nhsbsa.nhs.uk/contact-us"
+      label: "Contact us"
+    - url: "https://github.com/nhsbsa/nhsbsa-digital-playbook"
+      label: "GitHub"

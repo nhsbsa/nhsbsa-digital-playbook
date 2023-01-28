@@ -1,0 +1,22 @@
+<div class="nhsbsa-article--date">
+  {% if params.date %}
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Published: <time datetime="{{ params.date | date }}">{{ params.date | date("d LLLL y") }}</time>
+    </p>
+  {% endif %}
+  {% if params.modified %}
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last updated: <time datetime="{{ params.modified | date }}">{{ params.modified | date("d LLLL y") }}</time>
+    </p>
+  {% endif %}
+  {% if params.review.last_reviewed_date  %}
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="{{ params.review.last_reviewed_date | date }}">{{ params.review.last_reviewed_date | date("d LLLL y") }}</time>
+    </p>
+  {% endif %}
+  {% if params.review.next_review_date  %}
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="{{ params.review.next_review_date | date }}">{{ params.review.next_review_date | date("d LLLL y") }}</time>
+    </p>
+  {% endif %}
+</div>

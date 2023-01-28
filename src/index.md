@@ -1,6 +1,9 @@
 ---
 layout: collection
 description: "How we design, build and run services at the NHSBSA"
+hero:
+  heading: "NHSBSA Digital, Data and Technology Playbook"
+  text: "How we design, build and run services at the NHSBSA"
 collection_tag: home
 pagination:
   data: collections.home
