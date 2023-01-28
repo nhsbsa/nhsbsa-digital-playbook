@@ -23,6 +23,7 @@ module.exports = function(eleventyConfig) {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
     sassLocation: "lib/_stylesheets/",
     sassIndexFile: "application.scss",
+    outputStyle: "expanded",
     outDir: "_site/nhsbsa-digital-playbook/",
     outPath: "stylesheets",
     outFileName: "application.css"
