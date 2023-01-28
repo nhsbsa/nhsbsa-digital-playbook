@@ -1,4 +1,4 @@
-name: Build static site, deploy, check links
+name: Build static site, deploy
 
 on: 
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build          
+          BASE_URL=${{ vars.BASE_URL }} npm run build          
 
       - name: Deploy GH Pages
         if: contains(github.ref, 'main')

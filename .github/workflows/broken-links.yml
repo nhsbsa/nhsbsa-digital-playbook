@@ -1,4 +1,4 @@
-name: Build static site, deploy, check links
+name: Check for broken links
 
 on: 
   workflow_dispatch:
