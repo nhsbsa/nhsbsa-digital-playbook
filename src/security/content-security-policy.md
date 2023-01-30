@@ -324,7 +324,6 @@ Reference
 : Defines valid sources for request prefetch and prerendering, for example via the link tag with `rel="prefetch"` or `rel="prerender"`
 
   * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src>
-  * <https://www.w3.org/TR/CSP/#directive-prefetch-src>
 
 Guidance
 : Use recommended value of `'none'`
