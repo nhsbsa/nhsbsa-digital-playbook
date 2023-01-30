@@ -80,10 +80,10 @@ Use secrets detection tools to protect against mistaken commits, and to alert if
 
 To use the NHSBSA Gitleaks definitions:
 
-* Copy the [nhsbsa-gitleaks.toml](https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks/-/raw/main/nhsbsa-gitleaks.toml) config file into your project
+* Copy the [nhsbsa-gitleaks.toml](https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa/-/raw/main/gitleaks-nhsbsa.toml) config file into your project
 
 ```bash
-wget https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks/-/raw/main/nhsbsa-gitleaks.toml
+wget https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa/-/raw/main/gitleaks-nhsbsa.toml
 ```
 
 * Create a project specific `gitleaks.toml` file and configure it to extend the NHSBSA file
