@@ -21,18 +21,17 @@ Terms used in the naming conventions are:
     <th>example</th>
   </tr>
   <tr>
-    <td>Service area</td>
-    <td>The high level area of a service</td>
+    <td>Department</td>
+    <td>The department that owns the service</td>
     <td>
-        <ul>
-            <li><code>citizen</code></li>
-            <li><code>corporate</code></li>
-            <li><code>primary-care</code></li>
-            <li><code>workforce</code></li>
-            <li><code>insight</code></li>
-            <li><code>platform</code></li>
-            <li><code>dhsc</code></li>
-        </ul>
+      <ul>
+        <li><code>citizen</code></li>
+        <li><code>corporate</code></li>
+        <li><code>primary-care</code></li>
+        <li><code>workforce</code></li>
+        <li><code>ddat</code> for <em>Data, Digital & Technology</em></li>
+        <li><code>dhsc</code> for <em>Department of Health and Social Care</em></li>
+      </ul>
     </td>
   </tr>
   <tr>
@@ -40,6 +39,8 @@ Terms used in the naming conventions are:
     <td>For grouping within a service area</td>
     <td>
       <ul>
+        <li><code>insight</code></li>
+        <li><code>platform</code></li>
         <li><code>hwhc</code> for <em>Help with Health Costs</em></li>
         <li><code>ohs</code> for <em>Overseas Healthcare Services</em></li>
       </ul>
@@ -71,15 +72,17 @@ Terms used in the naming conventions are:
     <td>
       For components:
       <ul>
-        <li><code>frontend</code> or </code>ui</code> for a web frontend</li>
+        <li><code>ui</code> for a web frontend</li>
         <li><code>api</code> for an RESTful API</li>
         <li><code>lambda</code> for an AWS lambda</li>
         <li><code>prototype</code> for prototype code</li>
         <li><code>poc</code> for proof of concept</li>
-        </ul>For infrastructure:<ul>
+      </ul>
+      For infrastructure:
+      <ul>
         <li><code>config</code> for externalised configuration</li>
         <li><code>terraform</code> for terraform</li>
-        </ul>
+      </ul>
       For tests:
       <ul>
         <li><code>acceptance-test</code></li>
@@ -93,6 +96,7 @@ Terms used in the naming conventions are:
       <ul>
         <li><code>feature</code></li>
         <li><code>bug</code></li>
+        <li><code>chore</code></li>
       </ul>
     </td>
   </tr>
