@@ -127,7 +127,7 @@ __DECOMMISSION__
 
 ::: details How we work out the adoption schedule for Spring Boot
 
-We follow the [Spring Boot support roadmap](https://spring.io/projects/spring-boot#support).
+We follow the [Spring Boot support roadmap](https://spring.io/projects/spring-boot).
 Spring Boot uses a 6 month release cycle between minor versions with a 3 month overlap for [Open Source Software (OSS) support](https://tanzu.vmware.com/support/oss).
 
 ::: card
