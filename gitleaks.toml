@@ -1,0 +1,4 @@
+title = "DDaT playbook gitleaks config"
+
+[extend]
+path = "gitleaks-nhsbsa.toml"
