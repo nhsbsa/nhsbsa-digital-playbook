@@ -3,6 +3,10 @@ layout: article
 title: "Secrets detection"
 description: "Avoid committing 'secrets' such as API keys into source control"
 status: REVIEW
+tags: [dev-security, security]
+order: 
+  dev-security: 3
+  security: 3
 ---
 Sensitive information, or 'secrets', such as API keys and credentials must not be checked into source control.
 
