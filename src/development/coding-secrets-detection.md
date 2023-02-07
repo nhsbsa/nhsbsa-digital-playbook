@@ -94,7 +94,7 @@ wget https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa/-/raw/
 title = "<project-name> gitleaks config"
 
 [extend]
-path = "nhsbsa-gitleaks.toml"
+path = "gitleaks-nhsbsa.toml"
 ```
 
 ### Add a pre-commit hook
@@ -148,3 +148,10 @@ value = "gitleaks.toml"
 
 ### Ignore false positives
 
+Detected secrets can be ignored in different ways:
+
+* Secrets in history
+  Add the fingerprint to a `.gitleaksignore` file. See [gitleaksignore](https://github.com/zricethezav/gitleaks#gitleaksignore)
+
+* Uncommitted false positives
+  Add a comment to the offending line with the `gitleaks:allow` keyword. See [gitleaksallow](https://github.com/zricethezav/gitleaks#gitleaksallow)
