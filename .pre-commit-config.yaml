@@ -1,0 +1,9 @@
+repos:
+-   repo: local
+    hooks:
+    - id: gitleaks
+      name: Detect hardcoded secrets
+      description: Detect hardcoded secrets using Gitleaks
+      entry: gitleaks protect --config="gitleaks.toml" --verbose --redact --staged
+      language: system
+      pass_filenames: false
