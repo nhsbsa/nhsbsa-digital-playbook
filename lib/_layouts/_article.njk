@@ -15,14 +15,14 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full app-component-reading-width">
     <div class="app-pane">
+      {% if content | toc %}
       <div class="app-pane__side-bar">
         <nav class="app-side-nav">
-      {% if content | toc %}
         <h2 class="app-side-nav__heading">Contents</h2>
         {{ content | toc | safe }}
-      {% endif %}
         </nav>
       </div>
+      {% endif %}
       
       <div class="app-pane__main-content">
       <div class="no-js">
