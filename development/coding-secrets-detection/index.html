@@ -108,6 +108,9 @@ Secrets detection -  NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
                     <li><a href="#configure-gitlab-secrets-detection">Configure Gitlab secrets detection</a>
             		</li>
+
+                    <li><a href="#ignore-false-positives">Ignore false positives</a>
+            		</li>
                 </ol>
             		</li>
                 </ol>
@@ -128,8 +131,8 @@ Secrets detection -  NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <h1 class="nhsuk-heading-xl">
           Secrets detection
         </h1>
-          <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
+          <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
 </strong>
 
 
@@ -192,16 +195,17 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 <p>This means you must make sure that your system allows for keys and credentials to be changed and rotated easily, and for secrets to be revoked.</p>
 </blockquote>
 <h3 id="consider-rewriting-history" tabindex="-1"><a class="header-anchor" href="#consider-rewriting-history">Consider rewriting history</a></h3>
-<p>If you accidentally commit secrets to a local repository, you cannot remove them by simply committing a change. You should consider ‘rewriting history’: The commit with the secret will then no longer exist.</p>
-<p>Rewriting history will change the Git commit graph. It has a high potential to create a mess of other contributer’s local repositories. Proceed with caution and make sure that every team member is aware what is being done and how to align their repositories to the new state.</p>
-<p>If the repository has already been Open Sourced, do not rewrite history on key branches such as <code>main</code> or <code>develop</code>.</p>
+<p>If you accidentally commit secrets to a local repository, you cannot remove them by simply committing a change. You should consider ‘rewriting history’ to update the commit with the secret.</p>
+<p>Accidental commits of personally identifiable information (PII) should be rewritten.</p>
+<p>Rewriting history will change the Git commit graph. It has a high potential to create a mess of other contributer’s local repositories. It is advisable to only rewrite history on branches that are not shared. Proceed with caution and make sure that every team member is aware what is being done and how to align their repositories to the new state.</p>
+<p>If the repository has already been Open Sourced, avoid rewriting history on key branches such as <code>main</code> or <code>develop</code>.</p>
 <p>This article provides an in-depth guide to removing secrets from Git history by rewriting history: <a href="https://blog.gitguardian.com/rewriting-git-history-cheatsheet/" target="_blank" rel="noopener">Git Clean, Git Remove file from commit - Cheatsheet</a></p>
 <hr>
 <h2 id="secrets-detection-tooling" tabindex="-1"><a class="header-anchor" href="#secrets-detection-tooling">Secrets detection tooling</a></h2>
 <p>Use secrets detection tools to protect against mistaken commits, and to alert if they get pushed to the central repository.</p>
 <ul>
 <li><a href="https://github.com/zricethezav/gitleaks" target="_blank" rel="noopener">Gitleaks</a> as our secrets detection tool</li>
-<li><a href="https://gitlab.com/nhsbsa/platform-services/gitleaks/nhsbsa-gitleaks" target="_blank" rel="noopener">NHSBSA Gitleaks configuration file</a> with verified rules</li>
+<li><a href="https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa" target="_blank" rel="noopener">NHSBSA Gitleaks configuration file</a> with verified rules</li>
 <li><a href="https://pre-commit.com/" target="_blank" rel="noopener">Pre-commit</a> managed Git hooks to prevent local commits of secrets</li>
 <li><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/" target="_blank" rel="noopener">Gitlab-CI secrets detection</a> to alert in case a local pre-commit git hook has not prevented the commit</li>
 </ul>
@@ -214,7 +218,7 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 <ul>
 <li>Create a project specific <code>gitleaks.toml</code> file and configure it to extend the NHSBSA file</li>
 </ul>
-<pre class="language-toml"><code class="language-toml"><span class="token key property">title</span> <span class="token punctuation">=</span> <span class="token string">"&lt;project-name> gitleaks config"</span><br><br><span class="token punctuation">[</span><span class="token table class-name">extend</span><span class="token punctuation">]</span><br><span class="token key property">path</span> <span class="token punctuation">=</span> <span class="token string">"nhsbsa-gitleaks.toml"</span></code></pre>
+<pre class="language-toml"><code class="language-toml"><span class="token key property">title</span> <span class="token punctuation">=</span> <span class="token string">"&lt;project-name> gitleaks config"</span><br><br><span class="token punctuation">[</span><span class="token table class-name">extend</span><span class="token punctuation">]</span><br><span class="token key property">path</span> <span class="token punctuation">=</span> <span class="token string">"gitleaks-nhsbsa.toml"</span></code></pre>
 <h3 id="add-a-pre-commit-hook" tabindex="-1"><a class="header-anchor" href="#add-a-pre-commit-hook">Add a pre-commit hook</a></h3>
 <ul>
 <li>Install <a href="https://pre-commit.com/" target="_blank" rel="noopener">pre-commit</a></li>
@@ -236,6 +240,18 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 Create a file <code>.gitlab/secret-detection-ruleset.toml</code></li>
 </ul>
 <pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">[</span>secrets<span class="token punctuation">]</span><br>description = 'secrets custom rules configuration'<br><br><span class="token punctuation">[</span><span class="token punctuation">[</span>secrets.passthrough<span class="token punctuation">]</span><span class="token punctuation">]</span><br>type  = "file"<br>target = "gitleaks.toml"<br>value = "gitleaks.toml"</code></pre>
+<h3 id="ignore-false-positives" tabindex="-1"><a class="header-anchor" href="#ignore-false-positives">Ignore false positives</a></h3>
+<p>Detected secrets can be ignored in different ways:</p>
+<ul>
+<li>
+<p>Secrets in history<br>
+Add the fingerprint to a <code>.gitleaksignore</code> file. See <a href="https://github.com/zricethezav/gitleaks#gitleaksignore" target="_blank" rel="noopener">gitleaksignore</a></p>
+</li>
+<li>
+<p>Uncommitted false positives<br>
+Add a comment to the offending line with the <code>gitleaks:allow</code> keyword. See <a href="https://github.com/zricethezav/gitleaks#gitleaksallow" target="_blank" rel="noopener">gitleaksallow</a></p>
+</li>
+</ul>
 
       <hr>
       <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -260,7 +276,7 @@ Create a file <code>.gitlab/secret-detection-ruleset.toml</code></li>
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2023-02-08T16:11:26.560Z">8 February 2023</time>
+            Published <time datetime="2023-02-08T18:45:45.061Z">8 February 2023</time>
           </p>
           <p>
             Last reviewed <time datetime="">-</time>
