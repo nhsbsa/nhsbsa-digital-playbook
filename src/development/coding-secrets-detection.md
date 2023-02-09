@@ -155,7 +155,9 @@ value = "gitleaks.toml"
 Detected secrets can be ignored in different ways:
 
 * Secrets in history
-  Add the fingerprint to a `.gitleaksignore` file. See [gitleaksignore](https://github.com/zricethezav/gitleaks#gitleaksignore)
+  Add the fingerprint to a `.gitleaksignore` file.
 
 * Uncommitted false positives
-  Add a comment to the offending line with the `gitleaks:allow` keyword. See [gitleaksallow](https://github.com/zricethezav/gitleaks#gitleaksallow)
+  Add a comment to the offending line with the `gitleaks:allow` keyword.
+  
+See [Gitleaks README](https://github.com/zricethezav/gitleaks) for further information
