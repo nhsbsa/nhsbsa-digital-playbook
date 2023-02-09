@@ -10,35 +10,35 @@ related:
 ---
 ## What different design roles exist at the NHSBSA?
 
-The NHSBSA follows the <a href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework" target="_blank">DDaT Framework</a> and has 3 types of designer; Service Designers, Interaction Designers and Content Designers.
+The NHSBSA follows the <a href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework" target="_blank">DDaT Framework</a> and has 3 types of designer; service designers, interaction designers and content designers.
 
-## Service Design
+## Service design
 
 A service designer makes sure we design and deliver the right service. They work in teams that may support multiple products or sub-services. They also work in the space before Discovery shaping and scoping future work.
 
 **Teams**:
 
-Services as end-users would know them transcend delivery or product teams. Service Designers work across a program of work to design the interactions and building blocks that make a service. The service designer may support multiple product teams to provide insight on how to achieve desired outcomes in a measurable way. 
+Services as end-users would know them transcend delivery or product teams. Service designers work across a program of work to design the interactions and building blocks that make a service. The service designer may support multiple product teams to provide insight on how to achieve desired outcomes in a measurable way. 
 
 **Scoping**:
 
 This stage is about establishing the problem / costs / issues that you want to look at including the people and skills you are likely to need for Discovery. A service designer will work with the business and policy upfront to understand what we have, define the problem(s) to be solved, and the desired outcome(s).
 
-### What is Service Design?  
+### What is service design?  
 
 A design practice that helps organisations understand, visualise and orchestrate all the different components of a service e.g. people, digital services, comms, processes and aligns them with the end user’s needs. This is done in order that service provides the best possible outcomes for the organisation, its stakeholders and its end users.
 
 ### Why do it?
 
-By working across organisational boundaries, Service Design helps users complete their goals by solving problems that sit outside the normal remit of Interaction and Content Design.
+By working across organisational boundaries, service design helps users complete their goals by solving problems that sit outside the normal remit of interaction and content design.
 
-**Service Design**:
+**Service design**:
 
  * Builds context and understanding of end users lives
  * Brings visibility to customer journeys and the pain points that limit service use
  * Highlights organisational / structural issues that prevent good service outcomes
 
-Service Design along with other disciplines will help us create services that:
+Service design along with other disciplines will help us create services that:
 
  * Are easy to find
  * Clearly explain the purpose of the service
@@ -58,11 +58,11 @@ Service Design along with other disciplines will help us create services that:
 
 ### When to do it
 
-Service Design is applicable throughout the agile delivery phases Discovery, Alpha, Beta and Live (as defined by GDS). In addition it is valuable to use Service Design approaches in pre-discovery in order to diagnose and scope out the problems that need to be addressed. Often requests are made to build defined things i.e. an app, a page, a service which presuppose a solution, working pre discovery allows stakeholders to avoid this issue with good problem definition.
+Service design is applicable throughout the agile delivery phases Discovery, Alpha, Beta and Live (as defined by GDS). In addition it is valuable to use service design approaches in pre-discovery in order to diagnose and scope out the problems that need to be addressed. Often requests are made to build defined things i.e. an app, a page, a service which presuppose a solution, working pre discovery allows stakeholders to avoid this issue with good problem definition.
 
 ### Benefits
 
-Service Design supports digital design to ensure benefits can be realised
+Service design supports digital design to ensure benefits can be realised
 
  * Reduces risk by ensuring the right problem is solved
  * Creates efficiencies by identifying service siloes, duplication and proliferation
@@ -72,24 +72,24 @@ Service Design supports digital design to ensure benefits can be realised
 
 | Type of design | Example |
 | --- | --- |
-| Service Design | Manage a waste removal company |
+| Service design | Manage a waste removal company |
 
-## Interaction Design
+## Interaction design
 
-An Interaction Designer designs how things should work, they remove risk by testing ideas early and often with real users.
+An interaction designer designs how things should work, they remove risk by testing ideas early and often with real users.
 
-### What is Interaction Design?
+### What is interaction design?
 
 A design practice that works out the best way to let users interact with a product or sub-service. This is done to make sure we create inclusive and accessible products that can be used by all people
 
 ### Why do it?
 
-Interaction Design removes the risk of developing systems that don't meet user needs by:
+Interaction design removes the risk of developing systems that don't meet user needs by:
 
  * Testing assumptions, hypothesis, and designs early and often
  * ensuring the product is inclusive and accessible
 
-Interaction Design along with other disciplines helps us create products that:
+Interaction design along with other disciplines helps us create products that:
 
  * Meet the NHS / Government service standards
  * Meet NHS / Government accessibility regulations
@@ -103,11 +103,11 @@ Interaction Design along with other disciplines helps us create products that:
 
 ### When to do it
 
-Interaction Design is applicable throughout the agile delivery phases: Discovery, Alpha, Beta and Live (as defined by GDS). In addition, Interaction Designers also work on upgrading legacy applications and rolling out changes to ensure internal NHS services are consistent and meet current standards and regulations.
+Interaction design is applicable throughout the agile delivery phases: Discovery, Alpha, Beta and Live (as defined by GDS). In addition, interaction designers also work on upgrading legacy applications and rolling out changes to ensure internal NHS services are consistent and meet current standards and regulations.
 
 ### Benefits
 
-Interaction Design supports digital delivery to ensure benefits can be realised
+Interaction design supports digital delivery to ensure benefits can be realised
 
  * Reduces risk, development and maintenance costs by testing assumptions and hypothesis
  * Improves outcomes by facilitating design sessions to ensure a wide range of possibilities are considered
@@ -119,14 +119,14 @@ Interaction Design supports digital delivery to ensure benefits can be realised
 
 | Type of design | Example |
 | --- | --- |
-| Interaction Design | Apply for a waste Carrier, Broker or Dealer permit |
-| Interaction Design | Apply for a standard rules waste Permit |
+| Interaction design | Apply for a waste Carrier, Broker or Dealer permit |
+| Interaction design | Apply for a standard rules waste Permit |
 
-## Content Design
+## Content design
 
-### What is Content Design?
+### What is content design?
 
-Content Design is answering a user need in the best way for the user to consume it.
+Content design is answering a user need in the best way for the user to consume it.
 
 It:
 
@@ -142,12 +142,12 @@ Good content design:
 * helps people get the information they need in a way they expect
 * focuses on the users needs by creating content that is simple and easy to understand
 * makes sure content is accessible and inclusive for anyone who needs it
-* keeps content across multiple services consistent by sticking using style guides and standards
+* keeps content across multiple services consistent by following standards set out in our style guide
 * gives our users the best possible experience of our services and reduces workloads for areas of the business
 
 ### When to do it
 
-Content Design should work alongside the other areas of the UCD community from the Alpha stage through to the live environment to ensure the continuous improvement our services.
+Content Design should work alongside the other professions in the UCD team, throughout the whole design journey.
 
 Throughout this process we should test and iterate content design based on research, data and evidence.
 
@@ -164,14 +164,14 @@ So that the user:
 
 ### Example
 
-A good example of how Content Design can help can be found in the Manage your service (MYS) portal.
+A good example of how content design can help can be found in the Manage your service (MYS) portal.
 
 **Original content**:
 
-How many eligible people aged 65 and over, including those becoming age 65 by 31st March 2021, has the pharmacy vaccinated between 1st September 2020 and 31st January 2021?
+> How many eligible people aged 65 and over, including those becoming age 65 by 31st March 2021, has the pharmacy vaccinated between 1st September 2020 and 31st January 2021?
 
 **Revised content**:
 
-Anyone aged 65 or over by 31 March 2021 is eligible for a flu vaccine.
-
-How many eligible people did the pharmacy vaccinate between 1 September 2020 and 31 January 2021?
+> Anyone aged 65 or over by 31 March 2021 is eligible for a flu vaccine.
+> 
+> How many eligible people did the pharmacy vaccinate between 1 September 2020 and 31 January 2021?
