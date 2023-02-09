@@ -140,7 +140,7 @@ It:
 Good content design:
 
 * helps people get the information they need in a way they expect
-* focuses on the users needs by creating content that is simple and easy to understand
+* focuses on the user needs by creating content that is simple and easy to understand
 * makes sure content is accessible and inclusive for anyone who needs it
 * keeps content across multiple services consistent by following standards set out in our style guide
 * gives our users the best possible experience of our services and reduces workloads for areas of the business
