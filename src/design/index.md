@@ -147,7 +147,7 @@ Good content design:
 
 ### When to do it
 
-Content Design should work alongside the other professions in the UCD team, throughout the whole design journey.
+Content design should work alongside the other professions in the UCD team, throughout the whole design journey.
 
 Throughout this process we should test and iterate content design based on research, data and evidence.
 
