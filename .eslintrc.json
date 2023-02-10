@@ -1,6 +1,7 @@
 {
     "env": {
         "commonjs": true,
+        "node": true,
         "jest": true
     },
     "plugins": ["prettier"],
