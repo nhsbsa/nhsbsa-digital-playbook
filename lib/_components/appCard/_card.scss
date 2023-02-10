@@ -1,0 +1,27 @@
+.card {
+	@extend .nhsuk-card;
+	@extend .nhsuk-card__content;
+}
+
+.card dd code,
+.card p code {
+	background-color:  $color_nhsuk-grey-5;
+}
+
+.card h3 {
+	@extend .nhsuk-heading-l
+}
+
+.card heed {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	h1,h2,h3 {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+	strong {
+		display: inline-block;
+		margin-left: auto;
+	}
+}
