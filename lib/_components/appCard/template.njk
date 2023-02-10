@@ -4,13 +4,13 @@
 	<ul class="nhsuk-grid-row nhsuk-card-group">
 	{% for item in params.items | sortByOrder(params.order) %}
 		{% if (not item.data.status or params.page_status == 'DRAFT' or item.data.status != 'DRAFT') and params.page.url != item.url %}
-		<li class="{% if content | toc %} nhsuk-grid-column-one {% else %} nhsuk-grid-column-one-third {% endif %} nhsuk-card-group__item">
+		<li class="{% if content | toc %} nhsuk-grid-column-one-half {% else %} nhsuk-grid-column-one-third {% endif %} nhsuk-card-group__item">
 			{{ card({
 			  href: item.url | url | pretty,
 			  clickable: "true",
 			  heading: cardHeader(item),
 			  headingLevel: "3",
-			  headingClasses: "heed nhsuk-heading-m",
+			  headingClasses: "nhsuk-heading-m",
 			  descriptionHtml: cardInfo(item)
 			}) }}
 		</li>

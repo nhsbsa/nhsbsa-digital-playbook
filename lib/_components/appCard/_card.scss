@@ -1,27 +1,25 @@
 .card {
-	@extend .nhsuk-card;
-	@extend .nhsuk-card__content;
+  @extend .nhsuk-card;
+  @extend .nhsuk-card__content;
 }
 
 .card dd code,
 .card p code {
-	background-color:  $color_nhsuk-grey-5;
+  background-color: $color_nhsuk-grey-5;
 }
 
-.card h3 {
-	@extend .nhsuk-heading-l
+.nhsuk-card__heading {
+  h1,
+  h2,
+  h3 {
+    width: 100%;
+    margin-bottom: 0px;
+  }
 }
 
-.card heed {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	h1,h2,h3 {
-		display: inline-block;
-		margin-bottom: 0px;
-	}
-	strong {
-		display: inline-block;
-		margin-left: auto;
-	}
+.nhsuk-card__link {
+  strong {
+    margin-top: 0.5%;
+    float: right;
+  }
 }
