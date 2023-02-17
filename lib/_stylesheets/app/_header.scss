@@ -1,0 +1,6 @@
+/**
+ * Make header full width with app-width-container
+ */
+.nhsuk-header > .nhsuk-width-container {
+	@extend .app-width-container;
+}
