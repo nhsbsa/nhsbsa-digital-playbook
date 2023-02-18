@@ -59,17 +59,11 @@ From [Government guidance](https://www.gov.uk/government/publications/open-sourc
 >
 > This means you must make sure that your system allows for keys and credentials to be changed and rotated easily, and for secrets to be revoked.
 
-### Consider rewriting history
+### Rewriting history
 
-If you accidentally commit secrets to a local repository, you cannot remove them by simply committing a change. You should consider ‘rewriting history’ to update the commit with the secret.
-
-Accidental commits of personally identifiable information (PII) should be rewritten.
-
-Rewriting history will change the Git commit graph. It has a high potential to create a mess of other contributer’s local repositories. It is advisable to only rewrite history on branches that are not shared. Proceed with caution and make sure that every team member is aware what is being done and how to align their repositories to the new state.
-
-If the repository has already been Open Sourced, avoid rewriting history on key branches such as `main` or `develop`.
-
-This article provides an in-depth guide to removing secrets from Git history by rewriting history: [Git Clean, Git Remove file from commit - Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
+!!! warning Destructive rewrite of published Git history must follow NHSBSA process
+Consult with your professional lead and the security team
+!!!
 
 ---
 
@@ -78,7 +72,7 @@ This article provides an in-depth guide to removing secrets from Git history by 
 Use secrets detection tools to protect against mistaken commits, and to alert if they get pushed to the central repository.
 
 * [Gitleaks](https://github.com/zricethezav/gitleaks) as our secrets detection tool
-* [NHSBSA Gitleaks configuration file](https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa) with verified rules
+* [NHSBSA Gitleaks](https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa) configuration file with verified rules
 * [Pre-commit](https://pre-commit.com/) managed Git hooks to prevent local commits of secrets
 * [Gitlab-CI secrets detection](https://docs.gitlab.com/ee/user/application_security/secret_detection/) to alert in case a local pre-commit git hook has not prevented the commit
 
