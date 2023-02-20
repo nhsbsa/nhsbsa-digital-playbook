@@ -91,7 +91,7 @@ Secrets detection -  NHSBSA Digital, Data and Technology Playbook - NHSBSA
                     <li><a href="#revoke-keys-immediately">Revoke keys immediately</a>
             		</li>
 
-                    <li><a href="#consider-rewriting-history">Consider rewriting history</a>
+                    <li><a href="#rewriting-history">Rewriting history</a>
             		</li>
                 </ol>
             		</li>
@@ -194,18 +194,17 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 <p>If you accidentally publish a secret, you must revoke it and immediately provision new keys to the system. Once a secret has been published, you must assume that it is compromised no matter how quickly you are able to remove it as attackers have automated scanning tools that will pick up credential leaks immediately.</p>
 <p>This means you must make sure that your system allows for keys and credentials to be changed and rotated easily, and for secrets to be revoked.</p>
 </blockquote>
-<h3 id="consider-rewriting-history" tabindex="-1"><a class="header-anchor" href="#consider-rewriting-history">Consider rewriting history</a></h3>
-<p>If you accidentally commit secrets to a local repository, you cannot remove them by simply committing a change. You should consider ‘rewriting history’ to update the commit with the secret.</p>
-<p>Accidental commits of personally identifiable information (PII) should be rewritten.</p>
-<p>Rewriting history will change the Git commit graph. It has a high potential to create a mess of other contributer’s local repositories. It is advisable to only rewrite history on branches that are not shared. Proceed with caution and make sure that every team member is aware what is being done and how to align their repositories to the new state.</p>
-<p>If the repository has already been Open Sourced, avoid rewriting history on key branches such as <code>main</code> or <code>develop</code>.</p>
-<p>This article provides an in-depth guide to removing secrets from Git history by rewriting history: <a href="https://blog.gitguardian.com/rewriting-git-history-cheatsheet/" target="_blank" rel="noopener">Git Clean, Git Remove file from commit - Cheatsheet</a></p>
+<h3 id="rewriting-history" tabindex="-1"><a class="header-anchor" href="#rewriting-history">Rewriting history</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Destructive rewrite of published Git history must follow NHSBSA process</p>
+<p>Consult with your professional lead and the security team</p>
+</div>
 <hr>
 <h2 id="secrets-detection-tooling" tabindex="-1"><a class="header-anchor" href="#secrets-detection-tooling">Secrets detection tooling</a></h2>
 <p>Use secrets detection tools to protect against mistaken commits, and to alert if they get pushed to the central repository.</p>
 <ul>
 <li><a href="https://github.com/zricethezav/gitleaks" target="_blank" rel="noopener">Gitleaks</a> as our secrets detection tool</li>
-<li><a href="https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa" target="_blank" rel="noopener">NHSBSA Gitleaks configuration file</a> with verified rules</li>
+<li><a href="https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa" target="_blank" rel="noopener">NHSBSA Gitleaks</a> configuration file with verified rules</li>
 <li><a href="https://pre-commit.com/" target="_blank" rel="noopener">Pre-commit</a> managed Git hooks to prevent local commits of secrets</li>
 <li><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/" target="_blank" rel="noopener">Gitlab-CI secrets detection</a> to alert in case a local pre-commit git hook has not prevented the commit</li>
 </ul>
@@ -277,7 +276,7 @@ Add a comment to the offending line with the <code>gitleaks:allow</code> keyword
 
       <div class="nhsbsa-article--date">
           <p>
-            Published <time datetime="2023-02-20T03:17:29.040Z">20 February 2023</time>
+            Published <time datetime="2023-02-20T13:36:40.022Z">20 February 2023</time>
           </p>
           <p>
             Last reviewed <time datetime="">-</time>
