@@ -1,0 +1,6 @@
+/**
+ * Make hero full width with app-width-container
+ */
+ .nhsuk-hero > .nhsuk-hero--border {
+	@extend .app-width-container;
+}
