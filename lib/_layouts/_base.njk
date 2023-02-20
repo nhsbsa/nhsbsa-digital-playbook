@@ -1,8 +1,6 @@
 {% from "header/macro.njk" import header %}
 {% from "skip-link/macro.njk" import skipLink %}
-{% from "header/macro.njk" import header as appHeader %}
 {% from "hero/macro.njk" import hero as appHero %}
-{% from "appArticleHeader/macro.njk" import appArticleHeader %}
 {% from "appFooter/macro.njk" import appFooter as oglFooter %}
 {% from 'back-link/macro.njk' import backLink %}
 {% set htmlClasses = 'no-js' %}
@@ -87,15 +85,13 @@
   {% endblock %}
 
   {% block header %}
-    {{ appHeader({
-        homeHref: homeUrl,
-        ariaLabel: siteMeta.header.description,
-        showNav: false,
-        showSearch: false,
-        organisation: {
-          name: siteMeta.header.organisation,
-          descriptor: siteMeta.header.description
-        }
+    {{ header({
+      "homeHref": homeUrl,
+      "ariaLabel": siteMeta.header.description,
+      "organisation": {
+        "name": siteMeta.header.organisation,
+        "descriptor": siteMeta.header.description
+      }
       })
     }}
   {% endblock %}
