@@ -38,7 +38,6 @@ module.exports = function(eleventyConfig) {
   // filters
   eleventyConfig.addFilter('date', require('./lib/_filters/date'));
   eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
-  eleventyConfig.addFilter('includes', require('./lib/_filters/includes'));
   eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));
   eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'));
   eleventyConfig.addFilter('slug', require('./lib/_filters/slug'));
