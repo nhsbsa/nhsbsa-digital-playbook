@@ -9,18 +9,20 @@ order:
   security: 4
 ---
 !!! warning Proceed with caution
-Rewriting history will change the Git commit graph and has a high potential to create a mess of other contributer’s local repositories. Incorrect or unmanaged use of tools can lead to an inconsistent Git repository which is difficult to recover from. Proceed with caution and follow this guidance to protect your project from unintended consequences.
+Rewriting history will change the Git commit graph and has a high potential to create a mess of a repository. Incorrect or unmanaged use of tools can lead to an inconsistent Git repository which is difficult to recover from. Proceed with caution and follow this guidance to protect your project from unintended consequences.
 
 __Consult with your professional lead and security operations before any rewrite activity.__
 !!!
 
 This guidance does not cover normal development activities such as squashing commits on a topic branch, or rebasing prior to merge. These branches are not shared widely and sensitive data is not involved. Collaborative Git practices should be agreed with your team.
 
-## Reasons to rewrite history
+## When to rewrite history
 
-Revokable secrets should be [revoked](https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa#coverage) and [ignored in our secrets detection tool](../coding-secrets-detection/#secrets-detection-tooling).
+Many secrets can be revoked by deleting the secret and regenerating a new one. Applications must then be reconfigured with the new value. This is the preferred way to deal with secrets in code. The [NHSBSA Gitleaks project](https://gitlab.com/nhsbsa/platform-services/gitleaks/gitleaks-nhsbsa) includes links to the various secrets providers, with documentation on creating and revoking secrets. See our guidance on [ignoring revoked secrets in Gitleaks](../coding-secrets-detection/#ignore-false-positives).
 
-Sensitive information that cannot be revoked, should removed from the Git history when open sourcing. This includes:
+Some sensitive information cannot be revoked, and should be removed from the Git history when open sourcing.
+
+Consider:
 
 ::: card
 
@@ -53,7 +55,7 @@ Team members
 
 NHSBSA DDaT staff and external suppliers
 : Everyone with access rights to a repository has the potential to clone it.
-  Use standard DDaT email, Teams, slack channels and professional community networks to publicise the issue.
+  Use standard DDaT email, Teams, slack channels and professional community networks to publicise rewrite activities.
 
 X-Gov collaborators and general public
 : Open sourced projects may have been cloned far and wide.
@@ -70,7 +72,7 @@ You must obtain documented approval from these departments and roles, prior to a
 * Architecture
 * Software Development
 
-If the impact extends to external collaborators and the general public, also consult with the Communications team.
+If the impact extends to external collaborators and the general public, consult with the Communications team.
 
 ## Skills
 
@@ -121,7 +123,7 @@ This article provides an in-depth guide to removing secrets from Git history by 
   This will contain the scripted actions to rewrite history. It is important to script the actions, so that a peer may review and verify correctness.
   The scripted actions and associated resources will contain sensitive data and must be kept private. It will serve as an audit history if required.
 * Develop the rewrite script and peer review with a Merge Request
-  See the [template project](https://gitlab.com/nhsbsa/Libraries/git-rewrite-scripts) for guidance on script writing
+  See the [template project](https://gitlab.com/nhsbsa/Libraries/git-rewrite-scripts) for guidance on script writing.
 * Dry run
   Local development should stop.
   Consult with team to ensure all local branches are pushed to the production repository.
@@ -131,3 +133,7 @@ This article provides an in-depth guide to removing secrets from Git history by 
   Consult with team to assure all is as expected
 * Apply the rewrite
   Repeat the clone, rewrite, push, review, but this time on the production repository
+
+!!! warning All team members must re-clone from the rewritten remote
+  Old clones should be discarded. Pulling a rewritten remote into the original can create a mess that is very difficult to recover from.
+!!!
