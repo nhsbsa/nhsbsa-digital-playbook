@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full app-component-reading-width">
+  <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
       {% if content | toc %}
       <div class="app-pane__side-bar">
@@ -23,71 +23,70 @@
         </nav>
       </div>
       {% endif %}
-      
+
       <div class="app-pane__main-content">
-      <div class="no-js">
-      {{ backLink({
-        "href": "javascript:history.back()",
-        "text": "Go back"
-      }) }}
-      </div> 
-      
-      <div class="nhsbsa-article-header">
-        <h1 class="nhsuk-heading-xl">
-          {{ title }}
-        </h1>
-        {{ appBadges({
-            badges: badges
+        <div class="no-js">
+        {{ backLink({
+          "href": "javascript:history.back()",
+          "text": "Go back"
         }) }}
-      </div>
+        </div> 
       
-      {% call appIssueSheet({
-        title: title,
-        url: page.url,
-        issuesheet: issuesheet,
-        review: review,
-        revisions: revisions
-      }) %}
-      {% endcall %}
+        <div class="nhsbsa-article-header">
+          <h1 class="nhsuk-heading-xl">
+            {{ title }}
+          </h1>
+          {{ appBadges({
+              badges: badges
+          }) }}
+        </div>
+      
+        {% call appIssueSheet({
+          title: title,
+          url: page.url,
+          issuesheet: issuesheet,
+          review: review,
+          revisions: revisions
+        }) %}
+        {% endcall %}
 
-      {% call appProse({
-        prose: content
-      }) -%}
-      {% if related %}
-      {% if related.title %}
-      <h2 class="nhsuk-heading-l">
-        {{ related.title }}
-      </h2>
-      {% endif %}
-      {{ appCard({
-        page: page,
-        page_status: status,
-        items: collections[related.tag],
-        order: related.tag
-      }) }}
-      {% endif %}
-
-      {%- endcall %}
-
-      <hr>
-      <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
-      <p>If you spot anything factually incorrect with this page or have ideas for improvement,
-        please share your suggestions.</p>
-
-      <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
-      Github is an open forum where we collect feedback.</p>
-      {{ appGithubIssue({
-        issueTemplate: "playbook-proposal.md",
-        issueTitle: "Change to page '" + page.filePathStem + "' ",
-        linkText: "Suggest a change to this page"
+        {% call appProse({
+          prose: content
+        }) -%}
+        {% if related %}
+        {% if related.title %}
+        <h2 class="nhsuk-heading-l">
+          {{ related.title }}
+        </h2>
+        {% endif %}
+        {{ appCard({
+          page: page,
+          page_status: status,
+          items: collections[related.tag],
+          order: related.tag
         }) }}
+        {% endif %}
 
-      {{ appArticleFooter({
-          date: page.date,
-          modified: modified,
-          review: review
-      }) }}
+        {%- endcall %}
 
+        <hr>
+        <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
+        <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+          please share your suggestions.</p>
+
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
+        Github is an open forum where we collect feedback.</p>
+        {{ appGithubIssue({
+          issueTemplate: "playbook-proposal.md",
+          issueTitle: "Change to page '" + page.filePathStem + "' ",
+          linkText: "Suggest a change to this page"
+          }) }}
+
+        {{ appArticleFooter({
+            date: page.date,
+            modified: modified,
+            review: review
+        }) }}
 
         </div>
       </div>
