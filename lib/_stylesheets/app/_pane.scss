@@ -24,6 +24,11 @@
   @include mq($until: desktop) {
     display: none;
   }
+
+  // Spacing between pane-content & TOC list
+  @include mq($from: desktop) {
+    margin-right: nhsuk-spacing(6);
+  }
 }
 
 .app-pane__main-content {
@@ -38,11 +43,6 @@
   flex: 1 1 100%;
   flex-direction: column;
   min-width: 0;
-
-  @include mq($from: desktop) {
-    padding-left: nhsuk-spacing(9);
-  }
-
 }
 
 // Custom spacing for page headings
