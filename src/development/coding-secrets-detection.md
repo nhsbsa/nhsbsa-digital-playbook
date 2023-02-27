@@ -51,7 +51,11 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 
 ## Dealing with committed secrets
 
+[Raise a security incident](../../security) with the Information Security team when you discover secrets committed to a repository. They will engage with the relevant stakeholders to assess the impact, agree remediation actions, and provide an audit trail.
+
 ### Revoke keys immediately
+
+__Do not wait for a response from Information Security before revoking keys.__
 
 From [Government guidance](https://www.gov.uk/government/publications/open-source-guidance/security-considerations-when-coding-in-the-open#assume-accidental-publications-are-compromised)
 

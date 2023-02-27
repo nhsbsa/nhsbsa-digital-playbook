@@ -63,9 +63,9 @@ X-Gov collaborators and general public
 
 :::
 
-## Get approval
+## Raise an incident
 
-You must obtain documented approval from these departments and roles, prior to any destructive rewrite:
+[Raise a security incident](../../security) with the Information Security team when you discover secrets committed to a repository. They will ensure you have documented approval from these stakeholders, prior to any destructive rewrite:
 
 * Information Governance
 * Security Operations
