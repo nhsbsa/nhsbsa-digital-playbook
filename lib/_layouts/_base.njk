@@ -23,7 +23,7 @@
   
   {% block pageTitle %}
   <title>
-    {% if title %}{{ title }} - {% endif %} {{ serviceName or productLongName }}
+    {% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName or siteMeta.productLongName }} - {{ siteMeta.organisation }}
   </title>
   {% endblock %}
 
@@ -59,7 +59,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="{{ '/images/opengraph-image.png' | url | absoluteUrl }}">
-  <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName }}">
+  <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName or siteMeta.productLongName }} - {{ siteMeta.organisation }}">
   {% endblock %}
 
   {% block stylesheets %}
