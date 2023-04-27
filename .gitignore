@@ -11,3 +11,6 @@ workspace.code-workspace
 ### OSX ###
 .DS_Store
 .dccache
+
+### Coverage reports ###
+coverage/
