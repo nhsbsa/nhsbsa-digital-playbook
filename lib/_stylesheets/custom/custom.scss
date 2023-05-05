@@ -177,43 +177,9 @@ a.nhsuk-footer__list-item-link:visited {
 	display: block;
 }
 
-/* Article Navigation */
+/* TOC nav styling */
 
-.nhsbsa-sticky-nav {
-	overflow: auto;
-	top: 40px;
-	margin-bottom: 40px;
-	box-sizing: border-box;
-	min-height: 1px;
-}
-
-@media screen and (min-width: 1200px) {
-	.nhsbsa-sticky-nav {
-		position: sticky;
-		float: left;
-		margin-bottom: 0px;
-		width: 360px;
-	}
-}
-
-/* Article Navigation Contents */
-
-  .nhsbsa-sticky-nav__heading {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    line-height: 1.25;
-    margin-bottom: 12px;
-    padding-top: 4px;
-    color: #4c6272;
-  
-    @media (max-width: 48.0525em) {
-      font-weight: 600;
-      font-size: 16px;
-      font-size: 1rem;
-    }
-  }
-
-.nhsbsa-sticky-nav__list {
+.nhsbsa-nav__list {
     ol,ul {
         font-weight: 400;
         font-size: 16px;

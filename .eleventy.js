@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(require('eleventy-plugin-nesting-toc'), {
     tags: ['h2', 'h3'],
     wrapper: 'div',
-    wrapperClass: 'nhsbsa-sticky-nav__list'
+    wrapperClass: 'nhsbsa-nav__list'
   });
   eleventyConfig.addPlugin(require("eleventy-plugin-dart-sass"), {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
