@@ -3,6 +3,9 @@ layout: article
 title: "Java"
 tags: tech
 order: 20
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 Here's a list of our preferred technology choices when implementing in Java. We're not prescriptive in these choices, but have a good reason to deviate from the norm. If you feel there's a better option, raise it at the Developer Community.
 
@@ -31,11 +34,11 @@ Choose whatever you're comfortable with, so long as you can perform your job. Ou
 
 ## Application
 
-Our standard Java based application stack is built on the Spring ecosystem.
+Our standard Java application stack is built on the Spring ecosystem.
 
-* Applications run in [Spring Boot][spring_boot] with [Apache Tomcat][apache_tomcat] as the embedded app-server
+* Applications run in [Spring Boot][spring_boot] with [Apache Tomcat][apache_tomcat] as the embedded application server
 * User interfaces with [Spring MVC][spring_mvc] and [Thymeleaf 3][thymeleaf] for templates
-* Web services with [Spring MVC][spring_mvc] and [Jackson][jackson] for JSON mapping
+* Web services with [Spring MVC][spring_mvc] or [Spring Data Rest][spring_data_rest] and [Jackson][jackson] for JSON mapping
 * Security with [Spring Security][spring_security]
 * Data access with [Spring Data JPA][spring_data_jpa] and [Hibernate ORM][hibernate_orm]
 * Batch with [Spring Batch][spring_batch]
@@ -44,7 +47,7 @@ Our standard Java based application stack is built on the Spring ecosystem.
 
 We generally use core Java and standard extension packages in preference to third party, although Spring is often used in preference where available:
 
-* Dates and Times are manipulated using `Java.time` and not `joda` or `java.util`
+* Dates and Times using `Java.time` and not `joda` or `java.util`
 * Transactions using Java Transaction API (`javax.transaction`)
 * Object Relational Mapping using Java Persistence API (`javax.persistence`) backed by [Hibernate ORM][hibernate_orm]
 * Validation with [JSR-303][jsr_303] (`javax.validation`) backed by [Hibernate Validator][hibernate_validator]
@@ -52,9 +55,9 @@ We generally use core Java and standard extension packages in preference to thir
 We also use other well known libraries:
 
 * Auto-generate boilerplate code with [Lombok][lombok]
-* OpenAPI (Swagger) generation using [Springdoc OpenAPI][springdoc_openapi]
+* [OpenAPI V3][openapi_v3] using [Springdoc OpenAPI][springdoc_openapi]
 * Logging API with [logging_slf4j], annotated with Lombok [@Slf4J][lombok_log] and implemention by [Logback][logging_logback]
-* Object mapping is quite varied. Many projects use [Mapstruct][mapstruct] or [Lombok builder][lombok_builder]
+* Object mapping is varied. Many projects use [Mapstruct][mapstruct] or [Lombok builder][lombok_builder]
 * Audit using [Javers][javers]
 * We use [Apache commons][apache_commons] when Spring equivalents are unsuitable
 
@@ -66,12 +69,6 @@ We also use other well known libraries:
 * [Spring Test][springtest] including MockMvc and DataJpaTest
 * Unit tests run within the Maven `test` phase with [surefire plugin][maven_surefire]
 * Integrations tests run within the Maven `integration-test` phase with [failsafe plugin][maven_failsafe].
-
-[adoptium]: <https://adoptium.net/>
-[openjdk_7]: <https://openjdk.java.net/projects/jdk7/>
-[openjdk_8]: <https://openjdk.java.net/projects/jdk8/>
-[openjdk_11]: <https://openjdk.java.net/projects/jdk/11/>
-[openjdk_17]: <https://openjdk.java.net/projects/jdk/17/>
 
 [intellij_idea]: <https://www.jetbrains.com/idea/>
 [vs_code]: <https://code.visualstudio.com/>
@@ -92,6 +89,7 @@ We also use other well known libraries:
 [spring_boot]: <https://spring.io/projects/spring-boot>
 [spring_cloud]: <https://spring.io/projects/spring-cloud>
 [spring_data_jpa]: <https://spring.io/projects/spring-data-jpa>
+[spring_data_rest]: <https://docs.spring.io/spring-data/rest/docs/current/reference/html/>
 [spring_integration]: <https://spring.io/projects/spring-integration>
 [spring_mvc]: <https://docs.spring.io/spring-framework/docs/current/reference/html/web.html>
 [spring_security]: <https://spring.io/projects/spring-security>
@@ -105,6 +103,7 @@ We also use other well known libraries:
 [logging_slf4j]: <https://www.slf4j.org/>
 [javers]: <https://javers.org/>
 [mapstruct]: <https://mapstruct.org/>
+[openapi_v3]: <https://swagger.io/specification/>
 [springdoc_openapi]: <https://springdoc.org/>
 
 [assertj]: <https://assertj.github.io/doc/>

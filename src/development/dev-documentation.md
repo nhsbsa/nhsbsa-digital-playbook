@@ -5,8 +5,11 @@ tags: dev
 order: 12
 related:
   tag: dev_docs
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
-We need a minimum level of documentation for all our project repositories. 
+We maintain a minimum level of documentation in all our project repositories.
 
 A [standard set of file][nhsbsa_standard_repository_documents] are available to copy.
 
@@ -34,5 +37,3 @@ How to report security issues.
 [contributor_covenant_coc]: <https://www.contributor-covenant.org/version/2/1/code_of_conduct/>
 [licence_apache2]: <https://www.apache.org/licenses/LICENSE-2.0>
 [licence_ogl3]: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>
-[licence_spdx]: <https://spdx.org/licenses/>
-[licence_spdx_apache2]: <https://spdx.org/licenses/Apache-2.0.html>

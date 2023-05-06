@@ -4,8 +4,12 @@ title: "Coding"
 description: "What do we value when writing code..."
 tags: dev
 order: 1
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
-> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+> Any fool can write code that a computer can understand.
+> Good programmers write code that humans can understand.
 > _Martin Fowler_
 
 This page highlights some key advice when coding.
@@ -30,7 +34,7 @@ There are many principles that we should keep in mind when writing code. You can
 
 Design patterns are common approaches to solving common problems in software development. The book [Design Patterns: Elements of Reusable Object-Oriented Software][goodreads_designpatterns] by the Gang of Four describes the original patterns they identified. They are divided into creational, structural and behavioural patterns and should be understood and used where appropriate.
 
-The [Refactoring Guru][refactoring_guru] website covers design patterns in an engaging format.
+The [Refactoring Guru][refactoring_guru_patterns] website covers design patterns in an engaging format.
 
 ## Clean code
 
@@ -39,7 +43,7 @@ The [Refactoring Guru][refactoring_guru] website covers design patterns in an en
 
 We advise all developers to read the seminal book _[Clean Code: A Handbook of Agile Software Craftsmanship][goodreads_cleancode]_ by Robert C. Martin.
 
-To get an idea of the scope of Robert Martin's book, take a look at the [chapter headings](../coding-clean-code)
+To get an idea of the scope of Robert Martin's book, take a look at the [chapter headings](../coding-clean-code/).
 
 ## Code smells and refactoring
 

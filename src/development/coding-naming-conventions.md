@@ -4,6 +4,9 @@ title: "Naming conventions"
 description: "Naming things well from the start can avoid a lot of confusion as a project matures"
 tags: dev
 order: 3
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 It is important to adopt a naming convention:
 
@@ -13,6 +16,8 @@ It is important to adopt a naming convention:
 ## Terms
 
 Terms used in the naming conventions are:
+
+::: card
 
 <table>
   <tr>
@@ -36,7 +41,7 @@ Terms used in the naming conventions are:
   </tr>
   <tr>
     <td>Service line</td>
-    <td>For grouping within a service area</td>
+    <td>For grouping within a department</td>
     <td>
       <ul>
         <li><code>insight</code></li>
@@ -81,7 +86,7 @@ Terms used in the naming conventions are:
       For infrastructure:
       <ul>
         <li><code>config</code> for externalised configuration</li>
-        <li><code>terraform</code> for terraform</li>
+        <li><code>tf</code> for terraform</li>
       </ul>
       For tests:
       <ul>
@@ -90,7 +95,7 @@ Terms used in the naming conventions are:
         <li><code>accessibility-test</code></li>
         <li><code>performance-test</code></li>
         <li><code>security-test</code></li>
-        <li><code>manual-tests</code></li>
+        <li><code>manual-test</code></li>
       </ul>
       For managed changes:
       <ul>
@@ -110,6 +115,8 @@ Terms used in the naming conventions are:
     </td>
   </tr>
 </table>
+
+:::
 
 ### Case
 
@@ -139,20 +146,20 @@ Git repositories should be `kebab-case` with this convention:
 
 ### Git branches
 
-The mainline branch should be named `main`. All other branches should be `kebab-case` with this convention:
+The mainline branch should be named `main`. All branches should be `kebab-case` with this convention:
 
 > `{type}/{change ID}-{brief description}`
 
-Branches should be used for one change/ticket at a time and not collated into groups.
+A single branch should be used per change/ticket.
 
 :::
 ::: card
 
 ### Gitlab groups
 
-Repositories in Gitlab should be organised into ‘groups’ with `natural` case and this convention:
+Repositories in Gitlab should be organised into ‘groups’. Use `natural` case for the human readable form, and `kebab-case` for the URL with this convention:
 
-> `{service area}/{service-line}/{service}`
+> `{department}/{service-line}/{service}`
 
 :::
 ::: card
@@ -193,17 +200,17 @@ Libraries may omit the `service` when shared across multiple services.
 
 Maven `group id` should be `kebab-case` with this convention:
 
-> `uk.nhs.nhsbsa.{service-area}.{optional service-line}.{service}`
+> `uk.nhs.nhsbsa.{optional department}.{optional service-line}.{service}`
 
 Maven `artifact id` should follow `kebab-case` and this convention:
 
 > `{optional service-line}-{service}-{function}-{type}`
 
-Unit tests run by Maven Surefire plugin should follow the convention:
+Unit tests run by [Maven Surefire plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) should follow the convention:
 
  > `*Test.java`
 
-Integration tests run by Maven Failsafe plugin should follow the convention:
+Integration tests run by [Maven Failsafe plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) should follow the convention:
 
 > `*IT.java`
 

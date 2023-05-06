@@ -3,6 +3,9 @@ layout: article
 title: "Writing clean tests"
 tags: dev_testing
 order: 10
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 For a great article on writing clean tests in Java, read this article:
 
@@ -12,15 +15,15 @@ For a great article on writing clean tests in Java, read this article:
 
 Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.
 
-A clean test is one that can be easily read and understood. Writing clean tests is important as it removes barriers to understanding and helps to ensure that the functional code is doing what is intended.
+A clean test is one that can be easily read and understood. Writing clean tests is important as it removes barriers to understanding and ensures that the code is doing what is intended.
 
-Have you ever reviewed code and spent more time trying to understand the test code than the functional code. Have you ever given up on really trying to understand the test and just accepted the change? After all, the author probably knew what they were doing, right?
+Have you ever reviewed code and spent more time trying to understand the test than the functional code. Have you ever given up and just accepted the change? After all, the author probably knew what they were doing, right?
 
 This page shows small improvements that can be made to lower the bar for comprehension.
 
 ## Naming
 
-Fields SHOULD be named to clarify their meaning within the test.
+Fields names should make clear their purpose within the test.
 
 When using mocking frameworks clearly identify mock objects and argument captors. E.g. Mocks can be prefixed with 'mock...' and Captors can be suffixed with '...Captor'
 
@@ -37,9 +40,9 @@ Here are some example test case names against a function that sorts by user emai
 | should | multipleUsersShouldSortByEmail |
 | statement | multipleUsersSortedByEmail |
 
-Most importantly, the name should be unambiguous and clear.
+Most importantly, names should be unambiguous and clear.
 
-Some frameworks rely on method names to identify test cases. In others, such as JUnit4/5 we use annotations, and so there's no benefit to adding the keyword _test_.
+Some frameworks rely on method names to identify test cases. Others, such as JUnit use annotations, avoiding the need for the _test_ prefix.
 
 ## Structure 'given-when-then' code with comments
 
@@ -51,7 +54,7 @@ Our test cases should use a standard BDD structure of:
 
 This is also sometimes referred to as `Arrange`, `Act`, `Assert`
 
-For frameworks that do not impose this structure in their API, reasability of tests will improve immensely by following the very simple process of grouping the three sections using comments.
+For frameworks that do not impose this structure in their API, readability is improved by use of comments.
 
 ```java
 //given
@@ -67,29 +70,28 @@ If you're unable to add just these three comments in the right order within your
 
 ## Avoid shared fixture data
 
-Fixtures are data-sets that you use to test certain scenarios with your code.
+Fixtures are data-sets that you use to test scenarios with your code.
 
-A frequently used pattern is to define test fixture data at the top of a class and re-use it for the different cases. There are a few problems with this approach:
+An anti-pattern is to define test fixture data at the top of a class and re-use it across different cases. There are problems with this approach:
 
 * __Cross test pollution__
-  Using this pattern introduces the risk that someone forgets to initialise fixture data between tests. The action of one test can then affect another.
+  A risk that fixture data is not re-initialised between tests. The action of one test can then affect another.
 * __Meaningless names__
-  Shared fixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3.
-  Numeric suffixes convey no meaning at all. We can presume some of the tests need multiple users, but there is no context about why we need more than one.
-  Meaningless names are confusing when used within the test case
+  Shared ixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3. Numeric suffixes convey no meaning. We can assume some of the tests need multiple users, but there is no context about why we need more than one.
+  Meaningless names are confusing in tests.
 * __Noise__
   Shared fixture data is usually placed as boilerplate at the top of the test class.
   If you were reading such a test, you'd probably skip all of the initialisation code and come back to it after having read the test cases themselves.
 * __No explicit intent__
   As you read the test cases, you will need to go back to the shared data and keep in your head what user1 and user2 are being used for. How they are used is down to the test case. The lack of intent from the field definitions means the reader has to keep this context in their head.
 
-A better approach is to declare the fixture within the test.
+A better approach is to declare fixture data within the test.
 
 ## Create fixture data in factory methods
 
-If we’ve decided to avoid shared fixture data, then won’t we end up with lots of object creation code within our tests? Yes, you can. This is ok if object creation can be done with clear intent in a one liner. But even using lombok builders, object creation can often span multiple lines which leads to needless boilerplate.
+If we decide to avoid shared fixture data, then could we end up with lots of object creation code within our tests? Yes, you can. This is ok if object creation can be done with clear intent in a one liner. But even using builders, object creation can span multiple lines of needless boilerplate.
 
-A very simple solution to this is to use simple factory methods at the bottom of the test class.
+A simple solution is to use factory methods within the test class.
 
 * __Less verbose__
   Exposing a method that only takes the argument that varies for the test case means all the default boilerplate is handled in one place, out of the way.
@@ -98,14 +100,14 @@ A very simple solution to this is to use simple factory methods at the bottom of
 * __Clear naming__
   As objects are created within the test, they can be assigned to variables that suit the test case.
 
-Use methods with clear names and intent to create fixture data when it is needed.
-Name the created fixture objects to further clarify the intent within the test.
+Use methods with clear names for creating fixture data when it is needed.
+Name the fixture variables to further clarify the intent within the test.
 
 ## Testing with date and time
 
 When code is dependent on date or time, your tests must take control of time so they can test all the different flows and expectations.
 
-We don't hardcode fixture data to specific dates/times far in the future. This test will fail one day and another poor developer will have to come along and mop up the problem.
+Avoid hardcoding fixture data to specific dates/times far in the future. Such tests will fail one day, meaning another developer will have to investigate and fix the problem.
 
 There are two common approaches to testing with time:
 
@@ -113,7 +115,7 @@ There are two common approaches to testing with time:
   Use system date and/or time and adjust with an offset to create values in fixture data. The code will apply logic based on the current system time and the input data. This is a simple approach that works well in most cases.
 
 * __Control system time__
-  Sometimes you can't use fixture data: For example, in the [Greeter kata](https://github.com/wix/tdd-katas), a salutation changes through the course of the day. We obviously can't write tests that only pass in the morning. Instead we need to control system time.
+  In the [Greeter kata](https://github.com/wix/tdd-katas), a salutation changes through the course of the day. The only way to test the different scenarios is to take control of system time.
   
   Most languages have a way to control system time in code.
   * [Java](https://www.baeldung.com/java-override-system-time)
@@ -123,9 +125,9 @@ There are two common approaches to testing with time:
 
 If you adopt Test Driven Development (TDD) you should find that your test cases are lean, with just enough fixture data to test a single additional requirement.
 
-If you find that each additional test case is actually performing all the previous steps to initialise your fixtures, then you're probably doing too much work, and diluting the intent of the tests.
+If you find that each additional test case is performing all the previous steps to initialise your fixtures, you're doing too much work and diluting the purpose of the test.
 
-The reader of a test need only see the data required to test one case. Consider what is actually needed to satisfy the test case and nothing more. If you are covering something else then write a different test case for that specific scenario.
+The reader of a test need only see the data required for one scenario at a time. Consider what is needed to satisfy the test case and nothing more. If you are covering something else then write a different test case for that scenario.
 
 ## Test coverage
 
@@ -134,15 +136,15 @@ Coverage tools can be a useful guide to see if you have missed a branch in execu
 When testing consider the following:
 
 * __Null or missing arguments__
-  It can be useful to make assertions on input args to ensure you're getting what you expect
+  It can be useful to make assertions on input arguments to ensure you're getting what you expect
   Avoid _if_ conditions that check for _null and empty_: This results in 4 branches in execution, which you have to test. Instead prefer a library method that encapsulates this condition check and simplifies the logic.
 * __Exceptions__
-  Your tests should be explicit about exception handling.
-  Don't log expected exceptions in your tests as this will create noise for future developers
+  Tests should be explicit about exception handling.
+  Don't log expected exceptions in your tests as this creates noise.
 * __Empty collections__
   Iterating over an empty collection can result in cleaner code than having a conditional check. But make sure you test for expected behaviour when an empty collection is provided.
 * __Boundary conditions__
-  Always test the edges
+  Always test the edge cases.
 
 ## Make assertions with appropriate matchers
 
@@ -150,22 +152,22 @@ Assertions should be simple and clear with failure messages that identify the er
 
 Be specific.
 
-It can be easier to learn and use just a few of the matchers in an assertion framework. But by taking some time to read all the options available, the failure messages can be much more informative.
+It can be easier to learn and use just a few of the matchers in an assertion framework. Take time to understand the methods available, so tests are succint and failure messages are more informative.
 
 ## Avoid asserting equality with complex objects
 
-You sometimes see a complex object being built up and used to test equality in a matcher. In Java, this ultimately defers to .equals().
+Sometimes a complex object is built up and used to test equality in a matcher. In Java, this ultimately defers to the .equals() method.
 
 Asserting equality with complex objects leads to these issues:
 
 * __Obscurity__
-  It is difficult for the reviewer to understand what is being asserted as objects often have a lot of data within them. It is difficult to know which part of the object data is the being asserted.
+  It is difficult for the reviewer to understand which field value is being checked when objects have multiple fields or contains nested objects.
 * __Untraceable errors__
   When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.
 * __Fragilility__
-  A change in the object created by the function under test will necessitate a refactor of the test to supply matching data into the expectation.
+  A change in the object created by the function under test will require a refactor of the test to supply matching data into the expectation.
 
-Make assertions with appropriate matchers rather than comparing complex objects with equality.
+Make assertions with appropriate matchers on specific fields.
 
 ## Test DSL
 

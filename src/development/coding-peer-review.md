@@ -4,10 +4,11 @@ title: "Peer review"
 description: "The process for reviewing changes in production code"
 tags: dev
 order: 8
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
-Here we define the process for reviewing changes in production code using Git and Gitlab.
-
-!!! warning This process is mandatory
+!!! warning NHSBSA peer review process is mandatory
 Only deviate with agreement from your Delivery Manager and Professional Lead
 !!!
 
@@ -17,9 +18,9 @@ The high level process is:
 
 ## 1. Author creates Branch
 
-All new code should be committed on a branch from the mainline production code (main).
+All new code should be committed on a topic branch from the mainline production code (main).
 
-Development branches should follow the [naming convention](../coding-naming-conventions):
+Topic branches should follow the [naming convention](../coding-naming-conventions):
 
 > `{change-type}/{JIRA ticket number}-{dash separated human description}`
 
@@ -29,26 +30,25 @@ E.g.
 
 ## 2. Author commits new code and pushes branch
 
-All changes for the ticket should be committed against the development branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.
+All changes for the ticket should be committed against the topic branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.
 
-Branches should be pushed to gitlab no less than daily to ensure safe-keeping of the code.
+Branches should be pushed to gitlab no less than daily to ensure safe-keeping of code.
 
 ### Guidelines for code changes
 
 * __Keep change to a minimum__
-  The bigger the change, the longer it will take to understand and review. Large changes bring a higher risk of breaking something
+  The bigger the change, the longer it will take to understand and review. Large changes bring a higher risk of breaking something.
 * __Do one thing__
-  Avoid adding multiple functional changes in a single branch. You will need to structure your changes to allow isolated change requests
+  Avoid adding multiple functional changes in a single branch. Structure changes to allow isolated change requests
 * __Avoid reformatting__
-  Reformatted code can make it difficult to see the functional changes you have made. If you need to reformat, do so in a separate request, and make clear that it only contains formatting changes
+  Reformatted code can make it difficult to see functional changes. Reformatting should be done in a separate request, making clear that it only contains non-functional changes.
 * __Ensure the build passes__
-  Builds must pass all code quality checks including:
+  Builds must pass all code quality checks.
 * __Tests are written__
-  Review our [testing guidelines](../dev-tests-coding) to make sure they are fit for purpose
+  Review the [testing guidelines](../dev-tests-coding) to make sure they are fit for purpose.
 * __Consider squashing commits__
-  Squashing commits may allow you to remove unwanted changes
-  Gitlab allows commits to be squashed on merge
-  Forced pushes also make it difficult for your reviewer to collaborate
+  Squashing commits can provide a cleaner Git history, and removes unwanted or experimental changes.
+  Forced pushes can make it difficult for your reviewer to collaborate. Take time to keep them informed.
 
 ## 3: Author creates/assigns Merge Request for review
 
@@ -58,18 +58,18 @@ A Merge Request (MR) should be created in Gitlab and either:
   or
 * set as `READY FOR REVIEW` to allow a different person to claim
 
-> __NB: Do not use automatic MR creation in the build pipeline. These are created by the _gitlab-runner_ user meaning it isn't obvious who the MR came from. Furthermore, the merge commit will belong to the MR creator and our audit trail is lost.__
+> __NB: Do not use automatic MR creation in the build pipeline. These are created by the _gitlab-runner_ user meaning it isn't obvious who the MR came from. Furthermore, the merge commit will also belong to the MR creator and traceability is lost.__
 
-Merge requests in Gitlab can be prefixed with `WIP` to mark as _Work in progress_. This is a useful way to separate ongoing work in the list of Merge Requests. They can be ignored by a reviewer until the WIP status is removed.
+Merge requests in Gitlab can be prefixed with `Draft:`. This is a useful way to separate ongoing work in a list of Merge Requests. They can be ignored by a reviewer until the draft status is removed.
 
 ### Guidelines for merge requests
 
-* __Update WIP descriptions__
+* __Update draft descriptions__
   A quick summary of what's left to do or why it might be on hold makes it easier to recall the current status. This is very important if a MR goes stale.
 * __Ensure the build passes__
 * __Ensure the code is mergeable__
   You should resolve any merge conflicts prior to assigning to review
-  Sometimes code gains merge conflicts after the request is made. The Reviewer should notify the Author if this happens
+  Sometimes code gains merge conflicts after the request is created. The Reviewer should notify the Author if this happens
 * __Communicate__
   Let your reviewers know that the MR is waiting and seek acknowledgement.
 
@@ -83,17 +83,17 @@ Code review is an important process, and should not be undertaken lightly. Unles
 ### When reviewing
 
 * __Communicate__
-  Let the author know that you are reviewing. The 👀 emoji against the author's Slack message is a quick way to let them know you're looking.
+  Let the author know that you are reviewing. Use the 👀 emoji against the author's Slack message as a quick way to let them know you're looking.
 * __Understand the requirement__
-  locate and read the JIRA ticket to understand what is required. Seek clarification from project team if needed
+  Locate and read the JIRA ticket to understand what is required. Seek clarification from the project team if needed.
 * __Check out code locally__
   It can be tempting to review solely in Gitlab. This is a major cause for merging defective code.
-* __Run build locally__
-  Include unit and/or integration tests
+* __Build locally__
+  Include unit and/or integration tests.
 * __Run and verify functionality of web application/web service against requirement__
 * __Review Sonar code quality__
 * __Review impact of the change__
-  Do not be constrained by the specific code changes: If a code change calls unchanged code, but that code appears faulty, consider the faulty code 'in scope'
+  Do not be constrained to the specific code changes: If the changed code calls unchanged code, but that code appears faulty, consider the faulty code 'in scope' of review.
 
 ### Guidelines for reviewing code quality
 
@@ -103,29 +103,32 @@ There is no magic formula or checklist to ensure code quality, but consider the 
   Badly formatted code should be rejected
 * __Is the code understandable?__
   Complex code can usually be refactored to be more simple.
-  Partial code should only be allowed into master (production) if protected by a feature flag
+  Partial features should only be allowed into main (production) if protected by a feature flag
 * __Is the code tested?__
   Untested code should not be merged
   Tests must be understandable. If you don't understand the test, you can't be sure they are effective
   Its fine to add review comments to test code
-  Its fine to write, commit and push new tests to illustrate a bug
 * __Are there any bugs?__
+  Its fine to write, commit and push new tests to illustrate a bug
+* __Could it be done in a better way?__
   Talk to the Author
-  There is often a fine line between coding style and good practice - have a chat with the Author over more complex issues.
+  There is often a fine line between coding style and good practice. Have a chat with the Author over more complex issues.
 
 ## 5. Reviewer add (or un-resolve) comment
 
-For _any_ issues you find, add a descriptive comment in Gitlab. You will probably talk to the author about the contentious issues, but leave a comment regardless. Code review comments in Gitlab act as an issue tracker: If you don't leave a comment there is a chance the issue will be forgotten.
+Always add a descriptive comment in Gitlab for any issue found.
+
+The reviewer should talk to the author about the contentious issues, but leave a comment regardless. Code review comments in Gitlab act as an issue tracker: If you don't leave a comment there is a chance the issue will be forgotten.
 
 Optionally mark the MR as WIP to clarify that the MR won't be merged until discussions resolved.
 
 ### Guidelines for comments
 
 * __Clearly state the problem__
-  Add alternative implementation code if it helps illustrate a solution
-  Direct the Author to any helpful resources, such as javadoc, reference docs or articles
+  Add alternative implementation code if it helps illustrate a solution.
+  Direct the Author to any helpful resources, such as javadoc, reference docs or articles.
 * __Communicate__
-  Although the Author will receive an email from Gitlab, it is helpful to notify the Author in person or via IM for a speedy response
+  Although the Author will receive an email from Gitlab, it is helpful to notify the Author in person or via Slack for a speedy response.
 
 ## 6. Author reviews comments
 
@@ -138,7 +141,7 @@ Review the comments. If they are not clear, talk to the Reviewer.
 * __Remove WIP status__
   If the reviewer had tagged the MR as WIP, remove the WIP status
 * __Communicate__
-  Although the Reviewer will receive an email from Gitlab, it is helpful to notify the Reviewer in person or via IM for a speedy response
+  Although the Reviewer will receive an email from Gitlab, it is helpful to notify the Reviewer in person or via Slack for a speedy response
 
 ## 7. Reviewer approves code
 
@@ -147,7 +150,7 @@ The Reviewer should approve the code, only when all comments are resolved and th
 > __NB: Merged code is the shared responsibility of the Reviewer and the Author__
 
 * __Communicate__
-  Let the author know that you have approved. The :white_check_mark: emoji against the author's Slack message is a quick way to let them know you've approved the change.
+  Let the author know that you have approved. Use the :white_check_mark: emoji against the author's Slack message as a quick way to let them know the change is approved.
 
 ## 8. Merge code
 
