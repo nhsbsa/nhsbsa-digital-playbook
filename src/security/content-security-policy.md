@@ -543,7 +543,6 @@ Recommended value
 : N/A
 
 :::
-::: card
 
 ## SHOULD NOT
 
