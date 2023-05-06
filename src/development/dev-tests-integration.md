@@ -1,35 +1,44 @@
 ---
 layout: article
-title: "Writing integration tests"
+title: "Writing integration tests (Java)"
 tags: dev_testing
 order: 10
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 ## Overview
 
-This guide explains how to implement and configure Integration Tests using the Maven Failsafe plugin, in a Gitlab-CI build environment. As an example, we use a Postgres Database running in Docker with a schema defined using Liquibase, but other external dependant services could be wired up in a similar fashion.
+This guide explains how to implement and configure Integration Tests using the Maven Failsafe plugin, in a Gitlab-CI build environment. As an example, we use a Postgres Database running in Docker with a schema defined using Liquibase. Other external dependant services could be wired up in a similar fashion.
 
 ## Maven testing plugins and their lifecycles
 
 Maven provides two plugins to run tests, each one configured to run in different [Maven lifecycle][maven_plugin_lifecycle] phases:
 
 * [Surefire plugin][maven_surefire_plugin]
-  * test phase - run unit tests
+  * __test__ phase
+    Run unit tests.
+
 * [Failsafe plugin][maven_failsafe_plugin]
-  * pre-integration-test phase - downstream resources/services are setup. E.g. liquibase can be run to instantiate a schema in a database
-  * integration-test phase - run integration tests
-  * post-integration-test phase - downstream resources/services are torn down. E.g. liquibase rollback can be executed to test that rollback has been correctly defined
-  * verify - fail the build according to integration test results
+  * __pre-integration-test__ phase
+    Downstream resources/services are setup. E.g. liquibase can be run to instantiate a schema in a database.
+  * __integration-test__ phase
+    Run integration tests.
+  * __post-integration-test__ phase
+    Downstream resources/services are torn down. E.g. liquibase rollback can be executed to test that rollback has been correctly defined.
+  * __verify__ phase
+    Fail the build according to integration test results.
 
-The important benefit that failsafe provides is the facility to setup and teardown resources outside of the tests themselves. The post-integration-test phase always runs regardless of integration test failures, which is very useful when cleanup is required.
+The important benefit of the Failsafe plugin is the facility to setup and teardown resources outside of the tests themselves. The post-integration-test phase always runs regardless of integration test failures.
 
-The maven surefire plugin is configured to run by default. The failsafe plugin is not. You must therefore add the plugin to your pom.
+The maven surefire plugin is configured to run by default. The failsafe plugin is not. You must add the plugin to your `pom.xml`.
 
-__But__ first consider, do you always want to run integration tests in your build? If the downstream resource isn't always going to be available, (e.g. in your dev environment), you might want to put this configuration within a profile. I recommend you define the following section in your pom for the plugin to execute:
+Consider if the integration tests should always run. If the downstream resource isn't always going to be available, (e.g. in your dev environment), place the configuration within a profile.
 
 ```xml
 <profiles>
     <profile>
-        <id>it</id>
+        <id>integration</id>
         <build>
             <plugins>
                 <plugin>
@@ -50,17 +59,17 @@ __But__ first consider, do you always want to run integration tests in your buil
 </profiles>
 ```
 
-You may now run integration tests by switching on the `it` profile:
+Integration tests can be switched on with the `integration` profile:
 
 ```bash
-mvn -Pit clean install
+mvn -Pintegration clean install
 ```
 
 ## Write an integration test
 
-Now you have the failsafe plugin configured you can write an integration test. I find the easiest test to write is that an Entity is saved.
+With the failsafe plugin configured you can write an integration test. This example tests that an Entity is saved.
 
-Given this entity:
+Given the entity:
 
 ```java
 @Entity
@@ -77,10 +86,10 @@ public class Person {
     private String firstName;
     private String middleNames;
     private String surname;
-...
+    ...
 ```
 
-I can write this test:
+And this test:
 
 ```java
 @RunWith(SpringRunner.class)
@@ -109,10 +118,10 @@ public class PersonIT {
 This should run during the integration-test phase in maven:
 
 ```bash
-mvn -Pit clean install
+mvn -Pintegration clean install
 ```
 
-Note that this would only work if we used an embedded H2 database. As its so easy to run a PostgreSQL instance in Docker, we may as well test against the real thing.
+This would will fail without an active database. As its easy to run a production-like PostgreSQL instance in Docker, we may as well test against the real thing.
 
 ## Gitlab-CI and Docker
 
@@ -207,8 +216,7 @@ Note: the mvn command above is incomplete and would need code quality directions
 
 ## Liquibase
 
-Why test with Liquibase?
-You may be wondering why bother separating integration tests from unit tests. There are two good reasons:
+Why test with Liquibase and a production-like database?
 
 * Testing against an in-memory database will not catch the edge cases when something works in H2, but not in Postgres. It's much safer to test against the same DB engine as production.
 * You can test the liquibase scripts at the same time
@@ -217,7 +225,7 @@ Try to follow [best practice][liquibase_best_practices] when using Liquibase but
 
 * Align the individual versioned changelog files with the pom version
 * Align the change-sets to the pom version with an incremental number
-* Use your BSA cipher/LAN ID as the author
+* Use your NHSBSA cipher/LAN ID as the author
 
 E.g. for db.changelog-1.0.xml
 
@@ -236,7 +244,7 @@ E.g. for db.changelog-1.0.xml
 
 ## Maven and Liquibase
 
-Liquibase provides a Maven plugin to allow you to execute Liquibase commands within the build lifecycle. A sample pluginManagement snippet is shown below:
+Liquibase provides a Maven plugin to execute Liquibase commands within the build lifecycle. A sample pluginManagement snippet is shown below:
 
 ```xml
 <build>
@@ -268,9 +276,9 @@ Liquibase provides a Maven plugin to allow you to execute Liquibase commands wit
 </build>
 ```
 
-> Note: plugin dependencies to support YAML based configuration and the Postgres database driver. Your requirements may differ.
+> Note: plugin dependencies above show support YAML based configuration and the Postgres database driver. Your requirements may differ.
 
-To call the liquibase plugin within the pre-integration-test phase, add the following snippet:
+To call the Liquibase plugin within the pre-integration-test phase, add the following snippet:
 
 ```xml
 <profiles>
@@ -302,7 +310,7 @@ To call the liquibase plugin within the pre-integration-test phase, add the foll
 ```
 
 * `<changeLogFile>` specifies the location of the main changelog
-* `<propertyFile>` specified the location of liquibase.properties.
+* `<propertyFile>` specifies the location of `liquibase.properties`.
   You can use this to specify properties for local development
 
 The `gitlab-ci.yml` file will override these properties for the pipeline

@@ -4,6 +4,9 @@ title: "Logging"
 tags: [dev, standard]
 order: 
   dev: 5
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 ## Logging requirements
 
@@ -33,27 +36,6 @@ Logging must adhere to the [Protective Monitoring Standard][nhsbsa_protective_mo
 
 ## Data protection
 
-Data access events must be logged in accordance with [ICO logging guidance][ico_logging_guidance].
-
-At a minimum, the following events must be logged:
-
-* Collection
-* Alteration
-* Consultation
-* Disclosure (including transfers)
-* Combination
-* Erasure
-
-From ICO guidance:
-
-> “It is important that you do not record the data itself in your logs of erasure, as there is no need to retain a duplicate record of what you have erased. The requirement is to produce metadata which displays, for example, what a specific person on a specific date erased. The ‘what’ does not have to detail the content of the record/information that has been deleted – it can simply record that record X was updated by a specific individual.”
-
-Data access event logs must include the reason for access and the system ID of the person who accessed the data, including recipient IDs in cases of disclosure.
-
-From ICO guidance:
-
-> “Logs must also record, where possible, the identity of the person who accessed (consulted) the data, the reason for the access, and the date and time of any associated action. You should also record the identity of any recipients, in cases of disclosure – this is particularly important as you will need to inform the recipients if you delete, amend or restrict the processing of this data following a request from the individual.”
-
 Data used in log entries must not include Personally Identifiable Information except for internal system IDs. Logging IDs allows individuals to be identified if necessary by cross reference to a transactional data store. Access to production data stores is controlled.
 
 For full guidance on use of PII, refer to [Guidance for coding with Personal Data](../coding-securely-personal-data/).
@@ -74,13 +56,18 @@ We use UTF-8 encoding and output in JSON for simpler integration into [Datadog][
 
 ## Logging levels
 
+!!! warning DEBUG
+`DEBUG` output MUST NOT be enabled on production systems as this exposes the risk of logging PII from library code such as object mappers and ORM frameworks
+!!!
+
 The following standard logging levels should be used:
 
 * `DEBUG` is used for development purposes only.
-  Do not rely on DEBUG to understand any potential production issue. DEBUG output must not be allowed on production systems as this exposes the risk of logging PII from library code such as object mappers and ORM frameworks
+  Do not rely on DEBUG to understand any potential production issue.  
 * `INFO` is used to present normal application flow.
   For example
-  * On startup/shutdown it is helpful to log configuration properties although secrets and sensitive data must not be logged
+  * On startup/shutdown it is helpful to log configuration properties.
+    Secrets and sensitive data MUST NOT be logged at INFO.
   * On successful authentication
   * On creation/change of user privileges
   * On entry to/exit from the public interface to an application
@@ -96,11 +83,11 @@ The following standard logging levels should be used:
   * On session management failures
   Events logged at WARN are candidates for monitoring so that alerts may be raised after multiple events
 * `ERROR` is used to present errors in application flow that require immediate attention
+  All events logged at ERROR should be monitored so that alerts may be raised after a single event
   For example:
   * On server error that is unrecoverable
   * On failed output validation (e.g. database failed to insert)
   * On failed application startup/shutdown
-  All events logged at ERROR should be monitored so that alerts may be raised after a single event
 
 ## Meta information
 
@@ -157,7 +144,7 @@ logger.log('info', 'Here is some data - ' + data);
 
 ### Content
 
-Log entries should represent atomic events with enough contextual information to understand that event.
+Log entries should represent atomic events with contextual information to understand the event.
 
 * It should not be necessary to cross reference one log entry with another to understand it.
 * Contextual information should include the application flow and logic that caused the event
@@ -168,6 +155,7 @@ Data used in log entries should be prefixed with a contextual keyword (e.g. `Use
 * Depending on the capability of the logging library, delimiters may be automatically included for data items.
 * Parsing of logged data should be verified with a working example script
 * Don’t leave log parsing until its needed to resolve a live issue. A working script that parses data according to the defined delimiters will verify that the data can be parsed and used.
+* Datadog provides a [pipeline](https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source) feature to allow extraction of marked up data items as metrics.
 
 ```java [g1:Javascript]
 logger.info("User: [{}] successfully authenticated", user.getId())
@@ -182,34 +170,36 @@ Data in log statements should be placed in order of relevance to the event
 * When reviewing log files it is very helpful to see data in priority order within a single log statement so that the most important aspect of the event is read first. For instance, you may want to search for all log events on a particular case by ID. Once that is done, the actual case ID become less relevant than the thing that happened to it.
 
 ```java [g1:Javascript]
-logger.info("State change to [{}] for case [{}]", case.getState(), case.getId());
+logger.info("Changed NewState: [{}] for Case: [{}]", case.getState(), case.getId());
 ```
 
 ```java [g1:Javascript]
-logger.info("State change to [%s] for case [%s]", case.state, case.id);
+logger.info("Change NewState: [%s] for Case: [%s]", case.state, case.id);
 ```
 
 ### Error cases
 
 Exceptions should be logged with a full stack trace
 
-* Some Exceptions will contain additional information that should also be logged.
+* Some exceptions will contain additional information that should also be logged.
   For example, Java SQLExceptions can contain a chain of other SQLExceptions. Ideally all of the exceptions should be logged
 * Exceptions should not be logged and then thrown.
   The log and throw anti-pattern creates noisy logs with duplicate log entries for a single event.
-* When throwing exceptions, the original exception should be passed into the new one to allow a full stack trace to be logged at the point the exception is handled
+* When throwing exceptions, the original exception cause should be passed in to allow a full stack trace to be logged at the point the exception is handled.
 
-Applications should provide a top level exception handler so that all exceptions are logged. Asynchronous code must be guarded to ensure that exceptions do not propagate and break further calls by the calling framework.
+Applications should provide a top level exception handler so that all exceptions are logged.
+
+Asynchronous code must be guarded to ensure that exceptions do not propagate and break subsequent calls in the framework.
 
 Known errors should be logged with a unique error code to identify them. This requires the development team to create and maintain a catalogue of known system errors and codes
 
 ```java [g1:Java]
-logger.error("[{}] status change [{}] > [{}] disallowed for case [{}]", 
+logger.error("[{}] OldStatus: [{}] NewStatus: [{}] disallowed for Case: [{}]", 
     ServiceErrors.CASE_INVALID_STATUS_CHANGE, case.getStatus(), newStatus, case.getId());
 ```
 
 ```javascript [g1:Javascript]
-logger.error("[%s] status change [%s] > [%s] disallowed for case [%s]", 
+logger.error("[%s] OldStatus: [%s] NewStatus: [%s] disallowed for Case: [%s]", 
     ServiceErrors.CASE_INVALID_STATUS_CHANGE, case.status, newStatus, case.id);
 ```
 
@@ -217,10 +207,10 @@ logger.error("[%s] status change [%s] > [%s] disallowed for case [%s]",
 
 A review of log events must be undertaken prior to any minor release. A log review should show:
 
-* application flow is descernable from reading logs alone: Do you know what’s happening from reading the logs
-* all potential application errors are being logged and with enough contextual information to identify the cause of the error
-* all potential client errors are being logged and with enough contextual information to identify the cause of the error
-* all security events are being logged
+* Application flow is visible from reading logs alone: Do you know what’s happening from reading the logs
+* Application errors are being logged and with enough contextual information to identify the cause of the error
+* Client errors are being logged and with enough contextual information to identify the cause of the error
+* Security events are being logged
 
 ## References
 

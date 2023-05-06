@@ -4,12 +4,15 @@ title: "Licensing software or code"
 tags: [dev, dev_docs]
 order:
   dev_docs: 2
+review:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---
 Everything we produce or use, whether open or closed, should have an appropriate licence applied (as indicated by the [service manual][gov_service_manual_licence]). Without a licence, others (even within the NHSBSA) have no way of knowing for sure if they can use it, or how.
 
-At the NHSBSA, we use the [Apache 2 License][nhsbsa_licence_apache2].
+At the NHSBSA, we use the [Apache 2 Licence][nhsbsa_licence_apache2].
 
-## Applying the Apache 2 License to our work
+## Applying the Apache 2 Licence
 
 ### Each repository should include a licence file
 
@@ -43,8 +46,11 @@ limitations under the License.
 
 ### Add licence in project descriptors
 
-Many build tools rely on project descriptors to provide machine readable information about a component. E.g. Maven uses the pom.xml file. 
+Many build tools rely on project descriptors to provide machine readable information about a component. E.g. Maven uses the pom.xml file.
+
 Add licence information to the project descriptors.
+
+> __Note that NPM uses the [SPDX licence classifier][licence_spdx] for [Apache 2][licence_spdx_apache2].__
 
 ```xml [g1:Maven]
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -67,8 +73,6 @@ Add licence information to the project descriptors.
   ...
 }
 ```
-
-> __Note that NPM uses the [SPDX licence classifier][licence_spdx] for [Apache 2][licence_spdx_apache2].__
 
 ## OGL v3
 

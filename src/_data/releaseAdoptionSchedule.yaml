@@ -36,12 +36,12 @@ nodejs_aws_lambda:
     decommission: 2023-03-31
 java:
   - version: 21
-    release: 2023-11-01
-    adopt: 2024-05-01
+    release: 2023-09-01
+    adopt: 2024-03-01
     decommission: 2028-09-01
   - version: 17
-    release: 2021-11-01
-    adopt: 2022-05-01
+    release: 2021-09-01
+    adopt: 2022-03-01
     decommission: 2026-09-01
   - version: 11
     release: 2018-09-01
@@ -52,6 +52,10 @@ java:
     adopt: 2015-09-01
     decommission: 2022-03-01
 spring_boot:
+  - version: 3.1.x
+    release: 2023-05-18
+    adopt: 2023-07-18
+    decommission: 2024-05-18
   - version: 3.0.x
     release: 2022-11-24
     adopt: 2023-01-24
@@ -72,6 +76,26 @@ spring_boot:
     release: 2020-11-12
     adopt: 2021-01-12
     decommission: 2021-11-18
+  - version: 2.3.x
+    release: 2020-05-15
+    adopt: 2020-07-15
+    decommission: 2021-05-20
+  - version: 2.2.x
+    release: 2019-10-16
+    adopt: 2019-12-16
+    decommission: 2020-10-16
+  - version: 2.1.x
+    release: 2018-10-30
+    adopt: 2018-12-30
+    decommission: 2019-10-30
+  - version: 2.0.x
+    release: 2018-03-01
+    adopt: 2018-05-01
+    decommission: 2019-03-01
+  - version: 1.5.x
+    release: 2017-01-30
+    adopt: 2017-03-30
+    decommission: 2019-08-06
 spring_cloud:
   - version: "2022.0"
     release: 2022-12-01
@@ -86,6 +110,9 @@ spring_cloud:
     adopt: 2021-02-22
     decommission: 2023-12-22
 java_aws_lambda:
+  - version: 17
+    release: 2023-04-27
+    adopt: 2023-10-27
   - version: 11
     release: 2019-11-18
     adopt: 2020-05-18
