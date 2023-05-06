@@ -1,0 +1,19 @@
+// markdown-it-container with `card` expression
+.card {
+	@extend .nhsuk-card;
+	@extend .nhsuk-card__content;
+}
+.card dd code,
+.card li code,
+.card p code,
+.card td code {
+	background-color:  $color_nhsuk-grey-5;
+}
+.card h3 {
+	@extend .nhsuk-heading-l
+}
+.card dd {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
