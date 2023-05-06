@@ -8,7 +8,7 @@
 			
 			<ul class="nhsuk-footer__list">
 				{%- for item in params.links %}
-				<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="{{ item.URL | url }}">{{ item.label }}</a></li>
+				<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="{{ item.url | url }}">{{ item.label }}</a></li>
 				{%- endfor %}
 			</ul>
 			{% endif %}
