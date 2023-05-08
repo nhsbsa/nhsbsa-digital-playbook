@@ -1,0 +1,12 @@
+/* 
+ * The class 'no-js' is removed when javascript it disabled, 
+ * thus hiding content within the class. 
+ * This should be applied to elements such as the back-link.
+ */
+.no-js {
+	display: none;
+}
+
+.js-enabled .no-js {
+	display: block;
+}
