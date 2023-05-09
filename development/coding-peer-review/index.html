@@ -153,16 +153,15 @@ Peer review - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<p>Here we define the process for reviewing changes in production code using Git and Gitlab.</p>
 <div class="admonition warning">
-<p class="admonition-title">This process is mandatory</p>
+<p class="admonition-title">NHSBSA peer review process is mandatory</p>
 <p>Only deviate with agreement from your Delivery Manager and Professional Lead</p>
 </div>
 <p>The high level process is:</p>
 <p><img src="../images/code-review-process.png" alt="Code review process showing swimlanes for author and reviewer"></p>
 <h2 id="1-author-creates-branch" tabindex="-1"><a class="header-anchor" href="#1-author-creates-branch">1. Author creates Branch</a></h2>
-<p>All new code should be committed on a branch from the mainline production code (main).</p>
-<p>Development branches should follow the <a href="../coding-naming-conventions">naming convention</a>:</p>
+<p>All new code should be committed on a topic branch from the mainline production code (main).</p>
+<p>Topic branches should follow the <a href="../coding-naming-conventions">naming convention</a>:</p>
 <blockquote>
 <p><code>{change-type}/{JIRA ticket number}-{dash separated human description}</code></p>
 </blockquote>
@@ -171,24 +170,23 @@ Peer review - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p><code>feature/LISD-1782-private-pension-order-fix</code></p>
 </blockquote>
 <h2 id="2-author-commits-new-code-and-pushes-branch" tabindex="-1"><a class="header-anchor" href="#2-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a></h2>
-<p>All changes for the ticket should be committed against the development branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.</p>
-<p>Branches should be pushed to gitlab no less than daily to ensure safe-keeping of the code.</p>
+<p>All changes for the ticket should be committed against the topic branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.</p>
+<p>Branches should be pushed to gitlab no less than daily to ensure safe-keeping of code.</p>
 <h3 id="guidelines-for-code-changes" tabindex="-1"><a class="header-anchor" href="#guidelines-for-code-changes">Guidelines for code changes</a></h3>
 <ul>
 <li><strong>Keep change to a minimum</strong><br>
-The bigger the change, the longer it will take to understand and review. Large changes bring a higher risk of breaking something</li>
+The bigger the change, the longer it will take to understand and review. Large changes bring a higher risk of breaking something.</li>
 <li><strong>Do one thing</strong><br>
-Avoid adding multiple functional changes in a single branch. You will need to structure your changes to allow isolated change requests</li>
+Avoid adding multiple functional changes in a single branch. Structure changes to allow isolated change requests</li>
 <li><strong>Avoid reformatting</strong><br>
-Reformatted code can make it difficult to see the functional changes you have made. If you need to reformat, do so in a separate request, and make clear that it only contains formatting changes</li>
+Reformatted code can make it difficult to see functional changes. Reformatting should be done in a separate request, making clear that it only contains non-functional changes.</li>
 <li><strong>Ensure the build passes</strong><br>
-Builds must pass all code quality checks including:</li>
+Builds must pass all code quality checks.</li>
 <li><strong>Tests are written</strong><br>
-Review our <a href="../dev-tests-coding">testing guidelines</a> to make sure they are fit for purpose</li>
+Review the <a href="../dev-tests-coding">testing guidelines</a> to make sure they are fit for purpose.</li>
 <li><strong>Consider squashing commits</strong><br>
-Squashing commits may allow you to remove unwanted changes<br>
-Gitlab allows commits to be squashed on merge<br>
-Forced pushes also make it difficult for your reviewer to collaborate</li>
+Squashing commits can provide a cleaner Git history, and removes unwanted or experimental changes.<br>
+Forced pushes can make it difficult for your reviewer to collaborate. Take time to keep them informed.</li>
 </ul>
 <h2 id="3-author-creates/assigns-merge-request-for-review" tabindex="-1"><a class="header-anchor" href="#3-author-creates/assigns-merge-request-for-review">3: Author creates/assigns Merge Request for review</a></h2>
 <p>A Merge Request (MR) should be created in Gitlab and either:</p>
@@ -198,17 +196,17 @@ or</li>
 <li>set as <code>READY FOR REVIEW</code> to allow a different person to claim</li>
 </ul>
 <blockquote>
-<p><strong>NB: Do not use automatic MR creation in the build pipeline. These are created by the <em>gitlab-runner</em> user meaning it isn’t obvious who the MR came from. Furthermore, the merge commit will belong to the MR creator and our audit trail is lost.</strong></p>
+<p><strong>NB: Do not use automatic MR creation in the build pipeline. These are created by the <em>gitlab-runner</em> user meaning it isn’t obvious who the MR came from. Furthermore, the merge commit will also belong to the MR creator and traceability is lost.</strong></p>
 </blockquote>
-<p>Merge requests in Gitlab can be prefixed with <code>WIP</code> to mark as <em>Work in progress</em>. This is a useful way to separate ongoing work in the list of Merge Requests. They can be ignored by a reviewer until the WIP status is removed.</p>
+<p>Merge requests in Gitlab can be prefixed with <code>Draft:</code>. This is a useful way to separate ongoing work in a list of Merge Requests. They can be ignored by a reviewer until the draft status is removed.</p>
 <h3 id="guidelines-for-merge-requests" tabindex="-1"><a class="header-anchor" href="#guidelines-for-merge-requests">Guidelines for merge requests</a></h3>
 <ul>
-<li><strong>Update WIP descriptions</strong><br>
+<li><strong>Update draft descriptions</strong><br>
 A quick summary of what’s left to do or why it might be on hold makes it easier to recall the current status. This is very important if a MR goes stale.</li>
 <li><strong>Ensure the build passes</strong></li>
 <li><strong>Ensure the code is mergeable</strong><br>
 You should resolve any merge conflicts prior to assigning to review<br>
-Sometimes code gains merge conflicts after the request is made. The Reviewer should notify the Author if this happens</li>
+Sometimes code gains merge conflicts after the request is created. The Reviewer should notify the Author if this happens</li>
 <li><strong>Communicate</strong><br>
 Let your reviewers know that the MR is waiting and seek acknowledgement.</li>
 </ul>
@@ -221,17 +219,17 @@ If you are unable to review, seek approval to defer from the Author. The MR can 
 <h3 id="when-reviewing" tabindex="-1"><a class="header-anchor" href="#when-reviewing">When reviewing</a></h3>
 <ul>
 <li><strong>Communicate</strong><br>
-Let the author know that you are reviewing. The 👀 emoji against the author’s Slack message is a quick way to let them know you’re looking.</li>
+Let the author know that you are reviewing. Use the 👀 emoji against the author’s Slack message as a quick way to let them know you’re looking.</li>
 <li><strong>Understand the requirement</strong><br>
-locate and read the JIRA ticket to understand what is required. Seek clarification from project team if needed</li>
+Locate and read the JIRA ticket to understand what is required. Seek clarification from the project team if needed.</li>
 <li><strong>Check out code locally</strong><br>
 It can be tempting to review solely in Gitlab. This is a major cause for merging defective code.</li>
-<li><strong>Run build locally</strong><br>
-Include unit and/or integration tests</li>
+<li><strong>Build locally</strong><br>
+Include unit and/or integration tests.</li>
 <li><strong>Run and verify functionality of web application/web service against requirement</strong></li>
 <li><strong>Review Sonar code quality</strong></li>
 <li><strong>Review impact of the change</strong><br>
-Do not be constrained by the specific code changes: If a code change calls unchanged code, but that code appears faulty, consider the faulty code ‘in scope’</li>
+Do not be constrained to the specific code changes: If the changed code calls unchanged code, but that code appears faulty, consider the faulty code ‘in scope’ of review.</li>
 </ul>
 <h3 id="guidelines-for-reviewing-code-quality" tabindex="-1"><a class="header-anchor" href="#guidelines-for-reviewing-code-quality">Guidelines for reviewing code quality</a></h3>
 <p>There is no magic formula or checklist to ensure code quality, but consider the following:</p>
@@ -240,26 +238,28 @@ Do not be constrained by the specific code changes: If a code change calls uncha
 Badly formatted code should be rejected</li>
 <li><strong>Is the code understandable?</strong><br>
 Complex code can usually be refactored to be more simple.<br>
-Partial code should only be allowed into master (production) if protected by a feature flag</li>
+Partial features should only be allowed into main (production) if protected by a feature flag</li>
 <li><strong>Is the code tested?</strong><br>
 Untested code should not be merged<br>
 Tests must be understandable. If you don’t understand the test, you can’t be sure they are effective<br>
-Its fine to add review comments to test code<br>
-Its fine to write, commit and push new tests to illustrate a bug</li>
+Its fine to add review comments to test code</li>
 <li><strong>Are there any bugs?</strong><br>
+Its fine to write, commit and push new tests to illustrate a bug</li>
+<li><strong>Could it be done in a better way?</strong><br>
 Talk to the Author<br>
-There is often a fine line between coding style and good practice - have a chat with the Author over more complex issues.</li>
+There is often a fine line between coding style and good practice. Have a chat with the Author over more complex issues.</li>
 </ul>
 <h2 id="5-reviewer-add-or-un-resolve-comment" tabindex="-1"><a class="header-anchor" href="#5-reviewer-add-or-un-resolve-comment">5. Reviewer add (or un-resolve) comment</a></h2>
-<p>For <em>any</em> issues you find, add a descriptive comment in Gitlab. You will probably talk to the author about the contentious issues, but leave a comment regardless. Code review comments in Gitlab act as an issue tracker: If you don’t leave a comment there is a chance the issue will be forgotten.</p>
+<p>Always add a descriptive comment in Gitlab for any issue found.</p>
+<p>The reviewer should talk to the author about the contentious issues, but leave a comment regardless. Code review comments in Gitlab act as an issue tracker: If you don’t leave a comment there is a chance the issue will be forgotten.</p>
 <p>Optionally mark the MR as WIP to clarify that the MR won’t be merged until discussions resolved.</p>
 <h3 id="guidelines-for-comments" tabindex="-1"><a class="header-anchor" href="#guidelines-for-comments">Guidelines for comments</a></h3>
 <ul>
 <li><strong>Clearly state the problem</strong><br>
-Add alternative implementation code if it helps illustrate a solution<br>
-Direct the Author to any helpful resources, such as javadoc, reference docs or articles</li>
+Add alternative implementation code if it helps illustrate a solution.<br>
+Direct the Author to any helpful resources, such as javadoc, reference docs or articles.</li>
 <li><strong>Communicate</strong><br>
-Although the Author will receive an email from Gitlab, it is helpful to notify the Author in person or via IM for a speedy response</li>
+Although the Author will receive an email from Gitlab, it is helpful to notify the Author in person or via Slack for a speedy response.</li>
 </ul>
 <h2 id="6-author-reviews-comments" tabindex="-1"><a class="header-anchor" href="#6-author-reviews-comments">6. Author reviews comments</a></h2>
 <p>Review the comments. If they are not clear, talk to the Reviewer.</p>
@@ -271,7 +271,7 @@ Once the comment has been addressed, the Author should mark the comment as resol
 <li><strong>Remove WIP status</strong><br>
 If the reviewer had tagged the MR as WIP, remove the WIP status</li>
 <li><strong>Communicate</strong><br>
-Although the Reviewer will receive an email from Gitlab, it is helpful to notify the Reviewer in person or via IM for a speedy response</li>
+Although the Reviewer will receive an email from Gitlab, it is helpful to notify the Reviewer in person or via Slack for a speedy response</li>
 </ul>
 <h2 id="7-reviewer-approves-code" tabindex="-1"><a class="header-anchor" href="#7-reviewer-approves-code">7. Reviewer approves code</a></h2>
 <p>The Reviewer should approve the code, only when all comments are resolved and they approve the change.</p>
@@ -280,7 +280,7 @@ Although the Reviewer will receive an email from Gitlab, it is helpful to notify
 </blockquote>
 <ul>
 <li><strong>Communicate</strong><br>
-Let the author know that you have approved. The ✅ emoji against the author’s Slack message is a quick way to let them know you’ve approved the change.</li>
+Let the author know that you have approved. Use the ✅ emoji against the author’s Slack message as a quick way to let them know the change is approved.</li>
 </ul>
 <h2 id="8-merge-code" tabindex="-1"><a class="header-anchor" href="#8-merge-code">8. Merge code</a></h2>
 <p>The reviewer or author may merge approved code in the mainline branch.</p>
@@ -308,7 +308,13 @@ Let the author know that you have approved. The ✅ emoji against the author’s
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

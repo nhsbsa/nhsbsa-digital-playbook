@@ -116,10 +116,7 @@ Node.js - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<p>Here’s a list of our preferred technology choices when implementing in<br>
-JavaScript. We’re not prescriptive in these choices, but have a good reason to<br>
-deviate from the norm. If you there’s a better option, raise it at the<br>
-Developer Community.</p>
+<p>Here’s a list of our preferred technology choices when implementing in Node.js. We’re not prescriptive in these choices, but have a good reason to deviate from the norm. If you there’s a better option, raise it at the Developer Community.</p>
 <h2 id="nodejs-versions" tabindex="-1"><a class="header-anchor" href="#nodejs-versions">Node.js versions</a></h2>
 <p>Refer to the <a href="../tech-release-adoption-schedule">Release adoption schedule</a></p>
 <p>Node projects must:</p>
@@ -129,30 +126,30 @@ Developer Community.</p>
 </ul>
 <h2 id="ide" tabindex="-1"><a class="header-anchor" href="#ide">IDE</a></h2>
 <p>Choose whatever you’re comfortable with, so as long as you can perform your<br>
-job, though our developers tend to opt for <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>.</p>
+job. Our developers tend to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>.</p>
 <h2 id="build" tabindex="-1"><a class="header-anchor" href="#build">Build</a></h2>
 <ul>
 <li>Code coverage provided by <a href="https://jestjs.io/" target="_blank" rel="noopener">Jest</a></li>
 <li>Static analysis with SonarQube</li>
 <li><a href="https://www.npmjs.com/package/sass" target="_blank" rel="noopener">Sass</a> for CSS preprocessing and building CSS assets</li>
 <li><a href="https://gulpjs.com/" target="_blank" rel="noopener">Gulp</a> is used for building clientside JavaScript assets</li>
-<li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> can be used as a superset of JavaScript to provide more confidence</li>
+<li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> can be used as a typesafe superset of JavaScript to provide more confidence</li>
 <li><a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a> for opinionated code formatting</li>
 </ul>
 <h2 id="application" tabindex="-1"><a class="header-anchor" href="#application">Application</a></h2>
 <p>Our standard JavaScript based application stack is built on Node.js.</p>
 <ul>
-<li>Environment variables and secrets are provided using <a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener">dotenv</a></li>
+<li>Environment variables retrieved using <a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener">dotenv</a></li>
 <li>User interfaces using the <a href="https://service-manual.nhs.uk/design-system" target="_blank" rel="noopener">NHS Frontend toolkit</a> and <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener">Nunjucks</a> for templating</li>
 <li>Web services with <a href="http://expressjs.com/" target="_blank" rel="noopener">express</a></li>
-<li>Session handling with <a href="https://www.npmjs.com/package/express-session" target="_blank" rel="noopener">express-session</a> and <a href="https://www.npmjs.com/package/connect-redis" target="_blank" rel="noopener">connect-redis</a> if using Redis as a session store</li>
+<li>Session handling with <a href="https://www.npmjs.com/package/express-session" target="_blank" rel="noopener">express-session</a> and <a href="https://www.npmjs.com/package/connect-redis" target="_blank" rel="noopener">connect-redis</a> using Redis as a session store</li>
 <li><a href="https://www.npmjs.com/package/redis" target="_blank" rel="noopener">Redis</a> client if using Redis as a database</li>
 <li>Security with <a href="https://helmetjs.github.io/" target="_blank" rel="noopener">Helmet</a> and <a href="https://www.npmjs.com/package/csurf" target="_blank" rel="noopener">csurf</a> to prevent CSRF</li>
 <li>Dates and times are manipulated using <a href="https://moment.github.io/luxon/#" target="_blank" rel="noopener">Luxon</a> or <a href="https://date-fns.org/" target="_blank" rel="noopener">date-fns</a> and not moment.js</li>
-<li>Logging provided by <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a>, <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> and <a href="https://www.npmjs.com/package/winston-daily-rotate-file" target="_blank" rel="noopener">winston-daily-rotate-file</a> for log rotation in live environments</li>
+<li>Logging provided by <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a>, <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> and <a href="https://www.npmjs.com/package/winston-daily-rotate-file" target="_blank" rel="noopener">winston-daily-rotate-file</a></li>
 <li><a href="https://www.npmjs.com/package/node-fetch" target="_blank" rel="noopener">Node Fetch</a> to perform HTTP requests</li>
 <li><a href="https://www.npmjs.com/package/cookie-parser" target="_blank" rel="noopener">cookie-parser</a> for working with cookies</li>
-<li><a href="https://www.npmjs.com/package/i18n" target="_blank" rel="noopener">I18n</a> for providing internationalisation</li>
+<li><a href="https://www.npmjs.com/package/i18n" target="_blank" rel="noopener">I18n</a> for internationalisation</li>
 </ul>
 <h2 id="testing" tabindex="-1"><a class="header-anchor" href="#testing">Testing</a></h2>
 <ul>
@@ -184,7 +181,13 @@ job, though our developers tend to opt for <a href="https://code.visualstudio.co
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.740Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

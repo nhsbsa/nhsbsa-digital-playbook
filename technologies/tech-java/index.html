@@ -138,11 +138,11 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>Static analysis with <a href="https://www.sonarqube.org/" target="_blank" rel="noopener">SonarQube</a> and the <a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/" target="_blank" rel="noopener">SonarScanner Maven plugin</a></li>
 </ul>
 <h2 id="application" tabindex="-1"><a class="header-anchor" href="#application">Application</a></h2>
-<p>Our standard Java based application stack is built on the Spring ecosystem.</p>
+<p>Our standard Java application stack is built on the Spring ecosystem.</p>
 <ul>
-<li>Applications run in <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> with <a href="https://tomcat.apache.org/" target="_blank" rel="noopener">Apache Tomcat</a> as the embedded app-server</li>
+<li>Applications run in <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> with <a href="https://tomcat.apache.org/" target="_blank" rel="noopener">Apache Tomcat</a> as the embedded application server</li>
 <li>User interfaces with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" target="_blank" rel="noopener">Spring MVC</a> and <a href="https://www.thymeleaf.org/" target="_blank" rel="noopener">Thymeleaf 3</a> for templates</li>
-<li>Web services with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" target="_blank" rel="noopener">Spring MVC</a> and <a href="https://github.com/FasterXML/jackson" target="_blank" rel="noopener">Jackson</a> for JSON mapping</li>
+<li>Web services with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" target="_blank" rel="noopener">Spring MVC</a> or <a href="https://docs.spring.io/spring-data/rest/docs/current/reference/html/" target="_blank" rel="noopener">Spring Data Rest</a> and <a href="https://github.com/FasterXML/jackson" target="_blank" rel="noopener">Jackson</a> for JSON mapping</li>
 <li>Security with <a href="https://spring.io/projects/spring-security" target="_blank" rel="noopener">Spring Security</a></li>
 <li>Data access with <a href="https://spring.io/projects/spring-data-jpa" target="_blank" rel="noopener">Spring Data JPA</a> and <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
 <li>Batch with <a href="https://spring.io/projects/spring-batch" target="_blank" rel="noopener">Spring Batch</a></li>
@@ -151,7 +151,7 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </ul>
 <p>We generally use core Java and standard extension packages in preference to third party, although Spring is often used in preference where available:</p>
 <ul>
-<li>Dates and Times are manipulated using <code>Java.time</code> and not <code>joda</code> or <code>java.util</code></li>
+<li>Dates and Times using <code>Java.time</code> and not <code>joda</code> or <code>java.util</code></li>
 <li>Transactions using Java Transaction API (<code>javax.transaction</code>)</li>
 <li>Object Relational Mapping using Java Persistence API (<code>javax.persistence</code>) backed by <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
 <li>Validation with <a href="https://beanvalidation.org/1.0/spec/" target="_blank" rel="noopener">JSR-303</a> (<code>javax.validation</code>) backed by <a href="https://hibernate.org/validator/" target="_blank" rel="noopener">Hibernate Validator</a></li>
@@ -159,9 +159,9 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>We also use other well known libraries:</p>
 <ul>
 <li>Auto-generate boilerplate code with <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a></li>
-<li>OpenAPI (Swagger) generation using <a href="https://springdoc.org/" target="_blank" rel="noopener">Springdoc OpenAPI</a></li>
+<li><a href="https://swagger.io/specification/" target="_blank" rel="noopener">OpenAPI V3</a> using <a href="https://springdoc.org/" target="_blank" rel="noopener">Springdoc OpenAPI</a></li>
 <li>Logging API with <a href="https://www.slf4j.org/" target="_blank" rel="noopener">logging_slf4j</a>, annotated with Lombok <a href="https://projectlombok.org/features/log" target="_blank" rel="noopener">@Slf4J</a> and implemention by <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a></li>
-<li>Object mapping is quite varied. Many projects use <a href="https://mapstruct.org/" target="_blank" rel="noopener">Mapstruct</a> or <a href="https://projectlombok.org/features/Builder" target="_blank" rel="noopener">Lombok builder</a></li>
+<li>Object mapping is varied. Many projects use <a href="https://mapstruct.org/" target="_blank" rel="noopener">Mapstruct</a> or <a href="https://projectlombok.org/features/Builder" target="_blank" rel="noopener">Lombok builder</a></li>
 <li>Audit using <a href="https://javers.org/" target="_blank" rel="noopener">Javers</a></li>
 <li>We use <a href="https://commons.apache.org/" target="_blank" rel="noopener">Apache commons</a> when Spring equivalents are unsuitable</li>
 </ul>
@@ -197,7 +197,13 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.740Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

@@ -157,6 +157,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </ul>
 <h2 id="terms" tabindex="-1"><a class="header-anchor" href="#terms">Terms</a></h2>
 <p>Terms used in the naming conventions are:</p>
+<div class="card">
 <table>
   <tr>
     <th>Term</th>
@@ -179,7 +180,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </tr>
   <tr>
     <td>Service line</td>
-    <td>For grouping within a service area</td>
+    <td>For grouping within a department</td>
     <td>
       <ul>
         <li><code>insight</code></li>
@@ -224,7 +225,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       For infrastructure:
       <ul>
         <li><code>config</code> for externalised configuration</li>
-        <li><code>terraform</code> for terraform</li>
+        <li><code>tf</code> for terraform</li>
       </ul>
       For tests:
       <ul>
@@ -233,7 +234,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <li><code>accessibility-test</code></li>
         <li><code>performance-test</code></li>
         <li><code>security-test</code></li>
-        <li><code>manual-tests</code></li>
+        <li><code>manual-test</code></li>
       </ul>
       For managed changes:
       <ul>
@@ -253,6 +254,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
     </td>
   </tr>
 </table>
+</div>
 <h3 id="case" tabindex="-1"><a class="header-anchor" href="#case">Case</a></h3>
 <p>Different case standards should be applied depending on usage:</p>
 <ul>
@@ -273,17 +275,17 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </div>
 <div class="card">
 <h3 id="git-branches" tabindex="-1"><a class="header-anchor" href="#git-branches">Git branches</a></h3>
-<p>The mainline branch should be named <code>main</code>. All other branches should be <code>kebab-case</code> with this convention:</p>
+<p>The mainline branch should be named <code>main</code>. All branches should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
 <p><code>{type}/{change ID}-{brief description}</code></p>
 </blockquote>
-<p>Branches should be used for one change/ticket at a time and not collated into groups.</p>
+<p>A single branch should be used per change/ticket.</p>
 </div>
 <div class="card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
-<p>Repositories in Gitlab should be organised into ‘groups’ with <code>natural</code> case and this convention:</p>
+<p>Repositories in Gitlab should be organised into ‘groups’. Use <code>natural</code> case for the human readable form, and <code>kebab-case</code> for the URL with this convention:</p>
 <blockquote>
-<p><code>{service area}/{service-line}/{service}</code></p>
+<p><code>{department}/{service-line}/{service}</code></p>
 </blockquote>
 </div>
 <div class="card">
@@ -310,17 +312,17 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <h3 id="maven" tabindex="-1"><a class="header-anchor" href="#maven">Maven</a></h3>
 <p>Maven <code>group id</code> should be <code>kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>uk.nhs.nhsbsa.{service-area}.{optional service-line}.{service}</code></p>
+<p><code>uk.nhs.nhsbsa.{optional department}.{optional service-line}.{service}</code></p>
 </blockquote>
 <p>Maven <code>artifact id</code> should follow <code>kebab-case</code> and this convention:</p>
 <blockquote>
 <p><code>{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
-<p>Unit tests run by Maven Surefire plugin should follow the convention:</p>
+<p>Unit tests run by <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">Maven Surefire plugin</a> should follow the convention:</p>
 <blockquote>
 <p><code>*Test.java</code></p>
 </blockquote>
-<p>Integration tests run by Maven Failsafe plugin should follow the convention:</p>
+<p>Integration tests run by <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">Maven Failsafe plugin</a> should follow the convention:</p>
 <blockquote>
 <p><code>*IT.java</code></p>
 </blockquote>
@@ -355,7 +357,13 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

@@ -115,49 +115,40 @@ Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
 <h2 id="accessibility" tabindex="-1"><a class="header-anchor" href="#accessibility">Accessibility</a></h2>
 <p>Producing accessibile web sites and applications is a fundamental aspect of frontend development.</p>
-<p>The Government service manual explains more about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction" target="_blank" rel="noopener">making your service accessible</a>.</p>
-<p>The NHS service manual also provides guidance on <a href="https://service-manual.nhs.uk/accessibility" target="_blank" rel="noopener">accessibility</a> including specific advice on <a href="https://service-manual.nhs.uk/accessibility/design" target="_blank" rel="noopener">design</a> and <a href="https://service-manual.nhs.uk/accessibility/development" target="_blank" rel="noopener">development</a>.</p>
+<p>The Government service manual explains more about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction" target="_blank" rel="noopener">making your service accessible</a> and writing an <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility" target="_blank" rel="noopener">accessibility statement</a>.</p>
+<p>The NHS service manual also provides guidance on <a href="https://service-manual.nhs.uk/accessibility" target="_blank" rel="noopener">accessibility</a> including specific advice on <a href="https://service-manual.nhs.uk/accessibility/design" target="_blank" rel="noopener">design</a>, <a href="https://service-manual.nhs.uk/accessibility/development" target="_blank" rel="noopener">development</a> and <a href="https://service-manual.nhs.uk/accessibility/testing" target="_blank" rel="noopener">testing</a>.</p>
 <p>As a frontend developer at the NHSBSA you should:</p>
 <ul>
-<li>Use semantic HTML</li>
-<li>Use aria roles for interactive elements</li>
-<li>Build user interfaces that work by default without rich client technology such as Javascript</li>
-<li>Build user interfaces that adopt progressive enhancement and not use graceful degradation<br>
-Government advice is to <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement" target="_blank" rel="noopener">design the user interfaces with progressive enhancement</a></li>
+<li>Use semantic HTML.</li>
+<li>Use ARIA roles for interactive elements.</li>
+<li>Build user interfaces that work by default without rich client technology such as Javascript.</li>
+<li>Build user interfaces that adopt progressive enhancement and not use graceful degradation.<br>
+Government advice is to <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement" target="_blank" rel="noopener">design the user interfaces with progressive enhancement</a>.</li>
 </ul>
 <h2 id="nhs-and-gov-design-systems" tabindex="-1"><a class="header-anchor" href="#nhs-and-gov-design-systems">NHS and Gov design systems</a></h2>
-<p>We make use of the <a href="https://service-manual.nhs.uk/design-system" target="_blank" rel="noopener">NHS design system</a> and associated <a href="https://github.com/nhsuk/nhsuk-frontend" target="_blank" rel="noopener">NHS frontend</a> package to align to standard styles, components and patterns that have been proven with robust user testing. In cases where Government branding is requird, we adopt the <a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener">Government design system</a> and <a href="https://github.com/alphagov/govuk-frontend" target="_blank" rel="noopener">frontend</a>.</p>
-<p>Both NHS and Gov frontends are implemented in Node.js and Nunjucks. Our preference should be to implement frontends in Node.js to take full advantage of the frontend packages.</p>
+<p>We make use of the <a href="https://service-manual.nhs.uk/design-system" target="_blank" rel="noopener">NHS design system</a> and associated <a href="https://github.com/nhsuk/nhsuk-frontend" target="_blank" rel="noopener">NHS frontend</a> package to align to standard styles, components and patterns that have been proven with robust user testing. In cases where Government branding is required, we adopt the <a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener">Government design system</a> and <a href="https://github.com/alphagov/govuk-frontend" target="_blank" rel="noopener">frontend</a>.</p>
+<p>Both NHS and Gov frontends are implemented in Node.js and Nunjucks. Our preference is to implement frontends in Node.js to take full advantage of the frontend packages.</p>
 <p>We occasionally need to adopt non-standard patterns when user research proves specific difficulties with the standard patterns. Any new pattern should be user tested and then fed back into the NHS or Gov design system and frontend package.</p>
 <h2 id="multi-lingual-support" tabindex="-1"><a class="header-anchor" href="#multi-lingual-support">Multi-lingual support</a></h2>
-<p>You may also need to support content in many different languages. The UI should be coded with this in mind from the start. Localising content becomes increasingly more difficult if not considered upfront. Most platforms have inbuilt features or extensions to support it.</p>
-<p>Externalise content in whole sentences, with placeholders for dynamic content: Do not decompose content into sentance fragments as this could break grammar rules when translated to a different language.</p>
+<p>Services may need to support content in different languages. The UI should be coded with this in mind from the start. Localising content is more difficult if not considered upfront. Most platforms have inbuilt features or extensions to support it.</p>
+<p>Externalise content in whole sentences, with placeholders for dynamic content: Do not decompose content into sentence fragments as this can break grammar rules when translated to a different language.</p>
 <p>Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner’s Office are available for advice and provide a <a href="https://arts.wales/sites/default/files/2021-02/Bilingual%20Design%20Guide%202018.pdf" target="_blank" rel="noopener">bilingual design guide</a>:</p>
 <ul>
 <li>The website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.</li>
-<li>It should always be possible and easy to switch from one language to the other on every page, going straight to the same page in the other language.</li>
+<li>It should always be possible and easy to switch from one language to another on any page, going straight to the same page in the chosen language.</li>
 <li>The language switch toggle should ideally be placed in the top right hand corner of the screen.</li>
-<li>Organisations can register in both Welsh and English, for example welshlanguagecommissioner.wales and comisiynyddygymraeg.cymru</li>
+<li>Organisations can register domains in both Welsh and English, for example welshlanguagecommissioner.wales and comisiynyddygymraeg.cymru</li>
 <li>E-mail addresses should be either language neutral or bilingual, e.g. post@cyg-wlc.wales or separate Welsh and English versions should be available which will reach the<br>
 same mailbox.</li>
+<li>Translations must be performed by human translators. Software can support a translator’s work, but it should never be used instead of a professional translator.</li>
 </ul>
 <h2 id="general-guidance" tabindex="-1"><a class="header-anchor" href="#general-guidance">General guidance</a></h2>
 <ul>
-<li>
-<p>Our web application must function correctly on the range of browsers and devices specified in the latest <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices" target="_blank" rel="noopener">Government compatibility guidance</a>.</p>
-</li>
-<li>
-<p>Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get" target="_blank" rel="noopener">Wikipedia Post/Redirect/Get</a> for more on this pattern.</p>
-</li>
-<li>
-<p>HTML markup must contain id attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.</p>
-</li>
-<li>
-<p>URLs must be agreed by a Content Designer and align to <a href="https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk" target="_blank" rel="noopener">URL design standards</a></p>
-</li>
-<li>
-<p>Prototype code mustn’t be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don’t require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.</p>
-</li>
+<li>Our web application must function correctly on the range of browsers and devices specified in the latest <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices" target="_blank" rel="noopener">Government compatibility guidance</a>.</li>
+<li>Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get" target="_blank" rel="noopener">Wikipedia Post/Redirect/Get</a> for more on this pattern.</li>
+<li>HTML markup must contain <code>id</code> attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.</li>
+<li>URLs must be agreed by a Content Designer and align to <a href="https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk" target="_blank" rel="noopener">URL design standards</a></li>
+<li>Prototype code mustn’t be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don’t require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.</li>
 </ul>
 
         <hr>
@@ -182,7 +173,13 @@ same mailbox.</li>
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

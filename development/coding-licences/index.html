@@ -78,7 +78,7 @@ Licensing software or code - NHSBSA Digital, Data and Technology Playbook - NHSB
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#applying-the-apache-2-license-to-our-work">Applying the Apache 2 License to our work</a>
+                    <li><a href="#applying-the-apache-2-licence">Applying the Apache 2 Licence</a>
             
                 <ol>
                     
@@ -120,8 +120,8 @@ Licensing software or code - NHSBSA Digital, Data and Technology Playbook - NHSB
       
 
 <p>Everything we produce or use, whether open or closed, should have an appropriate licence applied (as indicated by the <a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable#licensing-your-code" target="_blank" rel="noopener">service manual</a>). Without a licence, others (even within the NHSBSA) have no way of knowing for sure if they can use it, or how.</p>
-<p>At the NHSBSA, we use the <a href="https://gitlab.com/nhsbsa/Libraries/nhsbsa-standard-files/-/blob/main/LICENCE.txt" target="_blank" rel="noopener">Apache 2 License</a>.</p>
-<h2 id="applying-the-apache-2-license-to-our-work" tabindex="-1"><a class="header-anchor" href="#applying-the-apache-2-license-to-our-work">Applying the Apache 2 License to our work</a></h2>
+<p>At the NHSBSA, we use the <a href="https://gitlab.com/nhsbsa/Libraries/nhsbsa-standard-files/-/blob/main/LICENCE.txt" target="_blank" rel="noopener">Apache 2 Licence</a>.</p>
+<h2 id="applying-the-apache-2-licence" tabindex="-1"><a class="header-anchor" href="#applying-the-apache-2-licence">Applying the Apache 2 Licence</a></h2>
 <h3 id="each-repository-should-include-a-licence-file" tabindex="-1"><a class="header-anchor" href="#each-repository-should-include-a-licence-file">Each repository should include a licence file</a></h3>
 <p>This should be called <code>LICENCE</code> or <code>LICENCE.md</code>. “License” is the U.S. English spelling and should not be used. Gitlab and GitHub will still show licence details for the British English spelling.</p>
 <p>Make sure the licence content is included in full, including the title “APACHE LICENSE, VERSION 2.0”, so that readers are quickly able to see which licence is being used.</p>
@@ -131,21 +131,21 @@ Licensing software or code - NHSBSA Digital, Data and Technology Playbook - NHSB
 <p>The year should be the year the code was first published. Where the code is updated with significant changes, the year can be shown as a period from first to most recent update (e.g. 2015-2017). Do not update the date range when no significant changes have been made.</p>
 <pre class="language-text"><code class="language-text">Copyright 2022 Crown Copyright (NHS Business Services Authority)<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>    http://www.apache.org/licenses/LICENSE-2.0<br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</code></pre>
 <h3 id="add-licence-in-project-descriptors" tabindex="-1"><a class="header-anchor" href="#add-licence-in-project-descriptors">Add licence in project descriptors</a></h3>
-<p>Many build tools rely on project descriptors to provide machine readable information about a component. E.g. Maven uses the pom.xml file.<br>
-Add licence information to the project descriptors.</p>
-<div class="code-tabs">
-<ul>
-<li><input type="radio" name="label-group-37" checked><label for="group-37-tab-0" onclick="this.previousElementSibling.click()">Maven</label></li>
-<li><input type="radio" name="label-group-37"><label for="group-37-tab-1" onclick="this.previousElementSibling.click()">NPM</label></li>
-</ul>
-<input type="radio" id="group-37-tab-0" name="group-37" checked>
-<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    ...<br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>licenses</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>The Apache Software License, Version 2.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://www.apache.org/licenses/LICENSE-2.0.txt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distribution</span><span class="token punctuation">></span></span>repo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distribution</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>license</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>licenses</span><span class="token punctuation">></span></span><br>    ...<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span></code></pre>
-<input type="radio" id="group-37-tab-1" name="group-37">
-<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  ...<br>  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"Apache-2.0"</span><br>  ...<br><span class="token punctuation">}</span></code></pre>
-</div>
+<p>Many build tools rely on project descriptors to provide machine readable information about a component. E.g. Maven uses the pom.xml file.</p>
+<p>Add licence information to the project descriptors.</p>
 <blockquote>
 <p><strong>Note that NPM uses the <a href="https://spdx.org/licenses/" target="_blank" rel="noopener">SPDX licence classifier</a> for <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank" rel="noopener">Apache 2</a>.</strong></p>
 </blockquote>
+<div class="code-tabs">
+<ul>
+<li><input type="radio" name="label-group-45" checked><label for="group-45-tab-0" onclick="this.previousElementSibling.click()">Maven</label></li>
+<li><input type="radio" name="label-group-45"><label for="group-45-tab-1" onclick="this.previousElementSibling.click()">NPM</label></li>
+</ul>
+<input type="radio" id="group-45-tab-0" name="group-45" checked>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    ...<br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>licenses</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>The Apache Software License, Version 2.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://www.apache.org/licenses/LICENSE-2.0.txt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distribution</span><span class="token punctuation">></span></span>repo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distribution</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>license</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>licenses</span><span class="token punctuation">></span></span><br>    ...<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span></code></pre>
+<input type="radio" id="group-45-tab-1" name="group-45">
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  ...<br>  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"Apache-2.0"</span><br>  ...<br><span class="token punctuation">}</span></code></pre>
+</div>
 <h2 id="ogl-v3" tabindex="-1"><a class="header-anchor" href="#ogl-v3">OGL v3</a></h2>
 <p>We use Open Government Licence v3 for our published content. User interfaces need a link to the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">OGL V3 licence agreement</a> in the footer.</p>
 
@@ -171,7 +171,13 @@ Add licence information to the project descriptors.</p>
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

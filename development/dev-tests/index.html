@@ -121,12 +121,14 @@ Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 A self contained test for a unit of functionality, such as a Java class or a Javascript function.</li>
 <li><strong>Integration test</strong><br>
 A test for a unit of functionality that depends on an external resource, such as a database.<br>
-We test against external resources and dependencies that reflect a production environment, but there is potential to mock external APIs with tools such as mock-server or wire-mock.<br>
-We do not normally write <em>full stack</em> integration tests, as these are covered by our automation testers.<br>
-For more information, refer to this <a href="../dev-tests-integration">guidance on writing integration tests</a>.</li>
+We test against external resources and dependencies that reflect a production environment.<br>
+Integration testing against external APIs is done with tools such as mock-server or wire-mock.<br>
+Developers do not normally write <em>full stack</em> integration tests, as these are covered by our automated acceptance tests.<br>
+For more information, refer to this <a href="../dev-tests-integration/">guidance on writing integration tests</a>.</li>
 </ul>
 <h2 id="test-driven-development-red-green-refactor" tabindex="-1"><a class="header-anchor" href="#test-driven-development-red-green-refactor">Test Driven Development (red, green, refactor)</a></h2>
-<p>We encourage Developers to adopt Test Driven Development. This means writing tests alongside production code in an iterative fashion according to these TDD rules:</p>
+<p>We encourage Developers to adopt Test Driven Development.</p>
+<p>Write tests alongside production code in an iterative fashion according to these TDD rules:</p>
 <ul>
 <li>You may not write production code until you have written a failing unit test.</li>
 <li>You may not write more of a unit test than is sufficient to fail, and not compiling is failing.</li>
@@ -141,41 +143,41 @@ Think about how to make your tests pass</li>
 <li><strong>Refactor</strong><br>
 Think about how to improve your existing implementation</li>
 </ul>
-<p>Note that we’re don’t write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you: Its better to write things down than forget them. But we’re not defining an entire specification before we write the functional code. TDD is an iterative and incremental process.</p>
+<p>Do not write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you: Its better to write things down than forget them. But we’re not defining an entire specification before we write the functional code. TDD is an iterative and incremental process.</p>
 <h2 id="test-code-principles" tabindex="-1"><a class="header-anchor" href="#test-code-principles">Test code principles</a></h2>
 <ul>
 <li>
-<p>Test cases must not use real, production data<br>
-In exceptional circumstances tests may use real personal data where this can be justified and approved by Internal Governance and Information Security departments. Projects that test with real personal data must apply production controls in the testing environment.<br>
-In some circumstances, we do test against anonymised production data. We pseudonymise or anonymise the identity of data subjects according to the <a href="https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&amp;web=1&amp;e=SPLOtZ" target="_blank" rel="noopener">NHSBSA Anonymisation and Pseudonymisation standard</a></p>
+<p><strong>Test cases MUST NOT use real, production data</strong><br>
+In some circumstances, we test against anonymised production data. We pseudonymise or anonymise the identity of data subjects according to the <a href="https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&amp;web=1&amp;e=SPLOtZ" target="_blank" rel="noopener">NHSBSA Anonymisation and Pseudonymisation standard</a><br>
+In exceptional circumstances use of real personal data is allowed where it can be justified and is approved by our Internal Governance and Information Security departments. Projects that test with real personal data must apply production controls in the testing environment.</p>
 </li>
 <li>
-<p>Tests must be written with the same care as production code.<br>
+<p><strong>Tests must be written with the same care as production code</strong><br>
 Tests must change as production code evolves. The dirtier the tests, the harder they are to change. The more tangled the test code, the more likely it is that you will spend more time cramming new tests into the suite than it takes to write the new production code. As you modify the production code, old tests start to fail, and the mess in the test code makes it hard to get those tests to pass again. So the tests become viewed as an ever-increasing liability.<br>
-Tests cases should follow clean code principles with the intent being easily understood.<br>
-For more information, refer to this <a href="../dev-tests-coding">guidance on writing clean tests</a>.</p>
+Tests cases should follow clean code principles with the intent of being easily understood.<br>
+For more information, refer to this <a href="../dev-tests-coding/">guidance on writing clean tests</a>.</p>
 </li>
 <li>
-<p>Tests should be fast<br>
+<p><strong>Tests should be fast</strong><br>
 Test should run quickly. When they run slow, you won’t want to run them frequently. If you don’t run them frequently, you won’t find problems early enough to fix them easily. You won’t feel as free to clean up the code. Eventually the code will begin to rot.</p>
 </li>
 <li>
-<p>Tests must be independent of each other<br>
+<p><strong>Tests must be independent of each other</strong><br>
 One test must not set up the conditions for the next test. You must be able to run each test independently and run the tests in any order you like. When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.</p>
 </li>
 <li>
-<p>Tests must be repeatable in any environment<br>
+<p><strong>Tests must be repeatable in any environment</strong><br>
 You should be able to run the tests in the production environment, in the QA environment, and on your laptop while riding home on the train without a network. If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
-Fixture data and configuration must be managed by the test itself</p>
+Fixture data and configuration must be managed within the test.</p>
 </li>
 <li>
-<p>Tests must be self validating<br>
+<p><strong>Tests must be self validating</strong><br>
 Tests must have a boolean exit state: They either they pass or fail.<br>
 You should not have to read through a log file to tell whether the tests pass. You should not have to manually compare two different text files to see whether the tests pass. If the tests aren’t self-validating, then failure can become subjective and running the tests can require a long manual evaluation.<br>
-Tests should be written against the public interfaces of production code, and not against private or internal functions</p>
+Tests should be written against the public interfaces of production code, and not against private or internal functions.</p>
 </li>
 <li>
-<p>Tests should to be written in a timely fashion<br>
+<p><strong>Tests should to be written in a timely fashion</strong><br>
 If you write tests after the production code, then you may find the production code to be hard to test; you may decide that some production code is too hard to test; you may not design the production code to be testable.<br>
 Unit tests should be written just before the production code that makes them pass. Production code is then designed to be tested and is simpler to test.</p>
 </li>
@@ -194,7 +196,7 @@ Unit tests should be written just before the production code that makes them pas
 						</h2>
 						
 					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>	
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>	
 				</div>
 			</div>
 		</li>
@@ -203,11 +205,11 @@ Unit tests should be written just before the production code that makes them pas
 				<div class="nhsuk-card__content">
 					<div class="nhsuk-card__header">
 						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-integration/">Writing integration tests</a>
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-integration/">Writing integration tests (Java)</a>
 						</h2>
 						
 					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>	
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>	
 				</div>
 			</div>
 		</li>
@@ -236,7 +238,13 @@ Unit tests should be written just before the production code that makes them pas
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-09T03:11:36.545Z">9 May 2023</time>
+      Published: <time datetime="2023-05-09T06:20:59.736Z">9 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 
