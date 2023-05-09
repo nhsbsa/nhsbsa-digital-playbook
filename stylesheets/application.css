@@ -7979,6 +7979,7 @@ pre[class*=language-] {
   cursor: help;
 }
 
+dd code,
 li code,
 p code,
 td code {
@@ -9350,11 +9351,6 @@ dd:after {
   clear: both;
 }
 
-.card dd code,
-.card p code {
-  background-color: #f0f4f5;
-}
-
 .nhsbsa-details__summary-heading {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -9745,6 +9741,19 @@ dd code {
   transform: translate(-50%, -50%);
 }
 
+.card dd code,
+.card li code,
+.card p code,
+.card td code {
+  background-color: #f0f4f5;
+}
+
+.card dd {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 .nhsbsa-status-tag, .t_decommission > strong, .t_deprecate > strong, .t_adopt > strong, .t_assess > strong, .t_pending > strong, .tag > strong {
   text-align: center;
   vertical-align: middle;
@@ -9778,6 +9787,19 @@ dd code {
   color: black;
   background-color: #d8dde0;
   border: 1px solid #c2c7ca;
+}
+
+.card dd code,
+.card li code,
+.card p code,
+.card td code {
+  background-color: #f0f4f5;
+}
+
+.card dd {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* 
