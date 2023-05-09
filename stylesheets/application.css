@@ -9435,15 +9435,6 @@ a.nhsuk-footer__list-item-link:visited {
     display: none;
   }
 }
-/* Back Link */
-.nhsuk-back-link-js {
-  display: none;
-}
-
-.js-enabled .nhsuk-back-link-js {
-  display: block;
-}
-
 /* TOC nav styling */
 .nhsbsa-nav__list ol, .nhsbsa-nav__list ul {
   font-weight: 400;
@@ -9787,6 +9778,19 @@ dd code {
   color: black;
   background-color: #d8dde0;
   border: 1px solid #c2c7ca;
+}
+
+/* 
+ * The class 'no-js' is removed when javascript it disabled, 
+ * thus hiding content within the class. 
+ * This should be applied to elements such as the back-link.
+ */
+.no-js {
+  display: none;
+}
+
+.js-enabled .no-js {
+  display: block;
 }
 
 /* ==========================================================================
