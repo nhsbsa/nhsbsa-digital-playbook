@@ -9,11 +9,12 @@ module.exports = (eleventyConfig) => {
   statuses.forEach((status) => {
     eleventyConfig.addCollection(status, function (collection) {
       return collection.getAll().filter((item) => {
-        if (item.data.status === status) {
-          console.log(status + ' status ' + item.data.title);
-          return true;
+        if (item.data.review?.requires_review) {
+          // Force the article collection to REVIEW
+          item.data.status = 'REVIEW';
+          console.log(`status moved to REVIEW for ${item.data.title}`);
         }
-        return false;
+        return item.data.status === status;
       });
     });
   });
