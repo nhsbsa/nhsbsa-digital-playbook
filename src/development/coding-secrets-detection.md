@@ -66,7 +66,9 @@ From [Government guidance](https://www.gov.uk/government/publications/open-sourc
 ### Rewriting history
 
 !!! warning Destructive rewrite of published Git history must follow NHSBSA process
-Consult with your professional lead and the security team
+Consult with your professional lead and the security team.
+
+Refer to our [guidance on rewriting Git history](../coding-git-rewrite-history/).
 !!!
 
 ---

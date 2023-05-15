@@ -2,11 +2,14 @@
 layout: article
 title: "Rewriting Git history"
 description: "Removing sensitive data such as non-revokable secrets or contributor identities from Git"
-status: DRAFT
+status: FINAL
 tags: [dev-security, security]
 order: 
   dev-security: 4
   security: 4
+review:
+    last_reviewed_date: 2023-05-15
+    review_cycle: ANNUAL
 ---
 !!! warning Proceed with caution
 Rewriting history will change the Git commit graph and has a high potential to create a mess of a repository. Incorrect or unmanaged use of tools can lead to an inconsistent Git repository which is difficult to recover from. Proceed with caution and follow this guidance to protect your project from unintended consequences.
@@ -125,12 +128,19 @@ This article provides an in-depth guide to removing secrets from Git history by 
 * Develop the rewrite script and peer review with a Merge Request
   See the [template project](https://gitlab.com/nhsbsa/Libraries/git-rewrite-scripts) for guidance on script writing.
 * Dry run
-  Local development should stop.
-  Consult with team to ensure all local branches are pushed to the production repository.
-  Create a fresh fork of the repository in `git-rewrite`.
-  Rewrites must be performed on a fresh clone of the forked repository
-  Apply scripted rewrites and push force the repository
-  Consult with team to assure all is as expected
+  * Local development should stop.
+  * Consult with team to ensure all local branches are pushed to the production repository.
+  * Create a fresh fork of the repository in `git-rewrite` folder.
+  * Rewrites must be performed on a fresh clone of the forked repository
+  * Apply scripted rewrites
+  * Add remote origin as rewrite will remove that relationship
+  * Configure protected branches to allow force push
+  * Force push the repository
+    `git push --all --force`
+  * Force push the tags
+    `git push --tags --force`
+  * Configure protected branches to disallow force push
+  * Consult with team to assure all is as expected
 * Apply the rewrite
   Repeat the clone, rewrite, push, review, but this time on the production repository
 
