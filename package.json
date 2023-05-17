@@ -17,8 +17,7 @@
     "url": "https://github.com/nhsbsa/nhsbsa-digital-playbook/issues"
   },
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "nhsuk-frontend": "^7.0.0"
+  "dependencies": {
+    "nhsbsa-docs": "file:../nhsbsa-docs/nhsbsa-docs-1.0.0-alpha.0.tgz"
   }
 }
