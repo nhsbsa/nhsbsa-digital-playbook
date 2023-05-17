@@ -22,16 +22,10 @@ npm run build
 npm start
 ```
 
-### Testing the application
-
-```bash
-npm test
-```
-
 ## Documentation
 
-This playbook uses [Eleventy][eleventy] to generate the static site, [Github actions][gh_actions] to deploy
-the generated content, and [Github pages][gh_pages] to host.
+This playbook uses the [nhsbsa-docs][nhsba_docs] library to generate an NHS-styled static site using [Eleventy][eleventy]. [Github actions][gh_actions] is used to deploy
+the generated content and [Github Pages][gh_pages] is used to host the playbook.
 
 ## Contributions
 
@@ -48,5 +42,6 @@ Released under the [Apache 2 license](LICENCE.txt).
 [nhsbsa_digital_playbook_contribute]: <https://nhsbsa.github.io/nhsbsa-digital-playbook/>
 [node_js]: <https://nodejs.org/en/>
 [eleventy]: <https://www.11ty.dev/docs/>
+[nhsba_docs]: <https://github.com/nhsbsa/nhsbsa-docs>
 [gh_actions]: <https://docs.github.com/en/actions>
 [gh_pages]: <https://pages.github.com/>
