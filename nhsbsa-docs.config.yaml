@@ -1,7 +1,2 @@
-# extendBaseCss:
-#   cssLocation: ''
-#   cssFileName: ''
-#   outDir: ''
-
 nunjucks:
   templates: ['src/_components']
