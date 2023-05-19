@@ -52,7 +52,6 @@
   {% block openGraph %}
   <meta property="og:url" content="{{ page.url | url | absoluteUrl }}"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:title" content="Design system - NHS digital service manual"/>
   {% if description %}
   <meta property="og:description" content="{{ description | markdown("inline") | striptags(true) }}">
   {% endif %}
