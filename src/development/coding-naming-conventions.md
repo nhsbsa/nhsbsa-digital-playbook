@@ -34,30 +34,28 @@ Terms used in the naming conventions are:
         <li><code>corporate</code></li>
         <li><code>primary-care</code></li>
         <li><code>workforce</code></li>
-        <li><code>ddat</code> for <em>Data, Digital & Technology</em></li>
-        <li><code>dhsc</code> for <em>Department of Health and Social Care</em></li>
+        <li><code>ddat</code> - Data, Digital & Technology</li>
+        <li><code>dhsc</code> - Department of Health and Social Care</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td>Service line</td>
-    <td>For grouping within a department</td>
+    <td>For grouping within a Department</td>
     <td>
       <ul>
-        <li><code>insight</code></li>
-        <li><code>platform</code></li>
-        <li><code>hwhc</code> for <em>Help with Health Costs</em></li>
-        <li><code>ohs</code> for <em>Overseas Healthcare Services</em></li>
+        <li><code>hwhc</code> - Help with Health Costs</li>
+        <li><code>ohs</code> - Overseas Healthcare Services</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td>Service</td>
-    <td>Adopt a succinct or abbreviated service name</td>
+    <td>The actual Service being delivered</td>
     <td>
       <ul>
-        <li><code>lis</code> for <em>Low Income Scheme</em></li>
-        <li><code>ihs</code> for <em>Immigration Health Surcharge</em></li>
+        <li><code>lis</code> - Low Income Scheme</li>
+        <li><code>ihs</code> - Immigration Health Surcharge</li>
       </ul>
     </td>
   </tr>
@@ -118,6 +116,12 @@ Terms used in the naming conventions are:
 
 :::
 
+### Abbreviations
+
+Service delivery teams often adopt short form or abbreviations of names. For example, the Maternity Exemption Certificate service is shorted to Matex, Immigration Health Surcharge is abbreviated to IHS. It is ok to use the short form for internal names such as code modules or system urls.
+
+Use long form names whenever the content may be used outside of the service team. This includes service URLs, public hosted code repository names and READMEs.
+
 ### Case
 
 Different case standards should be applied depending on usage:
@@ -141,6 +145,8 @@ Git repositories should be `kebab-case` with this convention:
 
 > `{optional service-line}-{service}-{function}-{type}`
 
+Gitlab and Github hosted repository names should use unabbreviated `natural` case.
+
 :::
 ::: card
 
@@ -157,7 +163,7 @@ A single branch should be used per change/ticket.
 
 ### Gitlab groups
 
-Repositories in Gitlab should be organised into ‘groups’. Use `natural` case for the human readable form, and `kebab-case` for the URL with this convention:
+Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated `natural` case for the human readable form, and `kebab-case` for the URL with this convention:
 
 > `{department}/{service-line}/{service}`
 
