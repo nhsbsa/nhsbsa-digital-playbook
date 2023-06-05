@@ -82,6 +82,9 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
             
                 <ol>
                     
+                    <li><a href="#abbreviations">Abbreviations</a>
+            		</li>
+
                     <li><a href="#case">Case</a>
             		</li>
                 </ol>
@@ -170,30 +173,28 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <li><code>corporate</code></li>
         <li><code>primary-care</code></li>
         <li><code>workforce</code></li>
-        <li><code>ddat</code> for <em>Data, Digital & Technology</em></li>
-        <li><code>dhsc</code> for <em>Department of Health and Social Care</em></li>
+        <li><code>ddat</code> - Data, Digital & Technology</li>
+        <li><code>dhsc</code> - Department of Health and Social Care</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td>Service line</td>
-    <td>For grouping within a department</td>
+    <td>For grouping within a Department</td>
     <td>
       <ul>
-        <li><code>insight</code></li>
-        <li><code>platform</code></li>
-        <li><code>hwhc</code> for <em>Help with Health Costs</em></li>
-        <li><code>ohs</code> for <em>Overseas Healthcare Services</em></li>
+        <li><code>hwhc</code> - Help with Health Costs</li>
+        <li><code>ohs</code> - Overseas Healthcare Services</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td>Service</td>
-    <td>Adopt a succinct or abbreviated service name</td>
+    <td>The actual Service being delivered</td>
     <td>
       <ul>
-        <li><code>lis</code> for <em>Low Income Scheme</em></li>
-        <li><code>ihs</code> for <em>Immigration Health Surcharge</em></li>
+        <li><code>lis</code> - Low Income Scheme</li>
+        <li><code>ihs</code> - Immigration Health Surcharge</li>
       </ul>
     </td>
   </tr>
@@ -252,6 +253,9 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </tr>
 </table>
 </div>
+<h3 id="abbreviations" tabindex="-1"><a class="header-anchor" href="#abbreviations">Abbreviations</a></h3>
+<p>Service delivery teams often adopt short form or abbreviations of names. For example, the Maternity Exemption Certificate service is shorted to Matex, Immigration Health Surcharge is abbreviated to IHS. It is ok to use the short form for internal names such as code modules or system urls.</p>
+<p>Use long form names whenever the content may be used outside of the service team. This includes service URLs, public hosted code repository names and READMEs.</p>
 <h3 id="case" tabindex="-1"><a class="header-anchor" href="#case">Case</a></h3>
 <p>Different case standards should be applied depending on usage:</p>
 <ul>
@@ -269,6 +273,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <blockquote>
 <p><code>{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
+<p>Gitlab and Github hosted repository names should use unabbreviated <code>natural</code> case.</p>
 </div>
 <div class="card">
 <h3 id="git-branches" tabindex="-1"><a class="header-anchor" href="#git-branches">Git branches</a></h3>
@@ -280,7 +285,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </div>
 <div class="card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
-<p>Repositories in Gitlab should be organised into ‘groups’. Use <code>natural</code> case for the human readable form, and <code>kebab-case</code> for the URL with this convention:</p>
+<p>Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated <code>natural</code> case for the human readable form, and <code>kebab-case</code> for the URL with this convention:</p>
 <blockquote>
 <p><code>{department}/{service-line}/{service}</code></p>
 </blockquote>
@@ -354,7 +359,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-06-05T03:13:06.323Z">5 June 2023</time>
+      Published: <time datetime="2023-06-05T08:20:51.185Z">5 June 2023</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
