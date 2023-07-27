@@ -1,6 +1,6 @@
 ---
 layout: collection
-title: "Service designer"
+title: "Service design"
 description: "service designer at the NHSBSA"
 tags: design
 order: 1
