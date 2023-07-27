@@ -67,6 +67,30 @@ will work with Lead Delivery Managers and Programme Directors to develop service
 - will help set direction and embed good practice within teams
 - will make important decisions for the service and can implement changes based on solid rationale factoring in both UCD and business strategy within a project
 
+::: details View Service Designer skills matrix
+
+::: card
+
+### Skills matrix
+
+| Skill level | Junior Designer | Midweight Service Designer | Senior Service Designer |
+| ----------- | ----------- | ----------- | ----------- |
+| **Agile working** | Awareness | Working | Practitioner |
+| **Communicating information** | Working | Practitioner | Practitioner |
+| **Community collaboration** | Working | Practitioner | Practitioner |
+| **Digital perspective** | Working | Working | Practitioner |
+| **Evidence and context-based design** | Working | Practitioner | Expert |
+| **Experience of working with constraints** | Awareness | Working | Working |
+| **Facilitating risks and decisions** | Awareness | Practitioner | Practitioner |
+| **Leadership and guidance** | Awareness | Working | Practitioner |
+| **Prototyping in code** | Working | Working | Practitioner |
+| **Prototyping** | Working | Practitioner | Expert |
+| **Strategic thinking** | Awareness | Practitioner | Expert |
+| **User focus** | Working | Practitioner | Expert |
+
+[What does each skill level mean?](https://www.gov.uk/guidance/skill-levels-for-digital-data-and-technology-roles)
+:::
+
 ## Service design principles
 
 Generic Design principles for all design disciplines: [government design principles ](https://www.gov.uk/guidance/government-design-principles)
