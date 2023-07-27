@@ -1,28 +1,30 @@
 ---
 layout: article
 title: "Tools and resources"
-description: "Where to start with tools and resources..."
+description: "Where to start with tools and resources"
 tags: design
-order: 4
+order: 5
 ---
 
 ## Tools
 
 ### Slack
 
-Within Digital we use Slack to communicate with each other. The [NHSBSA Digital Service](https://nhsbsadigitalservices.slack.com/) workspace is open to anyone with an `@nhsbsa.nhs.uk` email address and has various channels ranging from project specific chats to dad jokes!
+We use Slack to connect with other people working on digital services across government, we also use it within Digital to communicate with each other informally. 
+
+The [NHSBSA Digital Service](https://nhsbsadigitalservices.slack.com/) workspace is open to anyone with an `@nhsbsa.nhs.uk` email address and has various channels ranging from foodies to dad jokes!
 
 ### Microsoft Teams
 
 We are a hybrid organisation and because of that our video conferencing tool of choice is Microsoft Teams. To login, use your `@nhsbsa.nhs.uk` email address.
 
-Microsoft Teams is also useful when you need to contact people from across the organisation i.e. not within Digital
+Microsoft Teams is also used to communicate with others from across the entire NHSBSA organisation.
 
 ### Miro
 
 [Miro](https://miro.com/) is our 'digital whiteboarding' tool of choice which enables distributed teams to brainstorm and collaborate with each other.
 
-To get an NHS BSA account, email [digiadmin@nhsbsa.nhs.uk](mailto:digiadmin@nhsbsa.nhs.uk)
+To get an NHSBSA account, email [digiadmin@nhsbsa.nhs.uk](mailto:digiadmin@nhsbsa.nhs.uk)
 
 ### Atlassian (JIRA / Confluence)
 
@@ -56,7 +58,7 @@ Your assessment will be run by a panel of experienced specialists from the digit
 
 Service Assessments can often seem daunting, but it's important to stress that an assessment is a team effort and is not just your responsibility. The panel are not there to catch you out. They’re there to offer a peer review of the work you’ve done and help you understand anything that you can potentially change or improve. 
 
-To help project teams prepare for Service Assessments, the NHS BSA has a [Service Assessment community](https://teams.microsoft.com/l/channel/19%3a9d236843d94d4589bf2dda569cb29980%40thread.tacv2/Service%2520Assessments?groupId=901d4e4d-5a07-4d45-b5b1-adfd4c6b6d86&tenantId=cf6d0482-86b1-4f88-8c0c-3b4de4cb402c) which is built up of various disciplines e.g. Delivery Managers, User Researchers, Designers, Developers, Testers etc... 
+To help project teams prepare for Service Assessments, the NHSBSA has a [Service Assessment community](https://teams.microsoft.com/l/channel/19%3a9d236843d94d4589bf2dda569cb29980%40thread.tacv2/Service%2520Assessments?groupId=901d4e4d-5a07-4d45-b5b1-adfd4c6b6d86&tenantId=cf6d0482-86b1-4f88-8c0c-3b4de4cb402c) which is built up of various disciplines e.g. Delivery Managers, User Researchers, Designers, Developers, Testers etc... 
 
 The Service Assessment community not only helps to perform 'mock' assessments, but they can also perform ad-hoc reviews against the service standard when requested. These 'mock' assessments help project teams prepare for their real assessment by providing advice and guidance in a less formal setting. 
 
@@ -90,6 +92,20 @@ There’s tons of reasons to use cross-government Slack. For example:
 - discussing and sharing examples of applying the GOV.UK / NHS.UK Design Systems to services
 - getting help and support using GOV.UK Pay and GOV.UK Notify
 - keeping up with what other people are working on in the #weeknotes channel
+
+### Design systems
+
+Design systems allow us to make NHS / government services consistent. When something is published to a design system as a style, component or pattern it includes details of how and when it’s been tested in user research. This can help you decide whether it’s something you can use or adapt for your service.
+
+If the journey your user takes begins from GOV.UK, you should use the [GOV.UK design system](https://design-system.service.gov.uk/).
+
+If the journey your user takes begins from NHS.UK (or is a NHS service), you should use the [NHS.UK design system](https://service-manual.nhs.uk/design-system). 
+
+Other government departments have built additional patterns and components within [their own design systems](https://github.com/ctdesign/gov-design-systems-list) to help meet their own user needs.
+
+!!! warning Important
+Where possible you should always use patterns and components with research behind them, before beginning to adapt or create something new.
+!!!
 
 ## Prototypes
 

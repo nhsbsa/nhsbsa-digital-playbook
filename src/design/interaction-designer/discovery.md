@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Interaction design at Discovery"
-description: "Where to start with interaction design..."
+description: "What does an Interaction Designer do at Discovery?"
 tags: interaction-design
 order: 2
 ---

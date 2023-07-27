@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "About service design"
-description: "Where to start with service design..."
+description: "What does a Service Designer do?"
 tags: service-design
 order: 1
 ---
@@ -33,11 +33,11 @@ Service Design is a design practice that connects all aspects of a service cross
 - to know how to create and maintain a service blueprint for a service, to work with and identify when needed relevant disciplines to input into the service blueprint
 - work to GOV / NHS design standards for digital services
 - ensure that all design across any channel online or offline is done in line with accessibility guidelines
-- collaborate and share work with other designers across NHS, not just within the NHS BSA
+- collaborate and share work with other designers across NHS, not just within the NHSBSA
 - collaborate and work alongside other professions
 - contribute to, and write UCD Logs detailing decisions to change a service
 - take part in service reviews and have an understanding of how other disciplines such as Technical Architecture, Product Ownership and Delivery management interact with a service to deliver it to standard, addressing both business and user need, policy, process and efficiencies 
-- be an engaged and active member within the NHS BSA design community
+- be an engaged and active member within the NHSBSA design community
 
 ### Expectations of Junior Designers
 

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Interaction design during Live"
-description: "Where to start with interaction design..."
+description: "What does an Interaction Designer do at Live?"
 tags: interaction-design
 order: 5
 ---

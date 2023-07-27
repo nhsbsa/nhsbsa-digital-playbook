@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Service design at Discovery"
-description: "Where to start with service design..."
+description: "What does a Service Designer do at Discovery?"
 tags: service-design
 order: 2
 ---

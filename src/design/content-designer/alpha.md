@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Content design at Alpha"
-description: "Where to start with content design..."
+description: "What does a Content Designer do at Alpha?"
 tags: content-design
 order: 3
 ---

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Content design during Live"
-description: "Where to start with content design..."
+description: "What does a Content Designer do at Live?"
 tags: content-design
 order: 5
 ---

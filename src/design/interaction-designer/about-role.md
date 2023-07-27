@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "About interaction design"
-description: "Where to start with interaction design..."
+description: "What does an Interaction Designer do?"
 tags: interaction-design
 order: 1
 ---
@@ -32,13 +32,13 @@ Prototypes are design artefacts, not an exact representation of the fully develo
 
 - work to GOV / NHS design standards for digital services
 - ensure that design is done in line with accessibility guidelines
-- collaborate and share work with other designers across NHS, not just within the NHS BSA
+- collaborate and share work with other designers across NHS, not just within the NHSBSA
 - collaborate and work alongside other professions
 - reuse patterns and components and contribute to the NHS.UK / GOV.UK design systems
 - share prototypes, user flows and user journey maps
 - contribute and write design histories detailing decisions to change a service
 - take part in design reviews and design critiques
-- be an engaged and active member within the NHS BSA design community
+- be an engaged and active member within the NHSBSA design community
 
 ### Expectations of Junior Designers
 

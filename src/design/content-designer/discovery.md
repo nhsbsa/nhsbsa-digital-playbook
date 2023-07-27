@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Content design at Discovery"
-description: "Where to start with content design..."
+description: "What does a Content Designer do at Discovery?"
 tags: content-design
 order: 2
 ---

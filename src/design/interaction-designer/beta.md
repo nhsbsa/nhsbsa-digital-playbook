@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Interaction design at Beta"
-description: "Where to start with interaction design..."
+description: "What does an Interaction Designer do at Beta?"
 tags: interaction-design
 order: 4
 ---

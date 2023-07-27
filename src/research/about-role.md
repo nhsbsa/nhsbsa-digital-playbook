@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "About user research"
-description: "Where to start with user research..."
+description: "What does a User Researcher do?"
 tags: research
 order: 1
 ---

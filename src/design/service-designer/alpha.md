@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Service design at Alpha"
-description: "Where to start with service design..."
+description: "What does a Service Designer do at Alpha?"
 tags: service-design
 order: 3
 ---

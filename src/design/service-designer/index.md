@@ -1,7 +1,7 @@
 ---
 layout: collection
 title: "Service design"
-description: "service design at the NHSBSA"
+description: "Service design at the NHSBSA"
 tags: design
 order: 1
 collection_tag: service-design

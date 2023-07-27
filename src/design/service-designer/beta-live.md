@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Service design at Beta and Live"
-description: "Where to start with service design..."
+description: "What does a Service Designer do at Beta / Live?"
 tags: service-design
 order: 4
 ---

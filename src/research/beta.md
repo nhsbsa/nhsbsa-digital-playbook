@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "User research at Beta"
-description: "Where to start with user research..."
+description: "What does a User Researcher do at Beta?"
 tags: research
 order: 4
 ---

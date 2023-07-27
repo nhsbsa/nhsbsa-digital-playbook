@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "About the role"
-description: "Where to start with content design..."
+description: "What does a Content Designer do?"
 tags: content-design
 order: 1
 ---
@@ -138,6 +138,6 @@ Alternatively, if the product goes live, all elements of design, including the c
 ## Sources
 
 - [Content design guidance](https://www.gov.uk/guidance/content-design)
-- [NHS BSA content style guide](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Content-Design-Style-Guide.aspx)
-- [NHS BSA content design A - Z](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Content-design-A-to-Z.aspx)
-- [NHS BSA content design checklist for editors](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Website-style-checklist-for-content-editors.aspx)
+- [NHSBSA content style guide](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Content-Design-Style-Guide.aspx)
+- [NHSBSA content design A - Z](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Content-design-A-to-Z.aspx)
+- [NHSBSA content design checklist for editors](https://nhsbsauk.sharepoint.com.mcas.ms/sites/digital-and-online-team/SitePages/Website-style-checklist-for-content-editors.aspx)

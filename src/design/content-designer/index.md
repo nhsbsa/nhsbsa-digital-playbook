@@ -1,7 +1,7 @@
 ---
 layout: collection
 title: "Content design"
-description: "content design at the NHSBSA"
+description: "Content design at the NHSBSA"
 tags: design
 order: 3
 collection_tag: content-design

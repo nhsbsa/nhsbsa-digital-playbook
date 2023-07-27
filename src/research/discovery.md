@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "User research at Discovery"
-description: "Where to start with user research..."
+description: "What does a User Researcher do at Discovery?"
 tags: research
 order: 2
 ---
