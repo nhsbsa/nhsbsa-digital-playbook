@@ -16,4 +16,4 @@ In the Alpha phase, the team aims to develop and refine early versions of the pr
 - creating a consistent user experience with other NHS / GOV services
 - considering all routes that users take to the service
 - considering the context of each user group i.e. how the service will look and work on every browser or device users access it on
-- documenting the changes to the service over time using a design history i.e. what was created and why, what you planned to test (hypothesis) and what did you find 
+- documenting the changes to the service over time using a UCD log i.e. what was created and why, what you planned to test (hypothesis) and what did you find 

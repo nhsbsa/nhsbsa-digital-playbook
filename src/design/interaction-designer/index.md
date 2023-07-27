@@ -1,7 +1,7 @@
 ---
 layout: collection
-title: "Interaction designer"
-description: "interaction designer at the NHSBSA"
+title: "Interaction design"
+description: "interaction design at the NHSBSA"
 tags: design
 order: 2
 collection_tag: interaction-design

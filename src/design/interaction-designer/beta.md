@@ -17,4 +17,4 @@ During the Beta phase, the product is closer to its final form, and the focus is
 - ensuring that solutions meet the WCAG 2.2 AA standard
 - contributing and sharing any new design patterns that are developed to meet user needs within the NHS / GOV design communities
 - observing user research and analysing data and analytics
-- documenting the changes to the service over time using a design history i.e. what was created and why, what you planned to test (hypothesis) and what did you find
+- documenting the changes to the service over time using a UCD log i.e. what was created and why, what you planned to test (hypothesis) and what did you find
