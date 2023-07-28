@@ -27,9 +27,11 @@ nodejs_aws_lambda:
   - version: v16
     release: 2022-05-11
     adopt: 2022-11-11
+    decommission: 2024-03-11
   - version: v14
     release: 2021-01-27
     adopt: 2021-07-27
+    decommission: 2023-11-27
   - version: v12
     release: 2019-11-18
     adopt: 2020-05-18

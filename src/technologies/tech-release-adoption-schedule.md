@@ -80,7 +80,7 @@ __DECOMMISSION__
 AWS Lambdas run on platforms managed by Amazon. They publish release dates and a deprecation policy.
 
 * [AWS Lambda releases](https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html)
-* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)
+* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)
 
 ::: card
 
