@@ -24,7 +24,9 @@ Interaction Design is a design practice that works out the best way to let users
 - build fully functional services
 - write production quality code (and are not expected to)
 
+!!! warning Important
 Prototypes are design artefacts, not an exact representation of the fully developed service. Prototypes should only be built to test whether solutions meet the needs of its users.
+!!!
 
 ## Expectations of an Interaction Designer
 
@@ -34,9 +36,9 @@ Prototypes are design artefacts, not an exact representation of the fully develo
 - ensure that design is done in line with accessibility guidelines
 - collaborate and share work with other designers across NHS, not just within the NHSBSA
 - collaborate and work alongside other professions
+- contribute to, and write UCD Logs detailing decisions to change a service
 - reuse patterns and components and contribute to the NHS.UK / GOV.UK design systems
 - share prototypes, user flows and user journey maps
-- contribute and write design histories detailing decisions to change a service
 - take part in design reviews and design critiques
 - be an engaged and active member within the NHSBSA design community
 

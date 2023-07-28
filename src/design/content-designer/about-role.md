@@ -43,6 +43,7 @@ Content across our digital services, corporate website and digital collaboration
 - ensure that content across online channels adheres to accessibility guidelines
 - collaborate and share work with other designers across NHS, not just within the NHSBSA, such as the NHS Style Council
 - collaborate and work alongside other professions
+- contribute to, and write UCD Logs detailing decisions to change a service
 - audit content iterations
 - be an engaged and active member within the content design community and NHSBSA design community
 - take part in content reviews and content critiques
