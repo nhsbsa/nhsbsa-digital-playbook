@@ -6,7 +6,7 @@ tags: tech
 order: 1
 status: FINAL
 review:
-    last_reviewed_date: 2023-05-06
+    last_reviewed_date: 2023-07-28
     review_cycle:
         month: 2
 issuesheet:
@@ -80,7 +80,7 @@ __DECOMMISSION__
 AWS Lambdas run on platforms managed by Amazon. They publish release dates and a deprecation policy.
 
 * [AWS Lambda releases](https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html)
-* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)
+* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)
 
 ::: card
 
@@ -175,7 +175,7 @@ __DECOMMISSION__
 AWS Lambdas run on platforms managed by Amazon. They publish release dates and a deprecation policy.
 
 * [AWS Lambda releases](https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html)
-* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)
+* [AWS Lambda runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)
 
 ::: card
 
@@ -191,6 +191,34 @@ __DECOMMISSION__
 :::
 
 {{ schedule.appReleaseAdoptionSchedule('java_aws_lambda') }}
+
+## Ruby
+
+Ruby is a deprecated language for use in the NHSBSA. Existing projects using Ruby should maintain versions in accordance with this schedule.
+
+Ruby projects should use [rbenv](https://github.com/rbenv/rbenv) to manage Ruby versions.
+Include a `.ruby-version` file in the repository to specify the Ruby version in source code.
+
+::: details How we work out the adoption schedule for Ruby
+
+We follow the [Ruby release schedule](https://www.ruby-lang.org/en/downloads/releases/).
+
+Since Ruby 2.1, a new major version of Ruby has been released every year on December 25th, and EOLed 3 years, 3 months later.
+
+::: card
+
+__ASSESS__
+: on _release date_
+
+__ADOPT__
+: 6 months after _release date_
+
+__DECOMMISSION__
+: by _end of life date_
+
+:::
+
+{{ schedule.appReleaseAdoptionSchedule('ruby') }}
 
 ## PostgreSQL
 
