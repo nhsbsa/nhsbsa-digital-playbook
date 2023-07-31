@@ -7,7 +7,7 @@ order: 1
 ---
 ## What a content designer does
 
-Content designs answer a user need in the best way for the user to consume it.​
+Content designers answer a user need in the best way for the user to consume it.​
 
 It:​
 
@@ -18,9 +18,8 @@ It:​
 
 ### Content designers are responsible for:
 
-Content across our digital services, corporate website and digital collaboration platforms (SharePoint, Yammer)
+Content across our digital services, corporate website and digital collaboration platforms (SharePoint, Yammer), making sure content is: 
 
-- Making sure content is: 
 - compliant with GDS
 - follows accessibility guidelines (WCAG)
 - is designed responsively
