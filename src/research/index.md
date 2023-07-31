@@ -1,12 +1,12 @@
 ---
-layout: article
+layout: collection
 title: "Research"
-description: "How we do research at the NHSBSA"
+description: "How we research at the NHSBSA"
 tags: home
-order: 20
+order: 2
+collection_tag: research
+pagination:
+  data: collections.research
+  size: 50
+  alias: User research
 ---
-We have a separate playbook that is written and maintained by our user research community. In time, this will become one with this overall playbook.
-
-But for now, the link to this is here: [NHSBSA User Research Playbook][ur_playbook]
-
-[ur_playbook]: <https://nhsbsa-playbook.netlify.app/>

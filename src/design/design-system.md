@@ -2,7 +2,7 @@
 layout: article
 title: "Design system"
 description: "Where to start with design..."
-tags: design
+tags: design-system
 order: 1
 ---
 As an NHS organisation, we follow the NHS Design System and Design Principals - these can be found here: [NHS Design System][nhs_designsys]
