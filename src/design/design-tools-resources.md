@@ -10,7 +10,7 @@ order: 5
 
 ### Slack
 
-We use Slack to connect with other people working on digital services across government, we also use it within Digital to communicate with each other informally. 
+We use Slack to connect with other people working on digital services across government, we also use it within DDaT to communicate with each other informally. 
 
 The [NHSBSA Digital Service](https://nhsbsadigitalservices.slack.com/) workspace is open to anyone with an `@nhsbsa.nhs.uk` email address and has various channels ranging from foodies to dad jokes!
 
