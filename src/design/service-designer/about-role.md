@@ -62,7 +62,7 @@ Service Design is a design practice that connects all aspects of a service cross
 - to know how to create, advise on best practice, and maintain a service blueprint for a service, to work with and identify when needed relevant disciplines to input into the service blueprint
 - to advise on and orchestrate transformational changes within policy and process across different channels within the business and to be able to implement improvements on how policy, process, business and user need, and technologies could be improved based on user research
 - work with minimal support and can influence, can mentor, coach and support others across UCD when needed 
-will work with Lead Delivery Managers and Programme Directors to develop service concepts based off user research / business objectives, technology and process and influence change where necessary
+- will work with Lead Delivery Managers and Programme Directors to develop service concepts based off user research / business objectives, technology and process and influence change where necessary
 - will have responsibility across complex services
 - will help set direction and embed good practice within teams
 - will make important decisions for the service and can implement changes based on solid rationale factoring in both UCD and business strategy within a project
