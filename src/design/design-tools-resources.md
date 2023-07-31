@@ -12,11 +12,11 @@ order: 5
 
 We use Slack to connect with other people working on digital services across government, we also use it within DDaT to communicate with each other informally. 
 
-The [NHSBSA Digital Service](https://nhsbsadigitalservices.slack.com/) workspace is open to anyone with an `@nhsbsa.nhs.uk` email address and has various channels ranging from foodies to dad jokes!
+The [NHSBSA Digital Service](https://nhsbsadigitalservices.slack.com/) workspace is open to anyone with an NHSBSA email address and has various channels ranging from foodies to dad jokes!
 
 ### Microsoft Teams
 
-We are a hybrid organisation and because of that our video conferencing tool of choice is Microsoft Teams. To login, use your `@nhsbsa.nhs.uk` email address.
+We are a hybrid organisation and because of that our video conferencing tool of choice is Microsoft Teams. To login, use your NHSBSA email address.
 
 Microsoft Teams is also used to communicate with others from across the entire NHSBSA organisation.
 
@@ -24,7 +24,7 @@ Microsoft Teams is also used to communicate with others from across the entire N
 
 [Miro](https://miro.com/) is our 'digital whiteboarding' tool of choice which enables distributed teams to brainstorm and collaborate with each other.
 
-To get an NHSBSA account, email [digiadmin@nhsbsa.nhs.uk](mailto:digiadmin@nhsbsa.nhs.uk)
+To get an NHSBSA account, contact the [Digital Admin Team](https://nhsbsauk.sharepoint.com/sites/DigitalAdminTeam)
 
 ### Atlassian (JIRA / Confluence)
 
