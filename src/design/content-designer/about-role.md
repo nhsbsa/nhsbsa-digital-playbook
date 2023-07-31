@@ -7,7 +7,7 @@ order: 1
 ---
 ## What a content designer does
 
-Content designers answer a user need in the best way for the user to consume it.​
+Content design answers a user need in the best way for the user to consume it.​
 
 It:​
 
