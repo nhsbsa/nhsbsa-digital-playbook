@@ -618,7 +618,6 @@ Recommended value
 * [Content-Security-Policy][csp_com]
 * [Can I use... CSP][caniuse_csp]
 * [Helmet-csp][helmet_js_csp]
-* [Should you deploy your own CSP reporting endpoint?][websec_csp]
 * [CSP On Reporting and Filtering][dropbox_tech_csp]
 
 [w3c_csp]: <https://www.w3.org/TR/CSP/>
@@ -634,5 +633,4 @@ Recommended value
 [owasp_cheat_sheet_csp]: <https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html>
 [csp_com]: <https://content-security-policy.com/>
 [caniuse_csp]: <https://caniuse.com/?search=csp>
-[websec_csp]: <https://websec.be/blog/cspreporting/>
 [dropbox_tech_csp]: <https://dropbox.tech/security/on-csp-reporting-and-filtering>
