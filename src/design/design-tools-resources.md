@@ -28,7 +28,7 @@ To get an NHSBSA account, contact the [Digital Admin Team](https://nhsbsauk.shar
 
 ### Atlassian (JIRA / Confluence)
 
-We use [Jira](https://www.atlassian.com/software/jira) and [Confluence](https://www.atlassian.com/software/confluence]) to organize and manage our agile projects.
+We use [Jira](https://www.atlassian.com/software/jira) and [Confluence](https://www.atlassian.com/software/confluence) to organize and manage our agile projects.
 
 To get an account, you should raise a request with our [IT Service Desk](https://nhsbsauk.sharepoint.com/sites/ITUserServices).
 
@@ -43,7 +43,7 @@ These service standards are designed to help teams:
 - address the different needs of users 
 - navigate the complexities of delivering digital services across government and health and social care
 
-Depending on [certain criteria](https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard]), you will often be assessed against the service standard during the lifetime of a service. 
+Depending on [certain criteria](https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard), you will often be assessed against the service standard during the lifetime of a service. 
 
 ### Service assessments
 
@@ -168,7 +168,7 @@ Alternatively, you can work with developers on your team to create prototypes to
 
 Point 12 of the GOV / NHS Service Standard advises that we should 'make new source code open'. 
 
-To do this, we [store our source code on Github](https://github.com/nhsbsa) and we ensure our prototypes can be viewed in a browser by [publishing our prototypes to a service called Heroku](https://nhsuk-prototype-ia.azurewebsites.net/docs/how-tos/heroku ).
+To do this, we [store our source code on Github](https://github.com/nhsbsa) and we ensure our prototypes can be viewed in a browser by [publishing our prototypes to a service called Heroku](https://nhsuk-prototype-kit.azurewebsites.net/docs/how-tos/publish-your-prototype-online).
 
 When you’ve published your prototype, you can easily share it with others. You must protect access to your prototype with a password so that members of the public do not find it and mistake it for a real service. 
 

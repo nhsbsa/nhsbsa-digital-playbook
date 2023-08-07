@@ -61,7 +61,7 @@ These service standards are designed to help teams:
 - address the different needs of users
 - navigate the complexities of delivering digital services across government and health and social care
 
-Depending on [certain criteria](https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard%5D), teams are often assessed against the service standard during the lifetime of a service.
+Depending on [certain criteria](https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard), teams are often assessed against the service standard during the lifetime of a service.
 
 ### Other toolkits
 
