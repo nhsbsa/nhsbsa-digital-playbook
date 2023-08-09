@@ -79,7 +79,7 @@ The better you understand your users, the more likely you are to design and buil
 
 ### 2. Make your research inclusive
 
-To build a good service you need to learn about all your users, including [disabled users](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction) and [those who need support to use your service](https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction). You must actively include people from these groups in your research throughout each [development phase](https://www.gov.uk/service-manual/user-research#user-research-in-the-different-design-phases).
+To build a good service you need to learn about all your users, including [disabled users](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction) and [those who need support to use your service](https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction). You must actively include people from these groups in your research throughout each [development phase](https://www.gov.uk/service-manual/user-research).
 
 Make sure you do not exclude any users in the way you do research, such as how you [plan your research](https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service), [recruit participants](https://www.gov.uk/service-manual/user-research/find-user-research-participants) or [choose research locations](https://www.gov.uk/service-manual/user-research/choose-a-location-for-user-research).
 
