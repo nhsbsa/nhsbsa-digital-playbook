@@ -12,22 +12,23 @@ The NHS and government run on acronyms.
 
 Here are a few common acronyms and abbreviations to help everyone's understanding in the workplace.
 
+## Departments / organisations
+
 ::: card
-### Departments / organisations
 
 AOMRC
 : Academy of Medical Royal Colleges
 
-BEIS 
+BEIS
 : Department for Business, Energy & Industrial Strategy
 
-BMA 
+BMA
 : The British Medical Association
 
 CCG
 : Clinical Commissioning Group
 
-CPA 
+CPA
 : Commonwealth Parliamentary Association
 
 CSU
@@ -45,7 +46,7 @@ DfE
 DfT
 : Department for Transport
 
-'DH' or 'DoH' or ‘DHSC’
+‘DHSC’ or 'DH' or 'DoH'
 : Department of Health and Social Care
 
 DWP
@@ -63,10 +64,10 @@ HO
 ICS
 : Integrated Care System
 
-IHPN 
+IHPN
 : Independent Healthcare Provider Network
 
-LGA 
+LGA
 : Local Government Association
 
 MOJ
@@ -78,11 +79,17 @@ MTI
 NCF
 : National Care Forum
 
+NCSC
+: National Cyber Security Centre
+
 NHS
 : National Health Service
 
 NHSBSA
 : National Health Service Business Services Authority
+
+NIST
+: National Institute of Standards and Technology (US)
 
 PCN
 : Primary Care Network
@@ -90,30 +97,37 @@ PCN
 STP
 : Sustainability and Transformation Partnership
 
-UKHCA 
+UKHCA
 : United Kingdom Homecare Association
+
+UKHSA
+: United Kingdom Health Security Agency
 
 ‘UKV&I' or 'UKVI’
 : UK Visas and Immigration
 
 :::
 
-::: card
 ### Job role / disciplines
 
-BE DEV
+::: card
+
+BA
+: Business Analyst
+
+BE Dev
 : Backend Developer
 
 CD
 : Content Designer
 
-DEV
+Dev
 : Developer
 
 DM
 : Delivery Manager
 
-FE DEV
+FE Dev
 : Frontend Developer
 
 IxD
@@ -121,6 +135,9 @@ IxD
 
 MHFA
 : Mental Health First Aider
+
+PE or DevOps
+: Platform Engineer / DevOps Engineer
 
 PM
 : Project Manager
@@ -139,11 +156,15 @@ UCD
 
 :::
 
+## Teams
+
 ::: card
-### Teams
 
 CCS
 : Contact Centre Services
+
+DDaT
+: Digital, Data and Technology
 
 SIAM
 : Service Integration and Management
@@ -155,39 +176,54 @@ CI
 : Customer Insight
 
 IG
-: Information Governance 
+: Information Governance
+
+IS
+: Information Security
+
+SecOps
+: Security Operations
 
 SHE
-: Safety, Health and Environment 
+: Safety, Health and Environment
 
 :::
 
+## Services / Projects
+
+### Citizen Services
+
 ::: card
-### Projects / Services
 
 AIE
-: Am I Exempt? 
+: Am I Exempt?
 
 CRA
 : Citizen Rights Agreement
 
-DDaT
-: Digital, Data and Technology
+BLC
+: Baby Loss Certificate
+
+DCR
+: Death Certificate Reform
 
 DECS
 : Dental Exemption Checking Service
 
-DIT
-: Digital Insight and Technology
-
-DPC
-: Direct Payments to Contractors
+EC
+: Exemption Checker
 
 EHIC
 : European Health Insurance Card
 
+EIBSS
+: England Infected Blood Support Scheme
+
 HES
 : Health Exemption Services
+
+HRT PPC
+: Hormone Replacement Therapy Prescription Prepayment Certificate
 
 HS
 : Healthy Start
@@ -201,9 +237,6 @@ IHS
 LIS
 : Low Income Scheme
 
-PCN
-: Penalty Charge Notice
-
 PECS
 : Prescription Exemption Checking Service
 
@@ -216,28 +249,89 @@ PS
 MATEX
 : Maternity Exemptions
 
+MCCD
+: Medical Certificate of Cause of Death
+
 MEDEX
 : Medical Exemptions
 
-MYS
-: Manage Your Service
+MES
+: Medical Examiners Service
 
 OHS
 : Overseas Healthcare Services
 
+OHS-CR
+: Overseas Healthcare Services Cost Recovery
+
 RTEC
 : Real Time Exemption Check
 
-TLRS
-: ‘Loss Recovery’ or ‘Transforming Loss Recovery Services’
+TECS
+: Transforming Exemption Checking Services
 
 UK GHIC
 : UK Global Health Insurance Card
 
+VDPS
+: Vaccine Damage Payment Service
+
 :::
 
+### Workforce Services
+
 ::: card
-### Software / resources
+
+ESR
+: Employment Staff Record
+
+LSF
+: Learning Support Fund
+
+NHSJ
+: NHS Jobs
+
+NHSV
+: NHS Volunteering
+
+SB
+: Student Bursaries
+
+SWB
+: Social Work Bursaries
+
+:::
+
+### Primary Care Services
+
+::: card
+
+BMS
+: Branded Medicines Service
+
+CDR
+: Common Drug Reference
+
+DaSH
+: Discontinuations and Shortages Portal
+
+DMD
+: Dictionary of Medicines and Devices
+
+DPC
+: Direct Payments to Contractors
+
+MMP
+: Medicines Management Portal
+
+MYS
+: Manage Your Service
+
+:::
+
+## Software / resources
+
+::: card
 
 DWH
 : Data warehouse
