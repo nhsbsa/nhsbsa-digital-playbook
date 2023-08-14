@@ -115,7 +115,7 @@ To [work in an agile way](https://www.gov.uk/service-manual/agile-delivery/agile
 - test new design ideas, content and features to see if they work well for all users
 - understand problems users are having and how they might be resolved
 
-This means doing small batches of user research in every iteration of each [development phase](https://www.gov.uk/service-manual/user-research#user-research-in-the-different-design-phases) - starting in discovery and continuing throughout live. This is more effective and efficient than doing one or two large studies at the beginning or end of development.
+This means doing small batches of user research in every iteration of each [development phase](https://www.gov.uk/service-manual/user-research) - starting in discovery and continuing throughout live. This is more effective and efficient than doing one or two large studies at the beginning or end of development.
 
 Doing this means you can:
 
