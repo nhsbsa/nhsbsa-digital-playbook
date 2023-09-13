@@ -42,7 +42,7 @@ When suggesting an improvement, consider:
 
 ### How will discussions be priorised and actioned?
 
-Each individual discussion allows people to mark what’s most helpful:
+Each individual discussion allows people to mark what is most helpful:
 
 <img width="100%"  src="../images/discussions-voting.png" alt="Example of a discussion which shows how people can vote for a particular discussion" class="nhsuk-u-margin-bottom-4" />
 
