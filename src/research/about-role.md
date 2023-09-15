@@ -155,7 +155,6 @@ At the same time, user researchers can work closely with designers, developers a
 You can:
 
 - download a [‘User research is a team sport’](https://github.com/alphagov/govdesign/blob/master/Poster_UserResearch_IsATeamSport.pdf) poster
-- read a [blog post about how to involve your team in user research](http://www.myddelton.co.uk/blog/user-research-is-a-team-sport)
 
 ### 7. Share your findings
 
