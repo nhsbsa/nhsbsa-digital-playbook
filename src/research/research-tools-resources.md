@@ -72,7 +72,6 @@ User researchers are also encouraged to look outside of the organisation for exi
 - [Microsoft Inclusive Design](https://www.microsoft.com/design/inclusive/)
 - [Austin Center For Design](https://www.ac4d.com/worksheets)
 - [Hyper Island’s toolbox](https://toolbox.hyperisland.com/)
-- [UX design kit](https://uxdesignkit.com/)
 - [Laws of UX](https://lawsofux.com/)
 - [Open Design Kit from Bocoup](http://opendesignkit.org/)
 - [Service Design Toolkit](http://servicedesigntoolkit.org/)
