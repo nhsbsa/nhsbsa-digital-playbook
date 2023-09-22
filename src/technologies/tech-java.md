@@ -100,7 +100,7 @@ We also use other well known libraries:
 [lombok_builder]: <https://projectlombok.org/features/Builder>
 [lombok_log]: <https://projectlombok.org/features/log>
 [logging_logback]: <https://logback.qos.ch/>
-[logging_slf4j]: <https://www.slf4j.org/>
+[logging_slf4j]: <https://slf4j.org/>
 [javers]: <https://javers.org/>
 [mapstruct]: <https://mapstruct.org/>
 [openapi_v3]: <https://swagger.io/specification/>
