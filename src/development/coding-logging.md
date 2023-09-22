@@ -228,7 +228,7 @@ A review of log events must be undertaken prior to any minor release. A log revi
 [ncsc_logging_security_purposes]: <https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes>
 [nhsbsa_guidance_for_coding_with_personal_data]: <../coding-securely-personal-data/>
 [nhsbsa_protective_monitoring_standard]: <https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard>
-[java_slf4j]: <https://www.slf4j.org/>
+[java_slf4j]: <https://slf4j.org/>
 [java_logback]: <https://logback.qos.ch/>
 [java_lombok]: <https://projectlombok.org/>
 [node_winston]: <https://www.npmjs.com/package/winston>
