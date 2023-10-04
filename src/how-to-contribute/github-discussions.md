@@ -27,18 +27,21 @@ Each discussion category is broken down by specific area of discipline e.g. UCD,
 
 When suggesting an improvement, consider:
 
-1. __What__
-  Give a brief description of the proposal.
+##### 1. What
 
-2. __Why__
-  Explain why you think this should be added to the Playbook:
+Give a brief description of the proposal.
+
+##### 2. Why
+
+Explain why you think this should be added to the Playbook:
   
-    - What evidence do you have that it's needed?
-    - What evidence do you have that it meets the needs of our people and the services they build?
-    - Have you checked that it doesn't already exist in the Playbook?
+  - What evidence do you have that it's needed?
+  - What evidence do you have that it meets the needs of our people and the services they build?
+  - Have you checked that it doesn't already exist in the Playbook?
 
-3. __Anything else__
-  Include links to any examples, research or code to support your proposal, if available.
+##### 3. Anything else
+
+Include links to any examples, research or code to support your proposal, if available.
 
 ### How will discussions be priorised and actioned?
 
