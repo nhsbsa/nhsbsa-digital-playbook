@@ -50,7 +50,7 @@ We should consider these core users when writing content:
 
 ## How do I decide?
 
-Follow our [suggest a change](../how-to-contribute/github-issues/) guide that explains how we use Github Issues to discuss whether content should be added to the playbook.
+Follow our [suggest a change](../how-to-contribute/github-discussions/) guide that explains how we use Github Discussions to discuss whether content should be added to the playbook.
 
 ---
 
