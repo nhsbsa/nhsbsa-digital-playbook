@@ -41,7 +41,7 @@ Our standard statuses are:
 * __DRAFT__
   The article is being written. Articles in `DRAFT` status will not be shown in related articles so you will need the URL to be able to view it.
 * __REVIEW__
-  The article is open for review. Reviewers should use [Github Issues](../github-issues) to request changes.
+  The article is open for review. Reviewers should use [Github Issues](https://github.com/nhsbsa/nhsbsa-digital-playbook/issues) to request changes.
 * __FINAL__
   The article has been approved and should be taken as authorised NHSBSA guidance.
   We display article status alongside the title except for `FINAL`.
