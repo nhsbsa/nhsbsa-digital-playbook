@@ -76,10 +76,11 @@
         <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         {{ appGithubDiscussion({
-          discussionTemplate: "General-Playbook-Ideas.md",
-          discussionTitle: "Change to page '" + page.filePathStem + "' ",
+          catagory: page.filePathStem | extractCategory("general-playbook-ideas", ['development', 'security', 'testing'], { technologies: 'development', design: 'UCD', research: 'UCD' }) | safe,
+          template: "General-Playbook-Ideas.md",
+          title: "Change to page '" + page.filePathStem + "' ",
           linkText: "Suggest a change to this page"
-          }) }}
+        }) }}
 
         {{ appArticleFooter({
             date: page.date,
