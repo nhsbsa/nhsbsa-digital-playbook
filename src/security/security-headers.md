@@ -208,7 +208,7 @@ OWASP
 ### X-Permitted-Cross-Domain-Policies
 
 Reference
-: <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#x-permitted-cross-domain-policies>
+: <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers>
 
 Guidance
 : Used by Adobe products to verify cross domain access to data is allowed.
