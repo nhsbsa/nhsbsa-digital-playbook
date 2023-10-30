@@ -11,6 +11,8 @@
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
 
+{% set category = 'general-playbook-ideas' if not discussion.category else discussion.category %}
+
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
@@ -76,7 +78,7 @@
         <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         {{ appGithubDiscussion({
-          catagory: page.filePathStem | extractCategory("general-playbook-ideas", ['development', 'security', 'testing'], { technologies: 'development', design: 'UCD', research: 'UCD' }) | safe,
+          category: discussion.category | default("general-playbook-ideas"),
           template: "General-Playbook-Ideas.md",
           title: "Change to page '" + page.filePathStem + "' ",
           linkText: "Suggest a change to this page"

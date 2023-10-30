@@ -3,7 +3,7 @@
 {% from "button/macro.njk" import button %}
 {% from 'action-link/macro.njk' import actionLink %}
 
-{% set category = "category=" + params.catagory %}
+{% set category = "category=" + params.category %}
 {% set template = "&template=" + params.template | urlEncode %}
 {% set title = "&title=" + params.title | urlEncode %}
 {% set href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?" + category + template + title %}
