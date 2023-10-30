@@ -51,7 +51,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('urlEncode', require('./lib/_filters/urlEncode'));
   eleventyConfig.addFilter('debug', require('./lib/_filters/debug'));
   eleventyConfig.addFilter('absoluteUrl', require('./lib/_filters/urls'));
-  eleventyConfig.addFilter('extractCategory', require('./lib/_filters/extractCategory'));
 
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
