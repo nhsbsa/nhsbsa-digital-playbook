@@ -56,7 +56,7 @@ Include a `.nvmrc` file in the repository to specify the Node.js version in sour
 
 ::: details How we work out the adoption schedule for Node.js
 
-We follow the [Node.js](https://nodejs.org/en/about/releases/) release schedule.
+We follow the [Node.js](https://nodejs.org/en/about/previous-releases) release schedule.
 
 ::: card
 
