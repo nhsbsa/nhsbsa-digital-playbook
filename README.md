@@ -10,6 +10,12 @@ The published playbook is hosted on [Github pages][nhsbsa_digital_playbook]
 
 * [Node 16][node_js]
 
+### Intalling application dependencies
+
+```bash
+npm install
+```
+
 ### Building the application
 
 ```bash
