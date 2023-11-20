@@ -18,3 +18,11 @@ During the Beta / Live phases, the product is closer to its final form, and the 
 - contributing and sharing any new process or operations that can be reused in other services across the BSA or wider within cross-gov 
 - observing user research and analysing data and analytics
 - documenting the changes to the service over time using a UCD Log i.e. what was created and why, and what did you find, was this what you expected? What next?
+
+### What actions might a Service Designer perform in Beta and Live
+
+- Iterate on previous phase artefacts
+
+### What artefacts might a Service Designer produce in Beta and Live
+
+- All the above

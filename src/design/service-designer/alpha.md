@@ -20,3 +20,12 @@ In the Alpha phase, the team aims to develop and refine early versions of the pr
 - making clear rationale with all stakeholders and users, both internal and external for the full service ecosystem and not just one element of the service
 - documenting the changes to the service over time using a UCD Log i.e. what was created and why, what you planned to test (hypothesis) and what did you find 
 
+### What actions might a Service Designer perform in Alpha
+
+- Service blueprint, including mapping user actions, map employees’ frontstage and backstage actions, map support processes and evidence
+- User journey maps
+
+### What artefacts might a Service Designer produce in Alpha
+
+- Service blueprint
+- User journey maps
