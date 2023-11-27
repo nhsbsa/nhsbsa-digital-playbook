@@ -57,6 +57,6 @@
     "text-table": "^0.2.0"
   },
   "dependencies": {
-    "@nhsbsa/cookie-consent-component": "^0.0.1"
+    "@nhsbsa/cookie-consent-component": "0.0.6"
   }
 }
