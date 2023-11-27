@@ -11,5 +11,7 @@ footer:
       label: "Accessibility"
     - url: "https://www.nhsbsa.nhs.uk/contact-us"
       label: "Contact us"
+    - url: "/cookie-policy/"
+      label: "Cookies"
     - url: "https://github.com/nhsbsa/nhsbsa-digital-playbook"
       label: "GitHub"

@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #COOKIE BANNER
+   ========================================================================== */
+
+// Container width variable
+$cookie-app-container-size: 1100px;
+
+#nhsuk-cookie-banner .app-width-container {
+  max-width: $cookie-app-container-size;
+
+  @media (min-width: 767px) and (max-width: 1164px) {
+    margin: 0 nhsuk-spacing(5);
+  }
+}
