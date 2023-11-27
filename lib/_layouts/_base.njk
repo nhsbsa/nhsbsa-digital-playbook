@@ -89,17 +89,23 @@
         ? document.body.className + ' js-enabled'
         : 'js-enabled');
     </script>
+    
     {{ cookieBanner({
-            policyUrl: "/cookie-policy/" | url,
-            linkText: "Click here",
-            cookieBannerHeading: "Cookies",
-            cookieBannerContent: ["Do you agree to cookies, you can view the policy here {{cookiePolicyHref}}"],
-            okButtonText: "Accept",
-            notOkButtonText: "Do not accept",
-            successBannerMessage: "Cookies chosen",
-            cookieVersion: 1
-        })
-        }}
+      policyUrl: "/cookie-policy/" | url,
+      linkText: "read more about our cookies",
+      cookieBannerHeading: "NHSBSA Digital, Data and Technology Playbook",
+      cookieBannerContent: [
+        "We've put some small files called cookies on your device to make our site work.",
+        "We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.",
+        "Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can {{cookiePolicyHref}} before you choose."
+      ],
+      okButtonText: "I'm OK with analytics cookies",
+      notOkButtonText: "Do not use analytics cookies",
+      cookieVersion: 1,
+      successLinkText: "our cookies page", 
+      successBannerMessage: "You can change your cookie settings at any time using {{bannerSuccessHref}}."
+    }) }}
+    
     {% block bodyStart %}{% endblock %}
 
     {% block skipLink %}
