@@ -121,6 +121,13 @@ a.nhsuk-footer__list-item-link:visited {
   color: #4c6272;
 }
 
+/* header */
+// space around the NHSBSA logo to confirm to digital guidelines
+
+.nhsuk-organisation-name {
+    padding: 0 0 nhsuk-spacing(3) 0;
+}
+
 /* search input */
 // space between header and input on smaller devices
 @media only screen and (max-width:899px) {
