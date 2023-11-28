@@ -9395,6 +9395,11 @@ a.nhsuk-footer__list-item-link:visited {
   color: #4c6272;
 }
 
+/* header */
+.nhsuk-organisation-name {
+  padding: 0 0 16px 0;
+}
+
 /* search input */
 @media only screen and (max-width: 899px) {
   .app-site-search__wrapper {
