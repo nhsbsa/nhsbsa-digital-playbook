@@ -33,20 +33,3 @@ These cookies store information about how you use our website, such as the links
     saveCookiePreferencesButtonText: "Save my cookie settings",
     cookieConfirmationURL: "/nhsbsa-digital-playbook/cookie-policy/cookies-confirmation/"
 }) }}
-
-{% block pageScripts %}
-  <script>
-    // Check the checkboxes based on status of cookie preferences
-    window.addEventListener("load", function checkCookie() {
-      document.getElementById("cookie-preference-1").checked = NHSCookieConsent.getStatistics();
-      document.getElementById("cookie-preference-2").checked = !NHSCookieConsent.getStatistics();
-    });
-    // Edit consent preferences based on checkbox input
-    function changeConsent() {
-      NHSCookieConsent.setStatistics(document.getElementById("cookie-preference-1").checked);
-      if (typeof NHSCookieConsent.setConsented === "function") {
-        NHSCookieConsent.setConsented(true);
-      }
-    }
-  </script>
-{% endblock %}
