@@ -31,5 +31,5 @@ These cookies store information about how you use our website, such as the links
     radioYesText: "Use cookies to measure my website use",
     radioNoText: "Do not use cookies to measure my website uses",
     saveCookiePreferencesButtonText: "Save my cookie settings",
-    cookieConfirmationURL: "/'nhsbsa-digital-playbook'/cookie-policy/cookies-confirmation/"
+    cookieConfirmationURL: "/nhsbsa-digital-playbook/cookie-policy/cookies-confirmation/"
 }) }}
