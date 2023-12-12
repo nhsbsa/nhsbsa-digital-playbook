@@ -1,12 +1,12 @@
 ---
-layout: article
-title: "Data visualisation standards"
-description: "Data visualisation standards at the NHSBSA"
-status: DRAFT
-tags: [home, data-viz-home]
-order:
-  home: 60
-  data-viz-home: 1
-related:
-  tag: data-viz-home
+layout: collection
+title: "Data"
+description: "How we visualise data at the NHSBSA"
+tags: home
+order: 9
+collection_tag: data
+pagination:
+  data: collections.data
+  size: 50
+  alias: Data visualisation
 ---
