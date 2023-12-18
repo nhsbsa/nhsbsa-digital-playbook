@@ -1,6 +1,6 @@
 ---
 layout: collection
-title: "Data"
+title: "Data visualisation"
 description: "How we visualise data at the NHSBSA"
 tags: home
 order: 9
