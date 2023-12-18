@@ -3,7 +3,6 @@ layout: page
 title: "Your cookie settings have been saved"
 ---
 {% from 'button/macro.njk' import button %}
-{% set containerClasses = "app-width-container" %}
 
 # Your cookie settings have been saved
 

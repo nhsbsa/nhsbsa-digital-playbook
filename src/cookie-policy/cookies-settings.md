@@ -4,7 +4,6 @@ title: "Choose which cookies we use"
 ---
 
 {% from 'cookie-preferences/macro.njk' import cookiePreferences %}
-{% set containerClasses = "app-width-container" %}
 
 # Choose which cookies we use
 
