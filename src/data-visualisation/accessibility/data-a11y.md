@@ -2,6 +2,7 @@
 layout: article
 title: "Data accessibility"
 description: "What is data accessibility?"
+status: DRAFT
 tags: accessible-data
 order: 2 
 ---
