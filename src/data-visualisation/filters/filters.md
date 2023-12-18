@@ -1,13 +1,15 @@
 ---
-layout: article
+layout: collection
 title: "Filters"
 description: "Standards for using filters at the NHSBSA"
 status: DRAFT
-tags: [data-viz, data-viz-filters, data-viz-home]
-order:
-    data-viz: 2
-    data-viz-filters: 1
-    data-viz-home: 8
+tags: data
+order: 1
+collection_tag: dv-filters
+pagination:
+  data: collections.dv-filters
+  size: 50
+  alias: articles
 ---
 ## Filter purpose  
   
@@ -21,13 +23,12 @@ Features such as parameters can be created and used to change variables used wit
 To ensure data literacy in our end users, and developers, any filters applied should always be clearly stated on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
 
 ![Screenshot of an Oracle Analytics Classic results page showing the filter that has been applied](filters-2.png)  
-  
-    
+      
 ## Placement of a filter  
   
 Filters as best practice should be positioned as a banner across the top of the page starting from the left, as focus naturally falls to the left, or on the left-hand side. Having the filters on the left-hand side can take up unnecessary space. Considerations on the real estate of the page are important to consider in placing filters.  
 
-::: details Source
+::: details Source - dashboard design
 
 [The Dos and Don'ts of Dashboard Design][filter 1]
 
@@ -40,12 +41,11 @@ An example of filters placed on the top left of a dashboard:
 
 ![Screenshot of a dashboard showing the filter options placed in the upper left](filters-3.png)  
    
-
 Within some data visualisation tools filter panels can be included which may use less resource within your report. However, with a standard in-built filter you cannot customise the pane.  
   
 Visualisations themselves can also be used as a filter. Many data visualisation tools have this inbuilt functionality.  
 
-::: details Source
+::: details Source - best practices
 
 [Dashboard Design Best Practices][filter 2]
 :::
@@ -67,7 +67,6 @@ A filter should be used to enable functionality of a dashboard for a user, but n
 - If the filter includes a timeline, NHS Blue (#005EB8) should be used:  
 
 ![Screenshot of a dashboard showing a timeline filter in the colour NHS Blue](filters-5.png)
-
 
 [filter 1]: https://towardsdatascience.com/the-dos-and-donts-of-dashboard-design-2beefd5cc575
 [filter 2]: https://chartio.com/blog/dashboard-design-best-practices-the-dashboard-layout/

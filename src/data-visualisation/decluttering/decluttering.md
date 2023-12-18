@@ -1,13 +1,15 @@
 ---
-layout: article
+layout: collection
 title: "Decluttering and pulling focus"
 description: "Guidance on the importance of decluttering and pulling focus for data visualisation"
 status: DRAFT
-tags: [data-viz, data-viz-declutter, data-viz-home]
-order:
-    data-viz: 2
-    data-viz-declutter: 1
-    data-viz-home: 7
+tags: data
+order: 1
+collection_tag: dv-declutter
+pagination:
+  data: collections.dv-declutter
+  size: 50
+  alias: articles
 ---
 ## Importance of decluttering  
   
@@ -41,13 +43,11 @@ Some steps that you can take to declutter a chart are:
 
 ![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
   
-    
 ::: details Source
 
 [What clutter can we eliminate?][declutter 1]
 
 :::  
-  
   
 ## Importance of pulling focus  
   
@@ -71,7 +71,6 @@ There are many methods you can use to pull focus:
 #D8DDE0:  
 
 ![Rectangle of block colour in the shade #D8DDE0 NHS Grey 4, light grayish blue](hex-nhs-grey-4.png)  
-  
   
 ::: details Source
 
