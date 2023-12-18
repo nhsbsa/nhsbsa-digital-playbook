@@ -3,7 +3,7 @@ layout: collection
 title: "Data visualisation"
 description: "Standards for data visualisation at the NHSBSA"
 tags: home
-order: 9
+order: 90
 collection_tag: data
 pagination:
   data: collections.data
