@@ -35,30 +35,25 @@ Money:
 - For amounts in millions or billions, format as '£X million' or '£X billion', not written in full 
 - Do not use '£0.XX millions' for amounts less than £1 million  
 
-::: details Source
+::: details Source - Content Design Team
  
-[Content Design Team ][numbers 1]
+Please note: [this link to the Content Design Team page][numbers 1] takes you to an internal NHSBSA site. This will be updated once the relevant content is present in this playbook.
 
 ::: 
-
 
 ## Accessibility of colours  
 Please refer to the [Colour Guidance document](../../colour/) for standards on accessible colour use, palettes and appropriate contrasts to use.  
 
-
 For colour contrast; ensure there is enough of a contrast between the colours used. The Web Content Accessibility Guidelines (WCAG) which the UK accessibility legislation aligns to, require a 3 to 1 ratio for graphical elements and 4.5 to 1 ratio for text.  
 The [WebAIM Colour Contrast Checker][webaim 1] may help, or [this Colour Contrast Checker][webaim 2].  
 
-  
 It is important to remember that you must not use colour as the only way to communicate something. Patterns can be used, but they can be cluttering and harder to see. It is always recommended to have an alternative way to gain the same information, for example, by having figures available to the user.  
   
-::: details Source
+::: details Source - WCAG and colour
  
 [WCAG 2.1 Use of Colour][use of colour]
 
 :::
-
-
 
 ## Designing charts for accessibility  
   
@@ -75,7 +70,7 @@ Some best practices for designing charts accessibly:
 - Don’t use italics, this can be hard for a user to read
 - Make sure your product adapts for smaller screens. This is another reason why a text alternative for a chart is recommended
 - Sans serif font is more understandable for people with dyslexia. Make sure your chart text is as large as is reasonable
-- Don’t mislead the user, for example, start a chart’s y axis from 0 can help ensure the user understands the data clearly
+- Don’t mislead the user, for example, starting a chart’s y axis from 0 can help ensure the user understands the data clearly
 - Choosing the right type of chart, to aid a user’s understanding
 - Be aware of where your content is placed. Chart descriptions should appear above a chart to allow a screen reader to pick up the information before a chart is shown
 - Label all buttons, hyperlinks, and necessary features accurately
@@ -88,9 +83,6 @@ The following links may also be useful:
 - [Making spreadsheets accessible: a checklist of the basics – Government Analysis Function][gov 1]
 - [Releasing Statistics in Spreadsheets][gov 2] 
 - [Make your Excel documents accessible to people with disabilities - Microsoft Support][microsoft]  
-  
-    
-[Back to Accessibility home](../a11y/)
 
 
 

@@ -16,14 +16,13 @@ Conditions that specifically relate to data include:
   
 Therefore, we need to deliver services which convey numbers plainly and in a way that is easy for everyone to understand.  
   
-::: details Source
+::: details Source - accessibility and numbers
  
 [Accessible Numbers][data 1]  
 [Designing for people with dyscalculia and low numeracy][data 2]
 
 ::: 
 
-  
 ## Best practice for data accessibility  
   
 Our internal [Content Design Standards][data 5] state how we should be presenting data. Some things we can use to help our users include:
@@ -39,10 +38,6 @@ Our internal [Content Design Standards][data 5] state how we should be presentin
 * The body of the text should be size 12px. [Source - Accessible print publications][data 3] 
 * Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS Identity guidelines][data 4]  
 - always following the appropriate hierarchy of titles in a page, this helps users of a screen reader navigate content quickly and easily  
-  
-    
-[Back to Accessibility home](../a11y/)
-
 
 
 

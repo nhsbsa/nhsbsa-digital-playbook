@@ -1,7 +1,7 @@
 ---
 layout: collection
 title: "Data visualisation"
-description: "How we visualise data at the NHSBSA"
+description: "Standards for data visualisation at the NHSBSA"
 tags: home
 order: 9
 collection_tag: data
