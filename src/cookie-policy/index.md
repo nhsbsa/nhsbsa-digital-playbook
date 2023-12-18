@@ -4,7 +4,6 @@ title: "Cookies on the NHSBSA Digital, Data and Technology Playbook"
 ---
 
 {% from 'action-link/macro.njk' import actionLink %}
-{% set containerClasses = "app-width-container" %}
 
 # Cookies on the NHSBSA Digital, Data and Technology Playbook
 
