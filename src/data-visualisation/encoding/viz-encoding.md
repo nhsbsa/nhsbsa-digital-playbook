@@ -14,7 +14,7 @@ pagination:
 ## Visual encoding  
   
 Visual encoding helps the user to gain insight into a visualisation. Visual encoding can use pre-attentive attributes, such as symbols, size, shapes and colours, along with the Gestalt principles, which focus on the placement of items, such as proximity, closure and continuity, to aide help the user’s understanding.  
-   
+
 ## Pre-attentive attributes  
   
 Pre-attentive attributes are information we can process visually almost immediately, before sending the information to the attention processing parts of our brain.  
@@ -30,7 +30,7 @@ Length, width, orientation, size, shape, enclosure, position, grouping, colour h
 ![10 square boxes arranged in 2 rows of 5, each with a visual representation of 1 pre-attentive attrbute. From left to right, beginning on the top row: length, width, orientation, size, shape, enclosure, position, grouping, colour hue, colour intensity](../images/pre-atten.png)  
   
 ::: details Source - visual analytics
- 
+
 [Why Visual Analytics?][encode 1]
 :::  
 
@@ -68,19 +68,19 @@ Symmetry
 
 Common fate
 : Elements which move in the same direction seem to be a group
-    
+
 ## Including comparisons or context  
   
 Comparisons are useful for the user to give context. For example, a year-on-year comparison. There are different methods of comparisons or adding context such as accompanying text, trend lines, colour and target lines.  
   
 To give context to a user, and help aide the user’s understanding of the data being shown, useful pages such as information pages including a glossary might be useful to include in your dashboard. Please refer to the [Layout of a dashboard guidance](../../dashboard-layout/db-layout/) for further information on what these pages can contain.  
-    
+
 ## How to use visual encoding  
   
 Only use what is necessary. You do not want to over clutter a dashboard or chart for a user as this can be distracting, and hinder their ability to make clear and meaningful decisions.  
   
 It is important to make sure all encoding methods that are used are clear to the user as we equally do not want the user to misunderstand charts shown, and make an uninformed decision.  
-    
+
 ## Considerations to be aware of  
   
 Pre-attentive attributes can be leveraged to our advantage to create powerful visualisations. For example, all grey bars with one red column can be used to highlight a particular focal point.  
@@ -88,10 +88,9 @@ Pre-attentive attributes can be leveraged to our advantage to create powerful vi
 As a result, pre-attentive attributes can be used or misused to tell a story. For example, if you rotate a chart and change the colour of bars in a chart to red to look like blood, you can change the inference of a story. These design levers have been used to change the message given. As developers you need to be aware of how your design choices can impact a user’s perception as you should not mislead a user and their perception of a chart.  
   
 ::: details Source - using statistics to mislead
- 
+
 [Lies, damn lies, and statistics: How to take something positive from the UK’s EU referendum campaign][encode 2]
 :::
-
 
 [encode 1]: https://help.tableau.com/current/blueprint/en-us/bp_why_visual_analytics.htm
 [encode 2]: https://www.infoworld.com/article/3088166/why-how-to-lie-with-statistics-did-us-a-disservice.html

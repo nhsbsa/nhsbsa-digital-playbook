@@ -16,6 +16,7 @@ pagination:
 To ensure users can quickly make effective and informed decisions, it is important to give the user all information necessary, without providing too much to distract the user.  
   
 The purpose of decluttering is to:
+
 - save the user time
 - provide more time to make meaningful decisions
 - provide less barriers to using a visualisation
@@ -27,7 +28,8 @@ When a user first sees a chart, their focus will be drawn to particular elements
   
 ## How to declutter  
   
-Some steps that you can take to declutter a chart are:  
+Some steps that you can take to declutter a chart are:
+
 - removing heavy borders and gridlines. Any unnecessary ink on the page should be removed
 - removing data markers without a purpose, such as dots on a line chart
 - removing any redundant data. This includes improving the x and y axis labels to be more concise
@@ -55,7 +57,8 @@ Using methods to focus the user’s attention is a quick way of ensuring the use
   
 ## How to pull focus  
   
-There are many methods you can use to pull focus:  
+There are many methods you can use to pull focus:
+
 - [Use visual encoding](../encoding/viz-encoding/) such as size and shape to highlight any necessary items
 - [Use colour](../colour/) and width, for example, where you need to pull focus onto a specific variable in a line chart, use a thicker NHS Blue (#005EB8) line, with the other lines set as NHS Grey 3 (#AEB7BD), this will ensure the other lines fade further into the background with the most dominant and useful line standing out
 - Use markers or event lines to highlight certain values, or important and influencing aspects. A good example of this is adding a faded section in NHS Grey 4 (#D8DDE0) to denote forecasting, or adding a label to an individual value at a point in time  
