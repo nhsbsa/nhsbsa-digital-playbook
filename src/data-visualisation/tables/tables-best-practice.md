@@ -3,13 +3,8 @@ layout: article
 title: "Table standards"
 description: "Data visualisation standards in relation to tables, at the NHSBSA"
 status: DRAFT
-tags: [data-viz, data-viz-tables, data-viz-home]
-order:
-    data-viz: 2
-    data-viz-tables: 1
-    data-viz-home: 10
-related: 
-    tag: data-viz-tables
+tags: dv-table
+order: 1
 ---
 ## Best practice for tables  
   

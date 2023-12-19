@@ -3,11 +3,8 @@ layout: article
 title: "Dashboard non-functional requirements (NFRs)"
 description: "Guidance for drafting and monitoring non-functional requirements"
 status: DRAFT
-tags: [data-viz, data-viz-non-function, data-viz-home]
-order:
-    data-viz: 2
-    data-viz-non-function: 1
-    data-viz-home: 6
+tags: data
+order: 60
 ---
 ## Non-functional requirements  
   
@@ -21,21 +18,21 @@ Avoiding non-functional requirements can cause critical problems that may lead y
   
 Non-functional requirements affect the usability of a system, and if implemented correctly provide a good user experience.
 
-::: details Source
+::: details Source - NFR guide
 
 [Non-functional requirements: a guide with examples][non-func 1]
 
 :::  
-    
 
 ## Dashboard non-functional requirements  
   
 The following are some of many factors to consider when building a data product, such as a dashboard or a report:
+
 - Accessibility
 - Accuracy
 - Auditing
 - Capacity
-- Confidentiality 
+- Confidentiality
 - Error-handling
 - Maintenance
 - Performance
@@ -46,11 +43,10 @@ The following are some of many factors to consider when building a data product,
 - Testing
 - Usability  
   
-  
 ### Operational requirements  
   
 Operational requirements describe how well the system is performing.  
-   
+
 When we refer to operational requirements within non-functional requirements, we are talking about accessibility, confidentiality, integrity, safety, usability, security, availability, efficiency, reliability, and suitability.  
   
 ### Revision requirements  
@@ -67,15 +63,16 @@ The users who are involved in the management of a system are most likely to be c
   
 These requirements include good reusability, installability, portability, and interoperability.  
   
-::: details Source
+::: details Source - NFR guide
 
-[Non-functional requirements: a guide with examples][non-func 2]
+[Non-functional requirements: a guide with examples][non-func 1]
 
 :::
 
 ## Monitoring NFRs  
   
 We can monitor Non-Functional Requirements in a number of ways and planning for these in the development of your data product:
+
 - Linking in with the relevant teams when developing and rolling out your dashboard, e.g. security, architecture
 - Following best practices; data storage, access privileges
 - Following testing processes; functions, accessibility, figures
@@ -90,8 +87,4 @@ We can monitor Non-Functional Requirements in a number of ways and planning for 
 - Reusability and scalability planning of the product, minimising manual overhead
 - Ensuring version control processes are in place
 
-
-
-
 [non-func 1]: https://www.plutora.com/blog/non-functional-requirements-guide
-[non-func 2]: https://www.plutora.com/blog/non-functional-requirements-guide
