@@ -1,15 +1,10 @@
 ---
-layout: collection
+layout: article
 title: "Visual encoding"
 description: "Guidance for visual encoding including pre-attentive attributes and Gestalt principles"
 status: DRAFT
 tags: data
-order: 1
-collection_tag: dv-encode
-pagination:
-  data: collections.dv-encode
-  size: 50
-  alias: articles
+order: 120
 ---
 ## Visual encoding  
   

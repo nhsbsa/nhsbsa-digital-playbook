@@ -1,15 +1,10 @@
 ---
-layout: collection
+layout: article
 title: "Decluttering and pulling focus"
 description: "Guidance on the importance of decluttering and pulling focus for data visualisation"
 status: DRAFT
 tags: data
-order: 1
-collection_tag: dv-declutter
-pagination:
-  data: collections.dv-declutter
-  size: 50
-  alias: articles
+order: 70
 ---
 ## Importance of decluttering  
   

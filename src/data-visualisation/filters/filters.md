@@ -1,15 +1,10 @@
 ---
-layout: collection
+layout: article
 title: "Filters"
 description: "Standards for using filters at the NHSBSA"
 status: DRAFT
 tags: data
-order: 1
-collection_tag: dv-filters
-pagination:
-  data: collections.dv-filters
-  size: 50
-  alias: articles
+order: 80
 ---
 ## Filter purpose  
   
