@@ -70,6 +70,7 @@ The footer Nunjucks macro takes the following arguments:
 | **links.[].url**      | string   | No        | The href of a primary navigation item in the footer. |
 | **links.[].label**    | string   | No        | The label of a primary navigation item in the footer. |
 | **classes**           | string   | No        | Optional additional classes to add to the footer container. Separate each class with a space. |
+| **containerClasses**           | string   | No        | Optional additional classes to add to the width container. Separate each class with a space. |
 | **attributes**        | object   | No        | Any extra HTML attributes (for example data attributes) to add to the footer container. |
 | **copyright**        | string   | No        | The label for the copyright notice in the footer. |
 
