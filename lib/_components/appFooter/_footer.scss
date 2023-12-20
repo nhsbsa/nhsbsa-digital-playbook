@@ -2,62 +2,9 @@
    COMPONENTS / #FOOTER
    ========================================================================== */
 
-.nhsuk-footer {
-  @include clearfix();
-  @include print-hide();
-  @include nhsuk-responsive-padding(5, bottom);
-  @include nhsuk-responsive-padding(5, top);
-
-  background-color: $color_nhsuk-grey-4;
-  border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
-}
-
-.nhsuk-footer__list {
-  @include nhsuk-responsive-padding(4, bottom);
-
-  list-style-type: none;
-  margin: 0;
-  padding-left: nhsuk-spacing(0);
-
-  @include mq($from: desktop) {
-    float: left;
-    padding-bottom: 0;
-    width: 75%;
-  }
-}
-
-.nhsuk-footer__list-item {
-  @include nhsuk-font(16);
-
-  @include mq($from: desktop) {
-    float: left;
-    margin-right: nhsuk-spacing(5);
-  }
-}
-
-.nhsuk-footer__list-item-link {
-  color: $nhsuk-secondary-text-color;
-
-  &:visited {
-    color: $nhsuk-secondary-text-color;
-  }
-
-  &:hover {
-    color: $nhsuk-text-color;
-  }
-}
-
+// override default black in toolkit v8.0.0
 .nhsuk-footer__copyright {
-  @include nhsuk-font(16);
-
   color: $nhsuk-secondary-text-color;
-  margin-bottom: 0;
-
-  @include mq($from: desktop) {
-    float: right;
-    text-align: right;
-    width: 25%;
-  }
 }
 
 .nhsuk-ogl-footer{
@@ -69,10 +16,8 @@
   font-size:14px;
   font-size:.875rem;
   line-height:1.71429;
-  padding-bottom:24px;
   color: $nhsuk-secondary-text-color;
   margin-bottom:0;
-  padding-bottom:24px;
 }
 
 @media (min-width: 40.0625em){
@@ -89,12 +34,6 @@
     line-height:1.2;
   }
 }
-
-@media (min-width: 40.0625em){
-  .nhsuk-ogl-footer--text{
-    padding-bottom:32px;
-  }
-} 
 
 .nhsuk-ogl-footer--text svg{
   margin-right:8px;
