@@ -3,6 +3,7 @@
 {% from "hero/macro.njk" import hero as appHero %}
 {% from "appFooter/macro.njk" import appFooter as oglFooter %}
 {% from 'back-link/macro.njk' import backLink %}
+{% from 'cookie-banner/macro.njk' import cookieBanner %}
 {% set htmlClasses = 'no-js' %}
 {% set homeUrl = '/' | url %}
 {% set containerClasses = containerClasses | default("app-width-container") %}
@@ -25,6 +26,18 @@
   <title>
     {% if title %}{{ title }} - {% endif %}{{ serviceName or productLongName or siteMeta.productLongName }} - {{ siteMeta.organisation }}
   </title>
+  {% endblock %}
+
+  {% block googleAnalytics %}
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ562NM01Z');
+    </script>
   {% endblock %}
 
   <!-- New NHSUK asset and font -->
@@ -74,6 +87,25 @@
 
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   
+  {% block cookieBanner %}
+    {{ cookieBanner({
+      policyUrl: "/cookie-policy/" | url,
+      classes: "app-width-container",
+      linkText: "read more about our cookies",
+      cookieBannerHeading: "NHSBSA Digital, Data and Technology Playbook",
+      cookieBannerContent: [
+        "We've put some small files called cookies on your device to make our site work.",
+        "We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.",
+        "Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can {{cookiePolicyHref}} before you choose."
+      ],
+      okButtonText: "I'm OK with analytics cookies",
+      notOkButtonText: "Do not use analytics cookies",
+      cookieVersion: 1,
+      successLinkText: "our cookies page", 
+      successBannerMessage: "You can change your cookie settings at any time using {{bannerSuccessHref}}."
+    }) }}
+  {% endblock %}
+
   {% block bodyStart %}{% endblock %}
 
   {% block skipLink %}
@@ -107,6 +139,7 @@
   {% block bodyEndScripts %}
     <script src="{{ '/javascripts/nhsuk.min.js' | url }}"></script>
     <script src="{{ '/javascripts/application.js' | url }}"></script>
+    <script src="{{ '/javascripts/cookie-banner.js' | url }}"></script>
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 
