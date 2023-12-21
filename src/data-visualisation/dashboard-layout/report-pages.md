@@ -3,10 +3,8 @@ layout: article
 title: "Layout of a dashboard: Reporting"
 description: "Overview of the report pages to include in NHSBSA reports"
 status: DRAFT
-tags: [data-viz, data-viz-layout]
-order:
-    data-viz: 2
-    db-layout: 3
+tags: dv-db-layout
+order: 2
 ---
 ## Reporting pages  
   
