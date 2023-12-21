@@ -68,7 +68,7 @@ Common fate
   
 Comparisons are useful for the user to give context. For example, a year-on-year comparison. There are different methods of comparisons or adding context such as accompanying text, trend lines, colour and target lines.  
   
-To give context to a user, and help aide the user’s understanding of the data being shown, useful pages such as information pages including a glossary might be useful to include in your dashboard. Please refer to the [Layout of a dashboard guidance](../../dashboard-layout/db-layout/) for further information on what these pages can contain.  
+To give context to a user, and help aide the user’s understanding of the data being shown, useful pages such as information pages including a glossary might be useful to include in your dashboard. Please refer to the [layout of a dashboard guidance](../../dashboard-layout/info-pages/) for further information on what these pages can contain.  
 
 ## How to use visual encoding  
   

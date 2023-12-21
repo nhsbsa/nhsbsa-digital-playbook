@@ -5,8 +5,6 @@ description: "Standards and guidance for choosing appropriate chart types"
 status: DRAFT
 tags: data
 order: 10
-related: 
-    tag: data-viz-charts
 ---
 ## Choosing an appropriate chart type  
   
@@ -21,7 +19,7 @@ The [four main questions][chart 2] to help you decide which chart type to use ar
 - Do you want to better understand the **relationship** between two or more variables?
 - Do you want to show the **distribution** of your data?  
   
-![Green rectangle with the words 'What would you like to show?' in white text inside it. The words 'comparison', 'distribution', 'composition', and 'relationship' are in black text on the outside of each of the four sides (starting at the top andworking clockwise). Out from each of these words are tree diagrams with different chart type names and examples. ](../images/chart-tree.png)  
+![Green rectangle with the words 'What would you like to show?' in white text inside it. The words 'comparison', 'distribution', 'composition', and 'relationship' are in black text on the outside of each of the four sides (starting at the top andworking clockwise). Out from each of these words are tree diagrams with different chart type names and examples.](../images/chart-tree.png)
   
 ::: details Source - choosing the right chart
 
@@ -55,7 +53,7 @@ If you’re using a line chart:
 
 - label the lines instead of using a legend
 - for a singular line (including sparklines), use an NHS Blue (#005EB8) colour
-- for more than one variable, use the [Colour guidance](../../colour/)
+- for more than one variable, use the [colour guidance](../../colour/index)
 - for multiple lines, where you need to pull focus onto one of the lines, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
   
 **Bar charts**
