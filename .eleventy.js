@@ -35,7 +35,9 @@ module.exports = function(eleventyConfig) {
     rel: "noopener",
     extensions: [".html"],
     includeDoctype: true
-})
+  });
+  eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
+
   // filters
   eleventyConfig.addFilter('date', require('./lib/_filters/date'));
   eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
