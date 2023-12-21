@@ -3,14 +3,8 @@ layout: article
 title: "Collaborative working"
 description: "Best practices for working collaboratively using Power BI"
 status: DRAFT
-tags: [power-bi, pbi-collab, pbi-home, pbi-best-practice]
-order:
-    power-bi: 2
-    pbi-collab: 1
-    pbi-home: 3
-    pbi-best-practice: 3
-related:
-  tag: pbi-best-practice
+tags: pbi-best-practice
+order: 10
 ---
 ## Version control  
   
@@ -57,7 +51,6 @@ You can refine what is shown and what you wish to compare in the drop down below
 ![Screenshot showing the page that opens after you select 'Pages' on the previous screen. The file names of the 2 reports being compared are at the top of the screen, and around halfway down the page there is a red box directly beneath the tabs for page overviews, which is outlining a drop down box that can be used to refine what is shown and compared on the reports.](../images/pbi-explorer6.png)  
   
 ![The drop down options for the refine and compare drop down box, from top to bottom: 'Show added items', 'Show deleted items', 'Show modified items', ;Show identical items', 'Hide minor changes (tab order)', 'Hide minor changes (positioning)'. In this image all of the check boxes to the left of each option, are selected (indicated by a 'tick' icon in each box.)](../images/pbi-explorer7.png)  
-    
 
 ### Inspecting reports  
   
@@ -93,9 +86,7 @@ Outbound interactions are shown in blue:
   
 Track usage in the Data Model Explorer shows which variables are being used and where:  
   
-![Screenshot showing the page that opens after selecting 'Inspect reports', with the 'Track usage' pane open at the right hand side of the screen. Under 'Track usage' there is a table and the 6th row down is highlighted blue and outlined in red to draw attention to it. The value of this row under the first column titled 'Name' is 'Date ended' and the value under the 2nd column titled 'Type' is 'Column'. There are 4 tabs at the bottom of the page that are labeled from left to right: 'Overall', 'Year', 'Month', Further details'. The 'Year' tab is selected and beneath this is a table outlined in a red box for emphasis. The table shows the usage information for the row selected in the table to the right of the page.](../images/pbi-explorer14.png)  
-  
-## Power BI Best Practices
+![Screenshot showing the page that opens after selecting 'Inspect reports', with the 'Track usage' pane open at the right hand side of the screen. Under 'Track usage' there is a table and the 6th row down is highlighted blue and outlined in red to draw attention to it. The value of this row under the first column titled 'Name' is 'Date ended' and the value under the 2nd column titled 'Type' is 'Column'. There are 4 tabs at the bottom of the page that are labeled from left to right: 'Overall', 'Year', 'Month', Further details'. The 'Year' tab is selected and beneath this is a table outlined in a red box for emphasis. The table shows the usage information for the row selected in the table to the right of the page.](../images/pbi-explorer14.png)
 
 [link1]: https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-git
 [link2]: https://www.pbiexplorer.com/

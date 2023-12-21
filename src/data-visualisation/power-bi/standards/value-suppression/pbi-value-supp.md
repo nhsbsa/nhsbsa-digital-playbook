@@ -3,25 +3,22 @@ layout: article
 title: "Suppression of values"
 description: "Standards around the suppression of values with Power BI"
 status: DRAFT
-tags: [power-bi, pbi-val-supp, pbi-home, pbi-standards]
-order:
-    power-bi: 2
-    pbi-val-supp: 1
-    pbi-home: 6
-    pbi-standards: 2
-related:
-  tag: pbi-standards
+tags: pbi-standards
+order: 40
 ---
 ## Statistical Disclosure Control (SDC) Protocol  
   
 The [Statistical Disclosure Control Protocol][link 1] was developed to suppress identifiable information and data from individuals where there is a small base size of between 1-4. Absolute 0 values are able to be shown within a table or chart. It is important to be mindful of percentages when implementing the SDC Protocol, as if the count can be worked out based on percentages, this will need to be suppressed.  
+  
+!!! warning Please note
+You can also implement Row-Level Security as an alternative to applying suppression of values on individual visualisations. Check the [RLS guidance](../../../best-practices/rls/pbi-rls/) for more information.
+!!!
   
 This chart is an example of what suppression of a count of between 1-4 can look like:  
   
 ![Column chart with the title '# Headcount by Directorate'. Beneath the title is the chart, with 9 shortened names of NHSBSA directorates listed along the x axis. From left to right: 'DDaT', 'FCE', 'Ops CS', 'Ops WS', 'P&CS', 'PCS', 'PMD', 'SPBDG', 'WT'. Above 'DDaT' is a dark green column with a value count label of '13' above the top of the column. Above 'Ops CS' is a slightly taller dark green column with a value count label of '17' in the top centre of the bar. Above 'PCS' is a shorter dark green column with a value count label of '9' above the bar. All other directorates have an asterix in place of a column.](../images/value-image.png)  
   
 Note that the values of between 1 and 4 have been replaced with an asterisk (*) to indicate to the users that these values have been suppressed, and the bar size is shown as 0, to not give away the values.  
-  
 
 ## Power BI implementation  
   
@@ -41,7 +38,8 @@ The following measure was then created:
   
 ![DAX code used to create a custom measure called '# Count'. The code is: '# Count = VAR _Count = SUM('Leavers all'[Count])+0 Return IF(_Count = 0,0, IF(_Count <= 4, -0.01, _COUNT))'](../images/value-image3.png)  
   
-'# Count' does the following:  
+'# Count' does the following:
+
 - sums up the counts
 - makes sure for any missing combinations, 0 is shown
 - if the Count is 0, 0 is returned
@@ -79,14 +77,5 @@ Some text to use as the disclaimer:
 ![Screenshot showing Power BI desktop open to the report tab, with the canvas about 85% filled by a line graph with the title 'Leavers by month' and a subtitle 'To protect personal identifiable information, small base sizes between 1-4 have been replaced with 0*.' This subtitle is outlined in a red box. To the right of the canvas the 'Filters' and 'Vizualisations' panels are open. Under 'Vizualisations' the option for a Subtitle is toggled to 'on' and this is outlined in a red box. ](../images/value-image9.png)  
   
 Check and test the values against the raw data and the SDC Protocol should now be implemented within your chart. To reduce overhead, you can duplicate this chart and amend the measures/values where needed if the SDC Protocol is needed to be added to multiple charts.  
-  
-    
-## Power BI Standards
-
-
-
-
-  
-
 
 [link 1]: https://www.nhsbsa.nhs.uk/sites/default/files/2020-10/nhsbsa-sdc-protocol.pdf

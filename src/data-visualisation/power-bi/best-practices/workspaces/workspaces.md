@@ -3,43 +3,33 @@ layout: article
 title: "Workspaces"
 description: "Overview of Power BI workspaces"
 status: DRAFT
-tags: [power-bi, pbi-workspaces, pbi-home, pbi-best-practice]
-order:
-    power-bi: 2
-    pbi-workspaces: 1
-    pbi-home: 2
-    pbi-best-practice: 2
-related:
-  tag: pbi-best-practice
+tags: pbi-best-practice
+order: 40
 ---
 !!! warning Please note
 The Power BI section includes functionalities and ways of working specific to Power BI but it is worth mentioning that the Power BI guidance must go hand in hand with the data visualisation standards when producing data visualisation products.
-!!!   
-   
+!!!
 
 This documentation contains Microsoft guidance alongside our organisational guidance to ensure we are following the necessary processes and keeping our data and reports secure.  
   
 The intended audience of this document is developers or consumers of Power BI reports, of any skill level, who need access to Power BI reports, or the workspaces where those reports are published to, and who will need to understand the privilege levels involved in sharing access.  
-  
-  
-     
 
 ## Workspace types  
   
 A workspace is a central space (think alike a SharePoint folder), where a Power BI dashboard or report can be published to alongside the data.  
   
-There are two types of workspaces:  
+There are two types of workspaces:
+
 - Personal workspaces: Every user has a personal workspace. A personal workspace may be used for publishing certain types of content. Its primary purpose is to support personal BI usage scenarios.
 - Workspaces: The primary purpose of a workspace is to support collaboration among multiple users. Secondarily, a workspace can also be used for viewing content. The type of workspace can then be broken down to team or product level.  
   
 Using a personal workspace for anything other than learning personal BI, temporary content, or testing purposes can be risky because content in a personal workspace is managed and maintained by one person. Further, a personal workspace doesn't support collaboration with others.  
   
-::: details Source
- 
+::: details Source - personal workspaces
+
 [Appropriate use of personal workspaces][ws 1]
 
-:::  
-    
+:::
 
 ## Guidance  
   
@@ -48,15 +38,15 @@ As personal workspaces have a single person dependency, we would recommend havin
 In order to share reports, dashboards and data with any users from within the workspace, sharing the report and dashboard directly from the report itself is the recommended method.  
   
 Access to the data held within that workspace should be determined on the data itself (rather than the workspace), as giving access to the workspace gives access to all reports, dashboards and data within the workspace.  
-  
-  
+
 ## Workspace requests  
   
 To create a workspace, create a Service Request with the Category being ‘Microsoft Applications’, the Sub Category as ‘Power BI’ and the Item as ‘Access’.  
   
 ![Screenshot showing how to configure the Category, Sub-category and Item fields of a service desk request](../categories.png)  
   
-The following details should be included:  
+The following details should be included:
+
 - The name of the workspace, this should be at a team level (please check with your team if one is currently set up before making a request).
 - The purpose of the workspace, for example: ‘a workspace to house reports for the MI team , holding 'ABC' data types including sensitive data, with the customers being x/y/z’.
 - Any relevant contact details, such as the central team’s contact email address.
@@ -69,11 +59,11 @@ Following this guidance, personal workspaces should only be used for personal de
 To set up a team or product workspace, please first ensure you have checked there is not a workspace currently in place (by checking with your team members or product working group). If there is one needed, you can create a Service Request for the attention of the Infrastructure team. There are no costs involved in setting up a workspace.  
   
 The content within this workspace should be relevant to the team. The team should be aware and manage relevant access and privileges to the workspace.  
-  
-  
+
 ## Workspace privileges  
   
 There are 4 generic roles in workspaces:
+
 1. Admin
 2. Member
 3. Contributor
@@ -88,20 +78,19 @@ Member is the highest level of access granted to a team or product workspace (as
 For any team members who need to make updates to the report or data product, such as a data update, a Contributor role should be set. Members and Contributors have access to all content within the workspace. If colleagues solely need to view the content in the workspace, add them as Viewers. Please stay mindful that access to the workspace, allows access to all content within the workspace, and that viewers of individual reports should be shared access to the reports itself to maintain confidentiality.  
   
 The Infrastructure and Operations support teams can centrally manage access to a workspace by creating AD groups containing a group of members, and then allowing access to the overall group. To create an AD group and allow access to a workspace, please raise a Service Request.  
-  
-  
+
 ## Sharing access to a workspace  
   
 The development team, and those who are set as Members of a workspace will determine privileges assigned to the users within a workspace. Management of the users within a workspace should be frequently accessed and managed by the team.  
   
 There are a couple of options around sharing reports.
-For example, if the Management Information team created a Power BI report for HRSS there are two options:  
+For example, if the Management Information team created a Power BI report for HRSS there are two options:
+
 - The Management Information Team could publish the report to the Management Information team’s workspace and share the report directly from within the workspace.
 - Otherwise, Management Information Team could publish straight into the HRSS team’s workspace, providing access has been shared with the Management Information Team to the HRSS workspace.  
   
 Ownership of the content, relevance, and maintaining the content published to this workspace falls to the team who owns the workspace to manage.  
-  
-  
+
 ## Naming conventions  
   
 Alike the [Content Design Standards for Domain names][ws 4], a similar structure is followed in setting up a workspace.  
@@ -122,15 +111,6 @@ The directorates and initials are as follows:
   
 <ins> Product level </ins>  
 If your workspace’s primary purpose is delivering a product, and Development, Testing and Production workspaces are being used for your team, the domain name should be prefixed with DEV, TEST or PROD respectively. The name of the product will then follow, for example, ‘TEST eDen’ or ‘PROD NHS Jobs’.  
-  
-    
-## Power BI Best Practices
-
-
-
-
-
-
 
 [ws 1]: https://learn.microsoft.com/en-us/power-bi/guidance/powerbi-implementation-planning-workspaces-workspace-level-planning#appropriate-use-of-personal-workspaces
 [ws 2]: https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-roles-new-workspaces

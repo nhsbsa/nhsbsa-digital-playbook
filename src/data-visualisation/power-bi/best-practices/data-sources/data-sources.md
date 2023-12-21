@@ -3,37 +3,31 @@ layout: article
 title: "Data sources"
 description: "Overview of data sources compatible with Power BI"
 status: DRAFT
-tags: [power-bi, pbi-data-sources, pbi-home, pbi-best-practice]
-order:
-    power-bi: 2
-    pbi-data-sources: 1
-    pbi-home: 1
-    pbi-best-practice: 1
-related:
-  tag: pbi-best-practice
+tags: pbi-best-practice
+order: 20
 ---
 !!! warning Please note
 The Power BI section includes functionalities and ways of working specific to Power BI but it is worth mentioning that the Power BI guidance must go hand in hand with the data visualisation standards when producing data visualisation products.
-!!! 
-  
+!!!
 
 ## Data source methods  
   
 There are various data sources available in Power BI. Your use case depends on which method you use.  
 In DirectQuery mode, the Power BI engine queries the data at the source, which can be slow but avoids having to copy the data. Any changes at the data source are immediately reflected in the query results.  
   
-DirectQuery in Power BI offers the greatest benefits in the following scenarios:  
+DirectQuery in Power BI offers the greatest benefits in the following scenarios:
+
 - The data changes frequently, and you need near real-time reporting.
 - You need to handle large data without having to pre-aggregate.
 - The underlying source defines and applies security rules.
 - Data sovereignty restrictions apply.
 - The source is a multidimensional source containing measures, such as SAP BW.  
   
-::: details Source
- 
+::: details Source - DirectQuery
+
 [Microsoft learn; DirectQuery use cases][source 1]
 
-:::    
+:::
 
 With import mode, performance can be better because the data is cached and optimized for business-intelligence queries without having to query the data source for each DAX query submitted by a report. However, the Power BI engine must first copy the data into the dataset during refresh. Any changes at the source are only picked up with the next dataset refresh.  
 
@@ -43,28 +37,25 @@ Direct Lake Mode can pull directly from the system and caches the data, which me
 
 Currently, to connect Power BI to the Data Warehouse, this would need to be done through the AVDs (Azure Virtual Desktops), which the [Data Platforms Team][DPT] manage access to.  
 
-::: details Source
- 
+::: details Source - Direct Lake
+
 [Microsoft learn; Direct Lake][source 2]
 
-::: 
-
-
+:::
 
 ## Scheduling refreshes  
 
 DirectQuery and Direct Lake Mode read straight from the system meaning refreshes of your data do not need to be scheduled. If you are reading your data through import mode you may wish to automatically schedule a refresh (otherwise, you can refresh your data as and when needed). The [Microsoft Learn page 'Configure scheduled refresh'][source 3] gives more information.  
   
 Alternatively, tools such as Power Automate, R or Alteryx can be used to pick up recent additions and amendments to the data. For example, a workflow to clean and update the data could be useful before the data is loaded in. Setting data flows to run automatically out of office hours may be useful dependent on your levels of data and data refresh requirements.  
-  
-  
+
 ## Modelling data  
   
 When importing the data, ensure that your data is modelled efficiently.  
 Microsoft have [data reduction techniques for import modelling guidance][source 4] available.  
 
-  
 There are eight different data reduction techniques covered in this article. These techniques include:
+
 - [Remove unnecessary columns][source 5]
 - [Remove unnecessary rows][source 6]
 - [Group by and summarize][source 7]
@@ -77,13 +68,6 @@ There are eight different data reduction techniques covered in this article. The
 The [‘Data Modelling In Power BI: Helpful Tips & Best Practices’ article][source 14] may be useful.  
 And [‘Model data with Power BI’ training][source 13] is also available.  
 
-
-## Power BI Best Practices    
-
-
-
-
-  
 [source 1]: https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-about#directquery-use-cases
 [source 2]: https://learn.microsoft.com/en-us/power-bi/enterprise/directlake-overview
 [DPT]: https://nhsbsauk.sharepoint.com/sites/DAI_DataWarehouse/SitePages/Our-Team(1).aspx
