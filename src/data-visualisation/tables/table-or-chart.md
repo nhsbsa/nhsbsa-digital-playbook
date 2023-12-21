@@ -23,10 +23,10 @@ Although this guidance talks about the comparison of tables to charts, it is imp
   
 There are several occasions where you may wish to use a table. For example, use tables:  
   
-- **if you want to enable readers to look up specific information.** 
+- **if you want to enable readers to look up specific information.**
     - Readers can use the table to pinpoint information of interest
     - This information is more accessible than in a body of text. You should only use them to present data, not large amounts of text
-- **if precise numbers are important.** 
+- **if precise numbers are important.**
     - Readers may need to know a certain level of accuracy, especially when acting on the data
 - **if you do not need to show a pattern.**
     - Tables are useful if the data is sequential
@@ -38,9 +38,8 @@ There are several occasions where you may wish to use a table. For example, use 
     - You can implement visual encoding such as a heatmap to help users
 - **to show ranks.**
     - Ranks clearly enable users to determine the ranking of multiple values without the need for visualising distance as in some charts  
-	
 
-::: details Source
+::: details Source - things to consider
 
 [What to consider when creating tables][table 1]
 
@@ -50,15 +49,13 @@ There are several occasions where you may wish to use a table. For example, use 
   
 Try to avoid using tables as they do not work particularly well on mobile devices. Some smaller devices may struggle to fit content into the space on the screen.  
   
-Think about alternatives you could use – a bulleted list, a chart or content under subheadings. 
+Think about alternatives you could use – a bulleted list, a chart or content under subheadings.
   
-::: details Source
+::: details Source - style guide
 
 [Content Design digital style guide and standards][table 2]
 
 :::
-
-[Back to Best practice for tables](../tables-best-practice/)
 
 [table 1]: https://blog.datawrapper.de/guide-what-to-consider-when-creating-tables/
 [table 2]: https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx#tables

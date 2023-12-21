@@ -47,12 +47,12 @@ Contrast ratios should be checked to help with conditions such as low vision and
 
 Consider the type of chart you are using and the relevant colour palette. Please refer to the Categorical and Sequential Standards pages for more information:
 
-- [Categorical Data Colour Standards](../cat_data.md)
-- [Sequential Data Colour Standards](../seq_data.md)  
+- [Categorical Data Colour Standards](../cat-data/)
+- [Sequential Data Colour Standards](../seq-data/)  
 
 Example A: Using colour to connect information. Note how ‘Services’ uses a dark blue in each chart, and Production is denoted by orange.  
   
-![5 charts including a pie chart, 2 bar charts and 2 line charts](../colour/images/charts.png)  
+![5 charts including a pie chart, 2 bar charts and 2 line charts](../images/charts.png)  
 
 ::: details Source - choosing colours
 
@@ -67,11 +67,11 @@ The primary colour NHS Blue (#005EB8) should be used to pull focus, against NHS 
 
 #005EB8:  
 
-![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](../colour/images/hex-nhs-blue.png)  
+![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](../images/hex-nhs-blue.png)  
 
 #aeb7bd:  
 
-![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](../colour/images/hex-nhs-grey3.png)  
+![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](../images/hex-nhs-grey3.png)  
 
 ::: details Source - colour palette and NHS manual
  
@@ -89,11 +89,11 @@ This can be used for things such as a search box, or secondary content such as t
   
 #212b32:  
   
-![Rectangle of block colour in the shade #212b32, very dark (mostly black) blue](../colour/images/hex-212b32.png)  
+![Rectangle of block colour in the shade #212b32, very dark (mostly black) blue](../images/hex-212b32.png)  
   
 #4c6272:  
   
-![Rectangle of block colour in the shade #4c6272, very dark grayish blue](../colour/images/hex-4c6272.png)  
+![Rectangle of block colour in the shade #4c6272, very dark grayish blue](../images/hex-4c6272.png)  
 
 ::: details Source - NHS digital service manual
 
@@ -106,11 +106,11 @@ To focus the readers attention, you can use a background of NHS Blue (#005EB8), 
 
 #fff9c4:  
 
-![Rectangle of block colour in the shade #fff9c4 NHS Pale Yellow, very pale yellow](../colour/images/hex-fff9c4.png)  
+![Rectangle of block colour in the shade #fff9c4 NHS Pale Yellow, very pale yellow](../images/hex-fff9c4.png)  
 
 #212b32:  
 
-![Rectangle of block colour in the shade #212b32 primary text colour, very dark (mostly black) blue](../colour/images/hex-212b32-text.png)  
+![Rectangle of block colour in the shade #212b32 primary text colour, very dark (mostly black) blue](../images/hex-212b32-text.png)  
 
 ## Useful links
 

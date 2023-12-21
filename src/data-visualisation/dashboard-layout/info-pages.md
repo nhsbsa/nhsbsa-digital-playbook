@@ -45,12 +45,13 @@ The information pages have the following features present across each page:
   
 ### Text content  
   
-Your content should follow the corporate [NHS Business Services Authority Content Design Standards][info 1]  
+Your content should follow the corporate NHS Business Services Authority Content Design Standards.  
+Please note: [this link to the NHSBSA Content Design Standards][info 1] leads to an internal folder. This will be updated once the relevant content is added to the playbook.
   
 Some important notes in relation to your text content:
 
 - A Header 1 has been used on each page to help navigate a screen reader, Header 1 should be size 16px.
-- The body of the text should be size 12px. [Source - Accessible print publications ][info 2]
+- The body of the text should be size 12px. [Source - Accessible print publications][info 2]
 - Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS identity guidelines; Fonts][info 3]  
 
 This is a basic example of one of the pages:  

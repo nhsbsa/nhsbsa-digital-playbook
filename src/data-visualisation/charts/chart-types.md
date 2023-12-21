@@ -5,8 +5,6 @@ description: "Standards and guidance for choosing appropriate chart types"
 status: DRAFT
 tags: data
 order: 10
-related: 
-    tag: data-viz-charts
 ---
 ## Choosing an appropriate chart type  
   
@@ -55,7 +53,7 @@ If you’re using a line chart:
 
 - label the lines instead of using a legend
 - for a singular line (including sparklines), use an NHS Blue (#005EB8) colour
-- for more than one variable, use the [Colour guidance](../../colour/)
+- for more than one variable, use the [colour guidance](../../colour/)
 - for multiple lines, where you need to pull focus onto one of the lines, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
   
 **Bar charts**

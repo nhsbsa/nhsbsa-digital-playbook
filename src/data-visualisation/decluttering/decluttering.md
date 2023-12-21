@@ -40,7 +40,7 @@ Some steps that you can take to declutter a chart are:
 
 ![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
   
-::: details Source
+::: details Source - eliminating clutter
 
 [What clutter can we eliminate?][declutter 1]
 
@@ -70,7 +70,7 @@ There are many methods you can use to pull focus:
 
 ![Rectangle of block colour in the shade #D8DDE0 NHS Grey 4, light grayish blue](hex-nhs-grey-4.png)  
   
-::: details Source
+::: details Source - graph tips
 
 [Two tips for better graphs][declutter 2]
 
