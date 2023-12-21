@@ -3,7 +3,7 @@ layout: article
 title: "Layout of a dashboard: Information"
 description: "Overview of the information pages to include in NHSBSA reports"
 status: DRAFT
-tags: dv-db-layout
+tags: dv-dashboard-layout
 order: 1
 ---
 ## Information pages  
