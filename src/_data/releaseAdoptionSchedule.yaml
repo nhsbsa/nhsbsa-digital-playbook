@@ -125,7 +125,7 @@ spring_cloud:
 java_aws_lambda:
   - version: "21"
     release: 2023-11-16
-    adopt: 2023-05-16
+    adopt: 2024-05-16
   - version: "17"
     release: 2023-04-27
     adopt: 2023-10-27
