@@ -21,13 +21,16 @@ nodejs:
     adopt: 2019-10-21
     decommission: 2022-04-30
 nodejs_aws_lambda:
+  - version: v20
+    release: 2023-11-14
+    adopt: 2024-05-14
   - version: v18
     release: 2022-11-18
     adopt: 2023-05-18
   - version: v16
     release: 2022-05-11
     adopt: 2022-11-11
-    decommission: 2024-03-11
+    decommission: 2024-06-12
   - version: v14
     release: 2021-01-27
     adopt: 2021-07-27
@@ -104,8 +107,8 @@ spring_boot:
     decommission: 2019-08-06
 spring_cloud:
   - version: "2023.0 (Leyton)"
-    release: 2023-12-01
-    adopt: 2024-02-01
+    release: 2023-12-06
+    adopt: 2024-02-06
     decommission: 2026-12-01
   - version: "2022.0 (Kilburn)"
     release: 2022-12-16
@@ -120,6 +123,9 @@ spring_cloud:
     adopt: 2021-02-22
     decommission: 2023-12-22
 java_aws_lambda:
+  - version: "21"
+    release: 2023-11-16
+    adopt: 2023-05-16
   - version: "17"
     release: 2023-04-27
     adopt: 2023-10-27
@@ -132,7 +138,7 @@ java_aws_lambda:
   - version: "8 (Amazon Linux)"
     release: 2015-06-01
     adopt: 2016-12-01
-    decommission: 2023-12-31
+    decommission: 2024-02-08
 ruby:
   - version: 3.3
     release: 2023-12-25
@@ -155,6 +161,10 @@ ruby:
     adopt: 2020-06-25
     decommission: 2023-03-31
 postgresql:
+  - version: 16
+    release: 2023-09-14
+    adopt: 2024-03-14
+    decommission: 2028-11-09
   - version: 15
     release: 2022-10-13
     adopt: 2023-04-13
