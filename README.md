@@ -8,7 +8,7 @@ The published playbook is hosted on [Github pages][nhsbsa_digital_playbook]
 
 ### prerequisites
 
-* [Node 16][node_js]
+* [Node 20][node_js]
 
 ### Intalling application dependencies
 
