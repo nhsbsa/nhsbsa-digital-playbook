@@ -1,15 +1,13 @@
 ---
-layout: article
-title: "Microsoft Power Platforms certifications (PL)"
-description: "Overview of the Microsoft Power Platforms certifications relevant to the NHSBSA"
-status: DRAFT
-tags: [power-bi, power-certifications, pl-certs, cert-home]
-order: 
-    power-bi: 3
-    power-certifications: 2
-    pl-certs: 1
-related:
-    tag: pl-certs
+layout: collection
+title: "Microsoft Azure certifications (AZ)"
+description: "Overview of the Microsoft Azure certifications relevant to the NHSBSA"
+tags: pbi-learning
+order: 40
+collection_tag: az-certs
+pagination:
+  data: collections.az-certs
+  size: 50
 ---
 There are many Microsoft Power Platforms and Azure certifications available. Please look at the pages available or the [attached spreadsheet][link] for more details.  
   

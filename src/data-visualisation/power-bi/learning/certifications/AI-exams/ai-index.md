@@ -1,15 +1,13 @@
 ---
-layout: article
-title: "Microsoft Azure certifications (AZ)"
+layout: collection
+title: "Microsoft Azure certifications (AI)"
 description: "Overview of the Microsoft Azure certifications relevant to the NHSBSA"
-status: DRAFT
-tags: [power-bi, power-certifications, az-certs, cert-home]
-order: 
-    power-bi: 3
-    power-certifications: 2
-    az-certs: 1
-related:
-    tag: az-certs
+tags: pbi-learning
+order: 30
+collection_tag: ai-certs
+pagination:
+  data: collections.ai-certs
+  size: 50
 ---
 There are many Microsoft Power Platforms and Azure certifications available. Please look at the pages available or the [attached spreadsheet][link] for more details.  
   

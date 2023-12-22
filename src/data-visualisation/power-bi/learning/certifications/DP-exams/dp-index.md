@@ -1,15 +1,13 @@
 ---
-layout: article
+layout: collection
 title: "Microsoft Azure certifications (DP)"
 description: "Overview of the Microsoft Azure certifications relevant to the NHSBSA"
-status: DRAFT
-tags: [power-bi, power-certifications, dp-certs, cert-home]
-order: 
-    power-bi: 3
-    power-certifications: 2
-    dp-certs: 1
-related:
-    tag: dp-certs
+tags: pbi-learning
+order: 20
+collection_tag: dp-certs
+pagination:
+  data: collections.dp-certs
+  size: 50
 ---
 There are many Microsoft Power Platforms and Azure certifications available. Please look at the pages available or the [attached spreadsheet][link] for more details.  
   
