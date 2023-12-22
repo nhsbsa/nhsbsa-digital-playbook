@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Playbook for NHSBSA Digital, Data and Technology projects",
   "main": "index.js",
+  "engines" : {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "start": "npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",
     "build": "env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'",
