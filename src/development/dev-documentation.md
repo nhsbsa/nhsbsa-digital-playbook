@@ -27,6 +27,8 @@ A [standard set of file][nhsbsa_standard_repository_documents] are available to 
   We use [Apache 2][licence_apache2] licence for code and [Open Government Licence v3][licence_ogl3] for content.
 * __SECURITY.md__
 How to report security issues.
+* __SECRETS.md__
+Explains how to setup and use required secret detection tools in a repository.
 
 ### Optional files
 
