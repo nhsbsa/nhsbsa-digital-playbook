@@ -7,9 +7,11 @@
 {% from "appArticleFooter/macro.njk" import appArticleFooter %}
 {% from "appBadges/macro.njk" import appBadges %}
 {% from "appCard/macro.njk" import appCard with context %}
-{% from "appGithubIssue/macro.njk" import appGithubIssue %}
+{% from "appGithubDiscussion/macro.njk" import appGithubDiscussion %}
 {% from "appIssueSheet/macro.njk" import appIssueSheet %}
 {% from "prose/macro.njk" import appProse %}
+
+{% set category = 'general-playbook-ideas' if not discussion.category else discussion.category %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
@@ -75,11 +77,12 @@
 
         <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
-        {{ appGithubIssue({
-          issueTemplate: "playbook-proposal.md",
-          issueTitle: "Change to page '" + page.filePathStem + "' ",
+        {{ appGithubDiscussion({
+          category: discussion.category | default("general-playbook-ideas"),
+          template: "General-Playbook-Ideas.md",
+          title: "Change to page '" + page.filePathStem + "' ",
           linkText: "Suggest a change to this page"
-          }) }}
+        }) }}
 
         {{ appArticleFooter({
             date: page.date,

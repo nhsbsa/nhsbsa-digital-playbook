@@ -54,7 +54,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('debug', require('./lib/_filters/debug'));
   eleventyConfig.addFilter('absoluteUrl', require('./lib/_filters/urls'));
 
-
   // pass through
   eleventyConfig.addPassthroughCopy({"lib/_javascripts": "/javascripts"});
   eleventyConfig.addPassthroughCopy({"lib/_images": "/images"});
