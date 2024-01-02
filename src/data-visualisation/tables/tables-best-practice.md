@@ -87,9 +87,7 @@ There are aspects we can implement to help enable users to read a table effectiv
 
 [What to consider when creating tables][table 2]
 
-:::  
-  
-## Articles in this section
+:::
 
 [table 1]: https://www.gov.uk/government/publications/examples-of-visual-content-to-use-on-govuk/examples-of-visual-content-to-use-on-govuk#tables
 [table 2]: https://blog.datawrapper.de/guide-what-to-consider-when-creating-tables/
