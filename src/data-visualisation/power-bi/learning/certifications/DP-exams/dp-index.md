@@ -2,6 +2,7 @@
 layout: collection
 title: "Microsoft Azure certifications (DP)"
 description: "Overview of the Microsoft Azure certifications relevant to the NHSBSA"
+status: DRAFT
 tags: pbi-learning
 order: 20
 collection_tag: dp-certs

@@ -2,6 +2,7 @@
 layout: collection
 title: "Power BI guidance"
 description: "Guidance for using Power BI at the NHSBSA, and details of certifications available"
+status: DRAFT
 tags: data
 order: 40
 collection_tag: power-bi

@@ -2,6 +2,7 @@
 layout: collection
 title: "Microsoft Power Platform and Azure certifications"
 description: "Information about Microsoft Power Platform and Azure training"
+status: DRAFT
 tags: power-bi
 order: 3
 collection_tag: pbi-learning
