@@ -17,7 +17,7 @@ There are aspects we can implement to help enable users to read a table effectiv
 
 **2. Align the content appropriately.**
 
-- A table should always contain headers. The background of these headers should be distinguishable from the main body of table: a NHS Blue (#005EB8) background with white titles should be used 
+- A table should always contain headers. The background of these headers should be distinguishable from the main body of table: a NHS Blue (#005EB8) background with white titles should be used
 - Numbers should be aligned to the right
 - Text should be aligned to the left
 - Times series should read left to right
@@ -44,12 +44,12 @@ There are aspects we can implement to help enable users to read a table effectiv
 
 **6. Consider highlighting tables with many rows.**
 
-- If you can’t avoid many columns, stripe every second row with a light grey, such as NHS Grey 5 (#f0f4f5). This helps aide the user’s gaze
+- If you can’t avoid many columns, stripe every second row with a light grey, such as NHS Grey 5 (#F0F4F5). This helps aide the user’s gaze
 - Consider the ink to page ratio. Do not use this unnecessarily  
 
-#f0f4f5:  
+#F0F4F5:  
 
-![Rectangle of block colour in the shade #f0f4f5 NHS Grey 5, light grayish cyan](../hex-nhs-grey-5.png)  
+![Rectangle of block colour in the shade #F0F4F5 NHS Grey 5, light grayish cyan](../hex-f0f4f5.png)  
 
 **7. Limit your use of pagination.**
 

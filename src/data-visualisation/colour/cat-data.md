@@ -17,7 +17,7 @@ Using four categories is best practice for data visualisation. More than four se
 
 :::
   
-For categorical data, the following colours taken from the NHS identity guideleines can be used:  
+For categorical data, the following colours taken from the NHS identity guidelines can be used:  
 
 |       Colour       |   Tint   |   Hex Code    |
 |--------------------|----------|---------------|
@@ -27,12 +27,12 @@ For categorical data, the following colours taken from the NHS identity guidelei
 |   NHS Orange       |  100%    |   #ED8B00     |
 |   NHS Green        |  100%    |   #009639     |
 |   NHS Light Blue   |  100%    |   #41B6E6     |
-|   NHS Blue         |  50%     |   #80afdc     |
-|   NHS Aqua Green   |  50%     |   #80d2cc     |
-|   NHS Pink         |  50%     |   #d792b9     |
-|   NHS Orange       |  50%     |   #f6c580     |
-|   NHS Green        |  50%     |   #80cb9c     |
-|   NHS Light Blue   |  50%     |   #a0dbf3     |  
+|   NHS Blue         |  50%     |   #80AFDC     |
+|   NHS Aqua Green   |  50%     |   #80D2CC     |
+|   NHS Pink         |  50%     |   #D792B9     |
+|   NHS Orange       |  50%     |   #F6C580     |
+|   NHS Green        |  50%     |   #80CB9C     |
+|   NHS Light Blue   |  50%     |   #A0DBF3     |  
 
  ![Small block of colour showing 5 levels of the NHS Blue gradient from 100% tint to 20% tint and the words 'NHS Blue' beneath this](../images/blue-gradient.png)   ![Small block of colour showing 5 levels of the NHS Aqua Green gradient from 100% tint to 20% tint and the words 'NHS Aqua Green' beneath this](../images/aqua-gradient.png)    ![Small block of colour showing 5 levels of the NHS Pink gradient from 100% tint to 20% tint and the words 'NHS Pink' beneath this](../images/pink-gradient.png)  
  ![Small block of colour showing 5 levels of the NHS Orange gradient from 100% tint to 20% tint and the words 'NHS Orange' beneath this](../images/orange-gradient.png) ![Small block of colour showing 5 levels of the NHS Green gradient from 100% tint to 20% tint and the words 'NHS Green' beneath this](../images/green-gradient.png) ![Small block of colour showing 5 levels of the NHS Light Blue gradient from 100% tint to 20% tint and the words 'NHS Light Blue' beneath this](../images/light-blue-gradient.png)
@@ -90,7 +90,7 @@ Pie charts should use different shades of one colour where possible, rather than
 
 ### RAG (Red/Amber/Green) status  
   
-Colour should not be the only method fo conveying information.  
+Colour should not be the only method of conveying information.  
 If you are using red to signal 'warning' or 'caution', and green to signal 'approval' or 'correctness' consider addign a symbol to make sure colour-blind users can still understand the message.  
   
 Use additional encoding methods such as symbols or positions to convey meaning:  
@@ -104,19 +104,19 @@ Use additional encoding methods such as symbols or positions to convey meaning:
 
 ### ONS accessibility tested colours  
 
-- Leaf green: #0f8243  
+- Leaf green: #0F8243  
 ![Horizontal rectangle block of ONS colour Leaf green on a white background with the words 'Leaf green' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-leaf-green' beneath the colour block](../images/ons-green.png)
 
-- Neon yellow: #f0f762  
+- Neon yellow: #F0F762  
 ![Horizontal rectangle block of ONS colour Neon yellow on a white background with the words 'Neon yellow' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-neon-yellow' beneath the colour block](../images/ons-neon-yell.png) 
 
-- Sun yellow: #fbc900  
+- Sun yellow: #FBC900  
 ![Horizontal rectangle block of ONS colour Sun yellow on a white background with the words 'Sun yellow' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-sun-yellow' beneath the colour block](../images/ons-sun-yell.png)  
 
-- Jaffa orange: #fa6401  
+- Jaffa orange: #FA6401  
 ![Horizontal rectangle block of ONS colour Jaffa orange on a white background with the words 'Jaffa orange' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-jaffa-orange' beneath the colour block](../images/ons-orange.png)  
 
-- Red: #d0021b  
+- Red: #D0021B  
 ![Horizontal rectangle block of ONS colour Ruby red on a white background with the words 'Ruby red' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-ruby-red' beneath the colour block](../images/ons-red.png)
 
 ::: details Source - ONS service manual

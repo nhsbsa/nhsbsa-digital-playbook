@@ -30,7 +30,7 @@ Some steps that you can take to declutter a chart are:
 - removing any redundant data. This includes improving the x and y axis labels to be more concise
 - placing the legend as close to a line chart as possible
 - considering the accuracy needed. For example, would the user need to see each decimal place of a figure, or would rounding a value be more effective
-- pulling focus onto certain lines/bars by highlighting the most important element. For example, by using NHS Blue (#005EB8) against a light grey NHS Grey 3 (#aeb7bd).  
+- pulling focus onto certain lines/bars by highlighting the most important element. For example, by using NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD).  
 
 #005EB8:  
 
@@ -38,7 +38,7 @@ Some steps that you can take to declutter a chart are:
 
 #aeb7bd:  
 
-![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
+![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
   
 ::: details Source - eliminating clutter
 
@@ -58,9 +58,9 @@ There are many methods you can use to pull focus:
 - [Use colour](../colour/) and width, for example, where you need to pull focus onto a specific variable in a line chart, use a thicker NHS Blue (#005EB8) line, with the other lines set as NHS Grey 3 (#AEB7BD), this will ensure the other lines fade further into the background with the most dominant and useful line standing out
 - Use markers or event lines to highlight certain values, or important and influencing aspects. A good example of this is adding a faded section in NHS Grey 4 (#D8DDE0) to denote forecasting, or adding a label to an individual value at a point in time  
 
-#aeb7bd:  
+#AEB7BD:  
 
-![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
+![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
 
 #005EB8:  
 

@@ -12,13 +12,13 @@ See the [NHS Identity Guidelines Colours pages][pc 1] for more detail.
 
 ### Background  
   
-Use a plain background, NHS Grey 5 (#f0f4f5) should be used.  
+Use a plain background, NHS Grey 5 (#F0F4F5) should be used.  
 
-#f0f4f5:  
+#F0F4F5:  
   
 ![Rectangle of block colour in the shade #f0f4f5 NHS Grey 5, light grayish cyan](../images/hex-f0f4f5.png)  
   
-NHS White (#ffffff) is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
+NHS White (#FFFFFF) is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
 
 ![Horizontal rectangular block of the colour NHS White with the name 'NHS White' as well as the CMYK, RGB and Hex codes for the colour all written below in black text on a white background](../images/nhs-white.png)
 
@@ -51,17 +51,37 @@ Otherwise, tints of 80%, 60%, 40% and 20% can be used. Any % value is accepted a
 To find tints you can use [this website][pc 7].  
 Otherwise, these are the tints of the NHS Blue at each 10% interval:  
 
-    #005EB8 (NHS Blue) - 100%  
-    #337EC6 - 90%  
-    #5C98D1 - 80%  
-    #7DADDA - 70%  
-    #97BDE1 - 60%  
-    #ACCAE7 - 50%  
-    #BDD5EC - 40%  
-    #CADDF0 - 30%  
-    #D5E4F3 - 20%  
-    #DDE9F5 - 10%  
-    #FFFFFF (White) - 0%
+
+<html>
+<style>
+.container {   display: flex;   align-items: center;   justify-content: center }
+.div_gap { width: 40px }
+.tint_colours img {height:500px;}
+ </style>  
+
+ <body>
+ <div class="container">
+ <div class="tint_colours">
+  <img src="../images/gradient_crop.png" alt="visual representation of the tints of NHS Blue listed on this page. The list of hex codes and the percentage tint they represent appears in the same order as lsited on the page, and to the left of each hex code is a small rectangle block of colour orientated horizontally, each in the colour that corresponds to the hex code it is next to. From top to bottom the colours shown are: #005EB8 (NHS Blue) - 100%, #337EC6 - 90%, #5C98D1 - 80%, #7DADDA - 70%, #97BDE1 - 60%, #ACCAE7 - 50%, #BDD5EC - 40%, #CADDF0 - 30%, #D5E4F3 - 20%, #DDE9F5 - 10%, #FFFFFF (White) - 0%">
+</div>
+<div class="div_gap"></div>
+<div>
+    #005EB8 (NHS Blue) - 100%  <br><br>
+    #337EC6 - 90%  <br><br>
+    #5C98D1 - 80%  <br><br>
+    #7DADDA - 70%  <br><br>
+    #97BDE1 - 60%  <br><br>
+    #ACCAE7 - 50%  <br><br>
+    #BDD5EC - 40%  <br><br>
+    #CADDF0 - 30%  <br><br>
+    #D5E4F3 - 20%  <br><br>
+    #DDE9F5 - 10%  <br><br>
+    #FFFFFF (White) - 0% <br><br>
+</div>
+</div>
+<br>
+</body>
+</html>
 
 Note: we only recommend outlining the bars when using tints of a palette, in general, bar outlines add unnecessary clutter. We outline all bars to maintain consistency.  
 

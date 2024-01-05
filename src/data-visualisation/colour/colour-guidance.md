@@ -63,15 +63,15 @@ Example A: Using colour to connect information. Note how ‘Services’ uses a d
 ## Focus charts  
 
 Focus charts are charts which use colour to highlight specific elements to help users understand the information.  
-The primary colour NHS Blue (#005EB8) should be used to pull focus, against NHS Grey 3 (#aeb7bd).  
+The primary colour NHS Blue (#005EB8) should be used to pull focus, against NHS Grey 3 (#AEB7BD).  
 
 #005EB8:  
 
 ![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](../images/hex-nhs-blue.png)  
 
-#aeb7bd:  
+#AEB7BD:  
 
-![Rectangle of block colour in the shade #aeb7bd NHS Grey 3, grayish blue](../images/hex-nhs-grey3.png)  
+![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](../images/hex-nhs-grey3.png)  
 
 ::: details Source - colour palette and NHS manual
  
@@ -82,18 +82,18 @@ The primary colour NHS Blue (#005EB8) should be used to pull focus, against NHS 
 
 ## Text  
 
-The primary text colour to use is: #212b32
+The primary text colour to use is: #212B32
 This should be used across the majority of headers and body of text.
-The secondary text colour to use is: #4c6272
+The secondary text colour to use is: #4C6272
 This can be used for things such as a search box, or secondary content such as the heading of a links section.  
   
-#212b32:  
+#212B32:  
   
-![Rectangle of block colour in the shade #212b32, very dark (mostly black) blue](../images/hex-212b32.png)  
+![Rectangle of block colour in the shade #212B32, very dark (mostly black) blue](../images/hex-212b32.png)  
   
-#4c6272:  
+#4C6272:  
   
-![Rectangle of block colour in the shade #4c6272, very dark grayish blue](../images/hex-4c6272.png)  
+![Rectangle of block colour in the shade #4C6272, very dark grayish blue](../images/hex-4c6272.png)  
 
 ::: details Source - NHS digital service manual
 
@@ -102,15 +102,15 @@ This can be used for things such as a search box, or secondary content such as t
 
 ## Alerts  
 
-To focus the readers attention, you can use a background of NHS Blue (#005EB8), with a bold white text. Otherwise if the alert is urgent or extremely important the NHS Pale Yellow (#fff9c4) background can be used with the primary text colour (#212b32).  
+To focus the readers attention, you can use a background of NHS Blue (#005EB8), with a bold white text. Otherwise if the alert is urgent or extremely important the NHS Pale Yellow (#FFF9C4) background can be used with the primary text colour (#212B32).  
 
-#fff9c4:  
+#FFF9C4:  
 
-![Rectangle of block colour in the shade #fff9c4 NHS Pale Yellow, very pale yellow](../images/hex-fff9c4.png)  
+![Rectangle of block colour in the shade #FFF9C4 NHS Pale Yellow, very pale yellow](../images/hex-fff9c4.png)  
 
-#212b32:  
+#212B32:  
 
-![Rectangle of block colour in the shade #212b32 primary text colour, very dark (mostly black) blue](../images/hex-212b32-text.png)  
+![Rectangle of block colour in the shade #212B32 primary text colour, very dark (mostly black) blue](../images/hex-212b32-text.png)  
 
 ## Useful links
 
