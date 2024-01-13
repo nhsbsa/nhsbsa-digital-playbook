@@ -2,7 +2,7 @@
 layout: article
 title: "Static code analysis"
 tags: dev
-order: 7
+order: 8
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL

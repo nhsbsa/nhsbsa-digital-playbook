@@ -6,7 +6,7 @@ status: FINAL
 tags: [security, dev-security]
 order:
   security: 11
-  dev-security: 5
+  dev-security: 11
 review:
   review_cycle:
     month: 6

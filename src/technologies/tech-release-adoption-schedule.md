@@ -2,11 +2,13 @@
 layout: article
 title: "Release adoption schedule"
 description: "When to adopt software releases into production"
-tags: tech
-order: 1
+tags: [tech, dev]
+order: 
+  tech: 2
+  dev: 6
 status: FINAL
 review:
-    last_reviewed_date: 2023-07-28
+    last_reviewed_date: 2023-12-20
     review_cycle:
         month: 2
 issuesheet:

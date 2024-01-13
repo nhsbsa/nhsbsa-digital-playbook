@@ -5,8 +5,8 @@ description: "Removing sensitive data such as non-revokable secrets or contribut
 status: FINAL
 tags: [dev-security, security]
 order: 
-  dev-security: 4
-  security: 4
+  dev-security: 5
+  security: 5
 review:
     last_reviewed_date: 2023-05-15
     review_cycle: ANNUAL

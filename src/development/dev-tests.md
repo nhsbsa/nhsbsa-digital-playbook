@@ -3,7 +3,7 @@ layout: article
 title: "Testing"
 description: "We always write automated tests around our code"
 tags: dev
-order: 6
+order: 7
 related:
   tag: dev_testing
 review:
