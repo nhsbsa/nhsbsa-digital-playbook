@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="Keeping our software up to date with the latest versions of dependant libraries and runtimes">
   <meta name="robots" content="noindex">
   
   <title>
-Static code analysis - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Application patching - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
   
@@ -30,12 +30,13 @@ Static code analysis - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d6b6a7250a807d6eec5de">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff46e8a003d4de1f2c98be7">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-quality-assurance/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/tech-patching/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
+  <meta property="og:description" content="Keeping our software up to date with the latest versions of dependant libraries and runtimes">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630ba3e3df184c646ae3808">
-  <meta property="og:title" content="Static code analysis - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Application patching - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=32b02df6de1d9a459b14ec4550e10b8f" media="all" rel="stylesheet" type="text/css" >
 
@@ -78,13 +79,16 @@ Static code analysis - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#sonarqube">SonarQube</a>
+                    <li><a href="#dependency-management">Dependency management</a>
             		</li>
 
-                    <li><a href="#thresholds">Thresholds</a>
+                    <li><a href="#patching-schedule">Patching schedule</a>
             		</li>
 
-                    <li><a href="#references">References</a>
+                    <li><a href="#route-to-live">Route to live</a>
+            		</li>
+
+                    <li><a href="#non-compliance">Non-compliance</a>
             		</li>
                 </ol>
             </div>
@@ -102,29 +106,160 @@ Static code analysis - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Static code analysis
+            Application patching
           </h1>
           
         </div>
       
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      <h2 class="nhsbsa-details__summary-heading nhsuk-heading-s">Issue sheet</h2>
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <table>
+      <tr>
+      <th>Document location</th>
+      <td><a href="/nhsbsa-digital-playbook/technologies/tech-patching/">/nhsbsa-digital-playbook/technologies/tech-patching/</a></td>
+      </tr>
+      <tr>
+      <th>Title</th>
+      <td>Application patching</td>
+      </tr>
+      <tr>
+      <th>Author</th>
+      <td>Head of Software Engineering</td>
+      </tr>
+      <tr>
+      <th>Issued to</th>
+      <td>DDaT</td>
+      </tr>
+      <tr>
+      <th>Last reviewed</th>
+      <td>
+        <time datetime="2024-01-14T00:00:00.000Z">14 January 2024</time>
+      </td>
+      </tr>
+      <tr>
+      <th>Next review due</th>
+      <td>
+        <time datetime="2025-01-14T00:00:00.000Z">14 January 2025</time>
+      </td>
+      </tr>
+    </table>
 
-<h2 id="sonarqube" tabindex="-1"><a class="header-anchor" href="#sonarqube">SonarQube</a></h2>
-<p>We use SonarQube as our standard static analysis tool and build breaker for deviations against code quality rules.</p>
-<p>Production source code must be checked against the current NHSBSA static analysis rules profile where available for the specific language.</p>
-<h2 id="thresholds" tabindex="-1"><a class="header-anchor" href="#thresholds">Thresholds</a></h2>
-<p>The automated build will break for:</p>
+      <h3 id="revision-history" tabindex="-1" class="nhsuk-heading-s"><a class="header-anchor" href="#revision-history">Revision history</a></h3>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Date</th>
+          <th>Amended by</th>
+          <th>Approved by</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+        <td>1.1</td>
+        <td>
+          <time datetime="2024-01-14T00:00:00.000Z">14 January 2024</time>
+        </td>
+        <td>PT</td>
+        <td>-</td>
+        <td>Playbook release</td>
+        </tr>
+        <tr>
+        <td>1.0</td>
+        <td>
+          <time datetime="2022-03-03T00:00:00.000Z">3 March 2022</time>
+        </td>
+        <td>PT</td>
+        <td>Technical Design Authority</td>
+        <td>Initial release</td>
+        </tr>
+      </table>
+  </div>
+</details>
+
+<p>Keeping software up to date with the latest versions of runtimes and dependant libraries is a key mitigation to the <a href="https://owasp.org/Top10/" target="_blank" rel="noopener">OWASP Top Ten 2021</a>, risk number 6: <a href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/" target="_blank" rel="noopener">Vulnerable and Outdated Components</a></p>
+<p>Patching and upgrading provides considerable benefit:</p>
 <ul>
-<li><strong>Any <code>BLOCKER</code> or <code>CRITICAL</code> issues</strong><br>
-Production source code must not contain any issues that are considered <code>BLOCKER</code> or <code>CRITICAL</code>.<br>
-Builds may allow issues at a lower severity to pass. All issues should be addressed to avoid a buildup of technical debt.</li>
-<li><strong>Less than 80% test coverage</strong><br>
-Test coverage is measured through unit and integration testing</li>
+<li>We have a pro-active approach to vulnerability management<br>
+Regular patching embeds the practice as a normal activity, and so responding to vulnerable dependencies happens as a matter of course.</li>
+<li>Our applications stay fresh as they are actively maintened<br>
+Updating runtime, framework and library APIs encourages us to adopt best practices as they evolve.</li>
 </ul>
-<h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
+<h2 id="dependency-management" tabindex="-1"><a class="header-anchor" href="#dependency-management">Dependency management</a></h2>
+<p>All projects must use a dependency management system to specify the dependencies and versions of library code that they rely upon.</p>
+<div class="admonition warning">
+<p class="admonition-title">Do not commit binaries into source control</p>
+<p>Checked in binaries are not managed with a manifest file, making it impossible to use standards tools to identify dependencies with vulnerabilities from source.</p>
+<p>Binaries cause unnecessary and considerable bloat to the source code repository.</p>
+</div>
+<p>The NHSBSA approved package management tools are:</p>
+<div class="card">
+<dl>
+<dt><strong>Java</strong></dt>
+<dd>Maven build using <code>pom.xml</code></dd>
+<dt><strong>Node.js</strong></dt>
+<dd>NPM package management using <code>package.json</code></dd>
+<dt><strong>Python</strong></dt>
+<dd>Pip package management using <code>pyproject.toml</code><br>
+Always use virtual environments to isolate project-specific dependencies from a shared or base OS Python installation</dd>
+<dt><strong>Ruby</strong></dt>
+<dd>Bundle package management using <code>Gemfile</code><br>
+Always use virtual environments to isolate project-specific dependencies from a shared or base OS Ruby installation</dd>
+</dl>
+</div>
+<p>The build configuration file must be committed into source control, with a unique identifier for each dependency and a specific version. Using a dependency manifest with specific versions means:</p>
 <ul>
-<li><a href="https://docs.sonarqube.org/latest/user-guide/issues/" target="_blank" rel="noopener">SonarQube issue definitions</a></li>
-<li><a href="https://docs.sonarqube.org/latest/user-guide/metric-definitions/" target="_blank" rel="noopener">SonarQube metric definitions</a></li>
+<li>built artifacts are reproducable</li>
+<li>the configuration file may be used to detect dependencies that need upgrade</li>
 </ul>
+<h2 id="patching-schedule" tabindex="-1"><a class="header-anchor" href="#patching-schedule">Patching schedule</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Release Adoption Schedule</p>
+<p>The NHSBSA maintains a <a href="../tech-release-adoption-schedule/">Release Adoption Schedule</a> that specifies the versions of runtimes and key frameworks:</p>
+<ul>
+<li>Node.js</li>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Spring Cloud</li>
+<li>AWS Lambdas (Node and Java)</li>
+<li>Ruby</li>
+<li>PostgreSQL</li>
+</ul>
+</div>
+<p>Runtimes and application dependencies should be upgraded in a regular release cycle according to this schedule:</p>
+<div class="card">
+<dl>
+<dt><strong>PATCH</strong></dt>
+<dd>
+<p>Upgrade within <strong>1 month</strong> of release</p>
+</dd>
+<dt><strong>MINOR</strong></dt>
+<dd>
+<p>Upgrade within <strong>three months</strong> of release</p>
+<p>Consider avoiding MINOR version upgrades until the first patch release or 1 month after release. i.e. prefer <code>x.y.1</code> over <code>x.y.0</code></p>
+</dd>
+<dt><strong>MAJOR</strong></dt>
+<dd>
+<p>Upgrade within <strong>one year</strong> of release</p>
+<p>Consider avoiding MAJOR version upgrades until the first patch release or 3 months after release. i.e. prefer <code>x.0.1</code> over <code>x.0.0</code></p>
+<p>Early adopters of major releases should keep an active view of all patch releases.</p>
+</dd>
+</dl>
+</div>
+<h2 id="route-to-live" tabindex="-1"><a class="header-anchor" href="#route-to-live">Route to live</a></h2>
+<p>Dependency and Runtime patching MUST follow the standard route to live:</p>
+<ul>
+<li>Local development environments</li>
+<li>CI/CD build environment</li>
+<li>Test environments<br>
+Note: The term ‘test environment’ should encompass acceptance, UAT, performance and staging environments</li>
+<li>Production</li>
+</ul>
+<h2 id="non-compliance" tabindex="-1"><a class="header-anchor" href="#non-compliance">Non-compliance</a></h2>
+<p>Non-compliance to this patching guidance should be recorded as technical debt and a risk to the business.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -136,7 +271,7 @@ Test coverage is measured through unit and integration testing</li>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-quality-assurance&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Ftech-patching&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -152,10 +287,10 @@ Test coverage is measured through unit and integration testing</li>
       Published: <time datetime="2024-01-13T14:52:36.000Z">13 January 2024</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
+      Last reviewed: <time datetime="2024-01-14T00:00:00.000Z">14 January 2024</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
+      Next review due: <time datetime="2025-01-14T00:00:00.000Z">14 January 2025</time>
     </p>
 </div>
 
