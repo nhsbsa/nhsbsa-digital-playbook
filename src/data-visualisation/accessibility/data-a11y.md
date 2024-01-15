@@ -8,7 +8,7 @@ order: 2
 ---
 ## What is data accessibility?  
 
-Low numeracy affects half of the adults in the UK. About 1 in 20 people have dyscalculia in the UK. As a comparison, about 1 in 10 to 20 people have dyslexia. Many live with the limitations of not understanding numbers and the impact that has on everyday life, like managing money, arranging appointments, doing calculations and telling the time.  
+Low numeracy affects half of the adults in the UK, and about 1 in 20 people have dyscalculia in the UK. As a comparison, about 1 in 10 to 20 people have dyslexia. Many live with the limitations of not understanding numbers and the impact that has on everyday life, like managing money, arranging appointments, doing calculations and telling the time.  
 
 Conditions that specifically relate to data include:
 

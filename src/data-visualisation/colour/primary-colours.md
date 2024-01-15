@@ -16,11 +16,25 @@ Use a plain background, NHS Grey 5 (#F0F4F5) should be used.
 
 #F0F4F5:  
   
-![Rectangle of block colour in the shade #f0f4f5 NHS Grey 5, light grayish cyan](../images/hex-f0f4f5.png)  
+![Rectangle of block colour in the shade #F0F4F5 NHS Grey 5, light grayish cyan](../images/hex-f0f4f5.png)  
   
 NHS White (#FFFFFF) is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
 
 ![Horizontal rectangular block of the colour NHS White with the name 'NHS White' as well as the CMYK, RGB and Hex codes for the colour all written below in black text on a white background](../images/nhs-white.png)
+
+### Border  
+  
+Each visualisation and filter should have a border of NHS Grey 4 (#D8DDE0).  
+  
+![Example dashboard page with each visualisation outlined in the shade #D8DDE0 NHS Grey 4, light greyish blue.](../images/border-example.png)  
+  
+### Tooltips  
+  
+Each tooltip should have a label text colour of NHS Pale Grey (#E8EDEE), a value text colour of NHS White (#FFFFFF), and a Background colour of NHS Dark Grey (#425563).  
+  
+![Screenshot showing the 'Customize theme' pane in Power BI. On the left is a list from top to bottom: 'Name and colors', 'Test', Visuals', 'Page', 'Filter pane'. 'Visuals' is highlighted to show it has been selected. To the right of this is a central column with another vertical list. From top to bottom the list is: 'Background', 'Border', 'Header', 'Tooltip'. 'Tooltip' is selected. To the right again is the third section of the pane, with the title 'Tooltip' and beneath this are three dropdown boxes for selecting a colour for each feature of the tooltip. The top dropdown is for selcting the 'Label text color'. The second is for 'Value text color'. The third, bottom, dropdown is for 'Background color'. The colours selected are #E8EDEE, #FFFFFF, and #425563 respectively.](../images/tooltip-customize.png)  
+  
+![Vertical bar graph with the title 'Croydon has the most monetary transactions out of all suppliers'. The bar representing 'Croydon' has a tooltip pointing to it, which has a background colour of #425563 NHS Dark Grey, labels reading 'Supplier' and 'Sum of transaction amount (£)' both in #E8EDEE NHS Pale Grey, and values of 'Croydon' and '£187,420.00' both in #FFFFFF NHS White.](../images/tooltip-croydon.png)
 
 ::: details Source - NHS digital service manual
 
