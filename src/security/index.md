@@ -3,7 +3,7 @@ layout: article
 title: "Security"
 description: "Security is everyone's responsibility"
 tags: [home, dev-security]
-order: 
+order:
   dev-security: 1
   home: 10
 related:
