@@ -7,6 +7,11 @@ module.exports = function(eleventyConfig) {
   //collections
   require('./lib/_javascripts/statusCollections')(eleventyConfig);
 
+  // review issues in eleventy build
+  // eleventyConfig.on('eleventy.after', async ({ dir }) => {
+  //   require('./lib/_javascripts/reviewNotify')(eleventyConfig, dir);
+  // })
+
   //data
   const yaml = require("js-yaml");
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));

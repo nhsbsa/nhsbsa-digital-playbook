@@ -27,8 +27,14 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          BASE_URL=${{ vars.BASE_URL }} npm run build          
-
+          BASE_URL=${{ vars.BASE_URL }} npm run build     
+      
+      - name: Review issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BASE_URL=${{ vars.BASE_URL }} npm run review-issues
+         
       - name: Deploy GH Pages
         if: contains(github.ref, 'main')
         uses: peaceiris/actions-gh-pages@v3
