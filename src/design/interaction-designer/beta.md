@@ -3,7 +3,7 @@ layout: article
 title: "Interaction design at Beta"
 description: "What does an Interaction Designer do at Beta?"
 tags: interaction-design
-order: 4
+order: 5
 ---
 
 ## What is expected from an Interaction Designer in Beta

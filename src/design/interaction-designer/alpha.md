@@ -3,7 +3,7 @@ layout: article
 title: "Interaction design at Alpha"
 description: "What does an Interaction Designer do at Alpha?"
 tags: interaction-design
-order: 3
+order: 4
 ---
 
 ## What is expected from an Interaction Designer in Alpha

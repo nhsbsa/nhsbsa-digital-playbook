@@ -73,7 +73,7 @@ Prototypes are design artefacts, not an exact representation of the fully develo
 
 ### Skills matrix
 
-| Skill level | Junior Designer | Midweight Interaction Designer | Senior Interaction Designer |
+| | Junior Designer | Midweight Interaction Designer | Senior Interaction Designer |
 | ----------- | ----------- | ----------- | ----------- |
 | **Agile working** | Awareness | Working | Practitioner |
 | **Communicating information** | Working | Practitioner | Practitioner |
