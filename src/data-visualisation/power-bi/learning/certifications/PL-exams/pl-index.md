@@ -2,7 +2,7 @@
 layout: collection
 title: "Microsoft Power Platforms certifications (PL)"
 description: "Overview of the Microsoft Power Platforms certifications relevant to the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: pbi-learning
 order: 10
 collection_tag: pl-certs

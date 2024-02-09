@@ -2,7 +2,7 @@
 layout: article
 title: "Power BI colour palette"
 description: "Standards for using the NHSBSA colour palette in Power BI"
-status: DRAFT
+status: REVIEW
 tags: pbi-standards
 order: 10
 ---

@@ -2,7 +2,7 @@
 layout: article
 title: "Dashboard non-functional requirements (NFRs)"
 description: "Guidance for drafting and monitoring non-functional requirements"
-status: DRAFT
+status: REVIEW
 tags: data
 order: 60
 ---

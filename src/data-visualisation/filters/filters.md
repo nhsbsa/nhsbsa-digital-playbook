@@ -2,7 +2,7 @@
 layout: article
 title: "Filters"
 description: "Standards for using filters at the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: data
 order: 80
 ---

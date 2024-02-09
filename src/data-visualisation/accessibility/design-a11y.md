@@ -2,7 +2,7 @@
 layout: article
 title: "Designing for accessibility"
 description: "How do we design for accessibiliity at the NHSBSA?"
-status: DRAFT
+status: REVIEW
 tags: accessible-data
 order: 3
 ---

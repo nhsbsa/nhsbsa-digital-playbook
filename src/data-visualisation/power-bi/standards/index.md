@@ -2,7 +2,7 @@
 layout: collection
 title: "Power BI Standards"
 description: "Standards for using Power BI at the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: power-bi
 order: 1
 collection_tag: pbi-standards

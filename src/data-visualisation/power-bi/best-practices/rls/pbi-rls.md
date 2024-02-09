@@ -2,7 +2,7 @@
 layout: article
 title: "Row Level Security (RLS)"
 description: "Guidance for implementing Power BI Row Level Security"
-status: DRAFT
+status: REVIEW
 tags: pbi-best-practice
 order: 30
 ---

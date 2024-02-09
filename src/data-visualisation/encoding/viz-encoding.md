@@ -2,7 +2,7 @@
 layout: article
 title: "Visual encoding"
 description: "Guidance for visual encoding including pre-attentive attributes and Gestalt principles"
-status: DRAFT
+status: REVIEW
 tags: data
 order: 120
 ---

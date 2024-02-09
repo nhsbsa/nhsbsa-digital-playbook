@@ -2,7 +2,7 @@
 layout: article
 title: "Chart types"
 description: "Standards and guidance for choosing appropriate chart types"
-status: DRAFT
+status: REVIEW
 tags: data
 order: 10
 ---

@@ -2,7 +2,7 @@
 layout: article
 title: "Workspaces"
 description: "Overview of Power BI workspaces"
-status: DRAFT
+status: REVIEW
 tags: pbi-best-practice
 order: 40
 ---

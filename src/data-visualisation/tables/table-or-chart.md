@@ -2,7 +2,7 @@
 layout: article
 title: "Table or chart?"
 description: "Guidance for when it is most appropriate to use a table over a chart"
-status: DRAFT
+status: REVIEW
 tags: dv-table
 order: 2 
 ---

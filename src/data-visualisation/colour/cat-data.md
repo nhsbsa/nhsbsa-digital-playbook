@@ -2,7 +2,7 @@
 layout: article
 title: "Categorical Data"
 description: "Colours used for categorical data at the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: dv-colour
 order: 3
 ---

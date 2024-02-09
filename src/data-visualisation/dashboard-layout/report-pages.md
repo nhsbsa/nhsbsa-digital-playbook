@@ -2,7 +2,7 @@
 layout: article
 title: "Layout of a dashboard: Reporting"
 description: "Overview of the report pages to include in NHSBSA reports"
-status: DRAFT
+status: REVIEW
 tags: dv-dashboard-layout
 order: 2
 ---

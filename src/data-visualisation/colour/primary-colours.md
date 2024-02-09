@@ -2,7 +2,7 @@
 layout: article
 title: "Primary Colours"
 description: "Overview of the main colours that should be used at the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: dv-colour
 order: 2
 ---

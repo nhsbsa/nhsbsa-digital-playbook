@@ -2,7 +2,7 @@
 layout: collection
 title: "Microsoft Azure certifications (AI)"
 description: "Overview of the Microsoft Azure certifications relevant to the NHSBSA"
-status: DRAFT
+status: REVIEW
 tags: pbi-learning
 order: 30
 collection_tag: ai-certs
