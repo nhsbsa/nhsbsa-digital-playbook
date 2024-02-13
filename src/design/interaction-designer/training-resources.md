@@ -21,7 +21,7 @@ This framework can be used by people to:
 
 Each role level in the framework includes a list of required skills. Each skill is assigned one of [4 skill levels](https://ddat-capability-framework.service.gov.uk/#skills-in-this-framework), reflecting the required proficiency: awareness, working, practitioner or expert.
 
-## Interaction Designer (Band 6)
+## Interaction Designer
 
 | Skills                              | Suggested Reading / Training |
 |-------------------------------------|------------------------------|
@@ -37,7 +37,7 @@ Each role level in the framework includes a list of required skills. Each skill 
 | <strong>User focus</strong><br>Skill Level: Practitioner | <ul><li>[The Ultimate Guide to Usability and UX](https://www.udemy.com/course/ultimate-guide-to-ux/)</li><li>[Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891)</li><li>[User needs](https://www.youtube.com/watch?v=1y5QMdjiEU4&list=PLoe8p5EhqZ2LRjMft19hraKzm5c8ldOiM&index=3)</li></ul> |
 | <strong>Working within constraints</strong><br>Skill Level: Working | <ul><li>[A brief history of the Service Standard](https://medium.com/@vickytnz/a-brief-history-of-the-service-standard-5047c6c41054)</li><li>[Gov.UK Service Standard](https://www.gov.uk/service-manual/service-standard)</li><li>[NHS.UK Service Standard](https://service-manual.nhs.uk/standards-and-technology/service-standard)</li><li>[Designing for Service Assurance](https://www.youtube.com/watch?v=uq5QP_yxb4E&list=PLoe8p5EhqZ2LRjMft19hraKzm5c8ldOiM&index=15)</li><li>[Understanding the Service Standard](https://apply-the-service-standard.education.gov.uk/service-standard)</li></ul> |
 
-## Interaction Designer (Band 7)
+## Senior Interaction Designer
 
 | Skills                              | Suggested Reading / Training |
 |-------------------------------------|------------------------------|
