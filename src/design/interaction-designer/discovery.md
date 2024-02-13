@@ -3,7 +3,7 @@ layout: article
 title: "Interaction design at Discovery"
 description: "What does an Interaction Designer do at Discovery?"
 tags: interaction-design
-order: 2
+order: 3
 ---
 
 ## What is expected from an Interaction Designer in Discovery

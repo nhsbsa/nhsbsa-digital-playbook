@@ -3,7 +3,7 @@ layout: article
 title: "Prototypes"
 description: "When and how to use prototypes"
 tags: interaction-design
-order: 6
+order: 7
 ---
 
 ## What are prototypes?

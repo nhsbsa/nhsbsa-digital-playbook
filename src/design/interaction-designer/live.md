@@ -3,7 +3,7 @@ layout: article
 title: "Interaction design during Live"
 description: "What does an Interaction Designer do at Live?"
 tags: interaction-design
-order: 5
+order: 6
 ---
 
 ## What is expected from an Interaction Designer in Live
