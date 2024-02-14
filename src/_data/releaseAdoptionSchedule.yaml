@@ -1,5 +1,13 @@
 ---
 nodejs:
+  - version: 24
+    release: 2025-04-22
+    adopt: 2025-10-28
+    decommission: 2028-04-30
+  - version: 22
+    release: 2024-04-23
+    adopt: 2024-10-29
+    decommission: 2027-04-30
   - version: 20
     release: 2023-04-18
     adopt: 2023-10-24
@@ -40,6 +48,10 @@ nodejs_aws_lambda:
     adopt: 2020-05-18
     decommission: 2023-03-31
 java:
+  - version: 25
+    release: 2025-09-01
+    adopt: 2026-03-01
+    decommission: 2030-09-01
   - version: 21
     release: 2023-09-01
     adopt: 2024-03-01
