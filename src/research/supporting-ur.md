@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Observing and note taking in user research sessions "
-description: "How you can support by oberserving and note taking"
+description: "How you can support by observing and note taking"
 tags: research
 order: 7
 ---
