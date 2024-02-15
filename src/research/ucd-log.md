@@ -31,7 +31,7 @@ So that becomes, for example:
 
 ### Who worked on the research
 
-Detail the names and email addresses pof who worked on the piece of work you are writing about. This includes members of the ReOps and design team. This is to ensure that there is an accurate audit trail of who worked on what research and when, so that there is someone to contact if any questions arise.
+Detail the names and email addresses of who worked on the piece of work you are writing about. This includes members of the ReOps and design team. This is to ensure that there is an accurate audit trail of who worked on what research and when, so that there is someone to contact if any questions arise.
 
 ### Brief background and purpose of the research
 
