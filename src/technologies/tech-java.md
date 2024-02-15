@@ -110,5 +110,5 @@ We also use other well known libraries:
 [junit5]: <https://junit.org/junit5/docs/current/user-guide/>
 [maven_surefire]: <https://maven.apache.org/surefire/maven-surefire-plugin/>
 [maven_failsafe]: <https://maven.apache.org/surefire/maven-failsafe-plugin/>
-[mockito]: <https://site.mockito.org/>
+[mockito]: <https://github.com/mockito/mockito>
 [springtest]: <https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html>
