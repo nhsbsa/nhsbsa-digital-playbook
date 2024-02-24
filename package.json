@@ -28,6 +28,7 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@toycode/markdown-it-class": "^1.2.4",
+    "@nhsbsa/cookie-consent-component": "0.0.6",
     "eleventy-auto-cache-buster": "^0.3.0",
     "eleventy-plugin-dart-sass": "^1.0.3",
     "eleventy-plugin-external-links": "^1.1.2",
@@ -55,8 +56,5 @@
     "nhsuk-frontend": "^8.0.2",
     "regexpp": "^3.2.0",
     "text-table": "^0.2.0"
-  },
-  "dependencies": {
-    "@nhsbsa/cookie-consent-component": "0.0.6"
   }
 }
