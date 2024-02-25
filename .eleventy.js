@@ -60,6 +60,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"lib/_netlify": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/nhsuk-frontend/assets"});
   eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/dist/*.js": "/javascripts"});
+  eleventyConfig.addPassthroughCopy({"node_modules/@nhsbsa/cookie-consent-component/dist/*.js": "/javascripts"});
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
   eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
   eleventyConfig.addPassthroughCopy("src/**/*.png");
