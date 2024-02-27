@@ -2,9 +2,8 @@
 layout: article
 title: "Training & Resources"
 description: "When and how to use prototypes"
-status: DRAFT
 review:
-    last_reviewed_date: 2024-02-13
+    last_reviewed_date: 2024-02-27
     review_cycle: ANNUAL
 tags: interaction-design
 order: 8
