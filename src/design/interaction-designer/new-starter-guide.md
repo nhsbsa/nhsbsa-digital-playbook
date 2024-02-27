@@ -2,9 +2,8 @@
 layout: article
 title: "New starter guide"
 description: "Where to start as a new Interaction Designer within the NHS BSA?"
-status: DRAFT
 review:
-    last_reviewed_date: 2024-02-09
+    last_reviewed_date: 2024-02-27
     review_cycle: ANNUAL
 tags: interaction-design
 order: 2
