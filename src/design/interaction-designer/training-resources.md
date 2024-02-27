@@ -2,9 +2,8 @@
 layout: article
 title: "Training & Resources"
 description: "When and how to use prototypes"
-status: DRAFT
 review:
-    last_reviewed_date: 2024-02-13
+    last_reviewed_date: 2024-02-27
     review_cycle: ANNUAL
 tags: interaction-design
 order: 8
@@ -21,7 +20,7 @@ This framework can be used by people to:
 
 Each role level in the framework includes a list of required skills. Each skill is assigned one of [4 skill levels](https://ddat-capability-framework.service.gov.uk/#skills-in-this-framework), reflecting the required proficiency: awareness, working, practitioner or expert.
 
-## Interaction Designer (Band 6)
+## Interaction Designer
 
 | Skills                              | Suggested Reading / Training |
 |-------------------------------------|------------------------------|
@@ -32,12 +31,12 @@ Each role level in the framework includes a list of required skills. Each skill 
 | <strong>Evidence and context-based design</strong><br>Skill Level: Practitioner | |
 | <strong>Leadership and guidance</strong><br>Skill Level: Working | <ul><li>[Being a UX Leader](https://www.nngroup.com/courses/ux-leadership-skills-for-all/)</li><li>[The Simplest Way to Get Buy-In for UX](https://www.youtube.com/watch?v=dWUdrShjwlg)</li><li>[How to Sell UX](https://www.youtube.com/watch/2pou-FnTaFM)</li><li>[Building trust in UX](https://www.youtube.com/watch/UW8SQr6cA7o)</li></ul> |
 | <strong>Prototyping</strong><br>Skill Level: Practitioner | |
-| <strong>Prototyping in code</strong><br>Skill Level: Practitioner | <ul><li>[Gov.UK Prototype Training Bootcamp](https://prototypekitcourse.com/)</li><li>[Prototyping in the browser for content designer](https://crocstar.com/prototyping-in-the-browser-for-content-designers-training)</li><li>[Gov.UK Prototyping - Tutorials & Guides](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides)</li><li>[NHS.UK Prototyping - Tutorials & Guides](https://nhsuk-prototype-kit.azurewebsites.net/docs/how-tos)</li><li>[More efficient prototyping in code](https://medium.com/gov-design/more-efficient-prototyping-with-the-gov-uk-prototype-kit-step-by-step-84ea2832549a)</li></ul> |
+| <strong>Prototyping in code</strong><br>Skill Level: Practitioner | <ul><li>[Gov.UK Prototype Training Bootcamp](https://prototypekitcourse.com/)</li><li>[Prototyping in the browser for content designer](https://crocstar.com/prototyping-in-the-browser-for-content-designers-training)</li><li>[Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE)</li><li>[Gov.UK Prototyping - Tutorials & Guides](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides)</li><li>[NHS.UK Prototyping - Tutorials & Guides](https://nhsuk-prototype-kit.azurewebsites.net/docs/how-tos)</li><li>[More efficient prototyping in code](https://medium.com/gov-design/more-efficient-prototyping-with-the-gov-uk-prototype-kit-step-by-step-84ea2832549a)</li></ul> |
 | <strong>Strategic thinking</strong><br>Skill Level: Working | |
 | <strong>User focus</strong><br>Skill Level: Practitioner | <ul><li>[The Ultimate Guide to Usability and UX](https://www.udemy.com/course/ultimate-guide-to-ux/)</li><li>[Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891)</li><li>[User needs](https://www.youtube.com/watch?v=1y5QMdjiEU4&list=PLoe8p5EhqZ2LRjMft19hraKzm5c8ldOiM&index=3)</li></ul> |
 | <strong>Working within constraints</strong><br>Skill Level: Working | <ul><li>[A brief history of the Service Standard](https://medium.com/@vickytnz/a-brief-history-of-the-service-standard-5047c6c41054)</li><li>[Gov.UK Service Standard](https://www.gov.uk/service-manual/service-standard)</li><li>[NHS.UK Service Standard](https://service-manual.nhs.uk/standards-and-technology/service-standard)</li><li>[Designing for Service Assurance](https://www.youtube.com/watch?v=uq5QP_yxb4E&list=PLoe8p5EhqZ2LRjMft19hraKzm5c8ldOiM&index=15)</li><li>[Understanding the Service Standard](https://apply-the-service-standard.education.gov.uk/service-standard)</li></ul> |
 
-## Interaction Designer (Band 7)
+## Senior Interaction Designer
 
 | Skills                              | Suggested Reading / Training |
 |-------------------------------------|------------------------------|
