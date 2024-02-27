@@ -153,4 +153,4 @@ As an Interaction Designer, you play an important part in making sure a service 
 
 As part of your role, there are [skills required on certain topics](../about-role/#skills-matrix). These skills as based off the [Government Digital and Data Profession Capability Framework](https://ddat-capability-framework.service.gov.uk/interaction-designer.html). 
 
-For suggested further reading / training on these areas, visit our [training and resources page](#). 
+For suggested further reading / training on these areas, visit our [training and resources page](../training-resources). 
