@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Training & Resources"
-description: "When and how to use prototypes"
+description: "Suggested Interaction Design training and resources"
 review:
     last_reviewed_date: 2024-02-27
     review_cycle: ANNUAL
