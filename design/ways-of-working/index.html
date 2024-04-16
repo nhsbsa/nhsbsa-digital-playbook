@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="How should a User Researcher, Service Designer, Interaction Designer and Content Designer work together?">
+  <meta name="robots" content="noindex">
+  
+  <title>
+UCD - Ways of Working - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+  </title>
+
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ562NM01Z');
+    </script>
+
+  
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+  
+  <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfbae676351d5e4c1afc6f07" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def063cff84af6f9960f9f2ac">
+  <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon-192x192.png?v=43924bfe6c7e0f6c0996ee28ad6a5883">
+
+  <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-144x144.png?v=cf49858724925dbcfe5f3fa5c90aee0b">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/smalltile-70x70.png?v=29f75b06cf758e8be6b5646317ff3bff">
+  <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-150x150.png?v=89688d93af5bdc0778ec7e4c7b443ac2">
+  <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d6b6a7250a807d6eec5de">
+  <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff46e8a003d4de1f2c98be7">
+
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/design/ways-of-working/">
+  <meta property="og:site_name" content="nhsbsa.nhs.uk">
+  <meta property="og:description" content="How should a User Researcher, Service Designer, Interaction Designer and Content Designer work together?">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630ba3e3df184c646ae3808">
+  <meta property="og:title" content="UCD - Ways of Working - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=7194271ccaf658047b91f9eae7dd13f8" media="all" rel="stylesheet" type="text/css" >
+
+</head>
+
+<body class="">
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  
+    
+<div id="nhsuk-cookie-banner" data-nosnippet="true" >
+    <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
+        <div class="nhsuk-width-container app-width-container">
+                <h2>NHSBSA Digital, Data and Technology Playbook</h2>
+                    <p>We've put some small files called cookies on your device to make our site work.</p>
+                    <p>We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.</p>
+                    <p>Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">read more about our cookies</a> before you choose.</p>
+
+            <ul>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept_analytics" href="#">I&#39;m OK with analytics cookies</button>
+                </li>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept" href="#">Do not use analytics cookies</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nhsuk-success-banner" id="nhsuk-cookie-confirmation-banner" style="display:none;">
+        <div class="nhsuk-width-container">
+            <p id="nhsuk-success-banner__message">You can change your cookie settings at any time using <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">our cookies page</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+    <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+    
+
+
+<header class="nhsuk-header nhsuk-header--organisation" role="banner">
+  
+  <div class="nhsuk-header__container">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only">      <a class="nhsuk-header__link" href="/nhsbsa-digital-playbook/" aria-label="Business Services Authority  Digital, Data and Technology playbook homepage">  <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+
+        <span class="nhsuk-organisation-name">Business Services Authority</span>
+<span class="nhsuk-organisation-descriptor">Digital, Data and Technology playbook</span>      </a>    </div>
+    </div>
+    
+
+</header>
+
+<div class="nhsuk-width-container app-width-container">
+    <main class="nhsuk-main-wrapper app-main-wrapper" id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container app-width-container">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#roles-and-accountabilities">Roles and Accountabilities</a>
+            
+                <ol>
+                    
+                    <li><a href="#user-researcher">User Researcher</a>
+            		</li>
+
+                    <li><a href="#service-designer">Service Designer</a>
+            		</li>
+
+                    <li><a href="#interaction-designer">Interaction Designer</a>
+            		</li>
+
+                    <li><a href="#content-designer">Content Designer</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#collaboration-expectations">Collaboration Expectations</a>
+            
+                <ol>
+                    
+                    <li><a href="#what-a-user-researcher-needs-from-a-service-designer-interaction-designer-and-content-designer">What a User Researcher needs from a Service Designer, Interaction Designer and Content Designer</a>
+            		</li>
+
+                    <li><a href="#what-a-service-designer-needs-from-a-user-researcher-interaction-designer-and-content-designer">What a Service Designer needs from a User Researcher, Interaction Designer and Content Designer</a>
+            		</li>
+
+                    <li><a href="#what-an-interaction-designer-needs-from-a-user-researcher-service-designer-and-content-designer">What an Interaction Designer needs from a User Researcher, Service Designer and Content Designer</a>
+            		</li>
+
+                    <li><a href="#what-a-content-designer-needs-from-a-user-researcher-service-designer-and-interaction-designer">What a Content Designer needs from a User Researcher, Service Designer and Interaction Designer</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#key-activities-and-deliverables">Key Activities and Deliverables</a>
+            
+                <ol>
+                    
+                    <li><a href="#user-researcher-1">User Researcher</a>
+            		</li>
+
+                    <li><a href="#service-designer-1">Service Designer</a>
+            		</li>
+
+                    <li><a href="#interaction-designer-1">Interaction Designer</a>
+            		</li>
+
+                    <li><a href="#content-designer-1">Content Designer</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#decision-making-process">Decision-Making Process</a>
+            		</li>
+
+                    <li><a href="#continuous-improvement">Continuous Improvement</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
+
+      <div class="app-pane__main-content">
+        <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
+  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+  </svg>
+  Go back</a>
+</div>
+
+      
+        <div class="nhsbsa-article-header">
+          <h1 class="nhsuk-heading-xl">
+            UCD - Ways of Working
+          </h1>
+            <strong class="nhsuk-tag nhsuk-tag--grey">
+  DRAFT
+</strong>
+
+
+        </div>
+      
+
+<h2 id="roles-and-accountabilities" tabindex="-1"><a class="header-anchor" href="#roles-and-accountabilities">Roles and Accountabilities</a></h2>
+<h3 id="user-researcher" tabindex="-1"><a class="header-anchor" href="#user-researcher">User Researcher</a></h3>
+<ul>
+<li>Accountable for conducting user research activities to gather insights into user behaviours, needs, and preferences.</li>
+<li>Responsible for analysing research findings and communicating actionable insights to inform design decisions.</li>
+<li>Focuses on empathy with users, uncovering user needs, and validating design hypotheses.</li>
+</ul>
+<h3 id="service-designer" tabindex="-1"><a class="header-anchor" href="#service-designer">Service Designer</a></h3>
+<ul>
+<li>Accountable for understanding the overall service ecosystem, including user needs, pain points, and touchpoints.</li>
+<li>Responsible for defining the end-to-end user journey and identifying opportunities for improvement.</li>
+<li>Focuses on strategic planning, stakeholder alignment, and business impact.</li>
+</ul>
+<h3 id="interaction-designer" tabindex="-1"><a class="header-anchor" href="#interaction-designer">Interaction Designer</a></h3>
+<ul>
+<li>Accountable for designing intuitive and engaging user interfaces across digital and physical touchpoints.</li>
+<li>Responsible for translating user insights and requirements into interactive prototypes and design specifications.</li>
+<li>Focuses on usability, accessibility, and interaction design principles.</li>
+</ul>
+<h3 id="content-designer" tabindex="-1"><a class="header-anchor" href="#content-designer">Content Designer</a></h3>
+<ul>
+<li>Accountable for creating and managing content across various touchpoints, ensuring consistency, clarity, and alignment with user needs.</li>
+<li>Responsible for crafting messaging, copy, and visual content that resonates with users and supports their tasks and goals.</li>
+<li>Focuses on language, tone, and storytelling to enhance the overall user experience.</li>
+</ul>
+<h2 id="collaboration-expectations" tabindex="-1"><a class="header-anchor" href="#collaboration-expectations">Collaboration Expectations</a></h2>
+<ul>
+<li>User Researcher, Service Designer, Interaction Designer and Content Designer will collaborate closely throughout the design process to ensure a seamless and cohesive user experience.</li>
+<li>Regular communication and information sharing are essential to maintain alignment and address any emerging issues or challenges.</li>
+<li>All four roles will actively participate in design reviews, user testing sessions, and stakeholder workshops to gather feedback and iterate on designs.</li>
+</ul>
+<h3 id="what-a-user-researcher-needs-from-a-service-designer-interaction-designer-and-content-designer" tabindex="-1"><a class="header-anchor" href="#what-a-user-researcher-needs-from-a-service-designer-interaction-designer-and-content-designer">What a User Researcher needs from a Service Designer, Interaction Designer and Content Designer</a></h3>
+<ul>
+<li>While the User Researcher will lead the planning and execution of all research sessions, there should always be support from at least one of Service Designer, Interaction Designer, and Content Designer in documenting observations from these sessions, including tasks like note-taking.</li>
+<li>Support from the Service Designer and Interaction Designer in translating user research findings into actionable design recommendations and improvements.</li>
+<li>Collaboration on prioritizing research objectives and aligning research activities with the overall service strategy and objectives.</li>
+<li>Access to design artifacts and prototypes from the Interaction Designer to facilitate user feedback and validation during research activities.</li>
+</ul>
+<h3 id="what-a-service-designer-needs-from-a-user-researcher-interaction-designer-and-content-designer" tabindex="-1"><a class="header-anchor" href="#what-a-service-designer-needs-from-a-user-researcher-interaction-designer-and-content-designer">What a Service Designer needs from a User Researcher, Interaction Designer and Content Designer</a></h3>
+<ul>
+<li>Clear and concise communication of design decisions, rationale, and implications for the overall service experience.</li>
+<li>High-Fidelity prototypes and design specifications from the Interaction Designer that accurately represent the intended user interactions and functionalities.</li>
+<li>User research findings and insights from the User Researcher that inform service design decisions and help prioritize design enhancements.</li>
+</ul>
+<h3 id="what-an-interaction-designer-needs-from-a-user-researcher-service-designer-and-content-designer" tabindex="-1"><a class="header-anchor" href="#what-an-interaction-designer-needs-from-a-user-researcher-service-designer-and-content-designer">What an Interaction Designer needs from a User Researcher, Service Designer and Content Designer</a></h3>
+<ul>
+<li>Comprehensive understanding of user research findings, personas etc… from the User Researcher to inform interaction design decisions.</li>
+<li>Alignment on the overall service vision, goals, and priorities from the Service Designer to ensure consistency and coherence across touchpoints.</li>
+<li>Collaboration on defining user flows, wireframes, and interaction patterns that support the desired service outcomes.</li>
+</ul>
+<h3 id="what-a-content-designer-needs-from-a-user-researcher-service-designer-and-interaction-designer" tabindex="-1"><a class="header-anchor" href="#what-a-content-designer-needs-from-a-user-researcher-service-designer-and-interaction-designer">What a Content Designer needs from a User Researcher, Service Designer and Interaction Designer</a></h3>
+<ul>
+<li>Collaboration on understanding user needs, preferences, and behaviours to tailor content and messaging accordingly.</li>
+<li>Access to design artifacts and prototypes from the Interaction Designer and Service Designer to ensure content integration and alignment with the overall user experience.</li>
+<li>Involvement in user research activities conducted by the User Researcher to gather insights and validate content decisions.</li>
+</ul>
+<h2 id="key-activities-and-deliverables" tabindex="-1"><a class="header-anchor" href="#key-activities-and-deliverables">Key Activities and Deliverables</a></h2>
+<h3 id="user-researcher-1" tabindex="-1"><a class="header-anchor" href="#user-researcher-1">User Researcher</a></h3>
+<ul>
+<li>Research plans outlining objectives, methodologies, and participant recruitment criteria.</li>
+<li>Research findings reports including insights, observations, and recommendations.</li>
+<li>User personas, journey maps, and other artifacts synthesizing research findings for design teams.</li>
+</ul>
+<h3 id="service-designer-1" tabindex="-1"><a class="header-anchor" href="#service-designer-1">Service Designer</a></h3>
+<ul>
+<li>Service blueprints outlining the end-to-end user journey and touchpoints.</li>
+<li>Stakeholder presentations and workshops to communicate service vision and strategy.</li>
+</ul>
+<h3 id="interaction-designer-1" tabindex="-1"><a class="header-anchor" href="#interaction-designer-1">Interaction Designer</a></h3>
+<ul>
+<li>Prototypes, user flows and design mock-ups for digital and physical interfaces.</li>
+<li>Design specifications and style guides to ensure consistency and scalability.</li>
+<li>Usability testing reports and recommendations for improving interaction design.</li>
+</ul>
+<h3 id="content-designer-1" tabindex="-1"><a class="header-anchor" href="#content-designer-1">Content Designer</a></h3>
+<ul>
+<li>Content strategy documents outlining messaging, tone, and content requirements.</li>
+<li>Content creation and management across various touchpoints, including websites, apps, and marketing materials.</li>
+<li>Content audits and optimizations to ensure alignment with user needs and service objectives.</li>
+</ul>
+<h2 id="decision-making-process" tabindex="-1"><a class="header-anchor" href="#decision-making-process">Decision-Making Process</a></h2>
+<ul>
+<li>Decisions related to overall service strategy, user needs, and business objectives will involve all four roles, with input from relevant stakeholders e.g. Product Owners</li>
+<li>Design decisions specific to interaction design, usability, content, and aesthetics will be collaboratively made based on user insights provided by the User Researcher and alignment with the service vision defined by the Service Designer.</li>
+<li>All four roles will collaborate to evaluate options, weigh trade-offs, and prioritize design enhancements based on user feedback and project constraints.</li>
+</ul>
+<h2 id="continuous-improvement" tabindex="-1"><a class="header-anchor" href="#continuous-improvement">Continuous Improvement</a></h2>
+<ul>
+<li>User Researcher, Service Designer, Interaction Designer and Content Designer will regularly review and reflect on their collaboration process to identify areas for improvement and implement best practices.</li>
+<li>Feedback from users, stakeholders, and team members will be used to iterate on designs and refine the overall service experience over time.</li>
+<li>By adhering to these guidelines, the Service Designer, Interaction Designer, User Researcher and Content Designer can foster a collaborative and productive working relationship, resulting in user-centered and impactful service experiences.</li>
+</ul>
+
+        <hr>
+        <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
+        <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+          please share your suggestions.</p>
+
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        Github is an open forum where we collect feedback.</p>
+        
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=UCD&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdesign%2Fways-of-working&#39;%20" target="_blank" rel="noopener">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Suggest a change to this page</span>
+  </a>
+</div>
+
+
+
+        <div class="nhsbsa-article--date">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Published: <time datetime="2024-04-15T13:25:34.000Z">15 April 2024</time>
+    </p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </main>
+</div>
+
+    <footer role="contentinfo">
+  <div class="nhsuk-footer-container">
+    <div class="nhsuk-width-container app-width-container">
+      <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+				
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility">Accessibility</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+			<div class="nhsuk-ogl-footer">
+				<p class="nhsuk-ogl-footer--text">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
+				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+				</svg>
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				</p>
+			</div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=6c54c7949c1f063ec1dc32acd12a7776"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d4b24d75f5f341c554179"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3b9e0c2d0b68ce0117bcf"></script>
+
+</body>
+</html>
