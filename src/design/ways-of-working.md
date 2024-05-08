@@ -4,7 +4,6 @@ title: "UCD - Ways of Working"
 description: "How should a User Researcher, Service Designer, Interaction Designer and Content Designer work together?"
 tags: [design, research]
 order: 6
-status: DRAFT
 ---
 
 ## Roles and Accountabilities
