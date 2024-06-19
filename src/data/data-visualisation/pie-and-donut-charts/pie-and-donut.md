@@ -3,7 +3,7 @@ layout: article
 title: "Pie and donut charts"
 description: "Guidance for using pie and donut charts at the NHSBSA"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 90
 ---
 ## Pie charts  

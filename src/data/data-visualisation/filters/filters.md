@@ -3,7 +3,7 @@ layout: article
 title: "Filters"
 description: "Standards for using filters at the NHSBSA"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 80
 ---
 ## Filter purpose  

@@ -3,7 +3,7 @@ layout: article
 title: "Visual encoding"
 description: "Guidance for visual encoding including pre-attentive attributes and Gestalt principles"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 120
 ---
 ## Visual encoding  

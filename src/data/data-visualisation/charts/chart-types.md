@@ -3,7 +3,7 @@ layout: article
 title: "Chart types"
 description: "Standards and guidance for choosing appropriate chart types"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 10
 ---
 ## Choosing an appropriate chart type  

@@ -3,7 +3,7 @@ layout: article
 title: "Tooltips"
 description: "Standards for using tooltips at the NHSBSA"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 110
 ---
 ## What is a tooltip?  

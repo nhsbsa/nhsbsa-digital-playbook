@@ -3,7 +3,7 @@ layout: article
 title: "Decluttering and pulling focus"
 description: "Guidance on the importance of decluttering and pulling focus for data visualisation"
 status: REVIEW
-tags: data
+tags: data-viz-home
 order: 70
 ---
 ## Importance of decluttering  
