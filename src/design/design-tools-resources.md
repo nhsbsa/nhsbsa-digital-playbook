@@ -49,10 +49,9 @@ Depending on [certain criteria](https://www.gov.uk/service-manual/service-assess
 
 A Service Assessment normally takes place towards the end of a project phase e.g. 
 
-1. Discovery → Alpha 
-2. Alpha → Private Beta 
-3. Private Beta → Public Beta 
-4. Public Beta → Live.  
+1. Alpha transitioning into Private Beta 
+2. Private Beta transitioning into Public Beta 
+3. Public Beta transitioning into Live.  
 
 Your assessment will be run by a panel of experienced specialists from the digital community across various government departments. Panels are normally made up of 4 or 5 assessors, including a lead assessor, a user researcher, a designer and a technical lead. There might also be one or 2 observers, but they will not ask questions. 
 
@@ -74,7 +73,7 @@ If no session is planned, a session will run for designers to chat informally.
 
 [Code club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) was setup in 2020 with the aim of providing a safe learning space for team members to develop their coding and prototyping skills together. This space is open to any questions or advice anyone needs.
 
-Code club runs on the first Friday afternoon of every month at 2pm, although this can change when required.
+Code club runs on the last Friday afternoon of every month at 2pm, although this can change when required.
 
 To participate in live lessons as a host or to highlight a certain topic you would like to be covered, you can add the details to the confluence page.
 
