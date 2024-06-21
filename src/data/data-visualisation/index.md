@@ -2,7 +2,7 @@
 layout: article
 title: "Data visualisation standards"
 description: "Data visualisation standards at the NHSBSA"
-#status: DRAFT
+status: DRAFT
 tags: [data-home, data-viz-home]
 order:
   data-home: 2
