@@ -32,17 +32,17 @@ Therefore, we need to deliver services which convey numbers plainly and in a way
 The content design standards state how we should be presenting data. Some things we can use to help our users include:
 
 - removing unnecessary numbers - always try to round values up to a whole number, and get rid of decimal places unless it’s money
-- leaving lots of space, so that numbers don’t jump around so much on the screen for people with dyscalculia 
+- leaving lots of space, so that numbers don’t jump around so much on the screen for people with dyscalculia
 - involving people who struggle with numbers in the design process, from both within and outside the design team
 - explaining charts and the data involved (initially and throughout), to increase data literacy. Access to any calculations involved
-- breaking down and simplifying aspects where possible, suitable for all users
+- breaking down and simplifying aspects where possible, making them suitable for all users
 - highlighting important aspects/takeaways
 - putting things into perspective using data visualisation principles
 - removing jargon, simplifying language
 - using a suitable font size:
-* The body of the text should be size 12px. [Source - Accessible print publications][data 3] 
+* The body of printed text should be size 12px. [Source - Accessible print publications][data 3]
 * Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS Identity guidelines][data 4]
-- always following the appropriate hierarchy of titles in a page, this helps users of a screen reader navigate content quickly and easily  
+- always following the appropriate hierarchy of titles in a page, this helps users of a screen reader navigate content quickly and easily
 
 [data 1]: https://accessiblenumbers.com/  
 [data 2]: https://designnotes.blog.gov.uk/2022/11/28/designing-for-people-with-dyscalculia-and-low-numeracy/

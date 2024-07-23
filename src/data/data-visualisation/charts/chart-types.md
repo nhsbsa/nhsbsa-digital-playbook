@@ -14,8 +14,8 @@ In this section we will go through [four categories of chart types][chart 1]: co
   
 The [four main questions][chart 2] to help you decide which chart type to use are:
 
-- Do you want to display **composition** of something?
 - Do you want to **compare** values or show differences over time?
+- Do you want to display **composition** of something?
 - Do you want to better understand the **relationship** between two or more variables?
 - Do you want to show the **distribution** of your data?  
   
@@ -47,7 +47,7 @@ Stay away from attempting to compare more than four categories. Using four categ
   
 ![The 'comparison' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Comparison' is written at the base with a line splitting into two part. The left line is labelled 'among items' and the right line is labelled 'over time'. From the 'among items' line, the tree diagram forks again, with the left branch labelled 'two variables per item' and showing an example of a variable width chart. The right branch is labelled 'one variable per item' and this then splits into a left branch labelled 'many categories' with an example of a table or tables with embedded charts. the right branch is labelled 'few categories' and splita sgain to show two examples; one of a bar chart horizontal and one of a bar chart vertical. The 'over time' branch splits into 'many periods' and 'few periods'. The left 'Many periods' branch splits again into 'cyclical data', with an example of a 'circular area chart' and 'non-cyclical data', with an example of a 'line chart'. The 'few periods' branch also splits into two- 'single or few categories' with an example of 'bar chart vertical' and 'many categories' with an example of 'line chart'.](../images/comparison.png)  
 
-**Line charts**
+#### Line charts
   
 If you’re using a line chart:
 
@@ -56,7 +56,7 @@ If you’re using a line chart:
 - for more than one variable, use the [colour guidance](../../colour/index)
 - for multiple lines, where you need to pull focus onto one of the lines, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
   
-**Bar charts**
+#### Bar charts
   
 If you’re using a bar chart:
 
@@ -84,7 +84,7 @@ Some common composition visualisations used are:
 
 ![The 'Composition' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Composition' is written at the base with a line splitting into two parts. The left line is labelled 'Changing over time' and the right line is labelled 'Static'. From the 'Changing over time' line, the tree diagram forks again, with the left branch labelled 'Few periods' and the right branch is labelled 'Many periods'. The left branch splits into 'Only relative differences matter' with an example of a stacked 100% bar chart, and 'Relative and absolute differences matter' with an example of a stacked bar chart. The right 'Many periods' branch also splits into 'Only relative differences matter', but with an example of a stacked 100% area chart, and 'Relative and absolute differences matter' with an example of 'Stacked area chart'. The 'Static' branch split into four: 'Simple share of total', with the example 'Pie chart'; 'Accumulation or subtraction to total', with the example 'Waterfall chart'; 'Components of components', with the example 'Stacked 100% bar chart with subcomponents'; and 'Accumulation to total and absolute difference matters', with an example of 'Tree map'.](../images/composition.png)
 
-**Stacked bar charts**
+#### Stacked bar charts
 
 If you’re using a stacked bar chart:
 
@@ -98,7 +98,7 @@ If you’re using a stacked bar chart:
 
 :::  
   
-**Pie charts**
+#### Pie charts
   
 If you’re using a pie chart:
 
@@ -124,7 +124,7 @@ Some common distribution visualisations used are:
   
 ![The 'Distribution' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Distribution' is written at the base with a line splitting into two parts. The left line is labelled 'Single variable' and the right line is labelled 'Two variables'. The left branch splits into 'Few data points' on the left, with an example of 'Bar histogram', and 'Many data points' on the right, with an example of 'Line histogram'. The 'Two variables' branch goes directly to an example of 'Scatter plot'.](../images/distribution.png)  
 
-**Scatter charts**
+#### Scatter charts
   
 If you’re using a scatter chart:
 
@@ -155,7 +155,7 @@ Some common geospatial visualisations used are:
   
 ### Infographics
   
-Infographics, although not a specific type of visualisation itself, are often used to tell a story, and can used any visualisation mentioned. The aim of an infographic is to quickly pull focus to a user. Infographics, although a type of data visualisation are not always accurate and can be sometimes simplified for the purpose of an infographic therefore it is always important to be mindful of any assumptions or biases infographics can cause.  
+Infographics, although not a specific type of visualisation itself, are often used to tell a story, and can used any visualisation method. The aim of an infographic is to quickly pull focus to a user. Infographics, although a type of data visualisation are not always accurate and can be sometimes simplified for the purpose of an infographic therefore it is always important to be mindful of any assumptions or biases infographics can cause.  
   
 If you’re using an infographic:
 
