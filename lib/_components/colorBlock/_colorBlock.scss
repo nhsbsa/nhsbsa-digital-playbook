@@ -1,0 +1,39 @@
+span.colorblock {
+    display: inline-block;
+    border: 1px solid black;
+}
+span.colorblock_xs {
+    $size: 10px;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+}
+span.colorblock_s {
+    $size: 20px;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+}
+span.colorblock_m {
+    $size: 50px;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+}
+span.colorblock_l {
+    $size: 100px;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+}
+span.colorblock_xl {
+    $size: 200px;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+}
