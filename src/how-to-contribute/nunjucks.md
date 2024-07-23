@@ -60,11 +60,13 @@ Renders a 'card' showing a colorBlock and additional information.
 ::: details Attributes
 | Name | Type | Required | Description
  ------|------|----------|------------|
-| color      | String | true  | a Hex encoded RGB colour |
-| pantone    | String | false | The [Pantone](https://www.pantone-colours.com/) colour code |
-| ral        | String | false | The [RAL](https://www.ralcolorchart.com/) colour code |
-| blockSize  | String | false | `xs`, `s`, `m`, `l`, `xl` |\
-|            |        |       | defaults to `m` |
+| heading      | String | false  | A heading for the colour card |
+| headingLevel | String | false  | The HTML heading level (`h1`-`h4`). Defaults to `h2` |
+| color        | String | true  | a Hex encoded RGB colour |
+| pantone      | String | false | The [Pantone](https://www.pantone-colours.com/) colour code |
+| ral          | String | false | The [RAL](https://www.ralcolorchart.com/) colour code |
+| blockSize    | String | false | `xs`, `s`, `m`, `l`, `xl` |\
+|              |        |       | defaults to `m` |
 :::
 
 ```text
@@ -72,7 +74,7 @@ Renders a 'card' showing a colorBlock and additional information.
 {% from "colorCard/macro.njk" import colorCard %}
 
 {{ colorCard({
-    "title": "NHS Blue",
+    "heading": "NHS Blue",
     "color": "#005EB8",
     "pantone": "300",
     "ral": "5017",
@@ -84,7 +86,7 @@ Renders a 'card' showing a colorBlock and additional information.
 renders as:
 
 {{ colorCard({
-    "title": "NHS Blue",
+    "heading": "NHS Blue",
     "color": "#005EB8",
     "pantone": "300",
     "ral": "5017",
