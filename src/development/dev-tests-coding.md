@@ -77,7 +77,7 @@ An anti-pattern is to define test fixture data at the top of a class and re-use 
 * __Cross test pollution__
   A risk that fixture data is not re-initialised between tests. The action of one test can then affect another.
 * __Meaningless names__
-  Shared ixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3. Numeric suffixes convey no meaning. We can assume some of the tests need multiple users, but there is no context about why we need more than one.
+  Shared fixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3. Numeric suffixes convey no meaning. We can assume some of the tests need multiple users, but there is no context about why we need more than one.
   Meaningless names are confusing in tests.
 * __Noise__
   Shared fixture data is usually placed as boilerplate at the top of the test class.
@@ -152,7 +152,7 @@ Assertions should be simple and clear with failure messages that identify the er
 
 Be specific.
 
-It can be easier to learn and use just a few of the matchers in an assertion framework. Take time to understand the methods available, so tests are succint and failure messages are more informative.
+It can be easier to learn and use just a few of the matchers in an assertion framework. Take time to understand the methods available, so tests are succinct and failure messages are more informative.
 
 ## Avoid asserting equality with complex objects
 
@@ -164,7 +164,7 @@ Asserting equality with complex objects leads to these issues:
   It is difficult for the reviewer to understand which field value is being checked when objects have multiple fields or contains nested objects.
 * __Untraceable errors__
   When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.
-* __Fragilility__
+* __Fragility__
   A change in the object created by the function under test will require a refactor of the test to supply matching data into the expectation.
 
 Make assertions with appropriate matchers on specific fields.
