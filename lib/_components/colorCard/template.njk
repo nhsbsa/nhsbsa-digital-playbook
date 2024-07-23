@@ -1,6 +1,13 @@
 {% from "colorBlock/macro.njk" import colorBlock %}
+{% set headingLevel %}
+{{ params.headingLevel if params.headingLevel else 'h2' }}
+{% endset %}
 <div class="card">
-	<h2 class="nhsuk-card__heading nhsuk-heading-m">{{ params.title }}</h2>
+	{% if params.heading %}
+	<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
+	{{ params.heading }}
+	</{{headingLevel}}>
+	{% endif %}
 	<div>{{ colorBlock(params) }}</div>
 	<dl>
 		<dt>Hex</dt>
