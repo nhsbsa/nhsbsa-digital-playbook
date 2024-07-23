@@ -107,7 +107,7 @@ It includes the following:
 
 - Relevant news to help inform users on key events which could have had an impact on the data shown.
 - Links to relevant NHSBSA sites and news.
-- Release notes relating to the dashboard version numbers so that users are informed of new features, improvements, or bug fixes. 
+- Release notes relating to the dashboard version numbers so that users are informed of new features, improvements, or bug fixes.
 - Announcements could be included in this section, for example if the NHSBSA has been made aware of an issue, and a fix is working to be put in place.  
   
 ![Updates page example](../images/page-6-eg.png)  
@@ -127,4 +127,4 @@ It includes the following:
 [info 0]: https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1559396709/STAGE+3+-+Accessibility+Statements
 [info 1]: https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx
 [info 2]: https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats#accessible-print-publications
-[info 3]:  https://www.england.nhs.uk/nhsidentity/identity-guidelines/fonts/
+[info 3]:  https://www.england.nhs.uk/nhsidentity/identity-guidelines/fonts/  

@@ -30,7 +30,7 @@ Contrast ratios should be checked to help with conditions such as low vision and
 
 :::  
 
-## Aspects to be considered  
+## Things to consider  
   
 - Limit the number of colours you use to be those necessary, and which helps the user’s clarity.
 - Use colour consistently; colours should be aligned consistency to the same variables (Example A).

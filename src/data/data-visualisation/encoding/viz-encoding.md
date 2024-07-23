@@ -10,7 +10,7 @@ order: 120
   
 Visual encoding helps the user to gain insight into a visualisation. Visual encoding can use pre-attentive attributes, such as symbols, size, shapes and colours, along with the Gestalt principles, which focus on the placement of items, such as proximity, closure and continuity, to aide help the user’s understanding.  
 
-## Pre-attentive attributes  
+### Pre-attentive attributes  
   
 Pre-attentive attributes are information we can process visually almost immediately, before sending the information to the attention processing parts of our brain.  
   
@@ -29,7 +29,7 @@ Length, width, orientation, size, shape, enclosure, position, grouping, colour h
 [Why Visual Analytics?][encode 1]
 :::  
 
-## Gestalt principles  
+### Gestalt principles  
 
 The Gestalt principles can be used by designers to organise content on websites and data visualisation products so it is aesthetically pleasing and easy to understand.
 If the design of the dashboard is considered, this help aide the user’s perception, and creates a smoother user experience as a result.  
@@ -64,7 +64,7 @@ Symmetry
 Common fate
 : Elements which move in the same direction seem to be a group
 
-## Including comparisons or context  
+### Including comparisons or context  
   
 Comparisons are useful for the user to give context. For example, a year-on-year comparison. There are different methods of comparisons or adding context such as accompanying text, trend lines, colour and target lines.  
   
@@ -76,7 +76,7 @@ Only use what is necessary. You do not want to over clutter a dashboard or chart
   
 It is important to make sure all encoding methods that are used are clear to the user as we equally do not want the user to misunderstand charts shown, and make an uninformed decision.  
 
-## Considerations to be aware of  
+## Things to be aware of  
   
 Pre-attentive attributes can be leveraged to our advantage to create powerful visualisations. For example, all grey bars with one red column can be used to highlight a particular focal point.  
   
