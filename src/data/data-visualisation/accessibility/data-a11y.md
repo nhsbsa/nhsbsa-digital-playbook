@@ -37,7 +37,7 @@ The content design standards state how we should be presenting data. Some things
 - explaining charts and the data involved (initially and throughout), to increase data literacy. Access to any calculations involved
 - simplifying visualisations and data to be suitable for all users’
 - highlighting important aspects and key messages by pulling focus
-- putting things into perspective using data visualisation principles
+- putting things into perspective using [data visualisation principles][data viz principles]
 - removing jargon, simplifying language
 - using a suitable font size:
 * The body of printed text should be size 12px. [Source - Accessible print publications][data 3]
@@ -49,3 +49,4 @@ The content design standards state how we should be presenting data. Some things
 [data 3]: https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats#accessible-print-publications
 [data 4]: https://www.england.nhs.uk/nhsidentity/identity-guidelines/fonts/
 [data 5]: https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx
+[data viz principles]: https://design102.blog.gov.uk/2022/04/25/data-visualisation-how-can-good-design-transform-your-data/
