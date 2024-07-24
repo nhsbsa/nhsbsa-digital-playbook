@@ -79,7 +79,7 @@ Guidance, such as labelling lines, using textures or shapes for data points may 
 
 ### Pie charts  
   
-Pie charts should use different shades of one colour where possible, rather than different colours. This is so a colour-blind user can easily distinguish between the segments with the colours being close together.  
+Pie charts should use different shades of one colour where possible, rather than different colours. This is so a colour-blind user can easily distinguish between the segments with the colours being close together.
   
 ::: details Source - colour blindness
 

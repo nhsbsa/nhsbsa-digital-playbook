@@ -10,6 +10,8 @@ order: 10
   
 Choosing an appropriate chart type is key in ensuring the end user is able to understand the data shown quickly and as efficiently as possible. The choice of chart type is often dependant on the purpose of what you need the chart to show.  
   
+Please refer to the [Tables guidance](../../tables/table-or-chart/) on choosing between a table or a chart, table alternatives and best practice.  
+
 In this section we will go through [four categories of chart types][chart 1]: comparison, composition, relationship and distribution charts.  
   
 The [four main questions][chart 2] to help you decide which chart type to use are:
@@ -273,22 +275,7 @@ The charts mentioned in the image above are listed below for clarity.
 - arc diagram
 - sankey diagram
 - network diagram
-- flowchart
-
-## Choosing between a table or chart  
-  
-Please refer to the [Tables guidance](../../tables/table-or-chart/) on choosing between a table or a chart, table alternatives and best practice.  
-  
-Some key questions to ask yourself when deciding which to use are:
-
-- Do individual values need to be looked up?
-- Do individual values need to be compared?
-- Are precise values needed?
-- Are different units of measurements to be used?
-- Is the trend or shape of the values important?
-- Does the relationship between multiple values need to be shown?  
-  
-If the answers to the first four questions are 'Yes', a table might be most suitable.
+- flowchart  
 
 [chart 1]: https://data-flair.training/blogs/qlikview-visualization/
 [chart 2]: https://uxplanet.org/data-heavy-applications-how-to-design-perfect-charts-c0c893fef6de
