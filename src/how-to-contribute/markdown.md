@@ -5,9 +5,6 @@ description: "How to enhance your documents with effective Markdown"
 tags: playbook
 order: 6
 ---
-{% from "colorBlock/macro.njk" import colorBlock %}
-{% from "colorCard/macro.njk" import colorCard %}
-
 This guide shows you some playbook specific tips. For general guidance on Markdown consult these references:
 
 * [Markdown][commonmark]
