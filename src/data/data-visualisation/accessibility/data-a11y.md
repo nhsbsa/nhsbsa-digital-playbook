@@ -31,12 +31,12 @@ Therefore, we need to deliver services which convey numbers plainly and in a way
   
 The content design standards state how we should be presenting data. Some things we can use to help our users include:
 
-- removing unnecessary numbers - always try to round values up to a whole number, and get rid of decimal places unless it’s money
+- removing unnecessary numbers - always try to round values up to a whole number, and get rid of decimal places unless it’s money and round to the scale and use of a number, for example, 10,234,357 may be more useful to be presented to some users as 10 million depending on the level of precision needed
 - leaving lots of space, so that numbers don’t jump around so much on the screen for people with dyscalculia
 - involving people who struggle with numbers in the design process, from both within and outside the design team
 - explaining charts and the data involved (initially and throughout), to increase data literacy. Access to any calculations involved
-- breaking down and simplifying aspects where possible, making them suitable for all users
-- highlighting important aspects/takeaways
+- simplifying visualisations and data to be suitable for all users’
+- highlighting important aspects and key messages by pulling focus
 - putting things into perspective using data visualisation principles
 - removing jargon, simplifying language
 - using a suitable font size:

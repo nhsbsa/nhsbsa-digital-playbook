@@ -37,7 +37,7 @@ Some common comparison visualisations used are:
 - Line charts
 - Sparklines  
   
-Stay away from attempting to compare more than four categories. Using four categories is best practice for data visualisation. More than four series can make a chart too cluttered. Consider merging multiple categories or focussing the chart on a single entity if suitable.
+Stay away from attempting to compare more than four categories. Using four categories is best practice for data visualisation. More than four categories can make a chart too cluttered. Consider merging multiple categories or focussing the chart on a single entity if suitable.
 
 ::: details Source - chart colours
 

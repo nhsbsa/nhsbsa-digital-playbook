@@ -103,6 +103,8 @@ Use additional encoding methods such as symbols or positions to convey meaning:
 :::
 
 ### ONS accessibility tested colours  
+  
+The following colours have been accessibility tested and should be used in addition to encoding methods to ensure an alternative option is available for users with accessibility needs:  
 
 - Leaf green: #0F8243  
 ![Horizontal rectangle block of ONS colour Leaf green on a white background with the words 'Leaf green' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-leaf-green' beneath the colour block](../images/ons-green.png)
