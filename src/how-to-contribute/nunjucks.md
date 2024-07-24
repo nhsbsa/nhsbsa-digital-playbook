@@ -24,7 +24,7 @@ The macro can then be used anywhere within the markdown file.
 
 ## Colour block
 
-Renders a square colour block to illustrate the
+Renders a square colour block to illustrate a Hex colour value.
 
 ::: details Attributes
 | Name | Type | Required | Description
@@ -53,9 +53,9 @@ renders as:
     "blockSize": "l"})
 }}
 
-## Color card
+## Colour card
 
-Renders a 'card' showing a colorBlock and additional information.
+Renders a 'card' showing a colorBlock and colour information.
 
 ::: details Attributes
 | Name | Type | Required | Description
