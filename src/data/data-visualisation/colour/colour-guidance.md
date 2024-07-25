@@ -50,9 +50,10 @@ Consider the type of chart you are using and the relevant colour palette. Please
 - [Categorical Data Colour Standards](../cat-data/)
 - [Sequential Data Colour Standards](../seq-data/)  
 
-Example A: Using colour to connect information. Note how ‘Services’ uses a dark blue in each chart, and Production is denoted by orange.  
+Example A: Using colour to connect information. Note how ‘Supplier S’ uses NHS Blue in each chart, and Supplier H is denoted by 80% tint of NHS Blue.  
   
-![5 charts including a pie chart, 2 bar charts and 2 line charts](../images/charts.png)  
+![A pie chart with 3 slices, each slice is coloured with a tint of NHS Blue](../images/pie_eg.png)  
+![A column chart with 3 bars, each bar is coloured with a tint of NHS Blue that matches with the tint used for the Pie chart](../images/column_eg.png)
 
 ::: details Source - choosing colours
 
