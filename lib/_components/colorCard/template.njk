@@ -2,7 +2,7 @@
 {% set headingLevel %}
 {{ params.headingLevel if params.headingLevel else 'h2' }}
 {% endset %}
-<div class="card">
+<div class="card colorCard">
 	{% if params.heading %}
 	<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
 	{{ params.heading }}
