@@ -59,7 +59,7 @@ Stay away from attempting to compare more than four categories. Using four categ
   
 ![Examples of the comparison visualisations listed](../images/comparison.png)  
 
-#### Line charts
+##### Line charts
   
 If you’re using a line chart:
 
@@ -68,7 +68,7 @@ If you’re using a line chart:
 - for more than one variable, use the [colour guidance](../../colour/index)
 - for multiple lines, where you need to pull focus onto one of the lines, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
   
-#### Bar charts
+##### Bar charts
   
 If you’re using a bar chart:
 
@@ -92,15 +92,25 @@ If you're using a **stacked** bar chart:
   
 Composition visualisations are used for part-to-whole comparisons. For example, percentage figures out of 100%. These charts can be changing over time, or static in which case the timeframe the data relates to is necessary to mention.  
 
-Some common composition visualisations used are:
+#### Examples of composition visualisations (and when they are appropriate)
 
-- Stacked bar charts
-- Pie charts
-- Area charts  
+Changing over time:
 
-![The 'Composition' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Composition' is written at the base with a line splitting into two parts. The left line is labelled 'Changing over time' and the right line is labelled 'Static'. From the 'Changing over time' line, the tree diagram forks again, with the left branch labelled 'Few periods' and the right branch is labelled 'Many periods'. The left branch splits into 'Only relative differences matter' with an example of a stacked 100% bar chart, and 'Relative and absolute differences matter' with an example of a stacked bar chart. The right 'Many periods' branch also splits into 'Only relative differences matter', but with an example of a stacked 100% area chart, and 'Relative and absolute differences matter' with an example of 'Stacked area chart'. The 'Static' branch split into four: 'Simple share of total', with the example 'Pie chart'; 'Accumulation or subtraction to total', with the example 'Waterfall chart'; 'Components of components', with the example 'Stacked 100% bar chart with subcomponents'; and 'Accumulation to total and absolute difference matters', with an example of 'Tree map'.](../images/composition.png)
+- stacked 100% bar chart (few periods, only relative difference matters)
+- stacked bar chart (few periods, relative and absolute differences matter)
+- stacked 100% area chart (many periods, only relative differences matter)
+- stacked area chart (many periods, relative and absolute differences matter)
 
-#### Stacked bar charts
+Static:
+
+- pie chart (simple share of total)
+- waterfall chart (accumulation or subtraction to total)
+- stacked 100% bar chart with subcomponents (components of components)
+- tree map (accumulation to total and absolute difference matters)
+
+![Examples of the composition visualisations listed](../images/composition.png)
+
+##### Stacked bar charts
 
 If you’re using a stacked bar chart:
 
@@ -114,7 +124,7 @@ If you’re using a stacked bar chart:
 
 :::  
   
-#### Pie charts
+##### Pie charts
   
 If you’re using a pie chart:
 
@@ -133,14 +143,15 @@ If you’re using a pie chart:
   
 Distribution visualisations are used to visualise the distribution of data, useful especially for ordered data ranging from lowest to highest. The distribution is analysed and used for trend analysis to gain meaningful insights.  
   
-Some common distribution visualisations used are:
-
-- scatter charts
-- histogram  
+#### Examples of distribution visualisations (and when they are appropriate)  
   
-![The 'Distribution' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Distribution' is written at the base with a line splitting into two parts. The left line is labelled 'Single variable' and the right line is labelled 'Two variables'. The left branch splits into 'Few data points' on the left, with an example of 'Bar histogram', and 'Many data points' on the right, with an example of 'Line histogram'. The 'Two variables' branch goes directly to an example of 'Scatter plot'.](../images/distribution.png)  
+- bar histogram (single variable, few data points)
+- line histogram (single variable, many data points)
+- scatter plot (2 variables)
 
-#### Scatter charts
+![Examples of the distribution visualisations listed](../images/distribution.png)  
+
+##### Scatter charts
   
 If you’re using a scatter chart:
 
@@ -152,12 +163,12 @@ If you’re using a scatter chart:
   
 Relationship visualisations are used to highlight a relationship or correlation between variables. Multiple variables and [visual encoding](../../encoding/viz-encoding/) practices can be used to add additional details, such as symbols on a scatter chart to demonstrate multiple groupings.  
   
-Some common relationship visualisations used are:
+#### Examples of relationship visualisations (and when they are appropriate)
 
-- scatter charts
-- cluster diagrams  
+- scatter plot (2 variables)
+- scatter plot bubble size (3 variables)
   
-![The 'Relationship' branches of the tree diagram from the 'Choosing an appropriate chart type' section. 'Relationship' is written at the base with a line splitting into two parts. The left line is labelled 'Two varibales' and shows an example of 'Scatter plot'. The right line is labelled 'Three variables' and shows an example of 'Scatter plot bubble size'.](../images/relationship.png)  
+![Examples of the relationship visualisations listed](../images/relationship.png)  
 
 ### Geospatial visualisations  
   
@@ -190,11 +201,7 @@ If you’re using an infographic:
 
 ## Chart examples  
   
-Some examples of charts available:  
-  
-![Six sections stacked on top of eachother, from top to bottom: 'Comparison', 'Correlation', 'Part-to-whole and hierarchical', 'data over time (temporal)', 'Distribution', 'Geospatial and other'. Under each heading is a series of square boxes, with each box containing a small visual depiction of a different chart type that fits within that category. These are listed later in this section.](../images/chart-eg.png)  
-
-The charts mentioned in the image above are listed below for clarity.  
+Further examples of charts available:  
 
 **Comparison**
 
@@ -290,6 +297,8 @@ The charts mentioned in the image above are listed below for clarity.
 - sankey diagram
 - network diagram
 - flowchart  
+
+![Examples of the visualisations listed](../images/chart-eg.png)  
 
 [chart 1]: https://data-flair.training/blogs/qlikview-visualization/
 [chart 2]: https://uxplanet.org/data-heavy-applications-how-to-design-perfect-charts-c0c893fef6de

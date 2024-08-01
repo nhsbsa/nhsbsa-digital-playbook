@@ -34,9 +34,6 @@ For categorical data, the following colours taken from the NHS identity guidelin
 |   NHS Green        |  50%     |   #80CB9C     |
 |   NHS Light Blue   |  50%     |   #A0DBF3     |  
 
- ![Small block of colour showing 5 levels of the NHS Blue gradient from 100% tint to 20% tint and the words 'NHS Blue' beneath this](../images/blue-gradient.png)   ![Small block of colour showing 5 levels of the NHS Aqua Green gradient from 100% tint to 20% tint and the words 'NHS Aqua Green' beneath this](../images/aqua-gradient.png)    ![Small block of colour showing 5 levels of the NHS Pink gradient from 100% tint to 20% tint and the words 'NHS Pink' beneath this](../images/pink-gradient.png)  
- ![Small block of colour showing 5 levels of the NHS Orange gradient from 100% tint to 20% tint and the words 'NHS Orange' beneath this](../images/orange-gradient.png) ![Small block of colour showing 5 levels of the NHS Green gradient from 100% tint to 20% tint and the words 'NHS Green' beneath this](../images/green-gradient.png) ![Small block of colour showing 5 levels of the NHS Light Blue gradient from 100% tint to 20% tint and the words 'NHS Light Blue' beneath this](../images/light-blue-gradient.png)
-
 Bear in mind that certain colours have certain meanings, and that use of colour is important.  
 Whilst over 4 categories, series or use of colours is not recommended, you will notice that after the first 6 colours, the colours are repeated at a 50% tint, still distinguishable to the user, and not adding in additional colours.
 
@@ -53,6 +50,11 @@ We recommend using our suggested colour palette in the order given in the list t
 [Categorical data colour palette][cat 1]  
 
 :::
+  
+NHS Blue, NHS Aqua Green, NHS Pink, NHS Orange, NHS Green and NHS Light Blue can all be used at tints 100%, 80%, 60%, 40% and 20% if necessary and appropriate within a visualisation.  
+
+ ![NHS Blue gradient from 100% tint to 20% tint](../images/blue-gradient.png)   ![NHS Aqua Green gradient from 100% tint to 20% tint](../images/aqua-gradient.png)    ![NHS Pink gradient from 100% tint to 20% tint](../images/pink-gradient.png)  
+ ![NHS Orange gradient from 100% tint to 20% tint](../images/orange-gradient.png) ![NHS Green gradient from 100% tint to 20% tint](../images/green-gradient.png) ![NHS Light Blue gradient from 100% tint to 20% tint](../images/light-blue-gradient.png)
 
 ### Simple charts  
 
@@ -93,9 +95,9 @@ Pie charts should use different shades of one colour where possible, rather than
 Colour should not be the only method of conveying information.  
 If you are using red to signal 'warning' or 'caution', and green to signal 'approval' or 'correctness' consider addign a symbol to make sure colour-blind users can still understand the message.  
   
-Use additional encoding methods such as symbols or positions to convey meaning:  
+Use additional encoding methods such as symbols (X, !, ✓) or positions (each colour appearing in a slightly different location, often like traffic lights with red at the top, amber below and green at the bottom) to convey meaning.  
 
- ![Image showing examples of using RAG status combined with symbols such as tick marks, crosses and exclamation marks to convey information](../images/RAG-symbols.png)
+ ![Examples of using RAG status combined with symbols](../images/RAG-symbols.png)
 
 ::: details Source - RAG status
 
@@ -106,7 +108,7 @@ Use additional encoding methods such as symbols or positions to convey meaning:
   
 The following colours have been accessibility tested and should be used in addition to encoding methods to ensure an alternative option is available for users with accessibility needs:  
 
-- Leaf green: #0F8243  
+- Leaf green: #0F8243 (--ons-color-leaf-green)
 ![Horizontal rectangle block of ONS colour Leaf green on a white background with the words 'Leaf green' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-leaf-green' beneath the colour block](../images/ons-green.png)
 
 - Neon yellow: #F0F762  
