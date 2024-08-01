@@ -60,17 +60,17 @@ There are many methods you can use to pull focus:
 - [Use colour](../colour/) and width, for example, where you need to pull focus onto a specific variable in a line chart, use a thicker NHS Blue (#005EB8) line, with the other lines set as NHS Grey 3 (#AEB7BD), this will ensure the other lines fade further into the background with the most dominant and useful line standing out
 - Use markers or event lines to highlight certain values, or important and influencing aspects. A good example of this is adding a faded section in NHS Grey 4 (#D8DDE0) to denote forecasting, or adding a label to an individual value at a point in time  
 
-#AEB7BD:  
+#AEB7BD is the hex code for NHS Grey 3 (grayish blue):  
 
-![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
+![Block of colour #AEB7BD](hex-nhs-grey-3.png)  
 
-#005EB8:  
+#005EB8 is the hex code for NHS Blue (strong blue):  
 
-![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](hex-nhs-blue.png)  
+![Block of colour #005EB8](hex-nhs-blue.png)  
 
-#D8DDE0:  
+#D8DDE0 is the hex code for NHS Grey 4 (light grayish blue):  
 
-![Rectangle of block colour in the shade #D8DDE0 NHS Grey 4, light grayish blue](hex-nhs-grey-4.png)  
+![Block of colour #D8DDE0](hex-nhs-grey-4.png)  
   
 ::: details Source - graph tips
 

@@ -22,7 +22,7 @@ Some examples of pre-attentive attributes:
   
 Length, width, orientation, size, shape, enclosure, position, grouping, colour hue, and colour intensity.  
   
-![10 square boxes arranged in 2 rows of 5, each with a visual representation of 1 pre-attentive attrbute. From left to right, beginning on the top row: length, width, orientation, size, shape, enclosure, position, grouping, colour hue, colour intensity](../images/pre-atten.png)  
+![Examples of pre-attentive attrbutes](../images/pre-atten.png)  
   
 ::: details Source - visual analytics
 
@@ -38,8 +38,6 @@ Design &rarr; user perception &rarr; user experience
   
 These principles determine how people naturally perceive elements. If you understand how to use them, you can create a better user experience.  
 
-![8 small images arranged in 4 rows of 2, each with a visual represntation of 1 of te gestalt principles. From left to right, beginning on the top row: proximity, closure, similarity, common region, continuity, figure and ground, symmetry, common fate](../images/gestalt.png)  
-  
 Proximity
 : Elements which are close together seem to be a group
 
@@ -62,7 +60,9 @@ Symmetry
 : Symmetric elements give the human brin the feeling that everything is ordered
 
 Common fate
-: Elements which move in the same direction seem to be a group
+: Elements which move in the same direction seem to be a group  
+  
+![Example visualisations showing the Gestalt principles](../images/gestalt.png) 
 
 ### Including comparisons or context  
   

@@ -54,7 +54,7 @@ Some important notes in relation to your text content:
 - The body of the text should be size 12px. [Source - Accessible print publications][info 2]
 - Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS identity guidelines; Fonts][info 3]  
 
-A dashboard information page should include a 'New' section and release notes.  
+A dashboard information page should include a 'News' section and release notes.  
   
 ![Example dashboard information page](../images/info-page.png)
   
