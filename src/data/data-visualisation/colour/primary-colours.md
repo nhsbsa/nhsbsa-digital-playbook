@@ -14,27 +14,33 @@ See the [NHS Identity Guidelines Colours pages][pc 1] for more detail.
   
 Use a plain background, NHS Grey 5 (#F0F4F5) should be used.  
 
-#F0F4F5:  
+#F0F4F5 is the hex code for NHS Grey 5 (light grayish cyan):  
   
-![Rectangle of block colour in the shade #F0F4F5 NHS Grey 5, light grayish cyan](../images/hex-f0f4f5.png)  
+![Block of colour #F0F4F5](../images/hex-f0f4f5.png)  
   
-NHS White (#FFFFFF) is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
+NHS White is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
+  
+NHS White:
 
-![Horizontal rectangular block of the colour NHS White with the name 'NHS White' as well as the CMYK, RGB and Hex codes for the colour all written below in black text on a white background](../images/nhs-white.png)
+- hex: #FFFFFF
+- CYMK: 0/0/0/0
+- RGB: 255/255/255
+
+![Block of colour #FFFFFF](../images/nhs-white.png)
 
 ### Border  
   
 Each visualisation and filter should have a border of NHS Grey 4 (#D8DDE0).  
   
-![Example dashboard page with each visualisation outlined in the shade #D8DDE0 NHS Grey 4, light greyish blue.](../images/border-example.png)  
+![Examples of visualisations with border in colour #D8DDE0](../images/border-example.png)  
   
 ### Tooltips  
   
 Each tooltip should have a label text colour of NHS Pale Grey (#E8EDEE), a value text colour of NHS White (#FFFFFF), and a Background colour of NHS Dark Grey (#425563).  
   
-![Screenshot showing the 'Customize theme' pane in Power BI. On the left is a list from top to bottom: 'Name and colors', 'Test', Visuals', 'Page', 'Filter pane'. 'Visuals' is highlighted to show it has been selected. To the right of this is a central column with another vertical list. From top to bottom the list is: 'Background', 'Border', 'Header', 'Tooltip'. 'Tooltip' is selected. To the right again is the third section of the pane, with the title 'Tooltip' and beneath this are three dropdown boxes for selecting a colour for each feature of the tooltip. The top dropdown is for selcting the 'Label text color'. The second is for 'Value text color'. The third, bottom, dropdown is for 'Background color'. The colours selected are #E8EDEE, #FFFFFF, and #425563 respectively.](../images/tooltip-customize.png)  
+![Example of tooltip colour selection](../images/tooltip-customize.png)  
   
-![Vertical bar graph with the title 'Croydon has the most monetary transactions out of all suppliers'. The bar representing 'Croydon' has a tooltip pointing to it, which has a background colour of #425563 NHS Dark Grey, labels reading 'Supplier' and 'Sum of transaction amount (£)' both in #E8EDEE NHS Pale Grey, and values of 'Croydon' and '£187,420.00' both in #FFFFFF NHS White.](../images/tooltip-croydon.png)
+![Example of tooltip colour on a chart](../images/tooltip-croydon.png)
 
 ::: details Source - NHS digital service manual
 
@@ -44,21 +50,36 @@ Each tooltip should have a label text colour of NHS Pale Grey (#E8EDEE), a value
 
 ### Single variables  
 
-NHS Blue (#005EB8) is the primary colour to be used across our products.  
+NHS Blue is the primary colour to be used across our products.  
+
+NHS Blue:
+
+- hex: #005EB8
+- CYMK: 99/50/0/0
+- RGB: 0/94/184
+- Pantone: 300
+- RAL: 5017
   
-![Horizontal rectangular block of the colour NHS Blue with the name 'NHS Blue' as well as the Pantone, CMYK, RGB, Hex, and RAL codes for the colour all written below in black text on a white background](../images/nhs-blue.png)
+![Block of colour NHS Blue](../images/nhs-blue.png)
 
 ### Two variables  
 
-NHS Blue (#005EB8) alongside NHS Light Blue (#41B6E6) is recommended for two variables.  
+NHS Blue alongside NHS Light Blue is recommended for two variables.  
+
+NHS Light Blue:
+
+- hex: #41B6E6
+- CYMK: 67/2/0/0
+- RGB: 65/182/230
+- Pantone: 298
   
-![Horizontal rectangular block of the colour NHS Blue with the name 'NHS Blue' as well as the Pantone, CMYK, RGB, Hex, and RAL codes for the colour all written below in black text on a white background](../images/nhs-blue.png)      ![Horizontal rectangular block of the colour NHS Light Blue with the name 'NHS Light Blue' as well as the Pantone, CMYK, RGB, and Hex codes for the colour all written below in black text on a white background](../images/nhs-light-blue.png)
+![Block of colour NHS Blue](../images/nhs-blue.png)      ![block of colour NHS Light Blue](../images/nhs-light-blue.png)
 
 ### Related variables  
 
 NHS Blue (#005EB8) alongside NHS Light Blue (#41B6E6) is recommended for two variables. For related variables such as comparing adults and children across two groupings, a 50% tint if recommended. Meaning for each grouping, the colour will be consistent, with two tints.  
 
-If you need to use tints of this palette and have a small number of tints needed, use either 25% or 50%. We recommend 50%. If tints do not pass contrast ratio checks and the visualisation is suitable (i.e. not a line graph), a border should be created to further enhance the colour.  
+If you need to use tints of this palette and have a small number of tints needed, use either 25% or 50%. We recommend 50%. If tints do not pass contrast ratio checks and the visualisation is suitable (i.e. not a line graph), a border should be added to further enhance the colour.  
 
 Otherwise, tints of 80%, 60%, 40% and 20% can be used. Any % value is accepted as long as it is visible, clear and accessible.  
 
@@ -97,12 +118,12 @@ Otherwise, these are the tints of the NHS Blue at each 10% interval:
 </body>
 </html>
 
-Charts displaying data for 2 different years should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used with appropriate ocntrast for the corresponding numeric labels.
+Charts displaying data for 2 different years should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used in descending order, with appropriate contrast for the corresponding numeric labels.
 
 - NHS Blue: #005EB8 (100%), #5C98D1 (80%), #97BDE1 (60%)
 - NHS Light Blue: #41B6E6 (100%), #66C4EB (80%), #8DD3F0 (60%)  
   
-![bar graph demonstrating the use of colour described](../images/nhs_blue_bars.png)
+![bar graph demonstrating the use of colour](../images/nhs_blue_bars.png)
   
 Note: we only recommend outlining the bars when using the lightst tints of a palette, if there is not enough colour contrast. In this case, we would outline all bars to maintain consistency. In general, bar outlines add unnecessary clutter.  
 

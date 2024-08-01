@@ -29,7 +29,7 @@ The example template includes the following:
 - Charts should help give further information to the summary statistics shown.
 - In the top right-hand corner there is a nudge to look further into the details of the data, helping to guide the user on their journey.  
   
-![Summary/highlights page example](../images/page-2-eg.png)  
+![Example summary/highlights page](../images/page-2-eg.png)  
   
 ### Insight example page 1  
   

@@ -50,10 +50,11 @@ Consider the type of chart you are using and the relevant colour palette. Please
 - [Categorical Data Colour Standards](../cat-data/)
 - [Sequential Data Colour Standards](../seq-data/)  
 
-Example A: Using colour to connect information. Note how ‘Supplier S’ uses NHS Blue in each chart, and Supplier H is denoted by 80% tint of NHS Blue.  
+Colour can be used to connect information. For example, if data is showing various suppliers, individual suppliers should be represented by the same colour across charts.  
+ie: if 'Supplier H' appears across multiple visualisations, the same colour should be used to represent 'Supplier H' each time it appears.
   
-![A pie chart with 3 slices, each slice is coloured with a tint of NHS Blue](../images/pie_eg.png)  
-![A column chart with 3 bars, each bar is coloured with a tint of NHS Blue that matches with the tint used for the Pie chart](../images/column_eg.png)
+![Pie chart with 3 slices, coloured with tints of NHS Blue](../images/pie_eg.png)  
+![Column chart with 3 bars, coloured with tints of NHS Blue](../images/column_eg.png)
 
 ::: details Source - choosing colours
 
@@ -66,16 +67,16 @@ Example A: Using colour to connect information. Note how ‘Supplier S’ uses N
 Focus charts are charts which use colour to highlight specific elements to help users understand the information.  
 The primary colour NHS Blue (#005EB8) should be used to pull focus, against NHS Grey 3 (#AEB7BD).  
 
-#005EB8:  
+#005EB8 is the hex code for NHS Blue (strong blue):  
 
-![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](../images/hex-nhs-blue.png)  
+![Block of colour #005EB8](../images/hex-nhs-blue.png)  
 
-#AEB7BD:  
+#AEB7BD is the hex code for NHS Grey 3 (grayish blue):  
 
-![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](../images/hex-nhs-grey3.png)  
+![Block of colour #AEB7BD](../images/hex-nhs-grey3.png)  
 
 ::: details Source - colour palette and NHS manual
- 
+
 [Focus charts colour palette][colours 6]
 [NHS digital service manual; Colour][colours 7]
 
@@ -88,13 +89,13 @@ This should be used across the majority of headers and body of text.
 The secondary text colour to use is: #4C6272
 This can be used for things such as a search box, or secondary content such as the heading of a links section.  
   
-#212B32:  
+#212B32 is the hex code for very dark (mostly black) blue:  
   
-![Rectangle of block colour in the shade #212B32, very dark (mostly black) blue](../images/hex-212b32.png)  
+![Block of colour #212B32](../images/hex-212b32.png)  
   
-#4C6272:  
+#4C6272 is the hex code for very dark grayish blue:  
   
-![Rectangle of block colour in the shade #4C6272, very dark grayish blue](../images/hex-4c6272.png)  
+![Block of colour #4C6272](../images/hex-4c6272.png)  
 
 ::: details Source - NHS digital service manual
 
@@ -105,13 +106,13 @@ This can be used for things such as a search box, or secondary content such as t
 
 To focus the readers attention, you can use a background of NHS Blue (#005EB8), with a bold white text. Otherwise if the alert is urgent or extremely important the NHS Pale Yellow (#FFF9C4) background can be used with the primary text colour (#212B32).  
 
-#FFF9C4:  
+#FFF9C4 is the hex code for NHS Pale Yellow (very pale yellow):  
 
-![Rectangle of block colour in the shade #FFF9C4 NHS Pale Yellow, very pale yellow](../images/hex-fff9c4.png)  
+![Block of colour #FFF9C4](../images/hex-fff9c4.png)  
 
-#212B32:  
+#212B32 is the hex code for very dark (mostly black) blue:  
 
-![Rectangle of block colour in the shade #212B32 primary text colour, very dark (mostly black) blue](../images/hex-212b32-text.png)  
+![Block of colour #212B32](../images/hex-212b32-text.png)  
 
 ## Useful links
 

@@ -50,21 +50,21 @@ Please note: [this link to the NHSBSA Content Design Standards][info 1] leads to
   
 Some important notes in relation to your text content:
 
-- A Header 1 has been used on each page to help navigate a screen reader, Header 1 should be size 16px.
+- A Header 1 should be used on each page to help navigate a screen reader, Header 1 should be size 16px.
 - The body of the text should be size 12px. [Source - Accessible print publications][info 2]
 - Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS identity guidelines; Fonts][info 3]  
 
-This is a basic example of one of the pages:  
+A dashboard information page should include a 'New' section and release notes.  
   
-![Example dashboard information page including a New section and release notes](../images/info-page.png)
+![Example dashboard information page](../images/info-page.png)
   
-An example of how the dashboard standards might look in a report:  
+A report page should include a header and appropriate filter layout as well as visualisations such as KPI cards and charts.
   
-![Example report page following dashboard standards including header and filter layout, KPI cards and charts](../images/info-page-2.png)  
+![Example report page](../images/info-page-2.png)  
   
-Please note, if there was an urgent update for users to be aware of, a banner spanning the top of the dashboard such as the below should be used.  
+If there is an urgent update for users to be aware of, a banner spanning the top of the dashboard should be used.  
   
-![Banner across the top of a dashboard, with an update message](../images/update.png)  
+![Example of update banner on dashboard](../images/update.png)  
   
 ### Dashboard information example page
   
@@ -83,7 +83,7 @@ It includes:
 - A contact section for users in case of queries, feedback, training needs or technical support.
 - An insight generator for users to ask questions and generate insights from the data.  
   
-![Dashboard information page example](../images/page-1-eg.png)  
+![Example dashboard information page](../images/page-1-eg.png)  
   
 ### Data details example page
   
@@ -97,7 +97,7 @@ It includes the following:
 - Data Dictionary details, and a link so that users can see definitions of the data and formats. This helps users to see the data lineage and understand the metadata behind the reports.
 - Glossary details around the terminology used, and a link so that users can access and understand relevant terminology included in the report.  
   
-![Data details page example](../images/page-5-eg.png)  
+![Example data details page](../images/page-5-eg.png)  
   
 ### Updates example page
   
@@ -110,7 +110,7 @@ It includes the following:
 - Release notes relating to the dashboard version numbers so that users are informed of new features, improvements, or bug fixes.
 - Announcements could be included in this section, for example if the NHSBSA has been made aware of an issue, and a fix is working to be put in place.  
   
-![Updates page example](../images/page-6-eg.png)  
+![Example updates page](../images/page-6-eg.png)  
   
 ### How to use example page  
   
@@ -122,7 +122,7 @@ It includes the following:
 - Links to relevant articles or training courses could be useful, for example, NHSBSA training courses sign up or Microsoft could be referenced for Power BI reports.
 - Accessibility hints could be included in this section, for example, how to change from a chart format to a table.  
   
-![How to use page example](../images/page-7-eg.png)  
+![Example 'how to use' page](../images/page-7-eg.png)  
   
 [info 0]: https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1559396709/STAGE+3+-+Accessibility+Statements
 [info 1]: https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx

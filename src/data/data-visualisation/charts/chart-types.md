@@ -21,8 +21,6 @@ The [four main questions][chart 2] to help you decide which chart type to use ar
 - Do you want to better understand the **relationship** between two or more variables?
 - Do you want to show the **distribution** of your data?  
   
-![Green rectangle with the words 'What would you like to show?' in white text inside it. The words 'comparison', 'distribution', 'composition', and 'relationship' are in black text on the outside of each of the four sides (starting at the top andworking clockwise). Out from each of these words are tree diagrams with different chart type names and examples.](../images/chart-tree.png)
-  
 ::: details Source - choosing the right chart
 
 [Qlik: How to choose the right chart][chart 3]
@@ -57,7 +55,7 @@ Stay away from attempting to compare more than four categories. Using four categ
 
 :::  
   
-![Examples of the comparison visualisations listed](../images/comparison.png)  
+![Examples of comparison visualisations](../images/comparison.png)  
 
 ##### Line charts
   
@@ -108,7 +106,7 @@ Static:
 - stacked 100% bar chart with subcomponents (components of components)
 - tree map (accumulation to total and absolute difference matters)
 
-![Examples of the composition visualisations listed](../images/composition.png)
+![Examples of composition visualisations](../images/composition.png)
 
 ##### Stacked bar charts
 
@@ -149,7 +147,7 @@ Distribution visualisations are used to visualise the distribution of data, usef
 - line histogram (single variable, many data points)
 - scatter plot (2 variables)
 
-![Examples of the distribution visualisations listed](../images/distribution.png)  
+![Examples of the distribution visualisations](../images/distribution.png)  
 
 ##### Scatter charts
   
@@ -168,7 +166,7 @@ Relationship visualisations are used to highlight a relationship or correlation 
 - scatter plot (2 variables)
 - scatter plot bubble size (3 variables)
   
-![Examples of the relationship visualisations listed](../images/relationship.png)  
+![Examples of the relationship visualisations](../images/relationship.png)  
 
 ### Geospatial visualisations  
   
@@ -298,7 +296,7 @@ Further examples of charts available:
 - network diagram
 - flowchart  
 
-![Examples of the visualisations listed](../images/chart-eg.png)  
+![Examples of the visualisations](../images/chart-eg.png)  
 
 [chart 1]: https://data-flair.training/blogs/qlikview-visualization/
 [chart 2]: https://uxplanet.org/data-heavy-applications-how-to-design-perfect-charts-c0c893fef6de

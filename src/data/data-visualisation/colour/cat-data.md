@@ -53,8 +53,8 @@ We recommend using our suggested colour palette in the order given in the list t
   
 NHS Blue, NHS Aqua Green, NHS Pink, NHS Orange, NHS Green and NHS Light Blue can all be used at tints 100%, 80%, 60%, 40% and 20% if necessary and appropriate within a visualisation.  
 
- ![NHS Blue gradient from 100% tint to 20% tint](../images/blue-gradient.png)   ![NHS Aqua Green gradient from 100% tint to 20% tint](../images/aqua-gradient.png)    ![NHS Pink gradient from 100% tint to 20% tint](../images/pink-gradient.png)  
- ![NHS Orange gradient from 100% tint to 20% tint](../images/orange-gradient.png) ![NHS Green gradient from 100% tint to 20% tint](../images/green-gradient.png) ![NHS Light Blue gradient from 100% tint to 20% tint](../images/light-blue-gradient.png)
+ ![NHS Blue gradient example](../images/blue-gradient.png)   ![NHS Aqua Green gradient example](../images/aqua-gradient.png)    ![NHS Pink gradient gradient example](../images/pink-gradient.png)  
+ ![NHS Orange gradient example](../images/orange-gradient.png) ![NHS Green gradient example](../images/green-gradient.png) ![NHS Light Blue gradient example](../images/light-blue-gradient.png)
 
 ### Simple charts  
 
@@ -97,7 +97,7 @@ If you are using red to signal 'warning' or 'caution', and green to signal 'appr
   
 Use additional encoding methods such as symbols (X, !, ✓) or positions (each colour appearing in a slightly different location, often like traffic lights with red at the top, amber below and green at the bottom) to convey meaning.  
 
- ![Examples of using RAG status combined with symbols](../images/RAG-symbols.png)
+ ![Examples of using RAG status with symbols](../images/RAG-symbols.png)
 
 ::: details Source - RAG status
 
@@ -108,20 +108,20 @@ Use additional encoding methods such as symbols (X, !, ✓) or positions (each c
   
 The following colours have been accessibility tested and should be used in addition to encoding methods to ensure an alternative option is available for users with accessibility needs:  
 
-- Leaf green: #0F8243 (--ons-color-leaf-green)
-![Horizontal rectangle block of ONS colour Leaf green on a white background with the words 'Leaf green' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-leaf-green' beneath the colour block](../images/ons-green.png)
+- Leaf green: #0F8243 (CSS variable: --ons-color-leaf-green)
+![ONS colour Leaf green](../images/ons-green.png)
 
-- Neon yellow: #F0F762  
-![Horizontal rectangle block of ONS colour Neon yellow on a white background with the words 'Neon yellow' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-neon-yellow' beneath the colour block](../images/ons-neon-yell.png) 
+- Neon yellow: #F0F762 (CSS variable: --ons-color-neon-yellow)  
+![ONS colour Neon yellow](../images/ons-neon-yell.png)
 
-- Sun yellow: #FBC900  
-![Horizontal rectangle block of ONS colour Sun yellow on a white background with the words 'Sun yellow' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-sun-yellow' beneath the colour block](../images/ons-sun-yell.png)  
+- Sun yellow: #FBC900 (CSS variable: --ons-color-sun-yellow)  
+![ONS colour Sun yellow](../images/ons-sun-yell.png)  
 
-- Jaffa orange: #FA6401  
-![Horizontal rectangle block of ONS colour Jaffa orange on a white background with the words 'Jaffa orange' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-jaffa-orange' beneath the colour block](../images/ons-orange.png)  
+- Jaffa orange: #FA6401 (CSS variable: --ons-color-jaffa-orange)  
+![ONS colour Jaffa orange](../images/ons-orange.png)  
 
-- Red: #D0021B  
-![Horizontal rectangle block of ONS colour Ruby red on a white background with the words 'Ruby red' above the colour block, the hex code in the bottom right corner of the colour block and 'CSS variable: --ons-color-ruby-red' beneath the colour block](../images/ons-red.png)
+- Red: #D0021B (CSS variable: --ons-color-ruby-red)  
+![ONS colour Ruby red](../images/ons-red.png)
 
 ::: details Source - ONS service manual
 
