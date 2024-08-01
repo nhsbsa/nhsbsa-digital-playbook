@@ -97,7 +97,14 @@ Otherwise, these are the tints of the NHS Blue at each 10% interval:
 </body>
 </html>
 
-Note: we only recommend outlining the bars when using tints of a palette, in general, bar outlines add unnecessary clutter. We outline all bars to maintain consistency.  
+Charts displaying data for 2 different years should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used with appropriate ocntrast for the corresponding numeric labels.
+
+- NHS Blue: #005EB8 (100%), #5C98D1 (80%), #97BDE1 (60%)
+- NHS Light Blue: #41B6E6 (100%), #66C4EB (80%), #8DD3F0 (60%)  
+  
+![bar graph demonstrating the use of colour described](../images/nhs_blue_bars.png)
+  
+Note: we only recommend outlining the bars when using the lightst tints of a palette, if there is not enough colour contrast. In this case, we would outline all bars to maintain consistency. In general, bar outlines add unnecessary clutter.  
 
 ::: details Source - colour palette and NHS identity
 

@@ -1,0 +1,110 @@
+{% from "colorBlock/macro.njk" import colorBlock %}
+{% set headingLevel %}
+{{ params.headingLevel if params.headingLevel else 'h2' }}
+{% endset %}
+<div class="card">
+	{% if params.heading %}
+	<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
+	{{ params.heading }}
+	</{{headingLevel}}>
+	{% endif %}
+	<div>{{ colorBlock(params) }}</div>
+	<dl>
+		<dt>Hex</dt>
+		<dd>{{params.color}}</dd>
+		<dt>RGB</dt>
+		<dd>{{params.color | convertColor('RGB') }}</dd>
+		<dt>CMYK</dt>
+		<dd>{{params.color | convertColor('CMYK') }}</dd>
+		{% if params.pantone %}
+		<dt>Pantone</dt>
+		<dd>{{params.pantone}}</dd>
+		{% endif %}
+		{% if params.ral %}
+		<dt>RAL</dt>
+		<dd>{{params.ral}}</dd>
+		{% endif %}
+	</dl>
+</div>
+
+{% from 'tables/macro.njk' import table %}
+
+{% set headingLevel = params.headingLevel | default('h2') %}
+
+{% set tableRows = [
+	[
+		{ text: "Hex" },
+		{ text: params.color }
+	],
+	[
+		{ text: "RGB" },
+		{ text: params.color | convertColor('RGB') }
+	],
+	[
+		{ text: "CMYK" },
+		{ text: params.color | convertColor('CMYK') }
+	]
+] %}
+
+{% if params.pantone %}
+	{% set tableRows = (tableRows.push([
+		{ text: "Pantone" },
+		{ text: params.pantone }
+	]), tableRows) %}
+{% endif %}
+
+{% if params.ral %}
+	{% set tableRows = (tableRows.push([
+		{ text: "RAL" },
+		{ text: params.ral }
+	]), tableRows) %}
+{% endif %}
+
+{# control width? #}
+{# <div class="nhsuk-grid-row"> #}
+{# <div class="nhsuk-grid-column-one-half"> #}
+<div class="card">
+	{% if params.heading %}
+		<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
+	{% endif %}
+
+	{{ colorBlock(params) }}
+
+	{{ table({
+		panel: false,
+		firstCellIsHeader: true,
+		rows: tableRows
+	}) }}
+</div>
+
+{# CONDENSED VERSION #}
+
+{# <div class="card nhsuk-u-width-one-third">
+  {% if params.heading %}
+    <{{headingLevel}} class="color-info-heading">{{ params.heading }}</{{headingLevel}}>
+  {% endif %}
+  
+  {{ colorBlock(params) }}
+  
+  <div class="color-details">
+    <div class="detail-item"><span>Hex:</span> {{params.color}}</div>
+    <div class="detail-item"><span>RGB:</span> {{params.color | convertColor('RGB')}}</div>
+    <div class="detail-item"><span>CMYK:</span> {{params.color | convertColor('CMYK')}}</div>
+    {% if params.pantone %}<div class="detail-item"><span>Pantone:</span> {{params.pantone}}</div>{% endif %}
+    {% if params.ral %}<div class="detail-item"><span>RAL:</span> {{params.ral}}</div>{% endif %}
+  </div>
+</div> #}
+
+{# CSS: 
+.color-details {
+    flex-grow: 1;
+  }
+  
+  .detail-item {
+    display: block;
+  }
+  
+  .detail-item span:first-child {
+    font-weight: bold;
+  }
+ #}

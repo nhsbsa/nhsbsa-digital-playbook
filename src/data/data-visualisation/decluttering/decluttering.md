@@ -30,15 +30,17 @@ Some steps that you can take to declutter a chart are:
 - removing any redundant data. This includes improving the x and y axis labels to be more concise
 - placing the legend as close to a line chart as possible
 - considering the accuracy needed. For example, would the user need to see each decimal place of a figure, or would rounding a value be more effective
-- pulling focus onto certain lines/bars by highlighting the most important element. For example, by using NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD).  
+- pulling focus onto certain lines/bars by highlighting the most important element. For example, by using NHS Blue (#005EB8) for the one bar you wish to pull focus to, and NHS Grey 3 (#AEB7BD) for the other bars in the chart.  
+  
+![bar chart with focus pulled to one bar with colour](blue-and-grey-eg.png)
 
-#005EB8:  
+#005EB8 is the hex code for NHS Blue (strong blue):  
 
-![Rectangle of block colour in the shade #005EB8 NHS Blue, strong blue](hex-nhs-blue.png)  
+![Block of colour #005EB8](hex-nhs-blue.png)  
 
-#aeb7bd:  
+#AEB7BD is the hex code for NHS Grey 3 (grayish blue):  
 
-![Rectangle of block colour in the shade #AEB7BD NHS Grey 3, grayish blue](hex-nhs-grey-3.png)  
+![Block of colour #AEB7BD](hex-nhs-grey-3.png)  
   
 ::: details Source - eliminating clutter
 

@@ -9,7 +9,7 @@ order: 3
 ## Categorical Data  
   
 Categorical data can be divided into groups or categories by using names or labels.  
-Using four categories is best practice for data visualisation. More than four series can make a chart too cluttered. Consider merging multiple categories or focusing the chart on a single entity if suitable.
+Using four or fewer categories or series is best practice for data visualisation. More than four series can make a chart too cluttered. Consider merging multiple categories or focusing the chart on a single entity if suitable.
 
 ::: details Source - colour palette
 
@@ -38,7 +38,7 @@ For categorical data, the following colours taken from the NHS identity guidelin
  ![Small block of colour showing 5 levels of the NHS Orange gradient from 100% tint to 20% tint and the words 'NHS Orange' beneath this](../images/orange-gradient.png) ![Small block of colour showing 5 levels of the NHS Green gradient from 100% tint to 20% tint and the words 'NHS Green' beneath this](../images/green-gradient.png) ![Small block of colour showing 5 levels of the NHS Light Blue gradient from 100% tint to 20% tint and the words 'NHS Light Blue' beneath this](../images/light-blue-gradient.png)
 
 Bear in mind that certain colours have certain meanings, and that use of colour is important.  
-Whilst over 4 categories and colours is not recommended, you will notice that after the first 6 colours, the colours are repeated at a 50% tint, still distinguishable to the user, and not adding in additional colours.
+Whilst over 4 categories, series or use of colours is not recommended, you will notice that after the first 6 colours, the colours are repeated at a 50% tint, still distinguishable to the user, and not adding in additional colours.
 
 ::: details Source - NHS identity
 

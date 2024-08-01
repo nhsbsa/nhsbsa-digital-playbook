@@ -76,8 +76,8 @@ Some best practices for designing charts accessibly:
 - Don’t use italics, this can be hard for a user to read
 - Make sure your product adapts for smaller screens. This is another reason why a text alternative for a chart is recommended
 - Sans serif font is more understandable for people with dyslexia. Make sure your chart text is as large as is reasonable
-- Don’t mislead the user, for example, starting a chart’s value axis from 0 can help ensure the user understands the data clearly
-- Choosing the right type of chart, to aid a user’s understanding
+- Don’t mislead the user.
+- Choosing the most appropriate chart type, to aid a user’s understanding
 - Be aware of where your content is placed. Chart descriptions should appear above a chart to allow a screen reader to pick up the information before a chart is shown
 - Label all buttons, hyperlinks, and necessary features accurately
 - If a link is included, hyperlink appropriate text describing what is being linked to as this is more suitable for a screen reader user
