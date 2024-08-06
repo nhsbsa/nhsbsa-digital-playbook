@@ -11,7 +11,7 @@ order: 110
 Definition: A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI).  
 Tooltips are usually initiated in one of two ways: through a mouse-hover gesture or through a keyboard-hover gesture.  
   
-Please note, data visualisations may have bespoke tooltips in which the developer has customised or amended the default tooltip, this customised tooltip could show as a different structure of detail, or as a visualisation itself.  
+Please note, data visualisations may have bespoke tooltips in which the developer has customised or amended the default tooltip, this customised tooltip could show as a different structure of detail, or as a visualisation itself. A tooltip must not be the sole method of obtaining infomation, an alternative should always be available.
   
 ## Use of Tooltips  
   

@@ -135,9 +135,21 @@ Note: we only recommend outlining the bars when using the lightst tints of a pal
 
 :::  
 
-For an indication of colour schemes and combinations using binary, qualitative, diverging and sequential data the diagram below is useful:  
+Use different colours (eg #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is binary, use 100% and 50% tints of each colour to represent this.
 
-![Diagram showing the relationships between different colours and different groups of colours, with the labels 'binary', 'qualitative', 'diverging', and 'sequential' to indicate when each colour scheme is most appropriate](../images/scheme.png)  
+![colour scheme for binary qualitative data](../images/binary_qual.png)  
+  
+Use two different colours (eg #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is sequential, use tints of each colour (eg 100%, 60%, 30% in descending order) to represent this.  
+  
+![colour scheme for diverging sequential data](../images/diverge_seq.png)  
+  
+Use Use two different colours (eg #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is binary, use 100% and 50% tints of each colour to represent this.  
+  
+![colour scheme for binary diverging data](../images/binary_diverge.png)  
+  
+Use different colours (eg #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is sequential, use tints of each colour (eg 100%, 60%, 30% in descending order) to represent this.  
+  
+![colour scheme for sequential qualitative data](../images/qual_seq.png)  
 
 ::: details Source - colour use guide
 

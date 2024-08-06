@@ -12,6 +12,10 @@ Pie charts are used to show part-to-whole relationships. Typically, bar charts a
   
 Pie charts are sometimes criticised for focusing on the relative sizes of the pieces to one another, but not clearly highlighting changes as a whole when compared to other pie charts.  
   
+A pie chart may have 3 slices of different sizes. Each slice is a different colour, with the largest slice #005EB8. The actual value and % value should be labelled directly on/beside the appropriate slices.  
+
+![example pie chart](../pie_1.png)
+  
 ::: details Source - pie charts
 
 [The humble pie chart][pie 1]
@@ -28,13 +32,17 @@ A donut chart de-emphasises the use of area, to make the viewer focus more on th
 You are focused on reading the length of the arcs, rather than comparing the proportions between slices.  
   
 Also, donut charts are more space-efficient than pie charts because the blank space inside a donut chart can be used to display information inside it.  
+
+A donut chart may have 3 sections of different sizes. Each section is a different colour, with the largest section #005EB8. The actual value and % value should be labelled directly on/beside the appropriate sections.  
+
+![example donut chart](../donut_1.png)  
   
 ::: details Source - donut charts
 
 [Donut charts][pie 2]
 
 :::  
-  
+
 ## Best Practice  
   
 ONS have some best practice guidance on pie charts, and [a check list to follow](https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist).  
