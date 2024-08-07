@@ -47,9 +47,9 @@ There are aspects we can implement to help enable users to read a table effectiv
 - If you can’t avoid many columns, stripe every second row with a light grey, such as NHS Grey 5 (#F0F4F5). This helps aide the user’s gaze
 - Consider the ink to page ratio. Do not use this unnecessarily  
 
-#F0F4F5:  
+#F0F4F5 is the hex code for NHS Grey 5 (lightgrayish cyan):  
 
-![Rectangle of block colour in the shade #F0F4F5 NHS Grey 5, light grayish cyan](../hex-f0f4f5.png)  
+![Block of colour #F0F4F5](../hex-f0f4f5.png)  
 
 **7. Limit your use of pagination.**
 
@@ -68,9 +68,9 @@ There are aspects we can implement to help enable users to read a table effectiv
 - When colouring text use bright colours such as NHS blue (#005EB8)
 - When colouring whole cells, rows or columns, choose a pastel background such as a 20% tint of the NHS blue (#B8DCFF)  
 
-#B8DCFF:  
+#B8DCFF is the hex code for NHS Blue 20% tint (pale blue):  
 
-![Rectangle of block colour in the shade #B8DCFF NHS Blue 20% tint, pale blue](../hex-20-nhs-blue.png)  
+![Block of colour #B8DCFF](../hex-20-nhs-blue.png)  
 
 **9. [Use filters and sorts to help the user](../../filters/).**
 

@@ -22,9 +22,9 @@ To implement RLS or OLS, the developer would need a Pro licence.
 
 RLS is implemented on a dataset level. From there, access to roles can be managed. You can have multiple reports running from one dataset, with RLS implemented across each report.
 
-Creating a suitable data model is key to ensuring RLS will be implemented correctly. The following is an example:  
+Creating a suitable data model is key to ensuring RLS will be implemented correctly.  
   
-![Screenshot showing Power BI desktop Model tab, with 4 tables in a horizontal line. From left to right the tables are called 'ItemCount', 'Hierarchy', 'Region', 'User_Security'. There is a one-to-many relationship from 'Hierarchy' to 'ItemCount'. There is a one-to-many relationship from 'Region' to 'Hierarchy'. There is a one-to-many realtionship from'Region' to 'User_Security', but with cross-directional filtering in place.](../images/data-model.png)  
+![Example data model](../images/data-model.png)  
   
 You can either import the access tables or do this as a Direct Query. OneLake does not yet have this functionality.  
   
@@ -43,11 +43,17 @@ Some options of a DAX expression you could put in place:
   
 Please note, RLS is implemented before your data is read in, so if you need to redact your data it is preferable to calculate any aggregations before reading your data in. In terms of redacting data for small base sizes, RLS is a blanket rule which would be preferable, otherwise, you can apply suppression of values on individual visualisations. Please make sure you have tested and checked the data shown to ensure the counts are accurate when RLS is applied.  
   
-Below are examples of DAX functions:  
+Examples of DAX functions in the Manage Roles pop-up window, used to filter the data that a particular role can see:  
   
-![Screenshot of Power BI desktop with the 'Manage roles' pop-up window open. The pop-up box has 3 headings, from left to right: 'Roles', 'Tables', 'Tables filter DAX expression'. Under 'Roles' is a list containing 'Full access', 'North', 'Users' and 'North' is highlighted grey to show it has been selected. Under 'Tables' is a list containing 'Hierarchy', 'ItemCount', 'Region', 'User_Security' and 'User_Security' is highlighted grey to show it has been selected. Under 'Table filter DAX expression' there is a text box, in which the following expression is written: OR(User_Security[Region] = "NORTH EAST AND YORKSHIRE", User_Security[Region] = "NORTH WEST"). Under the text box is a note that states: 'Filter the data that this role can see by entering a DAX filter expression that returns a True/False value. For example: [Entity ID] = "Value"'](../images/dax-1.png)  
+1. OR(User_Security[Region] = "NORTH EAST AND YORKSHIRE", User_Security[Region] = "NORTH WEST")  
+  
+2. "User_Security"[Username] = USERNAME()
 
-![Screenshot of Power BI desktop with the 'Manage roles' pop-up window open. The pop-up box has 3 headings, from left to right: 'Roles', 'Tables', 'Tables filter DAX expression'. Under 'Roles' is a list containing 'Full access', 'North', 'Users' and 'Users' is highlighted grey to show it has been selected. Under 'Tables' is a list containing 'Hierarchy', 'ItemCount', 'Region', 'User_Security' and 'User_Security' is highlighted grey to show it has been selected. Under 'Table filter DAX expression' there is a text box, in which the following expression is written: "User_Security"[Username] = USERNAME(). Under the text box is a note that states: 'Filter the data that this role can see by entering a DAX filter expression that returns a True/False value. For example: [Entity ID] = "Value"'](../images/dax-2.png)  
+These both return a true/false value, which is necessary.
+
+![Example DAX dormula](../images/dax-1.png)  
+
+![Example DAX formula](../images/dax-2.png)  
   
 ## Access  
   

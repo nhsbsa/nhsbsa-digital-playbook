@@ -16,19 +16,15 @@ There are many functionalities available in a Power BI dashboard, and our users 
   
 This document is designed to be a snapshot of useful functionalities for an end user. Microsoft have [comprehensive consumer manuals][hint 1] online for end users.  
   
-To ensure our users have access to this information as they need it, it is recommended to add a ‘User Hints’ page to the dashboard, which is hidden unless the user clicks on the button and relevant description to navigate to this page. This links in with the ‘Layout of a dashboard’ and ‘About Pages’ documentation guidance.  
+To ensure our users have access to this information as they need it, it is recommended to add a ‘User Hints’ page to the dashboard, which is hidden unless the user clicks on the button and relevant description to navigate to this page. This links in with the ‘Layout of a dashboard’ and ‘About Pages’ documentation guidance.   
   
-An example of what this could look like for a user has been created within the Power BI template:  
-  
-![An example User Hints Power BI report page](images/hint-page.png)  
+![User Hints example page](images/hint-page.png)  
 
 ## Selecting and filtering data  
   
 Filtering your dashboard by selections is extremely useful. A dashboard can be developed to have dropdowns present, or a filter panel present. To select the data you want your dashboard or charts to filter by using the dashboard dropdowns, click to select a value. To filter by multiple values, you can hold down the SHIFT keyboard key to select multiple values at once, or pick which values to select by holding down the CTRL keyboard key whilst making selections.  
   
-An example of a dashboard dropdown filters, with selections made using the CTRL key:  
-  
-![Screenshot showing an example of a dropdown list filter](images/dropdown.png)  
+![Example dropdown list filter](images/dropdown.png)  
 
 You can also select and filter your dashboard by values in a table or chart by using the SHIFT or CTRL keyboard keys.  
   
@@ -38,7 +34,7 @@ If a filter panel is present, there is no need to use keyboard keys to use the f
 
 To reset the Filters pane to the designer's defaults, select the Reset icon from the top menu bar.  
   
-![Screenshot showing the reset filters button](images/reset-button.png)  
+![Reset filters button](images/reset-button.png)  
 
 Microsoft have [guidance for filters][hint 2] available online.  
 
@@ -48,13 +44,13 @@ Some charts have variables present, which it would be useful to delve deeper int
   
 You can tell if a visual has a hierarchy by hovering over it. If the drill control options appear in the action bar, your visual has a hierarchy and you can click on the drilldown icon to see further information:  
   
-![Screenshot showing the drill down icons on a visual](images/drill-down.png)  
+![Drill down icons](images/drill-down.png)  
   
 Another way to access the drill features is by right-clicking a data point on the visual to open a menu with available options.  
   
-![Screenshot showing the menu that appears when a visual is right-clicked](images/drill-down-2.png)  
+![Drill features menu](images/drill-down-2.png)  
   
-Microsoft have [guidance for drill downs][hint 3] available online. 
+Microsoft have [guidance for drill downs][hint 3] available online.
 
 ## Tooltips  
   
@@ -70,9 +66,9 @@ For accessibility purposes, in having an alternative way to consume data shown i
 Q&A is available on dashboards in the Power BI service, and at the bottom of the dashboard in Power BI mobile.  
 Q&A is available in reports if the report designer added a specific type of interactive visual called a Q&A visual or added a Q&A button. Ask natural language questions and create new report visuals that represent the answers to your questions.  
 
-![Screenshot showing where to enter natural language questions in the Power BI service](images/QA-bar.png)  
+![Natural language question box](images/QA-bar.png)  
   
-![Screenshot showing the specific Q&A visual](images/QA-visual.png)  
+![Q&A visual](images/QA-visual.png)  
 
 Microsoft have [guidance on Q&A functionality][hint 4] available online.
 
@@ -80,9 +76,9 @@ Microsoft have [guidance on Q&A functionality][hint 4] available online.
   
 What can you do to ensure you're using the latest content? In most cases, you don’t need to do anything at all. Any content, like apps, dashboards, scorecards, or reports, that's been shared with you is automatically refreshed and updated on a schedule that's set by the designer. The designer either manually updates content, or they can update it automatically by setting an automated refresh schedule.  
   
-If you have questions about content freshness, contact the designer directly. The examples below show you how to identify and contact the owner of your content.  
+If you have questions about content freshness, contact the designer directly. You can identify and contact the owner of your content in the workspace.  
   
-![Screenshot showing where to find owner and refresh date](images/owner.png)  
+![Example owner and refresh date](images/owner.png)  
   
 Microsoft have [guidance on checking data refreshes][hint 5] available online.  
 

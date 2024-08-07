@@ -43,7 +43,7 @@ Access to the data held within that workspace should be determined on the data i
   
 To create a workspace, create a Service Request with the Category being ‘Microsoft Applications’, the Sub Category as ‘Power BI’ and the Item as ‘Access’.  
   
-![Screenshot showing how to configure the Category, Sub-category and Item fields of a service desk request](../categories.png)  
+![Example service desk request](../categories.png)  
   
 The following details should be included:
 
