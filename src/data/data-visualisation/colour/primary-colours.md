@@ -118,7 +118,7 @@ Otherwise, these are the tints of the NHS Blue at each 10% interval:
 </body>
 </html>
 
-Charts displaying data for 2 different years should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used in descending order, with appropriate contrast for the corresponding numeric labels.
+Charts displaying data for 2 different categories should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used in descending order, with appropriate contrast for the corresponding numeric labels.
 
 - NHS Blue: #005EB8 (100%), #5C98D1 (80%), #97BDE1 (60%)
 - NHS Light Blue: #41B6E6 (100%), #66C4EB (80%), #8DD3F0 (60%)  
@@ -135,19 +135,19 @@ Note: we only recommend outlining the bars when using the lightst tints of a pal
 
 :::  
 
-Use different colours (eg #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is binary, use 100% and 50% tints of each colour to represent this.
+Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is binary, use 100% and 50% tints of each colour to represent this.
 
 ![colour scheme for binary qualitative data](../images/binary_qual.png)  
   
-Use two different colours (eg #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is sequential, use tints of each colour (eg 100%, 60%, 30% in descending order) to represent this.  
+Use two different colours (e.g. #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is sequential, use tints of each colour (e.g. 100%, 80%, 60% in descending order) to represent this.  
   
 ![colour scheme for diverging sequential data](../images/diverge_seq.png)  
   
-Use Use two different colours (eg #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is binary, use 100% and 50% tints of each colour to represent this.  
+Use Use two different colours (e.g. #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is binary, use 100% and 50% tints of each colour to represent this.  
   
 ![colour scheme for binary diverging data](../images/binary_diverge.png)  
   
-Use different colours (eg #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is sequential, use tints of each colour (eg 100%, 60%, 30% in descending order) to represent this.  
+Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is sequential, use tints of each colour (e.g. 100%, 80%, 60% in descending order) to represent this.  
   
 ![colour scheme for sequential qualitative data](../images/qual_seq.png)  
 

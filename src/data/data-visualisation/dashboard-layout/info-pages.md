@@ -18,7 +18,7 @@ Benefits of information pages include:
 - Informing users of important relevant information.
 - A standardised and reliable approach across dashboards, enabling a user’s ease-of-use.  
   
-The information pages are designed to compliment the reporting pages, with an initial Dashboard information page, followed by the reporting pages, and with any other complimentary dashboard information pages at the end of the report for consultation by the user if needed. The pages created in the wireframe are:
+The information pages are designed to compliment the reporting pages, with an initial Dashboard information page, followed by the reporting pages, and with any other complimentary dashboard information pages at the end of the report for consultation by the user if needed. The pages mentioned in this example are:
 
 - Info: Dashboard information
 - Summary/highlights
@@ -39,7 +39,7 @@ The information pages have the following features present across each page:
 - The Report/Dashboard Title and name of the page, alongside the reporting month and year.
 - Information in the main body of the page.
 - A footer to state who created the dashboard, and a link to the [Accessibility Statement][info 0]
-- The background is NHS Grey 5 (#f0f4f5). Please see the colour guidance for more details.  
+- The background is NHS Grey 5 (#F0F4F5). Please see the colour guidance for more details.  
   
 ### Text content  
   
@@ -100,7 +100,7 @@ It includes the following:
 
 - Dashboard functionality to give details on functions within the dashboard, for example, users may not be familiar with drill down functionality and how to access it, therefore might miss this feature and other insights if not prompted to look and use this function.
 - Links to relevant articles or training courses could be useful, for example, NHSBSA training courses sign up or Microsoft could be referenced for Power BI reports.
-- Accessibility hints could be included in this section, for example, how to change from a chart format to a table. 
+- Accessibility hints could be included in this section, for example, how to change from a chart format to a table.
   
 [info 0]: https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1559396709/STAGE+3+-+Accessibility+Statements
 [info 1]: https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx

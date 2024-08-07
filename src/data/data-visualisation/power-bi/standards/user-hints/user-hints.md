@@ -16,7 +16,7 @@ There are many functionalities available in a Power BI dashboard, and our users 
   
 This document is designed to be a snapshot of useful functionalities for an end user. Microsoft have [comprehensive consumer manuals][hint 1] online for end users.  
   
-To ensure our users have access to this information as they need it, it is recommended to add a ‘User Hints’ page to the dashboard, which is hidden unless the user clicks on the button and relevant description to navigate to this page. This links in with the ‘Layout of a dashboard’ and ‘About Pages’ documentation guidance.   
+To ensure our users have access to this information as they need it, it is recommended to add a ‘User Hints’ page to the dashboard, which is hidden unless the user clicks on the button and relevant description to navigate to this page. This links in with the ‘Layout of a dashboard’ and ‘About Pages’ documentation guidance.
   
 ![User Hints example page](images/hint-page.png)  
 
@@ -42,7 +42,7 @@ Microsoft have [guidance for filters][hint 2] available online.
   
 Some charts have variables present, which it would be useful to delve deeper into. For example, if you have a chart showing the number of individuals within a directorate, it might be useful to click on the directorate, and drill-down to see a further breakdown on the number of individuals within a service area. Only hierarchical values (such as Directorate -> Service Area) can be drilled into. The developer of the dashboard builds in this functionality.  
   
-You can tell if a visual has a hierarchy by hovering over it. If the drill control options appear in the action bar, your visual has a hierarchy and you can click on the drilldown icon to see further information:  
+You can tell if a visual has a hierarchy by hovering over it. If the drill control options appear in the action bar, your visual has a hierarchy and you can click on the drilldown icon to see further information.  
   
 ![Drill down icons](images/drill-down.png)  
   

@@ -51,7 +51,7 @@ Examples of DAX functions in the Manage Roles pop-up window, used to filter the 
 
 These both return a true/false value, which is necessary.
 
-![Example DAX dormula](../images/dax-1.png)  
+![Example DAX formula](../images/dax-1.png)  
 
 ![Example DAX formula](../images/dax-2.png)  
   

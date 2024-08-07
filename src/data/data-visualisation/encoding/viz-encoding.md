@@ -62,7 +62,7 @@ Symmetry
 Common fate
 : Elements which move in the same direction seem to be a group  
   
-![Example visualisations showing the Gestalt principles](../images/gestalt.png) 
+![Example visualisations showing the Gestalt principles](../images/gestalt.png)
 
 ### Including comparisons or context  
   

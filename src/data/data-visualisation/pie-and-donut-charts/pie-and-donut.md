@@ -18,7 +18,7 @@ A pie chart may have 3 slices of different sizes. Each slice is a different colo
   
 ::: details Source - pie charts
 
-[The humble pie chart][pie 1]
+[The humble pie chart (blog)][pie 1]
 
 :::  
   

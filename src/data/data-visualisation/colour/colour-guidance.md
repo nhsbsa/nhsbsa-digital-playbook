@@ -51,14 +51,14 @@ Consider the type of chart you are using and the relevant colour palette. Please
 - [Sequential Data Colour Standards](../seq-data/)  
 
 Colour can be used to connect information. For example, if data is showing various suppliers, individual suppliers should be represented by the same colour across charts.  
-ie: if 'Supplier H' appears across multiple visualisations, the same colour should be used to represent 'Supplier H' each time it appears.
+i.e.: if 'Supplier H' appears across multiple visualisations, the same colour should be used to represent 'Supplier H' each time it appears.
   
 ![Pie chart with 3 slices, coloured with tints of NHS Blue](../images/pie_eg.png)  
 ![Column chart with 3 bars, coloured with tints of NHS Blue](../images/column_eg.png)
 
 ::: details Source - choosing colours
 
-[How to Choose Colors for Data Visualizations][colours 5]
+[How to Choose Colours for Data Visualisations][colours 5]
 
 :::
 
