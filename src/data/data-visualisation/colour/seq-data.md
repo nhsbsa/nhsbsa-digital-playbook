@@ -16,7 +16,7 @@ Sequential data should use NHS Blue (#005EB8) as our primary colour to be used. 
 
 ::: details Source - choosing colours
 
-[How to Choose Colors for Data Visualizations][seq 1]  
+[How to Choose Colours for Data Visualisations][seq 1]  
 :::
   
 Due to the problems with contrast ratios in this palette, there is [specific advice for different chart types][seq 2].  

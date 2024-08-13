@@ -153,7 +153,7 @@ Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different gr
 
 ::: details Source - colour use guide
 
-[Colour use guidelines for mapping and visualization][pc 6]
+[Colour use guidelines for mapping and visualisation][pc 6]
 
 :::
 
