@@ -47,7 +47,7 @@
     "markdown-it-codetabs": "^1.2.0",
     "markdown-it-container": "^4.0.0",
     "markdown-it-deflist": "^3.0.0",
-    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-emoji": "^2.0.2",
     "markdown-it-footnote": "^4",
     "markdown-it-ins": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
