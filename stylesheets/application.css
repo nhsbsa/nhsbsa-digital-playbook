@@ -614,6 +614,15 @@ caption {
     margin-bottom: 24px;
   }
 }
+.app-related__list .app-related__list, ol .app-related__list, .app-related__list ol, ol ol, ul .app-related__list, ul ol, .app-related__list ul, ol ul, ul ul, .nhsuk-list .app-related__list, .nhsuk-list ol, .nhsuk-list ul, .app-related__list .nhsuk-list, ol .nhsuk-list, ul .nhsuk-list, .nhsuk-list .nhsuk-list {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+@media (min-width: 40.0625em) {
+  .app-related__list .app-related__list, ol .app-related__list, .app-related__list ol, ol ol, ul .app-related__list, ul ol, .app-related__list ul, ol ul, ul ul, .nhsuk-list .app-related__list, .nhsuk-list ol, .nhsuk-list ul, .app-related__list .nhsuk-list, ol .nhsuk-list, ul .nhsuk-list, .nhsuk-list .nhsuk-list {
+    margin-top: 8px;
+  }
+}
 
 .app-related__list > li, ol > li, ul > li, .nhsuk-list > li {
   margin-bottom: 8px;
@@ -2920,25 +2929,6 @@ b {
     display: none;
   }
 }
-.nhsuk-breadcrumb .nhsuk-icon__chevron-right {
-  fill: #aeb7bd;
-  height: 18px;
-  position: relative;
-  top: 5px;
-  width: 18px;
-}
-@media (min-width: 61.875em) {
-  .nhsuk-breadcrumb .nhsuk-icon__chevron-right {
-    margin: 0 3px 0 5px;
-  }
-}
-.nhsuk-breadcrumb .nhsuk-icon__chevron-left {
-  float: left;
-  height: 24px;
-  left: -8px;
-  position: relative;
-  width: 24px;
-}
 .nhsuk-breadcrumb + .nhsuk-width-container .nhsuk-main-wrapper {
   padding-top: 0;
 }
@@ -3203,6 +3193,29 @@ b {
 }
 .nhsuk-button--reverse.nhsuk-button--disabled:focus {
   background-color: #ffffff;
+}
+
+.nhsuk-button--warning {
+  background-color: #d5281b;
+  box-shadow: 0 4px 0 #6b140e;
+}
+.nhsuk-button--warning:hover {
+  background-color: #a82015;
+}
+.nhsuk-button--warning:focus {
+  background: #ffeb3b;
+  box-shadow: 0 4px 0 #212b32;
+  color: #212b32;
+  outline: 4px solid transparent;
+}
+.nhsuk-button--warning:active {
+  background: #6b140e;
+  box-shadow: none;
+  color: #ffffff;
+  top: 4px;
+}
+.nhsuk-button--warning.nhsuk-button--disabled {
+  background-color: #d5281b;
 }
 
 /**
@@ -3645,6 +3658,7 @@ b {
   display: block;
   fill: #005eb8;
   margin-top: -8px;
+  pointer-events: none;
   position: absolute;
   right: 24px;
   top: 50%;
@@ -4144,7 +4158,7 @@ b {
  */
 .nhsuk-error-summary {
   padding: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   border: 4px solid #d5281b;
 }
 @media (min-width: 40.0625em) {
@@ -4154,7 +4168,7 @@ b {
 }
 @media (min-width: 40.0625em) {
   .nhsuk-error-summary {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
   }
 }
 @media (min-width: 40.0625em) {
@@ -4428,6 +4442,7 @@ b {
 @media (min-width: 48.0625em) {
   .nhsuk-footer {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -4553,8 +4568,22 @@ b {
 
 .nhsuk-header__container {
   margin: 0 16px;
+  /* [1] */
   max-width: 960px;
+  /* [2] */
+  /* [4] */
   padding: 20px 0;
+}
+@media (min-width: 48.0625em) {
+  .nhsuk-header__container {
+    margin: 0 32px;
+    /* [3] */
+  }
+}
+@media (min-width: 1024px) {
+  .nhsuk-header__container {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 40.0525em) {
   .nhsuk-header__container {
@@ -4566,12 +4595,6 @@ b {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
-    margin: 0 32px;
-  }
-}
-@media (min-width: 61.875em) {
-  .nhsuk-header__container {
-    margin: 0 auto;
   }
 }
 
@@ -4730,6 +4753,7 @@ b {
 .nhsuk-search__input::placeholder {
   color: #4c6272;
   font-size: 16px;
+  opacity: 1;
 }
 .nhsuk-search__input:-ms-input-placeholder {
   color: #4c6272;
@@ -5083,6 +5107,12 @@ b {
 @media (min-width: 48.0625em) {
   .nhsuk-header__navigation-item--home {
     display: none;
+  }
+}
+
+@media (min-width: 48.0625em) {
+  .nhsuk-header__navigation-list--left-aligned {
+    justify-content: initial;
   }
 }
 
@@ -5816,7 +5846,7 @@ b {
   /* 2 */
   border-radius: 0;
   box-sizing: border-box;
-  height: 40px;
+  min-height: 40px;
   margin-top: 0;
   padding: 4px;
   width: 100%;
@@ -5906,7 +5936,7 @@ b {
   cursor: default;
   display: inline-block;
   flex: 0 0 auto;
-  height: 40px;
+  min-height: 40px;
   min-width: 2.5rem;
   padding: 4px;
   text-align: center;
@@ -6037,14 +6067,18 @@ b {
 }
 
 /* Modifiers that make labels look more like their equivalent headings */
+.nhsuk-label--xl,
+.nhsuk-label--l,
+.nhsuk-label--m {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 .nhsuk-label--xl {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.25;
-  display: block;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 40px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--xl {
@@ -6059,20 +6093,11 @@ b {
     line-height: 1.15;
   }
 }
-@media (min-width: 40.0625em) {
-  .nhsuk-label--xl {
-    margin-bottom: 48px;
-  }
-}
 
 .nhsuk-label--l {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.33333;
-  display: block;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--l {
@@ -6087,20 +6112,11 @@ b {
     line-height: 1.05;
   }
 }
-@media (min-width: 40.0625em) {
-  .nhsuk-label--l {
-    margin-bottom: 24px;
-  }
-}
 
 .nhsuk-label--m {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
-  display: block;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--m {
@@ -6115,20 +6131,13 @@ b {
     line-height: 1.15;
   }
 }
-@media (min-width: 40.0625em) {
-  .nhsuk-label--m {
-    margin-bottom: 24px;
-  }
-}
 
 .nhsuk-label--s {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  display: block;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--s {
@@ -6141,11 +6150,6 @@ b {
   .nhsuk-label--s {
     font-size: 14pt;
     line-height: 1.15;
-  }
-}
-@media (min-width: 40.0625em) {
-  .nhsuk-label--s {
-    margin-bottom: 24px;
   }
 }
 
@@ -6680,6 +6684,14 @@ b {
 /* ==========================================================================
    COMPONENTS/ #SELECT
    ========================================================================== */
+/**
+ * Select input sizing
+ * 1. Uses rems so that safari input scales with font size
+ * 2. This min-width was chosen because:
+ *    - it makes the Select wider than it is tall (which is what users expect)
+ *    - 20ex + 3ex matches the 'width-10' variant of the input component
+ *    - it fits comfortably on screens as narrow as 240px wide
+ */
 .nhsuk-select {
   font-weight: 400;
   font-size: 16px;
@@ -6687,7 +6699,10 @@ b {
   line-height: 1.5;
   border: 2px solid #4c6272;
   box-sizing: border-box;
-  height: 40px;
+  height: 2.5rem;
+  /* [1] */
+  min-width: 23ex;
+  /* [2] */
   max-width: 100%;
   padding: 4px;
 }
