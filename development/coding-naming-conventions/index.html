@@ -199,7 +199,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </ul>
 <h2 id="terms" tabindex="-1"><a class="header-anchor" href="#terms">Terms</a></h2>
 <p>Terms used in the naming conventions are:</p>
-<div class="card">
+<div class="md card">
 <table>
   <tr>
     <th>Term</th>
@@ -301,81 +301,81 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <h3 id="case" tabindex="-1"><a class="header-anchor" href="#case">Case</a></h3>
 <p>Different case standards should be applied depending on usage:</p>
 <ul>
-<li><code>Natural</code> - Using natural language standard, with spaces to separate words and capitals for initial letter and proper nouns</li>
-<li><code>kebab-case</code> - All lower case with dashes to separate words</li>
-<li><code>CamelCase</code> - Initial letters in words are uppercased, with no separators. First letter may be upper or lower.</li>
-<li><code>snake_case</code> - All lower case with underscores to separate words</li>
+<li><code class="md">Natural</code> - Using natural language standard, with spaces to separate words and capitals for initial letter and proper nouns</li>
+<li><code class="md">kebab-case</code> - All lower case with dashes to separate words</li>
+<li><code class="md">CamelCase</code> - Initial letters in words are uppercased, with no separators. First letter may be upper or lower.</li>
+<li><code class="md">snake_case</code> - All lower case with underscores to separate words</li>
 </ul>
-<p>For all cases except <code>natural</code>, acronyms should be lowercased and treated as a single word.</p>
+<p>For all cases except <code class="md">natural</code>, acronyms should be lowercased and treated as a single word.</p>
 <hr>
 <h2 id="git" tabindex="-1"><a class="header-anchor" href="#git">Git</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="git-repositories" tabindex="-1"><a class="header-anchor" href="#git-repositories">Git Repositories</a></h3>
-<p>Git repositories should be <code>kebab-case</code> with this convention:</p>
+<p>Git repositories should be <code class="md">kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>{optional service-line}-{service}-{function}-{type}</code></p>
+<p><code class="md">{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
-<p>Gitlab and Github hosted repository names should use unabbreviated <code>natural</code> case.</p>
+<p>Gitlab and Github hosted repository names should use unabbreviated <code class="md">natural</code> case.</p>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="git-branches" tabindex="-1"><a class="header-anchor" href="#git-branches">Git branches</a></h3>
-<p>The mainline branch should be named <code>main</code>. All branches should be <code>kebab-case</code> with this convention:</p>
+<p>The mainline branch should be named <code class="md">main</code>. All branches should be <code class="md">kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>{type}/{change ID}-{brief description}</code></p>
+<p><code class="md">{type}/{change ID}-{brief description}</code></p>
 </blockquote>
 <p>A single branch should be used per change/ticket.</p>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
-<p>Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated <code>natural</code> case for the human readable form, and <code>kebab-case</code> for the URL with this convention:</p>
+<p>Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated <code class="md">natural</code> case for the human readable form, and <code class="md">kebab-case</code> for the URL with this convention:</p>
 <blockquote>
-<p><code>{department}/{service-line}/{service}</code></p>
+<p><code class="md">{department}/{service-line}/{service}</code></p>
 </blockquote>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="merge/pull-requests" tabindex="-1"><a class="header-anchor" href="#merge/pull-requests">Merge/Pull Requests</a></h3>
-<p>Merge/pull requests should be raised with <code>natural</code> case and this convention:</p>
+<p>Merge/pull requests should be raised with <code class="md">natural</code> case and this convention:</p>
 <blockquote>
-<p><code>{change ID} - {brief description}</code></p>
+<p><code class="md">{change ID} - {brief description}</code></p>
 </blockquote>
 </div>
 <hr>
 <h2 id="languages" tabindex="-1"><a class="header-anchor" href="#languages">Languages</a></h2>
 <p>For language constructs refer to the <a href="../coding-style-guide/">standard language style guides</a>.</p>
-<div class="card">
+<div class="md card">
 <h3 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h3>
-<p>Java <code>packages</code> should be all lower case concatenated with this convention:</p>
+<p>Java <code class="md">packages</code> should be all lower case concatenated with this convention:</p>
 <blockquote>
-<p><code>uk.nhs.nhsbsa.{service}.{function}</code></p>
+<p><code class="md">uk.nhs.nhsbsa.{service}.{function}</code></p>
 </blockquote>
-<p>Libraries may omit the <code>service</code> when shared across multiple services.</p>
+<p>Libraries may omit the <code class="md">service</code> when shared across multiple services.</p>
 </div>
 <hr>
 <h2 id="package-managers-and-build-tools" tabindex="-1"><a class="header-anchor" href="#package-managers-and-build-tools">Package managers and build tools</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="maven" tabindex="-1"><a class="header-anchor" href="#maven">Maven</a></h3>
-<p>Maven <code>group id</code> should be <code>kebab-case</code> with this convention:</p>
+<p>Maven <code class="md">group id</code> should be <code class="md">kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>uk.nhs.nhsbsa.{optional department}.{optional service-line}.{service}</code></p>
+<p><code class="md">uk.nhs.nhsbsa.{optional department}.{optional service-line}.{service}</code></p>
 </blockquote>
-<p>Maven <code>artifact id</code> should follow <code>kebab-case</code> and this convention:</p>
+<p>Maven <code class="md">artifact id</code> should follow <code class="md">kebab-case</code> and this convention:</p>
 <blockquote>
-<p><code>{optional service-line}-{service}-{function}-{type}</code></p>
+<p><code class="md">{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 <p>Unit tests run by <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">Maven Surefire plugin</a> should follow the convention:</p>
 <blockquote>
-<p><code>*Test.java</code></p>
+<p><code class="md">*Test.java</code></p>
 </blockquote>
 <p>Integration tests run by <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">Maven Failsafe plugin</a> should follow the convention:</p>
 <blockquote>
-<p><code>*IT.java</code></p>
+<p><code class="md">*IT.java</code></p>
 </blockquote>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">NPM</a></h3>
-<p>Package.json <code>name</code> should be <code>kebab-case</code> with this convention:</p>
+<p>Package.json <code class="md">name</code> should be <code class="md">kebab-case</code> with this convention:</p>
 <blockquote>
-<p><code>@nhsbsa/{optional service-line}-{service}-{function}-{type}</code></p>
+<p><code class="md">@nhsbsa/{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 </div>
 

@@ -227,8 +227,8 @@ Release adoption schedule - NHSBSA Digital, Data and Technology Playbook - NHSBS
 </details>
 
 <p>To manage change of our runtimes and downstream services we maintain a release adoption schedule based on these <em>phases</em>:</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt class="t_pending"><strong>PENDING</strong></dt>
 <dd>Pending release</dd>
 <dt class="t_assess"><strong>ASSESS</strong></dt>
@@ -248,12 +248,12 @@ Schedules contain information on decommissioned versions for visibility.</dd>
 </div>
 <h2 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">Node.js</a></h2>
 <p>Node.js projects should use <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">NVM</a> to manage Node versions in development.<br>
-Include a <code>.nvmrc</code> file in the repository to specify the Node.js version in source code.</p>
+Include a <code class="md">.nvmrc</code> file in the repository to specify the Node.js version in source code.</p>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Node.js</span></summary>
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://nodejs.org/en/about/previous-releases" target="_blank" rel="noopener">Node.js</a> release schedule.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>initial release</em></dd>
 <dt><strong>ADOPT</strong></dt>
@@ -309,8 +309,8 @@ Include a <code>.nvmrc</code> file in the repository to specify the Node.js vers
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html" target="_blank" rel="noopener">AWS Lambda releases</a></li>
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html" target="_blank" rel="noopener">AWS Lambda runtime deprecation policy</a></li>
 </ul>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>AWS release</em></dd>
 <dt><strong>ADOPT</strong></dt>
@@ -349,14 +349,14 @@ Include a <code>.nvmrc</code> file in the repository to specify the Node.js vers
 <td>31 Mar 2023</td></tr>
 </table>
 <h2 id="java" tabindex="-1"><a class="header-anchor" href="#java">Java</a></h2>
-<p>Java projects define the source and target Java version in the Maven <code>pom.xml</code> file.<br>
+<p>Java projects define the source and target Java version in the Maven <code class="md">pom.xml</code> file.<br>
 Teams may use a Java Version Manager such as <a href="https://github.com/jenv/jenv" target="_blank" rel="noopener">JEnv</a> to manage Java versions in development.</p>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Java</span></summary>
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" target="_blank" rel="noopener">Java SE support roadmap</a>.</p>
 <p>Our standard builds use the Temurin Java runtime which maintains its own <a href="https://adoptium.net/en-GB/support/" target="_blank" rel="noopener">release roadmap</a>.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>Java SE General Availability (GA) date</em></dd>
 <dt><strong>ADOPT</strong></dt>
@@ -399,8 +399,8 @@ Teams may use a Java Version Manager such as <a href="https://github.com/jenv/je
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot support roadmap</a>.<br>
 Spring Boot uses a 6 month release cycle between minor versions with a 3 month overlap for <a href="https://tanzu.vmware.com/support/oss" target="_blank" rel="noopener">Open Source Software (OSS) support</a>.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on initial release</dd>
 <dt><strong>ADOPT</strong></dt>
@@ -483,8 +483,8 @@ Spring Boot uses a 6 month release cycle between minor versions with a 3 month o
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Supported-Versions" target="_blank" rel="noopener">Spring Cloud Supported Version roadmap</a>.</p>
 <p>There is often a delay between Spring Boot releases and compatible Spring Cloud versions. This may impact the ability to keep up to date with Spring Boot and is unavoidable.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on initial release</dd>
 <dt><strong>ADOPT</strong></dt>
@@ -525,8 +525,8 @@ Spring Boot uses a 6 month release cycle between minor versions with a 3 month o
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-releases.html" target="_blank" rel="noopener">AWS Lambda releases</a></li>
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html" target="_blank" rel="noopener">AWS Lambda runtime deprecation policy</a></li>
 </ul>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>AWS release</em></dd>
 <dt><strong>ADOPT</strong></dt>
@@ -567,13 +567,13 @@ Spring Boot uses a 6 month release cycle between minor versions with a 3 month o
 <h2 id="ruby" tabindex="-1"><a class="header-anchor" href="#ruby">Ruby</a></h2>
 <p>Ruby is a deprecated language for use in the NHSBSA. Existing projects using Ruby should maintain versions in accordance with this schedule.</p>
 <p>Ruby projects should use <a href="https://github.com/rbenv/rbenv" target="_blank" rel="noopener">rbenv</a> to manage Ruby versions.<br>
-Include a <code>.ruby-version</code> file in the repository to specify the Ruby version in source code.</p>
+Include a <code class="md">.ruby-version</code> file in the repository to specify the Ruby version in source code.</p>
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for Ruby</span></summary>
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://www.ruby-lang.org/en/downloads/releases/" target="_blank" rel="noopener">Ruby release schedule</a>.</p>
 <p>Since Ruby 2.1, a new major version of Ruby has been released every year on December 25th, and EOLed 3 years, 3 months later.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>release date</em></dd>
 <dt><strong>ADOPT</strong></dt>
@@ -615,8 +615,8 @@ Include a <code>.ruby-version</code> file in the repository to specify the Ruby 
 <details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">How we work out the adoption schedule for PostgreSQL</span></summary>
 <div class="nhsuk-details__text">
 <p>We follow the <a href="https://www.postgresql.org/support/versioning/" target="_blank" rel="noopener">PostgreSQL versioning policy</a>.</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>ASSESS</strong></dt>
 <dd>on <em>release</em> date</dd>
 <dt><strong>ADOPT</strong></dt>

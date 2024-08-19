@@ -192,21 +192,21 @@ Peer review - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<div class="admonition warning">
-<p class="admonition-title">NHSBSA peer review process is mandatory</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">NHSBSA peer review process is mandatory</p>
 <p>Only deviate with agreement from your Delivery Manager and Professional Lead</p>
 </div>
 <p>The high level process is:</p>
-<p><img src="../images/code-review-process.png" alt="Code review process showing swimlanes for author and reviewer"></p>
+<p><img src="../images/code-review-process.png" alt="Code review process showing swimlanes for author and reviewer" class="md"></p>
 <h2 id="1-author-creates-branch" tabindex="-1"><a class="header-anchor" href="#1-author-creates-branch">1. Author creates Branch</a></h2>
 <p>All new code should be committed on a topic branch from the mainline production code (main).</p>
 <p>Topic branches should follow the <a href="../coding-naming-conventions">naming convention</a>:</p>
 <blockquote>
-<p><code>{change-type}/{JIRA ticket number}-{dash separated human description}</code></p>
+<p><code class="md">{change-type}/{JIRA ticket number}-{dash separated human description}</code></p>
 </blockquote>
 <p>E.g.</p>
 <blockquote>
-<p><code>feature/LISD-1782-private-pension-order-fix</code></p>
+<p><code class="md">feature/LISD-1782-private-pension-order-fix</code></p>
 </blockquote>
 <h2 id="2-author-commits-new-code-and-pushes-branch" tabindex="-1"><a class="header-anchor" href="#2-author-commits-new-code-and-pushes-branch">2. Author commits new code and pushes branch</a></h2>
 <p>All changes for the ticket should be committed against the topic branch. It is fine to branch from this branch for experimentation, and to merge locally or in a separate review.</p>
@@ -232,12 +232,12 @@ Forced pushes can make it difficult for your reviewer to collaborate. Take time 
 <ul>
 <li>assign to a different person for code review<br>
 or</li>
-<li>set as <code>READY FOR REVIEW</code> to allow a different person to claim</li>
+<li>set as <code class="md">READY FOR REVIEW</code> to allow a different person to claim</li>
 </ul>
 <blockquote>
 <p><strong>NB: Do not use automatic MR creation in the build pipeline. These are created by the <em>gitlab-runner</em> user meaning it isn’t obvious who the MR came from. Furthermore, the merge commit will also belong to the MR creator and traceability is lost.</strong></p>
 </blockquote>
-<p>Merge requests in Gitlab can be prefixed with <code>Draft:</code>. This is a useful way to separate ongoing work in a list of Merge Requests. They can be ignored by a reviewer until the draft status is removed.</p>
+<p>Merge requests in Gitlab can be prefixed with <code class="md">Draft:</code>. This is a useful way to separate ongoing work in a list of Merge Requests. They can be ignored by a reviewer until the draft status is removed.</p>
 <h3 id="guidelines-for-merge-requests" tabindex="-1"><a class="header-anchor" href="#guidelines-for-merge-requests">Guidelines for merge requests</a></h3>
 <ul>
 <li><strong>Update draft descriptions</strong><br>

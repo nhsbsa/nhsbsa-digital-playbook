@@ -160,7 +160,7 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>Refer to the <a href="../tech-release-adoption-schedule">Release adoption schedule</a></p>
 <p>Java projects must:</p>
 <ul>
-<li>define the source and target Java version in the Maven <code>pom.xml</code> file</li>
+<li>define the source and target Java version in the Maven <code class="md">pom.xml</code> file</li>
 <li>use a Java Version Manager such as <a href="https://github.com/jenv/jenv" target="_blank" rel="noopener">JEnv</a> to manage Java versions in development</li>
 </ul>
 <h2 id="ide" tabindex="-1"><a class="header-anchor" href="#ide">IDE</a></h2>
@@ -190,10 +190,10 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </ul>
 <p>We generally use core Java and standard extension packages in preference to third party, although Spring is often used in preference where available:</p>
 <ul>
-<li>Dates and Times using <code>Java.time</code> and not <code>joda</code> or <code>java.util</code></li>
-<li>Transactions using Java Transaction API (<code>javax.transaction</code>)</li>
-<li>Object Relational Mapping using Java Persistence API (<code>javax.persistence</code>) backed by <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
-<li>Validation with <a href="https://beanvalidation.org/1.0/spec/" target="_blank" rel="noopener">JSR-303</a> (<code>javax.validation</code>) backed by <a href="https://hibernate.org/validator/" target="_blank" rel="noopener">Hibernate Validator</a></li>
+<li>Dates and Times using <code class="md">Java.time</code> and not <code class="md">joda</code> or <code class="md">java.util</code></li>
+<li>Transactions using Java Transaction API (<code class="md">javax.transaction</code>)</li>
+<li>Object Relational Mapping using Java Persistence API (<code class="md">javax.persistence</code>) backed by <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
+<li>Validation with <a href="https://beanvalidation.org/1.0/spec/" target="_blank" rel="noopener">JSR-303</a> (<code class="md">javax.validation</code>) backed by <a href="https://hibernate.org/validator/" target="_blank" rel="noopener">Hibernate Validator</a></li>
 </ul>
 <p>We also use other well known libraries:</p>
 <ul>
@@ -210,8 +210,8 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>Prefer <a href="https://assertj.github.io/doc/" target="_blank" rel="noopener">AssertJ</a> for assertions over Hamcrest matchers</li>
 <li><a href="https://github.com/mockito/mockito" target="_blank" rel="noopener">Mockito</a> for mocking of downstream dependencies</li>
 <li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html" target="_blank" rel="noopener">Spring Test</a> including MockMvc and DataJpaTest</li>
-<li>Unit tests run within the Maven <code>test</code> phase with <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">surefire plugin</a></li>
-<li>Integrations tests run within the Maven <code>integration-test</code> phase with <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">failsafe plugin</a>.</li>
+<li>Unit tests run within the Maven <code class="md">test</code> phase with <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">surefire plugin</a></li>
+<li>Integrations tests run within the Maven <code class="md">integration-test</code> phase with <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">failsafe plugin</a>.</li>
 </ul>
 
         <hr>

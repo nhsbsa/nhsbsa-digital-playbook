@@ -362,8 +362,8 @@ Content Security Policy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li><a href="https://csp.withgoogle.com/docs/index.html" target="_blank" rel="noopener">Google’s guidance on CSP</a></li>
 <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP CSP Cheat sheet</a></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Consult a security expert</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">Consult a security expert</p>
 <p>The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.</p>
 <ul>
 <li>Consult a security expert before applying values</li>
@@ -375,12 +375,12 @@ Content Security Policy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <h2 id="start-early" tabindex="-1"><a class="header-anchor" href="#start-early">Start early</a></h2>
 <p>Developing a site with CSP from the outset is much easier than retrofitting CSP to an existing site.</p>
 <h2 id="csp-header" tabindex="-1"><a class="header-anchor" href="#csp-header">CSP Header</a></h2>
-<p>Sending the standard <code>Content-Security-Policy</code> header as well as earlier <code>X-Content-Security-Policy</code> or <code>X-Webkit-CSP</code> headers causes unexpected behaviours on some browsers. Avoid using the deprecated <code>X-*</code> headers.</p>
-<p>Chrome dev-tools hides the <code>X-</code> style CSP response headers in preference to the standard <code>Content-Security-Policy</code>, even when they are sent. Use this curl command to test whether your site is sending the deprecated headers:</p>
+<p>Sending the standard <code class="md">Content-Security-Policy</code> header as well as earlier <code class="md">X-Content-Security-Policy</code> or <code class="md">X-Webkit-CSP</code> headers causes unexpected behaviours on some browsers. Avoid using the deprecated <code class="md">X-*</code> headers.</p>
+<p>Chrome dev-tools hides the <code class="md">X-</code> style CSP response headers in preference to the standard <code class="md">Content-Security-Policy</code>, even when they are sent. Use this curl command to test whether your site is sending the deprecated headers:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--head</span> <span class="token operator">&lt;</span>URL<span class="token operator">></span></code></pre>
 <h2 id="csp-levels" tabindex="-1"><a class="header-anchor" href="#csp-levels">CSP levels</a></h2>
 <p>CSP is an evolving standard, and with each new release comes tighter controls to protect users. These are referred to as CSP Levels. We aim to provide as secure an experience as possible with the browsers available to our users.</p>
-<p>Design to Content Security Policy level 2 and above. At the time of writing, all modern browsers support Level 2. IE 11 supports parts of Level 1 and it relies on the deprecated and dangerous <code>X-Content-Security-Policy</code>. It can therefore be safely ignored from scope of the CSP.</p>
+<p>Design to Content Security Policy level 2 and above. At the time of writing, all modern browsers support Level 2. IE 11 supports parts of Level 1 and it relies on the deprecated and dangerous <code class="md">X-Content-Security-Policy</code>. It can therefore be safely ignored from scope of the CSP.</p>
 <h2 id="browser-support" tabindex="-1"><a class="header-anchor" href="#browser-support">Browser support</a></h2>
 <p>To check CSP level support in browsers refer to the CanIUse website:</p>
 <ul>
@@ -467,13 +467,13 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 <p>otherwise…</p>
 </li>
 <li>
-<p>Ese a <code>nonce-*</code> value and add a nonce attribute to the inline script<br>
+<p>Ese a <code class="md">nonce-*</code> value and add a nonce attribute to the inline script<br>
 You may need to pass the nonce value downstream to the Google scripts loaded from the inline script.<br>
 See this article for further detail: <a href="https://developers.google.com/tag-platform/tag-manager/web/csp" target="_blank" rel="noopener">Use Tag Manager with a Content Security Policy</a></p>
 </li>
 </ul>
 <h2 id="reporting" tabindex="-1"><a class="header-anchor" href="#reporting">Reporting</a></h2>
-<p>While developing a CSP it can be useful to use the <code>Content-Security-Policy-Report-Only</code> header. The browser will report violations of the CSP without breaking the web application. Fix the policy or the application before switching to use the <code>Content-Security-Policy</code> header.</p>
+<p>While developing a CSP it can be useful to use the <code class="md">Content-Security-Policy-Report-Only</code> header. The browser will report violations of the CSP without breaking the web application. Fix the policy or the application before switching to use the <code class="md">Content-Security-Policy</code> header.</p>
 <p>It is a good idea to release the CSP in report only mode to gain the confidence that no issues have been found in the wild.</p>
 <p>Even after switching to an enforcing CSP, it is useful to receive reports. This will alert to any problems that are introduced, or to attacks being made in the wild. Add the report-uri and report-to directives to the CSP (see below).</p>
 <h2 id="example-csp" tabindex="-1"><a class="header-anchor" href="#example-csp">Example CSP</a></h2>
@@ -496,9 +496,9 @@ See this article for further detail: <a href="https://developers.google.com/tag-
 <span class="token directive property">connect-src</span> <span class="token keyword safe">'self'</span> 'nonce-{nonce}' <span class="token host url">https://www.google-analytics.com</span> <span class="token host url">https://www.googletagmanager.com</span><span class="token punctuation">;</span>
 <span class="token directive property">report-uri</span> TBD<span class="token punctuation">;</span></code></pre>
 <h2 id="must" tabindex="-1"><a class="header-anchor" href="#must">MUST</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="default-src" tabindex="-1"><a class="header-anchor" href="#default-src">default-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -509,7 +509,7 @@ See this article for further detail: <a href="https://developers.google.com/tag-
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Adopt the principle of least privilege by using a value of <code>'none'</code>, setting the default for:</p>
+<p>Adopt the principle of least privilege by using a value of <code class="md">'none'</code>, setting the default for:</p>
 <ul>
 <li><a href="#script-src">script-src</a></li>
 <li><a href="#style-src">style-src</a></li>
@@ -524,21 +524,21 @@ See this article for further detail: <a href="https://developers.google.com/tag-
 <li><a href="#prefetch-src">prefetch-src</a></li>
 <li><a href="#child-src">child-src</a></li>
 </ul>
-<p>You may then re-enable specific <code>*-src</code> directives as required.</p>
+<p>You may then re-enable specific <code class="md">*-src</code> directives as required.</p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>'none'</code></p>
+<p><code class="md">'none'</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="frame-ancestors" tabindex="-1"><a class="header-anchor" href="#frame-ancestors">frame-ancestors</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Defines valid sources for embedding the resource using <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;applet&gt;</code>.<br>
-Setting this directive to <code>'none'</code> should be roughly equivalent to <code>X-Frame-Options: DENY</code></p>
+<p>Defines valid sources for embedding the resource using <code class="md">&lt;frame&gt;</code>, <code class="md">&lt;iframe&gt;</code>, <code class="md">&lt;object&gt;</code>, <code class="md">&lt;embed&gt;</code>, <code class="md">&lt;applet&gt;</code>.<br>
+Setting this directive to <code class="md">'none'</code> should be roughly equivalent to <code class="md">X-Frame-Options: DENY</code></p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors</a></li>
 <li><a href="https://www.w3.org/TR/CSP/#directive-frame-ancestors" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-frame-ancestors</a></li>
@@ -546,17 +546,17 @@ Setting this directive to <code>'none'</code> should be roughly equivalent to <c
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Use recommended value of <code>'none'</code></p>
+<p>Use recommended value of <code class="md">'none'</code></p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>'none'</code></p>
+<p><code class="md">'none'</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="base-uri" tabindex="-1"><a class="header-anchor" href="#base-uri">base-uri</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>Defines a set of allowed URLs which can be used in the src attribute of a HTML base tag.</p>
@@ -567,18 +567,18 @@ Setting this directive to <code>'none'</code> should be roughly equivalent to <c
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Use recommended value of <code>'self'</code><br>
+<p>Use recommended value of <code class="md">'self'</code><br>
 Consult with security team if another base URI is required</p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>'self'</code></p>
+<p><code class="md">'self'</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="form-action" tabindex="-1"><a class="header-anchor" href="#form-action">form-action</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -588,58 +588,58 @@ Consult with security team if another base URI is required</p>
 </dd>
 <dt>Guidance</dt>
 <dd>Form actions should be handled by the same origin as the application.<br>
-Use recommended value of <code>'self'</code><br>
+Use recommended value of <code class="md">'self'</code><br>
 Consult with security team if another form-action is required</dd>
 <dt>Recommended value</dt>
-<dd><code>'self'</code></dd>
+<dd><code class="md">'self'</code></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="plugin-types" tabindex="-1"><a class="header-anchor" href="#plugin-types">plugin-types</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Defines valid MIME types for plugins invoked via <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code>. To load an <code>&lt;applet&gt;</code> you must specify <code>application/x-java-applet</code>.</p>
+<p>Defines valid MIME types for plugins invoked via <code class="md">&lt;object&gt;</code> and <code class="md">&lt;embed&gt;</code>. To load an <code class="md">&lt;applet&gt;</code> you must specify <code class="md">application/x-java-applet</code>.</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types</a></li>
 </ul>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Use recommended value of <code>'none'</code><br>
+<p>Use recommended value of <code class="md">'none'</code><br>
 Consult with security team if a plugin is required</p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>'none'</code></p>
+<p><code class="md">'none'</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="prefetch-src" tabindex="-1"><a class="header-anchor" href="#prefetch-src">prefetch-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Defines valid sources for request prefetch and prerendering, for example via the link tag with <code>rel=&quot;prefetch&quot;</code> or <code>rel=&quot;prerender&quot;</code></p>
+<p>Defines valid sources for request prefetch and prerendering, for example via the link tag with <code class="md">rel=&quot;prefetch&quot;</code> or <code class="md">rel=&quot;prerender&quot;</code></p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src</a></li>
 </ul>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Use recommended value of <code>'none'</code><br>
+<p>Use recommended value of <code class="md">'none'</code><br>
 Consult with security team if prefetch is required</p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>'none'</code></p>
+<p><code class="md">'none'</code></p>
 </dd>
 </dl>
 </div>
 <h2 id="should" tabindex="-1"><a class="header-anchor" href="#should">SHOULD</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="script-src" tabindex="-1"><a class="header-anchor" href="#script-src">script-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -650,14 +650,14 @@ Consult with security team if prefetch is required</p>
 </dd>
 <dt>Guidance</dt>
 <dd>Add additional domains such as Google Analytics/Tag Manager only when needed.<br>
-Avoid <code>'unsafe-inline'</code> and <code>'unsafe-eval'</code></dd>
+Avoid <code class="md">'unsafe-inline'</code> and <code class="md">'unsafe-eval'</code></dd>
 <dt>Recommended value</dt>
-<dd><code>'self'</code></dd>
+<dd><code class="md">'self'</code></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="style-src" tabindex="-1"><a class="header-anchor" href="#style-src">style-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -668,14 +668,14 @@ Avoid <code>'unsafe-inline'</code> and <code>'unsafe-eval'</code></dd>
 </dd>
 <dt>Guidance</dt>
 <dd>All styles should be defined in separate CSS files and served from the same origin.<br>
-Avoid <code>'unsafe-inline'</code></dd>
+Avoid <code class="md">'unsafe-inline'</code></dd>
 <dt>Recommended value</dt>
-<dd><code>'self'</code></dd>
+<dd><code class="md">'self'</code></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="img-src" tabindex="-1"><a class="header-anchor" href="#img-src">img-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -686,14 +686,14 @@ Avoid <code>'unsafe-inline'</code></dd>
 </dd>
 <dt>Guidance</dt>
 <dd>Additional domains such as Google Analytics/Tag Manager may be needed for beacon pixels.<br>
-Avoid <code>'unsafe-inline'</code></dd>
+Avoid <code class="md">'unsafe-inline'</code></dd>
 <dt>Recommended value</dt>
-<dd><code>'self'</code></dd>
+<dd><code class="md">'self'</code></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="font-src" tabindex="-1"><a class="header-anchor" href="#font-src">font-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -704,19 +704,19 @@ Avoid <code>'unsafe-inline'</code></dd>
 </dd>
 <dt>Guidance</dt>
 <dd>Fonts should be hosted by the NHS assets CDN.<br>
-Avoid <code>'unsafe-inline'</code></dd>
+Avoid <code class="md">'unsafe-inline'</code></dd>
 <dt>Recommended value</dt>
-<dd><code>https://assets.nhs.uk</code><br>
+<dd><code class="md">https://assets.nhs.uk</code><br>
 and/or<br>
-<code>'self'</code></dd>
+<code class="md">'self'</code></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="report-uri" tabindex="-1"><a class="header-anchor" href="#report-uri">report-uri</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Instructs the browser to POST a reports of policy failures to this URI. You can also use <code>Content-Security-Policy-Report-Only</code> as the HTTP header name to instruct the browser to only send reports (does not block anything). This directive is deprecated in CSP Level 3 in favor of the <code>report-to</code> directive.</p>
+<p>Instructs the browser to POST a reports of policy failures to this URI. You can also use <code class="md">Content-Security-Policy-Report-Only</code> as the HTTP header name to instruct the browser to only send reports (does not block anything). This directive is deprecated in CSP Level 3 in favor of the <code class="md">report-to</code> directive.</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri</a></li>
 <li><a href="https://www.w3.org/TR/CSP/#directive-report-uri" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-report-uri</a></li>
@@ -733,9 +733,9 @@ and/or<br>
 </dl>
 </div>
 <h2 id="could" tabindex="-1"><a class="header-anchor" href="#could">COULD</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="connect-src" tabindex="-1"><a class="header-anchor" href="#connect-src">connect-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -746,19 +746,19 @@ and/or<br>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service.</p>
+<p><code class="md">'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service.</p>
 <p>Add additional domains such as Google Analytics/Tag Manager when needed.</p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
 <p>with GA/GTM<br>
-<code>https://www.googletagmanager.com https://www.google-analytics.com</code></p>
+<code class="md">https://www.googletagmanager.com https://www.google-analytics.com</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="media-src" tabindex="-1"><a class="header-anchor" href="#media-src">media-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -772,9 +772,9 @@ and/or<br>
 <dd>CDN origin</dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="upgrade-insecure-requests" tabindex="-1"><a class="header-anchor" href="#upgrade-insecure-requests">upgrade-insecure-requests</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <ul>
@@ -788,9 +788,9 @@ and/or<br>
 <dd>N/A</dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="report-to" tabindex="-1"><a class="header-anchor" href="#report-to">report-to</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>Defines a reporting group name defined by a Report-To HTTP response header. See the Reporting API for more info.</p>
@@ -809,9 +809,9 @@ and/or<br>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="sandbox" tabindex="-1"><a class="header-anchor" href="#sandbox">sandbox</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>N/A</dd>
 <dt>Guidance</dt>
@@ -825,9 +825,9 @@ and/or<br>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="worker-src" tabindex="-1"><a class="header-anchor" href="#worker-src">worker-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>Restricts the URLs which may be loaded as a Worker, SharedWorker or ServiceWorker.</p>
@@ -838,8 +838,8 @@ and/or<br>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p><code>'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service from a worker thread.<br>
-Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
+<p><code class="md">'self'</code> is only required when client side application Javascript requires access to additional resources such as a web-service from a worker thread.<br>
+Otherwise avoid usage and fallback to the <code class="md">default-src 'none';</code></p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
@@ -847,9 +847,9 @@ Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="manifest-src" tabindex="-1"><a class="header-anchor" href="#manifest-src">manifest-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>The web app manifest is a JSON file that tells the browser about your Progressive Web App and how it should behave when installed on the user’s desktop or mobile device. A typical manifest file includes the app name, the icons the app should use, and the URL that should be opened when the app is launched.</p>
@@ -861,7 +861,7 @@ Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
 <dt>Guidance</dt>
 <dd>
 <p>Only used by progressive web applications<br>
-Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
+Otherwise avoid usage and fallback to the <code class="md">default-src 'none';</code></p>
 </dd>
 <dt>Recommended value</dt>
 <dd>
@@ -870,17 +870,17 @@ Otherwise avoid usage and fallback to the <code>default-src 'none';</code></p>
 </dl>
 </div>
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="object-src" tabindex="-1"><a class="header-anchor" href="#object-src">object-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>N/A</p>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Sources of plugins such as <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code> or <code>&lt;applet&gt;</code><br>
-There are rarely any times that a modern web application will require this, so avoid usage and fallback to the <code>default-src 'none';</code><br>
+<p>Sources of plugins such as <code class="md">&lt;object&gt;</code>, <code class="md">&lt;embed&gt;</code> or <code class="md">&lt;applet&gt;</code><br>
+There are rarely any times that a modern web application will require this, so avoid usage and fallback to the <code class="md">default-src 'none';</code><br>
 Consult with security team before use</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src</a></li>
@@ -893,12 +893,12 @@ Consult with security team before use</p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="frame-src" tabindex="-1"><a class="header-anchor" href="#frame-src">frame-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Defines valid sources for loading frames. In CSP Level 2 <code>frame-src</code> was deprecated in favor of the <code>child-src</code> directive. CSP Level 3, has undeprecated <code>frame-src</code> and it will continue to defer to <code>child-src</code> if not present.</p>
+<p>Defines valid sources for loading frames. In CSP Level 2 <code class="md">frame-src</code> was deprecated in favor of the <code class="md">child-src</code> directive. CSP Level 3, has undeprecated <code class="md">frame-src</code> and it will continue to defer to <code class="md">child-src</code> if not present.</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src</a></li>
 <li><a href="https://www.w3.org/TR/CSP/#directive-frame-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-frame-src</a></li>
@@ -906,7 +906,7 @@ Consult with security team before use</p>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
+<p>Web applications should avoid use of <code class="md">&lt;frame&gt;</code> and <code class="md">&lt;iframe&gt;</code> and fallback to the <code class="md">default-src 'none';</code><br>
 Social media integration may require use of iframes.<br>
 Consult with security team before use</p>
 </dd>
@@ -916,12 +916,12 @@ Consult with security team before use</p>
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="child-src" tabindex="-1"><a class="header-anchor" href="#child-src">child-src</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
-<p>Defines valid sources for web workers and nested browsing contexts loaded using elements such as <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code></p>
+<p>Defines valid sources for web workers and nested browsing contexts loaded using elements such as <code class="md">&lt;frame&gt;</code> and <code class="md">&lt;iframe&gt;</code></p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src</a></li>
 <li><a href="https://www.w3.org/TR/CSP/#directive-child-src" target="_blank" rel="noopener">https://www.w3.org/TR/CSP/#directive-child-src</a></li>
@@ -929,7 +929,7 @@ Consult with security team before use</p>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Web applications should avoid use of <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code> and fallback to the <code>default-src 'none';</code><br>
+<p>Web applications should avoid use of <code class="md">&lt;frame&gt;</code> and <code class="md">&lt;iframe&gt;</code> and fallback to the <code class="md">default-src 'none';</code><br>
 Social media integration may require use of iframes.<br>
 Consult with security team before use</p>
 </dd>

@@ -227,23 +227,23 @@ Updating runtime, framework and library APIs encourages us to adopt best practic
 </ul>
 <h2 id="dependency-management" tabindex="-1"><a class="header-anchor" href="#dependency-management">Dependency management</a></h2>
 <p>All projects must use a dependency management system to specify the dependencies and versions of library code that they rely upon.</p>
-<div class="admonition warning">
-<p class="admonition-title">Do not commit binaries into source control</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">Do not commit binaries into source control</p>
 <p>Checked in binaries are not managed with a manifest file, making it impossible to use standards tools to identify dependencies with vulnerabilities from source.</p>
 <p>Binaries cause unnecessary and considerable bloat to the source code repository.</p>
 </div>
 <p>The NHSBSA approved package management tools are:</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>Java</strong></dt>
-<dd>Maven build using <code>pom.xml</code></dd>
+<dd>Maven build using <code class="md">pom.xml</code></dd>
 <dt><strong>Node.js</strong></dt>
-<dd>NPM package management using <code>package.json</code></dd>
+<dd>NPM package management using <code class="md">package.json</code></dd>
 <dt><strong>Python</strong></dt>
-<dd>Pip package management using <code>pyproject.toml</code><br>
+<dd>Pip package management using <code class="md">pyproject.toml</code><br>
 Always use virtual environments to isolate project-specific dependencies from a shared or base OS Python installation</dd>
 <dt><strong>Ruby</strong></dt>
-<dd>Bundle package management using <code>Gemfile</code><br>
+<dd>Bundle package management using <code class="md">Gemfile</code><br>
 Always use virtual environments to isolate project-specific dependencies from a shared or base OS Ruby installation</dd>
 </dl>
 </div>
@@ -253,8 +253,8 @@ Always use virtual environments to isolate project-specific dependencies from a 
 <li>the configuration file may be used to detect dependencies that need upgrade</li>
 </ul>
 <h2 id="patching-schedule" tabindex="-1"><a class="header-anchor" href="#patching-schedule">Patching schedule</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Release Adoption Schedule</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">Release Adoption Schedule</p>
 <p>The NHSBSA maintains a <a href="../tech-release-adoption-schedule/">Release Adoption Schedule</a> that specifies the versions of runtimes and key frameworks:</p>
 <ul>
 <li>Node.js</li>
@@ -267,8 +267,8 @@ Always use virtual environments to isolate project-specific dependencies from a 
 </ul>
 </div>
 <p>Runtimes and application dependencies should be upgraded in a regular release cycle according to this schedule:</p>
-<div class="card">
-<dl>
+<div class="md card">
+<dl class="md">
 <dt><strong>PATCH</strong></dt>
 <dd>
 <p>Upgrade within <strong>1 month</strong> of release</p>
@@ -276,12 +276,12 @@ Always use virtual environments to isolate project-specific dependencies from a 
 <dt><strong>MINOR</strong></dt>
 <dd>
 <p>Upgrade within <strong>three months</strong> of release</p>
-<p>Consider avoiding MINOR version upgrades until the first patch release or 1 month after release. i.e. prefer <code>x.y.1</code> over <code>x.y.0</code></p>
+<p>Consider avoiding MINOR version upgrades until the first patch release or 1 month after release. i.e. prefer <code class="md">x.y.1</code> over <code class="md">x.y.0</code></p>
 </dd>
 <dt><strong>MAJOR</strong></dt>
 <dd>
 <p>Upgrade within <strong>one year</strong> of release</p>
-<p>Consider avoiding MAJOR version upgrades until the first patch release or 3 months after release. i.e. prefer <code>x.0.1</code> over <code>x.0.0</code></p>
+<p>Consider avoiding MAJOR version upgrades until the first patch release or 3 months after release. i.e. prefer <code class="md">x.0.1</code> over <code class="md">x.0.0</code></p>
 <p>Early adopters of major releases should keep an active view of all patch releases.</p>
 </dd>
 </dl>

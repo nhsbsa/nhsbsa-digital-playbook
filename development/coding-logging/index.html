@@ -188,7 +188,7 @@ Logs can be monitored and used to trigger alerts when something goes wrong. Logs
 Logs can be used to understand how an application is behaving in production. For instance to identify bottlenecks or performance issues.</li>
 <li><strong>Audit</strong><br>
 Care must be taken when considering logging for audit purposes. <strong>Personally Identifiable Information must not be recorded in logs</strong>. Logs should only contain an audit of events, identified by system generated IDs. For instance:<br>
-<code>User: [id] logged into application: [application-a]</code></li>
+<code class="md">User: [id] logged into application: [application-a]</code></li>
 <li><strong>Management information</strong><br>
 Care must be taken when using logs for management information. The production database is a more accurate source of truth. However logs can provide a useful picture of how an application is behaving.</li>
 </ul>
@@ -206,19 +206,19 @@ Care must be taken when using logs for management information. The production da
 <li>Separation of log statements from output channel</li>
 <li>Logging with rich data formats</li>
 </ul>
-<p>In Java, we use <a href="https://slf4j.org/" target="_blank" rel="noopener">Slf4J</a> as our logging API, with <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a> as the logging implementation. We use the <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a> <code>@slf4j</code> annotation to ease creation of the logger in code.</p>
+<p>In Java, we use <a href="https://slf4j.org/" target="_blank" rel="noopener">Slf4J</a> as our logging API, with <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a> as the logging implementation. We use the <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a> <code class="md">@slf4j</code> annotation to ease creation of the logger in code.</p>
 <p>In Node, we use <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">Winston</a> for logging.</p>
 <p>We use UTF-8 encoding and output in JSON for simpler integration into <a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a>, our centralised log collation service.</p>
 <h2 id="logging-levels" tabindex="-1"><a class="header-anchor" href="#logging-levels">Logging levels</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">DEBUG</p>
-<p><code>DEBUG</code> output MUST NOT be enabled on production systems as this exposes the risk of logging PII from library code such as object mappers and ORM frameworks</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">DEBUG</p>
+<p><code class="md">DEBUG</code> output MUST NOT be enabled on production systems as this exposes the risk of logging PII from library code such as object mappers and ORM frameworks</p>
 </div>
 <p>The following standard logging levels should be used:</p>
 <ul>
-<li><code>DEBUG</code> is used for development purposes only.<br>
+<li><code class="md">DEBUG</code> is used for development purposes only.<br>
 Do not rely on DEBUG to understand any potential production issue.</li>
-<li><code>INFO</code> is used to present normal application flow.<br>
+<li><code class="md">INFO</code> is used to present normal application flow.<br>
 For example
 <ul>
 <li>On startup/shutdown it is helpful to log configuration properties.<br>
@@ -231,7 +231,7 @@ Secrets and sensitive data MUST NOT be logged at INFO.</li>
 <li>On failed input validation (although WARN may be used instead)</li>
 </ul>
 </li>
-<li><code>WARN</code> is used to present undesirable but non-critical errors in application flow<br>
+<li><code class="md">WARN</code> is used to present undesirable but non-critical errors in application flow<br>
 For example:
 <ul>
 <li>On failed authentication</li>
@@ -242,7 +242,7 @@ For example:
 Events logged at WARN are candidates for monitoring so that alerts may be raised after multiple events</li>
 </ul>
 </li>
-<li><code>ERROR</code> is used to present errors in application flow that require immediate attention<br>
+<li><code class="md">ERROR</code> is used to present errors in application flow that require immediate attention<br>
 All events logged at ERROR should be monitored so that alerts may be raised after a single event<br>
 For example:
 <ul>
@@ -313,7 +313,7 @@ If tracing session interactions is required, then it is permissable to log a sec
 <li>Contextual information should include the application flow and logic that caused the event</li>
 <li>Contextual information should include enough data to identify what caused the event</li>
 </ul>
-<p>Data used in log entries should be prefixed with a contextual keyword (e.g. <code>User:</code>) and wrapped in delimiters (e.g. <code>[]</code>) to facilitate parsing</p>
+<p>Data used in log entries should be prefixed with a contextual keyword (e.g. <code class="md">User:</code>) and wrapped in delimiters (e.g. <code class="md">[]</code>) to facilitate parsing</p>
 <ul>
 <li>Depending on the capability of the logging library, delimiters may be automatically included for data items.</li>
 <li>Parsing of logged data should be verified with a working example script</li>

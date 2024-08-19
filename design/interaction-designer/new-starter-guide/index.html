@@ -192,17 +192,17 @@ New starter guide - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>To build prototypes in code, you will also need to install the additional packages manually:</p>
 <h4 id="nodejs" tabindex="-1"><a class="header-anchor" href="#nodejs">Node.js</a></h4>
 <p>The NHS / GOV Prototype Kits are built using a tool called <a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>. To install the latest version of Node.js, run the following command in terminal:</p>
-<p><code>nvm install latest</code></p>
+<p><code class="md">nvm install latest</code></p>
 <p>To install a specific version, run the following command (replacing the version when required):</p>
-<p><code>nvm install 20.10.0</code></p>
+<p><code class="md">nvm install 20.10.0</code></p>
 <p>To set a default version of Node.js, run the following command (replacing the version when required):</p>
-<p><code>nvm alias default 20.10.0</code></p>
+<p><code class="md">nvm alias default 20.10.0</code></p>
 <p>To use a different version of Node.js, first list the installed versions on your machine by running the following command:</p>
-<p><code>nvm ls</code></p>
+<p><code class="md">nvm ls</code></p>
 <p>…then use the following command to select which version you want to use (replacing the version when required):</p>
-<p><code>nvm use 20.10.0</code></p>
+<p><code class="md">nvm use 20.10.0</code></p>
 <p>To check which version of Node.js you have installed, run the following command:</p>
-<p><code>node --version</code></p>
+<p><code class="md">node --version</code></p>
 <p>If you have any problems with the above, contact one of the Senior Interaction Designers.</p>
 <h3 id="4-generate-an-ssh-key-to-link-with-your-github-account" tabindex="-1"><a class="header-anchor" href="#4-generate-an-ssh-key-to-link-with-your-github-account">4. Generate an SSH Key to link with your GitHub account</a></h3>
 <p>Once you have access to the NHS BSA GitHub account, for security you will need to install an SSH key onto your device.</p>
@@ -212,13 +212,13 @@ New starter guide - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>Open a terminal window</li>
 <li>Paste the below into your terminal and add your NHS BSA email address:</li>
 </ol>
-<p><code>ssh-keygen -t ed25519 -C &quot;your_email@nhsbsa.nhs.uk&quot;</code></p>
+<p><code class="md">ssh-keygen -t ed25519 -C &quot;your_email@nhsbsa.nhs.uk&quot;</code></p>
 <ol start="3">
 <li>When you’re prompted to “Enter a file in which to save the key”, press Enter. This accepts the default file location</li>
 <li>At the prompt, type a secure password</li>
 <li>Now you have your SSH key generated, you need to add this to your GitHub account. To do this you need to open terminal and run the following command:</li>
 </ol>
-<p><code>pbcopy &lt; ~/.ssh/id_ed25519.pub</code></p>
+<p><code class="md">pbcopy &lt; ~/.ssh/id_ed25519.pub</code></p>
 <p>Although nothing shows visually, the SSH key is now copied to your clipboard ready to be pasted into GitHub.</p>
 <ol start="6">
 <li>Now you have your SSH key in your clipboard it is ready to be pasted into your</li>

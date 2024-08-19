@@ -170,10 +170,10 @@ Writing an article - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>To write a new article:</p>
 <ul>
 <li>
-<p>Create a new file in a subdirectory of the <code>/src</code> folder.<br>
+<p>Create a new file in a subdirectory of the <code class="md">/src</code> folder.<br>
 Read about our <a href="../information-architecture">information architecture</a> to decide which subdirectory to use.<br>
-Name the file with a <code>.md</code> file extension.</p>
-<p>e.g. <code>my-article.md</code></p>
+Name the file with a <code class="md">.md</code> file extension.</p>
+<p>e.g. <code class="md">my-article.md</code></p>
 </li>
 <li>
 <p>Add this standard snippet of <a href="https://www.11ty.dev/docs/data-frontmatter/" target="_blank" rel="noopener">frontmatter</a> at the top</p>
@@ -190,16 +190,16 @@ Name the file with a <code>.md</code> file extension.</p>
 <span class="token comment">## First article heading</span></code></pre>
 <ul>
 <li>
-<p>Leave the <code>layout</code> value as <code>article</code>.</p>
+<p>Leave the <code class="md">layout</code> value as <code class="md">article</code>.</p>
 </li>
 <li>
-<p>Update the <code>title</code> and <code>description</code> values as required.</p>
+<p>Update the <code class="md">title</code> and <code class="md">description</code> values as required.</p>
 </li>
 <li>
-<p>The article should be set at <code>DRAFT</code> status until you are ready to <code>REVIEW</code> or publish as <code>FINAL</code>.</p>
+<p>The article should be set at <code class="md">DRAFT</code> status until you are ready to <code class="md">REVIEW</code> or publish as <code class="md">FINAL</code>.</p>
 </li>
 <li>
-<p>The <code>tags</code> and <code>order</code> frontmatter control where the article appears in the site. This is covered below.</p>
+<p>The <code class="md">tags</code> and <code class="md">order</code> frontmatter control where the article appears in the site. This is covered below.</p>
 </li>
 <li>
 <p>Write your content</p>
@@ -209,28 +209,28 @@ Name the file with a <code>.md</code> file extension.</p>
 <p>You can declare status, issue sheet and document review information in the frontmatter data.</p>
 <p>See the <a href="../document-control">document control</a> article for details.</p>
 <h3 id="content" tabindex="-1"><a class="header-anchor" href="#content">Content</a></h3>
-<p>Content should come after the last <code>---</code> in the front matter and use <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> syntax.</p>
-<p>Content is usually written in plain text using Markdown to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code>.md</code>.</p>
+<p>Content should come after the last <code class="md">---</code> in the front matter and use <a href="https://spec.commonmark.org/0.30/" target="_blank" rel="noopener">Markdown</a> syntax.</p>
+<p>Content is usually written in plain text using Markdown to apply a standardised formatting for things like headings and hyperlinks. Markdown files use a file extension of <code class="md">.md</code>.</p>
 <ul>
 <li><a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">Markdown tutorial</a></li>
 </ul>
 <h3 id="linking-to-related-articles" tabindex="-1"><a class="header-anchor" href="#linking-to-related-articles">Linking to related articles</a></h3>
-<p>You can link to other articles by using the <a href="https://commonmark.org/help/tutorial/07-links.html" target="_blank" rel="noopener">Markdown links</a> syntax in your content. You should omit the <code>.md</code> extension and use <code>../</code> syntax to go up a directory: So if linking to an article <code>my-article.md</code> in the same directory, you should use this link syntax:</p>
+<p>You can link to other articles by using the <a href="https://commonmark.org/help/tutorial/07-links.html" target="_blank" rel="noopener">Markdown links</a> syntax in your content. You should omit the <code class="md">.md</code> extension and use <code class="md">../</code> syntax to go up a directory: So if linking to an article <code class="md">my-article.md</code> in the same directory, you should use this link syntax:</p>
 <pre class="language-md"><code class="language-md"><span class="token url">[<span class="token content">My article</span>](<span class="token url">../my-article</span>)</span></code></pre>
 <p>You can also display a group of related articles, by adding a ‘related’ attribute to your front matter:</p>
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">related</span><span class="token punctuation">:</span>
   <span class="token key atrule">title</span><span class="token punctuation">:</span> Related articles
   <span class="token key atrule">tag</span><span class="token punctuation">:</span> another<span class="token punctuation">-</span>tag</code></pre>
-<p>In this example, we will display all articles that have the tag, <code>another-tag</code>. If you look at the bottom of the <a href="../../how-to-contribute">how to contribute article</a>, you can see how related articles appear.</p>
+<p>In this example, we will display all articles that have the tag, <code class="md">another-tag</code>. If you look at the bottom of the <a href="../../how-to-contribute">how to contribute article</a>, you can see how related articles appear.</p>
 <h3 id="using-tags-and-order" tabindex="-1"><a class="header-anchor" href="#using-tags-and-order">Using tags and order</a></h3>
 <ul>
 <li>
 <p><strong>Tags</strong><br>
-The <code>tags</code> attribute should be defined if you want the file to appear in ‘related’ articles. For articles to appear on the homepage, use <code>home</code>.</p>
+The <code class="md">tags</code> attribute should be defined if you want the file to appear in ‘related’ articles. For articles to appear on the homepage, use <code class="md">home</code>.</p>
 </li>
 <li>
 <p><strong>Order</strong><br>
-The numeric <code>order</code> attribute should be defined to control where this article appears amongst others with the same tag… Low values come first.</p>
+The numeric <code class="md">order</code> attribute should be defined to control where this article appears amongst others with the same tag… Low values come first.</p>
 </li>
 <li>
 <p><strong>Multiple tags</strong><br>

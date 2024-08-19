@@ -324,8 +324,8 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
 <li><a href="https://scotthelme.co.uk/" target="_blank" rel="noopener">Scott Helme</a></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Consult a security expert</p>
+<div class="md" class="admonition warning">
+<p class="md" class="admonition-title">Consult a security expert</p>
 <p>The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.</p>
 <ul>
 <li>Consult a security expert before applying values</li>
@@ -335,7 +335,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>Readers should be careful when copying and pasting code from any website, this site included. NHS Business Services Authority, its employees and its representatives accept no liability for damage caused by the misuse, either intentional or unintentional, of the information presented in its articles.</p>
 </div>
 <h2 id="terms" tabindex="-1"><a class="header-anchor" href="#terms">Terms</a></h2>
-<dl>
+<dl class="md">
 <dt>Edge</dt>
 <dd>An infrastructural component responsible for serving content to the browser. The actual component will depend on architectural design and capabilities, but this could be a WAF or reverse proxy like NGinx</dd>
 <dt>Application</dt>
@@ -347,9 +347,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>If your site is publicly available, you can make use of this <a href="https://securityheaders.com/" target="_blank" rel="noopener">online service from securityheaders.com</a> to scan your web application.</p>
 <p><strong>Tick the ‘hide results’ option to prevent a potentially poor graded site from seeking more attention than it already has.</strong></p>
 <h2 id="must-not" tabindex="-1"><a class="header-anchor" href="#must-not">MUST NOT</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="public-key-pins" tabindex="-1"><a class="header-anchor" href="#public-key-pins">Public-Key-Pins</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins</a></p>
@@ -373,9 +373,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-aspnetmvc-version" tabindex="-1"><a class="header-anchor" href="#x-aspnetmvc-version">X-AspNetMvc-Version</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>N/A</p>
@@ -391,7 +391,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>
 <p>Application should not send this header.</p>
-<p>To remove the <code>X-AspNetMvc-Version</code> header, add the below line in Global.asax file.</p>
+<p>To remove the <code class="md">X-AspNetMvc-Version</code> header, add the below line in Global.asax file.</p>
 <pre class="language-cs"><code class="language-cs">MvcHandler<span class="token punctuation">.</span>DisableMvcResponseHeader <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
 </dd>
 <dt>OWASP</dt>
@@ -400,9 +400,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-aspnet-version" tabindex="-1"><a class="header-anchor" href="#x-aspnet-version">X-AspNet-Version</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p>N/A</p>
@@ -418,7 +418,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>
 <p>Application should not send this header.</p>
-<p>Add the following line in your web.config in the <code>&lt;system.web&gt;</code> section to remove it.</p>
+<p>Add the following line in your web.config in the <code class="md">&lt;system.web&gt;</code> section to remove it.</p>
 <pre class="language-cs"><code class="language-cs"><span class="token operator">&lt;</span><span class="token class-name">httpRuntime</span> enableVersionHeader<span class="token operator">=</span><span class="token string">"false"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
 </dd>
 <dt>OWASP</dt>
@@ -427,9 +427,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-powered-by" tabindex="-1"><a class="header-anchor" href="#x-powered-by">X-Powered-By</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>N/A</dd>
 <dt>Guidance</dt>
@@ -443,9 +443,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dl>
 </div>
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="expect-ct" tabindex="-1"><a class="header-anchor" href="#expect-ct">Expect-CT</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT</a></dd>
 <dt>Guidance</dt>
@@ -458,9 +458,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct</a></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="server" tabindex="-1"><a class="header-anchor" href="#server">Server</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server</a></dd>
 <dt>Guidance</dt>
@@ -473,9 +473,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server</a></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-permitted-cross-domain-policies" tabindex="-1"><a class="header-anchor" href="#x-permitted-cross-domain-policies">X-Permitted-Cross-Domain-Policies</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers</a></p>
@@ -501,9 +501,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </div>
 <h2 id="must" tabindex="-1"><a class="header-anchor" href="#must">MUST</a></h2>
 <p>All headers below <strong>MUST</strong> be used in web application responses</p>
-<div class="card">
+<div class="md card">
 <h3 id="referrer-policy" tabindex="-1"><a class="header-anchor" href="#referrer-policy">Referrer-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy</a></p>
@@ -522,7 +522,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>strict-origin-when-cross-origin</code></p>
+<p><code class="md">strict-origin-when-cross-origin</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -535,9 +535,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="strict-transport-security" tabindex="-1"><a class="header-anchor" href="#strict-transport-security">Strict-Transport-Security</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security</a></p>
@@ -545,7 +545,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Guidance</dt>
 <dd>
 <p>Force use of HTTPS and do not downgrade to HTTP.</p>
-<p>Avoid using <code>preload</code> unless you are intend to submit your site to the HSTS preload list that modern browsers use.<br>
+<p>Avoid using <code class="md">preload</code> unless you are intend to submit your site to the HSTS preload list that modern browsers use.<br>
 Adding a domain to the preload list may well affect other services operating on that domain. Always consult our security team if in doubt.<br>
 See <a href="https://hstspreload.org/" target="_blank" rel="noopener">https://hstspreload.org/</a> for more details.<br>
 If you choose to use it, the max age MUST be set to 2 years, or it will be ignored</p>
@@ -560,7 +560,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>max-age=31536000 ; includeSubDomains</code></p>
+<p><code class="md">max-age=31536000 ; includeSubDomains</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -573,9 +573,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-content-type-options" tabindex="-1"><a class="header-anchor" href="#x-content-type-options">X-Content-Type-Options</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options</a></p>
@@ -594,7 +594,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>nosniff</code></p>
+<p><code class="md">nosniff</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -607,9 +607,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-frame-options" tabindex="-1"><a class="header-anchor" href="#x-frame-options">X-Frame-Options</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></p>
@@ -628,9 +628,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>DENY</code></p>
+<p><code class="md">DENY</code></p>
 <p>or</p>
-<p><code>SAMEORIGIN</code></p>
+<p><code class="md">SAMEORIGIN</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -643,9 +643,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-xss-protection" tabindex="-1"><a class="header-anchor" href="#x-xss-protection">X-XSS-Protection</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection</a></p>
@@ -664,7 +664,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>0</code></p>
+<p><code class="md">0</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -678,9 +678,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dl>
 </div>
 <h2 id="should" tabindex="-1"><a class="header-anchor" href="#should">SHOULD</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="content-security-policy" tabindex="-1"><a class="header-anchor" href="#content-security-policy">Content-Security-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy</a></p>
@@ -713,9 +713,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="cross-origin-embedder-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy</a></p>
@@ -734,7 +734,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>require-corp</code></p>
+<p><code class="md">require-corp</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -747,9 +747,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="cross-origin-opener-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-opener-policy">Cross-Origin-Opener-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy</a></p>
@@ -768,7 +768,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>same-origin</code></p>
+<p><code class="md">same-origin</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -781,9 +781,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="cross-origin-resource-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-resource-policy">Cross-Origin-Resource-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy</a></p>
@@ -802,7 +802,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>Recommended value</dt>
 <dd>
-<p><code>same-site</code></p>
+<p><code class="md">same-site</code></p>
 </dd>
 <dt>OWASP</dt>
 <dd>
@@ -816,17 +816,17 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dl>
 </div>
 <h2 id="could" tabindex="-1"><a class="header-anchor" href="#could">COULD</a></h2>
-<div class="card">
+<div class="md card">
 <h3 id="feature-policy" tabindex="-1"><a class="header-anchor" href="#feature-policy">Feature-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
-<p>Allow and deny the use of browser features in its own frame, and in content within any <code>&lt;iframe&gt;</code> elements in the document.</p>
-<p><code>Feature-Policy</code> has been superceded by <code>Permissions-Policy</code> however browser compatibility is better for Feature-Policy. Use both until browser uptake improves</p>
+<p>Allow and deny the use of browser features in its own frame, and in content within any <code class="md">&lt;iframe&gt;</code> elements in the document.</p>
+<p><code class="md">Feature-Policy</code> has been superceded by <code class="md">Permissions-Policy</code> however browser compatibility is better for Feature-Policy. Use both until browser uptake improves</p>
 </dd>
 <dt>Edge</dt>
 <dd>
@@ -850,28 +850,28 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="permissions-policy" tabindex="-1"><a class="header-anchor" href="#permissions-policy">Permissions-Policy</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd><a href="https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field" target="_blank" rel="noopener">https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field</a></dd>
 <dt>Guidance</dt>
-<dd>Allow and deny the use of browser features in its own frame, and in content within any <code>&lt;iframe&gt;</code> elements in the document</dd>
+<dd>Allow and deny the use of browser features in its own frame, and in content within any <code class="md">&lt;iframe&gt;</code> elements in the document</dd>
 <dt>Edge</dt>
 <dd>Edge should not send this header</dd>
 <dt>Application</dt>
 <dd>Consult with security team</dd>
 <dt>Recommended value</dt>
-<dd><code>interest-cohort=()</code></dd>
+<dd><code class="md">interest-cohort=()</code></dd>
 <dt>OWASP</dt>
 <dd>N/A</dd>
 <dt>Compatibility</dt>
 <dd><a href="https://caniuse.com/permissions-policy" target="_blank" rel="noopener">https://caniuse.com/permissions-policy</a></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="clear-site-data" tabindex="-1"><a class="header-anchor" href="#clear-site-data">Clear-Site-Data</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data</a></dd>
 <dt>Guidance</dt>
@@ -888,9 +888,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dd><a href="https://caniuse.com/mdn-http_headers_clear-site-data_cache" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_clear-site-data_cache</a></dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="set-cookie" tabindex="-1"><a class="header-anchor" href="#set-cookie">Set-Cookie</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie</a></p>
@@ -899,10 +899,10 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dd>
 <p>Restrict cookies for better security:</p>
 <ul>
-<li><code>HttpOnly</code> to prevent client side scripts from accessing them</li>
-<li><code>Secure</code> to only send over HTTPS</li>
-<li><code>Path</code> to limit to web application scope</li>
-<li>Prefix cookie name with <code>__Secure-</code> as a convention to indicate the cookie is secure</li>
+<li><code class="md">HttpOnly</code> to prevent client side scripts from accessing them</li>
+<li><code class="md">Secure</code> to only send over HTTPS</li>
+<li><code class="md">Path</code> to limit to web application scope</li>
+<li>Prefix cookie name with <code class="md">__Secure-</code> as a convention to indicate the cookie is secure</li>
 <li>Read <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP Session Management Cheat Sheet</a> for a detailed explanation on cookie configuration options.</li>
 <li>Read <a href="https://scotthelme.co.uk/tough-cookies/" target="_blank" rel="noopener">Scott Helme’s article on tough cookies</a></li>
 </ul>
@@ -928,9 +928,9 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 </dl>
 </div>
-<div class="card">
+<div class="md card">
 <h3 id="x-dns-prefetch-control" tabindex="-1"><a class="header-anchor" href="#x-dns-prefetch-control">X-DNS-Prefetch-Control</a></h3>
-<dl>
+<dl class="md">
 <dt>Reference</dt>
 <dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control</a></dd>
 <dt>Guidance</dt>
@@ -940,7 +940,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dt>Application</dt>
 <dd>Consult with security team</dd>
 <dt>Recommended value</dt>
-<dd><code>off</code></dd>
+<dd><code class="md">off</code></dd>
 <dt>OWASP</dt>
 <dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control</a></dd>
 <dt>Compatibility</dt>

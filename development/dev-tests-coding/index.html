@@ -195,7 +195,7 @@ Writing clean tests - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>Fields names should make clear their purpose within the test.</p>
 <p>When using mocking frameworks clearly identify mock objects and argument captors. E.g. Mocks can be prefixed with ‘mock…’ and Captors can be suffixed with ‘…Captor’</p>
 <h3 id="naming-test-cases" tabindex="-1"><a class="header-anchor" href="#naming-test-cases">Naming test cases</a></h3>
-<p>Test cases should be named using some form of BDD syntax. The usual <code>Given-When-Then</code> can be overly verbose. Consider using the more succinct <code>Should-When</code> syntax, or even a simple <code>Should</code>.</p>
+<p>Test cases should be named using some form of BDD syntax. The usual <code class="md">Given-When-Then</code> can be overly verbose. Consider using the more succinct <code class="md">Should-When</code> syntax, or even a simple <code class="md">Should</code>.</p>
 <p>Here are some example test case names against a function that sorts by user email address</p>
 <table>
 <thead>
@@ -228,11 +228,11 @@ Writing clean tests - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <h2 id="structure-given-when-then-code-with-comments" tabindex="-1"><a class="header-anchor" href="#structure-given-when-then-code-with-comments">Structure ‘given-when-then’ code with comments</a></h2>
 <p>Our test cases should use a standard BDD structure of:</p>
 <ul>
-<li><code>Given</code> - to set up fixture data as pre-conditions</li>
-<li><code>When</code> - to call the method under test</li>
-<li><code>Then</code> - make assertions on the actual response (and verify any mock interactions)</li>
+<li><code class="md">Given</code> - to set up fixture data as pre-conditions</li>
+<li><code class="md">When</code> - to call the method under test</li>
+<li><code class="md">Then</code> - make assertions on the actual response (and verify any mock interactions)</li>
 </ul>
-<p>This is also sometimes referred to as <code>Arrange</code>, <code>Act</code>, <code>Assert</code></p>
+<p>This is also sometimes referred to as <code class="md">Arrange</code>, <code class="md">Act</code>, <code class="md">Assert</code></p>
 <p>For frameworks that do not impose this structure in their API, readability is improved by use of comments.</p>
 <pre class="language-java"><code class="language-java"><span class="token comment">//given</span>
 
