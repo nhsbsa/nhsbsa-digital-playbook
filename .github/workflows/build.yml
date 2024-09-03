@@ -27,7 +27,12 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          BASE_URL=${{ vars.BASE_URL }} npm run build          
+          BASE_URL=${{ vars.BASE_URL }} npm run build    
+          
+      - name: Unit test and eslint check
+        run: |
+          npm run test
+          npm run test:eslint    
 
       - name: Deploy GH Pages
         if: contains(github.ref, 'main')
