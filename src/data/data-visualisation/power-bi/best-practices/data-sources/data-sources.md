@@ -10,6 +10,14 @@ order: 20
 The Power BI section includes functionalities and ways of working specific to Power BI but it is worth mentioning that the Power BI guidance must go hand in hand with the data visualisation standards when producing data visualisation products.
 !!!
 
+## Data connection guidance  
+  
+Where possible, use web-based technology to connect to data, rather than a local file. Data should not be permanently stored on your machine. For example, connecting to Fabric’s OneLake or a team workspace would be best to store your data. When data is stored offline, it is difficult to manage from a Security perspective. Aim to keep data in the cloud and not in a personal OneDrive. A team SharePoint instance can be used instead. Data being stored in the cloud on a shared drive helps to reduce any single person dependencies if someone were to leave the organisation and the data is deleted due to a personal OneDrive being deleted. This also helps aid collaboration and provides better user experience, for example, by avoiding multiple copies of data, out of sync data, and data not being available.  
+  
+A useful reference on the security benefits of modern collaboration in the cloud is available at [NCSC.GOV.UK][gov-security].  
+  
+The ESR learning module for Data & Insight Information Security Procedure is a useful resource for NHSBSA colleagues, to familiarise yourself with data best practices.  
+  
 ## Data source methods  
   
 There are various data sources available in Power BI. Your use case depends on which method you use.  
@@ -83,3 +91,4 @@ And [‘Model data with Power BI’ training][source 13] is also available.
 [source 12]: https://learn.microsoft.com/en-us/power-bi/guidance/import-modeling-data-reduction#switch-to-mixed-mode  
 [source 13]: https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/
 [source 14]: https://community.fabric.microsoft.com/t5/Community-Blog/Data-Modelling-In-Power-BI-Helpful-Tips-amp-Best-Practices/ba-p/1977956
+[gov-security]: https://www.ncsc.gov.uk/blog-post/the-security-benefits-of-modern-collaboration-in-the-cloud

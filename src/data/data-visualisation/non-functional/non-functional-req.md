@@ -6,15 +6,11 @@ status: REVIEW
 tags: data-viz-home
 order: 60
 ---
-## Non-functional requirements  
+## Non-functional requirements (NFRs)  
   
-As functional requirements define what a system should do; non-functional requirements describe how efficiently one should function.  
+Non-functional requirements (NFRs) consider the efficiency of a product, describing how efficiently it should function. Functional requirements describe how a product should function, and what it should be able to achieve. Both sets of requirements are equally important.  
   
-Non-functional requirements are just as important as functional requirements.  
-  
-And it is important to accurately identify and define these requirements to ensure that your product runs smoothly while providing a good user experience.  
-  
-Avoiding non-functional requirements can cause critical problems that may lead your product to fail.  
+Non-functional requirements need to be defined from the outset to ensure the product runs smoothly, and provides a good user experience. Not considering non-functional requirements may cause critical problems for your service and users.  
   
 Non-functional requirements affect the usability of a system, and if implemented correctly provide a good user experience.
 
@@ -28,40 +24,57 @@ Non-functional requirements affect the usability of a system, and if implemented
   
 The following are some of many factors to consider when building a data product, such as a dashboard or a report:
 
-- Accessibility
-- Accuracy
-- Auditing
-- Capacity
-- Confidentiality
-- Error-handling
-- Maintenance
-- Performance
-- Reliability
-- Resilience
-- Scalability
-- Security
-- Testing
-- Usability  
+- accessibility
+- accuracy
+- auditing
+- capacity
+- confidentiality
+- error-handling
+- maintenance
+- performance
+- reliability
+- resilience
+- scalability
+- security
+- testing
+- usability  
   
 ### Operational requirements  
   
-Operational requirements describe how well the system is performing.  
+Operational requirements describe the performance requirements of a product. These considerations include:  
 
-When we refer to operational requirements within non-functional requirements, we are talking about accessibility, confidentiality, integrity, safety, usability, security, availability, efficiency, reliability, and suitability.  
+- accessibility
+- confidentiality
+- integrity
+- safety
+- usability
+- security
+- availability
+- efficiency
+- reliability
+- suitability  
   
 ### Revision requirements  
   
-Revision requirements define how quickly a system solves problems caused by unexpected errors and how efficiently high-priority features can bounce back.  
+Revision requirements define any changes or corrections to the product. This could be due to unexpected errors, or improvements made. The ability for a system, and any high-priority features to bounce back quickly, and maintain availability is of utmost importance.  
   
-Maintainability, scalability, flexibility, verifiability, and modifiability are classified as revision requirements.  
+The following are all considered to be revision requiremnets:
+
+- maintainability
+- scalability
+- flexibility
+- verifiability
+- modifiability  
   
 ### Transition requirements  
   
-Transition requirements define the capacity of the system to accept its surrounding environment.  
-  
-The users who are involved in the management of a system are most likely to be concerned about them.  
-  
-These requirements include good reusability, installability, portability, and interoperability.  
+Transition requirements are system management considerations, including how the product will work within the surrounding environment and alongside other products.  
+The following are all considered to be transition requirements:
+
+- reusability
+- ability to install
+- portability
+- interoperability
   
 ::: details Source - NFR guide
 
@@ -69,22 +82,23 @@ These requirements include good reusability, installability, portability, and in
 
 :::
 
-## Monitoring NFRs  
+## Monitoring non-functional requirements  
   
-We can monitor Non-Functional Requirements in a number of ways and planning for these in the development of your data product:
+We can monitor non-functional requirements in a number of ways and plan for these in the development of your data product.  
+We can do this by:
 
-- Linking in with the relevant teams when developing and rolling out your dashboard, e.g. security, architecture
-- Following best practices; data storage, access privileges
-- Following testing processes; functions, accessibility, figures
-- In-built metrics such as monitoring loading times
-- By collecting and monitoring feedback from users
-- Ensuring data literacy when checking figures
-- Process improvements and automating alerts
-- Creating back-up plans and service wrappers
-- Structured maintenance processes
-- Ensuring the appropriate infrastructure is in place such as capacity and tooling
-- Documentation of processes and of considerations taken within the dashboard development process
-- Reusability and scalability planning of the product, minimising manual overhead
-- Ensuring version control processes are in place
+- linking in with the relevant teams when developing and rolling out your dashboard- for example security, architecture
+- following best practices such as data storage and access privileges
+- following testing processes- for example functions, accessibility, figures
+- using in-built metrics, such as monitoring loading times
+- collecting and monitoring feedback from users
+- ensuring data literacy when checking figures
+- processing improvements and automating alerts
+- creating back-up plans and service wrappers
+- using structured maintenance processes
+- ensuring the appropriate infrastructure is in place such as capacity and tooling
+- documenting processes and any considerations taken within the dashboard development process
+- reusability and scalability planning of the product, minimising manual overhead
+- ensuring version control processes are in place
 
 [non-func 1]: https://www.plutora.com/blog/non-functional-requirements-guide
