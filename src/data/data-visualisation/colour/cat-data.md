@@ -69,13 +69,13 @@ Use a single colour for a single line chart, and all bars in vertical column cha
 ### Line charts  
   
 As with stacked and clustered bar charts, we advise that line charts should have no more than four series.  
-It is difficult to choose colours for line charts with more than two series. This is because it is not possible to have a chart colour palette of more than two colours where all colours have at least a 3 to 1 contrast ratio with:
+It's difficult to choose colours for line charts with more than two series. This is because it's not possible to have a chart colour palette of more than two colours where all colours have at least a 3 to 1 contrast ratio with:
 
 - the background
 - all other colours in the palette
 
-Lines do not always stay in the same order. So, it is not possible to make sure adjacent colours always have at least a 3 to 1 contrast ratio.  
-This means that it is not possible to provide a palette for line charts with more than two series that would meet the contrast ratio requirements. So, you should only use line charts with more than two series when they are essential to getting information across. This will help you meet accessibility success criterion 1.4.11.  
+Lines do not always stay in the same order. So, it's not possible to make sure adjacent colours always have at least a 3 to 1 contrast ratio.  
+This means that it's not possible to provide a palette for line charts with more than two series that would meet the contrast ratio requirements. So, you should only use line charts with more than two series when they are essential to getting information across. This will help you meet accessibility success criterion 1.4.11.  
   
 Guidance, such as labelling lines, using textures or shapes for data points may work to distinguish multiple categories. You can see more advice on the [Categorical data colour palette][cat 1] page.  
 

@@ -36,10 +36,10 @@ The DAX expression would need to be TRUE to show results.
   
 Some options of a DAX expression you could put in place:
 
-- Access to certain user groups or individuals users. For example, users in a certain region, or users of a certain job role
-- A start and end date for access to users during a certain timeframe
-- An active flag for current individuals to filter out certain individuals
-- Bespoke filters, such as: ‘Do not show results for anything where # patients is between 1 and 4 etc’ for sensitive data purposes  
+- access to certain user groups or individuals users. For example, users in a certain region, or users of a certain job role
+- a start and end date for access to users during a certain timeframe
+- an active flag for current individuals to filter out certain individuals
+- bespoke filters, such as: ‘Do not show results for anything where # patients is between 1 and 4 etc’ for sensitive data purposes  
   
 Please note, RLS is implemented before your data is read in, so if you need to redact your data it is preferable to calculate any aggregations before reading your data in. In terms of redacting data for small base sizes, RLS is a blanket rule which would be preferable, otherwise, you can apply suppression of values on individual visualisations. Please make sure you have tested and checked the data shown to ensure the counts are accurate when RLS is applied.  
   

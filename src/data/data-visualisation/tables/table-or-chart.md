@@ -12,12 +12,12 @@ Charts are typically used to visualise patterns. Tables can also be used for thi
   
 Some key questions to ask yourself when deciding which to use are:  
 
-- Do individual values need to be looked up?
-- Do individual values need to be compared?
-- Are precise values needed?
-- Are different units of measurements to be used?
-- Is the trend or shape of the values important?
-- Does the relationship between multiple values need to be shown?  
+- do individual values need to be looked up?
+- do individual values need to be compared?
+- are precise values needed?
+- are different units of measurements to be used?
+- is the trend or shape of the values important?
+- does the relationship between multiple values need to be shown?  
   
 Although this guidance talks about the comparison of tables to charts, it is important to note that for accessibility purposes it is useful to include an option for the user to switch between a table and chart.  
   

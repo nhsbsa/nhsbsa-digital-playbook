@@ -25,11 +25,11 @@ In DirectQuery mode, the Power BI engine queries the data at the source, which c
   
 DirectQuery in Power BI offers the greatest benefits in the following scenarios:
 
-- The data changes frequently, and you need near real-time reporting.
-- You need to handle large data without having to pre-aggregate.
-- The underlying source defines and applies security rules.
-- Data sovereignty restrictions apply.
-- The source is a multidimensional source containing measures, such as SAP BW.  
+- the data changes frequently, and you need near real-time reporting.
+- you need to handle large data without having to pre-aggregate.
+- the underlying source defines and applies security rules.
+- data sovereignty restrictions apply.
+- the source is a multidimensional source containing measures, such as SAP BW.  
   
 ::: details Source - DirectQuery
 
@@ -37,7 +37,7 @@ DirectQuery in Power BI offers the greatest benefits in the following scenarios:
 
 :::
 
-With import mode, performance can be better because the data is cached and optimized for business-intelligence queries without having to query the data source for each DAX query submitted by a report. However, the Power BI engine must first copy the data into the dataset during refresh. Any changes at the source are only picked up with the next dataset refresh.  
+With import mode, performance can be better because the data is cached and optimised for business-intelligence queries without having to query the data source for each DAX query submitted by a report. However, the Power BI engine must first copy the data into the dataset during refresh. Any changes at the source are only picked up with the next dataset refresh.  
 
 Direct Lake mode eliminates the import requirement by loading the data directly from OneLake. Unlike DirectQuery, there is no translation to other query languages or query execution on other database systems, yielding performance similar to import mode. Because there's no explicit import process, it's possible to pick up any changes at the data source as they occur, combining the advantages of both DirectQuery and import modes while avoiding their disadvantages. Direct Lake mode can be the ideal choice for analyzing very large datasets and datasets with frequent updates at the data source.  
 
@@ -64,14 +64,14 @@ Microsoft have [data reduction techniques for import modelling guidance][source 
 
 There are eight different data reduction techniques covered in this article. These techniques include:
 
-- [Remove unnecessary columns][source 5]
-- [Remove unnecessary rows][source 6]
-- [Group by and summarize][source 7]
-- [Optimize column data types][source 8]
-- [Preference for custom columns][source 9]
-- [Disable Power Query query load][source 10]
-- [Disable auto date/time][source 11]
-- [Switch to Mixed mode][source 12]  
+- [remove unnecessary columns][source 5]
+- [remove unnecessary rows][source 6]
+- [group by and summarize][source 7]
+- [optimise column data types][source 8]
+- [preference for custom columns][source 9]
+- [disable Power Query query load][source 10]
+- [disable auto date/time][source 11]
+- [switch to mixed mode][source 12]  
   
 The [‘Data Modelling In Power BI: Helpful Tips & Best Practices’ article][source 14] may be useful.  
 And [‘Model data with Power BI’ training][source 13] is also available.  

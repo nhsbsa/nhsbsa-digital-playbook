@@ -90,12 +90,12 @@ A bookmark captures the state of a report page. It includes the settings you've 
   
 The maximum number of personal bookmarks per report is 20. When you create a bookmark, the following elements are saved with the bookmark:
 
-- The current page
-- Filters
-- Slicers, including slicer type (for example, dropdown or list) and slicer state
-- Visual selection state (such as cross-highlight filters)
-- Sort order
-- Drill location  
+- the current page
+- filters
+- slicers, including slicer type (for example, dropdown or list) and slicer state
+- visual selection state (such as cross-highlight filters)
+- sort order
+- drill location  
   
 Microsoft have [guidance on bookmarks][hint 6] available online.  
 

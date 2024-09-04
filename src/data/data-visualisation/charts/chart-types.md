@@ -16,10 +16,10 @@ This section will cover [four categories of chart types][chart 1]: comparison, c
   
 The [four main questions][chart 2] to help you decide which chart type to use are:
 
-- Do you want to **compare** values or show differences over time?
-- Do you want to display **composition** of something?
-- Do you want to better understand the **relationship** between two or more variables?
-- Do you want to show the **distribution** of your data?  
+- do you want to **compare** values or show differences over time?
+- do you want to display **composition** of something?
+- do you want to better understand the **relationship** between two or more variables?
+- do you want to show the **distribution** of your data?  
   
 ::: details Source - choosing the right chart
 
@@ -35,10 +35,10 @@ Comparison visualisations are used to compare two or more variables, or values o
 
 Among items:
 
-- Variable width chart (2 variables per item)
-- Table or tables with embedded charts (one variable per item, many categories)
-- Bar chart horizontal (one variable per item, few categories)
-- Bar chart vertical (one variable per item, few categories)
+- variable width chart (2 variables per item)
+- table or tables with embedded charts (one variable per item, many categories)
+- bar chart horizontal (one variable per item, few categories)
+- bar chart vertical (one variable per item, few categories)
 
 Over time:
 
@@ -180,7 +180,7 @@ Some common geospatial visualisations used are:
   
 ### Infographics
   
-Infographics, although not a specific type of visualisation itself, are often used to tell a story, and can used any visualisation method. The aim of an infographic is to quickly pull focus to a user. Infographics, although a type of data visualisation are not always accurate and can be sometimes simplified for the purpose of an infographic therefore it is always important to be mindful of any assumptions or biases infographics can cause.  
+Infographics, although not a specific type of visualisation itself, are often used to tell a story, and can used any visualisation method. The aim of an infographic is to quickly pull focus to a user. Infographics, although a type of data visualisation are not always accurate and can be sometimes simplified for the purpose of an infographic therefore it's always important to be mindful of any assumptions or biases infographics can cause.  
   
 If you’re using an infographic:
 

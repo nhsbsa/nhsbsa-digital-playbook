@@ -40,7 +40,7 @@ The content design standards state how we should be presenting data. Some things
 - putting things into perspective using [data visualisation principles][data viz principles]
 - removing jargon, simplifying language
 - using a suitable font size:
-* The body of printed text should be size 12px. [Source - Accessible print publications][data 3]
+* the body of printed text should be size 12px. [Source - Accessible print publications][data 3]
 * Frutiger or Arial should be used as the font throughout the report. The core NHS font is Frutiger and the secondary font is Arial. [Source - NHS Identity guidelines][data 4]
 - always following the appropriate hierarchy of titles in a page, this helps users of a screen reader navigate content quickly and easily
 

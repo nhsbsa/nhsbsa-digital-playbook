@@ -52,7 +52,7 @@ Please refer to the [Colour Guidance page](../../colour/) for standards on acces
 For colour contrast; ensure there is enough of a contrast between the colours used. The Web Content Accessibility Guidelines (WCAG) which the UK accessibility legislation aligns to, require a 3 to 1 ratio for graphical elements and 4.5 to 1 ratio for text.  
 The [WebAIM Colour Contrast Checker][webaim 1] may help, or [this Colour Contrast Checker][webaim 2].  
 
-It is important to remember that you must not use colour as the only way to communicate something. Patterns can be used, but they can be cluttering and harder to see. It is always recommended to have an alternative way to gain the same information, for example, by having figures available to the user.  
+It's important to remember that you must not use colour as the only way to communicate something. Patterns can be used, but they can be cluttering and harder to see. It's always recommended to have an alternative way to gain the same information, for example, by having figures available to the user.  
   
 ::: details Source - WCAG and colour
 
@@ -66,21 +66,21 @@ Charts can often be confusing to a user, and enabling a user to understand the c
 
 Some best practices for designing charts accessibly:
 
-- Declutter where possible, but do not remove any useful content. Content should be efficient and effective
-* Remove gridlines
-* Minimum colours
-* Don’t have a busy chart
-- Include alt text (for people with low vision or those who find charts confusing)
-- Include the source of your data, to allow users to familiarise themselves with the data and aid data literacy
-- No wonky text, horizontal is best
-- Don’t use italics, this can be hard for a user to read
-- Make sure your product adapts for smaller screens. This is another reason why a text alternative for a chart is recommended
+- declutter where possible, but do not remove any useful content. Content should be efficient and effective
+* remove gridlines
+* minimum colours
+* do not have a busy chart
+- include alt text (for people with low vision or those who find charts confusing)
+- include the source of your data, to allow users to familiarise themselves with the data and aid data literacy
+- no wonky text, horizontal is best
+- do not use italics, this can be hard for a user to read
+- make sure your product adapts for smaller screens. This is another reason why a text alternative for a chart is recommended
 - Sans serif font is more understandable for people with dyslexia. Make sure your chart text is as large as is reasonable
-- Don’t mislead the user.
-- Choosing the most appropriate chart type, to aid a user’s understanding
-- Be aware of where your content is placed. Chart descriptions should appear above a chart to allow a screen reader to pick up the information before a chart is shown
-- Label all buttons, hyperlinks, and necessary features accurately
-- If a link is included, hyperlink appropriate text describing what is being linked to as this is more suitable for a screen reader user
+- don’t mislead the user.
+- choosing the most appropriate chart type, to aid a user’s understanding
+- be aware of where your content is placed. Chart descriptions should appear above a chart to allow a screen reader to pick up the information before a chart is shown
+- label all buttons, hyperlinks, and necessary features accurately
+- if a link is included, hyperlink appropriate text describing what is being linked to as this is more suitable for a screen reader user
 
 ## Spreadsheet accessibility  
   
