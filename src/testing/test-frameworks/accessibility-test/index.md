@@ -18,11 +18,11 @@ The 2018 regulations build on the existing obligations to people who have a disa
 
 To ensure we meet this legislation an accessibility framework was developed and this has quickly become one of the core test frameworks the test community uses to ensure every product or service is accessible.
 
-This means testing to ensure services meet WCAG guidelines to 2.1 'AA' standard as well as ensuring our services can be used by anyone with any accessibility needs.
+This means testing to ensure services meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard as well as ensuring our services can be used by anyone with any accessibility needs.
 
-To meet this legislation the NHSBSA has to adhere to the Web Content Accessibility Guidelines (WCAG) 2.1 and achieve at minimum 'AA' standard. 
+To meet this legislation the NHSBSA has to adhere to the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) and achieve at minimum 'AA' standard. 
 
-WCAG 2.1 guidelines can be found here: https://www.w3.org/TR/WCAG21/#keyboard-accessible
+The latest published WCAG standard can be found here: https://www.w3.org/WAI/standards-guidelines/wcag/
 
 The accessibility standard levels are as follows:
 
@@ -36,7 +36,7 @@ All our websites have to meet at minimum 'AA' standard on all websites but we sh
 
 We assure all our services are accessible by combining both automated and manual testing tools and techniques in order to meet our users needs.
 
-There is more information / guidance on WCAG 2.1 available on this github account: WCAG 2.1 guidelines​​​​​​​
+There is more information / guidance on the latest published WCAG standard available on the [World Wide Web Consortium (W3C)](https://www.w3.org/WAI/standards-guidelines/wcag/) website.
 
 ## Whats in the scope for accessibility testing?
 
@@ -97,7 +97,7 @@ It is a testers responsibility to ensure the following with statements:
 
 - All issues outstanding are included in the statements
 - The issues are in natural english language and not tool or technical jargon.
-- Each issue has a related WCAG 2.1 compliance failure criteria.
+- Each issue has a related compliance failure criteria, which references the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/).
 - All wording is in line with BSA accessibility standards (please see the accessibility standards area).
 - All issues have a fix date (this has to be agreed by the project).
 

@@ -10,7 +10,7 @@ order: 10
 
 Release assurance is the process where the quality, accuracy and completeness of proposed solutions or features are:
 - fit for live use.
-- legally compliant (Accessibility WCAG 2.1 AA).
+- legally compliant (to the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/)).
 - meets user needs and satisfies acceptance criteria.
 - meets NHSBSA test standards.
 - all definitions of done have been met.
