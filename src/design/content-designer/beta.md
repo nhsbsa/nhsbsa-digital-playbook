@@ -15,6 +15,6 @@ During the Beta phase, the product is closer to its final form, and the focus is
 - working with the team to decide whether further changes are required to fine tune the final product
 - helping track down work to be done based on user feedback
 - ensuring that solutions are built for everyone - not just a select few
-- ensuring that solutions meet the WCAG 2.2 AA standard
+- ensuring that solutions meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard
 - contributing and sharing any new design patterns that are developed to meet user needs within the NHS / GOV design communities
 - observing user research and analysing data and analytics

@@ -154,6 +154,6 @@ Features, Structural Elements and Aria are parts of the website that need to be 
 
 These need to be reviewed by testers and developers to ensure they are accessible and once covered can lead to full accessibility compliance to the regulations.
 
-The aim of all services has to be fix all accessibility issues. No project can claim full compliance to WCAG 2.1 ‘AA’ standard until all issues High and Medium are fixed or justified.
+The aim of all services has to be fix all accessibility issues. No project can claim full compliance of the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to ‘AA’ standard until all issues High and Medium are fixed or justified.
 
 Please remember: when defects and issues are closed please ensure the project knows to remove these issues from the website’s accessibility statement.

@@ -55,7 +55,7 @@ The 2018 regulations build on the existing obligations to people who have a disa
 
 To ensure we meet this legislation an accessibility framework was developed and this has become one of the core test frameworks the test community use to ensure every product or service is accessible.
 
-We test all of our services to ensure they meet WCAG 2.1 guidelines to 'AA' standard as well as ensuring our services can be used by anyone with accessibility needs.
+We test all of our services to ensure they meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard as well as ensuring our services can be used by anyone with accessibility needs.
 
 ## API Testing
 

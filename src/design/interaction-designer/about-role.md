@@ -106,7 +106,7 @@ Starting from tried-and-tested patterns from the NHS.UK / GOV.UK design systems 
 
 ### 4. Accessibility
 
-The WCAG 2.1 design principles of making things perceivable, operable, understandable, and robust are a great start, but it’s important to go further. How will someone with a screen reader use your screens? Someone with a screen magnifier? Someone with ADHD? Understanding how these people use services when you start will help you make things that work for them. Accessibility is a team sport.
+The design principles of the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) say that making things perceivable, operable, understandable, and robust are a great start, but it’s important to go further. How will someone with a screen reader use your screens? Someone with a screen magnifier? Someone with ADHD? Understanding how these people use services when you start will help you make things that work for them. Accessibility is a team sport.
 
 ### 5. Prototyping journeys, not screens
 
