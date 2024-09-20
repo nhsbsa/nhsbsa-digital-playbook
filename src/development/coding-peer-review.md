@@ -7,6 +7,9 @@ order: 8
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
+related:
+  title: Related articles
+  tag: branching
 ---
 !!! warning NHSBSA peer review process is mandatory
 Only deviate with agreement from your Delivery Manager and Professional Lead
@@ -155,5 +158,7 @@ The Reviewer should approve the code, only when all comments are resolved and th
 ## 8. Merge code
 
 The reviewer or author may merge approved code in the mainline branch.
+
+> __NB: Merges to main branch should be ff-only. If its a develop or hotfix branch being merged you may want to disable squashing commits.__
 
 Note that Gitlab allows you to squash commits and to remove merged branches.
