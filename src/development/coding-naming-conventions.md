@@ -7,6 +7,9 @@ order: 3
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
+related:
+  title: Related articles
+  tag: branching
 ---
 It is important to adopt a naming convention:
 
@@ -158,6 +161,12 @@ The mainline branch should be named `main`. All branches should be `kebab-case` 
 
 A single branch should be used per change/ticket.
 
+The below branches are used to keep unreleased changes:
+* `develop` i.e. `develop-accessibility` - Is derived from the main branch, the development branch serves as a branch for integrating different features planned for an upcoming release. This branch may or may not be as stable as the main branch. It is where developers collaborate and merge feature branches
+* `hotfix` i.e. `hotfix-gov-notify` - Derives from the main branch and is used to fix a bug(s) in the production branch that was identified after a release
+
+Branch name regex: `(feature/([A-Z]{3,4})|hotfix/([A-Z]{3,4})-|bug/([A-Z]{3,4})-|develop-|hotfix-|feature/NO-JIRA-|RELEASE|STG|PRO|main)`
+
 :::
 ::: card
 
@@ -175,6 +184,19 @@ Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated 
 Merge/pull requests should be raised with `natural` case and this convention:
 
 > `{change ID} - {brief description}`
+
+:::
+::: card
+
+### Commit messages
+
+Commit messages should be `natural` case and follow this convention:
+
+> `{change ID} {brief description}` i.e `HMOD-0001 added check your answers page`
+
+Its fine to use `NO-JIRA` as the change ID if the change is a non-functional change, for example if its just updating the README file.
+
+Commit message regex: `([A-Z]{3,4}\-([0-9]+)|Merge|Merging|NO-JIRA)[ ][a-z][a-zA-Z0-9 ]*`
 
 :::
 
