@@ -100,9 +100,17 @@ Terms used in the naming conventions are:
       </ul>
       For managed changes:
       <ul>
+        <li><code>hotfix</code></li>
+        <li><code>develop</code></li>
+        <li><code>build</code></li>
+        <li><code>ci</code></li>
+        <li><code>docs</code></li>
         <li><code>feature</code></li>
-        <li><code>bug</code></li>
-        <li><code>chore</code></li>
+        <li><code>fix</code></li>
+        <li><code>perf</code></li>
+        <li><code>refactor</code></li>
+        <li><code>style</code></li>
+        <li><code>test</code></li>
       </ul>
     </td>
   </tr>
