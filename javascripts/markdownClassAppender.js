@@ -1,11 +1,22 @@
-function appendRuleNames(md, tokens = [], appendRules = true) {
-  let ruleNames = Array.from(tokens);
+function appendRuleNames(
+  md,
+  excludeTokens = [],
+  appendRules = true,
+  excludePatterns = [],
+) {
+  let ruleNames = Array.from(excludeTokens);
   if (appendRules) {
-    for (let ruleName in md.renderer.rules) {
-      if (!ruleNames.includes(ruleName)) {
-        ruleNames.push(ruleName);
-      }
-    }
+    Object.keys(md.renderer.rules)
+      .filter(
+        (ruleName) =>
+          !ruleNames.includes(ruleName) &&
+          !excludePatterns.some((pattern) =>
+            typeof pattern === 'string'
+              ? ruleName.includes(pattern)
+              : pattern.test(ruleName),
+          ),
+      )
+      .forEach((ruleName) => ruleNames.push(ruleName));
   }
   return ruleNames;
 }
@@ -27,13 +38,23 @@ function decorate(md, ruleName, cssClass) {
   };
 }
 
-module.exports = (md, tokens = [], appendRules = true, cssClass = 'md') => {
-  //use all tokens unless specified
-  let ruleNames = appendRuleNames(md, tokens, appendRules);
+module.exports = (md, options = {}) => {
+  const {
+    excludeTokens = [],
+    appendRules = true,
+    cssClass = 'md',
+    excludePatterns = [],
+  } = options;
+
+  let ruleNames = appendRuleNames(
+    md,
+    excludeTokens,
+    appendRules,
+    excludePatterns,
+  );
 
   console.log(`configuring CSS class appender for [${ruleNames}]`);
-  for (let i in ruleNames) {
-    let ruleName = ruleNames[i];
+  for (let ruleName of ruleNames) {
     decorate(md, ruleName, cssClass);
   }
 };
