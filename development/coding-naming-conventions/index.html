@@ -143,6 +143,9 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
                     <li><a href="#merge/pull-requests">Merge/Pull Requests</a>
             		</li>
+
+                    <li><a href="#commit-messages">Commit messages</a>
+            		</li>
                 </ol>
             		</li>
 
@@ -278,9 +281,17 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       </ul>
       For managed changes:
       <ul>
+        <li><code>hotfix</code></li>
+        <li><code>develop</code></li>
+        <li><code>build</code></li>
+        <li><code>ci</code></li>
+        <li><code>docs</code></li>
         <li><code>feature</code></li>
-        <li><code>bug</code></li>
-        <li><code>chore</code></li>
+        <li><code>fix</code></li>
+        <li><code>perf</code></li>
+        <li><code>refactor</code></li>
+        <li><code>style</code></li>
+        <li><code>test</code></li>
       </ul>
     </td>
   </tr>
@@ -324,6 +335,12 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p><code class="md">{type}/{change ID}-{brief description}</code></p>
 </blockquote>
 <p>A single branch should be used per change/ticket.</p>
+<p>The below branches are used to keep unreleased changes:</p>
+<ul>
+<li><code class="md">develop</code> i.e. <code class="md">develop-accessibility</code> - Is derived from the main branch, the development branch serves as a branch for integrating different features planned for an upcoming release. This branch may or may not be as stable as the main branch. It is where developers collaborate and merge feature branches</li>
+<li><code class="md">hotfix</code> i.e. <code class="md">hotfix-gov-notify</code> - Derives from the main branch and is used to fix a bug(s) in the production branch that was identified after a release</li>
+</ul>
+<p>Branch name regex: <code class="md">(feature/([A-Z]{3,4})|hotfix/([A-Z]{3,4})-|bug/([A-Z]{3,4})-|develop-|hotfix-|feature/NO-JIRA-|RELEASE|STG|PRO|main)</code></p>
 </div>
 <div class="md card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
@@ -338,6 +355,15 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <blockquote>
 <p><code class="md">{change ID} - {brief description}</code></p>
 </blockquote>
+</div>
+<div class="md card">
+<h3 id="commit-messages" tabindex="-1"><a class="header-anchor" href="#commit-messages">Commit messages</a></h3>
+<p>Commit messages should be <code class="md">natural</code> case and follow this convention:</p>
+<blockquote>
+<p><code class="md">{change ID} {brief description}</code> i.e <code class="md">HMOD-0001 added check your answers page</code></p>
+</blockquote>
+<p>Its fine to use <code class="md">NO-JIRA</code> as the change ID if the change is a non-functional change, for example if its just updating the README file.</p>
+<p>Commit message regex: <code class="md">([A-Z]{3,4}\-([0-9]+)|Merge|Merging|NO-JIRA)[ ][a-z][a-zA-Z0-9 ]*</code></p>
 </div>
 <hr>
 <h2 id="languages" tabindex="-1"><a class="header-anchor" href="#languages">Languages</a></h2>
@@ -378,6 +404,26 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p><code class="md">@nhsbsa/{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 </div>
+        <h2 class="nhsuk-heading-l">
+          Related articles
+        </h2>
+        	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-branching-git-flow/">Git branching</a>
+						</h2>
+						
+					</div>
+					<p class="nhsuk-card__description">Define a branching strategy to avoid confusion and reduce risk</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-09-20T15:41:44.000Z">20 September 2024</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -402,7 +448,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-06-02T16:01:00.000Z">2 June 2023</time>
+      Published: <time datetime="2024-09-20T15:41:44.000Z">20 September 2024</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
