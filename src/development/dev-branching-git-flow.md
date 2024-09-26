@@ -4,6 +4,7 @@ title: "Git branching"
 description: "Define a branching strategy to avoid confusion and reduce risk"
 tags: [dev, branching]
 order: 8
+status: DRAFT
 review:
     last_reviewed_date: 2024-09-20
     review_cycle: ANNUAL
