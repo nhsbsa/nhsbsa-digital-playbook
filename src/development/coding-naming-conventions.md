@@ -169,11 +169,7 @@ The mainline branch should be named `main`. All branches should be `kebab-case` 
 
 A single branch should be used per change/ticket.
 
-The below branches are used to keep unreleased changes:
-* `develop` i.e. `develop-accessibility` - Is derived from the main branch, the development branch serves as a branch for integrating different features planned for an upcoming release. This branch may or may not be as stable as the main branch. It is where developers collaborate and merge feature branches
-* `hotfix` i.e. `hotfix-gov-notify` - Derives from the main branch and is used to fix a bug(s) in the production branch that was identified after a release
-
-Branch name regex: `(feature/([A-Z]{3,4})|hotfix/([A-Z]{3,4})-|bug/([A-Z]{3,4})-|develop-|hotfix-|feature/NO-JIRA-|RELEASE|STG|PRO|main)`
+See [Git branching guidance](../dev-branching-git-branching/) for a more detailed explanation of Git branch naming
 
 :::
 ::: card
