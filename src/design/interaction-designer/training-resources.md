@@ -57,7 +57,7 @@ Each role level in the framework includes a list of required skills. Each skill 
 - [Service Design in Government](https://govservicedesign.net/)
 - [UX Scotland](https://uxscotland.net/)
 - [Design System Day](https://design-system.service.gov.uk/community/design-system-day/)
-- [Camp Digital](https://www.nexerdigital.com/campdigital/2024/)
+- [Camp Digital](https://www.nexerdigital.com/campdigital/archive/)
 - [Other UX / Design Conferences](https://docs.google.com/spreadsheets/d/1EmInflZQ7FTjsUoJi3tQm0AH1d70cGSxsBjNCEs2z2s/edit?usp=sharing)
 - [NHS England Bi-Weekly design huddle](https://app.mural.co/t/nhsdigital8118/m/nhsdigital8118/1704977856217/fbb56163e3235effa07acbae72671a6760e51942?sender=uc57e8beacae1be0dda5b2638)
 - [Gov Design System catchup (publicised in the X-Gov #govuk-design-system channel)](https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6)

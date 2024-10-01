@@ -28,5 +28,5 @@ The automated build will break for:
 * [SonarQube issue definitions][sonarqube_issues]
 * [SonarQube metric definitions][sonarqube_metric_definitions]
 
-[sonarqube_issues]: <https://docs.sonarqube.org/latest/user-guide/issues/>
-[sonarqube_metric_definitions]: <https://docs.sonarqube.org/latest/user-guide/metric-definitions/>
+[sonarqube_issues]: <https://docs.sonarsource.com/sonarqube/latest/user-guide/issues/introduction/>
+[sonarqube_metric_definitions]: <https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/>

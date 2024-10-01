@@ -169,7 +169,7 @@ The mainline branch should be named `main`. All branches should be `kebab-case` 
 
 A single branch should be used per change/ticket.
 
-See [Git branching guidance](../dev-branching-git-branching/) for a more detailed explanation of Git branch naming
+See [Git branching guidance](../dev-git-branching-strategy/) for a more detailed explanation of Git branch naming
 
 :::
 ::: card

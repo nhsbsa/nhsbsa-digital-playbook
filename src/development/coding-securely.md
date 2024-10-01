@@ -69,16 +69,16 @@ Production code must be written with an understanding of common security risks a
 
 Production code must be written in accordance with good security practices as defined in the [OWASP top 10 proactive controls][owasp_top_ten_proactive_controls]
 
-* [C1: Define Security Requirements](https://owasp.org/www-project-proactive-controls/v3/en/c1-security-requirements)
-* [C2: Leverage Security Frameworks and Libraries](https://owasp.org/www-project-proactive-controls/v3/en/c2-leverage-security-frameworks-libraries)
-* [C3: Secure Database Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
-* [C4: Encode and Escape Data](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
-* [C5: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
-* [C6: Implement Digital Identity](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
-* [C7: Enforce Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
-* [C8: Protect Data Everywhere](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
-* [C9: Implement Security Logging and Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
-* [C10: Handle All Errors and Exceptions](https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions)
+* [C1: Define Security Requirements](https://top10proactive.owasp.org/archive/2018/c1-security-requirements/)
+* [C2: Leverage Security Frameworks and Libraries](https://top10proactive.owasp.org/archive/2018/c2-leverage-security-frameworks-libraries/)
+* [C3: Secure Database Access](https://top10proactive.owasp.org/archive/2018/c3-secure-database/)
+* [C4: Encode and Escape Data](https://top10proactive.owasp.org/archive/2018/c4-encode-escape-data/)
+* [C5: Validate All Inputs](https://top10proactive.owasp.org/archive/2018/c5-validate-inputs/)
+* [C6: Implement Digital Identity](https://top10proactive.owasp.org/archive/2018/c6-digital-identity/)
+* [C7: Enforce Access Controls](https://top10proactive.owasp.org/archive/2018/c7-enforce-access-controls/)
+* [C8: Protect Data Everywhere](https://top10proactive.owasp.org/archive/2018/c8-protect-data-everywhere/)
+* [C9: Implement Security Logging and Monitoring](https://top10proactive.owasp.org/archive/2018/c9-security-logging/)
+* [C10: Handle All Errors and Exceptions](https://top10proactive.owasp.org/archive/2018/c10-errors-exceptions/)
 
 ## References
 
@@ -96,4 +96,4 @@ Production code must be written in accordance with good security practices as de
 [ncsc_continually_test_your_security]: <https://www.ncsc.gov.uk/collection/developers-collection/principles/continually-test-your-security>
 [ncsc_plan_for_security_flaws]: <https://www.ncsc.gov.uk/collection/developers-collection/principles/plan-for-security-flaws>
 [owasp_top_ten_risks]: <https://owasp.org/www-project-top-ten/>
-[owasp_top_ten_proactive_controls]: <https://owasp.org/www-project-proactive-controls/>
+[owasp_top_ten_proactive_controls]: <https://top10proactive.owasp.org/>

@@ -75,7 +75,6 @@ User researchers are also encouraged to look outside of the organisation for exi
 - [Laws of UX](https://lawsofux.com/)
 - [Open Design Kit from Bocoup](http://opendesignkit.org/)
 - [Service Design Toolkit](http://servicedesigntoolkit.org/)
-- [Design Research Techniques from CFC Mediala](http://designresearchtechniques.com/)
 - [uxdesign.cc – UX Design Methods & Deliverables](https://uxdesign.cc/ux-design-methods-deliverables-657f54ce3c7d)
 - [UX Mastery – UX Techniques](http://uxmastery.com/resources/techniques/)
 - [All about UX](http://www.allaboutux.org/)
