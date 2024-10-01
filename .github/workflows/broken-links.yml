@@ -14,9 +14,9 @@ jobs:
         with:
           url: "https://nhsbsa.github.io/nhsbsa-digital-playbook"
           buffer_size: 8192
-          exclude: "assets.nhs.uk/$ nhsbsauk.sharepoint.com www.baeldung.com docs.aws.amazon.com/ec2 www.pluralsight.com dps-gitlab.service.nhsbsa www.npmjs.com nhsbsa-digital-playbook/issues/new nhsbsa-digital-playbook/discussions/new owasp.org/www-project-secure-headers git-rewrite-scripts toolbox.hyperisland.com www.vic.gov.au"
+          exclude: "assets.nhs.uk/$ nhsbsauk.sharepoint.com www.baeldung.com docs.aws.amazon.com/ec2 www.pluralsight.com dps-gitlab.service.nhsbsa www.npmjs.com nhsbsa-digital-playbook/issues/new nhsbsa-digital-playbook/discussions/new owasp.org/www-project-secure-headers git-rewrite-scripts toolbox.hyperisland.com www.vic.gov.au www.udacity.com"
           max_connections: 20
           max_connections_per_host: 2
           timeout: 30
-          header: "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0"
+          header: "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0"
 
