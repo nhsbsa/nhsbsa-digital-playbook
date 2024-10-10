@@ -8,7 +8,8 @@ order: 2
 ---
 ## Choosing between a table or a chart  
   
-Charts are typically used to visualise patterns. Tables can also be used for this, when implementing conditional formatting, a heatmap, or adding in trendlines or additional symbols.  
+Both tables and charts can be a good way to present your data.  
+Charts are often used to visualise patterns, trends, and relationships. Tables are often used to present precise data. 
   
 Some key questions to ask yourself when deciding which to use are:  
 
