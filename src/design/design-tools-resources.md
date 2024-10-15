@@ -69,13 +69,14 @@ To run a session, people can add their topic to an available slot in the [design
 
 If no session is planned, a session will run for designers to chat informally.
 
-### Code club
+### Design Drop-in
 
-[Code club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) was setup in 2020 with the aim of providing a safe learning space for team members to develop their coding and prototyping skills together. This space is open to any questions or advice anyone needs.
+Design Drop-in was created in October 2024 with the aim of providing a safe learning space for designers to gain more knowledge and skills in different areas of design. Each session is hosted by a volunteer to discuss a topic they have experience in and knowledge share with other designers. 
 
-Code club runs on the last Friday afternoon of every month at 2pm, although this can change when required.
+The sessions are optional so feel free to check out the [Design Drop-in calendar](https://nhsbsauk.sharepoint.com/:x:/t/CommunitiesofPractice75/EQBg5Eudw49LuyhECPJm_GIBvnvCyC672CvR4TmcSmXlAA?e=cPkFWc&nav=MTVfe0EyRjNCNTJBLUMyRTMtNDQwOS05QTA0LTAxRjY1QzRGNjlBOH0) to see which topics are coming up that might be of interest to you, we want this to be a safe place for all our designers so any questions are welcome, there is always someone available to support you.
 
-To participate in live lessons as a host or to highlight a certain topic you would like to be covered, you can add the details to the confluence page.
+Previously we had [Code Club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) which was created back in 2020 to support designers in developing their code skill for prototyping. Following the rebrand, we hope to include many more designers in learning about our day to day work as an NHS BSA designer, delving into areas like service standards, service assessments and discipline specific topics like code prototypes, blueprints and content standards.
+
 
 ### Cross-Gov Slack
 
