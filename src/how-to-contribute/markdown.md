@@ -10,6 +10,8 @@ This guide shows you some playbook specific tips. For general guidance on Markdo
 * [Markdown][commonmark]
 * [Markdown tutorial][commonmark_tutorial]
 
+You can also use [Nunjucks macros](../nunjucks/) in markdown files.
+
 ## Abbreviations
 
 We use [markdown-it-abbr][markdown_it_abbr] to render abbreviations.

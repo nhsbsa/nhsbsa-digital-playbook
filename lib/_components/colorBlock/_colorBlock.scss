@@ -1,0 +1,27 @@
+.colorblock {
+  display: inline-block;
+  border: 1px solid black;
+}
+  
+// mixin used here for creating size variations
+@mixin colorblock-size($size) {
+  width: $size;
+  height: $size;
+  max-width: $size;
+  max-height: $size;
+}
+
+$sizes: (
+  'xs': 10px,
+  's': 20px,
+  'm': 50px,
+  'l': 100px,
+  'xl': 200px
+);
+  
+@each $key, $size in $sizes {
+  .colorblock_#{$key} {
+    @extend .colorblock;
+    @include colorblock-size($size);
+  }
+}
