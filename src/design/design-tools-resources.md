@@ -69,13 +69,18 @@ To run a session, people can add their topic to an available slot in the [design
 
 If no session is planned, a session will run for designers to chat informally.
 
-### Code club
+### Design Drop-in
 
-[Code club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) was setup in 2020 with the aim of providing a safe learning space for team members to develop their coding and prototyping skills together. This space is open to any questions or advice anyone needs.
+Our Design Drop-in sessions were created in October 2024 with the aim of providing a safe learning space for designers to gain more knowledge and skills across the different areas of design. Each session is led by a volunteer who shares their knowledge and experience on a specific topic.
 
-Code club runs on the last Friday afternoon of every month at 2pm, although this can change when required.
+All sessions are optional and any upcoming topics are included within the [Design Drop-in calendar](https://nhsbsauk.sharepoint.com/:x:/t/CommunitiesofPractice75/EQBg5Eudw49LuyhECPJm_GIBvnvCyC672CvR4TmcSmXlAA?e=cPkFWc&nav=MTVfe0EyRjNCNTJBLUMyRTMtNDQwOS05QTA0LTAxRjY1QzRGNjlBOH0).
 
-To participate in live lessons as a host or to highlight a certain topic you would like to be covered, you can add the details to the confluence page.
+Design Drop-in is a welcoming space for all our designers, where any questions are encouraged, and support is always available.
+
+Topics that are included within our Design Drop-in sessions include; information about service standards, service assessments and discipline specific topics like code prototypes, blueprints and content standards.
+
+Previously we had [Code Club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) which was created back in 2020 to support designers in developing their code skill for prototyping. Following the rebrand, we hope to include many more designers in learning about our day to day work as an NHS BSA designer, delving into areas like service standards, service assessments and discipline specific topics like code prototypes, blueprints and content standards.
+
 
 ### Cross-Gov Slack
 

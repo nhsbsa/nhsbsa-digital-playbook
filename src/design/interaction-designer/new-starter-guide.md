@@ -37,9 +37,9 @@ As part of your onboarding, one of the Lead Service / Interaction / Content Desi
 
 For more information on when and where our Design Community runs, visit our [tools and resources page](../../design-tools-resources/#design-community)
 
-#### Code Club 
+#### Design Drop-in
 
-For more information on when and where our Code Club runs, visit our [tools and resources page](../../design-tools-resources/#code-club)
+For more information on when and where our Design Drop-in sessions run, visit our [tools and resources page](../../design-tools-resources//#design-drop-in)
 
 ### 3. Install required software / packages 
 
