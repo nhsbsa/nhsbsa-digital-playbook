@@ -71,9 +71,13 @@ If no session is planned, a session will run for designers to chat informally.
 
 ### Design Drop-in
 
-Design Drop-in was created in October 2024 with the aim of providing a safe learning space for designers to gain more knowledge and skills in different areas of design. Each session is hosted by a volunteer to discuss a topic they have experience in and knowledge share with other designers. 
+Our Design Drop-in sessions were created in October 2024 with the aim of providing a safe learning space for designers to gain more knowledge and skills across the different areas of design. Each session is led by a volunteer who shares their knowledge and experience on a specific topic.
 
-The sessions are optional so feel free to check out the [Design Drop-in calendar](https://nhsbsauk.sharepoint.com/:x:/t/CommunitiesofPractice75/EQBg5Eudw49LuyhECPJm_GIBvnvCyC672CvR4TmcSmXlAA?e=cPkFWc&nav=MTVfe0EyRjNCNTJBLUMyRTMtNDQwOS05QTA0LTAxRjY1QzRGNjlBOH0) to see which topics are coming up that might be of interest to you, we want this to be a safe place for all our designers so any questions are welcome, there is always someone available to support you.
+All sessions are optional and any upcoming topics are included within the [Design Drop-in calendar](https://nhsbsauk.sharepoint.com/:x:/t/CommunitiesofPractice75/EQBg5Eudw49LuyhECPJm_GIBvnvCyC672CvR4TmcSmXlAA?e=cPkFWc&nav=MTVfe0EyRjNCNTJBLUMyRTMtNDQwOS05QTA0LTAxRjY1QzRGNjlBOH0).
+
+Design Drop-in is a welcoming space for all our designers, where any questions are encouraged, and support is always available.
+
+Topics that are included within our Design Drop-in sessions include; information about service standards, service assessments and discipline specific topics like code prototypes, blueprints and content standards.
 
 Previously we had [Code Club](https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3824451631/Code+club) which was created back in 2020 to support designers in developing their code skill for prototyping. Following the rebrand, we hope to include many more designers in learning about our day to day work as an NHS BSA designer, delving into areas like service standards, service assessments and discipline specific topics like code prototypes, blueprints and content standards.
 

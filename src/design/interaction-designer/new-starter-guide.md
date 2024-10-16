@@ -39,7 +39,7 @@ For more information on when and where our Design Community runs, visit our [too
 
 #### Design Drop-in
 
-For more information on when and where our Design Drop-in runs, visit our [tools and resources page](../../design-tools-resources//#design-drop-in)
+For more information on when and where our Design Drop-in sessions run, visit our [tools and resources page](../../design-tools-resources//#design-drop-in)
 
 ### 3. Install required software / packages 
 
