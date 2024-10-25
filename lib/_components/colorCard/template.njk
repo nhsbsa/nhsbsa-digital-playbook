@@ -1,31 +1,34 @@
+<ul class="nhsuk-grid-row nhsuk-card-group">
 {% from "colorBlock/macro.njk" import colorBlock %}
 {% set headingLevel %}
 {{ params.headingLevel if params.headingLevel else 'h2' }}
 {% endset %}
-<div class="card colorCard">
-	{% if params.heading %}
-	<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
-	{{ params.heading }}
-	</{{headingLevel}}>
-	{% endif %}
-	<div>{{ colorBlock(params) }}</div>
-	<dl>
-		<dt>Hex</dt>
-		<dd>{{params.color}}</dd>
-		<dt>RGB</dt>
-		<dd>{{params.color | convertColor('RGB') }}</dd>
-		<dt>CMYK</dt>
-		<dd>{{params.color | convertColor('CMYK') }}</dd>
-		{% if params.pantone %}
-		<dt>Pantone</dt>
-		<dd>{{params.pantone}}</dd>
-		{% endif %}
-		{% if params.ral %}
-		<dt>RAL</dt>
-		<dd>{{params.ral}}</dd>
-		{% endif %}
-	</dl>
-</div>
+	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+		<div class="card colorCard">
+			{% if params.heading %}
+			<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
+			{{ params.heading }}
+			</{{headingLevel}}>
+			{% endif %}
+			<div>{{ colorBlock(params) }}</div>
+			<dl>
+				<dt>Hex</dt>
+				<dd>{{params.color}}</dd>
+				<dt>RGB</dt>
+				<dd>{{params.color | convertColor('RGB') }}</dd>
+				<dt>CMYK</dt>
+				<dd>{{params.color | convertColor('CMYK') }}</dd>
+				{% if params.pantone %}
+				<dt>Pantone</dt>
+				<dd>{{params.pantone}}</dd>
+				{% endif %}
+				{% if params.ral %}
+				<dt>RAL</dt>
+				<dd>{{params.ral}}</dd>
+				{% endif %}
+			</dl>
+		</div>
+	</li>
 
 {% from 'tables/macro.njk' import table %}
 
@@ -63,19 +66,21 @@
 {# control width? #}
 {# <div class="nhsuk-grid-row"> #}
 {# <div class="nhsuk-grid-column-one-half"> #}
-<div class="card">
-	{% if params.heading %}
-		<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
-	{% endif %}
+<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+	<div class="card">
+		{% if params.heading %}
+			<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
+		{% endif %}
 
-	{{ colorBlock(params) }}
+		{{ colorBlock(params) }}
 
-	{{ table({
-		panel: false,
-		firstCellIsHeader: true,
-		rows: tableRows
-	}) }}
-</div>
+		{{ table({
+			panel: false,
+			firstCellIsHeader: true,
+			rows: tableRows
+		}) }}
+	</div>
+</li>
 
 {# CONDENSED VERSION #}
 
@@ -94,6 +99,7 @@
     {% if params.ral %}<div class="detail-item"><span>RAL:</span> {{params.ral}}</div>{% endif %}
   </div>
 </div> #}
+ </ul>
 
 {# CSS: 
 .color-details {
