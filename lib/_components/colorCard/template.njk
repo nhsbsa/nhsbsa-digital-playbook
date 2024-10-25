@@ -116,19 +116,21 @@
 {# control width? #}
 {# <div class="nhsuk-grid-row"> #}
 {# <div class="nhsuk-grid-column-one-half"> #}
-<div class="card">
-	{% if params.heading %}
-		<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
-	{% endif %}
+<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+	<div class="card">
+		{% if params.heading %}
+			<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
+		{% endif %}
 
-	{{ colorBlock(params) }}
+		{{ colorBlock(params) }}
 
-	{{ table({
-		panel: false,
-		firstCellIsHeader: true,
-		rows: tableRows
-	}) }}
-</div>
+		{{ table({
+			panel: false,
+			firstCellIsHeader: true,
+			rows: tableRows
+		}) }}
+	</div>
+</li>
 
 {# CONDENSED VERSION #}
 
