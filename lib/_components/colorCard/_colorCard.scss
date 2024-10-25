@@ -1,4 +1,9 @@
-.colorCard > dl,dt,dd {
+.colorCard > dl,
+.colorCard > dl > dd {
     padding: 0;
     margin: 0;
+}
+.colorCard > dl > dt {
+    padding: 0;
+    margin: 0 10px 0 0;
 }
