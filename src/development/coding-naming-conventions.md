@@ -7,9 +7,6 @@ order: 3
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
-related:
-  title: Related articles
-  tag: branching
 ---
 It is important to adopt a naming convention:
 
@@ -102,15 +99,6 @@ Terms used in the naming conventions are:
       <ul>
         <li><code>hotfix</code></li>
         <li><code>develop</code></li>
-        <li><code>build</code></li>
-        <li><code>ci</code></li>
-        <li><code>docs</code></li>
-        <li><code>feature</code></li>
-        <li><code>fix</code></li>
-        <li><code>perf</code></li>
-        <li><code>refactor</code></li>
-        <li><code>style</code></li>
-        <li><code>test</code></li>
       </ul>
     </td>
   </tr>
