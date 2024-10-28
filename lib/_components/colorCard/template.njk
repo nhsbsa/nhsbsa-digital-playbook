@@ -72,55 +72,6 @@
 		{% if params.heading %}
 			<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
 		{% endif %}
-		{% if params.ral %}
-		<dt>RAL</dt>
-		<dd>{{params.ral}}</dd>
-		{% endif %}
-	</dl>
-	</div>
-</li>
-
-{% from 'tables/macro.njk' import table %}
-
-{% set headingLevel = params.headingLevel | default('h2') %}
-
-{% set tableRows = [
-	[
-		{ text: "Hex" },
-		{ text: params.color }
-	],
-	[
-		{ text: "RGB" },
-		{ text: params.color | convertColor('RGB') }
-	],
-	[
-		{ text: "CMYK" },
-		{ text: params.color | convertColor('CMYK') }
-	]
-] %}
-
-{% if params.pantone %}
-	{% set tableRows = (tableRows.push([
-		{ text: "Pantone" },
-		{ text: params.pantone }
-	]), tableRows) %}
-{% endif %}
-
-{% if params.ral %}
-	{% set tableRows = (tableRows.push([
-		{ text: "RAL" },
-		{ text: params.ral }
-	]), tableRows) %}
-{% endif %}
-
-{# control width? #}
-{# <div class="nhsuk-grid-row"> #}
-{# <div class="nhsuk-grid-column-one-half"> #}
-<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-	<div class="card">
-		{% if params.heading %}
-			<{{headingLevel}} class="nhsuk-heading-m">{{ params.heading }}</{{headingLevel}}>
-		{% endif %}
 
 		{{ colorBlock(params) }}
 
