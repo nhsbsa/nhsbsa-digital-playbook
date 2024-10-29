@@ -11,83 +11,86 @@ order: 1
 There are aspects we can implement to help enable users to read a table effectively.  
   
 **1. Avoid unnecessary ink to page ratio.**
+  
+Make sure to: 
 
-- Avoid gridlines
-- The less space colours fill in, the brighter and more different they should be to be distinguishable; this is in order to give adequate contrast  
+- avoid gridlines
+- remember that the less space colours fill in, the brighter and more different they should be to be distinguishable; this gives an adequate contrast  
 
 **2. Align the content appropriately.**
+  
+When creating a table, make sure:
 
-- A table should always contain headers. The background of these headers should be distinguishable from the main body of table: a NHS Blue (#005EB8) background with white titles should be used
-- Numbers should be aligned to the right
-- Text should be aligned to the left
-- Times series should read left to right
-- Categorical values should be displayed in columns to the left of quantitative values
-- Calculated values should be placed to the right of the values from which they are derived
-- Values to be compared should be placed next to each other
-- It is possible to embed linked footnotes into a table. However, jumping from one section of text to another can be disruptive. It is better to put the information at the point of need whenever possible. It is best practice to place footnotes in the table title, column headings or row labels. Avoid placing them in cells with data as it affects the alignment of the figures [Source - Examples of tables and charts][table 1]
+- it contains headers. The background of these headers should be distinguishable from the main body of table. A NHS Blue (#005EB8) background with white titles should be used.
+- numbers are aligned to the right.
+- text is aligned to the left.
+- time series are read left to right.
+- categorical values are displayed in columns to the left of quantitative values.
+- calculated values are placed to the right of the values from which they are derived.
+- values to be compared are placed next to each other.
+- to put information at the point of need whenever possible. It is possible to embed linked footnotes into a table. However, jumping from one section of text to another can be disruptive. It is best practice to place footnotes in the table title, column headings or row labels. Avoid placing them in cells with data as it affects the alignment of the figures. [Source - Examples of tables and charts][table 1]
 
 **3. Consider condensing the information included.**
+  
+Make sure you:
 
-- Use icons and abbreviations
-- Bring repeating words in the column header
-- Use a shorter number format or rounded numbers (like 1.3m instead of 1.300.000 and 0.1 instead of 0.1129302) – this is dependent on the customer’s need for accuracy  
+- use icons and abbreviations
+- bring repeating words in the column header
+- use a shorter number format or rounded numbers. For example, 1.3m instead of 1,300,000 and 0.1 instead of 0.1129302. This depends on the customer's need for accuracy.  
 
 **4. Consider narrowing (down) your columns.**
 
-- Consider what information is essential
-- You should use more rows than columns. The fewer columns your table has, the more readable it becomes (especially on mobile phones). 3 columns will comfortably fit on mobile- more will not  
+Make sure you:
+
+- consider what information is essential.
+- use more rows than columns. The fewer columns your table has, the more readable it becomes (especially on mobile phones). Three columns will comfortably fit on mobile but more will not.  
 
 **5. Prioritise rows over columns.**
 
-- Consider restructuring your data
-- Humans find it easier skimming through information that’s vertically aligned, not horizontally  
+When creating your table consider:
+
+- restructuring your data
+- aligning your information vertically, not horizontally, as humans find it easier skimming through information that’s vertically aligned.
 
 **6. Consider highlighting tables with many rows.**
 
-- If you can’t avoid many columns, stripe every second row with a light grey, such as NHS Grey 5 (#F0F4F5). This helps aide the user’s gaze
-- Consider the ink to page ratio. Do not use this unnecessarily  
+If you can't avoid many columns:
 
-#F0F4F5 is the hex code for NHS Grey 5 (lightgrayish cyan):  
-
-![Block of colour #F0F4F5](../hex-f0f4f5.png)  
+- stripe every second row with a light grey, such as NHS Grey 5 (#F0F4F5) as this helps aide the user’s gaze.
+- consider the ink to page ratio and do not use this unnecessarily.  
 
 **7. Limit your use of pagination.**
 
-- Only use pagination if necessary
-- Pagination is not as easily accessible for a screen reader
-- It also runs the risk of all content not being seen to users, meaning users may miss out on key details, or they may have assumed there is no remaining data left to see  
+Only use pagination if necessary as:
+
+- pagination is not as easily accessible for a screen reader.
+- it runs the risk of all content not being shown to users, meaning users may miss out on key details, or they may have assumed there is no remaining data left to see.  
 
 **8. [Focus attention where necessary](../../decluttering/).**
 
-- Separate (using a bold line) or highlight columns or rows that readers shouldn’t miss, such as an overall total
-- Group summaries should be visually distinct
-- Use bold, italics or colour only to group or highlight data
-- [Colour](../../colour/) can be used to focus attention, and to help the user navigate the table
-- Consider using different colours for different categories to help navigation
-- Consider colouring or using symbols for values, such as the highest and lowest values in a column
-- When colouring text use bright colours such as NHS blue (#005EB8)
-- When colouring whole cells, rows or columns, choose a pastel background such as a 20% tint of the NHS blue (#B8DCFF)  
+Make sure you:
 
-#B8DCFF is the hex code for NHS Blue 20% tint (pale blue):  
-
-![Block of colour #B8DCFF](../hex-20-nhs-blue.png)  
+- separate (using a bold line) or highlight columns or rows that readers shouldn’t miss, such as an overall total.
+- make group summaries visually distinctive.
+- use bold, italics or colour only to group or highlight data.
+- use [colour](../../colour/) to focus attention and help the user navigate the table.
+- consider using different colours for different categories to help navigation.
+- consider colouring or using symbols for values, such as the highest and lowest values in a column.
+- use bright colours when colouring text, such as NHS blue (#005EB8)
+- choose a pastel background such as a 20% tint of the NHS blue (#B8DCFF) when colouring whole cells, rows or columns    
 
 **9. [Use filters and sorts to help the user](../../filters/).**
 
-- Consider making your table filterable, searchable and sortable
-- This should be easily accessible to the user, positioned in the top right above the table
-- Consider how your table will be sorted  
+Make sure you:
+
+- consider making your table filterable, searchable and sortable
+- position this in the top right above the table, it should be easily accessible to the user
+- consider how your table will be sorted  
 
 **10. [Add suitable visualisations where appropriate](../../charts/chart-types/).**
 
-- Bar charts, heatmaps and sparklines pull focus
-- To show comparison and general trends
-  
-::: details Source - things to consider
+Make sure you use:
 
-[What to consider when creating tables][table 2]
-
-:::
+- bar charts, heatmaps and sparklines to pull focus and show comparison and general trends
 
 [table 1]: https://www.gov.uk/government/publications/examples-of-visual-content-to-use-on-govuk/examples-of-visual-content-to-use-on-govuk#tables
-[table 2]: https://blog.datawrapper.de/guide-what-to-consider-when-creating-tables/
