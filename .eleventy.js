@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
     name: 'external-links',
-    regex: /^((http[s]?:)|(\/\/))/i, // Regex that test if href is external
+    regex: /^((https?:)|(\/\/))/i, // Regex that test if href is external
     target: '_blank',
     rel: 'noopener',
     extensions: ['.html'],
@@ -38,7 +38,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
 
   // filters
-  eleventyConfig.addFilter('convertColor', require('./lib/_filters/convertColor'));
+  eleventyConfig.addFilter(
+    'convertColor',
+    require('./lib/_filters/convertColor'),
+  );
   eleventyConfig.addFilter('date', require('./lib/_filters/date'));
   eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
   eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));

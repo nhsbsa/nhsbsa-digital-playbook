@@ -2,18 +2,26 @@
     padding: 0;
     margin: 0;
 }
-.colorCard > dl > dt {
-    padding: 0;
-    margin: 0 10px 0 0;
-    width: 100px;
-}
 .colorCard > dl > dd {
     padding: 0;
     margin-left: 100px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .colorCard > dl > dd {
         padding: 0;
         margin: 0;
+    }
+}
+@media (min-width: 641px) {
+    .colorCard > dl > dt {
+        padding: 0;
+        margin: 0 10px 0 0;
+        width: 100px;
+    }
+}
+@media (max-width: 640px) {
+    .colorCard > dl > dt {
+        padding: 0;
+        margin: 0 10px 0 0;
     }
 }
