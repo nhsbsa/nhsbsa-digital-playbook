@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "Pie and donut charts"
-description: "Guidance for using pie and donut charts at the NHSBSA"
+title: "Pie and doughnut charts"
+description: "Guidance for using pie and doughnut charts at the NHSBSA"
 status: REVIEW
 tags: data-viz-home
 order: 90
@@ -22,24 +22,24 @@ A pie chart may have 3 slices of different sizes. Each slice is a different colo
 
 :::  
   
-## Donut charts  
+## Doughnut charts  
   
-A donut chart is essentially a pie chart but with the area of the centre cut out.  
-Donut charts are used to show the proportions of categorical data, with the size of each piece representing the proportion of each category.  
+A doughnut chart is essentially a pie chart but with the area of the centre cut out.  
+Doughnut charts are used to show the proportions of categorical data, with the size of each piece representing the proportion of each category.  
   
-A donut chart de-emphasises the use of area, to make the viewer focus more on the changes in overall values.  
+A doughnut chart de-emphasises the use of area, to make the viewer focus more on the changes in overall values.  
   
 You are focused on reading the length of the arcs, rather than comparing the proportions between slices.  
   
-Also, donut charts are more space-efficient than pie charts because the blank space inside a donut chart can be used to display information inside it.  
+Also, doughnut charts are more space-efficient than pie charts because the blank space inside a doughnut chart can be used to display information inside it.  
 
-A donut chart may have 3 sections of different sizes. Each section is a different colour, with the largest section #005EB8. The actual value and % value should be labelled directly on/beside the appropriate sections.  
+A doughnut chart may have 3 sections of different sizes. Each section is a different colour, with the largest section #005EB8. The actual value and % value should be labelled directly on/beside the appropriate sections.  
 
-![example donut chart](../donut_1.png)  
+![example doughnut chart](../doughnut_1.png)  
   
-::: details Source - donut charts
+::: details Source - doughnut charts
 
-[Donut charts][pie 2]
+[Doughnut charts][pie 2]
 
 :::  
 

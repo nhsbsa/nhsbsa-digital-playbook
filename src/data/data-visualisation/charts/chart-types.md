@@ -129,7 +129,7 @@ If you’re using a pie chart:
 - pie charts should be used to show part-to-whole comparisons
 - ensure the [NHS Colour guidance][chart 8] is used to ensure that the order of colours used are distinct
 - segments should be directly labelled
-- refer to the [Pie and donut charts guidance](../../pie-and-donut-charts/pie-and-donut/) for further details  
+- refer to the [Pie and doughnut charts guidance](../../pie-and-doughnut-charts/pie-and-doughnut/) for further details  
   
 ::: details Source - chart accessibility
 
@@ -243,8 +243,8 @@ Further examples of charts available:
 - icon array
 - waffle chart
 - pie chart
-- donut chart
-- semi-circle donut chart
+- doughnut chart
+- semi-circle doughnut chart
 - marimekko chart
 - treemap
 - circular treemap

@@ -76,21 +76,21 @@ Make sure you:
 - use [colour](../../colour/) to focus attention and help the user navigate the table.
 - consider using different colours for different categories to help navigation.
 - consider colouring or using symbols for values, such as the highest and lowest values in a column.
-- use bright colours when colouring text, such as NHS blue (#005EB8)
-- choose a pastel background such as a 20% tint of the NHS blue (#B8DCFF) when colouring whole cells, rows or columns    
+- use bright colours when colouring text, such as NHS blue (#005EB8).
+- choose a pastel background such as a 20% tint of the NHS blue (#B8DCFF) when colouring whole cells, rows or columns.    
 
 **9. [Use filters and sorts to help the user](../../filters/).**
 
 Make sure you:
 
-- consider making your table filterable, searchable and sortable
-- position this in the top right above the table, it should be easily accessible to the user
-- consider how your table will be sorted  
+- consider making your table filterable, searchable and sortable.
+- position this in the top right above the table, it should be easily accessible to the user.
+- consider how your table will be sorted.
 
 **10. [Add suitable visualisations where appropriate](../../charts/chart-types/).**
 
 Make sure you use:
 
-- bar charts, heatmaps and sparklines to pull focus and show comparison and general trends
+- bar charts, heatmaps and sparklines to pull focus and show comparison and general trends.
 
 [table 1]: https://www.gov.uk/government/publications/examples-of-visual-content-to-use-on-govuk/examples-of-visual-content-to-use-on-govuk#tables
