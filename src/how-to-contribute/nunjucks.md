@@ -93,4 +93,13 @@ renders as:
     "blockSize": "l"})
 }}
 
+<ul class="nhsuk-grid-row nhsuk-card-group">
+	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+	</li>
+	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+	</li>
+ </ul>
+
+
+
 [nunjucks]: <https://mozilla.github.io/nunjucks/>
