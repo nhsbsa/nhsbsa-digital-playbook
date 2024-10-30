@@ -8,23 +8,19 @@ order: 90
 ---
 ## Pie charts  
   
-Pie charts are used to show part-to-whole relationships. Typically, bar charts and pie charts are used for this.  
+Pie charts are used to show part-to-whole relationships. Bar charts are typically used for this too.  
   
-Pie charts are sometimes criticised for focusing on the relative sizes of the pieces to one another, but not clearly highlighting changes as a whole when compared to other pie charts.  
+Pie charts are sometimes criticised for focusing on the relative sizes of the pieces to one another, but not clearly highlighting changes, as a whole, when compared to other pie charts.  
   
-A pie chart may have 3 slices of different sizes. Each slice is a different colour, with the largest slice #005EB8. The actual value and % value should be labelled directly on/beside the appropriate slices.  
+A pie chart may have 3 slices of different sizes. Each slice is a different colour, with the largest slice using NHS Blue (#005EB8). The actual value and percentage value should be labelled directly on or beside the appropriate slices.  
 
 ![example pie chart](../pie_1.png)
   
-::: details Source - pie charts
-
-[The humble pie chart (blog)][pie 1]
-
-:::  
+For further information, you can [read a blog about pie charts on the Office for National Statistics (ONS) Digital website.][pie 1]
   
 ## Doughnut charts  
   
-A doughnut chart is essentially a pie chart but with the area of the centre cut out.  
+A doughnut chart is a pie chart but with the area of the centre cut out.  
 Doughnut charts are used to show the proportions of categorical data, with the size of each piece representing the proportion of each category.  
   
 A doughnut chart de-emphasises the use of area, to make the viewer focus more on the changes in overall values.  
@@ -33,42 +29,37 @@ You are focused on reading the length of the arcs, rather than comparing the pro
   
 Also, doughnut charts are more space-efficient than pie charts because the blank space inside a doughnut chart can be used to display information inside it.  
 
-A doughnut chart may have 3 sections of different sizes. Each section is a different colour, with the largest section #005EB8. The actual value and % value should be labelled directly on/beside the appropriate sections.  
+A doughnut chart may have 3 sections of different sizes. Each section is a different colour, with the largest section using NHS Blue (#005EB8). The actual value and percentage value should be labelled directly on or beside the appropriate sections.  
 
 ![example doughnut chart](../doughnut_1.png)  
   
-::: details Source - doughnut charts
+For further information, you can [read a blog about doughnut charts on the Data Visualisation Catalogue website.][pie 2]
 
-[Doughnut charts][pie 2]
+## Best practice for pie and doughnut charts  
 
-:::  
+If using pie or doughnut charts, make sure you:
 
-## Best Practice  
+- **only use them when the categories form part of a whole**, if the categories do not add up to a distinct ‘whole’, use a different chart
+- **do not use them when two or more categories are a similar size**- in this situation, it's better to use a bar chart
+- **do not use pie or doughnut charts with more than 5 categories**- if your chart has more than 5 categories, consider combining some of the categories or using a different type of chart
+- **rank categories by size with the first at the 12 o’clock position**- ranking the categories in this way makes the chart easier to interpret, making it easier to identify the dominant categories
+- **label the categories categories directly**- legends and keys rely on users matching labels to categories using colour alone, which fails [WCAG accessibility success criterion 1.4.1 Use of Colour][pie 4].  
   
-ONS have some best practice guidance on pie charts, and [a check list to follow](https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist).  
+Pie and doughnut charts need to be used appropriately. To do this, make sure they:
+
+- **are well-formatted**- no 3D, exploding slices, leader lines, or legends
+- **display nominal variables**- ordinal variables do not belong in a pie chart
+- **contain positive numbers**- a mix of positive and negative numbers inside the same pie or doughnut chart does not make any sense
+- **display a single point in time**- patterns over time belong in a time series graph, such as a slope chart, line chart, or dot plot
+- **are displayed individually** and only show one pie or doughnut chart at a time- no small multiples pies or doughnuts, as comparisons across these are time-consuming
+- **are the most appropriate data visualisation**- there are a number of alternatives, such as bar or stacked bar and line charts
+
+You can [read a checklist for creating accessible charts on the Government Analysis Function website.][pie 5]  
   
-- **Only use pie charts when the categories form part of a whole.** If the categories do not add up to a distinct ‘whole’, use a different chart
-- **Do not use pie charts when two or more categories are a similar size.** In this situation it is better to use a bar chart
-- **Do not use pie charts with more than 5 categories.** If your chart has more than 5 categories, consider combining some of the categories or using a different type of chart
-- **Rank categories by size with the first at the 12 o’clock position.** Ranking the categories in this way makes the chart easier to interpret. It also makes it easier to identify the dominant categories
-- **Label pie chart categories directly.** Legends and keys rely on users matching labels to categories using colour alone. This fails [WCAG accessibility success criterion 1.4.1 Use of Colour][pie 4].  
-  
-Pie charts need to be used appropriately. To do this, ensure they:
-
-- **are well-formatted.** No 3D, exploding slices, leader lines, or legends
-- **display nominal variables.** Ordinal variables don’t belong in a pie chart
-- **contain positive numbers.** A mix of positive and negative numbers inside the same pie chart, doesn’t make any sense
-- **display a single point in time.** Patterns over time belong in a time series graph, like a slope chart, line chart, or dot plot
-- **are displayed individually.** Only show one pie chart at a time. No small multiples pies. Comparisons across multiple pies are time-consuming
-- **ensure a pie chart is the most appropriate data visualisation.** There are a number of alternatives, such as bar/stacked bar and line charts
-
-::: details Source - using pie charts
-
-[When pie charts are okay][pie 3]
-
-:::
+For further information, you can [read a blog about pie chart and doughnut chart guidance on the Depict Data Studio website.][pie 3]
 
 [pie 1]: https://digitalblog.ons.gov.uk/2017/02/28/the-humble-pie-chart-part2/
 [pie 2]: https://datavizcatalogue.com/methods/donut_chart.html
 [pie 3]: https://depictdatastudio.com/when-pie-charts-are-okay-seriously-guidelines-for-using-pie-and-donut-charts/
 [pie 4]: https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html
+[Pie 5]: https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist
