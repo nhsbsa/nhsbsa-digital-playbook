@@ -85,8 +85,16 @@ Renders a 'card' showing a colorBlock and colour information.
 
 renders as:
 
-
 <ul class="nhsuk-grid-row nhsuk-card-group">
+	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        {{ colorCard({
+        "heading": "NHS Blue",
+        "color": "#005EB8",
+        "pantone": "300",
+        "ral": "5017",
+        "blockSize": "l"})
+        }}
+    </li>
 	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
         {{ colorCard({
         "heading": "NHS Blue",
