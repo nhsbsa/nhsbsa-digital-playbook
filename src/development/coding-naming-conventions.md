@@ -7,9 +7,6 @@ order: 3
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
-related:
-  title: Related articles
-  tag: branching
 ---
 It is important to adopt a naming convention:
 
@@ -102,15 +99,6 @@ Terms used in the naming conventions are:
       <ul>
         <li><code>hotfix</code></li>
         <li><code>develop</code></li>
-        <li><code>build</code></li>
-        <li><code>ci</code></li>
-        <li><code>docs</code></li>
-        <li><code>feature</code></li>
-        <li><code>fix</code></li>
-        <li><code>perf</code></li>
-        <li><code>refactor</code></li>
-        <li><code>style</code></li>
-        <li><code>test</code></li>
       </ul>
     </td>
   </tr>
@@ -163,11 +151,20 @@ Gitlab and Github hosted repository names should use unabbreviated `natural` cas
 
 ### Git branches
 
-The mainline branch should be named `main`. All branches should be `kebab-case` with this convention:
+All branches should be `kebab-case`, although change ID should be uppercase
 
-> `{type}/{change ID}-{brief description}`
+* The mainline branch should be named `main`.
+* release candidate branches should follow the convention:
 
-A single branch should be used per change/ticket.
+  > `develop-{version}`
+  > or
+  > `hotfix-{version}`
+
+* change candidate branches should follow the convention:
+
+  > `{change ID}-{brief description}`
+
+  Descriptions should be kept brief, not exceeding 50 characters. 
 
 See [Git branching guidance](../dev-git-branching-strategy/) for a more detailed explanation of Git branch naming
 
