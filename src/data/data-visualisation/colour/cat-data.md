@@ -99,19 +99,19 @@ To find out more, visit the [Visualising Data page on 5 ways to design for red-g
   
 The following colours have been tested for accessibility and should be used with the other encoding methods. This is to make sure users with accessibility needs have an alternative option:  
 
-- Leaf green: #0F8243 (CSS variable: --ons-color-leaf-green)
+- Leaf green: #0F8243
 ![ONS colour Leaf green](../images/ons-green.png)
 
-- Neon yellow: #F0F762 (CSS variable: --ons-color-neon-yellow)  
+- Neon yellow: #F0F762  
 ![ONS colour Neon yellow](../images/ons-neon-yell.png)
 
-- Sun yellow: #FBC900 (CSS variable: --ons-color-sun-yellow)  
+- Sun yellow: #FBC900  
 ![ONS colour Sun yellow](../images/ons-sun-yell.png)  
 
-- Jaffa orange: #FA6401 (CSS variable: --ons-color-jaffa-orange)  
+- Jaffa orange: #FA6401  
 ![ONS colour Jaffa orange](../images/ons-orange.png)  
 
-- Red: #D0021B (CSS variable: --ons-color-ruby-red)  
+- Red: #D0021B  
 ![ONS colour Ruby red](../images/ons-red.png)
 
 For more information visit the [ONS service manual colour page][cat 9].
