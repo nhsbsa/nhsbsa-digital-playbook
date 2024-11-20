@@ -88,21 +88,23 @@ If you’re using a bar chart, you need to:
   
 If you’re using a **clustered** bar chart, you need to:
 
-- make sure the order and orientation of bar chart legends match how categories are presented, and state this above the chart, or label the bars in the first cluster directly.
-- leave small gaps between the bars within clusters.
-- give all bars an NHS Blue (#005EB8) outline  .
+- make sure the order and orientation of the bar chart legends match how the categories are presented and state this before the chart or label the bars in the first cluster directly
+- leave small gaps between the bars in the clusters 
+- give all bars an NHS Blue (#005EB8) outline
   
-If you're using a **stacked** bar chart:  
+If you're using a **stacked** bar chart, you need to:  
 
-- make sure the order and orientation of bar chart legends match how categories are presented, and state this above the chart.
+- make sure the order and orientation of bar chart legends match how categories are presented
+- state the bar legend before the chart
 
-### Composition visualisations  
+## Composition visualisations  
   
-Composition visualisations are used for part-to-whole comparisons. For example, percentage figures out of 100%. These charts can be changing over time, or static in which case the timeframe the data relates to is necessary to mention.  
+Use composition visualisations to compare parts to a whole. For example, percentage figures out of 100%.  
+These charts can be changing over time or static. If they are static, you need to mention the timeframe that the data relates to.    
 
-#### Examples of composition visualisations (and when they are appropriate)
+### Composition visualisation examples and when they are appropriate 
 
-Changing over time:
+For charts that are changing over time, use a:
 
 - stacked 100% bar chart (few periods, only relative difference matters)
 - stacked bar chart (few periods, relative and absolute differences matter)
