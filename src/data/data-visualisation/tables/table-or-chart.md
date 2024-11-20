@@ -8,7 +8,7 @@ order: 2
 ---
 ## Choosing between a table or a chart  
   
-Both tables and charts can be an effective way to present your data.  
+Both tables and charts can be an appropriate way to present your data.  
 Charts are often used to visualise patterns, trends, and relationships. Tables are often used to present precise data. 
   
 A table may be best if:
