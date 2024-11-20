@@ -33,7 +33,7 @@ For categorical data, you can use the following colours taken from the [NHS iden
 After using the first 6 colours on a chart, you can use these again with a 50% tint. These should have enough contrast against the background. 
 Remember that some colours have specific meanings, like blue for links. It’s important to choose the right colour.  
   
-You can find out more on the [NHS Identity Guidelines page on using tints.][https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/#heading7]
+You can find out more on the [NHS Identity Guidelines page on using tints.][cat 3]
 
 We recommend using our suggested colour palette in the given order to make sure adjacent colours have enough contrast. It'll also make the colours suitable for users with a range of colour vision deficiencies (colour blindness).
 
@@ -118,6 +118,7 @@ For more information visit the [ONS service manual colour page][cat 9].
 
 [cat 1]: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/#section-5
 [cat 2]: https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/#:~:text=use%20of%20highlights.-,Using%20tints,-Tints%20are%20percentage
+[cat 3]: https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/#heading7
 [cat 6]: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/
 [cat 7]: https://www.colourblindawareness.org/colour-blindness/
 [cat 8]: https://visualisingdata.com/2019/08/five-ways-to-design-for-red-green-colour-blindness/
