@@ -8,18 +8,23 @@ order: 10
 ---
 ## Choosing an appropriate chart type  
   
-Choosing an appropriate chart type is key in ensuring the end user is able to understand the data shown quickly, and as efficiently as possible. The choice of chart type is often dependant on the purpose of what you need the chart to show.  
+Choosing the right chart type is important to make sure the user can understand the data quickly and efficiently. What chart type you choose often depends on what you need the chart to show.  
   
-Please refer to the [tables guidance](../../tables/table-or-chart/) on choosing between a table or a chart, table alternatives and best practice.  
+Check our [tables guidance](../../tables/table-or-chart/) for advice about choosing between a table or a chart, table alternatives and best practice.  
 
-This section will cover [four categories of chart types][chart 1]: comparison, composition, relationship and distribution charts.  
+This guidance will cover [4 chart type categories][chart 1]:
+
+- comparison charts
+- composition charts
+- relationship charts
+- distribution charts  
   
-The [four main questions][chart 2] to help you decide which chart type to use are:
+Answer [these 4 questions][chart 2] to help you decide which type of chart to use:
 
-- do you want to **compare** values or show differences over time?
-- do you want to display **composition** of something?
-- do you want to better understand the **relationship** between two or more variables?
-- do you want to show the **distribution** of your data?  
+1. Do you want to **compare** values or show differences over time?
+2. Do you want to display **composition** of something?
+3. Do you want to better understand the **relationship** between 2 or more variables?
+4. Do you want to show the **distribution** of your data?  
   
 ::: details Source - choosing the right chart
 
@@ -27,27 +32,30 @@ The [four main questions][chart 2] to help you decide which chart type to use ar
 
 :::  
 
-### Comparison visualisations  
+## Comparison visualisations  
   
-Comparison visualisations are used to compare two or more variables, or values over a period of time.  
+Use comparison visualisations to compare 2 or more variables or values over a period of time.  
 
-#### Examples of comparison visualisations (and when they are appropriate)
+### Comparison visualisation examples and when they are appropriate
 
-Among items:
+For comparison visualisations among items, use a:
 
-- variable width chart (2 variables per item)
-- table or tables with embedded charts (one variable per item, many categories)
-- bar chart horizontal (one variable per item, few categories)
-- bar chart vertical (one variable per item, few categories)
+- variable width chart for 2 variables per item
+- table or tables with embedded charts for one variable per item with many categories
+- horizontal bar chart for one variable per item with few categories
+- vertical bar chart for one variable per item with few categories
 
-Over time:
+For comparison visualisations over time, use a: 
 
-- circular area chart (many periods, cyclical data)
-- line chart (many periods, non-cyclical data)
-- bar chart vertical (few periods, single or few categories)
-- line chart (few periods, many categories)  
+- circular area chart for many periods and cyclical data 
+- line chart for many periods and non-cyclical data 
+- vertical bar chart for few periods and single or few categories 
+- line chart for few periods and many categories   
   
-Stay away from attempting to compare more than four categories. Using four categories is best practice for data visualisation. More than four categories can make a chart too cluttered. Consider merging multiple categories or focussing the chart on a single entity if suitable.
+### How many categories to compare  
+  
+Do not try to compare more than 4 categories. Using 4 categories is best practice for data visualisation and more than 4 categories can make a chart too cluttered. 
+Think about combining multiple categories or focusing your chart on a single entity if you can. 
 
 ::: details Source - chart colours
 
@@ -57,26 +65,28 @@ Stay away from attempting to compare more than four categories. Using four categ
   
 ![Examples of comparison visualisations](../images/comparison.png)  
 
-##### Line charts
+### Chart types for comparison visualisation  
   
-If you’re using a line chart:
+#### Line charts
+  
+If you’re using a line chart, you need to:
 
 - label the lines instead of using a legend
-- for a singular line (including sparklines), use an NHS Blue (#005EB8) colour
-- for more than one variable, use the [colour guidance](../../colour/index)
-- for multiple lines, where you need to pull focus onto one of the lines, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
+- use an NHS Blue (#005EB8) colour for a single line including sparklines
+- use our [colour guidance](../../colour/index) for more than one variable
+- use NHS Blue (#005EB8) against NHS Grey 3 (#AEB7BD) for multiple lines when you need to pull focus onto one of the lines
   
-##### Bar charts
+#### Bar charts
   
-If you’re using a bar chart:
+If you’re using a bar chart, you need to:
 
-- make sure the data is sorted or ordered appropriately, for example, from A to Z, high to low etc
+- make  sure your data is ordered appropriately, for example, from A to Z or high to low
 - leave small gaps between the bars
-- try to use NHS Blue (#005EB8) for bars which do not need groupings, otherwise use the Colour guidance for multiple groupings across bars
-- use the [NHS Colour guidance][chart 8] to ensure that the order of colours used are distinct
-- for multiple bars, where you need to pull focus onto one of the bars, use NHS Blue (#005EB8) against a light grey NHS Grey 3 (#AEB7BD)  
+- use NHS Blue (#005EB8) for bars that do not need groupings – otherwise use the colour guidance for multiple groupings across bars
+- follow the [NHS Colour guidance][chart 8] to make sure the order of colours you use is distinct
+- use NHS Blue (#005EB8) against NHS Grey 3 (#AEB7BD) for multiple bars when you need to pull focus onto one of the bars 
   
-If you’re using a **clustered** bar chart:
+If you’re using a **clustered** bar chart, you need to:
 
 - make sure the order and orientation of bar chart legends match how categories are presented, and state this above the chart, or label the bars in the first cluster directly.
 - leave small gaps between the bars within clusters.
@@ -300,7 +310,7 @@ Further examples of charts available:
 
 [chart 1]: https://data-flair.training/blogs/qlikview-visualization/
 [chart 2]: https://uxplanet.org/data-heavy-applications-how-to-design-perfect-charts-c0c893fef6de
-[chart 3]: https://community.qlik.com/t5/Official-Support-Articles/How-to-Choose-the-Right-Chart/ta-p/1717241
+[chart 3]: https://www.qlik.com/us/data-visualization
 [chart 4]: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/#section-5
 [chart 5]: https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/
 [chart 7]: https://bootcamp.uxdesign.cc/best-practices-for-designing-infographics-16d622ca8e54
