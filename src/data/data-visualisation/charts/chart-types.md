@@ -106,27 +106,30 @@ These charts can be changing over time or static. If they are static, you need t
 
 For charts that are changing over time, use a:
 
-- stacked 100% bar chart (few periods, only relative difference matters)
-- stacked bar chart (few periods, relative and absolute differences matter)
-- stacked 100% area chart (many periods, only relative differences matter)
-- stacked area chart (many periods, relative and absolute differences matter)
+- stacked 100% bar chart for few periods when only relative differences matter
+- stacked bar chart for few periods when relative and absolute differences matter 
+- stacked 100% area chart for many periods when only relative differences matter  
+- stacked area chart for many periods when relative and absolute differences matter
 
-Static:
+For charts that are static, use a: 
 
-- pie chart (simple share of total)
-- waterfall chart (accumulation or subtraction to total)
-- stacked 100% bar chart with subcomponents (components of components)
-- tree map (accumulation to total and absolute difference matters)
+- pie chart for a simple share of a total 
+- waterfall chart for an accumulation or subtraction to a total 
+- stacked 100% bar chart with sub-components for components of components 
+- tree map for an accumulation to total when absolute difference matters 
 
 ![Examples of composition visualisations](../images/composition.png)
 
-##### Stacked bar charts
+### Chart types for composition visualisations  
+  
+#### Stacked bar charts
 
-If you’re using a stacked bar chart:
+If you’re using a stacked bar chart, you need to:
 
-- make sure the order and orientation of bar chart legends match how categories are presented and state this above the chart
-- ensure the [NHS Colour guidance][chart 8] is used to ensure that the order of colours used are distinct
-- avoid stacked bar charts when categories have negative values. When negative values are used in stacked bar charts they can be difficult to understand  
+- make sure the order and orientation of bar chart legends match how categories are presented and state this before the chart 
+- follow the [NHS Colour guidance][chart 8] to make sure the order of colours you use is distinct  
+  
+You should avoid stacked bar charts when categories have negative values. Negative values can be hard to understand in stacked bar charts.  
   
 ::: details Source - chart accessibility
 
@@ -134,14 +137,15 @@ If you’re using a stacked bar chart:
 
 :::  
   
-##### Pie charts
+#### Pie charts
   
-If you’re using a pie chart:
+Use piue charts to show part to whole comparisons.  
+  
+If you’re using a pie chart, you need to:
 
-- pie charts should be used to show part-to-whole comparisons
-- ensure the [NHS Colour guidance][chart 8] is used to ensure that the order of colours used are distinct
-- segments should be directly labelled
-- refer to the [Pie and doughnut charts guidance](../../pie-and-doughnut-charts/pie-and-doughnut/) for further details  
+- follow the [NHS Colour guidance][chart 8] to make sure the order of colours you use is distinct 
+- label the segments directly 
+- follow our [pie and doughnut charts guidance](../../pie-and-doughnut-charts/pie-and-doughnut/)  
   
 ::: details Source - chart accessibility
 
@@ -149,59 +153,66 @@ If you’re using a pie chart:
 
 :::  
 
-### Distribution visualisations  
+## Distribution visualisations  
   
-Distribution visualisations are used to visualise the distribution of data, useful especially for ordered data ranging from lowest to highest. The distribution is analysed and used for trend analysis to gain meaningful insights.  
+Distribution visualisations are useful for ordering data from lowest to highest. You can analyse the distribution and use it for trend analysis to gain meaningful insights.  
+
+### Distribution visualisation examples and when they are appropriate  
   
-#### Examples of distribution visualisations (and when they are appropriate)  
-  
-- bar histogram (single variable, few data points)
-- line histogram (single variable, many data points)
-- scatter plot (2 variables)
+Use a: 
+
+- bar histogram for single variables and few data points 
+- line histogram for single variables and many data points 
+- scatter plot for 2 variables 
 
 ![Examples of the distribution visualisations](../images/distribution.png)  
 
-##### Scatter charts
+#### Scatter charts
   
-If you’re using a scatter chart:
+If you’re using a scatter chart, you need to: 
 
-- use four or less categories for comparison
-- use [visual encoding](../../encoding/viz-encoding/), such as symbols or size where necessary, and clearly spell out what has been used to the user
-- ensure a legend is available  
+- use 4 or fewer categories for comparison 
+- use visual encoding like symbols or size where necessary and make what you have used clear to the user – check our [guidance on visual encoding](../../encoding/viz-encoding/) for more detail 
+- make sure a legend is available   
   
-### Relationship visualisations  
+## Relationship visualisations  
   
-Relationship visualisations are used to highlight a relationship or correlation between variables. Multiple variables and [visual encoding](../../encoding/viz-encoding/) practices can be used to add additional details, such as symbols on a scatter chart to demonstrate multiple groupings.  
+Use relationship visualisations to highlight a relationship or correlation between variables. You can use multiple variables and visual encoding practices to add more details, for example, using symbols on a scatter chart to show multiple groupings.  
+Check our [guidance on visual encoding](../../encoding/viz-encoding/) for more detail.  
   
-#### Examples of relationship visualisations (and when they are appropriate)
+### Relationship visualisation examples and when they are appropriate
 
-- scatter plot (2 variables)
-- scatter plot bubble size (3 variables)
+Use a: 
+
+- scatter plot for 2 variables 
+- scatter plot bubble size for 3 variables
   
 ![Examples of the relationship visualisations](../images/relationship.png)  
 
-### Geospatial visualisations  
+## Geospatial visualisations  
   
-Geospatial visualisations demonstrate distribution across a set parameter, for example, a map.  
+Use geospatial visualisations to show distribution across a set parameter, for example, a map.  
   
-Some common geospatial visualisations used are:
+Common geospatial visualisations include: 
 
-- geographic heatmap
-- choropleth map
-- tile map  
+- geographic heatmaps 
+- choropleth maps 
+- title maps
   
-### Infographics
+## Infographics
   
-Infographics, although not a specific type of visualisation itself, are often used to tell a story, and can used any visualisation method. The aim of an infographic is to quickly pull focus to a user. Infographics, although a type of data visualisation are not always accurate and can be sometimes simplified for the purpose of an infographic therefore it's always important to be mindful of any assumptions or biases infographics can cause.  
+Infographics are not a type of visualisation themselves, but they can use many visualisation methods to tell a story and pull focus to a user.  
+Infographics are not always accurate and can often be simplified, so you need to be mindful of any assumptions or biases infographics can cause.  
   
-If you’re using an infographic:
+If you’re using an infographic, you need to: 
 
-- start with a story
-- ensure your infographic is not misleading
-- keep the infographic clear and concise
-- do not overwhelm the user with too many infographics
-- use colour to denote meaning, for example, NHS blue, or green for the environment
-- if statistics are used, consider the accuracy of decimal places needed for the user  
+- start with a story 
+- make sure your infographic is not misleading 
+- keep the infographic clear and short 
+- use colour to show meaning, for example NHS blue, or green for the environment 
+- make sure decimal places are accurate if you’re using statistics 
+
+Do not overwhelm the user with too many infographics.  
   
 ::: details Source - infographics best practice
 
@@ -211,102 +222,78 @@ If you’re using an infographic:
 
 ## Chart examples  
   
-Further examples of charts available:  
+Here are some more examples of charts you can use.  
 
-**Comparison**
+### Charts to show comparison 
 
-- bar chart
-- column chart
-- grouped bar/column chart
-- lollipop chart
-- bullet chart
-- dot plot
-- dumbbell
-- pictogram
-- icon chart
-- range chart
-- radial bar chart
-- parallel coordinates
-- radar chart
-- nightingale chart
-- waterfall chart
-- matrix chart
-- small multiples
-- word cloud
-- slop chart
-- table chart
-- categorical scatter plot
-- quadrant chart  
+To show comparison, you can use a: 
 
-**Correlation**
+- stacked bar or column chart 
+- diverging bar chart 
+- population pyramid 
+- icon array 
+- waffle chart 
+- pie chart 
+- donut chart 
+- semi-circle donut chart 
+- Marimekko chart 
+- treemap 
+- circular treemap 
+- convex treemap 
+- dendrogram 
+- venn diagram 
+- euler diagram 
+- circular gauge 
+- sunburst chart 
+- funnel and pyramid chart 
 
-- heatmap
-- bubble chart
-- scatter plot
-- connected scatter plot
-- hexagonal binning
-- contour plot  
-  
-**Part-to-whole and hierarchical**
-  
-- stacked bar/column chart
-- diverging bar chart
-- population pyramid
-- icon array
-- waffle chart
-- pie chart
-- doughnut chart
-- semi-circle doughnut chart
-- marimekko chart
-- treemap
-- circular treemap
-- convex treemap
-- dendrogram
-- venn diagram
-- euler diagram
-- circular gauge
-- sunburst chart
-- funnel and pyramid chart  
-  
-**Data over time (temporal)**
-  
-- area chart
-- stacked area chart
-- stream graph
-- bump chart
-- bump area chart
-- line chart
-- spline chart
-- step line chart
-- candelstick chart
-- gantt chart
-- barcode chart
-- OHLC chart  
-  
-**Distribution**
-  
-- density plot
-- ridgeline plot
-- horizon chart
-- histogram
-- radial histogram
-- strip plot
-- jitter plot
-- one-dimensional heatmap
-- beeswarm chart
-- box chart
-- violin plot  
-  
-**Geospatial and other**
-  
-- geographic heatmap
-- choropleth map
-- tile map
-- chord diagram
-- arc diagram
-- sankey diagram
-- network diagram
-- flowchart  
+### Charts to show data over time 
+
+These are also called temporal charts. 
+
+To show data over time, you can use a: 
+
+- stream graph 
+- area chart 
+- stacked area chart 
+- bump chart 
+- bump area chart 
+- line chart 
+- spline chart 
+- step line chart 
+- candlestick chart 
+- Gantt chart 
+- barcode chart 
+- Open-High-Low-Close (OHLC) chart 
+
+### Charts to show distribution 
+
+To show distribution, you can use a: 
+
+- density plot 
+- ridgeline plot 
+- horizon chart 
+- histogram 
+- radial histogram 
+- strip plot 
+- jitter plot 
+- one-dimensional heatmap 
+- bee-swarm chart 
+- box chart 
+- violin plot 
+
+### Geospatial and other charts 
+
+Other charts you can use include: 
+
+- geographic heatmaps 
+- choropleth maps 
+- title maps 
+- chord diagrams 
+- arc diagrams 
+- Sankey diagrams 
+- network diagrams 
+- flowcharts  
 
 ![Examples of the visualisations](../images/chart-eg.png)  
 
