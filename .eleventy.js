@@ -38,6 +38,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
 
   // filters
+  eleventyConfig.addFilter('convertColor', require('./lib/_filters/convertColor'));
   eleventyConfig.addFilter('date', require('./lib/_filters/date'));
   eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
   eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));
