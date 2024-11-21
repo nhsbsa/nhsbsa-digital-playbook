@@ -15,7 +15,7 @@ review:
 Developers are responsible for testing the code they write. We require two types of test as a minimum:
 
 * __Unit test__
-  A self contained test for a unit of functionality, such as a Java class or a Javascript function.
+  A self contained test for a unit of functionality, such as a Java class or a Javascript function, or a behaviour spanning many such files.
 * __Integration test__
   A test for a unit of functionality that depends on an external resource, such as a database.
   We test against external resources and dependencies that reflect a production environment.
