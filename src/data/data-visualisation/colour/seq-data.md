@@ -12,7 +12,7 @@ Sequential data is any data where the order has some meaning such as age groups.
 
 When presenting sequential data, it is best to use a single hue or small set of closely related hues.  
   
-Sequential data should use our primary colour, NHS Blue (#005EB8). Do not alternate between different hues, but make sure that shades go from pale to dark. Colours should progress in the direction a user would expect. For example, for a line chart tracking age groups over time, a lighter colour should be used to represent  younger citizens, and a darker colour for older citizens. 
+For sequential data, shades going from pale to dark of a singular colour should be used rather than multiple colours. Our primary colour, NHS Blue (#005EB8) should be the typical colour used. Colours should progress in the direction a user would expect. For example, for a line chart tracking age groups over time, a lighter colour should be used to represent younger citizens, and a darker colour for older citizens. 
 
 ::: details Source - choosing colours
 
