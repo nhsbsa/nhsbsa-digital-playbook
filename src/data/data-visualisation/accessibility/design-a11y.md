@@ -6,55 +6,58 @@ status: REVIEW
 tags: accessible-data
 order: 3
 ---
-## Designing for accessibility  
+## UK Home Office 'Designing for accessibility' posters  
 
 The UK Home Office created ['Designing for accessibility' posters.][home office posters]
 
-The posters include Dos and Don’ts for supporting individuals:
+They include Dos and Don’ts for supporting individuals: 
 
-- on the autistic spectrum
-- who use screen readers
-- with low vision
-- with dyslexia
-- with physical or motor disabilities
-- who are d/Deaf or hard of hearing
+- on the autistic spectrum 
+- who use screen readers 
+- with low vision 
+- with dyslexia 
+- with physical or motor disabilities 
+- who are Deaf or hard of hearing 
 - with anxiety  
   
-## Content design standards on numbers  
+## Content design standards on numbers and money  
+  
+The following tips are the most relevant to data visualisation. 
 
-The following tips are the most relevant to data visualisation.  
+When writing numbers: 
 
-### Numbers:
+- use ‘one’ unless you’re talking about a step, a point in a list or another situation where using the numerical symbol makes more sense 
+- write all other numbers using the numerical symbol, including 2 to 9, except where it’s part of a common expression like ‘one or two of them’ 
+- insert a comma to add clarity for values over 1,000, for example, 9,000 
+- use spacing between area and exchange codes for telephone numbers, for example, 0191 123 4567 
 
-- Use ‘one’ unless you’re talking about a step, a point in a list or another situation where using the numerical symbol makes more sense
-- Write all other numbers using the numerical symbol, including 2 to 9, except where it’s part of a common expression like ‘one or two of them’
-- Insert a comma to add clarity for values over 1,000, for example, 9,000
-- Use spacing between area and exchange codes for telephone numbers, for example, 0191 123 4567  
+When mentioning money: 
 
-### Money:
+- use the ‘£’ symbol 
+- do not use decimals unless pence are included, for example, ‘£75.50’ but not ‘£75.00’ 
+- separate large amounts of money using commas, for example, ‘£10,000’ not ‘£10000’ 
+- format amounts in millions or billions as ‘£X million’ or ‘£X billion’, do not writ out in full 
+- do not use ‘£0.XX millions’ for amounts less than £1 million   
 
-- Use the ‘£’ symbol  
-- Do not use decimals unless pence are included, for example, '£75.50' but not '£75.00'
-- Separate large amounts of money using commas, for example, '£10,000' not '£10000'
-- For amounts in millions or billions, format as '£X million' or '£X billion', not written in full
-- Do not use '£0.XX millions' for amounts less than £1 million  
-
-::: details Source - Content Design Team
-
-Please note: [this link to the Content Design Team page][numbers 1] takes you to an internal NHSBSA site. This will be updated once the relevant content is present in this playbook.
-
-:::
+This information is based on the [GOV.UK style guide][https://www.gov.uk/guidance/style-guide/a-to-z].
+Internal NHSBSA colleagues can find further information on the [Content Design Team page][numbers 1].
 
 ## Accessibility of colours  
 
-Please refer to the [Colour Guidance page](../../colour/) for standards on accessible colour use, palettes and appropriate contrasts to use. As an NHS organisation, we follow [NHS identity guidelines][service manual] to help ensure we are accessible to users.  
+Refer to the [Colour Guidance page](../../colour/) for standards on:
 
-For colour contrast; ensure there is enough of a contrast between the colours used. The Web Content Accessibility Guidelines (WCAG) which the UK accessibility legislation aligns to, require a 3 to 1 ratio for graphical elements and 4.5 to 1 ratio for text.  
-The [WebAIM Colour Contrast Checker][webaim 1] may help, or [this Colour Contrast Checker][webaim 2].  
+- accessible colour use
+- palettes
+- appropriate contrasts to use
 
-It's important to remember that you must not use colour as the only way to communicate something. Patterns can be used, but they can be cluttering and harder to see. It's always recommended to have an alternative way to gain the same information, for example, by having figures available to the user.  
+We follow [NHS identity guidelines][service manual] to help make sure we are accessible to users.  
+
+Make sure there is enough of a contrast between the colours used. The [Web Content Accessibility Guidelines (WCAG)][https://www.w3.org/TR/WCAG22/#contrast-minimum] require a 3 to 1 ratio for graphical elements and 4.5 to 1 ratio for text. 
+The [WebAIM Colour Contrast Checker][webaim 1] may help, or this [Colour Contrast Checker][webaim 2].  
+
+Do not use colour as the only way to communicate something. Patterns can be used, but they can be cluttering and hard to see. It’s recommended to have an alternative way to get the same information, for example, by having figures available to the user.   
   
-::: details Source - WCAG and colour
+::: details Source - WCAG
 
 [WCAG 2.2 Use of Colour][use of colour]
 
@@ -62,32 +65,39 @@ It's important to remember that you must not use colour as the only way to commu
 
 ## Designing charts for accessibility  
   
-Charts can often be confusing to a user, and enabling a user to understand the content shown is one of our primary purposes in development.  
+Charts can often be confusing, and enabling a user to understand the content shown is one of our primary purposes in development.  
 
 Some best practices for designing charts accessibly:
 
-- declutter where possible, but do not remove any useful content. Content should be efficient and effective
-* remove gridlines
-* minimum colours
-* do not have a busy chart
-- include alt text (for people with low vision or those who find charts confusing)
-- include the source of your data, to allow users to familiarise themselves with the data and aid data literacy
-- no wonky text, horizontal is best
-- do not use italics, this can be hard for a user to read
-- make sure your product adapts for smaller screens. This is another reason why a text alternative for a chart is recommended
-- Sans serif font is more understandable for people with dyslexia. Make sure your chart text is as large as is reasonable
-- don’t mislead the user.
-- choosing the most appropriate chart type, to aid a user’s understanding
-- be aware of where your content is placed. Chart descriptions should appear above a chart to allow a screen reader to pick up the information before a chart is shown
-- label all buttons, hyperlinks, and necessary features accurately
-- if a link is included, hyperlink appropriate text describing what is being linked to as this is more suitable for a screen reader user
+To design charts accessibly you should: 
+
+1. declutter where possible, making content efficient and effective
+    - removing gridlines 
+    - using minimum colours
+    - avoiding a busy chart 
+2. include alt text (for people with low vision, those who find charts confusing or are unable to view the chart for other reasons) 
+3. include the source of your data, to allow users to familiarise themselves with the data and aid data literacy 
+4. use horizontal text
+5. make sure your product adapts for smaller screens
+6. use Sans serif font- it's more understandable for people with dyslexia
+7. make sure your chart text is as large as is reasonable
+8. choose the most appropriate chart type, to aid a user’s understanding
+9. make sure chart descriptions are earlier in the tab order than the chart being described, to allow users (particularly those using a screen reader) to pick up the information before a chart is shown
+10. label all buttons, hyperlinks, and necessary features accurately
+11. make links descriptive of where they lead the user  
+
+Some things to avoid are:
+
+- removing useful content when decluttering
+- usng wonky text
+- using italics- they can be hard for a user to read
+- misleading the user
 
 ## Spreadsheet accessibility  
   
-There is a checklist to follow online which the Government Analysis Function created.  
+There is a [checklist to follow online][gov 1] which the Government Analysis Function created.  
 The following links may also be useful:
 
-- [Making spreadsheets accessible: a checklist of the basics – Government Analysis Function][gov 1]
 - [Releasing Statistics in Spreadsheets][gov 2]
 - [Make your Excel documents accessible to people with disabilities - Microsoft Support][microsoft]  
 
