@@ -24,8 +24,12 @@ Make sure the licence content is included in full, including the title “APACHE
 
 If you have forked a project that was licensed under Apache 2 the following additional changes are required:
 
-1. Any significant changes have been documented. This should suffice if the original commit history has been retained but you can also include attributions in the NOTICE file
+1. The original copyright notice
+2. A copy of the license itself
+3. If applicable, a statement of any significant changes made to the original code. This should suffice if the original commit history has been retained but you can also include attributions in the NOTICE file.
+4. A copy of the NOTICE file with attribution notes (if the original library has one)
 
+::: details Example Notice
 ```text
 Apache License
 Version 2.0, January 2004
@@ -36,6 +40,8 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 1. Definitions.
 ...
 (Refer to the full Apache License 2.0 text for complete terms and conditions)
+
+NOTICE file for project [PROJECT]
 
 Portions of this software are based on modifications or enhancements made from the following forked repository:
 
@@ -60,6 +66,11 @@ Additional Notices:
 END OF NOTICE
 
 ```
+:::
+
+External guidance: [https://pitt.libguides.com/openlicensing/apache2](https://pitt.libguides.com/openlicensing/apache2)
+
+Compliance with License Obligations: It is crucial to comply with the license obligations of the original project. Ensure that you understand and follow the requirements set forth in the Apache 2.0 license, such as providing a copy of the license and retaining any notices from the original project. Proper attribution must be maintained.
 
 ### Update the copyright notice
 
@@ -124,3 +135,4 @@ We use Open Government Licence v3 for our published content. User interfaces nee
 [licence_ogl3]: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>
 [licence_spdx]: <https://spdx.org/licenses/>
 [licence_spdx_apache2]: <https://spdx.org/licenses/Apache-2.0.html>
+[open_licensing_apache2]: <https://pitt.libguides.com/openlicensing/apache2>
