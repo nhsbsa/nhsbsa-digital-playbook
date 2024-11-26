@@ -6,86 +6,86 @@ status: REVIEW
 tags: dv-colour
 order: 2
 ---
-## Primary colours  
+Our brand colours help people recognise and trust that our services come from the NHS.  
 
-See the [NHS Identity Guidelines Colours pages][pc 1] for more detail.
+We follow the [NHS digital services manual guidelines][pc 1] for colours and how to apply them.
 
-### Background  
+## Background  
   
-Use a plain background, NHS Grey 5 (#F0F4F5) should be used.  
+We use NHS Grey 5 as a background tint. This is because: 
+
+- it reduces the overall page glare
+- the [British Dyslexia Association's style guide][dyslexia] recommends dark text on a light, but not white, background
+- it allows different components to stand out
 
 #F0F4F5 is the hex code for NHS Grey 5 (light grayish cyan):  
   
 ![Block of colour #F0F4F5](../images/hex-f0f4f5.png)  
   
-NHS White is used to make important information stand out and for alternating backgrounds, for example on the NHS website home page.  
+We use NHS White to make important information stand out and for contrasting backgrounds, for example on the [NHS website home page][NHS home].  
   
-NHS White:
-
-- hex: #FFFFFF
-- CYMK: 0/0/0/0
-- RGB: 255/255/255
+#FFFFFF is the hex code for NHS White:
 
 ![Block of colour #FFFFFF](../images/nhs-white.png)
 
-### Border  
+## Border  
   
-Each visualisation and filter should have a border of NHS Grey 4 (#D8DDE0).  
+Each visualisation and filter should have a border of NHS Grey 4 (hex code: #D8DDE0).  
   
 ![Examples of visualisations with border in colour #D8DDE0](../images/border-example.png)  
   
-### Tooltips  
+## Tooltips  
   
-Each tooltip should have a label text colour of NHS Pale Grey (#E8EDEE), a value text colour of NHS White (#FFFFFF), and a Background colour of NHS Dark Grey (#425563).  
+In each tooltip, the colour of the: 
+
+- label text should be NHS Pale Grey (hex code: #E8EDEE)  
+- value text should be NHS White (hex code: #FFFFFF)  
+- background should be NHS Dark Grey (hex code: #425563)   
   
 ![Example of tooltip colour selection](../images/tooltip-customize.png)  
   
 ![Example of tooltip colour on a chart](../images/tooltip-croydon.png)
 
-::: details Source - NHS digital service manual
+## Single variables  
 
-[NHS digital service manual; Colour][pc 2]
-
-:::
-
-### Single variables  
-
-NHS Blue is the primary colour to be used across our products.  
-
-NHS Blue:
-
-- hex: #005EB8
-- CYMK: 99/50/0/0
-- RGB: 0/94/184
-- Pantone: 300
-- RAL: 5017
+On webpages with a single variable, we use NHS Blue (hex code: #005EB8).
   
 ![Block of colour NHS Blue](../images/nhs-blue.png)
 
-### Two variables  
+## Two variables  
 
-NHS Blue alongside NHS Light Blue is recommended for two variables.  
-
-NHS Light Blue:
-
-- hex: #41B6E6
-- CYMK: 67/2/0/0
-- RGB: 65/182/230
-- Pantone: 298
+On webpages with 2 variables, it’s recommended we use NHS Light Blue alongside NHS Blue.  
   
-![Block of colour NHS Blue](../images/nhs-blue.png)      ![block of colour NHS Light Blue](../images/nhs-light-blue.png)
+#005EB8 is the hex code for NHS Blue (strong blue):
+  
+![Block of colour NHS Blue](../images/nhs-blue.png)  
+  
+#41B6E6 is the hex code for NHS Light Blue (bright blue):  
+  
+![block of colour NHS Light Blue](../images/nhs-light-blue.png)
 
-### Related variables  
+## Related variables  
 
-NHS Blue (#005EB8) alongside NHS Light Blue (#41B6E6) is recommended for two variables. For related variables such as comparing adults and children across two groupings, a 50% tint if recommended. Meaning for each grouping, the colour will be consistent, with two tints.  
+On webpages with related variables, such as comparing adults and children across 2 groupings, it’s recommended we use a 50% tint. 
 
-If you need to use tints of this palette and have a small number of tints needed, use either 25% or 50%. We recommend 50%. If tints do not pass contrast ratio checks and the visualisation is suitable (i.e. not a line graph), a border should be added to further enhance the colour.  
+If the tints do not pass contrast ratio checks, you should add a border to enhance the colour further. You should only do this if it’s a suitable visualisation – for example, this could be done for a bar graph but should not be done for a line graph. 
 
-Otherwise, tints of 80%, 60%, 40% and 20% can be used. Any % value is accepted as long as it is visible, clear and accessible.  
+This means we’ll use 2 different tints of one consistent colour for each grouping.  
 
-To find tints you can use [this website][pc 7].  
-Otherwise, these are the tints of the NHS Blue at each 10% interval:  
+### Choosing a tint  
 
+If you need to use a palette which only has a small number of tints, we recommend using 50%. You can also use 25%. 
+To increase the palette, we recommend you use tints of 80%, 60%, 40% or 20%.  
+
+Any percentage value is acceptable if it is: 
+
+- visible 
+- clear  
+- accessible  
+  
+Note: we only recommend outlining the bars when using the lightest tints of a palette, if there is not enough colour contrast. In this case, we would outline all bars to maintain consistency. In general, bar outlines add unnecessary clutter.  
+
+You can use the [HTML CCS Color website][pc 7] to find tints. The following hex codes are for the tints of NHS Blue at each 10% interval: to find tints. The following hex codes are for the tints of NHS Blue at each 10% interval:
 
 <html>
 <style>
@@ -101,7 +101,7 @@ Otherwise, these are the tints of the NHS Blue at each 10% interval:
 </div>
 <div class="div_gap"></div>
 <div>
-    #005EB8 (NHS Blue) - 100%  <br><br>
+    #005EB8 - 100%  <br><br>
     #337EC6 - 90%  <br><br>
     #5C98D1 - 80%  <br><br>
     #7DADDA - 70%  <br><br>
@@ -116,46 +116,60 @@ Otherwise, these are the tints of the NHS Blue at each 10% interval:
 </div>
 <br>
 </body>
-</html>
+</html>  
 
-Charts displaying data for 2 different categories should use NHS Blue (#005EB8) and NHS Light Blue (#41B6E6) to denote this. For other details, 100%, 80% and 60% tints can be used in descending order, with appropriate contrast for the corresponding numeric labels.
+### Designing charts with 2 separate categories  
+  
+If you’re using a chart that displays data for 2 separate categories, you should show these using: 
 
-- NHS Blue: #005EB8 (100%), #5C98D1 (80%), #97BDE1 (60%)
-- NHS Light Blue: #41B6E6 (100%), #66C4EB (80%), #8DD3F0 (60%)  
+- NHS Blue (hex code: #005EB8) 
+- NHS Light Blue (hex code: #41B6E6) 
+
+For other details, you can use 100% tint, 80% tint and 60% tint of these colours.  
+You should start at 100% and move down through the lower percentage intervals as needed. The tints you use should have appropriate contrast for their numeric labels. 
+
+Hex codes for NHS Blue tints:  
+
+- 100%: #005EB8  
+- 80%: #5C98D1 
+- 60%: #97BDE1 
+
+Hex codes for NHS Light Blue tints:  
+
+- 100%: #41B6E6 
+- 80% #66C4EB  
+- 60% #8DD3F0    
   
 ![bar graph demonstrating the use of colour](../images/nhs_blue_bars.png)
   
-Note: we only recommend outlining the bars when using the lightst tints of a palette, if there is not enough colour contrast. In this case, we would outline all bars to maintain consistency. In general, bar outlines add unnecessary clutter.  
+You can find more information about palettes and tints on the: 
 
-::: details Source - colour palette and NHS identity
+- [NHS guidelines on using colour to support brand identity][pc 5]
+- [GOV.UK Design System Colour page][pc 3]
+- [Civil Service Sequential data colour palette page][pc 4]
 
-[GOV.UK Design System; Colour][pc 3]  
-[Sequential data colour palette][pc 4]  
-[NHS identity guidelines; Using tints][pc 5]
+### Representing different groups of qualitative data   
+  
+You should use different colours to represent different groups.  
+For example, you might choose to use NHS Blue (hex code: #005EB8), NHS Aqua Green (hex code: #00A499), and NHS Pink (hex code: #AE2573).  
+  
+If the data is:
 
-:::  
-
-Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is binary, use 100% and 50% tints of each colour to represent this.
+- binary, you should use 100% and 50% tints of the same colour
 
 ![colour scheme for binary qualitative data](../images/binary_qual.png)  
   
-Use two different colours (e.g. #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is sequential, use tints of each colour (e.g. 100%, 80%, 60% in descending order) to represent this.  
+- diverging, you should use 2 different colours and white (hex code: #FFFFFF)
   
 ![colour scheme for diverging sequential data](../images/diverge_seq.png)  
   
-Use Use two different colours (e.g. #005EB8, #AE2573), and white (#FFFFFF) as the central third colour, for diverging data. When data is binary, use 100% and 50% tints of each colour to represent this.  
-  
 ![colour scheme for binary diverging data](../images/binary_diverge.png)  
   
-Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different groups of qualitative data. When data is sequential, use tints of each colour (e.g. 100%, 80%, 60% in descending order) to represent this.  
+- sequential, you should represent this using tints of a colour starting with 100% and moving down through the lower percentage intervals towards 0%- for example to 80% then 60%   
   
 ![colour scheme for sequential qualitative data](../images/qual_seq.png)  
 
-::: details Source - colour use guide
-
-[Colour use guidelines for mapping and visualisation][pc 6]
-
-:::
+You can find out more information in the [NHS Colour use guide][pc 6] and [NHS digital service manual][pc 2].
 
 [pc 1]: https://service-manual.nhs.uk/design-system/styles/colour
 [pc 2]: https://service-manual.nhs.uk/design-system/styles/colour
@@ -164,3 +178,5 @@ Use different colours (e.g. #005EB8, #00A499, #AE2573) to represent different gr
 [pc 5]: https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/#:~:text=use%20of%20highlights.-,Using%20tints,-Tints%20are%20percentage
 [pc 6]: https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_2/barvy/colors.html
 [pc 7]: https://www.htmlcsscolor.com/hex/005EB8
+[dyslexia]: https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide
+[NHS home]: https://www.nhs.uk/
