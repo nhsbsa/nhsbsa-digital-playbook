@@ -8,7 +8,7 @@ order: 2
 ---
 ## What is data accessibility?  
 
-Low numeracy affects half of the adults in the UK, and about 1 in 20 people have dyscalculia in the UK. As a comparison, about 1 in 10 to 20 people have dyslexia. 
+Low numeracy affects more than half of the adults in the UK, while an estimated 25% of people have maths learning difficulties. These can be attributed to neurodivergence, including conditions such as dyscalculia or dyslexia, or external factors such as a traumatic school experience. About 1 in 20 people have dyscalculia in the UK, and about 1 in 17 have dyslexia. 
 
 Many live with the limitations of not understanding numbers and the impact that has on everyday life, like managing money, arranging appointments, doing calculations and telling the time. 
 
@@ -33,7 +33,7 @@ Therefore, we need to deliver services which convey numbers plainly and in a way
   
 The content design standards state how we should be presenting data. To help our users, try to: 
 
-- remove unnecessary numbers by always trying to round values up to a whole number, getting rid of decimal places unless it’s money, and rounding to a scale relative to the use of a number - for example, 10,234,357 may be more useful to be presented to some users as 10 million depending on the level of precision needed 
+- get rid of decimal places unless it’s money by rounding to a scale relative to the use of a number - for example, 10,234,357 may be more useful to be presented to some users as 10 million on a chart or "just over 10 million" in text 
 - leave lots of space, so that numbers do not jump around so much on the screen for people with dyscalculia 
 - involve people who struggle with numbers in the design process, from both within and outside the design team 
 - explain charts and the data involved (initially and throughout), including access to calculations involved, to increase data literacy 
