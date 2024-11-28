@@ -26,7 +26,7 @@ We use NHS White to make important information stand out and for contrasting bac
   
 #FFFFFF is the hex code for NHS White:
 
-![Block of colour #FFFFFF](../images/nhs-white.png)
+![Block of colour #FFFFFF](../images/hex-nhs-white.png)
 
 ## Border  
   
@@ -50,7 +50,7 @@ In each tooltip, the colour of the:
 
 On webpages with a single variable, we use NHS Blue (hex code: #005EB8).
   
-![Block of colour NHS Blue](../images/nhs-blue.png)
+![Block of colour NHS Blue](../images/hex-nhs-blue.png)
 
 ## Two variables  
 
@@ -58,11 +58,11 @@ On webpages with 2 variables, it’s recommended we use NHS Light Blue alongside
   
 #005EB8 is the hex code for NHS Blue (strong blue):
   
-![Block of colour NHS Blue](../images/nhs-blue.png)  
+![Block of colour NHS Blue](../images/hex-nhs-blue.png)  
   
 #41B6E6 is the hex code for NHS Light Blue (bright blue):  
   
-![block of colour NHS Light Blue](../images/nhs-light-blue.png)
+![block of colour NHS Light Blue](../images/hex-nhs-light-blue.png)
 
 ## Related variables  
 
@@ -148,7 +148,7 @@ You can find more information about palettes and tints on the:
 - [GOV.UK Design System Colour page][pc 3]
 - [Civil Service Sequential data colour palette page][pc 4]
 
-### Representing different groups of qualitative data   
+### Representing different groups of data   
   
 You should use different colours to represent different groups.  
 For example, you might choose to use NHS Blue (hex code: #005EB8), NHS Aqua Green (hex code: #00A499), and NHS Pink (hex code: #AE2573).  
@@ -165,7 +165,7 @@ If the data is:
   
 ![colour scheme for binary diverging data](../images/binary_diverge.png)  
   
-- sequential, you should represent this using tints of a colour starting with 100% and moving down through the lower percentage intervals towards 0%- for example to 80% then 60%   
+- sequential, you should represent this using [tints of a colour](#choosing-a-tint) starting with 100% and moving down through the lower percentage intervals towards 0%- for example to 80% then 60%   
   
 ![colour scheme for sequential qualitative data](../images/qual_seq.png)  
 
