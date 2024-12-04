@@ -8,11 +8,11 @@
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",
-    "build": "env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'",
-    "test": "NODE_ENV=test jest",
-    "test:eslint": "NODE_ENV=test npx eslint .",
-    "test:eslint-fix": "NODE_ENV=test npx eslint . --fix",
-    "test:coverage": "NODE_ENV=test jest --coverage"
+    "build": "cross-env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:eslint": "cross-env NODE_ENV=test npx eslint .",
+    "test:eslint-fix": "cross-env NODE_ENV=test npx eslint . --fix",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
     "@nhsbsa/cookie-consent-component": "0.0.6",
+    "cross-env": "^7.0.3",
     "eleventy-auto-cache-buster": "^0.6.0",
     "eleventy-plugin-dart-sass": "^1.0.3",
     "eleventy-plugin-external-links": "^1.1.2",
