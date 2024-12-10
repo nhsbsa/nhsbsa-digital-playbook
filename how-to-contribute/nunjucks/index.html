@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="A breakdown of the tools and technologies test use in performance testing">
+  <meta name="description" content="How to enhance your documents with Nunjucks">
   <meta name="robots" content="noindex">
   
   <title>
-Performance Test Tech Stack - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Nunjucks - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     
@@ -40,13 +40,13 @@ Performance Test Tech Stack - NHSBSA Digital, Data and Technology Playbook - NHS
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-tech-stacks/performance-test-tech-stack/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/how-to-contribute/nunjucks/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="A breakdown of the tools and technologies test use in performance testing">
+  <meta property="og:description" content="How to enhance your documents with Nunjucks">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Performance Test Tech Stack - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Nunjucks - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=af419bcfaebd" media="all" rel="stylesheet" type="text/css" >
 
@@ -116,7 +116,10 @@ Performance Test Tech Stack - NHSBSA Digital, Data and Technology Playbook - NHS
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#performance-test">Performance Test</a>
+                    <li><a href="#colour-block">Colour block</a>
+            		</li>
+
+                    <li><a href="#colour-card">Colour card</a>
             		</li>
                 </ol>
             </div>
@@ -134,23 +137,162 @@ Performance Test Tech Stack - NHSBSA Digital, Data and Technology Playbook - NHS
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Performance Test Tech Stack
+            Nunjucks
           </h1>
           
         </div>
       
 
-<h3 id="performance-test" tabindex="-1"><a class="header-anchor" href="#performance-test">Performance Test</a></h3>
+<p><a href="../markdown/">Markdown</a> is the easiest way to start writing content, but the playbook can use other tools to layout content, including Nunjucks macros:</p>
 <ul>
-<li>
-<p>All our performance testing is performed using the free open source JMeter tool.<br>
-This is available from the <a href="https://jmeter.apache.org/" target="_blank" rel="noopener">JMeter website</a>.</p>
-</li>
-<li>
-<p>No other performance test tools should be used for performance testing.</p>
-</li>
+<li><a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener">Nunjucks</a></li>
 </ul>
-<p>Please ensure you have read and understand the NHSBSA <a href="https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3235348772/NHSBSA+TEST+STRATEGIES" target="_blank" rel="noopener">Performance Test Strategy</a> before starting any performance testing.</p>
+<p>Nunjucks macros can be used in markdown files when they are imported at the top of the document, just after the <em>frontmatter</em>:</p>
+<pre class="language-text"><code class="language-text">{% from "colorBlock/macro.njk" import colorBlock %}
+</code></pre>
+<p>The macro can then be used anywhere within the markdown file.</p>
+<h2 id="colour-block" tabindex="-1"><a class="header-anchor" href="#colour-block">Colour block</a></h2>
+<p>Renders a square colour block to illustrate a Hex colour value.</p>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Attributes</span></summary>
+<div class="nhsuk-details__text">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>String</td>
+<td>true</td>
+<td>a Hex encoded RGB color</td>
+</tr>
+<tr>
+<td>
+<p>blockSize</p>
+</td>
+<td>
+<p>String</p>
+</td>
+<td>
+<p>false</p>
+</td>
+<td>
+<p><code class="md">xs</code>, <code class="md">s</code>, <code class="md">m</code>, <code class="md">l</code>, <code class="md">xl</code><br>
+defaults to <code class="md">m</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<pre class="language-text"><code class="language-text">{% from "colorBlock/macro.njk" import colorBlock %}
+
+{{ colorBlock({
+    "color": "#005EB8",
+    "blockSize": "l"})
+}}
+</code></pre>
+<p>renders as:</p>
+<p><span style="background-color: #005EB8" class="colorblock colorblock_l"></span></p>
+<h2 id="colour-card" tabindex="-1"><a class="header-anchor" href="#colour-card">Colour card</a></h2>
+<p>Renders a ‘card’ showing a colorBlock and colour information.</p>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Attributes</span></summary>
+<div class="nhsuk-details__text">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>heading</td>
+<td>String</td>
+<td>false</td>
+<td>A heading for the colour card</td>
+</tr>
+<tr>
+<td>headingLevel</td>
+<td>String</td>
+<td>false</td>
+<td>The HTML heading level (<code class="md">h1</code>-<code class="md">h4</code>). Defaults to <code class="md">h2</code></td>
+</tr>
+<tr>
+<td>color</td>
+<td>String</td>
+<td>true</td>
+<td>a Hex encoded RGB colour</td>
+</tr>
+<tr>
+<td>pantone</td>
+<td>String</td>
+<td>false</td>
+<td>The <a href="https://www.pantone-colours.com/" target="_blank" rel="noopener">Pantone</a> colour code</td>
+</tr>
+<tr>
+<td>ral</td>
+<td>String</td>
+<td>false</td>
+<td>The <a href="https://www.ralcolorchart.com/" target="_blank" rel="noopener">RAL</a> colour code</td>
+</tr>
+<tr>
+<td>
+<p>blockSize</p>
+</td>
+<td>
+<p>String</p>
+</td>
+<td>
+<p>false</p>
+</td>
+<td>
+<p><code class="md">xs</code>, <code class="md">s</code>, <code class="md">m</code>, <code class="md">l</code>, <code class="md">xl</code><br>
+defaults to <code class="md">m</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<pre class="language-text"><code class="language-text">{% from "colorCard/macro.njk" import colorCard %}
+
+{{ colorCard({
+    "heading": "NHS Blue",
+    "color": "#005EB8",
+    "pantone": "300",
+    "ral": "5017",
+    "blockSize": "l"})
+}}
+</code></pre>
+<p>renders as:</p>
+<ul class="nhsuk-grid-row nhsuk-card-group">
+	<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        <div class="card colorCard">
+	<h2 class="nhsuk-card__heading nhsuk-heading-m">
+	NHS Blue
+	</h2>
+	<div><span style="background-color: #005EB8" class="colorblock colorblock_l"></span></div>
+	<dl>
+		<dt>Hex</dt>
+		<dd>#005EB8</dd>
+		<dt>RGB</dt>
+		<dd>0,94,184</dd>
+		<dt>CMYK</dt>
+		<dd>100,49,0,28</dd>
+		<dt>Pantone</dt>
+		<dd>300</dd>
+		<dt>RAL</dt>
+		<dd>5017</dd>
+	</dl>
+</div>
+<p></p>
+ </li></ul>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -162,7 +304,7 @@ This is available from the <a href="https://jmeter.apache.org/" target="_blank" 
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-tech-stacks%2Fperformance-test-tech-stack&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fhow-to-contribute%2Fnunjucks&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -175,7 +317,7 @@ This is available from the <a href="https://jmeter.apache.org/" target="_blank" 
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2022-01-26T13:53:16.000Z">26 January 2022</time>
+      Published: <time datetime="2024-12-10T10:00:19.000Z">10 December 2024</time>
     </p>
 </div>
 

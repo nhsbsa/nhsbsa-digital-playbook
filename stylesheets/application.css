@@ -10659,4 +10659,74 @@ dd code {
   margin: 0 0 4px;
 }
 
+.colorblock, .colorblock_xl, .colorblock_l, .colorblock_m, .colorblock_s, .colorblock_xs {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.colorblock_xs {
+  width: 10px;
+  height: 10px;
+  max-width: 10px;
+  max-height: 10px;
+}
+
+.colorblock_s {
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.colorblock_m {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.colorblock_l {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.colorblock_xl {
+  width: 200px;
+  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.colorCard > dl {
+  padding: 0;
+  margin: 0;
+}
+
+.colorCard > dl > dd {
+  padding: 0;
+  margin-left: 100px;
+}
+
+@media (max-width: 640px) {
+  .colorCard > dl > dd {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 641px) {
+  .colorCard > dl > dt {
+    padding: 0;
+    margin: 0 10px 0 0;
+    width: 100px;
+  }
+}
+@media (max-width: 640px) {
+  .colorCard > dl > dt {
+    padding: 0;
+    margin: 0 10px 0 0;
+  }
+}
+
 /*# sourceMappingURL=localhost%3A8080stylesheetsstylesheetsapplication.css.map */
