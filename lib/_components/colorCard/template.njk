@@ -1,0 +1,28 @@
+{% from "colorBlock/macro.njk" import colorBlock %}
+{% set headingLevel %}
+{{ params.headingLevel if params.headingLevel else 'h2' }}
+{% endset %}
+<div class="card colorCard">
+	{% if params.heading %}
+	<{{headingLevel}} class="nhsuk-card__heading nhsuk-heading-m">
+	{{ params.heading }}
+	</{{headingLevel}}>
+	{% endif %}
+	<div>{{ colorBlock(params) }}</div>
+	<dl>
+		<dt>Hex</dt>
+		<dd>{{params.color}}</dd>
+		<dt>RGB</dt>
+		<dd>{{params.color | convertColor('RGB') }}</dd>
+		<dt>CMYK</dt>
+		<dd>{{params.color | convertColor('CMYK') }}</dd>
+		{% if params.pantone %}
+		<dt>Pantone</dt>
+		<dd>{{params.pantone}}</dd>
+		{% endif %}
+		{% if params.ral %}
+		<dt>RAL</dt>
+		<dd>{{params.ral}}</dd>
+		{% endif %}
+	</dl>
+</div>
