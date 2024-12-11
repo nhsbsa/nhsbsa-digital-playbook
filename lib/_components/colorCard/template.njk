@@ -10,6 +10,10 @@
 	{% endif %}
 	<div>{{ colorBlock(params) }}</div>
 	<dl>
+		{% if params.css %}
+		<dt>CSS</dt>
+		<dd>{{params.css}}</dd>
+		{% endif %}
 		<dt>Hex</dt>
 		<dd>{{params.color}}</dd>
 		<dt>RGB</dt>
