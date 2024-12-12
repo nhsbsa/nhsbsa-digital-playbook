@@ -7,6 +7,7 @@ tags: dv-colour
 order: 3
 ---
 {% from "colorCard/macro.njk" import colorCard %}
+{% from "colorBlock/macro.njk" import colorBlock %}
 ## Categorical Data  
   
 Categorical data can be divided into groups or categories using names or labels.  
@@ -16,20 +17,57 @@ You can find out more about colour palette on the [Civil Service categorical dat
   
 For categorical data, you can use the following colours taken from the [NHS identity guidelines][cat 2]:  
 
-|       Colour       |   Tint   |   Hex Code    |
-|--------------------|----------|---------------|
-|   NHS Blue         |  100%    |   #005EB8     |
-|   NHS Aqua Green   |  100%    |   #00A499     |
-|   NHS Pink         |  100%    |   #AE2573     |
-|   NHS Orange       |  100%    |   #ED8B00     |
-|   NHS Green        |  100%    |   #009639     |
-|   NHS Light Blue   |  100%    |   #41B6E6     |
-|   NHS Blue         |  50%     |   #80AFDC     |
-|   NHS Aqua Green   |  50%     |   #80D2CC     |
-|   NHS Pink         |  50%     |   #D792B9     |
-|   NHS Orange       |  50%     |   #F6C580     |
-|   NHS Green        |  50%     |   #80CB9C     |
-|   NHS Light Blue   |  50%     |   #A0DBF3     |  
+|   Colour         |  Example   | Tint  |   Hex Code    |
+|------------------|------------|-------|---------------|
+|   NHS Blue       |    {{ colorBlock({
+    "color": "#005EB8",
+    "blockSize": "m"})
+}} | 100% |   #005EB8   |
+|   NHS Aqua Green | {{ colorBlock({
+    "color": "#00A499",
+    "blockSize": "m"})
+}}  | 100% |   #00A499   |
+|   NHS Pink       | {{ colorBlock({
+    "color": "#AE2573",
+    "blockSize": "m"})
+}}  | 100% |   #AE2573   |
+|   NHS Orange     |    {{ colorBlock({
+    "color": "#ED8B00",
+    "blockSize": "m"})
+}} | 100% |   #ED8B00   |
+|   NHS Green      |    {{ colorBlock({
+    "color": "#009639",
+    "blockSize": "m"})
+}} | 100% |   #009639   |
+|   NHS Light Blue |    {{ colorBlock({
+    "color": "#41B6E6",
+    "blockSize": "m"})
+}} | 100% |   #41B6E6   |
+|   NHS Blue       | {{ colorBlock({
+    "color": "#80AFDC",
+    "blockSize": "m"})
+}}  | 50%  |   #80AFDC   |
+|   NHS Aqua Green | {{ colorBlock({
+    "color": "#80D2CC",
+    "blockSize": "m"})
+}}  | 50%  |   #80D2CC   |
+|   NHS Pink       |    {{ colorBlock({
+    "color": "#D792B9",
+    "blockSize": "m"})
+}} | 50%  |   #D792B9   |
+|   NHS Orange     | {{ colorBlock({
+    "color": "#F6C580",
+    "blockSize": "m"})
+}}  | 50%  |   #F6C580   |
+|   NHS Green      | {{ colorBlock({
+    "color": "#80CB9C",
+    "blockSize": "m"})
+}}  | 50%  |   #80CB9C   |
+|   NHS Light Blue | {{ colorBlock({
+    "color": "#A0DBF3",
+    "blockSize": "m"})
+}}  | 50%  |   #A0DBF3   |  
+
 
 After using the first 6 colours on a chart, you can use these again with a 50% tint. These should have enough contrast against the background. 
 Remember that some colours have specific meanings, like blue for links. It’s important to choose the right colour.  
