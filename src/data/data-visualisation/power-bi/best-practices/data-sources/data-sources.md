@@ -2,7 +2,7 @@
 layout: article
 title: "Data sources"
 description: "Overview of data sources compatible with Power BI"
-status: REVIEW
+status: DRAFT
 tags: pbi-best-practice
 order: 20
 ---

@@ -2,7 +2,7 @@
 layout: collection
 title: "Report and dashboard layout"
 description: "Layout standards for reports and dashboards at the NHSBSA"
-status: REVIEW
+status: DRAFT
 tags: data-viz-home
 order: 20
 collection_tag: dv-dashboard-layout

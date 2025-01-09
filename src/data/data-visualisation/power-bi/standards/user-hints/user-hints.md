@@ -2,7 +2,7 @@
 layout: article
 title: "User hints"
 description: "Examples of user hints and tips available for Power BI users"
-status: REVIEW
+status: DRAFT
 tags: pbi-standards
 order: 30
 ---

@@ -2,7 +2,7 @@
 layout: article
 title: "Suppression of values"
 description: "Standards around the suppression of values with Power BI"
-status: REVIEW
+status: DRAFT
 tags: pbi-standards
 order: 40
 ---

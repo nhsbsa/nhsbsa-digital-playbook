@@ -2,7 +2,7 @@
 layout: article
 title: "Power BI licences"
 description: "Guidance on Power BI licence types and current NHSBSA set-up"
-status: REVIEW
+status: DRAFT
 tags: pbi-standards
 order: 20
 ---

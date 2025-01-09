@@ -2,7 +2,7 @@
 layout: article
 title: "Collaborative working"
 description: "Best practices for working collaboratively using Power BI"
-status: REVIEW
+status: DRAFT
 tags: pbi-best-practice
 order: 10
 ---
