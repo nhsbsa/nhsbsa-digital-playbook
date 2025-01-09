@@ -5,6 +5,9 @@ description: "Aspects to be considered regarding colour for data visualisation a
 status: REVIEW
 tags: dv-colour
 order: 1
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 {% from "colorBlock/macro.njk" import colorBlock %}
 ## NHS colour palette  

@@ -4,7 +4,10 @@ title: "Data accessibility"
 description: "What is data accessibility?"
 status: REVIEW
 tags: accessible-data
-order: 2 
+order: 2
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 ## What is data accessibility?  
 

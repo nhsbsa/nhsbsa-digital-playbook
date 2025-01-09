@@ -5,6 +5,9 @@ description: "Data visualisation standards in relation to tables, at the NHSBSA"
 status: REVIEW
 tags: dv-table
 order: 1
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 ## Best practice for tables  
   

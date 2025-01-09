@@ -5,6 +5,9 @@ description: "Colours used for sequential data at the NHSBSA"
 status: REVIEW
 tags: dv-colour
 order: 4
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 ## Sequential data  
   

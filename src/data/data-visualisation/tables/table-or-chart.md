@@ -4,7 +4,10 @@ title: "Table or chart?"
 description: "Guidance for when it is most appropriate to use a table over a chart"
 status: REVIEW
 tags: dv-table
-order: 2 
+order: 2
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 ## Choosing between a table or a chart  
   

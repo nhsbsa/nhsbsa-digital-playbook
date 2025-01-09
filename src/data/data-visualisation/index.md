@@ -9,6 +9,9 @@ order:
   data-viz-home: 1
 related:
   tag: data-viz-home
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 issuesheet:
     reference: 
     author: "Helen O'Donnell"
@@ -23,7 +26,4 @@ issuesheet:
           amended_by: "IT"
           approved_by: "HOD"
           details: "2024-12-20"
-    review:
-    last_reviewed_date: 2024-12-20
-    review_cycle: ANNUAL
 ---

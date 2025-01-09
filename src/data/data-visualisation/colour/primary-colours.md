@@ -5,6 +5,9 @@ description: "Overview of the main colours that should be used at the NHSBSA"
 status: REVIEW
 tags: dv-colour
 order: 2
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 {% from "colorBlock/macro.njk" import colorBlock %}
 Our brand colours help people recognise and trust that our services come from the NHS.  

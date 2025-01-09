@@ -5,6 +5,9 @@ description: "Standards for using tooltips at the NHSBSA"
 status: REVIEW
 tags: data-viz-home
 order: 110
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI). Tooltips are usually initiated by a mouse-hover gesture or through a keyboard-hover gesture.  
   

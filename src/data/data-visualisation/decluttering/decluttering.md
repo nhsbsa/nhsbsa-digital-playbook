@@ -5,6 +5,9 @@ description: "Guidance on the importance of decluttering and pulling focus for d
 status: REVIEW
 tags: data-viz-home
 order: 70
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 {% from "colorBlock/macro.njk" import colorBlock %}
 ## Importance of decluttering  

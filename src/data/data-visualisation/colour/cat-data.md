@@ -5,6 +5,9 @@ description: "Colours used for categorical data at the NHSBSA"
 status: REVIEW
 tags: dv-colour
 order: 3
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 {% from "colorCard/macro.njk" import colorCard %}
 {% from "colorBlock/macro.njk" import colorBlock %}

@@ -5,6 +5,9 @@ description: "Guidance for visual encoding including pre-attentive attributes an
 status: REVIEW
 tags: data-viz-home
 order: 120
+review:
+    last_reviewed_date: 2024-12-20
+    review_cycle: ANNUAL
 ---
 ## Visual encoding  
   
