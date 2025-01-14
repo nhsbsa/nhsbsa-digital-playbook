@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Define a branching strategy to avoid confusion and reduce risk">
+  <meta name="description" content="A branching strategy provides structure for pushing changes through to production">
   <meta name="robots" content="noindex">
   
   <title>
@@ -42,7 +42,7 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
   <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/dev-git-branching-strategy/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="Define a branching strategy to avoid confusion and reduce risk">
+  <meta property="og:description" content="A branching strategy provides structure for pushing changes through to production">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
@@ -116,10 +116,6 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#nhsbsa-branching-strategy">NHSBSA branching strategy</a>
-            
-                <ol>
-                    
                     <li><a href="#production">Production</a>
             		</li>
 
@@ -127,23 +123,6 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
             		</li>
 
                     <li><a href="#change-candidate">Change candidate</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#controls">Controls</a>
-            		</li>
-
-                    <li><a href="#rebasing">Rebasing</a>
-            
-                <ol>
-                    
-                    <li><a href="#rebase-or-merge">Rebase or merge</a>
-            		</li>
-
-                    <li><a href="#squashing">Squashing</a>
-            		</li>
-                </ol>
             		</li>
 
                     <li><a href="#workflow">Workflow</a>
@@ -159,9 +138,6 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
                     <li><a href="#change-candidate-1">Change Candidate</a>
             		</li>
                 </ol>
-            		</li>
-
-                    <li><a href="#project-documentation">Project documentation</a>
             		</li>
                 </ol>
             </div>
@@ -189,24 +165,7 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<div class="admonition warning">
-<p class="admonition-title">Standard documentation</p>
-<p>All projects must define and publish a branching strategy in the project documentation site. See <a href="#project-documentation">project documentation</a></p>
-</div>
-<p>A Git branching strategy is a set of rules to manage and organize code changes in a Git system. A strategy helps to:</p>
-<ul>
-<li>Prevent conflicts: Avoid merge conflicts that can occur when multiple developers work on the same project at the same time</li>
-<li>Increase productivity: Allow multiple developers to work on different features simultaneously</li>
-<li>Reduce versioning management time: Help teams to manage release of code more efficiently</li>
-</ul>
-<p>There are <a href="https://graphite.dev/guides/git-branching-strategies" target="_blank" rel="noopener">many Git branching strategies</a> including:</p>
-<ul>
-<li>Git Flow</li>
-<li>Github Flow</li>
-<li>Trunk Based Development</li>
-</ul>
-<h2 id="nhsbsa-branching-strategy" tabindex="-1"><a class="header-anchor" href="#nhsbsa-branching-strategy">NHSBSA branching strategy</a></h2>
-<p>Our standard branching strategy is based off traditional Git Flow. It defines three types of branch:</p>
+<p>Our standard branching strategy is based on traditional Git-flow and defines three types of branch:</p>
 <ul>
 <li><strong>Production</strong></li>
 <li><strong>Release candidate</strong></li>
@@ -220,7 +179,7 @@ Git branching strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>The head of <code class="md">main</code> should be git tagged with a semantic version number, indicating the current version of production software.</li>
 </ul>
 <h3 id="release-candidate" tabindex="-1"><a class="header-anchor" href="#release-candidate">Release candidate</a></h3>
-<p>A release candidate branch will hold code intended for release into production. Quality controls such as automated acceptance tests must succeed before a release candidate is accepted for release into production.</p>
+<p>A release candidate branch will hold code intended for release into production. Quality controls such as automated acceptance tests must succeed before a release candidate is accepted into production.</p>
 <p>We use these branch names for release candidates:</p>
 <ul>
 <li><code class="md">develop</code><br>
@@ -232,90 +191,15 @@ For urgent fixes to address defects found in production</li>
 <p>e.g. <code class="md">develop-wcag-2-2</code></p>
 <ul>
 <li>Changes must not be pushed directly to release candidate branches. Use branch protection to prevent developers from pushing.</li>
-<li>Rebased code may be force pushed by Maintainers only when aligning divergent production code (see <a href="#rebasing">rebasing</a> below). Rebasing a protected branch will require temporary rule changes.</li>
+<li>Rebased code may be force pushed by Maintainers only when aligning divergent production code (see <a href="../dev-git/#rebasing">rebasing</a>). Rebasing a protected branch will require temporary change of push rules.</li>
 </ul>
 <h3 id="change-candidate" tabindex="-1"><a class="header-anchor" href="#change-candidate">Change candidate</a></h3>
 <p>A change candidate branch is the most common type of branch, used by developers to iterate their change, before <a href="../coding-peer-review/">review</a> and merge into a release candidate branch.</p>
-<p>We adopt this convention for change candidate branch names:</p>
+<p>Change candidate branch names follow our <a href="../coding-naming-conventions/">naming conventions</a> to include change ID and description:</p>
 <ul>
-<li><code class="md">build</code><br>
-Changes that affect the build system or external dependencies (example scopes: maven, npm).</li>
-<li><code class="md">ci</code><br>
-Changes to our CI configuration files and scripts (example scopes: Gitlab-CI, Azure Devops)</li>
-<li><code class="md">docs</code><br>
-Documentation only changes</li>
-<li><code class="md">feature</code><br>
-A new feature</li>
-<li><code class="md">fix</code><br>
-A bug fix</li>
-<li><code class="md">perf</code><br>
-A code change that improves performance</li>
-<li><code class="md">refactor</code><br>
-A code change that neither fixes a bug nor adds a feature</li>
-<li><code class="md">style</code><br>
-Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</li>
-<li><code class="md">test</code><br>
-Adding missing tests or correcting existing tests</li>
+<li><code class="md">{change ID}-{brief description}</code></li>
 </ul>
-<p>Branch names must follow our <a href="../coding-naming-conventions/">naming conventions</a> to include change ID and description. e.g. <code class="md">feature/LIS-1234-add-back-button</code></p>
-<h2 id="controls" tabindex="-1"><a class="header-anchor" href="#controls">Controls</a></h2>
-<p>Git repository hosting providers provide various features to add additional controls on what can be done. These must be configured to protect the branch and release process.</p>
-<ul>
-<li>Prevent unauthorised push to production and release branches</li>
-<li>Prevent unapproved merge of code into the release process</li>
-<li>Prevent non-compliant commits and branch names</li>
-</ul>
-<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Gitlab configuration</span></summary>
-<div class="nhsuk-details__text">
-<ul>
-<li>Under <code class="md">Settings</code> &gt; <code class="md">Repository</code> &gt; <code class="md">Protected branches</code>:
-<ul>
-<li>Protect named <code class="md">main</code> branch, and wildcard <code class="md">develop*</code> and <code class="md">hotfix*</code></li>
-<li>Allowed to merge: <code class="md">Developers</code> and <code class="md">Maintainers</code></li>
-<li>Allowed to push and merge: <code class="md">No-one</code></li>
-<li>Allowed to force push: <code class="md">No</code></li>
-</ul>
-</li>
-<li>Under <code class="md">Settings</code> &gt; <code class="md">Repository</code> &gt; <code class="md">Branch rules</code>:
-<ul>
-<li>Add rule for <code class="md">All protected branches</code></li>
-<li>Add approval rule</li>
-<li>Required approvals at <code class="md">1</code> as a minimum. Projects may choose more approvers.</li>
-</ul>
-</li>
-<li>Under <code class="md">Settings</code> &gt; <code class="md">Merge requests</code>
-<ul>
-<li>Merge method: <code class="md">Fast-forward merge</code></li>
-</ul>
-</li>
-<li>Under <code class="md">Settings</code> &gt; <code class="md">Push rules</code> &gt; <code class="md">Branch name</code>
-<ul>
-<li>Branch name regex: <code class="md">(main|develop|hotfix)|(build|ci|docs|feature|fix|perf|refactor|style|test)[\-\/]([A-Z]{3,4}|NO-JIRA)</code></li>
-</ul>
-</li>
-</ul>
-</div></details>
-<h2 id="rebasing" tabindex="-1"><a class="header-anchor" href="#rebasing">Rebasing</a></h2>
-<p>Rebasing is a way to tidy up the Git commit history. It involves rewriting commits in various ways:</p>
-<ul>
-<li>Fixing merge conflicts: Rebasing can alter changes in a branch to avoid conflict with changes in another branch.</li>
-<li>Cleaning up project history: Rebasing can create a cleaner project history by combining multiple commits into one.</li>
-<li>Editing commit messages: Rebasing can be used to edit previous commit messages.</li>
-<li>Deleting or reverting commits: Rebasing can be used to delete or revert commits that are no longer necessary</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Proceed with caution</p>
-<p>Rebasing will change the Git commit graph and has potential to create an inconsistent repository that is difficult to recover from. Rebase with caution and consult your professional lead if you are unsure of what you are doing.</p>
-<p>Whenever a shared branch is rebased, the entire team needs to be notified. Every team member will need to reset their local branch to the rewritten remote:</p>
-<p>e.g.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token parameter variable">--all</span>
-<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token operator">&lt;</span>branch<span class="token operator">></span> origin/<span class="token operator">&lt;</span>branch<span class="token operator">></span></code></pre>
-</div>
-<h3 id="rebase-or-merge" tabindex="-1"><a class="header-anchor" href="#rebase-or-merge">Rebase or merge</a></h3>
-<p>We recommend that project teams rebase their branches against the upstream branch whenever they diverge. This provides a more streamlined and understandable git history, and simplifies squashing.</p>
-<p>Merging from an upstream branch on the other hand makes squashing and reverting change more difficult.</p>
-<h3 id="squashing" tabindex="-1"><a class="header-anchor" href="#squashing">Squashing</a></h3>
-<p>We recommend that developers squash commits into logical commits for change candidate branches prior to merge into a release candidate branch. This removes unneccesary commits that can confuse and provides a clean and logical git history.</p>
+<p>e.g. <code class="md">LIS-1234-add-back-button</code></p>
 <h2 id="workflow" tabindex="-1"><a class="header-anchor" href="#workflow">Workflow</a></h2>
 <h3 id="preconditions" tabindex="-1"><a class="header-anchor" href="#preconditions">Preconditions</a></h3>
 <ul>
@@ -326,7 +210,6 @@ Adding missing tests or correcting existing tests</li>
 <li>must import into an empty repository in the Git hosting provider. Merging a repository into a pre-existing <code class="md">main</code> will cause confusion in the git history</li>
 </ul>
 </li>
-<li><a href="#controls">Controls</a> must be applied as above</li>
 </ul>
 <h3 id="release-candidate-1" tabindex="-1"><a class="header-anchor" href="#release-candidate-1">Release Candidate</a></h3>
 <ul>
@@ -342,18 +225,8 @@ Any of their downstream change candidate branches should rebase to the new chang
 <ul>
 <li>Developer creates a new change candidate branch, <code class="md">feature-xyz</code> branch from the newly created <code class="md">develop-xyz</code> branch</li>
 <li>When the feature changes are complete they raise a merge request for <a href="../coding-peer-review/">review</a></li>
-<li>The changes are merged (ideally <a href="#squashing">commits squashed</a>) in to the <code class="md">develop</code> branch. The change candidate branch should be deleted</li>
-<li>The <em>change</em> -&gt; <em>release</em> cycle is repeated until all the changes relating the release are stable and tested</li>
-</ul>
-<h2 id="project-documentation" tabindex="-1"><a class="header-anchor" href="#project-documentation">Project documentation</a></h2>
-<p>All projects must document their git branching and release strategy. Deviation from standards must also be documented along with decision records explaining the reason for deviation.</p>
-<p>Documentation should define:</p>
-<ul>
-<li>Root git branching strategy. e.g. nhsbsa, git-flow, github-flow, trunk-based-development, other</li>
-<li>Branch naming convention</li>
-<li>Rebasing approach including rebase vs merge commits, and squashing</li>
-<li>Branch protection</li>
-<li>Approval rules</li>
+<li>The changes are merged (ideally <a href="../dev-git/#squashing">commits squashed</a>) in to the <code class="md">develop</code> branch. The change candidate branch should be deleted</li>
+<li>The <em>change</em> -&gt; <em>release</em> cycle is repeated until all the changes relating to the release are stable and tested</li>
 </ul>
 
         <hr>
@@ -379,7 +252,7 @@ Any of their downstream change candidate branches should rebase to the new chang
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2024-10-01T06:53:54.000Z">1 October 2024</time>
+      Published: <time datetime="2024-11-18T08:12:36.000Z">18 November 2024</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2024-09-20T00:00:00.000Z">20 September 2024</time>
