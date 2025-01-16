@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="All our ‘draft’ articles in one place">
+  <meta name="description" content="Guidance for drafting and monitoring non-functional requirements">
   <meta name="robots" content="noindex">
   
   <title>
-Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Dashboard non-functional requirements (NFRs) - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     
@@ -40,13 +40,13 @@ Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/drafts/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/data/data-visualisation/non-functional/non-functional-req/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="All our ‘draft’ articles in one place">
+  <meta property="og:description" content="Guidance for drafting and monitoring non-functional requirements">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Dashboard non-functional requirements (NFRs) - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=af419bcfaebd" media="all" rel="stylesheet" type="text/css" >
 
@@ -110,6 +110,36 @@ Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#non-functional-requirements-nfrs">Non-functional requirements (NFRs)</a>
+            		</li>
+
+                    <li><a href="#dashboard-non-functional-requirements">Dashboard non-functional requirements</a>
+            
+                <ol>
+                    
+                    <li><a href="#operational-requirements">Operational requirements</a>
+            		</li>
+
+                    <li><a href="#revision-requirements">Revision requirements</a>
+            		</li>
+
+                    <li><a href="#transition-requirements">Transition requirements</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#monitoring-non-functional-requirements">Monitoring non-functional requirements</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -122,127 +152,97 @@ Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Draft articles
+            Dashboard non-functional requirements (NFRs)
           </h1>
-            <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
+            <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
 </strong>
 
 
         </div>
       
 
-        	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/design/service-designer/ucd-log/">User Centred Design (UCD) Log</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Guidance on creating a Service Design UCD log</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T14:14:49.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/design/content-designer/ucd-log/">User Centred Design (UCD) Log</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Guidance on creating a Content Design UCD log</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-21T11:14:01.000Z">21 February 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/design/interaction-designer/ucd-log/">User Centred Design (UCD) Log</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Guidance on creating an Interaction Design UCD log</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T14:54:47.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-git/">Git</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Define how your team use Git to avoid confusion and reduce risk</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-11-18T08:12:36.000Z">18 November 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/research/ucd-log/">User Centred Design (UCD) Log</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Guidance on creating a User Research UCD log</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T15:33:32.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-git-branching-strategy/">Git branching strategy</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">A branching strategy provides structure for pushing changes through to production</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-11-18T08:12:36.000Z">18 November 2024</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<h2 id="non-functional-requirements-nfrs" tabindex="-1"><a class="header-anchor" href="#non-functional-requirements-nfrs">Non-functional requirements (NFRs)</a></h2>
+<p>Non-functional requirements (NFRs) consider the efficiency of a product, describing how efficiently it should function. Functional requirements describe how a product should function, and what it should be able to achieve. Both sets of requirements are equally important.</p>
+<p>Non-functional requirements need to be defined from the outset to ensure the product runs smoothly, and provides a good user experience. Not considering non-functional requirements may cause critical problems for your service and users.</p>
+<p>Non-functional requirements affect the usability of a system, and if implemented correctly provide a good user experience.</p>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Source - NFR guide</span></summary>
+<div class="nhsuk-details__text">
+<p><a href="https://www.plutora.com/blog/non-functional-requirements-guide" target="_blank" rel="noopener">Non-functional requirements: a guide with examples</a></p>
+</div></details>
+<h2 id="dashboard-non-functional-requirements" tabindex="-1"><a class="header-anchor" href="#dashboard-non-functional-requirements">Dashboard non-functional requirements</a></h2>
+<p>The following are some of many factors to consider when building a data product, such as a dashboard or a report:</p>
+<ul>
+<li>accessibility</li>
+<li>accuracy</li>
+<li>auditing</li>
+<li>capacity</li>
+<li>confidentiality</li>
+<li>error-handling</li>
+<li>maintenance</li>
+<li>performance</li>
+<li>reliability</li>
+<li>resilience</li>
+<li>scalability</li>
+<li>security</li>
+<li>testing</li>
+<li>usability</li>
+</ul>
+<h3 id="operational-requirements" tabindex="-1"><a class="header-anchor" href="#operational-requirements">Operational requirements</a></h3>
+<p>Operational requirements describe the performance requirements of a product. These considerations include:</p>
+<ul>
+<li>accessibility</li>
+<li>confidentiality</li>
+<li>integrity</li>
+<li>safety</li>
+<li>usability</li>
+<li>security</li>
+<li>availability</li>
+<li>efficiency</li>
+<li>reliability</li>
+<li>suitability</li>
+</ul>
+<h3 id="revision-requirements" tabindex="-1"><a class="header-anchor" href="#revision-requirements">Revision requirements</a></h3>
+<p>Revision requirements define any changes or corrections to the product. This could be due to unexpected errors, or improvements made. The ability for a system, and any high-priority features to bounce back quickly, and maintain availability is of utmost importance.</p>
+<p>The following are all considered to be revision requiremnets:</p>
+<ul>
+<li>maintainability</li>
+<li>scalability</li>
+<li>flexibility</li>
+<li>verifiability</li>
+<li>modifiability</li>
+</ul>
+<h3 id="transition-requirements" tabindex="-1"><a class="header-anchor" href="#transition-requirements">Transition requirements</a></h3>
+<p>Transition requirements are system management considerations, including how the product will work within the surrounding environment and alongside other products.<br>
+The following are all considered to be transition requirements:</p>
+<ul>
+<li>reusability</li>
+<li>ability to install</li>
+<li>portability</li>
+<li>interoperability</li>
+</ul>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Source - NFR guide</span></summary>
+<div class="nhsuk-details__text">
+<p><a href="https://www.plutora.com/blog/non-functional-requirements-guide" target="_blank" rel="noopener">Non-functional requirements: a guide with examples</a></p>
+</div></details>
+<h2 id="monitoring-non-functional-requirements" tabindex="-1"><a class="header-anchor" href="#monitoring-non-functional-requirements">Monitoring non-functional requirements</a></h2>
+<p>We can monitor non-functional requirements in a number of ways and plan for these in the development of your data product.<br>
+We can do this by:</p>
+<ul>
+<li>linking in with the relevant teams when developing and rolling out your dashboard- for example security, architecture</li>
+<li>following best practices such as data storage and access privileges</li>
+<li>following testing processes- for example functions, accessibility, figures</li>
+<li>using in-built metrics, such as monitoring loading times</li>
+<li>collecting and monitoring feedback from users</li>
+<li>ensuring data literacy when checking figures</li>
+<li>processing improvements and automating alerts</li>
+<li>creating back-up plans and service wrappers</li>
+<li>using structured maintenance processes</li>
+<li>ensuring the appropriate infrastructure is in place such as capacity and tooling</li>
+<li>documenting processes and any considerations taken within the dashboard development process</li>
+<li>reusability and scalability planning of the product, minimising manual overhead</li>
+<li>ensuring version control processes are in place</li>
+</ul>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -254,7 +254,7 @@ Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdrafts&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdata%2Fdata-visualisation%2Fnon-functional%2Fnon-functional-req&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -267,7 +267,13 @@ Draft articles - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2022-09-24T19:43:58.000Z">24 September 2022</time>
+      Published: <time datetime="2023-12-12T10:13:59.000Z">12 December 2023</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Last reviewed: <time datetime="2024-12-20T00:00:00.000Z">20 December 2024</time>
+    </p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Next review due: <time datetime="2025-12-20T00:00:00.000Z">20 December 2025</time>
     </p>
 </div>
 
