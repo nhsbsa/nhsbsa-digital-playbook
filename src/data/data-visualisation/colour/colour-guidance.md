@@ -68,7 +68,7 @@ The primary colour NHS Blue should be used to pull focus against NHS Grey 3.
     "blockSize": "l"})
 }}
 
-`#AEB7BD` is the hex code for NHS Grey 3 (grayish blue):  
+`#AEB7BD` is the hex code for NHS Grey 3 (greyish blue):  
 
 {{ colorBlock({
     "color": "#AEB7BD",
