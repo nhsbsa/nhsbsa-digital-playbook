@@ -45,7 +45,7 @@ You can declutter by:
     "blockSize": "l"})
 }}
 
-`#AEB7BD` is the hex code for NHS Grey 3 (grayish blue):  
+`#AEB7BD` is the hex code for NHS Grey 3 (greyish blue):  
 
 {{ colorBlock({
     "color": "#AEB7BD",
@@ -69,7 +69,7 @@ You can pull focus by:
 `#AEB7BD` is the hex code for NHS Grey 3 (greyish blue):  
 
 {{ colorBlock({
-    "color": "#005EB8",
+    "color": "#AEB7BD",
     "blockSize": "l"})
 }}
 
@@ -83,7 +83,7 @@ You can pull focus by:
 `#D8DDE0` is the hex code for NHS Grey 4 (light greyish blue):  
 
 {{ colorBlock({
-    "color": "#005EB8",
+    "color": "#D8DDE0",
     "blockSize": "l"})
 }}
   
