@@ -2,7 +2,7 @@
 layout: article
 title: "Key performance indicator (KPI) cards"
 description: "Guidance for using KPI cards at the NHSBSA"
-status: REVIEW
+status: DRAFT
 tags: data-viz-home
 order: 55
 review:
@@ -53,12 +53,14 @@ Include information to ensure the KPI card is meaningful to a user. In this exam
 ![Example KPI card](units-by-month-card.png)  
   
 KPI cards that use the NHS toolkit should be clear to the user, with the main value in the largest font, and trend values shown in a smaller font, accompanied by a symbol as well as an appropriate colour.  
+When a card has a title, this should be place in the top left of the card.  
+Any additional context such as trend or time period information should be at the bottom of the card.
   
 ![Example KPI cards using NHS toolkit](toolkit-cards.png)  
   
 ## Format  
   
-Callout values and labels should always be centrally aligned. If a title is included, this should be left aligned and located in the top right corner.  
+Callout values and labels should always be centrally aligned. If a title is included, this should be left aligned and located in the top left corner.  
   
 The callout value should be the largest font size as it is the most important value (in Power BI font size 36 is used).  
 
