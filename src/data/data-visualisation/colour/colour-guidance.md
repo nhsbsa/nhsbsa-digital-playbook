@@ -2,7 +2,7 @@
 layout: article
 title: "Colour guidance"
 description: "Aspects to be considered regarding colour for data visualisation at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: dv-colour
 order: 1
 review:
