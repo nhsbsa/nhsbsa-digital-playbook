@@ -2,7 +2,7 @@
 layout: article
 title: "Chart alternative formats"
 description: "Standards and guidance for choosing appropriate alternative chart formats"
-status: REVIEW
+status: DRAFT
 tags: data-charts
 order: 3
 review:
