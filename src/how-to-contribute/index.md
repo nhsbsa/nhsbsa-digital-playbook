@@ -2,7 +2,7 @@
 layout: article
 title: "Contributing to the playbook"
 tags: [home, 11ty]
-order: 1000
+order: 11
 related:
   tag: playbook
 ---
