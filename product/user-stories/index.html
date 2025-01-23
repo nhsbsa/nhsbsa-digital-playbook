@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Find out what our technology stacks are">
+  <meta name="description" content="Best practice guide to writing user stories">
   <meta name="robots" content="noindex">
   
   <title>
-Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Writing user stories - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     
@@ -40,13 +40,13 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/product/user-stories/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="Find out what our technology stacks are">
+  <meta property="og:description" content="Best practice guide to writing user stories">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Writing user stories - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=af419bcfaebd" media="all" rel="stylesheet" type="text/css" >
 
@@ -116,13 +116,13 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#languages-and-frameworks">Languages and frameworks</a>
+                    <li><a href="#the-lifecycle-of-a-user-story">The lifecycle of a user story</a>
             		</li>
 
-                    <li><a href="#data-stores">Data stores</a>
+                    <li><a href="#template-for-user-stories">Template for user stories</a>
             		</li>
 
-                    <li><a href="#platforms">Platforms</a>
+                    <li><a href="#example-user-story">Example user story</a>
             		</li>
                 </ol>
             </div>
@@ -140,140 +140,95 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Technologies
+            Writing user stories
           </h1>
-            <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
+          
         </div>
       
 
-<h2 id="languages-and-frameworks" tabindex="-1"><a class="header-anchor" href="#languages-and-frameworks">Languages and frameworks</a></h2>
-<p>We use these languages:</p>
+<p>User stories should be a short, simple description of a feature or functionality told from the perspective of the end user. They typically follow a format like:</p>
+<p><strong>As a…</strong> [type of user]<br>
+<strong>I want…</strong> [an action]<br>
+<strong>So that…</strong> [a benefit or a value]</p>
+<p>User stories help teams understand what the user needs and why, ensuring that the development work is aligned with user needs.</p>
+<p>User stories are usually written by product owners, but they can also be created by other people on the team such as business analysts, developers, or the members of the user centered design (UCD) team. The key is that they should be written collaboratively to ensure all perspectives are considered.</p>
+<p>The product owner plays a crucial role in user stories. They are responsible for:</p>
 <ul>
-<li>
-<p><strong>Java and Spring</strong><br>
-Java is our historical, core language. We have most expertise in it, and the majority of our code is written in it.<br>
-Almost all of our applications use the Spring Framework; predominantly standalone Spring Boot apps, Spring MVC for web-apps and RESTful web-services, ORM using Spring Data JPA, with some Spring Integration and Spring Batch.</p>
-</li>
-<li>
-<p><strong>Node.js and Javascript/Typescript</strong><br>
-Our more recent front-ends use Nodes.js, usually written in Javascript or Typescript.<br>
-We prefer Node.js for our Lambda implementations.</p>
-</li>
-<li>
-<p><strong>Python</strong> (currently in ‘assess’)<br>
-We are looking at Python for some Machine Learning/AI projects. Its also used in some of our platform scripts.<br>
-Consult your Delivery Manager and Professional Lead if you are considering using Python.</p>
-</li>
+<li>creating and maintaining the product backlog, ensuring that user stories are well-defined and prioritised</li>
+<li>clarifying requirements and providing detailed explanations and answering questions from the development team</li>
+<li>agreeing what success looks like in the form of acceptance criteria for each user story</li>
+<li>ensuring that user stories align with stakeholder/user needs and expectations</li>
 </ul>
-<h2 id="data-stores" tabindex="-1"><a class="header-anchor" href="#data-stores">Data stores</a></h2>
-<p>We use these data stores:</p>
+<p>User stories should be directly aligned with the product roadmap, which outlines the objectives and key results (OKRs) of the product. Each user story should contribute to achieving these goals. The product owner ensures that the user stories are prioritised based on their alignment with the roadmap and their impact on the product’s success.</p>
+<p>Reviewing user stories is a collaborative process involving:</p>
 <ul>
-<li>RDBMS using <a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> and <a href="https://aws.amazon.com/rds/postgresql/" target="_blank" rel="noopener">AWS RDS</a>. Schemas are managed by <a href="https://liquibase.org/" target="_blank" rel="noopener">Liquibase</a></li>
-<li>Key-value store using <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noopener">AWS DynamoDB</a></li>
-<li>Caching with <a href="https://redis.io/" target="_blank" rel="noopener">Redis</a></li>
+<li>product owners - to ensure the stories align with the product vision and goals</li>
+<li>development team - to assess feasibility and provide estimates</li>
+<li>stakeholders - to validate that the stories meet their needs and expectations (often through demos or testing of the completed work)</li>
+<li>quality assurance - to ensure that the stories have clear acceptance criteria and are testable</li>
 </ul>
-<h2 id="platforms" tabindex="-1"><a class="header-anchor" href="#platforms">Platforms</a></h2>
-<p>We use these platforms:</p>
+<p>User stories are prioritised based on several factors:</p>
 <ul>
-<li>
-<p><strong>AWS</strong><br>
-The majority of our Digital services are hosted in AWS. We use many services including S3, SQS, SNS, ECS, API Gateway, RDS &amp; Aurora (Postgres) and DynamoDB. We manage additional platform services within AWS including Redis, SonarQube and Nexus.</p>
-</li>
-<li>
-<p><strong>Azure</strong><br>
-Our business function is supported in many realms by Microsoft Azure hosted services. These include Dynamics CRM, Azure AD, Microsoft 365.</p>
-</li>
-<li>
-<p><strong>On prem Websphere and Oracle</strong><br>
-We have a legacy estate based on Websphere and Oracle.</p>
-</li>
+<li>value - how much value the story adds to the product</li>
+<li>user impact - the importance of the story to the end user</li>
+<li>dependencies - whether the story is dependent on other stories or tasks</li>
+<li>effort and complexity - the estimated effort required to complete the story</li>
+<li>risk - the potential risks associated with implementing or not implementing the story</li>
 </ul>
-        	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-patching/">Application patching</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Keeping our software up to date with the latest versions of dependant libraries and runtimes</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-01-13T14:52:36.000Z">13 January 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/">Release adoption schedule</a>
-						</h2>
-						
-					</div>
-					<p class="nhsuk-card__description">When to adopt software releases into production</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-11-18T08:41:14.000Z">18 November 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-cloud/">Cloud and SaaS</a>
-						</h2>
-						
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-25T17:21:58.000Z">25 January 2022</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-node/">Node.js</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-06T10:02:50.000Z">6 May 2023</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-java/">Java</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T08:16:16.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<h2 id="the-lifecycle-of-a-user-story" tabindex="-1"><a class="header-anchor" href="#the-lifecycle-of-a-user-story">The lifecycle of a user story</a></h2>
+<ol>
+<li>The product owner or business analyst writes the user story.</li>
+<li>The story is reviewed and refined with input from the development team and stakeholders.</li>
+<li>The story is prioritised in the product backlog.</li>
+<li>The story is included in a sprint or iteration planning session.</li>
+<li>The development team works on the story.</li>
+<li>The story is tested to ensure it meets the acceptance criteria.</li>
+<li>The product owner reviews the completed story and accepts it if it meets the criteria.</li>
+<li>The story is released to users.</li>
+</ol>
+<h2 id="template-for-user-stories" tabindex="-1"><a class="header-anchor" href="#template-for-user-stories">Template for user stories</a></h2>
+<div class="md card">
+<p><strong>Title</strong><br>
+User Story Title</p>
+<p><strong>Description</strong><br>
+As a [type of user], I want [an action] so that [a benefit/a value].</p>
+<p><strong>Acceptance Criteria (written using ‘Given When Then’ format)</strong></p>
+<ul>
+<li>[Criterion 1]</li>
+<li>[Criterion 2]</li>
+<li>[Criterion 3]</li>
+</ul>
+<p><strong>Additional Information</strong></p>
+<ul>
+<li>Priority: [High/Medium/Low] (Priority ranking varies from project to project at BSA)</li>
+<li>Story Points: [Estimate – time or complexity]</li>
+<li>Dependencies: [Any dependencies]</li>
+<li>Notes: [Any additional notes]</li>
+<li>Prototype: [Link to relevant prototypes]</li>
+<li>User need ID: [User need ID will support traceability and future service assessments]</li>
+</ul>
+</div>
+<h2 id="example-user-story" tabindex="-1"><a class="header-anchor" href="#example-user-story">Example user story</a></h2>
+<div class="md card">
+<p><strong>Title</strong><br>
+User Login</p>
+<p><strong>Description</strong><br>
+As a returning user, I want to log in to my account so that I can access my personalised dashboard.</p>
+<p><strong>Acceptance Criteria</strong><br>
+Scenario 1 – Login with correct details</p>
+<ul>
+<li><strong>Given…</strong> the user is on the login page</li>
+<li><strong>When…</strong> the user enters a valid username and password</li>
+<li><strong>Then…</strong> the user should be redirected to their dashboard</li>
+</ul>
+<p>Scenario 2 – Login with incorrect details</p>
+<ul>
+<li><strong>Given…</strong> the user is on the login page</li>
+<li><strong>When…</strong> the user enters an invalid username or password</li>
+<li><strong>Then…</strong> the user should see an error message indicating the login failed</li>
+</ul>
+</div>
+<p>The behavior driven development (BDD) format helps to clearly define the expected behavior of the system in different scenarios, making it easier for developers and testers to understand and implement the requirements.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -285,7 +240,7 @@ We have a legacy estate based on Websphere and Oracle.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Findex&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=product-ownership&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fproduct%2Fuser-stories&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -299,12 +254,6 @@ We have a legacy estate based on Websphere and Oracle.</p>
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Published: <time datetime="2025-01-23T15:40:08.000Z">23 January 2025</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

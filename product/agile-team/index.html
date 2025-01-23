@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Find out what our technology stacks are">
+  <meta name="description" content="What does a product owner do in an agile team?">
   <meta name="robots" content="noindex">
   
   <title>
-Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Agile and product ownership - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     
@@ -40,13 +40,13 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/product/agile-team/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="Find out what our technology stacks are">
+  <meta property="og:description" content="What does a product owner do in an agile team?">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Agile and product ownership - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=af419bcfaebd" media="all" rel="stylesheet" type="text/css" >
 
@@ -116,13 +116,19 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#languages-and-frameworks">Languages and frameworks</a>
+                    <li><a href="#the-role-of-the-product-owner-in-an-agile-team">The role of the product owner in an agile team</a>
+            
+                <ol>
+                    
+                    <li><a href="#working-with-the-delivery-manager">Working with the delivery manager</a>
             		</li>
 
-                    <li><a href="#data-stores">Data stores</a>
+                    <li><a href="#working-with-the-business-analyst">Working with the business analyst</a>
             		</li>
 
-                    <li><a href="#platforms">Platforms</a>
+                    <li><a href="#working-with-user-centered-design-ucd">Working with user centered design (UCD)</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </div>
@@ -140,140 +146,61 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Technologies
+            Agile and product ownership
           </h1>
-            <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
+          
         </div>
       
 
-<h2 id="languages-and-frameworks" tabindex="-1"><a class="header-anchor" href="#languages-and-frameworks">Languages and frameworks</a></h2>
-<p>We use these languages:</p>
+<h2 id="the-role-of-the-product-owner-in-an-agile-team" tabindex="-1"><a class="header-anchor" href="#the-role-of-the-product-owner-in-an-agile-team">The role of the product owner in an agile team</a></h2>
+<p>The product owner in an agile team plays an important role in defining and prioritising the product backlog to make sure the team delivers maximum value to the users. They should act as the bridge between stakeholders and the development team ensuring that the product vision is clearly understood and aligned with business goals.</p>
+<p>The key responsibilities within the team are to:</p>
 <ul>
-<li>
-<p><strong>Java and Spring</strong><br>
-Java is our historical, core language. We have most expertise in it, and the majority of our code is written in it.<br>
-Almost all of our applications use the Spring Framework; predominantly standalone Spring Boot apps, Spring MVC for web-apps and RESTful web-services, ORM using Spring Data JPA, with some Spring Integration and Spring Batch.</p>
-</li>
-<li>
-<p><strong>Node.js and Javascript/Typescript</strong><br>
-Our more recent front-ends use Nodes.js, usually written in Javascript or Typescript.<br>
-We prefer Node.js for our Lambda implementations.</p>
-</li>
-<li>
-<p><strong>Python</strong> (currently in ‘assess’)<br>
-We are looking at Python for some Machine Learning/AI projects. Its also used in some of our platform scripts.<br>
-Consult your Delivery Manager and Professional Lead if you are considering using Python.</p>
-</li>
+<li>articulate the product vision and strategy to the team</li>
+<li>ensure the development team understands the product goals and user needs</li>
+<li>create, prioritise and maintain the product backlog</li>
+<li>communicate with stakeholders to gather requirements and feedback</li>
+<li>make decisions on scope, priorities and trade-offs when required</li>
+<li>review completed work against acceptance criteria</li>
+<li>continuously refine the backlog based on feedback and changing priorities</li>
+<li>make sure Government Digital Service (GDS) standards are being followed</li>
 </ul>
-<h2 id="data-stores" tabindex="-1"><a class="header-anchor" href="#data-stores">Data stores</a></h2>
-<p>We use these data stores:</p>
+<h3 id="working-with-the-delivery-manager" tabindex="-1"><a class="header-anchor" href="#working-with-the-delivery-manager">Working with the delivery manager</a></h3>
+<p>The product owner and delivery manager work closely together to ensure the successful delivery of the product. While the product owner focuses on defining and prioritising the product backlog, the delivery manager is responsible for overseeing the execution of the development process.</p>
+<p>Their collaboration ensures that the team is aligned with the product vision and that the delivery process is efficient and effective.</p>
 <ul>
-<li>RDBMS using <a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> and <a href="https://aws.amazon.com/rds/postgresql/" target="_blank" rel="noopener">AWS RDS</a>. Schemas are managed by <a href="https://liquibase.org/" target="_blank" rel="noopener">Liquibase</a></li>
-<li>Key-value store using <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noopener">AWS DynamoDB</a></li>
-<li>Caching with <a href="https://redis.io/" target="_blank" rel="noopener">Redis</a></li>
+<li>Both roles ensure that the team understands and is aligned with the product vision and goals.</li>
+<li>The product owner prioritises the backlog, while the delivery manager plans and coordinates the development activities for sprints.</li>
+<li>They maintain open and continuous communication to address any issues, changes, or updates.</li>
+<li>The delivery manager ensures that the team has the necessary resources, while the product owner provides clarity on priorities.</li>
+<li>They work together to track progress, with the delivery manager focusing on timelines and the product owner on the value delivered.</li>
+<li>Both roles identify and mitigate risks, ensuring that the project stays on track.</li>
+<li>They establish a feedback loop to continuously improve the product and the delivery process based on stakeholder and team input.</li>
 </ul>
-<h2 id="platforms" tabindex="-1"><a class="header-anchor" href="#platforms">Platforms</a></h2>
-<p>We use these platforms:</p>
+<h3 id="working-with-the-business-analyst" tabindex="-1"><a class="header-anchor" href="#working-with-the-business-analyst">Working with the business analyst</a></h3>
+<p>In the various agile delivery teams across the NHSBSA, the business analyst and product owner work closely together to ensure that the product being developed meets the needs of the stakeholders and delivers maximum value.</p>
+<p>The business analyst normally supports the product owner with:</p>
 <ul>
-<li>
-<p><strong>AWS</strong><br>
-The majority of our Digital services are hosted in AWS. We use many services including S3, SQS, SNS, ECS, API Gateway, RDS &amp; Aurora (Postgres) and DynamoDB. We manage additional platform services within AWS including Redis, SonarQube and Nexus.</p>
-</li>
-<li>
-<p><strong>Azure</strong><br>
-Our business function is supported in many realms by Microsoft Azure hosted services. These include Dynamics CRM, Azure AD, Microsoft 365.</p>
-</li>
-<li>
-<p><strong>On prem Websphere and Oracle</strong><br>
-We have a legacy estate based on Websphere and Oracle.</p>
-</li>
+<li>refining the product backlog by breaking down high-level requirements into detailed user stories, prioritisation of stories and ensuring they are ready for development</li>
+<li>working together to explain the user stories to the development team, answer any questions, and ensure that the team understands the scope and objectives of the sprint</li>
+<li>to provide regular feedback to the development team through the sprint, addressing any issues that arise and responding to any questions</li>
 </ul>
-        	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-patching/">Application patching</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Keeping our software up to date with the latest versions of dependant libraries and runtimes</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-01-13T14:52:36.000Z">13 January 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/">Release adoption schedule</a>
-						</h2>
-						
-					</div>
-					<p class="nhsuk-card__description">When to adopt software releases into production</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-11-18T08:41:14.000Z">18 November 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-cloud/">Cloud and SaaS</a>
-						</h2>
-						
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-25T17:21:58.000Z">25 January 2022</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-node/">Node.js</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-06T10:02:50.000Z">6 May 2023</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-java/">Java</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T08:16:16.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>It’s not uncommon for the business analyst to step in for the product owner and handle some of their tasks. However, the product owner remains accountable for all product decisions in every case</p>
+</div>
+<h3 id="working-with-user-centered-design-ucd" tabindex="-1"><a class="header-anchor" href="#working-with-user-centered-design-ucd">Working with user centered design (UCD)</a></h3>
+<p>The product owner collaborates closely with the UCD team to ensure that the product is not only functional but also user friendly and meets the needs of its end-users.</p>
+<p>The product owner and UCD team work together on:</p>
+<ul>
+<li>refining the backlog by incorporating user research findings into the product backlog - this ensures that user needs are represented, prioritised and can be planned into the development process</li>
+<li>collaborating in sprint planning to explain the user stories and design requirements to the development team</li>
+<li>walkthrough proposed designs to help development teams understand the user experience, the rationale behind design decisions and can implement them effectively</li>
+<li>participating in design reviews with the UCD team to provide feedback and ensure that the designs align with the product vision and user needs</li>
+<li>participate in sprint reviews to gather feedback from stakeholders and users</li>
+<li>reviewing insights from surveys and other feedback channels</li>
+<li>provide the UCD team with feedback, ensuring there is a continuous feedback loop in place</li>
+</ul>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -285,7 +212,7 @@ We have a legacy estate based on Websphere and Oracle.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Findex&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=product-ownership&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fproduct%2Fagile-team&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -299,12 +226,6 @@ We have a legacy estate based on Websphere and Oracle.</p>
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Published: <time datetime="2025-01-23T15:40:08.000Z">23 January 2025</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 

@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Find out what our technology stacks are">
+  <meta name="description" content="Prioritisation techniques">
   <meta name="robots" content="noindex">
   
   <title>
-Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Prioritisation - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     
@@ -40,13 +40,13 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/product/prioritisation/">
   <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:description" content="Find out what our technology stacks are">
+  <meta property="og:description" content="Prioritisation techniques">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Prioritisation - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=af419bcfaebd" media="all" rel="stylesheet" type="text/css" >
 
@@ -116,13 +116,52 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#languages-and-frameworks">Languages and frameworks</a>
+                    <li><a href="#must-have-should-have-could-have-wont-have-moscow">Must Have, Should Have, Could Have, Won’t Have (MoSCoW)</a>
+            
+                <ol>
+                    
+                    <li><a href="#pros">Pros:</a>
             		</li>
 
-                    <li><a href="#data-stores">Data stores</a>
+                    <li><a href="#cons">Cons:</a>
+            		</li>
+                </ol>
             		</li>
 
-                    <li><a href="#platforms">Platforms</a>
+                    <li><a href="#value-vs-effort-matrix">Value vs. Effort Matrix</a>
+            
+                <ol>
+                    
+                    <li><a href="#pros-1">Pros:</a>
+            		</li>
+
+                    <li><a href="#cons-1">Cons:</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#cost-of-delay-work-in-progress">Cost of Delay (work in progress)</a>
+            
+                <ol>
+                    
+                    <li><a href="#pros-2">Pros:</a>
+            		</li>
+
+                    <li><a href="#cons-2">Cons:</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#reach-impact-confidence-effort-rice">Reach, Impact, Confidence, Effort (RICE)</a>
+            
+                <ol>
+                    
+                    <li><a href="#pros-3">Pros:</a>
+            		</li>
+
+                    <li><a href="#cons-3">Cons:</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </div>
@@ -140,140 +179,86 @@ Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Technologies
+            Prioritisation
           </h1>
-            <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
+          
         </div>
       
 
-<h2 id="languages-and-frameworks" tabindex="-1"><a class="header-anchor" href="#languages-and-frameworks">Languages and frameworks</a></h2>
-<p>We use these languages:</p>
+<p>The product owner represents the needs of many stakeholders via the product backlog. Stakeholders wishing to make changes to a product should make a request to do so through communicating with the product owner, who will review the request and decide on whether this will be taken forward based on the need, feasibility, value and priority.</p>
+<p>Prioritisation is a key responsibility of the product owner, ensuring that the most valuable and impactful features are delivered first. This process involves evaluating and ranking items in the product backlog based on their importance to the business and the user. Effective prioritisation helps the team focus on delivering maximum value and achieving the product goals efficiently.</p>
+<p>The following prioritisation techniques can be used by product owners at NHSBSA:</p>
+<h2 id="must-have-should-have-could-have-wont-have-moscow" tabindex="-1"><a class="header-anchor" href="#must-have-should-have-could-have-wont-have-moscow">Must Have, Should Have, Could Have, Won’t Have (MoSCoW)</a></h2>
+<p>The MoSCoW method categorises tasks into four groups: must haves, should haves, could haves, and won’t haves. This helps teams focus on the most critical elements first.</p>
+<h3 id="pros" tabindex="-1"><a class="header-anchor" href="#pros">Pros:</a></h3>
 <ul>
-<li>
-<p><strong>Java and Spring</strong><br>
-Java is our historical, core language. We have most expertise in it, and the majority of our code is written in it.<br>
-Almost all of our applications use the Spring Framework; predominantly standalone Spring Boot apps, Spring MVC for web-apps and RESTful web-services, ORM using Spring Data JPA, with some Spring Integration and Spring Batch.</p>
-</li>
-<li>
-<p><strong>Node.js and Javascript/Typescript</strong><br>
-Our more recent front-ends use Nodes.js, usually written in Javascript or Typescript.<br>
-We prefer Node.js for our Lambda implementations.</p>
-</li>
-<li>
-<p><strong>Python</strong> (currently in ‘assess’)<br>
-We are looking at Python for some Machine Learning/AI projects. Its also used in some of our platform scripts.<br>
-Consult your Delivery Manager and Professional Lead if you are considering using Python.</p>
-</li>
+<li>Clearly distinguishes between essential and non-essential tasks.</li>
+<li>Adaptable to changing priorities and requirements.</li>
+<li>Focus: Helps teams concentrate on delivering the minimum viable product (MVP).</li>
 </ul>
-<h2 id="data-stores" tabindex="-1"><a class="header-anchor" href="#data-stores">Data stores</a></h2>
-<p>We use these data stores:</p>
+<h3 id="cons" tabindex="-1"><a class="header-anchor" href="#cons">Cons:</a></h3>
 <ul>
-<li>RDBMS using <a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> and <a href="https://aws.amazon.com/rds/postgresql/" target="_blank" rel="noopener">AWS RDS</a>. Schemas are managed by <a href="https://liquibase.org/" target="_blank" rel="noopener">Liquibase</a></li>
-<li>Key-value store using <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noopener">AWS DynamoDB</a></li>
-<li>Caching with <a href="https://redis.io/" target="_blank" rel="noopener">Redis</a></li>
+<li>Can be subjective, as different stakeholders might have varying opinions on what constitutes a “must have”.</li>
+<li>Neglect of lower priorities “could haves” and “won’t haves” might never get done.</li>
 </ul>
-<h2 id="platforms" tabindex="-1"><a class="header-anchor" href="#platforms">Platforms</a></h2>
-<p>We use these platforms:</p>
+<div class="admonition warning">
+<p class="admonition-title">Best Used In</p>
+<p>Projects where it’s crucial to deliver a working product quickly, such as in agile environments or when developing an most valuable product (MVP).</p>
+</div>
+<h2 id="value-vs-effort-matrix" tabindex="-1"><a class="header-anchor" href="#value-vs-effort-matrix">Value vs. Effort Matrix</a></h2>
+<p>This technique involves plotting tasks on a matrix based on their value (benefit) and effort (cost) to identify quick wins and avoid time sinks.</p>
+<h3 id="pros-1" tabindex="-1"><a class="header-anchor" href="#pros-1">Pros:</a></h3>
 <ul>
-<li>
-<p><strong>AWS</strong><br>
-The majority of our Digital services are hosted in AWS. We use many services including S3, SQS, SNS, ECS, API Gateway, RDS &amp; Aurora (Postgres) and DynamoDB. We manage additional platform services within AWS including Redis, SonarQube and Nexus.</p>
-</li>
-<li>
-<p><strong>Azure</strong><br>
-Our business function is supported in many realms by Microsoft Azure hosted services. These include Dynamics CRM, Azure AD, Microsoft 365.</p>
-</li>
-<li>
-<p><strong>On prem Websphere and Oracle</strong><br>
-We have a legacy estate based on Websphere and Oracle.</p>
-</li>
+<li>Provides a clear visual representation of priorities.</li>
+<li>Helps identify tasks that offer the most value for the least effort.</li>
+<li>Can be adapted to different types of projects and goals.</li>
 </ul>
-        	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-patching/">Application patching</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<p class="nhsuk-card__description">Keeping our software up to date with the latest versions of dependant libraries and runtimes</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-01-13T14:52:36.000Z">13 January 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-release-adoption-schedule/">Release adoption schedule</a>
-						</h2>
-						
-					</div>
-					<p class="nhsuk-card__description">When to adopt software releases into production</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-11-18T08:41:14.000Z">18 November 2024</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-cloud/">Cloud and SaaS</a>
-						</h2>
-						
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-01-25T17:21:58.000Z">25 January 2022</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-node/">Node.js</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-06T10:02:50.000Z">6 May 2023</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/technologies/tech-java/">Java</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--yellow">
-  REVIEW
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-02-15T08:16:16.000Z">15 February 2024</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<h3 id="cons-1" tabindex="-1"><a class="header-anchor" href="#cons-1">Cons:</a></h3>
+<ul>
+<li>Estimating value and effort can be subjective and inconsistent.</li>
+<li>May oversimplify complex tasks and dependencies.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Best Used In</p>
+<p>Situations where quick decision making is needed and there’s a need to balance high value tasks with available resources.</p>
+</div>
+<h2 id="cost-of-delay-work-in-progress" tabindex="-1"><a class="header-anchor" href="#cost-of-delay-work-in-progress">Cost of Delay (work in progress)</a></h2>
+<p>This method calculates the impact of delaying a task or project, helping prioritise tasks that should be completed sooner to minimise impact of not doing something.</p>
+<h3 id="pros-2" tabindex="-1"><a class="header-anchor" href="#pros-2">Pros:</a></h3>
+<ul>
+<li>Provides a clear rationale for prioritisation, based on impact asessments.</li>
+<li>Improved decision making, enhancing resource allocation and urgency.</li>
+<li>Speaks clearly to stakeholders in terms of impact.</li>
+</ul>
+<h3 id="cons-2" tabindex="-1"><a class="header-anchor" href="#cons-2">Cons:</a></h3>
+<ul>
+<li>Can be time consuming and difficult to gather financial data needed.</li>
+<li>May be complex to implement and require significant effort to maintain.</li>
+<li>Does not consider longer term strategic goals.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Best Used In</p>
+<p>Projects where financial impact is a critical factor, such as in external deadlines such those set by Department of Health and Social Care (DHSC).</p>
+</div>
+<h2 id="reach-impact-confidence-effort-rice" tabindex="-1"><a class="header-anchor" href="#reach-impact-confidence-effort-rice">Reach, Impact, Confidence, Effort (RICE)</a></h2>
+<p>The RICE method scores tasks based on Reach (number of people affected), Impact (effect on users), Confidence (certainty of estimates), and Effort (resources required).</p>
+<h3 id="pros-3" tabindex="-1"><a class="header-anchor" href="#pros-3">Pros:</a></h3>
+<ul>
+<li>Structured approach, provides a clear, quantifiable method for prioritisation.</li>
+<li>Encourages objective, data driven decision-making.</li>
+<li>Considers multiple factors, providing a balanced view.</li>
+</ul>
+<h3 id="cons-3" tabindex="-1"><a class="header-anchor" href="#cons-3">Cons:</a></h3>
+<ul>
+<li>Can be time-consuming to gather data and calculate scores.</li>
+<li>May be complex to implement and require significant effort to maintain.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Best Used In</p>
+<p>Mature products or projects where detailed analysis and data driven decisions are essential for prioritisation.</p>
+</div>
+<p>These techniques offer various ways to prioritise work effectively, each with its own strengths and weaknesses. What they typically don’t consider is dependencies from one piece of work to another, or where work is needed to mitigate business risk – it could therefore be that a combination of methods is needed, or that the method chosen is just the starting point in prioritisation discussions.</p>
+<p>Scoring is also not a one and done exercise – it could be that the score changes as new information is learned. It will be for the product owner and team to choose a technique that works best for them.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -285,7 +270,7 @@ We have a legacy estate based on Websphere and Oracle.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Findex&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=product-ownership&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fproduct%2Fprioritisation&#39;%20" target="_blank" rel="noopener">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -299,12 +284,6 @@ We have a legacy estate based on Websphere and Oracle.</p>
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Published: <time datetime="2025-01-23T15:40:08.000Z">23 January 2025</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
-    </p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Next review due: <time datetime="2024-05-06T00:00:00.000Z">6 May 2024</time>
     </p>
 </div>
 
