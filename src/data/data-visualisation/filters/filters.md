@@ -13,11 +13,7 @@ review:
   
 Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. If there are more than three filters on a dashboard this can take away the value and visual impact of the message and distract a user.  
   
-Features such as parameters can be created and used to change variables within a chart. An example is below. In the first image, ‘Phone’ is selected:  
-   
-![alt text](images/filters_1.png)
-
-![alt text](images/filters_2.png)
+Parameters can be created and used to change variables within a chart.
   
 To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
   
