@@ -14,14 +14,14 @@ review:
 Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. If there are more than three filters on a dashboard this can take away the value and visual impact of the message and distract a user.  
   
 Features such as parameters can be created and used to change variables within a chart. An example is below. In the first image, ‘Phone’ is selected:  
-  
-image 1
+   
+![alt text](images/filters_1.png)
 
-image 2  
+![alt text](images/filters_2.png)
   
-To help our end users and developers understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
+To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
   
-image 3  
+![image 3](images/filters_3.png)  
   
 ## Placement of a filter  
   
@@ -37,7 +37,7 @@ Global filters should be prioritised and included at the top left of a dashboard
   
 An example of filters placed on the top left of a dashboard:  
   
-image 4  
+![image 4](images/filters_4.png)  
   
 Within some data visualisation tools filter panels can be included which may use less resource within your report. However, with a standard in-built filter you cannot customise the pane. 
 
@@ -48,7 +48,7 @@ Visualisations themselves can also be used as a filter. Many data visualisation 
 ## Design of a filter  
   
 A filter should be used to enable functionality of a dashboard for a user, but not distract from the main content. 
-Using a label as a header fora filter, for example 'Contact type', is useful in making sure the purpose of a filter is clearly stated.   
+Using a label as a header for a filter, for example 'Contact type', is useful in making sure the purpose of a filter is clearly stated.   
 It must also always be clear to a user which filters are in place, which can be achieved by using dynamic chart titles.  
   
 Filters should have:  
@@ -61,8 +61,8 @@ Filters should have:
 
 If the filter includes a timeline, NHS Blue (#005EB8) should be used:  
   
-image 5
+![image 5](images/filters_5.png)
   
 A ‘Remove applied filters’ button in the top right-hand side of the screen is optional. This is to allow the user to quickly remove any filters applied and ensure that the report can be quickly set to be unfiltered should a user need this:  
   
-image 6
+![alt text](images/filters_6.png)
