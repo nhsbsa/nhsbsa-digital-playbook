@@ -151,7 +151,7 @@ Reporting acronyms should go before the remaining column detail. For example:
 - ‘LHB Dental History Green Forms – FYTD’ would be ‘FYTD LHB dental history green forms’ 
 - ‘Ortho Child Form Count Year to Date (age at DOA)’ would be ‘YTD orthodontic child form count, DOA age’  
   
-In the 4th example, words were extended and additional detail was given separated by a comma. The definition of LHB as a Local Health Board, and DOA as Drugs of Abuse would be provided to users in a glossary.  
+In the 4th example, words were extended and additional detail was given separated by a comma. The definition of LHB as a Local Health Board, and DOA as Date of Acceptance would be provided to users in a glossary.  
   
 ## Date formats  
    
