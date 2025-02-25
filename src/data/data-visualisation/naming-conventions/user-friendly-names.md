@@ -11,7 +11,7 @@ review:
 ---
 ## Purpose of the document  
   
- The purpose of this document is for reporting use, for columns and tables in the Semantic model. If you are reporting data into a CSV or spreadsheet format [standard capitalisation and formatting][naming 1] should be used.  
+ The purpose of this document is for reporting use, for columns and tables in the Semantic model. If you are reporting data into a CSV or spreadsheet format, internal standard capitalisation and formatting should be used.  
    
 ## User-friendly names  
   
