@@ -2,7 +2,7 @@
 layout: article
 title: "Tooltips"
 description: "Standards for using tooltips at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: data-viz-home
 order: 110
 review:

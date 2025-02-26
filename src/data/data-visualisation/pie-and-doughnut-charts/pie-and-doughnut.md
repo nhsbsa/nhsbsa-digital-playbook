@@ -2,7 +2,7 @@
 layout: article
 title: "Pie and doughnut charts"
 description: "Guidance for using pie and doughnut charts at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: data-viz-home
 order: 90
 review:
@@ -44,7 +44,7 @@ If using pie or doughnut charts, make sure you:
 
 - **only use them when the categories form part of a whole**, if the categories do not add up to a distinct ‘whole’, use a different chart
 - **do not use them when two or more categories are a similar size**- in this situation, it's better to use a bar chart
-- **do not use pie or doughnut charts with more than 5 categories**- if your chart has more than 5 categories, consider combining some of the categories or using a different type of chart
+- **do not use pie or doughnut charts with more than 4 categories**- if your chart has more than 4 categories, consider combining some of the categories or using a different type of chart
 - **rank categories by size with the first at the 12 o’clock position**- ranking the categories in this way makes the chart easier to interpret, making it easier to identify the dominant categories
 - **label the categories categories directly**- legends and keys rely on users matching labels to categories using colour alone, which fails [WCAG accessibility success criterion 1.4.1 Use of Colour][pie 4].  
   

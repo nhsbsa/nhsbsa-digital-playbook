@@ -2,7 +2,7 @@
 layout: article
 title: "Primary Colours"
 description: "Overview of the main colours that should be used at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: dv-colour
 order: 2
 review:
@@ -22,7 +22,7 @@ We use NHS Grey 5 as a background tint. This is because:
 - the [British Dyslexia Association's style guide][dyslexia] recommends dark text on a light, but not white, background
 - it allows different components to stand out
 
-`#F0F4F5` is the hex code for NHS Grey 5 (light grayish cyan):  
+`#F0F4F5` is the hex code for NHS Grey 5 (light greyish cyan):  
   
 {{ colorBlock({
     "color": "#F0F4F5",

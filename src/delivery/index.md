@@ -1,9 +1,9 @@
 ---
 layout: collection
-title: "Delivery Management"
+title: "Delivery"
 description: "How we manage delivery at the NHSBSA"
 tags: home
-order: 1
+order: 2
 collection_tag: delivery
 pagination:
   data: collections.delivery

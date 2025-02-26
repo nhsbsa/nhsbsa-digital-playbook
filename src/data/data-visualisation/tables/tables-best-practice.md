@@ -2,7 +2,7 @@
 layout: article
 title: "Table standards"
 description: "Data visualisation standards in relation to tables, at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: dv-table
 order: 1
 review:

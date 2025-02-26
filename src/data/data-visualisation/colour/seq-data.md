@@ -2,7 +2,7 @@
 layout: article
 title: "Sequential Data"
 description: "Colours used for sequential data at the NHSBSA"
-status: REVIEW
+status: FINAL
 tags: dv-colour
 order: 4
 review:

@@ -3,7 +3,7 @@ layout: collection
 title: "Design"
 description: "How we design at the NHSBSA"
 tags: home
-order: 1
+order: 4
 collection_tag: design
 pagination:
   data: collections.design
