@@ -9,7 +9,7 @@ review:
     last_reviewed_date: 2025-01-30
     review_cycle: ANNUAL
 ---
-# Filter purpose  
+## Filter purpose  
   
 Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. If there are more than three filters on a dashboard this can take away the value and visual impact of the message and distract a user.  
   
