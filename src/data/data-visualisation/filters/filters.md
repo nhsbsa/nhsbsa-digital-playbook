@@ -9,15 +9,13 @@ review:
     last_reviewed_date: 2025-01-30
     review_cycle: ANNUAL
 ---
-# Filter purpose  
+## Filter purpose  
   
 Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. If there are more than three filters on a dashboard this can take away the value and visual impact of the message and distract a user.  
   
 Parameters can be created and used to change variables within a chart.
   
-To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
-  
-![image 3](images/filters_3.png)  
+To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, a disclaimer may be added onto the dashboard to state "Reporting month is April 2025".
   
 ## Placement of a filter  
   
@@ -29,7 +27,7 @@ For more information visit the [Towards data science dashboard design page](http
   
 Icons can be used to hide filters if needed, if an icon is used the purpose of the icon should be stated for example, by accompanying text such as ‘Click the filter icon to filter the dashboard’. The icon should also have alternative text provided stating the purpose of the icon. If you have more than three filters on your page, using an icon can be a good way to hide the filters, and have the filters pop-out when the icon is clicked. This can offer usability and flexibility within your report.  
   
-Global filters should be prioritised and included at the top left of a dashboard, or first in a filter section, with more specific filters following below. Specific filters relating to a singular chart should be placed close to the chart in the right-hand side top corner opposite the title of the chart, aligned with the visualisation itself.  
+Page filters should be prioritised and included at the top left of a dashboard, or first in a filter section, with more specific filters following below. Specific filters relating to a singular chart should be placed close to the chart in the right-hand side top corner opposite the title of the chart, aligned with the visualisation itself.  
   
 An example of filters placed on the top left of a dashboard:  
   
@@ -39,7 +37,7 @@ Within some data visualisation tools filter panels can be included which may use
 
 For more information visit the [Chartio dashboard design page](https://chartio.com/blog/dashboard-design-best-practices-the-dashboard-layout/).
 
-Visualisations themselves can also be used as a filter. Many data visualisation tools have this inbuilt functionality.  
+Visualisations themselves can also be used as a filter. Many data visualisation tools have this inbuilt functionality. It is important to be aware of, and optimise, the interactions affecting your visuals and filters.  
   
 ## Design of a filter  
   

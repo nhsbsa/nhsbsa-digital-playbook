@@ -31,7 +31,7 @@ A title of: ‘Referral treatment by Year, Month and Age’
 The x axis: ‘Year, Month’  
 The y axis: ‘Referral treatment’  
   
-Please note, any summarisation and renames of titles or axis labels would need to be done by the developer, but may affect the dynamic title generation given by Power BI. Any aggregations such as summation should be written as a measure, e.g. ‘Sum of referral treatment’.  
+Please note, any summarisation and renames of titles or axis labels would need to be done by the developer, but may affect the dynamic title generation given. Any aggregations such as summation should be written as a measure, e.g. ‘Sum of referral treatment’.  
   
 In a Date table, it is recommended to capitalise each word, e.g. ‘Year’ and ‘Month’. These fields will typically be used alone, as an axis label, or as a report slicer.  
   
@@ -49,7 +49,7 @@ Only use capital letters for:
 - job titles when linked to the holder, such as '(name), Software Developer'  
   
 !!! warning Please note
-The naming format of a system, for example 'eDEN', 'eOPS', 'ePACT2', is an exception to the propoer noun rule.
+The naming format of a system, for example 'eDEN', 'eOPS', 'ePACT2', is an exception to the proper noun rule.
 !!!  
   
 ## Language  
