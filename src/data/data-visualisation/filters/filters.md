@@ -15,9 +15,7 @@ Filters should only be used when needed and to add to the value of a dashboard. 
   
 Parameters can be created and used to change variables within a chart.
   
-To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, on Oracle Analytics Classic a disclaimer may be added onto the dashboard:  
-  
-![image 3](images/filters_3.png)  
+To help our end users understand the data, any filters applied should always be clearly stated or viewable on the dashboard or report. For example, a disclaimer may be added onto the dashboard to state "Reporting month is April 2025".
   
 ## Placement of a filter  
   
