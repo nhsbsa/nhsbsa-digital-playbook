@@ -248,7 +248,7 @@ Writing clean tests - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li><strong>Cross test pollution</strong><br>
 A risk that fixture data is not re-initialised between tests. The action of one test can then affect another.</li>
 <li><strong>Meaningless names</strong><br>
-Shared ixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3. Numeric suffixes convey no meaning. We can assume some of the tests need multiple users, but there is no context about why we need more than one.<br>
+Shared fixture data is often named with simple numeric suffixes to identify them. E.g. user1, user2, user3. Numeric suffixes convey no meaning. We can assume some of the tests need multiple users, but there is no context about why we need more than one.<br>
 Meaningless names are confusing in tests.</li>
 <li><strong>Noise</strong><br>
 Shared fixture data is usually placed as boilerplate at the top of the test class.<br>
@@ -311,7 +311,7 @@ Always test the edge cases.</li>
 <h2 id="make-assertions-with-appropriate-matchers" tabindex="-1"><a class="header-anchor" href="#make-assertions-with-appropriate-matchers">Make assertions with appropriate matchers</a></h2>
 <p>Assertions should be simple and clear with failure messages that identify the error. This is done by selecting appropriate matchers.</p>
 <p>Be specific.</p>
-<p>It can be easier to learn and use just a few of the matchers in an assertion framework. Take time to understand the methods available, so tests are succint and failure messages are more informative.</p>
+<p>It can be easier to learn and use just a few of the matchers in an assertion framework. Take time to understand the methods available, so tests are succinct and failure messages are more informative.</p>
 <h2 id="avoid-asserting-equality-with-complex-objects" tabindex="-1"><a class="header-anchor" href="#avoid-asserting-equality-with-complex-objects">Avoid asserting equality with complex objects</a></h2>
 <p>Sometimes a complex object is built up and used to test equality in a matcher. In Java, this ultimately defers to the .equals() method.</p>
 <p>Asserting equality with complex objects leads to these issues:</p>
@@ -320,7 +320,7 @@ Always test the edge cases.</li>
 It is difficult for the reviewer to understand which field value is being checked when objects have multiple fields or contains nested objects.</li>
 <li><strong>Untraceable errors</strong><br>
 When a test fails during regression, we know that the complex objects no longer match. But we don’t know which field fails. The only way to track this error down is to open up a debugger and find where the .equals() method returned false.</li>
-<li><strong>Fragilility</strong><br>
+<li><strong>Fragility</strong><br>
 A change in the object created by the function under test will require a refactor of the test to supply matching data into the expectation.</li>
 </ul>
 <p>Make assertions with appropriate matchers on specific fields.</p>
@@ -354,7 +354,7 @@ A change in the object created by the function under test will require a refacto
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2023-05-06T10:02:50.000Z">6 May 2023</time>
+      Published: <time datetime="2024-07-23T07:53:57.000Z">23 July 2024</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2023-05-06T00:00:00.000Z">6 May 2023</time>
