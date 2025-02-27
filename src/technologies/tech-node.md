@@ -43,7 +43,7 @@ Our standard JavaScript based application stack is built on Node.js.
 * [Redis](https://www.npmjs.com/package/redis) client if using Redis as a database
 * Security with [Helmet](https://helmetjs.github.io/) and [csurf](https://www.npmjs.com/package/csurf) to prevent CSRF
 * Dates and times are manipulated using [Luxon](https://moment.github.io/luxon/#) or [date-fns](https://date-fns.org/) and not moment.js
-* Logging provided by [winston](https://www.npmjs.com/package/winston), [express-winston](https://www.npmjs.com/package/express-winston) and [winston-daily-rotate-file](https://www.npmjs.com/package/winston-daily-rotate-file)
+* Logging provided by [winston](https://www.npmjs.com/package/winston) and [express-winston](https://www.npmjs.com/package/express-winston)
 * [Node Fetch](https://www.npmjs.com/package/node-fetch) to perform HTTP requests
 * [cookie-parser](https://www.npmjs.com/package/cookie-parser) for working with cookies
 * [I18n](https://www.npmjs.com/package/i18n) for internationalisation
