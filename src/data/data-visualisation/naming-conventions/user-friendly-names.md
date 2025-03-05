@@ -49,7 +49,7 @@ Only use capital letters for:
 - job titles when linked to the holder, such as '(name), Software Developer'  
   
 !!! warning Please note
-The naming format of a system, for example 'eDEN', 'eOPS', 'ePACT2', is an exception to the propoer noun rule.
+The naming format of a system, for example 'eDEN', 'eOPS', 'ePACT2', is an exception to the proper noun rule.
 !!!  
   
 ## Language  

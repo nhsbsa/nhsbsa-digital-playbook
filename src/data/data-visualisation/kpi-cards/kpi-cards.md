@@ -32,7 +32,7 @@ A logical flow follows the 'F' or 'Z' pattern. A choice of layout that promotes 
 Using no more than four KPI cards on a page is advisable, so as not to distract and confuse a user.  
 KPI cards on a page should be thoughtfully chosen to highlight key takeaways to a user and support the page's storytelling.  
   
-For more information, see these [easy dashboard design tips][https://www.seerinteractive.com/insights/3-easy-dashboard-design-tips] from Seer Interactive.  
+For more information, see these [easy dashboard design tips](https://www.seerinteractive.com/insights/3-easy-dashboard-design-tips) from Seer Interactive.  
   
 ## Best practice  
   
