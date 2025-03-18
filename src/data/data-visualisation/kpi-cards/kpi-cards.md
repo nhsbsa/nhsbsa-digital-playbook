@@ -2,7 +2,7 @@
 layout: article
 title: "Key performance indicator (KPI) cards"
 description: "Guidance for using KPI cards at the NHSBSA"
-status: DRAFT
+status: FINAL
 tags: data-viz-home
 order: 55
 review:

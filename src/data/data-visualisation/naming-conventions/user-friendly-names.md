@@ -2,7 +2,7 @@
 layout: article
 title: "User friendly naming conventions"
 description: "Guidance for user friendly column and table names for reporting use"
-status: DRAFT
+status: FINAL
 tags: data-viz-home
 order: 130
 review:
