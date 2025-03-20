@@ -9,7 +9,7 @@ related:
   title: Related articles
   tag: git
 review:
-    last_reviewed_date: 2024-09-20
+    last_reviewed_date: 2025-03-20
     review_cycle: ANNUAL
 ---
 Teams should be autonomous and adopt tools and processes that fit their circumstances, however we have these non-negotiable standards that must be adhered to:
@@ -55,11 +55,20 @@ Ensure your local Git configuration is correct.
 * __Identity__
   Ensure that your committer identity (name and email) is the same as your Git hosting provider identity (Gitlab, Github, Azure).
   We endeavour to Open Source our code which will bring commit identities into the public realm. You may choose to remain anonymous by using a 'cipher' identity and email address.
+
 * __Pull__
   Avoid merge commits on pull by setting the `pull.rebase` configuration option:
 
   ```bash
   git config --global pull.rebase true
+  ```
+
+* __autocrlf__
+  Windows users should configure `autocrlf` to `true` to convert unix line endings (LF) to Windows on checkout and commit.
+  Our standard is to store unix style line endings in Git.
+
+  ```bash
+  git config --global core.autocrlf true
   ```
 
 * __Git alias__
@@ -76,6 +85,11 @@ Ensure your local Git configuration is correct.
     pf=push --force-with-lease
     so=show --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset'
   ```
+
+* __.gitignore__
+  Every repository must define a `.gitignore` file to avoid commit of build artefacts, IDE configuration and local development files.
+  Our [standard files repository](https://gitlab.com/nhsbsa/libraries/nhsbsa-standard-files) contains an example covering most use cases.
+
 
   :::
 
@@ -210,10 +224,33 @@ Git repository hosting providers support adding controls on what can be done wit
   * Add rule for `All protected branches`
   * Add approval rule
   * Required approvals at `1` as a minimum. Projects may choose more approvers.
+* Under `Settings` > `Repository` > `Push rules`:
+  * Check: `Reject unverified users`
+  * Check: `Check whether the commit author is a GitLab user`
+  * Branch Name: `([A-Z]{3,4})-|develop-|hotfix-|NO-JIRA-|RELEASE|STG|PRO|main)`
 * Under `Settings` > `Merge requests`
   * Merge method: `Fast-forward merge`
+  * Merge checks:
+    * Checked: `Pipelines must succeed`
+    * Checked: `All threads must be resolved`
+  * Merge request approvals
+    * Checked: `Prevent approval by author`
+    * Checked: `Prevent editing approval rules in merge requests`
+    * When a commit is added: `Remove all approvals`
 * Under `Settings` > `Push rules` > `Branch name`
   * Branch name regex: `(main|develop|hotfix)|(build|ci|docs|feature|fix|perf|refactor|style|test)[\-\/]([A-Z]{3,4}|NO-JIRA)`
 
 :::
+
+## Learn more
+
+* https://git-scm.com/
+* https://bsa2468.atlassian.net/wiki/spaces/CPD/pages/1690435723/An+introduction+to+Git
+* https://bsa2468.atlassian.net/wiki/spaces/KB/pages/861667427/Git+Cheat+Sheet
+* https://www.baeldung.com/ops/git-guide
+* https://learngitbranching.js.org/
+* https://github.com/eficode-academy/git-katas
+* https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
+* https://gitimmersion.com/
+* http://teohm.com/blog/learning-git-internals-by-example/
 

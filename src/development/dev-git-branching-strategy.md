@@ -7,7 +7,7 @@ order: 8
 status: DRAFT
 review:
     title: Related
-    last_reviewed_date: 2024-09-20
+    last_reviewed_date: 2025-03-20
     review_cycle: ANNUAL
 ---
 Our standard branching strategy is based on traditional Git-flow and defines three types of branch:
