@@ -19,10 +19,10 @@ It is best practice to create measures in the semantic model to avoid duplicatio
   
 Measures can be created in a report if they will not be used elsewhere. Examples of report measures could be a dynamic title or a report version number, as these will not be used outside the individual report.  
   
-Example DAX code for creating a sum of sales measure:  
+Example DAX code for creating a sum of sales by salesperson measure:  
   
 ```
-dax
+Total sales by salesperson = 
 
 ```
 
@@ -41,7 +41,7 @@ DAX is used for many purposes, not just for creating measures
   
 A measure is different from a calculated column.  
   
-Calculated columns exist as part of tables in the semantic model and are calculated on refresh, row by row.  
+Calculated columns exist as part of tables and are calculated on refresh, row by row.  
 Measures are calculated on the fly, column by column.  
   
 Examples of calculated columns include:
@@ -52,11 +52,21 @@ Examples of calculated columns include:
   
 ## Implicit vs explicit measures  
   
-It is best practice to use explicit, rather than implicit, measures to eliminate ambiguity.  
+It is best practice to use explicit, rather than implicit, measures to:  
   
+- eliminate ambiguity
+- avoid duplication
+- be specific
+- avoid renaming per use
+- avoid configuring per use
+- assign a meaningful name
+- use complex DAX
+- create item in Analyse in Excel
+- use with Copilot    
+
 ### Implicit measures  
   
-Implicit measures are not specific. If you do not specify the table name in the measure, you have to know which table it was created on in order to know which columns are being referred to.  
+Implicit measures are not specific. If you do not specify the table name in the measure, you have to know which table it belongs to in order to know which columns are being referred to.  
   
 For example:  
   
@@ -65,9 +75,7 @@ For example:
 
 ```  
 In this example you have to know which table the measure is on, to know which "Value" to use.  
-In Power BI you would not know if `[Value]` or `[Refund flag]` are columns or measures.  
-  
-Items with default summarisation only are also implicit.
+In Power BI you would not know if `[Value]` or `[Refund flag]` are columns or measures purely by this syntax.  
 
 ### Explicit measures  
   
@@ -81,17 +89,7 @@ For example:
 ```  
 In this example the use of the table name means you can see that 2 columns from the Sales table are used.  
   
-### Why use explicit measures?  
-  
-Use explicit measures to:  
-  
-- avoid duplication
-- be specific
-- avoid renaming per use
-- avoid configuring per use
-- assign a meaningful name
-- use complex DAX
-- create item in Analyse in Excel  
+You should always create explicit measures so they are reusable. Using summarisation in visuals means setting the conditions and title manually everytime.
   
 ## Measure containers  
   
@@ -104,10 +102,10 @@ Report-level measures should be stored in a "_Measures for report" container.
   
 Use measure containers to:  
   
+- ensure measures that relate to multiple tables are always accessible regardless of object security
 - ensure consistency
 - keep measures centralised
 - organise measures into sub-folders
 - make it easier to find measures
 - use with Analyse in Excel
-- use with Copilot
 - force explicit measures
