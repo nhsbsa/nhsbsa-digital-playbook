@@ -20,7 +20,7 @@ Users typically start at the top left-hand corner of a page, scan horizontally, 
 
 Pages can also be formatted using a ‘Z’ pattern. Users, scanning horizontally from left to right, then pause at the centre of the page, before again scanning from left to right. This follows a similar concept as an F pattern but requires fewer eye movements. The location of important content on a page should follow this pattern.
 
-The most important information should be placed at the top left of the page, with other important informationin the centre of the page. Secondary or more detailed information should be in the top right and bottom left of the page, with the least important information in the bottom right.
+The most important information should be placed at the top left of the page, with other important information in the centre of the page. Secondary or more detailed information should be in the top right and bottom left of the page, with the least important information in the bottom right.
   
 ![Example page showing where information should be located according to importance](info-layout.png)  
   

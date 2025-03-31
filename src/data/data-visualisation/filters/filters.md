@@ -2,7 +2,7 @@
 layout: article
 title: "Filters"
 description: "Guidance for using and designing filters for reports at the NHSBSA"
-status: DRAFT
+status: FINAL
 tags: data-viz-home
 order: 125
 review:
@@ -11,7 +11,7 @@ review:
 ---
 ## Filter purpose  
   
-Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. If there are more than three filters on a dashboard this can take away the value and visual impact of the message and distract a user.  
+Filters should only be used when needed and to add to the value of a dashboard. The number of filters on a dashboard should be limited. Having more than three filters on a dashboard can take away the value and visual impact of the message and distract users.  
   
 Parameters can be created and used to change variables within a chart.
   
@@ -19,25 +19,26 @@ To help our end users understand the data, any filters applied should always be 
   
 ## Placement of a filter  
   
-Where possible, the inbuilt filter functionality of the software should be used. This will slightly enhance the performance of a report, without taking up as much canvas space. 
+Where possible, use the inbuilt filter functionality of the software. This will enhance the performance of a report, without taking up as much canvas space. 
 
-Filters, or ‘slicers’, as best practice should be positioned as a banner across the top of the page starting from the left, as focus naturally falls to the left, or on the left-hand side. Having the filters on the left-hand side can take up unnecessary space. Considerations on the real estate of the page are important to consider in placing filters.  
+Position the filters, or ‘slicers’, across the top of the page starting from the left, as focus naturally falls to the left. Having the filters running down the left-hand side of the page can take up unnecessary space. Consider the space available on the page when deciding where to place filters.  
   
 For more information visit the [Towards data science dashboard design page](https://towardsdatascience.com/the-dos-and-donts-of-dashboard-design-2beefd5cc575).  
   
-Icons can be used to hide filters if needed, if an icon is used the purpose of the icon should be stated for example, by accompanying text such as ‘Click the filter icon to filter the dashboard’. The icon should also have alternative text provided stating the purpose of the icon. If you have more than three filters on your page, using an icon can be a good way to hide the filters, and have the filters pop-out when the icon is clicked. This can offer usability and flexibility within your report.  
+Icons can be used to hide filters if needed. If an icon is used the purpose of it should be stated by accompanying text, such as ‘Click the filter icon to filter the dashboard’. The icon should also have alternative text provided stating the purpose of the icon.  
+If you have more than three filters on your page, icons can be a good way to hide the filters, and have the filters pop-out when the icon is selected. This can offer usability and flexibility within your report.  
   
-Page filters should be prioritised and included at the top left of a dashboard, or first in a filter section, with more specific filters following below. Specific filters relating to a singular chart should be placed close to the chart in the right-hand side top corner opposite the title of the chart, aligned with the visualisation itself.  
+Page filters should be prioritised and included at the top left of a dashboard, or first in a filter section. More specific filters can then follow below. Specific filters relating to a singular chart should be placed close to the chart in the right-hand side top corner opposite the title of the chart, aligned with the visualisation itself.  
   
 An example of filters placed on the top left of a dashboard:  
   
-![image 4](images/filters_4.png)  
+![Filters for directorate, region and record type.](images/filters_4.png)  
   
-Within some data visualisation tools filter panels can be included which may use less resource within your report. However, with a standard in-built filter you cannot customise the pane. 
+Within some data visualisation tools, filter panels can be included which may use less resource within your report. However, with a standard in-built filter you cannot customise the panel. 
 
 For more information visit the [Chartio dashboard design page](https://chartio.com/blog/dashboard-design-best-practices-the-dashboard-layout/).
 
-Visualisations themselves can also be used as a filter. Many data visualisation tools have this inbuilt functionality. It is important to be aware of, and optimise, the interactions affecting your visuals and filters.  
+Visualisations can also be used as a filter. Many data visualisation tools have this inbuilt functionality. It is important to be aware of, and optimise, the interactions affecting your visuals and filters.  
   
 ## Design of a filter  
   
@@ -50,13 +51,13 @@ Filters should have:
 - a font size of 12px for the header
 - a font consistent with the rest of the report, either Frutiger or Arial
 - equal heights and widths to one another if possible
-- no borders or shadow borders, so as not to distract the user with additional ink to look at
+- no borders or shadow borders, as they can distract users
 - a white background
 
-If the filter includes a timeline, NHS Blue (#005EB8) should be used:  
+If the filter includes a timeline, use NHS Blue (#005EB8):  
   
-![image 5](images/filters_5.png)
+![2001 to 2004 filter timeline using NHS Blue.](images/filters_5.png)
   
-A ‘Remove applied filters’ button in the top right-hand side of the screen is optional. This is to allow the user to quickly remove any filters applied and ensure that the report can be quickly set to be unfiltered should a user need this:  
+A ‘Remove applied filters’ button in the top right-hand side of the screen is optional. This allows the user to quickly remove any filters applied and makes sure the report can be quickly set to be unfiltered should a user need this:  
   
-![alt text](images/filters_6.png)
+![Remove applied filter button shown on a Provider Assurance page.](images/filters_6.png)
