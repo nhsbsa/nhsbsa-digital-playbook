@@ -4,7 +4,7 @@ title: "Tooltips"
 description: "Standards for using tooltips at the NHSBSA"
 status: FINAL
 tags: data-viz-home
-order: 110
+order: 120
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL
