@@ -4,7 +4,7 @@ title: "Filters"
 description: "Guidance for using and designing filters for reports at the NHSBSA"
 status: FINAL
 tags: data-viz-home
-order: 125
+order: 60
 review:
     last_reviewed_date: 2025-01-30
     review_cycle: ANNUAL

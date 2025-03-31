@@ -4,7 +4,7 @@ title: "Key performance indicator (KPI) cards"
 description: "Guidance for using KPI cards at the NHSBSA"
 status: FINAL
 tags: data-viz-home
-order: 55
+order: 70
 review:
     last_reviewed_date: 2024-12-31
     review_cycle: ANNUAL

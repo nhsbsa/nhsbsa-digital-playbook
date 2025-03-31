@@ -4,7 +4,7 @@ title: "User friendly naming conventions"
 description: "Guidance for user friendly column and table names for reporting use"
 status: FINAL
 tags: data-viz-home
-order: 130
+order: 80
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL
