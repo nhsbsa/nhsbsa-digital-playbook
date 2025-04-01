@@ -116,9 +116,6 @@ User friendly naming conventions - NHSBSA Digital, Data and Technology Playbook 
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#purpose-of-the-document">Purpose of the document</a>
-            		</li>
-
                     <li><a href="#user-friendly-names">User-friendly names</a>
             		</li>
 
@@ -185,22 +182,23 @@ User friendly naming conventions - NHSBSA Digital, Data and Technology Playbook 
         </div>
       
 
-<h2 id="purpose-of-the-document" tabindex="-1"><a class="header-anchor" href="#purpose-of-the-document">Purpose of the document</a></h2>
-<p>The purpose of this document is for reporting use, for columns and tables in the Semantic model. If you are reporting data into a CSV or spreadsheet format, internal standard capitalisation and formatting should be used.</p>
+<p>The information on this page applies for reporting use, and for columns and tables in the Semantic model.<br>
+When reporting data into a CSV or spreadsheet format, use internal standard capitalisation and formatting.</p>
 <h2 id="user-friendly-names" tabindex="-1"><a class="header-anchor" href="#user-friendly-names">User-friendly names</a></h2>
-<p>The term ‘user-friendly’ is used for names designed to be easily understood by end-users.</p>
-<p>User friendly names are designed for end-users, typically simpler, more descriptive, and non-technical. For example, ‘ICB name’.</p>
+<p>User-friendly names are designed to be easily understood by end-users.<br>
+They are typically simpler, more descriptive, and non-technical. For example, ‘ICB name’.</p>
 <h2 id="importance-of-user-friendly-names" tabindex="-1"><a class="header-anchor" href="#importance-of-user-friendly-names">Importance of user-friendly names</a></h2>
-<p>Ensuring that user-friendly names given to columns and tables within the Semantic model is important, so that both report builders and consumers of the report can easily use and understand the column names and tables.</p>
-<p>Having set guidelines to follow on user-friendly names is important for the end-product as it enables ease-of-use in building and requires less manual intervention.</p>
+<p>Making sure that user-friendly names are given to columns and tables within the Semantic model is important. They allow report builders and consumers of the report to easily use and understand the column names and tables.</p>
+<p>Having set guidelines to follow on user-friendly names is important for the end-product. It makes building the report easier and needs less manual intervention.</p>
 <p>For example, if column ‘REFERRAL_TREATMENT’ was renamed to ‘Referral treatment’, ‘AGE’ to ‘age’, and ‘YEAR_MONTH’ to ‘Year’ and ‘Month’ within a Date table, a report developer could drag and drop those columns into a bar chart, which would auto-populate:</p>
 <p>A title of: ‘Referral treatment by Year, Month and Age’<br>
 The x axis: ‘Year, Month’<br>
 The y axis: ‘Referral treatment’</p>
-<p>Please note, any summarisation and renames of titles or axis labels would need to be done by the developer, but may affect the dynamic title generation given. Any aggregations such as summation should be written as a measure, e.g. ‘Sum of referral treatment’.</p>
-<p>In a Date table, it is recommended to capitalise each word, e.g. ‘Year’ and ‘Month’. These fields will typically be used alone, as an axis label, or as a report slicer.</p>
+<p>Any summarisation and renames of titles or axis labels would need to be done by the developer, but may affect the dynamic title generation given. Any aggregations such as summation should be written as a measure, for example ‘Sum of referral treatment’.</p>
+<p>In a Date table, it is recommended to capitalise each word, for example ‘Year’ and ‘Month’.<br>
+These fields will typically be used alone, as an axis label, or as a report slicer.</p>
 <h2 id="unnecessary-capital-letters" tabindex="-1"><a class="header-anchor" href="#unnecessary-capital-letters">Unnecessary capital letters</a></h2>
-<p>Avoid using <a href="https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx" target="_blank" rel="noopener">unnecessary capitals</a>. They change the shape of the word which causes issues for some people with dyslexia, as well as causing confusion for some users.</p>
+<p>Avoid using unnecessary capitals. They change the shape of the word which causes issues for some people with dyslexia and other users.</p>
 <p>Only use capital letters for:</p>
 <ul>
 <li>starting a sentence, column name or title name</li>
@@ -211,17 +209,17 @@ The y axis: ‘Referral treatment’</p>
 <li>job titles when linked to the holder, such as ‘(name), Software Developer’</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Please note</p>
+<p class="admonition-title">Important</p>
 <p>The naming format of a system, for example ‘eDEN’, ‘eOPS’, ‘ePACT2’, is an exception to the proper noun rule.</p>
 </div>
 <h2 id="language" tabindex="-1"><a class="header-anchor" href="#language">Language</a></h2>
-<p>Language should be simplified where possible, whilst retaining meaning. A data dictionary should be provided to the developer and end user to ensure data literacy regarding the data product.</p>
+<p>Simplify Language where possible, whilst retaining meaning. A data dictionary should be provided to the developer and end user to ensure data literacy about the data product.</p>
 <p>For example, columns:</p>
 <ul>
 <li>‘TREATMENT_ON_REFERRAL’ should be changed to ‘Treatment’</li>
 <li>‘DATE_OF_REFERRAL’ should be changed to ‘Referral date’</li>
 </ul>
-<p>In both cases, the table name should reflect the data referred to, concise, user-friendly and explicit to end users. Using the column examples above, for a table name, additional details to include the content of the table can be added, e.g. ‘FP17 referral of other services’.</p>
+<p>The table name should reflect the data referred to, be concise, user-friendly and explicit to end users.</p>
 <p>Any names referring to data processing steps, and not for use in a report itself should be removed. For example: ‘S_DS_FORM_VISIT_FACT’ would have ‘Fact’ removed and may be amended to: ‘FP17 referral of other services’, as long as the meaning was clear to the end user.</p>
 <p>But for a renamed ‘ICB ID’ column, ‘ID’ which is typically used for data processing, may still be kept for use as this is often used by the end user to filter the data, keeping the column name as ‘ICB ID’.</p>
 <h2 id="general-rules" tabindex="-1"><a class="header-anchor" href="#general-rules">General rules</a></h2>
@@ -232,19 +230,21 @@ The y axis: ‘Referral treatment’</p>
 <li>‘Patient Count (Excl Triage)’ would be ‘Patient count excluding triage’</li>
 </ul>
 <p>Use well known words. Do not use jargon or technical language unless it is needed and you are writing for a user who is familiar with the terminology. The terminology should be defined in a glossary for the end user to refer to.</p>
-<p>If any additional information is needed to be given, this should be separated with a comma alike a sentence structure. For example, ‘Ortho Child Form Count Year to Date (age at DOA)’ would be ‘YTD orthodontic child form count, DOA age’.</p>
-<p>If you use an acronym, always refer to this in supporting documentation of the product.</p>
+<p>If any more information is needed to be given, this should be separated with a comma like a sentence structure. For example, ‘Ortho Child Form Count Year to Date (age at DOA)’ would be ‘YTD orthodontic child form count, DOA age’.</p>
+<p>Avoid using any acronyms or abbreviations unless it’s a wildly known term, such as ‘NHS’. If you use an acronym, always refer to this in supporting documentation of the product.</p>
 <p>Ensure the meaning of your wording is clear to an end user. If there is possible doubt, describe this to the end user in the supporting document.</p>
-<p>Column titles should be as concise as possible. <a href="https://nhsbsauk.sharepoint.com/:w:/s/DataWarehouse/EVregjegr6RImlbkunpSD58BDKGrz5tudmka6HBsfFPsVw?e=mn982r" target="_blank" rel="noopener">Column titles</a> are used for visualisation titles which need to be as concise as possible and be 15 words or fewer.</p>
+<p>Column titles should be as concise as possible. Column titles are used for visualisation titles which need to be 15 words or fewer. For more information about visualisation titles visit the <a href="https://nhsbsa.github.io/nhsbsa-digital-playbook/data/data-visualisation/charts/titles-labels-legends/" target="_blank" rel="noopener">Chart titles, labels and legends guidance page</a>.</p>
 <h2 id="data-formats" tabindex="-1"><a class="header-anchor" href="#data-formats">Data formats</a></h2>
-<p>Reduce the use of symbols where possible unless needed for context. Dashes, hyphens and underscores should not be present in a column name unless absolutely necessary. For example, a dash can be used for a number range, such as ‘20-25 age’. Hyphens can be used where needed for a compound word, such as “socio-economic” and “world-class”.</p>
-<p>Any data formats including currency such as pound sterling (£) should be placed at the end of a column.</p>
+<p>Reduce the use of symbols where possible unless needed for context. Dashes, hyphens and underscores should not be present in a column name unless necessary. For example, a dash can be used for a number range, such as ‘20-25 age’. Hyphens can be used where needed for a compound word, such as “socio-economic” and “world-class”.</p>
+<p>Any data formats including currency, such as pound sterling (GBP), should be placed at the end of a column.</p>
 <h3 id="currency" tabindex="-1"><a class="header-anchor" href="#currency">Currency</a></h3>
-<p>When mentioning <a href="https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx#money" target="_blank" rel="noopener">money</a>, use the ‘£’ symbol if this is needed to distinguish between an alternative currency but adding (£) to the end of the column name. As GBP (£) is the default currency used and there is typically not a need to distinguish between an alternative currency, currency can be removed. For example:</p>
+<p>When mentioning money, use the ‘£’ symbol if this is needed to distinguish between an alternative currency by adding (£) to the end of the column name.<br>
+As GBP (£) is the default currency used you only need to use the currency when distinguishing between this and an alternative currency. For example:</p>
 <ul>
 <li>when solely working with GBP: ‘Clawback (£) DOM’ would be ‘Clawback DOM’</li>
 <li>when working across currencies: ‘Indicative Cost (£)’ would be ‘Indicative cost (£)’</li>
 </ul>
+<p>More information on how to write when mentioning money can be found in our <a href="https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx#money" target="_blank" rel="noopener">style guide</a>.</p>
 <h3 id="percentage" tabindex="-1"><a class="header-anchor" href="#percentage">Percentage</a></h3>
 <p>Any data formats such as a percentage (%) should be placed at the end of a column. For example, ‘% Activity Delivered’ would be ‘Activity delivered (%)’.<br>
 For ‘on-target percentage’ use the acronym OTP to prefix the column detail.</p>
@@ -257,9 +257,10 @@ For ‘on-target percentage’ use the acronym OTP to prefix the column detail.<
 </ul>
 <p>In the first example, PPC was removed from in the brackets and used for additional context to lead the column title. In the last example, the word ‘band’ was removed as it did not provide additional context.</p>
 <h3 id="ampersands" tabindex="-1"><a class="header-anchor" href="#ampersands">Ampersands</a></h3>
-<p>Use the word ‘and’ rather than the <a href="https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx#ampersands" target="_blank" rel="noopener">ampersand symbol</a>.</p>
+<p>Use the word ‘and’ rather than the ampersand symbol (&amp;).</p>
 <p>‘And’ is easier to read and easier to skim. Some people may find ampersands harder to understand.</p>
 <p>An exception to this would be when referring to a company’s name as it appears on the <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener">Companies House register</a>.</p>
+<p>More information about using ampersands can be found in our <a href="https://nhsbsauk.sharepoint.com/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx#ampersands" target="_blank" rel="noopener">style guide</a>.</p>
 <h3 id="clarity-in-terminology" tabindex="-1"><a class="header-anchor" href="#clarity-in-terminology">Clarity in terminology</a></h3>
 <p>If age is needed, avoid acronyms such as ‘y/o’. Use the format ’26-32 age’ and specify further detail if needed, by using terms such as ‘inclusive’. For example:</p>
 <ul>
@@ -287,17 +288,23 @@ For ‘on-target percentage’ use the acronym OTP to prefix the column detail.<
 <li>‘LHB Dental History Green Forms – FYTD’ would be ‘FYTD LHB dental history green forms’</li>
 <li>‘Ortho Child Form Count Year to Date (age at DOA)’ would be ‘YTD orthodontic child form count, DOA age’</li>
 </ul>
-<p>In the 4th example, words were extended and additional detail was given separated by a comma. The definition of LHB as a Local Health Board, and DOA as Date of Acceptance would be provided to users in a glossary.</p>
+<p>In the 4th example, words were extended and extra detail was given separated by a comma. The definition of LHB as a Local Health Board, and DOA as Date of Acceptance would be provided to users in a glossary.</p>
 <h2 id="date-formats" tabindex="-1"><a class="header-anchor" href="#date-formats">Date formats</a></h2>
-<p>If dates are needed in a column name, they should lead the column name to give additional details. Financial years should be in the format YYYY/YY, whereas Month-Year formats should be ‘MMMM YYYY’ format, where the full name of the month is given. This reduces confusion for the end user in the formats given. For example:</p>
+<p>If dates are needed in a column name, they should lead the column name to give extra details. Financial years should be in the format YYYY/YY, whereas Month-Year formats should be ‘MMMM YYYY’ format, where the full name of the month is given. This reduces confusion for the end user in the formats given. For example:</p>
 <ul>
 <li>‘Commissioner Code 2020/03’ would be ‘March 2020 commissioner code’</li>
 <li>‘Adjusted Scheduled UDA 2019/20’ would be ‘2019/20 adjusted scheduled UDA’</li>
 </ul>
 <p>For the 2nd example, UDA will be defined as Units of Dental Activity in a glossary for the end user.</p>
 <h2 id="table-names" tabindex="-1"><a class="header-anchor" href="#table-names">Table names</a></h2>
-<p>The same naming conventions apply for table names. Table names should be used to give an umbrella understanding to the user of what the table includes. It is worth noting that in Power BI, the beginning words of a table name is the extent to which a report builder can see, therefore it is worth ensuring that the beginning words of a table are concise, distinctive and meaningful to an end user to separate the names.<br>
-For example, table names ‘Dental history’, ‘Medical history’ and ‘Social history’ are the preferred format, rather than starting with ‘History of…’.</p>
+<p>The same naming conventions apply for table names. Table names should be used to give an umbrella understanding to the user of what the table includes.</p>
+<p>In Power BI, the beginning words of a table name is all a report builder can see, so make sure the table names are:</p>
+<ul>
+<li>concise</li>
+<li>distinctive</li>
+<li>meaningful to an end user</li>
+</ul>
+<p>For example, table names ‘Dental history’, ‘Medical history’ and ‘Social history’ are the preferred format, rather than ‘History of…’.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -322,7 +329,7 @@ For example, table names ‘Dental history’, ‘Medical history’ and ‘Soci
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2025-04-01T11:01:29.000Z">1 April 2025</time>
+      Published: <time datetime="2025-04-01T11:17:36.000Z">1 April 2025</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2024-12-20T00:00:00.000Z">20 December 2024</time>
