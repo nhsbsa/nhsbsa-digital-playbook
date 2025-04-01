@@ -4,7 +4,7 @@ title: "Dashboard non-functional requirements (NFRs)"
 description: "Guidance for drafting and monitoring non-functional requirements"
 status: FINAL
 tags: data-viz-home
-order: 90
+order: 30
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL

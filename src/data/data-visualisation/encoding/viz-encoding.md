@@ -4,7 +4,7 @@ title: "Visual encoding"
 description: "Guidance for visual encoding including pre-attentive attributes and Gestalt principles"
 status: FINAL
 tags: data-viz-home
-order: 50
+order: 110
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL
