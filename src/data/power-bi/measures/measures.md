@@ -15,6 +15,8 @@ In Power BI, a measure is a calculation using Data Analysis Expressions (DAX) la
   
 Measures compute in real time as queries are generated in response to user interactions with visuals.  
   
+        Wherever possible, measures should be transferred to the model and not reside on a single report to allow for measure standardisation across a subject area.  This applies to all modes including direct lake and import.
+
 It is best practice to create measures in the semantic model to avoid duplication, as multiple items (such as reports) can connect to one semantic model. Examples of semantic model measures could be sum of sales split by salesperson or distinct count of employees that attended a meeting, as these may be used in multiple reports.  
   
 Measures can be created in a report if they will not be used elsewhere. Examples of report measures could be a dynamic title or a report version number, as these will not be used outside the individual report.  
@@ -22,14 +24,14 @@ Measures can be created in a report if they will not be used elsewhere. Examples
 Example DAX code for creating a sum of sales by salesperson measure:  
   
 ```
-Total sales by salesperson = 
+Total sales by salesperson = CALCULATE(SUM('Sales'[Value]), ALLEXCEPT('Sales', 'Sales'[Salesperson]))
 
 ```
 
 Example DAX code for creating a dynamic title measure:  
 
 ```
-dax
+Sales performance title = "Sales performance - " & SELECTEDVALUE('Date_dim'[Year], "all years")
 
 ```
   
@@ -97,6 +99,10 @@ It is best practice to use measure containers, rather than to create measures on
   
 Model-level measures should be stored in a "_Measures" container.  
 Report-level measures should be stored in a "_Measures for report" container.  
+
+        The “_Measures” table should contain measures held in the model, where “_Measures for report” should contain single report specific measures.
+When looking at an in-service model there should be nothing listed in “_Measures for report” table.
+Any measures that reside in the report only should be in the “_Measures for report” table, never in the “_Measures” table.
   
 ### Why use measure containers?  
   
