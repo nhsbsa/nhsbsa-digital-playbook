@@ -14,12 +14,12 @@ review:
 In Power BI, a measure is a calculation using Data Analysis Expressions (DAX) language.  
   
 Measures compute in real time as queries are generated in response to user interactions with visuals.  
-  
-        Wherever possible, measures should be transferred to the model and not reside on a single report to allow for measure standardisation across a subject area.  This applies to all modes including direct lake and import.
 
-It is best practice to create measures in the semantic model to avoid duplication, as multiple items (such as reports) can connect to one semantic model. Examples of semantic model measures could be sum of sales split by salesperson or distinct count of employees that attended a meeting, as these may be used in multiple reports.  
+It is best practice to transfer measures to the semantic model rather than having them on a single report, to avoid duplication. Multiple items (such as reports) can connect to one semantic model. This applies to all modes including direct lake and import.  
+Examples of semantic model measures could be sum of sales split by salesperson or distinct count of employees that attended a meeting, as these may be used in multiple reports.  
   
-Measures can be created in a report if they will not be used elsewhere. Examples of report measures could be a dynamic title or a report version number, as these will not be used outside the individual report.  
+Measures can exist only in a report if they will not be used elsewhere.  
+Examples of report measures could be a dynamic title or a report version number, as these will not be used outside the individual report.  
   
 Example DAX code for creating a sum of sales by salesperson measure:  
   
@@ -35,7 +35,7 @@ Sales performance title = "Sales performance - " & SELECTEDVALUE('Date_dim'[Year
 
 ```
   
-!!! warning Please note
+!!! warning Important
 DAX is used for many purposes, not just for creating measures
 !!!  
   
@@ -97,12 +97,10 @@ You should always create explicit measures so they are reusable. Using summarisa
   
 It is best practice to use measure containers, rather than to create measures on fact tables.  
   
-Model-level measures should be stored in a "_Measures" container.  
-Report-level measures should be stored in a "_Measures for report" container.  
-
-        The “_Measures” table should contain measures held in the model, where “_Measures for report” should contain single report specific measures.
+Measures held in the semantic model should be stored in a "_Measures" table.  
+Measures specific to a single report should be stored in a "_Measures for report" table.  
+  
 When looking at an in-service model there should be nothing listed in “_Measures for report” table.
-Any measures that reside in the report only should be in the “_Measures for report” table, never in the “_Measures” table.
   
 ### Why use measure containers?  
   
