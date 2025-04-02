@@ -2,7 +2,7 @@
 layout: article
 title: "Chart titles, labels and legends"
 description: "Standards and guidance for chart text at the NHSBSA"
-status: DRAFT
+status: FINAL
 tags: data-charts
 order: 2
 review:
