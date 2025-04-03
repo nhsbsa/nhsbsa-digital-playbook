@@ -10,3 +10,7 @@ pagination:
   size: 50
   alias: articles
 ---
+!!! warning Important
+This guidance is for tables in dashboards, reports and similar outputs.  
+Refer to the [Office For National Statistics](https://analysisfunction.civilservice.gov.uk/policy-store/releasing-statistics-in-spreadsheets/#section-4) for guidance for tables in spreadsheets.  
+!!!
