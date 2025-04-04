@@ -25,11 +25,11 @@ All new code should be committed on a topic branch from the mainline production 
 
 Topic branches should follow the [naming convention](../coding-naming-conventions):
 
-> `{change-type}/{JIRA ticket number}-{dash separated human description}`
+> `{JIRA ticket number}-{dash separated human description}`
 
 E.g.
 
-> `feature/LISD-1782-private-pension-order-fix`
+> `LISD-1782-private-pension-order-fix`
 
 ## 2. Author commits new code and pushes branch
 
