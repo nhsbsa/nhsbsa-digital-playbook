@@ -73,7 +73,7 @@ e.g. `LIS-1234-add-back-button`
 
 ### Change Candidate
 
-* Developer creates a new change candidate branch, `feature-xyz` branch from the newly created `develop-xyz` branch
+* Developer creates a new change candidate branch, `{change ID}-{brief description}` e.g. `LIS-5678-update-footer` branch from the newly created `develop-xyz` branch  
 * When the feature changes are complete they raise a merge request for [review](../coding-peer-review/)
 * The changes are merged (ideally [commits squashed](../dev-git/#squashing)) in to the `develop` branch. The change candidate branch should be deleted
 * The _change_ -> _release_ cycle is repeated until all the changes relating to the release are stable and tested
