@@ -22,6 +22,8 @@ Both methods can be used for all Power BI connection modes.
   
 [The instructions for internal users using the template can be found on My Hub][instructions].  
   
+Example of populated template page:  
+  
 ![Example Power BI report page following the NHSBSA Power BI template](template-page.png)
   
 ## Benefits of using the Power BI Template  
