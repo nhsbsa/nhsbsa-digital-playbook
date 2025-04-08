@@ -30,6 +30,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
+    "@mermaid-js/mermaid-cli": "^11.4.2",
     "@nhsbsa/cookie-consent-component": "0.0.6",
     "color-convert": "^2.0.1",
     "cross-env": "^7.0.3",
