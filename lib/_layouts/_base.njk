@@ -86,7 +86,7 @@
 <body class="{{ bodyClasses }}" {%- for attribute, value in bodyAttributes %} {{attribute}}="{{value}}"{% endfor %}>
 
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-  
+
   {% block cookieBanner %}
     {{ cookieBanner({
       policyUrl: "/cookie-policy/" | url,
@@ -137,6 +137,7 @@
   {% endblock %}
 
   {% block bodyEndScripts %}
+    {% mermaid_js %}
     <script src="{{ '/javascripts/nhsuk.min.js' | url }}"></script>
     <script src="{{ '/javascripts/application.js' | url }}"></script>
     <script src="{{ '/javascripts/cookie-banner.js' | url }}"></script>
@@ -144,5 +145,6 @@
   {% endblock %}
 
   {% block bodyEnd %}{% endblock %}
+
 </body>
 </html>

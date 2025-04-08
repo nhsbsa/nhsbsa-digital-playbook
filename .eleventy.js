@@ -3,6 +3,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('njk', require('./lib/_libraries/nunjucks'));
   eleventyConfig.setLibrary('md', require('./lib/_libraries/markdown'));
 
+  // Template engines
+  eleventyConfig.addTemplateFormats("mmd");
+  eleventyConfig.addExtension('mmd', require('./lib/_extensions/mermaid-diagrams.js'));
+
   //collections
   require('./lib/_javascripts/statusCollections')(eleventyConfig);
 
@@ -36,6 +40,9 @@ module.exports = function (eleventyConfig) {
     includeDoctype: true,
   });
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
+  eleventyConfig.addPlugin(require("@kevingimbel/eleventy-plugin-mermaid"), {
+    mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs'
+  });
 
   // filters
   eleventyConfig.addFilter(
