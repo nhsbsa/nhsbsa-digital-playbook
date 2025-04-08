@@ -9,7 +9,7 @@ review:
     last_reviewed_date: 2025-04-08
     review_cycle: ANNUAL
 ---
-To ensure the user can get as much benefit as possible from a data visualisation product, you should:  
+To help ensure the user can get as much benefit as possible from a data visualisation product, you should:  
   
 - develop with the requirements and audience needs in mind
 - consider how your audience will use the data and let that inform how you present it 
