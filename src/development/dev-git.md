@@ -4,7 +4,7 @@ title: "Git"
 description: "Define how your team use Git to avoid confusion and reduce risk"
 tags: [dev]
 order: 8
-status: DRAFT
+status: REVIEW
 related:
   title: Related articles
   tag: git
