@@ -62,5 +62,8 @@
     "nhsuk-frontend": "^8.3.0",
     "regexpp": "^3.2.0",
     "text-table": "^0.2.0"
+  },
+  "dependencies": {
+    "22": "^0.0.0"
   }
 }
