@@ -1,0 +1,14 @@
+%%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
+gitGraph
+  commit tag: "v1.1.0"
+  branch hotfix
+  checkout hotfix
+  commit
+  checkout main
+  merge hotfix tag: "v1.1.1"
+  branch develop
+  checkout develop
+  commit
+  commit
+  checkout main
+  merge develop tag: "v1.2.0"
