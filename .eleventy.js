@@ -41,7 +41,44 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
   eleventyConfig.addPlugin(require("@kevingimbel/eleventy-plugin-mermaid"), {
-    mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs'
+    mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs',
+    mermaid_config: {
+      theme: 'base',
+      themeVariables: {
+        background: '#f0f4f5',
+        primaryColor: '#d8dde0',
+        primaryTextColor: '#000',
+        primaryBorderColor: '#212b32',
+        secondaryColor: '#f0f4f5',
+        secondaryTextColor: '#000',
+        tertiaryColor: '#ffb81C',
+        tertiaryTextColor: '#fff',
+        noteBkgColor: '#fff9c4',
+        noteTextColor: '#000',
+        lineColor: '#212b32',
+        errorBkgColor: '#d5281b',
+        errorTextColor: '#d5281b',
+        git0: '#005eb8',
+        git1: '#007f3b',
+        git2: '#ffb81C',
+        git3: '#ffeb3b',
+        git4: '#d5281b',
+        git5: '#7C2855',
+        git6: '#330072',
+        git7: '#212b32',
+        gitBranchLabel0: '#fff',
+        gitBranchLabel1: '#fff',
+        gitBranchLabel2: '#000',
+        gitBranchLabel3: '#000',
+        gitBranchLabel4: '#fff',
+        gitBranchLabel5: '#fff',
+        gitBranchLabel6: '#fff',
+        gitBranchLabel7: '#fff',
+      },
+      gitGraph: {
+        showCommitLabel: false
+      }
+    }
   });
 
   // filters
