@@ -124,6 +124,24 @@ renders as:
 > Term 2
 > : Definition two
 
+## Diagrams
+
+We use [mermaid-js](https://mermaid.js.org/) to translate markdown codeblocks into diagrams.
+
+Specify the mermaid language after the opening backticks: ` ```mermaid`
+
+```md
+  graph LR
+    A --> B --> C
+```
+
+renders as:
+
+```mermaid
+  graph LR
+    A --> B --> C
+```
+
 ## Expanding details
 
 We use [markdown-it-container][markdown_it_container] to provide an [expanding details component][nhs_expanding_details].

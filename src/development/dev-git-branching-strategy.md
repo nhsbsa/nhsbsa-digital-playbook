@@ -20,7 +20,6 @@ Our standard branching strategy is based on traditional Git-flow and defines thr
 ### Production
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false, 'rotateTagLabel': true}} }%%
   gitGraph
     accTitle: "Production main branch"
     accDescr: "Git graph diagram showing a single main branch with semantic version tags on some commits"
@@ -39,22 +38,22 @@ The `main` branch must contain the exact same code as production. It is created 
 ### Release candidate
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
+%%{init: { 'themeVariables': { 'git2': '#d5281b', 'gitBranchLabel2': '#ffffff'}} }%%
   gitGraph
     accTitle: "Release candidates, hotfix and develop branches"
     accDescr: "Git graph diagram showing main, hotfix and develop branches."
-    commit tag: "v1.1.0"
-    branch hotfix
-    checkout hotfix
-    commit
-    checkout main
-    merge hotfix tag: "v1.1.1"
+    commit tag: "v1.0.0"
     branch develop
     checkout develop
     commit
     commit
     checkout main
-    merge develop tag: "v1.2.0"
+    merge develop tag: "v1.1.0"
+    branch hotfix
+    checkout hotfix
+    commit
+    checkout main
+    merge hotfix tag: "v1.1.1"
 ```
 
 A release candidate branch will hold code intended for release into production. Quality controls such as automated acceptance tests must succeed before a release candidate is accepted into production.
@@ -76,7 +75,6 @@ e.g. `develop-wcag22`
 ### Change candidate
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     accTitle: "Change candidate branch"
     accDescr: "Git graph diagram showing main, develop and a feature branch."
@@ -107,7 +105,6 @@ e.g. `PRJ-123-add-back-button`
 ### Preconditions
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     accTitle: "Workflow step 1 - main branch"
     accDescr: "Git graph diagram showing main branch with semantic versions."
@@ -125,7 +122,6 @@ e.g. `PRJ-123-add-back-button`
 * Maintainer creates a new release candidate branch `develop-xyz` from `main`
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     accTitle: "Workflow step 2 - develop branch"
     accDescr: "Git graph diagram showing develop branch off main"
@@ -139,7 +135,6 @@ e.g. `PRJ-123-add-back-button`
 * When the changes are fully tested and ready to go into production, a semver tag is created on the `develop-xyz` branch
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     accTitle: "Workflow step 3 - develop branch tag"
     accDescr: "Git graph diagram showing develop branch off main. Head of develop has been tagged"
@@ -154,7 +149,6 @@ e.g. `PRJ-123-add-back-button`
 * On successful deployment to production, the branch is merged into `main`. Merge into `main` must be `ff-only`
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     accTitle: "Workflow step 3 - develop merged into main"
     accDescr: "Git graph diagram showing main only. Head of main has the release tag"
@@ -172,7 +166,6 @@ e.g. `PRJ-123-add-back-button`
 * Developer creates a new change candidate branch, `id-123` branch from the newly created `develop-xyz` branch
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     commit tag: "v1.1.0"
     commit tag: "v1.1.1"
@@ -188,7 +181,6 @@ e.g. `PRJ-123-add-back-button`
 * The changes are merged (ideally [commits squashed](../dev-git/#squashing)) in to the `develop` branch. The change candidate branch should be deleted
 
 ```mermaid
-  %%{init: { 'theme': 'base', 'gitGraph': {'showCommitLabel': false}} }%%
   gitGraph
     commit tag: "v1.1.0"
     commit tag: "v1.1.1"
