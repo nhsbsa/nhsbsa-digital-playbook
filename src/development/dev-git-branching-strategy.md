@@ -11,6 +11,8 @@ review:
     last_reviewed_date: 2025-03-20
     review_cycle: ANNUAL
 ---
+Refer to our general [Git guidance](../dev-git) for additional context on Git and branching strategies.
+
 Our standard branching strategy is based on traditional Git-flow and defines three types of branch:
 
 * __Production__
