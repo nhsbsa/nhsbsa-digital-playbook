@@ -27,7 +27,7 @@ Teams should be self directing and adopt tools and processes to fit their circum
 * __Project documentation__
   All projects must document their git conventions, including their [branching strategy](#branching-strategy) and [controls](#controls). Changes from the standard approaches defined here must be held as decision records with a rationale for any deviation.
 * __Main is production__
-  The `main` branch must always reflect the current release, running in production. Keeping `main` as production makes it easier to hotfix urgent changes, such as fixing zero-day exploits. Merging into main must be `ff-only` to ensure the commit that was reviewed and tested becomes HEAD of main. If `main` has progressed ahead of an upcoming release branch, the difference must be resolved and tested before merge into main.
+  The `main` branch must always reflect the current release, running in production. Keeping `main` as production makes it easier to hotfix urgent changes, such as fixing zero-day exploits. Merges into main must be fast-forward only (using the flag `ff-only`). This will prevent merges if there are any divergences between the commit histories of the source branch being merged and `main`. If `main` has progressed ahead of the source branch, the difference must be resolved and tested in the source branch before merging into main. This keeps the history of `main` clean by avoiding any complex merge commits.
 * __Change attribution__
   Code changes must contain the [author](#git-configuration) and [issue tracker ID](#conventional-commits).
 * __Release by SemVer Tag__
@@ -70,7 +70,7 @@ Well written commit messages support clean code. For instance, they remove the m
 * __Attribution and bylines__
   Adding comments with ticket number and author diverts a reader's attention from understanding the code as a whole. In a few months time, that change is no more important than any other.
 * __Commented out code__
-  Redundant code should always be removed.
+  Leaving redundant code in the codebase, via comment blocks adds unnecessary distraction. Use the commit history if you need to revisit old code.
 
 ### Logical commits
 
@@ -83,9 +83,13 @@ Logical commits refers organising change into well-defined, coherent units that 
 
 ### Commit frequency
 
-We recommend committing regular and often. Changes should be pushed to the Git hosting provider at least daily to serve as backup.
+We recommend committing regular and often.
 
 Take care not to sacrifice logical commits by committing too frequently. If you wish to commit unfinished work, then make this clear by labelling the commit as work in progress (wip), and later [squash](#squashing) the commits.
+
+Note that committing updates the 'local' repository stored on your development machine (for example, on your laptop or VM). To update the 'remote' repository on the Git hosting provider, you need to 'push' the changes you have committed.
+
+Changes should be pushed to the remote at least daily to serve as backup.
 
 ### Squashing
 
