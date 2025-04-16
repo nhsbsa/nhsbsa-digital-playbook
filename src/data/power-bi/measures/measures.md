@@ -98,12 +98,13 @@ You should always create explicit measures so they are reusable. Using a column 
 It is best practice to use measure tables, rather than to create measures spread across fact and dimension tables.  
   
 Measures held in the semantic model should be stored in a "_Measures" table.  
+
 Measures specific to a single report should be stored in a "_Measures for report" table.  
  
 Measures within these 2 tables can be aligned to logical and hierarchical display folders.  
   
 When looking at an in-service model there should be nothing listed in the “_Measures for report” table.  
-  
+
 ### Why use measure tables?  
   
 Use measure tables to:  

@@ -9,7 +9,7 @@ review:
     last_reviewed_date: 2025-04-01
     review_cycle: ANNUAL
 ---
-The [Power BI Template][template] should be used for any reports or dashboards built in the NHS Business Services Authority. It can be [opened by internal users from SharePoint.][template]  
+The Power BI Template should be used for any reports or dashboards built in the NHS Business Services Authority. It can be [opened by internal users from SharePoint.][template]  
   
 ## Using the template  
   
@@ -24,7 +24,7 @@ Both methods can be used for all Power BI connection modes.
   
 Example of populated template page:  
   
-![Example Power BI report page following the NHSBSA Power BI template](template-page.png)
+![Example Power BI report page following the NHSBSA Power BI template](../images/template-page.png)
   
 ## Benefits of using the Power BI Template  
   
@@ -34,7 +34,7 @@ Benefits of using the Power BI Template include:
 - saving development time, due to ease of using the template  
   
 !!! warning Important
-The NHS Toolkit and NHSBSA Data Visualisation Standards would be met for the colour scheme and general layout using the template, but other decisions alining to the standards will still need to be made.
+The NHS Toolkit and NHSBSA Data Visualisation Standards would be met for the colour scheme and general layout using the template, but other decisions aligning to the standards will still need to be made.
 !!!  
   
 ## Accompanying standards  
