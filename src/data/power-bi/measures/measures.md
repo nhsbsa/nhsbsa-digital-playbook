@@ -91,22 +91,26 @@ For example:
 ```  
 In this example the use of the table name means you can see that 2 columns from the Sales table are used.  
   
-You should always create explicit measures so they are reusable. Using summarisation in visuals means setting the conditions and title manually everytime.
+You should always create explicit measures so they are reusable. Using a column with default summarisation implicitly in visuals, may mean adjusting the summmarisation and name manually multiple times.  
   
-## Measure containers  
+## Measure tables  
   
-It is best practice to use measure containers, rather than to create measures on fact tables.  
+It is best practice to use measure tables, rather than to create measures spread across fact and dimension tables.  
   
 Measures held in the semantic model should be stored in a "_Measures" table.  
+When looking at an in-service model there should be nothing listed in the “_Measures for report” table.  
+  
 Measures specific to a single report should be stored in a "_Measures for report" table.  
+When looking at a model in a report file, there should be nothing listed in the “_Measures” table.
+
+Measures within these 2 tables can be aligned to logical and hierarchical display folders.  
   
-When looking at an in-service model there should be nothing listed in “_Measures for report” table.
+### Why use measure tables?  
   
-### Why use measure containers?  
+Use measure tables to:  
   
-Use measure containers to:  
-  
-- ensure measures that relate to multiple tables are always accessible regardless of object security
+- ensure measures that relate to multiple tables are not committed to a single table
+- ensure measures are accessible regardless of object security
 - ensure consistency
 - keep measures centralised
 - organise measures into sub-folders
