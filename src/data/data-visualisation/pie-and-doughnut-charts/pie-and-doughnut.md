@@ -4,7 +4,7 @@ title: "Pie and doughnut charts"
 description: "Guidance for using pie and doughnut charts at the NHSBSA"
 status: FINAL
 tags: data-viz-home
-order: 90
+order: 80
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL

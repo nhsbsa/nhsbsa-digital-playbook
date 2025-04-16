@@ -2,7 +2,7 @@
 layout: article
 title: "Chart titles, labels and legends"
 description: "Standards and guidance for chart text at the NHSBSA"
-status: DRAFT
+status: FINAL
 tags: data-charts
 order: 2
 review:
@@ -11,7 +11,7 @@ review:
 ---
 ## Chart titles  
   
-Chart titles should be appropriate, detailing a main message, key point or trend which the chart is demonstrating.  
+Chart titles should be appropriate, detailing the main message, key point or trend the chart is demonstrating.  
   
 Chart titles should be: 
 
@@ -24,7 +24,8 @@ Chart titles should be:
 For example, ‘Croydon has the most monetary transactions out of all suppliers’.  
   
 Chart titles should also be tagged correctly. Whether you publish your chart in a document or on a webpage, the background code will have ‘tags’ for the heading structure.  
-These tags help users understand the structure of the document by putting visual cues on section headings and subheadings (for example, different font sizes and bold text).  
+  
+Tags help users understand the structure of the document. They do this by putting visual cues on section headings and subheadings (for example, different font sizes and bold text).   
 They also help screen reader users to better understand document structure. Screen reader software reads out tags and screen reader users use them to find the content they need.  
   
 ## Chart subtitles  
@@ -48,16 +49,16 @@ Use a font size large enough for all labels to be legible. As images often get r
 All text should be horizontal. If it is difficult to fit the chart labels into the space, try transposing the chart or changing the units. You could also drop some of the labels.  
 For example, only label every other year in a time series. If you do this, use tick marks to show the regularity of the data.  
   
-According to [numeric formatting rules][titles 2], commas should be used to separate thousands on chart label values.  
+Commas should be used to separate thousands on chart label values, for example 9,000.  
   
-Only use colours that have the reuired level of contrast with the background. See the [Colours guidance](../colour/colour-guidance.md) for more information on this.  
+Only use colours that have the required level of contrast with the background. See the [Colours guidance](../colour/colour-guidance.md) for more information on this.  
   
 ## Chart legends  
   
-Legends should be avoided where possible. If legends are used, the layout should be stated, and any lines and categories should be labelled directly.  
+Avoid legends where possible. If legends are used, the layout should be stated, and any lines and categories should be labelled directly.  
   
 ### Bar charts  
-If legends are used, they should be presented in the same order and orientation as the stacks in the bars or the bars in the clusters. The legend layout should be stated, just above the chart so users know they can match labels using positioning alongside colour, or alternative encoding methods.  
+If legends are used, they should be presented in the same order and orientation as the stacks in the bars, or the bars in the clusters.  The legend layout should be stated just above the chart. Users can then match labels using positioning alongside colour, or alternative encoding methods.   
   
 ### Line charts  
 Try to place labels at the end of the lines, on the right-hand side of the chart. Legends rely on users matching labels to lines using colours which can be difficult for some users. Therefore, legends should only be used when essential, for example when lines are very close together.  
