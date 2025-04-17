@@ -28,6 +28,10 @@ Knowing which analysis type is best for your users depends on several factors in
   
 Descriptive analysis is the simplest analysis, and can be useful to give quick, quantitative data. Descriptive analysis often focuses on historical data to give a picture of the present. 
 
-Diagnostic analysis – why is it happening? 
+### Diagnostic analysis – why is it happening? 
 
 Diagnostic analysis investigates the root cause of data outcomes and events, and uses further data to help inform the insights generated. Within a data product, this may look likebe shown using a drill down function to reveal further details. It is useful to investigate patterns and trends in the data. 
+  
+### Predictive analysis – what is likely to happen? 
+
+Predictive analysis looks at what the data has been historically telling us,uses historical data and relationships within the data, to inform predict what future outcomes could be. Statistical methods, machine learning and time series analysis can be used to generate these insights. This is most appropriate when business strategies have remained fairly consistent over time. 
