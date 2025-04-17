@@ -1,15 +1,13 @@
 ---
-layout: collection
-title: "Product purpose guidance"
-description: "Product purpose guidance at NHSBSA"
+layout: article
+title: "Product purpose"
+description: "Guidance around product purpose at the NHSBSA"
 status: DRAFT
-tags: data-viz-home
+tags: data-vis-home
 order: 85
-collection_tag: accessible-data
-pagination:
-  data: collections.accessible-data
-  size: 50
-  alias: articles
+review:
+    last_reviewed_date: 2025-04-17
+    review_cycle: ANNUAL
 ---
 The requirements and purpose of your product helps define the type of analysis needed, and the types of visuals which will be used.  
   
