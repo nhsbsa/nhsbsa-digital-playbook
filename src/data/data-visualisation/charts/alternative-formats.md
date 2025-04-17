@@ -4,7 +4,7 @@ title: "Alternative formats for charts"
 description: "Standards and guidance for choosing appropriate alternative chart formats"
 status: FINAL
 tags: data-charts
-order: 3
+order: 1
 review:
     last_reviewed_date: 2024-12-30
     review_cycle: ANNUAL
