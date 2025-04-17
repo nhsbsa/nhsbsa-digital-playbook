@@ -9,11 +9,11 @@ review:
     last_reviewed_date: 2025-04-08
     review_cycle: ANNUAL
 ---
-To help ensure the user can get as much benefit as possible from a data visualisation product, you should:  
+To help ensure the user can get as much benefit as possible from a chart, you should:  
   
 - develop with the requirements and audience needs in mind
 - consider how your audience will use the data and let that inform how you present it 
-- choose the most appropriate data visualisation product or chart type (refer to the [Chart types guidance](../chart-types/) and [Tables guidance](../../tables/) for more information)
+- choose the most appropriate chart type (refer to the [Chart types guidance](../chart-types/) and [Tables guidance](../../tables/) for more information)
 - keep visualisations as simple as possible
 - direct the user to the most important information using details like colour, size, fonts, and graphics (refer to the [Decluttering and pulling focus guidance](../../decluttering/) for more information)
 - provide context for the user, including additional information such as definitions of acronyms
