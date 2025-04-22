@@ -55,7 +55,7 @@ Git - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <body class="">
 
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-  
+
     
 <div id="nhsuk-cookie-banner" data-nosnippet="true" >
     <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
@@ -116,31 +116,70 @@ Git - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#branching-strategy">Branching Strategy</a>
+                    <li><a href="#nhsbsa-mandatory-rules">NHSBSA Mandatory Rules</a>
             		</li>
 
-                    <li><a href="#git-usage">Git usage</a>
+                    <li><a href="#git-hosting">Git Hosting</a>
             
                 <ol>
                     
-                    <li><a href="#git-configuration">Git configuration</a>
+                    <li><a href="#issue-trackers">Issue Trackers</a>
+            		</li>
+                </ol>
             		</li>
 
-                    <li><a href="#conventional-commits">Conventional commits</a>
+                    <li><a href="#commits">Commits</a>
+            
+                <ol>
+                    
+                    <li><a href="#clean-code">Clean code</a>
             		</li>
 
-                    <li><a href="#issue-trackers">Issue trackers</a>
+                    <li><a href="#logical-commits">Logical commits</a>
             		</li>
 
-                    <li><a href="#rebasing">Rebasing</a>
+                    <li><a href="#commit-frequency">Commit frequency</a>
+            		</li>
+
+                    <li><a href="#squashing">Squashing</a>
+            		</li>
+
+                    <li><a href="#conventional-commits">Conventional Commits</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#branching-strategy">Branching Strategy</a>
+            		</li>
+
+                    <li><a href="#merging">Merging</a>
+            
+                <ol>
+                    
+                    <li><a href="#promoting-left-to-right">Promoting left to right</a>
+            		</li>
+
+                    <li><a href="#aligning-right-to-left">Aligning right to left</a>
             		</li>
 
                     <li><a href="#shared-branches">Shared branches</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#rebasing">Rebasing</a>
+            
+                <ol>
+                    
+                    <li><a href="#rebase-or-merge">Rebase or merge</a>
             		</li>
 
                     <li><a href="#forced-pushes">Forced pushes</a>
             		</li>
                 </ol>
+            		</li>
+
+                    <li><a href="#git-configuration">Git configuration</a>
             		</li>
 
                     <li><a href="#controls">Controls</a>
@@ -166,22 +205,27 @@ Git - NHSBSA Digital, Data and Technology Playbook - NHSBSA
           <h1 class="nhsuk-heading-xl">
             Git
           </h1>
-            <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
+            <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
 </strong>
 
 
         </div>
       
 
-<p>Teams should be autonomous and adopt tools and processes that fit their circumstances, however we have these non-negotiable standards that must be adhered to:</p>
+<p>Git is a distributed version control system used to track changes in source code. It allows developers to collaborate on projects by managing different versions of the same files, creating branches for new features, before merging changes into software releases.</p>
+<p>Git is built on simple and elegant principles that support independent work in an offline, local environment. Git hosting providers such as Gitlab, Github and Azure enhance the collaborative experience with features such as code review, and continuous integration and deployment build pipelines.</p>
+<p>The command line interface to Git is notoriously unintuitive with inconsistent terminiology and arcane flags that change behaviour in unexpected ways. This often leads to users either knowing just enough to get by, or becoming experts that with strong opinions on topics such as keeping a clean commit history. This page provides key guidance to teams so that they may use Git to their best advantage.</p>
+<p>Our <a href="#learn-more">suggested learning resources</a> provide additional support for beginner and expert Git users.</p>
+<h2 id="nhsbsa-mandatory-rules" tabindex="-1"><a class="header-anchor" href="#nhsbsa-mandatory-rules">NHSBSA Mandatory Rules</a></h2>
+<p>Teams should be self directing and adopt tools and processes to fit their circumstances, however we have these non-negotiable standards that must be adhered to:</p>
 <ul>
 <li><strong>Project documentation</strong><br>
-All projects must document their <a href="#branching-strategy">branching strategy</a>, <a href="git-usage">git usage</a> and <a href="#controls">controls</a>. Changes from our standard approaches must be held as decision records with a rationale for the deviation.</li>
+All projects must document their git conventions, including their <a href="#branching-strategy">branching strategy</a> and <a href="#controls">controls</a>. Changes from the standard approaches defined here must be held as decision records with a rationale for any deviation.</li>
 <li><strong>Main is production</strong><br>
-The <code class="md">main</code> branch must always reflect the current release, running in production. Keeping <code class="md">main</code> as production makes it easier to hotfix urgent changes, such as fixing zero-day exploits. Merging into main must be <code class="md">ff-only</code> to ensure the commit that was reviewed becomes HEAD of main. If the branches have diverged, that must be resolved before merge into main.</li>
+The <code class="md">main</code> branch must always reflect the current release, running in production. Keeping <code class="md">main</code> as production makes it easier to hotfix urgent changes, such as fixing zero-day exploits. Merges into main must be fast-forward only (using the flag <code class="md">ff-only</code>). This will prevent merges if there are any divergences between the commit histories of the source branch being merged and <code class="md">main</code>. If <code class="md">main</code> has progressed ahead of the source branch, the difference must be resolved and tested in the source branch before merging into main. This keeps the history of <code class="md">main</code> clean by avoiding any complex merge commits.</li>
 <li><strong>Change attribution</strong><br>
-Code changes must contain the <a href="#git-configuration">author</a> and <a href="#conventional-commits">issue ID</a> such as a Jira ticket number.</li>
+Code changes must contain the <a href="#git-configuration">author</a> and <a href="#conventional-commits">issue tracker ID</a>.</li>
 <li><strong>Release by SemVer Tag</strong><br>
 Released versions of code must be identified by a Git tag on the commit that was quality assured. Release tags must follow the <a href="https://semver.org/spec/v2.0.0.html" target="_blank" rel="noopener">Semantic Versioning standard 2.0.0</a>. Pre-release semantic versions must not be released into production.</li>
 <li><strong>Assure quality before release</strong><br>
@@ -193,64 +237,50 @@ Before a codebase is tagged for release, it must be assured as meeting requireme
 </ul>
 </li>
 <li><strong>Binary dependencies are not held in source control</strong><br>
-Use package managers to declare dependencies, and resolve binaries within the build. This also lets us benefit from software composition analysis tools to check for vulnerabilities.</li>
+Use package managers to declare dependencies, and resolve binaries within the build. Package descriptors also enable tool to check for downstream vulnerabilities and licence compliance.</li>
 </ul>
-<h2 id="branching-strategy" tabindex="-1"><a class="header-anchor" href="#branching-strategy">Branching Strategy</a></h2>
-<p>A branching strategy is a set of rules to manage and organize code changes in a Git system. A strategy helps to:</p>
-<ul>
-<li>Prevent conflicts: Avoid merge conflicts that can occur when multiple people work on the same project at the same time</li>
-<li>Increase productivity: Allow the team to work on different features simultaneously</li>
-<li>Reduce version management time: Help teams to manage release of code more efficiently</li>
-</ul>
-<p>There are <a href="https://graphite.dev/guides/git-branching-strategies" target="_blank" rel="noopener">many Git branching strategies</a> including:</p>
-<ul>
-<li>Git-flow</li>
-<li>GitHub-flow</li>
-<li>Trunk Based Development</li>
-</ul>
-<p>We recommend using our <a href="../dev-git-branching-strategy/">standard branching strategy</a>, based on git-flow.</p>
-<h2 id="git-usage" tabindex="-1"><a class="header-anchor" href="#git-usage">Git usage</a></h2>
-<h3 id="git-configuration" tabindex="-1"><a class="header-anchor" href="#git-configuration">Git configuration</a></h3>
-<p>Ensure your local Git configuration is correct.</p>
-<ul>
-<li>
-<p><strong>Identity</strong><br>
-Ensure that your committer identity (name and email) is the same as your Git hosting provider identity (Gitlab, Github, Azure).<br>
-We endeavour to Open Source our code which will bring commit identities into the public realm. You may choose to remain anonymous by using a ‘cipher’ identity and email address.</p>
-</li>
-<li>
-<p><strong>Pull</strong><br>
-Avoid merge commits on pull by setting the <code class="md">pull.rebase</code> configuration option:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> pull.rebase <span class="token boolean">true</span></code></pre>
-</li>
-<li>
-<p><strong>autocrlf</strong><br>
-Windows users should configure <code class="md">autocrlf</code> to <code class="md">true</code> to convert unix line endings (LF) to Windows on checkout and commit.<br>
-Our standard is to store unix style line endings in Git.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.autocrlf <span class="token boolean">true</span></code></pre>
-</li>
-<li>
-<p><strong>Git alias</strong><br>
-Optimise Git usage by providing aliases to complex or frequent git commands.</p>
-<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Suggested alias configuration:</span></summary>
+<h2 id="git-hosting" tabindex="-1"><a class="header-anchor" href="#git-hosting">Git Hosting</a></h2>
+<p>The primary Git hosting provider at the NHSBSA is <a href="https://gitlab.com/nhsbsa" target="_blank" rel="noopener">Gitlab.com</a> although some teams use Github or Azure Repositories.</p>
+<p>Access to Gitlab is controlled via Azure Entra ID and requested via Service Desk.</p>
+<h3 id="issue-trackers" tabindex="-1"><a class="header-anchor" href="#issue-trackers">Issue Trackers</a></h3>
+<p>Git hosting providers often integrate with issue tracking services. Use commit messages to automatically post updates or transition tickets:</p>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Gitlab to Jira</span></summary>
 <div class="nhsuk-details__text">
-<pre class="language-text"><code class="language-text">[alias]
-  cp=cherry-pick
-  co=checkout
-  br=branch
-  lg=log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
-  pf=push --force-with-lease
-  so=show --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset'</code></pre>
-</div></details>
-</li>
-<li>
-<p><strong>.gitignore</strong><br>
-Every repository must define a <code class="md">.gitignore</code> file to avoid commit of build artefacts, IDE configuration and local development files.<br>
-Our <a href="https://gitlab.com/nhsbsa/libraries/nhsbsa-standard-files" target="_blank" rel="noopener">standard files repository</a> contains an example covering most use cases.</p>
-<p>:::</p>
-</li>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/integration/jira/" target="_blank" rel="noopener">Gitlab Jira integration</a><br>
+On Merge Request creation, a Jira ticket ID in the branch name, commit message or MR title will link the ticket to the MR</li>
 </ul>
-<h3 id="conventional-commits" tabindex="-1"><a class="header-anchor" href="#conventional-commits">Conventional commits</a></h3>
+</div></details>
+<h2 id="commits" tabindex="-1"><a class="header-anchor" href="#commits">Commits</a></h2>
+<p>A Commit records the changes made to files in a codebase. The message attached to a commit should clearly communicate what changed and why. A well written commit message will help people to understand a codebase, as modern IDEs can display commit information alongside each line of code.</p>
+<h3 id="clean-code" tabindex="-1"><a class="header-anchor" href="#clean-code">Clean code</a></h3>
+<p>Well written commit messages support clean code. For instance, they remove the motivation for these anti-patterns:</p>
+<ul>
+<li><strong>Journal comments</strong><br>
+A log of changes written in every file.</li>
+<li><strong>Attribution and bylines</strong><br>
+Adding comments with ticket number and author diverts a reader’s attention from understanding the code as a whole. In a few months time, that change is no more important than any other.</li>
+<li><strong>Commented out code</strong><br>
+Leaving redundant code in the codebase, via comment blocks adds unnecessary distraction. Use the commit history if you need to revisit old code.</li>
+</ul>
+<h3 id="logical-commits" tabindex="-1"><a class="header-anchor" href="#logical-commits">Logical commits</a></h3>
+<p>Logical commits refers organising change into well-defined, coherent units that represent a single logical change to the codebase:</p>
+<ul>
+<li>Each commit addresses a single concern or feature</li>
+<li>The commit can be understood on its own without requiring context from other commits</li>
+<li>The changes are complete enough to not break functionality</li>
+<li>The commit message clearly explains what changed and why</li>
+</ul>
+<h3 id="commit-frequency" tabindex="-1"><a class="header-anchor" href="#commit-frequency">Commit frequency</a></h3>
+<p>We recommend committing regular and often.</p>
+<p>Take care not to sacrifice logical commits by committing too frequently. If you wish to commit unfinished work, then make this clear by labelling the commit as work in progress (wip), and later <a href="#squashing">squash</a> the commits.</p>
+<p>Note that committing updates the ‘local’ repository stored on your development machine (for example, on your laptop or VM). To update the ‘remote’ repository on the Git hosting provider, you need to ‘push’ the changes you have committed.</p>
+<p>Changes should be pushed to the remote at least daily to serve as backup.</p>
+<h3 id="squashing" tabindex="-1"><a class="header-anchor" href="#squashing">Squashing</a></h3>
+<p>We recommend squashing commits into logical commits prior to merge downstream. This removes unneccesary commits that can confuse, providing a clean and logical git history. Use <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" target="_blank" rel="noopener">interactive rebase</a> to take control of squashing, and the resulting commit messages.</p>
+<p>Most Git hosting providers support squashing on merge. We recommend against this. Automating removes control from authors on the resulting commit message. There is a risk that detail is lost from the squashed commits, or too much needless information is included. There is a further risk that issue IDs are lost, removing audit.</p>
+<p>Commits should not be squashed automatically when merging downstream and never when merging into <code class="md">main</code>. Change is only allowed into <code class="md">main</code> after it has been tested in a pre-production environment. Squashing will change the commit history, rendering the tests invalid.</p>
+<h3 id="conventional-commits" tabindex="-1"><a class="header-anchor" href="#conventional-commits">Conventional Commits</a></h3>
 <p>We recommend adopting <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener">conventional commits</a> to structure commit messages.</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">></span></span>[optional scope]: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>
 
@@ -292,16 +322,47 @@ Adding missing tests or correcting existing tests</li>
 <p>The optional footer should contain <a href="https://git-scm.com/docs/git-interpret-trailers" target="_blank" rel="noopener">git-trailer</a> formatted meta-information</p>
 </li>
 </ul>
-<h3 id="issue-trackers" tabindex="-1"><a class="header-anchor" href="#issue-trackers">Issue trackers</a></h3>
-<p>Git hosting providers often integrate with issue tracking services. Use commit messages to automatically post updates or transition tickets:</p>
-<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Gitlab to Jira</span></summary>
-<div class="nhsuk-details__text">
+<h2 id="branching-strategy" tabindex="-1"><a class="header-anchor" href="#branching-strategy">Branching Strategy</a></h2>
+<p>A branching strategy is a set of rules to manage and organize code changes in a Git system. A strategy helps to:</p>
 <ul>
-<li><a href="https://docs.gitlab.com/ee/integration/jira/" target="_blank" rel="noopener">Gitlab Jira integration</a><br>
-On Merge Request creation, a Jira ticket ID in the branch name, commit message or MR title will link the ticket to the MR</li>
+<li>Prevent conflicts: Avoid merge conflicts that can occur when multiple people work on the same project at the same time</li>
+<li>Increase productivity: Allow the team to work on different features simultaneously</li>
+<li>Reduce version management time: Help teams to manage release of code more efficiently</li>
 </ul>
-</div></details>
-<h3 id="rebasing" tabindex="-1"><a class="header-anchor" href="#rebasing">Rebasing</a></h3>
+<p>There are <a href="https://graphite.dev/guides/git-branching-strategies" target="_blank" rel="noopener">many Git branching strategies</a> including:</p>
+<ul>
+<li>Git-flow</li>
+<li>GitHub-flow</li>
+<li>Trunk Based Development</li>
+</ul>
+<p>We recommend using our <a href="../dev-git-branching-strategy/">standard branching strategy</a>, based on git-flow.</p>
+<h2 id="merging" tabindex="-1"><a class="header-anchor" href="#merging">Merging</a></h2>
+<p>Consider the direction of flow for code change:</p>
+<ul>
+<li><em>Left</em> or <em>Upstream</em> is the source of change such as a feature branch</li>
+<li><em>Right</em> or <em>Downstream</em> is the target of change, ultimately Production</li>
+</ul>
+<h3 id="promoting-left-to-right" tabindex="-1"><a class="header-anchor" href="#promoting-left-to-right">Promoting left to right</a></h3>
+<p>The normal direction of flow for change is left to right: A developer creates a feature branch to make a change. The change is promoted to a release candidate branch and then merged into the production, <code class="md">main</code> branch.</p>
+<ul>
+<li>Promoting code must always be merged via a <a href="../coding-peer-review">peer review process</a></li>
+<li>Ensure promoted code is clean with few, logical commits</li>
+<li>Favour fast forward merge over merge commits</li>
+</ul>
+<h3 id="aligning-right-to-left" tabindex="-1"><a class="header-anchor" href="#aligning-right-to-left">Aligning right to left</a></h3>
+<p>Often a branch of code will fall behind the downstream code on the right, especially when working in larger teams. This <em>divergence</em> of code should be resolved prior to promoting.</p>
+<ul>
+<li>Aligning downstream code should be merged locally</li>
+<li>Favour rebase over merge commit. A merge commit when aligning downstream code will result in a complicated Git graph, which is difficult to keep tidy</li>
+<li>Favour squashing commits to a small number before rebasing against downstream code. Fewer commits will mean fewer merge conflicts to resolve.</li>
+</ul>
+<h3 id="shared-branches" tabindex="-1"><a class="header-anchor" href="#shared-branches">Shared branches</a></h3>
+<p>We recommend against using shared branches between collaborators. Prefer author specific branches, with peer-reviewed merges.</p>
+<ul>
+<li>Shared branches miss the review step between collaborators</li>
+<li>There is increased chance of merge commits and complex Git history when pulling divergent changes. See <a href="git-configuration">Git configuration</a> for controlling pull behaviour.</li>
+</ul>
+<h2 id="rebasing" tabindex="-1"><a class="header-anchor" href="#rebasing">Rebasing</a></h2>
 <p>Rebasing is a way to tidy up the Git commit history. It involves rewriting commits for a mix of purposes:</p>
 <ul>
 <li>Fixing merge conflicts: Rebasing can alter changes in a branch to avoid conflict with changes in another branch.</li>
@@ -317,24 +378,53 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
 <pre class="language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token parameter variable">--all</span>
 <span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token operator">&lt;</span>branch<span class="token operator">></span> origin/<span class="token operator">&lt;</span>branch<span class="token operator">></span></code></pre>
 </div>
-<h4 id="squashing" tabindex="-1"><a class="header-anchor" href="#squashing">Squashing</a></h4>
-<p>We recommend that developers squash commits into logical commits prior to merge. This removes unneccesary commits that can confuse, providing a clean and logical git history. Use interactive rebase to take control of squashing, and the resulting commit messages.</p>
-<p>Git hosting providers often support squashing on merge. We recommend against this. Automating removes control from authors on the resulting commit message. There is a risk that detail is lost from the squashed commits, or too much needless information is included. There is a further risk that issue IDs are lost, removing audit.</p>
-<p>Git commits must never be squashed automatically when merging into <code class="md">main</code>. Change is only allowed into <code class="md">main</code> after it has been tested in a pre-production environment. Squashing will change the commit history, rendering the tests invalid.</p>
-<h4 id="rebase-or-merge" tabindex="-1"><a class="header-anchor" href="#rebase-or-merge">Rebase or merge</a></h4>
-<p>We recommend that project teams rebase their branches against the upstream branch whenever they diverge. This provides a more streamlined and understandable git history, and simplifies squashing.</p>
-<p>Using a merge commit from an upstream branch makes squashing and reverting change more difficult.</p>
+<h3 id="rebase-or-merge" tabindex="-1"><a class="header-anchor" href="#rebase-or-merge">Rebase or merge</a></h3>
+<p>We recommend that teams rebase their branches against the downstream branch whenever they diverge. This provides a more streamlined and understandable git history, and simplifies squashing.</p>
+<p>Using a merge commit from an downstream branch makes squashing and reverting change more difficult.</p>
 <p>We also advise squashing unecessary commits before a rebase. This simplifies conflict resolution.</p>
-<h3 id="shared-branches" tabindex="-1"><a class="header-anchor" href="#shared-branches">Shared branches</a></h3>
-<p>We recommend against using shared branches between collaborators, except via a peer-reviewed merge/pull request:</p>
-<ul>
-<li>It misses the review step between collaborators</li>
-<li>There is increased chance of merge commits and complex Git history when pulling divergent changes</li>
-</ul>
 <h3 id="forced-pushes" tabindex="-1"><a class="header-anchor" href="#forced-pushes">Forced pushes</a></h3>
 <p>Sometime we need to overwrite a branch with a re-written Git history. Be very careful when force-pushing a shared branch. Ensure that every team member understands how to resolve their local repository against a force-pushed remote branch.</p>
 <p>Use <code class="md">force-with-lease</code> as a safer way to force push:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">git</span> push --force-with-lease</code></pre>
+<h2 id="git-configuration" tabindex="-1"><a class="header-anchor" href="#git-configuration">Git configuration</a></h2>
+<p>Ensure your local Git configuration is correct.</p>
+<ul>
+<li>
+<p><strong>Identity</strong><br>
+Ensure that your committer identity (name and email) is the same as your Git hosting provider identity (Gitlab, Github, Azure).<br>
+We endeavour to Open Source our code which will bring commit identities into the public realm. You may choose to remain anonymous by using a ‘cipher’ identity and email address.</p>
+</li>
+<li>
+<p><strong>Pull</strong><br>
+Avoid merge commits on pull by setting the <code class="md">pull.rebase</code> configuration option:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> pull.rebase <span class="token boolean">true</span></code></pre>
+</li>
+<li>
+<p><strong>autocrlf</strong><br>
+Windows users should configure <code class="md">autocrlf</code> to <code class="md">true</code> to convert unix line endings (LF) to Windows on checkout and commit.<br>
+Our standard is to store unix style line endings in Git.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.autocrlf <span class="token boolean">true</span></code></pre>
+</li>
+<li>
+<p><strong>Git alias</strong><br>
+Optimise Git usage by providing aliases to complex or frequent git commands.</p>
+<details class="nhsuk-details"><summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Suggested alias configuration:</span></summary>
+<div class="nhsuk-details__text">
+<pre class="language-text"><code class="language-text">[alias]
+  br=branch
+  co=checkout
+  cp=cherry-pick
+  lg=log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  pf=push --force-with-lease
+  so=show --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset'</code></pre>
+</div></details>
+</li>
+<li>
+<p><strong>.gitignore</strong><br>
+Every repository must define a <code class="md">.gitignore</code> file to avoid commit of build artefacts, IDE configuration and local development files.<br>
+Our <a href="https://gitlab.com/nhsbsa/libraries/nhsbsa-standard-files" target="_blank" rel="noopener">standard files repository</a> contains an example covering most use cases.</p>
+</li>
+</ul>
 <h2 id="controls" tabindex="-1"><a class="header-anchor" href="#controls">Controls</a></h2>
 <p>Git repository hosting providers support adding controls on what can be done with a hosted Git repository. These must be configured to protect the branch and release process.</p>
 <ul>
@@ -364,7 +454,7 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
 <ul>
 <li>Check: <code class="md">Reject unverified users</code></li>
 <li>Check: <code class="md">Check whether the commit author is a GitLab user</code></li>
-<li>Branch Name: <code class="md">([A-Z]{3,4})-|develop-|hotfix-|NO-JIRA-|RELEASE|STG|PRO|main)</code></li>
+<li>Branch Name: <code class="md">([A-Z]{3,4})-|develop-|hotfix-|NO-JIRA-|main)</code></li>
 </ul>
 </li>
 <li>Under <code class="md">Settings</code> &gt; <code class="md">Merge requests</code>
@@ -385,24 +475,18 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
 </li>
 </ul>
 </li>
-<li>Under <code class="md">Settings</code> &gt; <code class="md">Push rules</code> &gt; <code class="md">Branch name</code>
-<ul>
-<li>Branch name regex: <code class="md">(main|develop|hotfix)|(build|ci|docs|feature|fix|perf|refactor|style|test)[\-\/]([A-Z]{3,4}|NO-JIRA)</code></li>
-</ul>
-</li>
 </ul>
 </div></details>
 <h2 id="learn-more" tabindex="-1"><a class="header-anchor" href="#learn-more">Learn more</a></h2>
 <ul>
-<li>https://git-scm.com/</li>
-<li>https://bsa2468.atlassian.net/wiki/spaces/CPD/pages/1690435723/An+introduction+to+Git</li>
-<li>https://bsa2468.atlassian.net/wiki/spaces/KB/pages/861667427/Git+Cheat+Sheet</li>
-<li>https://www.baeldung.com/ops/git-guide</li>
-<li>https://learngitbranching.js.org/</li>
-<li>https://github.com/eficode-academy/git-katas</li>
-<li>https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase</li>
-<li>https://gitimmersion.com/</li>
-<li>http://teohm.com/blog/learning-git-internals-by-example/</li>
+<li><a href="https://git-scm.com/doc" target="_blank" rel="noopener">Official Git documentation</a></li>
+<li><a href="https://bsa2468.atlassian.net/wiki/spaces/CPD/pages/1690435723/An+introduction+to+Git" target="_blank" rel="noopener">NHSBSA introduction to Git</a></li>
+<li><a href="https://bsa2468.atlassian.net/wiki/spaces/KB/pages/861667427/Git+Cheat+Sheet" target="_blank" rel="noopener">NHSBSA Git cheatsheet</a></li>
+<li><a href="https://www.baeldung.com/ops/git-guide" target="_blank" rel="noopener">Baeldung Git for Beginners: The Definitive Practical Guide</a></li>
+<li><a href="https://learngitbranching.js.org/" target="_blank" rel="noopener">Learn Git Branching</a></li>
+<li><a href="https://github.com/eficode-academy/git-katas" target="_blank" rel="noopener">Git Katas</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" target="_blank" rel="noopener">Atlassian on Git rebase</a></li>
+<li><a href="https://gitimmersion.com/" target="_blank" rel="noopener">Git immersion</a></li>
 </ul>
         <h2 class="nhsuk-heading-l">
           Related articles
@@ -415,14 +499,14 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
 						<h2 class="nhsuk-card__heading nhsuk-heading-m">
 							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-git-branching-strategy/">Git branching strategy</a>
 						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
+						  <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
 </strong>
 
 
 					</div>
 					<p class="nhsuk-card__description">A branching strategy provides structure for pushing changes through to production</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2025-03-20T18:17:55.000Z">20 March 2025</time>	
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2025-04-15T09:49:28.000Z">15 April 2025</time>	
 				</div>
 			</div>
 		</li>
@@ -452,7 +536,7 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2025-03-20T18:17:55.000Z">20 March 2025</time>
+      Published: <time datetime="2025-04-15T09:49:28.000Z">15 April 2025</time>
     </p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
       Last reviewed: <time datetime="2025-03-20T00:00:00.000Z">20 March 2025</time>
@@ -491,9 +575,10 @@ On Merge Request creation, a Jira ticket ID in the branch name, commit message o
   </div>
 </footer>
 
-    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
+<script type="module" async>import mermaid from "https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"theme":"base","themeVariables":{"background":"#f0f4f5","primaryColor":"#d8dde0","primaryTextColor":"#000","primaryBorderColor":"#212b32","secondaryColor":"#f0f4f5","secondaryTextColor":"#000","tertiaryColor":"#ffb81C","tertiaryTextColor":"#fff","noteBkgColor":"#fff9c4","noteTextColor":"#000","lineColor":"#212b32","errorBkgColor":"#d5281b","errorTextColor":"#d5281b","git0":"#005eb8","git1":"#007f3b","git2":"#ffb81C","git3":"#ffeb3b","git4":"#d5281b","git5":"#7C2855","git6":"#330072","git7":"#212b32","gitBranchLabel0":"#fff","gitBranchLabel1":"#fff","gitBranchLabel2":"#000","gitBranchLabel3":"#000","gitBranchLabel4":"#fff","gitBranchLabel5":"#fff","gitBranchLabel6":"#fff","gitBranchLabel7":"#fff"},"gitGraph":{"showCommitLabel":false},"loadOnSave":true}));</script>    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
     <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d"></script>
     <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3"></script>
+
 
 </body>
 </html>

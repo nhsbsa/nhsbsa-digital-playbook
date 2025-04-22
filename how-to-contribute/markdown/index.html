@@ -55,7 +55,7 @@ Markdown - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <body class="">
 
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-  
+
     
 <div id="nhsuk-cookie-banner" data-nosnippet="true" >
     <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
@@ -135,6 +135,9 @@ Markdown - NHSBSA Digital, Data and Technology Playbook - NHSBSA
             		</li>
 
                     <li><a href="#definition-list">Definition list</a>
+            		</li>
+
+                    <li><a href="#diagrams">Diagrams</a>
             		</li>
 
                     <li><a href="#expanding-details">Expanding details</a>
@@ -265,6 +268,13 @@ and multi line content</dd>
 <dd>Definition two</dd>
 </dl>
 </blockquote>
+<h2 id="diagrams" tabindex="-1"><a class="header-anchor" href="#diagrams">Diagrams</a></h2>
+<p>We use <a href="https://mermaid.js.org/" target="_blank" rel="noopener">mermaid-js</a> to translate markdown codeblocks into diagrams.</p>
+<p>Specify the mermaid language after the opening backticks: <code class="md"> ```mermaid</code></p>
+<pre class="language-md"><code class="language-md">  graph LR
+    A --> B --> C</code></pre>
+<p>renders as:</p>
+<pre class="mermaid">  graph LR&#10;    A --&gt; B --&gt; C&#10;</pre>
 <h2 id="expanding-details" tabindex="-1"><a class="header-anchor" href="#expanding-details">Expanding details</a></h2>
 <p>We use <a href="https://www.npmjs.com/package/markdown-it-container" target="_blank" rel="noopener">markdown-it-container</a> to provide an <a href="https://service-manual.nhs.uk/design-system/components/details" target="_blank" rel="noopener">expanding details component</a>.</p>
 <p>Wrap the markdown content with <code class="md">::: details</code> and <code class="md">:::</code> markers</p>
@@ -348,7 +358,7 @@ Content here
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2024-12-10T10:00:19.000Z">10 December 2024</time>
+      Published: <time datetime="2025-04-11T15:44:28.000Z">11 April 2025</time>
     </p>
 </div>
 
@@ -381,9 +391,10 @@ Content here
   </div>
 </footer>
 
-    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
+<script type="module" async>import mermaid from "https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"theme":"base","themeVariables":{"background":"#f0f4f5","primaryColor":"#d8dde0","primaryTextColor":"#000","primaryBorderColor":"#212b32","secondaryColor":"#f0f4f5","secondaryTextColor":"#000","tertiaryColor":"#ffb81C","tertiaryTextColor":"#fff","noteBkgColor":"#fff9c4","noteTextColor":"#000","lineColor":"#212b32","errorBkgColor":"#d5281b","errorTextColor":"#d5281b","git0":"#005eb8","git1":"#007f3b","git2":"#ffb81C","git3":"#ffeb3b","git4":"#d5281b","git5":"#7C2855","git6":"#330072","git7":"#212b32","gitBranchLabel0":"#fff","gitBranchLabel1":"#fff","gitBranchLabel2":"#000","gitBranchLabel3":"#000","gitBranchLabel4":"#fff","gitBranchLabel5":"#fff","gitBranchLabel6":"#fff","gitBranchLabel7":"#fff"},"gitGraph":{"showCommitLabel":false},"loadOnSave":true}));</script>    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
     <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d"></script>
     <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3"></script>
+
 
 </body>
 </html>
