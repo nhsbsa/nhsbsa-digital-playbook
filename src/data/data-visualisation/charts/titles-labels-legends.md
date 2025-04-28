@@ -4,7 +4,7 @@ title: "Chart titles, labels and legends"
 description: "Standards and guidance for chart text at the NHSBSA"
 status: FINAL
 tags: data-charts
-order: 2
+order: 4
 review:
     last_reviewed_date: 2024-12-30
     review_cycle: ANNUAL

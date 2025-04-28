@@ -4,7 +4,7 @@ title: "Chart types"
 description: "Standards and guidance for choosing appropriate chart types"
 status: FINAL
 tags: data-charts
-order: 1
+order: 3
 review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL
