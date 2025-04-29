@@ -32,4 +32,33 @@ Diagnostic analysis investigates the root cause of data outcomes and events, and
   
 ### Predictive analysis – what is likely to happen? 
 
-Predictive analysis looks at what the data has been historically telling us,uses historical data and relationships within the data, to inform predict what future outcomes could be. Statistical methods, machine learning and time series analysis can be used to generate these insights. This is most appropriate when business strategies have remained fairly consistent over time. 
+Predictive analysis looks at what the data has been historically telling us,uses historical data and relationships within the data, to inform predict what future outcomes could be. Statistical methods, machine learning and time series analysis can be used to generate these insights. This is most appropriate when business strategies have remained fairly consistent over time.  
+  
+### Prescriptive analysis - what do I need to do?  
+  
+Prescriptive analysis uses advanced algorithms to help inform the best course of action. This may include optimisation of a model, to find the best outcome, simulation of different outcomes, of comparing decision analysis such as risks and benefits of an option.  
+  
+As value and complexity increases, you can move through the 4 types of analysis. Descriptive is used when value and complexity are lowest, then diagnostic, followed by predictive, and finally prescriptive analysis when value and complexity are highest.  
+  
+For more information, read [Fatima Huseynova's blog post][pp link 1] on Linkedin.  
+
+## Visual types  
+
+There are 3 main types of visual:  
+
+- explanatory
+- exhibitory
+- exploratory  
+
+The type of visual used often depends on if you would like to explain key findings to a user, or if you would like the user to explore the data itself.  
+The user’s data literacy might help decide the visual type used, for example, if the user is less familiar with the data, and unlikely to determine cause and effect within the data, explanatory may be most useful for the user.  
+  
+Weather forecasts can help give examples for the types of visualisations:  
+  
+Explanatory: a weather reporter explains the findings from within the data, allowing the user to listen and take in what is being shared. No exploration of the data is necessary for the user as the analysts have already analysed the insights to share.  
+  
+Exhibitory: weather visuals enable the user to easily view patterns and interpret the data. In this case, the analyst is showing the data, and the user can easily view any insights.  
+  
+Exploratory: a weather map with a key and any additional information needed helps the user interpret the data. Here the data is made easy to understand by the analyst, by requires to user to explore the data and generate their own insight.
+
+[pp link 1]: https://www.linkedin.com/pulse/4-types-data-analytics-in-depth-exploration-fatima-huseynova-xgdie/
