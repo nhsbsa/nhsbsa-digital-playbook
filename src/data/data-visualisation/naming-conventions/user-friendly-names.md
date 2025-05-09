@@ -9,7 +9,7 @@ review:
     last_reviewed_date: 2024-12-20
     review_cycle: ANNUAL
 ---
-The information on this page applies for reporting use, and for columns and tables in the Semantic model.  
+The information on this page applies to report and dashboard names, and to columns and tables in the Semantic model.  
 When reporting data into a CSV or spreadsheet format, use internal standard capitalisation and formatting.  
    
 ## User-friendly names  
@@ -34,6 +34,10 @@ Any summarisation and renames of titles or axis labels would need to be done by 
 In a Date table, it is recommended to capitalise each word, for example ‘Year’ and ‘Month’.  
 These fields will typically be used alone, as an axis label, or as a report slicer.
  
+## Report and dashboard names  
+  
+The name standards mentioned on this page should apply to a report or dashboard name. Any hyperlinks to a report or dashboard should directly match the title of the report or dashboard when accessed. A report or dashboard title should concisely summarise the content, for example, 'High cost drugs (practice level)'.  
+  
 ## Unnecessary capital letters  
   
 Avoid using unnecessary capitals. They change the shape of the word which causes issues for some people with dyslexia and other users.  
