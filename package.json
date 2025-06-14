@@ -26,8 +26,8 @@
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
     "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
