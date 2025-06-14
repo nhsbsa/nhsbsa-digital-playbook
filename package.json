@@ -6,13 +6,14 @@
   "engines": {
     "node": ">=22.0.0"
   },
+  "type": "module",
   "scripts": {
     "start": "npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",
     "build": "cross-env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook'",
-    "test": "cross-env NODE_ENV=test jest",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/.bin/jest",
     "test:eslint": "cross-env NODE_ENV=test npx eslint .",
     "test:eslint-fix": "cross-env NODE_ENV=test npx eslint . --fix",
-    "test:coverage": "cross-env NODE_ENV=test jest --coverage"
+    "test:coverage": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/.bin/jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,12 @@
   },
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy": "^3.1.1",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@nhsbsa/cookie-consent-component": "0.0.6",
     "color-convert": "^2.0.1",
@@ -61,7 +63,6 @@
     "markdown-it-toc-done-right": "^4.2.0",
     "nhsuk-frontend": "^8.3.0",
     "regexpp": "^3.2.0",
-    "text-table": "^0.2.0",
-    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1"
+    "text-table": "^0.2.0"
   }
 }

@@ -1,3 +1,1 @@
-module.exports = {
-  date: 'git Last Modified',
-};
+export const date = 'git Last Modified';
