@@ -1,24 +1,54 @@
-module.exports = function (eleventyConfig) {
+import yaml from 'js-yaml';
+import nunjucks from './lib/_libraries/nunjucks.js';
+import markdown from './lib/_libraries/markdown.js';
+import statusCollections from './lib/_javascripts/statusCollections.js';
+
+// Plugin imports
+import eleventyNavigation from '@11ty/eleventy-navigation';
+import eleventySyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import eleventyNestingToc from 'eleventy-plugin-nesting-toc';
+import eleventyDartSass from 'eleventy-plugin-dart-sass';
+import eleventyExternalLinks from 'eleventy-plugin-external-links';
+import eleventyAutoCacheBuster from 'eleventy-auto-cache-buster';
+import eleventyMermaid from '@kevingimbel/eleventy-plugin-mermaid';
+
+// Filter imports
+import convertColor from './lib/_filters/convertColor.js';
+import dateFilter from './lib/_filters/date.js';
+import fixed from './lib/_filters/fixed.js';
+import markdownFilter from './lib/_filters/markdown.js';
+import pretty from './lib/_filters/pretty.js';
+import slug from './lib/_filters/slug.js';
+import sort from './lib/_filters/sort.js';
+import tokenize from './lib/_filters/tokenize.js';
+import totalFromRows from './lib/_filters/total-from-rows.js';
+import widont from './lib/_filters/widont.js';
+import sortByOrder from './lib/_filters/sortByOrder.js';
+import blank from './lib/_filters/blank.js';
+import urlEncode from './lib/_filters/urlEncode.js';
+import debug from './lib/_filters/debug.js';
+import absoluteUrl from './lib/_filters/urls.js';
+
+export default function (eleventyConfig) {
   // Template libraries
-  eleventyConfig.setLibrary('njk', require('./lib/_libraries/nunjucks'));
-  eleventyConfig.setLibrary('md', require('./lib/_libraries/markdown'));
+  eleventyConfig.setLibrary('njk', nunjucks);
+  eleventyConfig.setLibrary('md', markdown);
 
   //collections
-  require('./lib/_javascripts/statusCollections')(eleventyConfig);
+  statusCollections(eleventyConfig);
 
   //data
-  const yaml = require('js-yaml');
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 
   // Plugins
-  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
-  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
-  eleventyConfig.addPlugin(require('eleventy-plugin-nesting-toc'), {
+  eleventyConfig.addPlugin(eleventyNavigation);
+  eleventyConfig.addPlugin(eleventySyntaxHighlight);
+  eleventyConfig.addPlugin(eleventyNestingToc, {
     tags: ['h2', 'h3'],
     wrapper: 'div',
     wrapperClass: 'nhsbsa-nav__list',
   });
-  eleventyConfig.addPlugin(require('eleventy-plugin-dart-sass'), {
+  eleventyConfig.addPlugin(eleventyDartSass, {
     watch: ['lib/_stylesheets/*.{scss,sass}'],
     sassLocation: 'lib/_stylesheets/',
     sassIndexFile: 'application.scss',
@@ -27,7 +57,7 @@ module.exports = function (eleventyConfig) {
     outPath: 'stylesheets',
     outFileName: 'application.css',
   });
-  eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
+  eleventyConfig.addPlugin(eleventyExternalLinks, {
     name: 'external-links',
     regex: /^((https?:)|(\/\/))/i, // Regex that test if href is external
     target: '_blank',
@@ -35,8 +65,8 @@ module.exports = function (eleventyConfig) {
     extensions: ['.html'],
     includeDoctype: true,
   });
-  eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
-  eleventyConfig.addPlugin(require('@kevingimbel/eleventy-plugin-mermaid'), {
+  eleventyConfig.addPlugin(eleventyAutoCacheBuster);
+  eleventyConfig.addPlugin(eleventyMermaid, {
     mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs',
     mermaid_config: {
       theme: 'base',
@@ -78,30 +108,21 @@ module.exports = function (eleventyConfig) {
   });
 
   // filters
-  eleventyConfig.addFilter(
-    'convertColor',
-    require('./lib/_filters/convertColor'),
-  );
-  eleventyConfig.addFilter('date', require('./lib/_filters/date'));
-  eleventyConfig.addFilter('fixed', require('./lib/_filters/fixed'));
-  eleventyConfig.addFilter('markdown', require('./lib/_filters/markdown'));
-  eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'));
-  eleventyConfig.addFilter('slug', require('./lib/_filters/slug'));
-  eleventyConfig.addFilter('sort', require('./lib/_filters/sort'));
-  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'));
-  eleventyConfig.addFilter(
-    'totalFromRows',
-    require('./lib/_filters/total-from-rows'),
-  );
-  eleventyConfig.addFilter('widont', require('./lib/_filters/widont'));
-  eleventyConfig.addFilter(
-    'sortByOrder',
-    require('./lib/_filters/sortByOrder'),
-  );
-  eleventyConfig.addFilter('blank', require('./lib/_filters/blank'));
-  eleventyConfig.addFilter('urlEncode', require('./lib/_filters/urlEncode'));
-  eleventyConfig.addFilter('debug', require('./lib/_filters/debug'));
-  eleventyConfig.addFilter('absoluteUrl', require('./lib/_filters/urls'));
+  eleventyConfig.addFilter('convertColor', convertColor);
+  eleventyConfig.addFilter('date', dateFilter);
+  eleventyConfig.addFilter('fixed', fixed);
+  eleventyConfig.addFilter('markdown', markdownFilter);
+  eleventyConfig.addFilter('pretty', pretty);
+  eleventyConfig.addFilter('slug', slug);
+  eleventyConfig.addFilter('sort', sort);
+  eleventyConfig.addFilter('tokenize', tokenize);
+  eleventyConfig.addFilter('totalFromRows', totalFromRows);
+  eleventyConfig.addFilter('widont', widont);
+  eleventyConfig.addFilter('sortByOrder', sortByOrder);
+  eleventyConfig.addFilter('blank', blank);
+  eleventyConfig.addFilter('urlEncode', urlEncode);
+  eleventyConfig.addFilter('debug', debug);
+  eleventyConfig.addFilter('absoluteUrl', absoluteUrl);
 
   // pass through
   eleventyConfig.addPassthroughCopy({ 'lib/_javascripts': '/javascripts' });
@@ -132,4 +153,4 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
   };
-};
+}

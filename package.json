@@ -25,11 +25,12 @@
   },
   "homepage": "https://github.com/nhsbsa/nhsbsa-digital-playbook#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@nhsbsa/cookie-consent-component": "0.0.6",
     "color-convert": "^2.0.1",
@@ -61,7 +62,6 @@
     "markdown-it-toc-done-right": "^4.2.0",
     "nhsuk-frontend": "^8.3.0",
     "regexpp": "^3.2.0",
-    "text-table": "^0.2.0",
-    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1"
+    "text-table": "^0.2.0"
   }
 }
