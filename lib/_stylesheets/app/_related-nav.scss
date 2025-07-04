@@ -11,7 +11,7 @@
 }
 
 .nhsuk-related-nav__heading {
-  @include nhsuk-typography-responsive(24, $override-line-height: 1.2);
+  @include nhsuk-typography-responsive(26, $override-line-height: 1.2);
 
   margin-bottom: nhsuk-spacing(3);
   padding-top: nhsuk-spacing(3);

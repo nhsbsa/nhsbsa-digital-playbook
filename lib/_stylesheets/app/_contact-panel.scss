@@ -9,7 +9,7 @@
 }
 
 .app-contact-panel__heading {
-  @include nhsuk-font(24, $weight: bold);
+  @include nhsuk-font(26, $weight: bold);
   @include nhsuk-responsive-padding(3, 'top');
 }
 

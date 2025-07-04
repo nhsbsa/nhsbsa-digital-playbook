@@ -9,7 +9,7 @@
   padding-top: 4px;
 
   @include mq($until: desktop) {
-    @include nhsuk-font(24, $line-height: 1.25, $weight: bold);
+    @include nhsuk-font(26, $line-height: 1.25, $weight: bold);
     color: $nhsuk-text-color;
   }
 }

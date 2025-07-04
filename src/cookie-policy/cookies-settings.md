@@ -13,7 +13,7 @@ Let us know which cookies we can use. We'll use a cookie to save your settings.
 
 These cookies store information about how you use our website, such as the links you click on. We use them to help make our website better.
 
-::: details List of cookies that make our website work    
+::: details List of cookies that make our website work
 
 ### List of cookies that measure website use
 

@@ -108,7 +108,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'lib/_images': '/images' });
   eleventyConfig.addPassthroughCopy({ 'lib/_netlify': '/' });
   eleventyConfig.addPassthroughCopy({
-    'node_modules/nhsuk-frontend/packages/assets': '/nhsuk-frontend/assets',
+    'node_modules/nhsuk-frontend/dist/nhsuk/assets': '/nhsuk-frontend/assets',
   });
   eleventyConfig.addPassthroughCopy({
     'node_modules/nhsuk-frontend/dist/*.js': '/javascripts',
