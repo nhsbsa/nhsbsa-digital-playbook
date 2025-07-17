@@ -8,13 +8,17 @@ status: DRAFT
 ---
 We protect our users with a comprehensive toolset throughout the software delivery lifecycle. We use a "shift-left" approach. This means we integrate quality and security controls early in the development process, rather than leaving them until the end.
 
-We provide control and observability with appropriate tooling at three levels:
+We provide control and observability with appropriate tooling across the entire route to live:
 
 * __Local development__ :wrench:
-  Developers need the right tools to highlight issues when they edit code. We favour tools that embed within the Integrated Development Environment and simplify workflow.
+  Developers need the right tools to highlight issues when they edit code. We favour tools that embed within the Integrated Development Environment (IDE) and simplify workflow.
 
 * __Automated CI/CD pipeline__ :rocket:
-  The Continuous Integration and Continuous Delivery (CI/CD) pipeline gives developers a safety net. It prevents unintended mistakes from reaching production by running tools against code changes before release. Non-compliance will break the build.
+  The Continuous Integration and Continuous Delivery (CI/CD) pipeline provides a safety net. It prevents unintended mistakes from reaching production by running tools against code changes. Non-compliance will break the build.
+  
+  Continuous Integration builds run in controlled Docker instances within our build system. Unit level integration tests run against like-for-like to production Databases, or mock API servers that are trained to simulate the real thing.
+
+  Continuous Delivery builds run in like-for-like pre-production environments: Development, Test and Stage before release into Production
 
 * __Centralised management__ :bar_chart:
   A centralised management interface brings together information from multiple sources into a single view. 
@@ -46,7 +50,7 @@ __Tools__
 
 ## Version control
 
-Version control maintains a complete history of all code changes. It lets teams track who made what changes, when, and why. You can revert to previous versions if issues arise. Version control enables parallel development by allowing multiple developers to work on the same codebase simultaneously without conflict. It supports branching strategies that isolate feature development, bug fixes, and releases. This ensures unstable code doesn't impact production systems while enabling experimentation and collaboration. Version control provides an essential audit trail for compliance and security purposes.
+Version control maintains a complete history of all code changes. It lets teams track who made what changes, when, and why. You can revert to previous versions if issues arise. Version control enables parallel development by allowing multiple developers to work on the same codebase simultaneously without conflict. It supports branching strategies that isolate feature development, bug fixes, hot fixes and releases. This ensures unstable code doesn't impact production systems while enabling experimentation and collaboration. Version control provides an essential audit trail for compliance and security purposes.
 
 __Guidance__
 * [Git usage](../../development/dev-git/)
@@ -57,7 +61,7 @@ __Tools__
 
 ## Build automation
 
-Create reproducible builds, with integrated controls to ensure quality.
+Build automation ensures that every code change can be compiled, tested, and packaged in a consistent and repeatable manner. Integrated quality gates such as static analysis, unit tests, and integrated tests are enforced during the build process to catch issues early.
 
 __Tools__
 * [Maven] :wrench: :rocket:
@@ -65,14 +69,14 @@ __Tools__
 * [Docker] :wrench: :rocket: :bar_chart:
 * [Gitlab-CI] :rocket: :bar_chart:
 
-## Cloud native, open source application and security frameworks
+## Cloud native, Open Source application and security frameworks
 
 Use open source application and security frameworks. They're reliable because they're used worldwide and supported by large communities. Use cloud native services to reduce maintenance work and leverage built-in security features.
 
 __Guidance__
 * [Technologies](../../technologies/)
 
-## Database Migration & Schema Management
+## Database migration & schema management
 
 Manage database schemas with source controlled migration files. This ensures traceability of change and reproducible environments from local development through to production.
 
@@ -80,7 +84,7 @@ __Tools__
 * [Liquibase] :wrench: :rocket:
 * [Gitlab-CI] :rocket: :bar_chart:
 
-## Infrastructure as Code
+## Infrastructure as Code (IaC)
 
 Use Infrastructure as Code (IaC) for source controlled change management of environments. Provide a local equivalent of cloud infrastructure for rapid development cycles.
 
@@ -92,7 +96,7 @@ __Tools__
 
 ## Dependency Chain Protection
 
-Protect against [dependency chain abuses](https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-03-Dependency-Chain-Abuse) such as dependency confusion, dependency hijacking, typosquatting and brandjacking 
+Protect against [dependency chain abuses](https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-03-Dependency-Chain-Abuse) such as dependency confusion, dependency hijacking, typosquatting and brandjacking.
 
 __Tools__
 * [Nexus] :wrench: :rocket: :bar_chart:
@@ -100,9 +104,9 @@ __Tools__
 * [Maven] :wrench: :rocket:
 * [NPM] :wrench: :rocket:
 
-## Secrets Detection
+## Secrets detection
 
-Prevent  sensitive information such as credentials and API keys from being committed to version control.
+Prevent  sensitive information such as API keys, credentials and tokens from being committed to version control.
 
 __Guidance__
 * [Secrets detection](../../development/coding-secrets-detection/)
@@ -112,7 +116,7 @@ __Tools__
 * [Git] hooks  :wrench:
 * [GitLab-CI] :rocket:
 
-## Unit Test Coverage
+## Unit test coverage
 
 Ensure code is unit tested through comprehensive automated testing.
 
@@ -130,7 +134,7 @@ __Tools__
 * [GitLab-CI] :rocket:
 * [SonarQube] :bar_chart:
 
-## Code Quality
+## Code quality
 
 Enforce coding standards and identify technical debt by static analysis of code.
 
@@ -187,7 +191,7 @@ __Tools__
 * [Maven] :wrench:
 * [NPM] :wrench:
 
-## License Compliance
+## License compliance
 
 Ensure use of third-party dependencies comply with their licence terms and conditions. 
 
@@ -198,7 +202,7 @@ __Tools__
 * [GitLab-CI] :rocket:
 * [SonarQube] :bar_chart:
 
-## Container Scanning
+## Container scanning
 
 Scan container images for vulnerabilities and misconfigurations.
 
@@ -207,7 +211,7 @@ __Tools__
 * [AWS Inspector] :rocket:
 * [AWS Security Hub] :bar_chart:
 
-## Peer Review
+## Peer review
 
 All code must be peer reviewed to ensure quality and security requirements are met.
 
@@ -219,7 +223,7 @@ __Tools__
 * [Gitlab-CI] merge request and approval workflow :wrench: :rocket:
 * [GitLab] code review analytics :rocket:
 
-## Pipeline Compliance
+## Pipeline compliance
 
 Ensure pipeline controls are configured correctly.
 
@@ -234,7 +238,7 @@ Test running applications for security vulnerabilities.
 __Process__
 * IT Health Checks :bar_chart:
 
-## Acceptance Testing
+## Acceptance testing
 
 Validate application functionality meets business requirements.
 
@@ -246,7 +250,7 @@ __Tools__
 * [Selenium] :wrench: :rocket:
 * [Test reports] :bar_chart:
 
-## API Testing
+## API testing
 
 Ensure APIs meet functional requirements.
 
@@ -257,7 +261,7 @@ __Tools__
 * [Karate] :wrench: :rocket:
 * [Test reports] :bar_chart:
 
-## Accessibility Testing
+## Accessibility testing
 
 Ensure applications meet accessibility standards.
 
@@ -274,7 +278,7 @@ __Tools__
 * [Mac Voice Control] :wrench:
 * [Test reports] :bar_chart:
 
-## Compatibility Testing
+## Compatibility testing
 
 Verify applications work across different environments and browsers.
 
@@ -285,7 +289,7 @@ __Tools__
 * [Saucelabs] :wrench: :rocket:
 * [Test reports] :bar_chart:
 
-## Performance Testing
+## Performance testing
 
 Measure application performance under various load conditions.
 
@@ -296,14 +300,14 @@ __Tools__
 * [JMeter] :wrench: :rocket:
 * [Test reports] :bar_chart:
 
-## Release Assurance
+## Release assurance
 
-Sign-off for release into production
+Sign-off for release into production.
 
 __guidance__
 * [Release Assurance](../../testing/release-assurance/)
 
-## Continuous Monitoring
+## Continuous monitoring
 
 Ongoing security and compliance monitoring in production.
 
