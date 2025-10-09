@@ -19,7 +19,7 @@ We’ve also made the website text as simple as possible to understand.
 
 ## How accessible this website is
 
-We know some parts of this website are not fully accessible, as: 
+This website has not yet been tested. We plan to test this website in October 2025.
 
 ## Feedback and contact information
 
@@ -46,15 +46,7 @@ The NHSBSA is committed to making its website accessible, in accordance with the
 
 ### Compliance status
 
-The website has been tested against the Web Content Accessibility Guidelines (WCAG) 2.2 AA standard.
-
-This website is partially compliant with the [Web Content Accessibility Guidelines (WCAG) version 2.2](https://www.w3.org/TR/WCAG22/) AA standard, due to the non-compliances listed below. 
-
-## Non-accessible content
-
-The content listed below is non-accessible for the following reasons.
-
-### Non-compliance with the accessibility regulations
+The website has not yet been tested against the Web Content Accessibility Guidelines (WCAG) 2.2 AA standard.
 
 ## What we’re doing to improve accessibility
 
@@ -66,14 +58,4 @@ Our accessibility compliance statement will be reviewed regularly. Every newly r
 
 This statement was prepared on 7 October 2025. It was last reviewed on 7 October 2025.
 
-This website was last tested on 7 October 2025 against the WCAG 2.2 AA standard. The test was carried out by the NHSBSA digital accessibility teams. 
-
-The most viewed pages were tested using automated testing tools by our website team. A further audit of the website was carried out to the WCAG 2.2 AA standard.
-
-We tested a sample of the website screens to meet ‘AA’ WCAG 2.2 standards, using manual and automated tests.
-
-We run each webpage through automated Wave, Lighthouse and Axe accessibility tools then manually test with screen readers (NVDA and VoiceOver) and standards checklists.
-
-We run representative user journey tests through speech recognition software (Dragon and Voice Control).
-
-These checklists contain standards that have been compiled using WCAG, the NHS service manual and the Government Digital Service (GDS) guidance. 
+This website was has not yet been tested.

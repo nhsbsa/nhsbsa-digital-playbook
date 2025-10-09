@@ -11,6 +11,8 @@ review:
 
 Producing accessibile web sites and applications is a fundamental aspect of frontend development.
 
+For detailed guidance, view our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page, which explains how to build services accessibly and includes resources and checklists.
+
 The Government service manual explains more about [making your service accessible][making_your_service_accessible] and writing an [accessibility statement][gov_accessibility_statement].
 
 The NHS service manual also provides guidance on [accessibility][nhs_accessibility] including specific advice on [design][nhs_accessibility_design], [development][nhs_accessibility_development] and [testing][nhs_accessibility_testing].
