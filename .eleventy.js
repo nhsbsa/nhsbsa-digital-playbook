@@ -27,31 +27,6 @@ module.exports = function (eleventyConfig) {
     outPath: 'stylesheets',
     outFileName: 'application.css',
   });
-  eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
-    name: 'external-links',
-    regex: /^((https?:)|(\/\/))/i, // Regex that test if href is external
-    target: '_blank',
-    rel: 'noopener',
-    extensions: ['.html'],
-    includeDoctype: true,
-  });
-  eleventyConfig.addTransform(
-    'add-visually-hidden-text',
-    function (content, outputPath) {
-      if (outputPath && outputPath.endsWith('.html')) {
-        return content.replace(
-          /<a([^>]+href="(?:https?:)?\/\/[^"]+"[^>]*)>(.*?)<\/a>/gims,
-          (match, attrs, innerText) => {
-            if (innerText.includes('opens in a new tab')) return match;
-
-            return `<a${attrs}>${innerText}<span class="nhsuk-u-visually-hidden"> (opens in a new tab)</span></a>`;
-            }
-          );
-        }
-      return content;
-    }
-  );
-
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
   eleventyConfig.addPlugin(require('@kevingimbel/eleventy-plugin-mermaid'), {
     mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs',
