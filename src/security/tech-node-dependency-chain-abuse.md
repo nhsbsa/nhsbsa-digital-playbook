@@ -68,7 +68,7 @@ The report **must** be inspected for potential malware, identified by a `MAL` pr
 Tooling can identify some malware, but it isn't 100% effective. Package changes should always be reviewed manually:
 
 * **Review package-lock changes carefully.** When reviewing changes to `package-lock.json`, verify that the modifications align with the expected package additions or version changes
-  * Check packages for for new authors or maintainers
+  * Check packages for new authors or maintainers
   * Watch for new dependencies with very recent publish dates unexpected version increments
   * Highlight “high-churn” packages as suspicious
   * Guard against dependency confusion (namespaces, internal scopes)
