@@ -9,7 +9,9 @@ related:
   tag: a11y
 ---
 
-The NHS Business Services Authority (NHSBSA) has a legal and moral duty to make its services, websites, documents and other digital products accessible and inclusive. Accessibility is about more than compliance, it’s about making sure everyone can access the information and services they need, without barriers. By removing barriers, we can create digital products that work better for everyone.
+The NHS Business Services Authority (NHSBSA) has a legal and moral duty to make its services, websites, documents and other digital products accessible and inclusive. 
+
+Accessibility is about more than compliance, it’s about making sure everyone can access the information and services they need, without barriers. 
 
 ## Think about accessibility from the start
 In the UK, 1 in 5 people have a disability - this could be visual, hearing, motor (affecting fine movement) or cognitive (affecting memory and thinking).
@@ -62,7 +64,7 @@ WCAG has 55 success criteria at levels A and AA. This can feel like a lot, but s
 While the official guidelines can be dense with technical information, there are user-friendly versions with plain English explanations and practical examples that make them easier to follow:
 
 - [GOV.UK accessibility testing guide](https://github.com/alphagov/wcag-primer/wiki)
-- [Department for Education WCAG explorer](https://accessibility.education.gov.uk/guidelines/wcag/explorer)
+- [WCAG explorer - Department for Education](https://accessibility.education.gov.uk/guidelines/wcag/explorer)
 - [How to meet WCAG (Quick reference) - W3C](https://www.w3.org/WAI/WCAG22/quickref)
 
 #### The four WCAG principles
@@ -84,7 +86,7 @@ Your statement needs to cover:
 - how people can get alternatives to content that’s not accessible to them
 - how to contact you to report accessibility problems - and a link to the website that they can use if they’re not happy with your response.
 
-The statement must declare one of following:
+The statement must declare one of the following:
 - Fully compliant - All pages of the product or website meets all of the WCAG level A and AA success criteria in full.
 - Partially compliant - One or more, but less than half, of the WCAG Level A and AA success criteria have not been met.
 - Non-compliant - More than half of all WCAG Level A and AA success criteria have not been met.

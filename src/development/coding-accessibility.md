@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Accessible development"
-description: "Building accessibly from the start"
+description: "Making services accessible from the start"
 tags: [dev, a11y]
 order: 
   dev: 1
@@ -10,15 +10,15 @@ related:
   title: Related articles
   tag: a11y
 review:
-    last_reviewed_date: 2025-10-7
+    last_reviewed_date: 2025-12-3
     review_cycle: ANNUAL
 ---
 
-Developers play a key role in making NHSBSA services accessible. Good design only works if it’s built accessibly. Accessibility must be part of every line of code, from the start.
+Developers are essential to making NHSBSA services accessible. Accessibility must be built in from the start.
 
-Building accessibly means everyone, including disabled people, can use our services. It also reduces technical debt, as fixing accessibility issues later is more time consuming and costly than addressing them before they've been deployed.
+Accessible services help everyone and reduce technical debt. It is always faster and cheaper to fix issues early.
 
-Although the components in the NHS.UK frontend have been research, designed, developed and tested for accessibility. Using NHS.UK frontend components does not automatically guarantee WCAG 2.2 Level AA compliance. You must still implement them accessibly and test your pages before passing them on.
+NHS Frontend components are designed and tested for accessibility, but they do not guarantee WCAG 2.2 AA compliance. You must still implement them correctly and test your pages before publishing.
 
 ## Web Content Accessibility Guidelines (WCAG)
 WCAG is a list of success criteria your website or mobile application need to meet to be legally compliant with the accessibility regulations. The latest published version of WCAG is [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
@@ -36,72 +36,115 @@ Always start by using the existing patterns and components in the [NHS Design Sy
 
 These components often have accessibility considerations built in, so it’s not enough to just style your components to look similar.
 
-You should work with an Interaction Designer to understand what parts of the design exist already. If you need to build something from scratch you will need to do additional work to make sure it’s accessible.
+You should work with an interaction designer to understand what parts of the design exist already. If you need to build something from scratch you will need to do additional work to make sure it’s accessible.
 
 ### Pattern libraries
-Even if you’re using the NHS Frontend, the GOV.UK Design System can help you check which HTML attributes you need to make components accessible. 
+When using the NHS Frontend, the GOV.UK Design System can help you check which HTML attributes you need to make components accessible. 
 
-For example, when building an email input, you can use the [NHS text input component](https://service-manual.nhs.uk/design-system/components/text-input), then check the [GOV.UK email address pattern](https://design-system.service.gov.uk/patterns/email-addresses/) to make sure you’re using the right HTML attributes such as `type` and `autocomplete`.
+For example, when building an email input, you can use the [NHS text input component](https://service-manual.nhs.uk/design-system/components/text-input), then check the [GOV.UK email address pattern](https://design-system.service.gov.uk/patterns/email-addresses/) to make sure you’re using the correct HTML attributes such as `type` and `autocomplete`.
 
 Use the NHS and GOV.UK pattern libraries to check components and find best practice examples:
 - [NHS Design system patterns](https://service-manual.nhs.uk/design-system/patterns)
 - [GOV.UK Design system patterns](https://design-system.service.gov.uk/patterns/)
 
+## Understanding the accessibility tree
+Assistive technologies use the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) to understand your page. The tree shows the **roles**, **names**, **states** and **properties** exposed by your code.
+
+Use your browser’s developer tools to inspect the accessibility tree. This helps you check:
+- components have the correct roles
+- names and descriptions are correctly exposed as expected
+- interactive elements appear in the correct order
+- ARIA attributes follow best practice and do not replace semantic HTML
+
+Checking the accessibility tree early can help you find issues that automated tools miss.
+
 ## Creating new components
-Occasionally you may be required to make new components. New components should be researched, designed and developed to be accessible from the start. 
+Sometimes you will need to create new components. New components must to be researched, designed and developed to be accessible from the start. 
 
-Use your browser’s developer tools to inspect the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree). The accessibility tree shows how assistive technologies, like screen readers, will interpret your component. Check that components convey the correct information through their **roles**, **states**, and **properties**.
+Use your browser’s developer tools to inspect your component in the accessibility tree. Make sure it exposes the correct roles, names, states and properties so assistive technologies interpret it correctly.
 
-Test components to make sure they:
-- work with assistive technologies, such as screen readers and voice control
-- work with keyboard-only navigation
-- work with zoom and large text
-- do not rely on colour alone to convey information
-- have accessible focus styles
+Test every new component to make sure it:
+- works with assistive technologies, including screen readers, magnifiers and voice control
+- works with keyboard-only navigation
+- works with zoom, reflow and large text
+- does not rely on colour alone to convey information
+- has clear and consistent focus styles
+- behaves predictably and consistently across devices and browsers
 
-For examples of common accessibility issues, view the [10 digital accessibility mistakes to avoid](https://accessibility.blog.gov.uk/2025/02/04/10-digital-accessibility-mistakes-to-avoid/) on the GOV.UK blog.
+You are responsible for ensuring the component meets WCAG 2.2 Level AA.
+
+For examples of common accessibility issues, read the [10 digital accessibility mistakes to avoid](https://accessibility.blog.gov.uk/2025/02/04/10-digital-accessibility-mistakes-to-avoid/) on the GOV.UK blog.
+
+## Consider accessibility when using Copilot
+If you use code generated by Copilot (or any AI-assisted tool), review it with accessibility in mind. Automated suggestions might feel like they speed up development, but there is no guarantee the output meets accessibility requirements, and fixing accessibility issues later will slow you down.
+
+WebAIM found WCAG failures on 94.8% of the top one million homepages. If Large Language Models (LLMs) learn from inaccessible websites, we cannot assume AI-generated code will be accessible.
+
+You must:
+- treat AI-generated output as a first draft, not a guarantee of accessibility
+- review code using tools like HTML validators, accessibility checkers and browser accessibility trees
+- use the automated and manual checks in this playbook to validate output against WCAG before you push to test
+
 
 ## Accessibility checks before pushing code
-After writing code, check that your work meets accessibility standards. View the [NHS developer accessibility checklist](https://nhsdigital.github.io/accessibility-checklist/checklist-developer/) to help you check your code before you push it. 
+After writing code, check that your work meets accessibility standards. Use the [NHS developer accessibility checklist](https://nhsdigital.github.io/accessibility-checklist/checklist-developer/) alongside the checks on this page, including the automated and manual tests listed below.
 
-The following sections include items you should review before pushing code. It applies to all pages and components, whether new or updated.
+The following checks apply to all pages and components, whether new or updated.
 
 ### Web pages
-- page titles are correct and descriptive. They should include the H1, the service, and the organisation 
-- HTML language is set correctly using the `lang` attribute
-- use semantic HTML elements where possible, rather than relying on generic `<div>` or `<span>` tags
-- landmark regions are used to help screen reader navigation
-- skip links are present to assist keyboard users
-- URLs are clear, unambiguous, easy to read, easy to type, and easy to share
+- page titles are correct and descriptive. Titles must include the page's H1, the service name, and the organisation. For example `Where do you live? - Get healthcare cover for travelling abroad - NHSBSA`
+- the page has the correct HTML language set using the `lang` attribute
+- semantic HTML elements are used where possible, instead of generic `<div>` or `<span>` tags
+- landmark regions are used correctly to support screen reader navigation
+- skip links are present and work as expected
+- URLs are clear, unambiguous, easy to read, and easy to share
+- link text is descriptive and meaningful, without needing surrounding text
+- headings follow a logical hierarchy
+- if your service times users out, use the NHSBSA timeout component to warn users and give them time to extend their session
+- ensure touch targets meet minimum size and spacing
+- check the HTML for duplicate IDs, as these can break form error linking and assistive technology support
 
 ### Form fields and inputs
-- form inputs have correct labels, type, and autocomplete attributes
+- every form input has the correct label, type, and autocomplete attributes
+- related inputs are grouped using `<fieldset>` and `<legend>` where appropriate
 - error messages are implemented correctly and linked to inputs or fieldsets using `aria-describedby`
-- components communicate correctly through roles, states, and properties in the accessibility tree
+- components expose the correct roles, states, and properties in the accessibility tree
 
 ### Colour and visual design
-- information is not conveyed by colour alone
-- colour contrast ratios meet accessibility standards
-- visually hidden text has been considered to assist screen reader users
+- information is never conveyed by colour alone
+- make sure colour contrast ratios meet accessibility standards; you can check them using a [contrast checker](https://webaim.org/resources/contrastchecker/)
+- avoid using block capitals for headings or large sections of text
 
-### Check interaction and navigation
-Before pushing your code, you should check your pages:
+### Interaction and navigation
+Before pushing your code, you must check your pages:
 - with a screen reader
-- with keyboard only navigation
-- test at 400% zoom using a browser window of 1280 px × 1024 px to ensure content reflows into the viewport. 
-- focus order and keyboard navigation behave as expected
-- dynamic content updates are announced correctly and in a timely manner for users of assistive technologies
+- with keyboard-only navigation, check there are no traps, all interactive elements can be reached, and focus follows a clear, logical order
+- at 400% zoom using a browser window of 1280 px × 1024 px to check that content reflows 
+- to confirm focus order and keyboard navigation behave as expected
+
+### Images and media
+- images have meaningful alt text that describes the purpose of the image
+- decorative images use empty alt text `(alt="")`
+- videos include captions
+- audio content has a transcript
+- complex images, such as charts or diagrams, include a text alternative that conveys the same information
 
 ### Automated and technical checks
-Automated tools don’t catch every issue, but used alongside manual testing they provide good coverage:
+Automated tools don’t catch every issue, but used alongside manual testing they provide good coverage.
+
+Test your pages with these tools before committing or deploying:
 - [axe DevTools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 - [WAVE](https://wave.webaim.org/extension/)
 - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
 - [HTML validator](https://validator.w3.org/nu/)
 
+## Prioritising fixes
+Fix all accessibility issues before you push code to test. If issues are found later in the process, prioritise the ones that block people from completing essential tasks, such as filling in forms or navigating the service.
+
 ## Working with others
-- Collaborate with interaction and content designers to make sure designs translate into accessible code.
-- Pair with testers so accessibility checks are included as part of the definition of done.
+- collaborate with interaction and content designers to make sure designs translate into accessible code
+- pair with testers so accessibility checks are included as part of the definition of done
+- work with business analysts to make sure accessibility requirements are captured early, including things like page titles and error messages
 
 ## Where to learn more
 - [Accessible guidance for: Development - NHS Digital service manual](https://service-manual.nhs.uk/accessibility/development)
