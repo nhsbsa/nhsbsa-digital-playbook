@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Accessibility"
-description: "Creating accessible and inclusive services that work for everyone"
+description: "How we create accessible and inclusive services that work for everyone"
 tags: [home, a11y]
-order: 12
+order: 2
 related:
   title: Related accessibility articles
   tag: a11y
