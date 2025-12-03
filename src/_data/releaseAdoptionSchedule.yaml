@@ -1,5 +1,9 @@
 ---
 nodejs:
+  - version: 26
+    release: 2026-04-22
+    adopt: 2026-10-28
+    decommission: 2029-04-30
   - version: 24
     release: 2025-04-22
     adopt: 2025-10-28
@@ -75,6 +79,10 @@ java:
     adopt: 2015-09-01
     decommission: 2022-03-01
 spring_boot:
+  - version: 4.0.x
+    release: 2025-11-01
+    adopt: 2026-01-01
+    decommission: 2026-12-01
   - version: 3.5.x
     release: 2025-05-22
     adopt: 2025-07-22
@@ -137,9 +145,9 @@ spring_boot:
     decommission: 2019-08-06
 spring_cloud:
   - version: "2025.0 (Northfields)"
-    release: 2025-12-01
-    adopt: 2026-02-01
-    decommission: 2028-12-01
+    release: 2025-05-29
+    adopt: 2026-07-29
+    decommission: 2028-05-29
   - version: "2024.0 (Moorgate)"
     release: 2024-12-05
     adopt: 2025-02-05
@@ -203,6 +211,10 @@ ruby:
     adopt: 2020-06-25
     decommission: 2023-03-31
 postgresql:
+  - version: 18
+    release: 2025-09-25
+    adopt: 2026-03-25
+    decommission: 2030-11-14
   - version: 17
     release: 2024-09-26
     adopt: 2025-03-26

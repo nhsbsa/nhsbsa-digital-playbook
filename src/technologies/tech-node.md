@@ -3,6 +3,8 @@ layout: article
 title: "Node.js"
 tags: tech
 order: 20
+related:
+  tag: node
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
