@@ -65,7 +65,7 @@ same mailbox.
 - URLs must be agreed by a Content Designer and align to [URL design standards][gov_url_standards]
 - prototype code mustn't be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don't require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.
 
-<!-- areas not yet covered:
+<!-- TO DO: 
 - coding standards
 - JS standards
 - CSS architecture
