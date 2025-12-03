@@ -9,29 +9,36 @@ review:
 ---
 ## Accessibility
 
-Producing accessibile web sites and applications is a fundamental aspect of frontend development.
+Producing accessible websites and applications is a fundamental part of frontend development at the NHSBSA.
 
-For detailed guidance, view our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page, which explains how to build services accessibly and includes resources and checklists.
+For detailed guidance, read our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page. It explains how to build accessible services, use existing NHS and GOV.UK components, create new components, and test your work using manual and automated tools.
 
-The Government service manual explains more about [making your service accessible][making_your_service_accessible] and writing an [accessibility statement][gov_accessibility_statement].
-
-The NHS service manual also provides guidance on [accessibility][nhs_accessibility] including specific advice on [design][nhs_accessibility_design], [development][nhs_accessibility_development] and [testing][nhs_accessibility_testing].
+You should also refer to:
+- the Government service manual for guidance on [making your service accessible][making_your_service_accessible] and [publishing accessibility statements][gov_accessibility_statement]
+- the NHS service manual for [design][nhs_accessibility_design], [development][nhs_accessibility_development] and [testing][nhs_accessibility_testing] guidance.
 
 As a frontend developer at the NHSBSA you should:
+- design and build using [progressive enhancement][gov_progressive_enhancement]
+- build responsive, mobile-first interfaces that work across the devices in the [GOV.UK browser and device guidance][gov_browser_compatibility]
+- keep up to date with NHS, GOV.UK and accessibility best practice
+- follow the accessibility checks and processes listed in our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page before pushing code
+- test your work with a keyboard, assistive technologies and automated tools
 
-* Use semantic HTML.
-* Use ARIA roles for interactive elements.
-* Build user interfaces that work by default without rich client technology such as Javascript.
-* Build user interfaces that adopt progressive enhancement and not use graceful degradation.
-  Government advice is to [design the user interfaces with progressive enhancement][gov_progressive_enhancement].
+## NHS and GOV.UK design systems
 
-## NHS and Gov design systems
+We use the [NHS design system][nhs_design_system] and the [NHS frontend][nhs_frontend] package to make sure our services follow standard styles, components and patterns that have been tested with users. When government branding is required, we use the GOV.UK Design System and GOV.UK Frontend instead.
 
-We make use of the [NHS design system][nhs_design_system] and associated [NHS frontend][nhs_frontend] package to align to standard styles, components and patterns that have been proven with robust user testing. In cases where Government branding is required, we adopt the [Government design system][gov_design_system] and [frontend][gov_frontend].
+Both NHS and GOV.UK Frontends are implemented in Node.js and Nunjucks. Where possible, we prefer to build services in Node.js so we can take full advantage of these frontend packages.
 
-Both NHS and Gov frontends are implemented in Node.js and Nunjucks. Our preference is to implement frontends in Node.js to take full advantage of the frontend packages.
+Sometimes user research may show that an existing pattern does not meet user needs. In these cases we may need to create a non-standard pattern. Any new pattern must be user tested and fed back to the NHS or GOV.UK Design System teams so others can benefit from it. Accessibility considerations for creating new components can be found on our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page.
 
-We occasionally need to adopt non-standard patterns when user research proves specific difficulties with the standard patterns. Any new pattern should be user tested and then fed back into the NHS or Gov design system and frontend package.
+If you find accessibility or usability issues when testing existing components, you can also feed these back to the design system teams using their public issue backlogs on GitHub.
+
+### Keeping frontend packages up to date
+
+Remember to include updates to the frontend toolkit in your service roadmap. You can keep up to date with changes by checking the GitHub changelogs for [NHS Frontend](https://github.com/nhsuk/nhsuk-frontend/blob/main/CHANGELOG.md) and Github releases [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/releases).
+
+Updating regularly is important because new versions often include accessibility improvements, performance enhancements and updates to existing components. Be aware that some releases may include breaking changes that take additional time to implement.
 
 ## Multi-lingual support
 
@@ -41,21 +48,33 @@ Externalise content in whole sentences, with placeholders for dynamic content: D
 
 Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner's Office are available for advice and provide a [bilingual design guide][wlc_bilingual_design_guide]:
 
-* The website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.
-* It should always be possible and easy to switch from one language to another on any page, going straight to the same page in the chosen language.
-* The language switch toggle should ideally be placed in the top right hand corner of the screen.
-* Organisations can register domains in both Welsh and English, for example welshlanguagecommissioner.wales and comisiynyddygymraeg.cymru
-* E-mail addresses should be either language neutral or bilingual, e.g. post@cyg-wlc.wales or separate Welsh and English versions should be available which will reach the
+- the website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.
+- it should always be possible and easy to switch from one language to another on any page, going straight to the same page in the chosen language.
+- the language switch toggle should ideally be placed in the top right hand corner of the screen.
+- organisations can register domains in both Welsh and English, for example welshlanguagecommissioner.wales and comisiynyddygymraeg.cymru
+- e-mail addresses should be either language neutral or bilingual, e.g. post@cyg-wlc.wales or separate Welsh and English versions should be available which will reach the
 same mailbox.
-* Translations must be performed by human translators. Software can support a translator’s work, but it should never be used instead of a professional translator.
+- translations must be performed by human translators. Software can support a translator’s work, but it should never be used instead of a professional translator.
+- update the page’s `lang` attribute when switching languages so screen readers announce content correctly
 
 ## General guidance
 
-* Our web application must function correctly on the range of browsers and devices specified in the latest [Government compatibility guidance][gov_browser_compatibility].
-* Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See [Wikipedia Post/Redirect/Get][wikipedia_prg] for more on this pattern.
-* HTML markup must contain `id` attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.
-* URLs must be agreed by a Content Designer and align to [URL design standards][gov_url_standards]
-* Prototype code mustn't be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don't require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.
+- our web application must function correctly on the range of browsers and devices specified in the latest [Government compatibility guidance][gov_browser_compatibility].
+- web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See [Wikipedia Post/Redirect/Get][wikipedia_prg] for more on this pattern.
+- HTML markup must contain `id` attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.
+- URLs must be agreed by a Content Designer and align to [URL design standards][gov_url_standards]
+- prototype code mustn't be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don't require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.
+
+<!-- areas not yet covered:
+- coding standards
+- JS standards
+- CSS architecture
+- Performance
+- Security
+- Tooling and pipelines
+- Testing
+- environmental impact
+-->
 
 [making_your_service_accessible]: <https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction>
 [gov_accessibility_statement]: <https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility>
