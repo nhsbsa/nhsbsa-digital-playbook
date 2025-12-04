@@ -27,6 +27,14 @@ module.exports = function (eleventyConfig) {
     outPath: 'stylesheets',
     outFileName: 'application.css',
   });
+  eleventyConfig.addPlugin(require('eleventy-plugin-external-links'), {
+    name: 'external-links',
+    regex: /^((https?:)|(\/\/))/i, // Regex that test if href is external
+    target: '_blank',
+    rel: 'noopener',
+    extensions: ['.html'],
+    includeDoctype: true,
+  });
   eleventyConfig.addPlugin(require('eleventy-auto-cache-buster'));
   eleventyConfig.addPlugin(require('@kevingimbel/eleventy-plugin-mermaid'), {
     mermaid_js_src: 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs',

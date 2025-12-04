@@ -4,24 +4,24 @@ title: "Frontends"
 tags: dev
 order: 11
 review:
-    last_reviewed_date: 2023-05-06
+    last_reviewed_date: 2025-12-04
     review_cycle: ANNUAL
 ---
 ## Accessibility
 
 Producing accessible websites and applications is a fundamental part of frontend development at the NHSBSA.
 
-For detailed guidance, read our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page. It explains how to build accessible services, use existing NHS and GOV.UK components, create new components, and test your work using manual and automated tools.
+For detailed guidance, read our [Accessible development][nhbsa_accessible_dev] page. It explains how to build accessible services, use existing NHS and GOV.UK components, create new components, and test your work using manual and automated tools.
 
 You should also refer to:
+- the NHS service manual for [development][nhs_accessibility_development], [design][nhs_accessibility_design] and [testing][nhs_accessibility_testing] guidance.
 - the Government service manual for guidance on [making your service accessible][making_your_service_accessible] and [publishing accessibility statements][gov_accessibility_statement]
-- the NHS service manual for [design][nhs_accessibility_design], [development][nhs_accessibility_development] and [testing][nhs_accessibility_testing] guidance.
 
 As a frontend developer at the NHSBSA you should:
 - design and build using [progressive enhancement][gov_progressive_enhancement]
 - build responsive, mobile-first interfaces that work across the devices in the [GOV.UK browser and device guidance][gov_browser_compatibility]
 - keep up to date with NHS, GOV.UK and accessibility best practice
-- follow the accessibility checks and processes listed in our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page before pushing code
+- follow the accessibility checks and processes listed in our [Accessible development][nhbsa_accessible_dev] page before pushing code
 - test your work with a keyboard, assistive technologies and automated tools
 
 ## NHS and GOV.UK design systems
@@ -30,13 +30,15 @@ We use the [NHS design system][nhs_design_system] and the [NHS frontend][nhs_fro
 
 Both NHS and GOV.UK Frontends are implemented in Node.js and Nunjucks. Where possible, we prefer to build services in Node.js so we can take full advantage of these frontend packages.
 
-Sometimes user research may show that an existing pattern does not meet user needs. In these cases we may need to create a non-standard pattern. Any new pattern must be user tested and fed back to the NHS or GOV.UK Design System teams so others can benefit from it. Accessibility considerations for creating new components can be found on our [Accessible development](/nhsbsa-digital-playbook/development/coding-accessibility/) page.
+Sometimes user research may show that an existing pattern does not meet user needs. In these cases we may need to create a non-standard pattern. Any new pattern must be user tested and fed back to the NHS or GOV.UK Design System teams so others can benefit from it.
+
+Accessibility considerations for creating new components can be found on our [Accessible development][nhbsa_accessible_dev] page.
 
 If you find accessibility or usability issues when testing existing components, you can also feed these back to the design system teams using their public issue backlogs on GitHub.
 
 ### Keeping frontend packages up to date
 
-Remember to include updates to the frontend toolkit in your service roadmap. You can keep up to date with changes by checking the GitHub changelogs for [NHS Frontend](https://github.com/nhsuk/nhsuk-frontend/blob/main/CHANGELOG.md) and Github releases [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/releases).
+Remember to include updates to the frontend toolkit in your service roadmap. You can keep up to date with new releases and changes by checking the GitHub changelogs for [NHS Frontend][nhs_changelog] and Github releases [GOV.UK Frontend][gov_releases].
 
 Updating regularly is important because new versions often include accessibility improvements, performance enhancements and updates to existing components. Be aware that some releases may include breaking changes that take additional time to implement.
 
@@ -65,22 +67,14 @@ same mailbox.
 - URLs must be agreed by a Content Designer and align to [URL design standards][gov_url_standards]
 - prototype code mustn't be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don't require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.
 
-<!-- TO DO: 
-- coding standards
-- JS standards
-- CSS architecture
-- Performance
-- Security
-- Tooling and pipelines
-- Testing
-- environmental impact
--->
 
+[nhbsa_accessible_dev]: </nhsbsa-digital-playbook/development/coding-accessibility/>
 [making_your_service_accessible]: <https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction>
 [gov_accessibility_statement]: <https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility>
 [gov_progressive_enhancement]: <https://www.gov.uk/service-manual/technology/using-progressive-enhancement>
 [gov_design_system]: <https://design-system.service.gov.uk/>
 [gov_frontend]: <https://github.com/alphagov/govuk-frontend>
+[gov_releases]: <https://github.com/alphagov/govuk-frontend/releases>
 [gov_browser_compatibility]: <https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices>
 [gov_url_standards]: <https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk>
 [nhs_design_system]: <https://service-manual.nhs.uk/design-system>
@@ -89,5 +83,6 @@ same mailbox.
 [nhs_accessibility_design]: <https://service-manual.nhs.uk/accessibility/design>
 [nhs_accessibility_development]: <https://service-manual.nhs.uk/accessibility/development>
 [nhs_accessibility_testing]: <https://service-manual.nhs.uk/accessibility/testing>
+[nhs_changelog]: <https://github.com/nhsuk/nhsuk-frontend/blob/main/CHANGELOG.md>
 [wlc_bilingual_design_guide]: <https://arts.wales/sites/default/files/2021-02/Bilingual%20Design%20Guide%202018.pdf>
 [wikipedia_prg]: <https://en.wikipedia.org/wiki/Post/Redirect/Get>

@@ -19,7 +19,7 @@ We’ve also made the website text as simple as possible to understand.
 
 ## How accessible this website is
 
-This website has not yet been tested. We plan to test this website in October 2025.
+This website has not yet been tested. We plan to test this website in December 2025.
 
 ## Feedback and contact information
 
@@ -56,6 +56,6 @@ Our accessibility compliance statement will be reviewed regularly. Every newly r
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 7 October 2025. It was last reviewed on 7 October 2025.
+This statement was prepared on 4 December 2025. It was last reviewed on 4 December 2025.
 
 This website was has not yet been tested.
