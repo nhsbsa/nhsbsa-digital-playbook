@@ -138,6 +138,6 @@ Alternatively, if the product goes live, all elements of design, including the c
 ## Sources
 
 - [Content design guidance](https://www.gov.uk/guidance/content-design)
-- [Our content design style guide](https://nhsbsauk.sharepoint.com.mcas.ms/sites/DigitalContentDesignTeam/SitePages/NHSBSA-digital-style-guide-and-standards.aspx)
-- [Our content design A to Z](https://nhsbsauk.sharepoint.com.mcas.ms/sites/DigitalContentDesignTeam/SitePages/Content-design-A-to-Z.aspx)
-- [Our content design checklist for editors](https://nhsbsauk.sharepoint.com.mcas.ms/sites/DigitalContentDesignTeam/SitePages/Content-checklist-for-editors.aspx)
+- [NHSBSA digital style guide and standards](https://nhsbsauk.sharepoint.com/sites/CapabilityandOperations/SitePages/NHSBSA-digital-style-guide-and-standards.aspx?csf=1&web=1&e=QOi341&CID=1acb81ac-4e44-47f9-8214-03f3e003f940)
+- [Content design A to Z](https://nhsbsauk.sharepoint.com/:u:/r/sites/CapabilityandOperations/SitePages/Content-design-A-to-Z.aspx?csf=1&web=1&e=jTlyVG)
+- [Content checklist for editors](https://nhsbsauk.sharepoint.com/:u:/r/sites/CapabilityandOperations/SitePages/Content-checklist-for-editors.aspx?csf=1&web=1&e=t7Ud7E)
