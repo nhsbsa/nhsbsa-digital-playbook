@@ -20,12 +20,7 @@ As part of your generic onboarding, the DDaT Business Operations team will:
 * create your Office 365 account; this will give access to Microsoft Teams and your NHS BSA email e.g. firstname.lastname@nhsbsa.nhs.uk 
 * invite you to join our organisational Confluence / JIRA space; we use these to organize and manage our agile projects. Your username will be your NHS BSA email address. 
 * invite you to join our organisational Miro space; this is our 'digital whiteboarding' tool of choice to enable distributed teams to brainstorm and collaborate with each other. Your username will be your NHS BSA email address. 
-
-To store and host your [code prototypes](../prototypes/#using-code-prototypes), you will need access to the organisational GitHub and Heroku accounts. 
-
-If your assigned project already has a prototype / repository, they will be able to tell you which ones you need access to. 
-
-To get access, please speak to one of the Senior Interaction Designers who will invite you to our organisational space and give you whatever access you need. Your username will be your NHS BSA email address. 
+* invite you to join our organisational GitHub and Heroku accounts; this is where you will store and host your [coded prototypes](../prototypes/#using-code-prototypes). If your assigned project already has a prototype / repository, they will be able to tell you which ones you need access to.
 
 ### 2. Join our NHS BSA communities 
 
