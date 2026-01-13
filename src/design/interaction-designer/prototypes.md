@@ -71,4 +71,4 @@ When you’ve published your prototype, you can easily share it with others. You
 
 You must not use the GOV.UK / NHS Prototype Kits to make live services. It’s designed for prototyping and does not have the security or performance features needed for a live service. 
 
-To get access to the organisational GitHub and Heroku accounts, please speak to one of the Senior Interaction Designers. 
+To get access to the organisational GitHub and Heroku accounts, please log a Service Desk request and the DDaT Business Operations team will invite you. 

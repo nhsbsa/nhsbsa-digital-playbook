@@ -33,6 +33,14 @@ nodejs:
     adopt: 2019-10-21
     decommission: 2022-04-30
 nodejs_aws_lambda:
+  - version: v26
+    release: 2026-11-31
+    adopt: 2027-05-31
+    decommission: 2029-04-30
+  - version: v24
+    release: 2025-11-31
+    adopt: 2026-05-31
+    decommission: 2028-04-30
   - version: v22
     release: 2024-11-31
     adopt: 2025-05-31
@@ -144,9 +152,13 @@ spring_boot:
     adopt: 2017-03-30
     decommission: 2019-08-06
 spring_cloud:
+  - version: "2025.1 (Oakwood)"
+    release: 2025-11-25
+    adopt: 2026-01-25
+    decommission: 2028-11-25
   - version: "2025.0 (Northfields)"
     release: 2025-05-29
-    adopt: 2026-07-29
+    adopt: 2025-07-29
     decommission: 2028-05-29
   - version: "2024.0 (Moorgate)"
     release: 2024-12-05
@@ -169,44 +181,56 @@ spring_cloud:
     adopt: 2021-02-22
     decommission: 2023-12-22
 java_aws_lambda:
+  - version: "25"
+    release: 2025-11-16
+    adopt: 2026-05-16
+    decommission: 2029-06-30
   - version: "21"
     release: 2023-11-16
     adopt: 2024-05-16
+    decommission: 2029-06-30
   - version: "17"
     release: 2023-04-27
     adopt: 2023-10-27
+    decommission: 2026-06-30
   - version: "11"
     release: 2019-11-18
     adopt: 2020-05-18
+    decommission: 2026-06-30
   - version: "8 (Amazon Linux 2)"
     release: 2015-06-01
     adopt: 2016-12-01
+    decommission: 2026-06-30
   - version: "8 (Amazon Linux)"
     release: 2015-06-01
     adopt: 2016-12-01
     decommission: 2024-02-08
 ruby:
-  - version: 3.4
+  - version: "4.0"
+    release: 2025-12-25
+    adopt: 2026-06-25
+    decommission: 2029-03-31
+  - version: "3.4"
     release: 2024-12-25
     adopt: 2025-06-25
     decommission: 2028-03-31
-  - version: 3.3
+  - version: "3.3"
     release: 2023-12-25
     adopt: 2024-06-25
     decommission: 2027-03-31
-  - version: 3.2
+  - version: "3.2"
     release: 2022-12-25
     adopt: 2023-06-25
     decommission: 2026-03-31
-  - version: 3.1
+  - version: "3.1"
     release: 2021-12-25
     adopt: 2022-06-25
     decommission: 2025-03-31
-  - version: 3.0
+  - version: "3.0"
     release: 2020-12-25
     adopt: 2021-06-25
     decommission: 2024-03-31
-  - version: 2.7
+  - version: "2.7"
     release: 2019-12-25
     adopt: 2020-06-25
     decommission: 2023-03-31
