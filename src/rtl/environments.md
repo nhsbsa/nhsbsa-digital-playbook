@@ -5,6 +5,7 @@ description: "How we segregate our work into different environments along the Ro
 tags: [dev, test]
 order: 0
 status: DRAFT
+mermaid: true
 ---
 
 Environment segregation is a fundamental practice in any robust Software Development Lifecycle: Change is promoted through a series of environments, from lower to higher until ultimate deployment into the Production or Live environment. Each environment serves a specific purpose in verifying that the change is correct and will work when it reaches our end users.
@@ -17,7 +18,7 @@ Environment segregation and change progression provides multiple benefits:
 * **Parallel workstreams** - Concurrent workstreams can be deployed into ephemeral development environments to verify integration before formal testing
 
 ## Core Principles
-
+ 
 * **Data Segregation** - Personally Identifiable Data (PID) is only allowed in Production. Use synthetic or anonymised data in lower environments
 * **Environment Parity** - Keep environments as similar to Production as possible, with similarity increasing as change progresses up through the environments
 * **Sequential Progression** - Change must not bypass any environment. Each one acts as a quality gate before moving to the next
@@ -28,9 +29,24 @@ Environment segregation and change progression provides multiple benefits:
 * **Automation First** - Provision environments, deploy artifacts and run tests within automated pipelines, for repeatability and reliability
 * **Least Privilege Access** - Restrict access based on role. Controls become more stringent closer to Production
 
-## Environments
+## Route to Live Environments
 
-We define five standard environments along the Route to Live:
+We define five standard environments along the Route to Live. Propagation of components and infrastructure follows strict sequential order through the environments:
+
+```mermaid
+graph LR
+    accTitle: Environment Propagation Flow
+    accDescr: Flowchart showing sequential progression through Local, Development, Test, Stage and Production
+    A[Local] --> B[Development]
+    B --> C[Test]
+    C --> D[Stage]
+    D --> E[Production]
+    style A fill:#e1f5ff,stroke:#0091da,stroke-width:2px
+    style B fill:#fff4ce,stroke:#ffb81c,stroke-width:2px
+    style C fill:#ffecd1,stroke:#ff8c00,stroke-width:2px
+    style D fill:#ffe5e5,stroke:#d32f2f,stroke-width:2px
+    style E fill:#f4e8ff,stroke:#7c3aed,stroke-width:3px
+```
 
 * **Local**
   Developers and Testers write and execute code on their own workstations for rapid development, debugging, and early verification. Use mocks, stubs, or containerised services for integration dependencies.
@@ -51,7 +67,7 @@ An ephemeral environment is able to be brought up or torn down with a complete s
 
 ## Release Manifest
 
-Modern solutions often comprise multiple components, each at a specific version according to the release history. When a change is required, it may impact any number of the constituent parts. It is useful to describe the composition of components in a manifest file, declaring which version of each component should be deployed.
+Modern solutions often comprise multiple components, each at a specific version. When a change is required, it may impact any number of the constituent parts. It is useful to describe the composition of components per release in a manifest file, declaring which version of each component should be deployed.
 
 
 ## Best Practices
