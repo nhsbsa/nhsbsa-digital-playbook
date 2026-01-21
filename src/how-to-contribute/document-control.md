@@ -114,7 +114,7 @@ review:
 </thead>
 <tbody>
 <tr><th> last_reviewed_date </th><td> ISO-8601 formatted date </td></tr>
-<tr><th> review_cycle </th><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" href="https://moment.github.io/luxon/api-docs/index.html#duration">Luxon duration notation</a>. e.g. 
+<tr><th> review_cycle </th><td> `ANNUAL` is the default value. Any other intervals should be configured using <a target="_blank" rel="noopener" href="https://moment.github.io/luxon/api-docs/index.html#duration">Luxon duration notation<span class="nhsuk-u-visually-hidden"> (opens in a new tab)</span></a>. e.g. 
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">review_cycle</span><span class="token punctuation">:</span>
       <span class="token key atrule">years</span><span class="token punctuation">:</span> 2
 </code></pre>
