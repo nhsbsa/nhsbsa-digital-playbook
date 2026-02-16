@@ -12,7 +12,8 @@ Service Design is a design practice that connects all aspects of a service cross
 
 ### Service designers are responsible for:
 
-- service blueprints of the overall service 
+- service blueprints of the overall service delivery
+- user journey maps, which link to user research personas
 - strategic direction of design within the project for the product/ service
 - advising on best practice with process, efficiencies and technologies, alongside other disciplines
 - advise and orchestrate end to end service transformation alongside other disciplines
@@ -20,7 +21,7 @@ Service Design is a design practice that connects all aspects of a service cross
 ### Service designers do not:
 
 - code prototypes
-- create user journeys
+- create interaction design flows and process maps
 - create content for both online and offline journeys
 - advise on best practice code or web based design
 
@@ -31,6 +32,7 @@ Service Design is a design practice that connects all aspects of a service cross
 - to have an understanding of Interaction Design best practice with prototypes, toolkits and service manuals 
 - to have an understanding of Content Design best practice with the service standard and cross-gov best practice
 - to know how to create and maintain a service blueprint for a service, to work with and identify when needed relevant disciplines to input into the service blueprint
+- to create and maintain user journey maps based on UR personas, reflecting research findings to underpin journey steps, actions, goals and pains
 - work to GOV / NHS design standards for digital services
 - ensure that all design across any channel online or offline is done in line with accessibility guidelines
 - collaborate and share work with other designers across NHS, not just within the NHSBSA
