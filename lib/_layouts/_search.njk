@@ -1,0 +1,51 @@
+{% extends "_base.njk" %}
+
+{% block stylesheets %}
+  <link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" />
+  <link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+  {{ header({
+    "homeHref": homeUrl,
+    "ariaLabel": siteMeta.header.description,
+    "organisation": {
+      "name": siteMeta.header.organisation,
+      "descriptor": siteMeta.header.description
+    }
+    })
+  }}
+{% endblock %}
+
+{% block main %}
+<div class="nhsuk-width-container {{ containerClasses }}">
+  <main class="nhsuk-main-wrapper" id="main-content" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-xl">Search</h1>
+        <div id="search-results" data-pagefind-ignore></div>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var pagefindUI = new PagefindUI({
+        element: '#search-results',
+        showSubResults: true,
+        showImages: false,
+        baseUrl: '{{ "/" | url }}'
+      });
+
+      var params = new URLSearchParams(window.location.search);
+      var query = params.get('q');
+      if (query) {
+        pagefindUI.triggerSearch(query);
+      }
+    });
+  </script>
+{% endblock %}
