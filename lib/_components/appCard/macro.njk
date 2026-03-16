@@ -1,3 +1,15 @@
+{% from "appBadges/macro.njk" import appBadges %}
+
 {% macro appCard(params) %}
   {%- include "./template.njk" -%}
+{% endmacro %}
+
+{# Card specific macros #}
+
+{% macro cardHeader(item) %}
+  {% include "./template_header.njk" %}
+{% endmacro %}
+
+{% macro cardInfo(item) %}
+  {% include "./template_info.njk" %}
 {% endmacro %}
