@@ -28,6 +28,8 @@ Environment segregation and change progression provides multiple benefits:
 * **Infrastructure as Code (IaC)** - Changes to infrastructure should be encapsulated in version controlled code so that they may be tested and released as first class citizens
 * **Automation First** - Provision environments, deploy artifacts and run tests within automated pipelines, for repeatability and reliability
 * **Least Privilege Access** - Restrict access based on role. Controls become more stringent closer to Production
+* **Observability** - It should be clear what version of anything is in each environment
+* **Traceability** - It should be clear what controls have passed for something to be in an environment
 
 ## Route to Live Environments
 
@@ -37,24 +39,37 @@ We define 6 standard environments along the Route to Live. Propagation of compon
 graph LR
     accTitle: Environment Propagation Flow
     accDescr: Flowchart showing sequential progression through Local, Build, Development, Test, Stage and Production
-    A[Local] --> B[Build]
-    B[Build] --> C[Development]
-    C --> D[Test]
-    D --> E[Stage]
-    E --> F[Production]
-    style B fill:#e1f5ff,stroke:#0091da,stroke-width:2px
-    style C fill:#fff4ce,stroke:#ffb81c,stroke-width:2px
-    style D fill:#ffecd1,stroke:#ff8c00,stroke-width:2px
-    style E fill:#ffe5e5,stroke:#d32f2f,stroke-width:2px
-    style F fill:#f4e8ff,stroke:#7c3aed,stroke-width:3px
+    A[Local] --> B[Development]
+    B --> C[Test]
+    C --> D[Stage]
+    D --> E[Production]
+    style A fill:#e1f5ff,stroke:#0091da,stroke-width:2px
+    style B fill:#fff4ce,stroke:#ffb81c,stroke-width:2px
+    style C fill:#ffecd1,stroke:#ff8c00,stroke-width:2px
+    style D fill:#ffe5e5,stroke:#d32f2f,stroke-width:2px
+    style E fill:#f4e8ff,stroke:#7c3aed,stroke-width:3px
 ```
 
 * **Local** - local coding
-* **Build** - centralised build and deployment
 * **Development** - informal integration
 * **Test** - formal test signoff
 * **Stage** - formal business signoff
 * **Production** - the live environment for end users
+
+### Access control
+
+
+
+### Promotion
+
+Promotion of change through the different environments should proceed through standard channels with defined exit and entry criteria.
+
+* Local to Development
+  Local changes should be committed to a [change candidate branch](https://nhsbsa.github.io/nhsbsa-digital-playbook/development/dev-git-branching-strategy/) in the version control system ([Git](../../development/dev-git/)) and pushed to the central, hosted repository. Code should be pushed frequently.
+  
+  
+* Development
+
 
 ### Ephemeral Environments
 
@@ -70,8 +85,6 @@ Modern solutions often comprise multiple components, each at a specific version.
 ## Local
 
 Developers and Testers write and execute code on their own workstations for rapid development, debugging, and verification. SaaS based solutions often provide a user specific development environment that is analogous to a local environment.
-
-Promotion of locally developed changes to higher environments must always be via code commits to the version control system ([Git](../../development/dev-git/)) 
 
 * **Containerisation** - Use [Docker](https://www.docker.com/) to replicate dependencies consistently
 * **AWS Cloud emulation** - Use [LocalStack](https://github.com/localstack/localstack) to replicate AWS cloud environments locally
