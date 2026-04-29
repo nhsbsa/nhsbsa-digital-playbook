@@ -1,143 +1,195 @@
 ---
 layout: article
-title: "About the role"
-description: "What does a Content Designer do?"
+title: "About content design"
+description: "What our content designers do"
 tags: content-design
 order: 1
 ---
-## What a content designer does
+## What our content designers do
 
-Content design answers a user need in the best way for the user to consume it.​
+Content designers make things easier for people to understand and use. We work within multidisciplinary agile teams, making sure users can find content in the right place and format.
 
-It:​
+We design single pieces of content and end-to-end user journeys across digital and offline channels. Our content makes sure users can complete their goals, and also delivers on policy intent.
 
-- allows someone to find something quickly and easily​
-- is not just about writing web copy​
-- can take a range of formats​
-- should be based on research​
+### What content designers are responsible for
 
-### Content designers are responsible for:
+Our content designers create and iterate content for our digital services, websites, applications and internal platforms.
 
-Content across our digital services, corporate website and digital collaboration platforms (SharePoint, Yammer), making sure content is: 
+In this role, we:
+- design transactional and non-transactional content including user interfaces, webpages, forms, emails, text messages and letters
+- use research, analytics and data to make sure our content meets user needs
+- make sure content is responsive so it works on a range of devices
+- follow GDS and WCAG guidelines and use best practice from the [NHS service standard](https://service-manual.nhs.uk/standards-and-technology/service-standard)
+- collaborate with interaction designers to create low and high-fidelity flows and prototypes
+- shape content as part of the core user-centred design process
 
-- compliant with GDS
-- follows accessibility guidelines (WCAG)
-- is designed responsively
-- easy to understand
+### What content designers do not do
 
-### Content designers do not:
+Our content designers do not:
 
-- Own content
-- write content from scratch, unless it’s generic content which can be universally found in design patterns. Instead, content designers will work with raw content or placeholder research/key themes to refine it into something that is fit for purpose
-- code prototypes
-- create offline content, such as leaflets, factsheets or correspondence, as these types of content follow different guidelines (GCS), which our communications team are responsible for
+- design content alone, instead we work with users and stakeholders to identify key information and themes
+- work in silo to proofread or review content after most of the design work is complete
+- build prototypes from scratch
+- create promotional, marketing or social media content – this is the responsibility of our communications team
  
-## Expectations of a Content Designer
+## Expectations of a content designer
 
-### Expectations of ALL Content Designers
+This guidance will help you:
+- learn about the different content design roles at NHSBSA
+- understand what skills are needed at each role level
 
-- have a sound understanding of content design best practice, both internally (NHSBSA style guide and checklist) and externally (GDS and NHS design patterns)
-- To have an understanding of other design professions, such as interaction design, user experience design and service design
-- work to GOV / NHS design standards for digital services
-- ensure that content across online channels adheres to accessibility guidelines
-- collaborate and share work with other designers across NHS, not just within the NHSBSA, such as the NHS Style Council
-- collaborate and work alongside other professions
-- contribute to, and write UCD Logs detailing decisions to change a service
-- audit content iterations
-- be an engaged and active member within the content design community and NHSBSA design community
-- take part in content reviews and content critiques
-- account management for service areas of our corporate website
-- stakeholder engagement across services areas of our corporate website and My Hub
+### Expectations of all content designers
 
-### Expectations of Junior Content Designers
+We have junior, midweight and senior content designers working across our digital services.
 
-- can explain design decisions
-- work collaboratively
-- work alongside Digital Content Designers on a service
-- can work independently after being given direction by more senior designers
-- should be able to independently identify user issues and important needs
-- deliver content design best practice training
+Content designers at all of these role levels:
 
-### Expectations of Digital Content Designers
+- work to NHS and [GOV.UK standards](https://www.gov.uk/service-manual/service-standard)
+- identify key communication moments, user questions and content needs at each stage of the end-to-end journey
+- explain design decisions, and document these decisions in UCD logs
+- make sure language is consistent across all channels, aligning what the service says with what it does
+- take part in design reviews and content critiques
+- engage with and contribute to the NHSBSA and cross-government content communities
+
+Our content designers work with:
+- interaction designers to prototype and iterate designs
+- service designers to understand the ‘as is’ and ‘to be’ service blueprint
+- user researchers to contribute to discussion guides and observe research sessions
+- other professionals in multidisciplinary delivery teams, including product owners, delivery managers, technical architects, business analysts and developers
+- our communications team and customer experience (CX) team to create a consistent, understandable and usable end-to-end content journey
+
+
+### Expectations of junior designers
+
+Our junior designers specialise in content, service or interaction design. They:
 
 - work as part of a service
-- can be trusted to make good decisions based on research and evidence and explain the rationale to others
-- mediate stakeholders, whether that be subject matter experts when working on digital services or content editors and content owners whilst working on our corporate website 
-- persuade and influence people who are not like-minded, such as technical compliance, legal teams or non-designers 
-- can recognise when to ask for further guidance and support
-- contribute to the development of services and service transformation, recognising when a service has failure points or room for improvement
-- should be able to interpret evidence-based research and incorporate this into their advisories for a service
-- work with a reduced need for support
-- mentoring, coaching and supporting junior designers
+- explain design decisions
+- work collaboratively
+- identify key user needs and pain points
+- are supported by more senior designers to work increasingly independently
 
-::: details View Content Designer skills matrix
+
+### Expectations of midweight content designers
+
+Our midweight content designers (sometimes known as digital content designers):
+
+- use evidence, data, research and customer insight to make content decisions
+- identify online and offline content touchpoints across end-to-end user journeys
+- build relationships across the NHSBSA to focus on the needs of the user and influence stakeholders
+- clearly explain design choices, using evidence to show rationale and impact
+- use and contribute to style guides and content patterns
+- mentor, coach and support junior designers
+
+### Expectations of senior content designers
+
+Our senior content designers:
+
+- take responsibility for content across complex services and oversee small teams
+- review the work of other designers to assure quality
+- update content in coded prototypes
+- think strategically to understand how content can work at scale, engaging and involving senior stakeholders 
+- agree content with teams and stakeholders in scenarios where there’s increasing levels of risk and complexity
+- set direction and embed good practice within teams
+- mentor, coach and support colleagues across UCD
+
+::: details Content designer skills matrix
 
 ::: card
 
 ### Skills matrix
 
-| Skill level | Junior Content Designer | Digital Content Designer  |
+| Skill level | Junior designer | Midweight content designer  | Senior content designer |
 | ----------- | ----------- | ----------- | ----------- |
-| **Agile working** | Working | Practitioner |
-| **Content concepts and prototyping** | Awareness | Working |
-| **Stakeholder relationship management** | Awareness | Working |
-| **Strategic thinking** | Working | Practitioner |
-| **User focus** | Awareness | Working |
-| **User-centred content design** | Awareness | Working |
+| **Agile working** | Working | Practitioner | Practitioner
+| **Content concepts and prototyping** | Awareness | Working | Practitioner
+| **Stakeholder relationship management** | Awareness | Working | Practitioner
+| **Strategic thinking** | Working | Practitioner | Expert
+| **User focus** | Awareness | Working | Practitioner
+| **User-centred content design** | Awareness | Working | Practitioner
 
 [What does each skill level mean?](https://www.gov.uk/guidance/skill-levels-for-digital-data-and-technology-roles)
 :::
 
 ## Content design principles
 
-### 1. Keep the user in mind
+We apply these user-first content principles across all of our services.
 
-We need to:
+### Start with user needs
 
-- understand who the users are
-- whether users will understand the content
-- know what the user needs to do or what they need to get at the end of the journey
+We start by understanding users and their needs. We work to understand users’ questions, language and behaviours by:
 
-### 2. Requirement for new content
+- collaborating with user researchers and the CX team
+- gathering user feedback
+- identifying key metrics 
+- using analytics
 
-A requirement for new content will generally be driven by user research or by business direction.
+### Use plain language
 
-For new content driven by user research, the source of requirement is either:
+Many of our services can be complex. We use plain language to make our services simple to use and understand.
 
-- users
-- subject matter experts
+We aim to write content for a 9 year old reading age across all our services, including those available in both English and Welsh.
 
-For new content driven by business direction, the source of requirement is either:
+### Be accessible and inclusive
 
-- subject matter experts
-- stakeholders
-- business analysts
+Our content is designed to meet WCAG standards, so our services are accessible with different assistive technologies and devices.
 
-### 3. Design process
+We use as few words as possible to reduce cognitive load and make sure everyone can understand our content, including users with:
 
-Content designers will work in collaboration with interaction/UX/service designers to write content that is:
+- disabilities
+- a range of literacy levels
+- low digital confidence
+- limited understanding of written English
 
-- in line with GDS standards
-- in line with accessibility guidelines (WCAG)
-- designed responsively
-- accurate in spelling and grammar
+We follow the [NHS inclusive content principles](https://service-manual.nhs.uk/content/inclusive-content) when designing our websites and services. We speak to our users about how they want to be described and test our content with them. 
 
-Content designers will work in collaboration with subject matter experts/stakeholders/product owners to write content that is:
+### Design content for journeys
 
-- factually, procedurally and technically correct
-- meets business requirement
+Content is part of the end-to-end user experience and is part of the design process from discovery onwards. We work with service designers and the CX team to design joined-up content experiences across all channels. 
 
-### 4. Build, analyse and iterate
+This helps users:
 
-At this point, content will be built into a prototype, then eventually into development stage.
+- improve their awareness of our services
+- make decisions
+- complete tasks
+- understand what happens next
+- get further support if they need it
 
-All elements of design, including the content, will then be tested with users. This will usually loop the whole process around in iteration with further new content requirements, being driven from user research.
+### Be consistent
 
-Alternatively, if the product goes live, all elements of design, including the content, will go into continuous improvements. Depending on business direction, this could loop further iterations. 
+We use consistent terminology and patterns across our services to make sure content looks and sounds how users expect. This makes our services feel more familiar and increases users' trust and confidence.
+
+We use and contribute to:
+
+- style guides
+- design systems
+- terminology lists
+
+We collaborate with interaction designers to consider how patterns, components and language influence each other. This helps us design consistent interfaces that support users to understand and complete tasks.
+
+### Test and iterate
+
+We use user feedback to iterate our content as part of our continuous improvement process. 
+
+We test content with users to make sure:
+
+- they understand it
+- the design works in the context of the service
+
+### Monitor and review
+
+After new or improved content is published or released, we identify key metrics and monitor how well the content is performing. This helps us understand how well it's meeting user needs and informs future planning.
+
+We regularly review content to make sure it stays up to date. We work with a range of stakeholders to make sure content is accurate, trustworthy and reflects current:
+
+- user needs - these may change over time
+- policy
+- clinical changes
+- legal requirements
+- organisational goals
 
 ## Sources
 
-- [Content design guidance](https://www.gov.uk/guidance/content-design)
-- [NHSBSA digital style guide and standards](https://nhsbsauk.sharepoint.com/sites/CapabilityandOperations/SitePages/NHSBSA-digital-style-guide-and-standards.aspx?csf=1&web=1&e=QOi341&CID=1acb81ac-4e44-47f9-8214-03f3e003f940)
-- [Content design A to Z](https://nhsbsauk.sharepoint.com/:u:/r/sites/CapabilityandOperations/SitePages/Content-design-A-to-Z.aspx?csf=1&web=1&e=jTlyVG)
-- [Content checklist for editors](https://nhsbsauk.sharepoint.com/:u:/r/sites/CapabilityandOperations/SitePages/Content-checklist-for-editors.aspx?csf=1&web=1&e=t7Ud7E)
+- [NHS content guide](https://service-manual.nhs.uk/content)
+- [GOV.UK style guide](https://www.gov.uk/guidance/style-guide/a-to-z)
+- [GOV.UK planning, writing and managing content](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)
