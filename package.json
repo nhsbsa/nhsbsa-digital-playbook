@@ -62,6 +62,6 @@
     "nhsuk-frontend": "^8.3.0",
     "regexpp": "^3.2.0",
     "text-table": "^0.2.0",
-    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1"
+    "he": "^1.2.0"
   }
 }

@@ -8,19 +8,25 @@ order: 1
 
 ## What a service designer does
 
-Service Design is a design practice that connects all aspects of a service cross-channel and cross-platform. This may be in the form of on paper, digitally, via telephony or assisted digital routes. This is done to make sure we create a closed loop service that will run smoothly and efficiently across multiple aspects of the business. They will work with Technical Architects, Product Owners, Delivery Managers and other members of the UCD team to steer the project in terms of strategy, efficiency, technology, policy and process.
+Service Design is a design practice that connects all aspects of a service cross-channel and cross-platform. This may be in the form of on paper, digitally, via telephony or assisted digital routes. This is done to make sure we create a closed loop service that will run smoothly and efficiently across multiple aspects of the business. Our service designers work with technical architects, product owners, delivery managers and other members of the UCD team to steer projects in terms of strategy, efficiency, technology, policy and process.
+
+They also work with the Customer Experience (CX) team and user researchers to contribute to  customer journeys.   
+
+CX and UCD teams work in partnership to inform, influence and action improvements to user and customer experience, with the CX team leading on this within business operations and the UCD team within DDaT. This aligns customer and user experience, strengthening both UCD and CX change. This assures a truly user-centred approach to how all of our services are designed, developed and implemented, as well as aftercare. 
 
 ### Service designers are responsible for:
 
-- service blueprints of the overall service 
+- service blueprints of the overall service delivery
+- user journey maps, which link to user research personas
 - strategic direction of design within the project for the product/ service
 - advising on best practice with process, efficiencies and technologies, alongside other disciplines
 - advise and orchestrate end to end service transformation alongside other disciplines
+- providing input into customer journey maps which are owned by the CX team and based on user personas 
 
 ### Service designers do not:
 
 - code prototypes
-- create user journeys
+- create interaction design flows and process maps
 - create content for both online and offline journeys
 - advise on best practice code or web based design
 
@@ -31,6 +37,7 @@ Service Design is a design practice that connects all aspects of a service cross
 - to have an understanding of Interaction Design best practice with prototypes, toolkits and service manuals 
 - to have an understanding of Content Design best practice with the service standard and cross-gov best practice
 - to know how to create and maintain a service blueprint for a service, to work with and identify when needed relevant disciplines to input into the service blueprint
+- to create and maintain user journey maps based on UR personas, reflecting research findings to underpin journey steps, actions, goals and pains
 - work to GOV / NHS design standards for digital services
 - ensure that all design across any channel online or offline is done in line with accessibility guidelines
 - collaborate and share work with other designers across NHS, not just within the NHSBSA
@@ -38,6 +45,9 @@ Service Design is a design practice that connects all aspects of a service cross
 - contribute to, and write UCD Logs detailing decisions to change a service
 - take part in service reviews and have an understanding of how other disciplines such as Technical Architecture, Product Ownership and Delivery management interact with a service to deliver it to standard, addressing both business and user need, policy, process and efficiencies 
 - be an engaged and active member within the NHSBSA design community
+- to collaborate with the CX team on customer journey maps
+- to make sure customer journey maps reflect research findings that underpin user journey steps, actions, goals, pains and functions within the business  
+- to identify potential improvements that align with user and business needs 
 
 ### Expectations of Junior Designers
 
@@ -56,6 +66,7 @@ Service Design is a design practice that connects all aspects of a service cross
 - can recognise when to ask for further guidance and support
 - contribute to the development of services and service transformation, recognising when a service has failure points or room for improvement
 - should be able to interpret evidence-based research and incorporate this into their advisories for a service
+- contribute to the alignment of Customer Journey Maps which are owned by the CX team and based on user personas 
 
 ### Expectations of Senior Service Designers
 
@@ -66,6 +77,7 @@ Service Design is a design practice that connects all aspects of a service cross
 - will have responsibility across complex services
 - will help set direction and embed good practice within teams
 - will make important decisions for the service and can implement changes based on solid rationale factoring in both UCD and business strategy within a project
+- contribute to the alignment of Customer Journey Maps which are owned by the CX team and based on user personas 
 
 ::: details View Service Designer skills matrix
 
@@ -132,6 +144,7 @@ Generic Design principles for all design disciplines: [government design princip
 - [The principles of service design thinking building better services ](https://www.interaction-design.org/literature/article/the-principles-of-service-design-thinking-building-better-services )
 - [What we mean by service design](https://gds.blog.gov.uk/2016/04/18/what-we-mean-by-service-design/ )
 - [Service design](https://boagworld.com/audio/service-design/ )
+- [Customer First](https://customerfirst.campaign.gov.uk)
 
 
 
