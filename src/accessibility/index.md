@@ -27,7 +27,7 @@ Accessibility is about making sure your service can be used by as many people as
 - make sure that nobody is excluded
 - find out earlier if any parts of your service are not accessible - problems usually cost less to fix if you find them early
 
-Get guidance on [making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction).
+Get guidance from GOV.UK on [making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction).
 
 ## Accessibility law
 

@@ -3,7 +3,7 @@ layout: article
 title: "Designing for accessibility"
 description: "How do we design for accessibiliity at the NHSBSA?"
 status: FINAL
-tags: accessible-data
+tags: [accessible-data, a11y]
 order: 3
 review:
     last_reviewed_date: 2024-12-20

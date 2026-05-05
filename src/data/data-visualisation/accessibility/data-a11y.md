@@ -3,7 +3,7 @@ layout: article
 title: "Data accessibility"
 description: "What is data accessibility?"
 status: FINAL
-tags: accessible-data
+tags: [accessible-data, a11y]
 order: 2
 review:
     last_reviewed_date: 2024-12-20
