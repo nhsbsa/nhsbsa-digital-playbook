@@ -19,7 +19,7 @@ We’ve also made the website text as simple as possible to understand.
 
 ## How accessible this website is
 
-This website has not yet been tested. We plan to test this website in December 2025.
+This website has not yet been tested. We plan to test this website in May 2026.
 
 ## Feedback and contact information
 
