@@ -10094,16 +10094,32 @@ a.nhsuk-footer__list-item-link:visited {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .nhsuk-card__header h1, .nhsuk-card__header h2, .nhsuk-card__header h3 {
-  display: inline-block;
   margin-bottom: 0px;
 }
 .nhsuk-card__header strong {
-  display: inline-block;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
+.app-pane__main-content .nhsuk-card-group__item {
+  width: 100%;
+  float: none;
+}
+
+@media (min-width: 58.75em) {
+  .app-pane__main-content .nhsuk-card-group__item {
+    width: 33.3333%;
+    float: left;
+  }
+}
+@media (min-width: 48.0625em) {
+  .nhsuk-card__header {
+    display: block;
+  }
+}
 /* Article Content */
 .nhsbsa-article-header {
   display: flex;
