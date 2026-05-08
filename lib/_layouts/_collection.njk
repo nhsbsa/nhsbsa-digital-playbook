@@ -26,8 +26,11 @@
           }) }} 
         {% endif %}
 
+        <h1 class="nhsuk-heading-xl">
+          {{ title }}
+        </h1>
         <h2 class="nhsuk-heading-l">
-          {{ posts.title or app.posts.title or "Articles" }}
+          {{ posts.title or app.posts.title or "Related articles" }}
         </h2>
         {{ appCard({
           items: pagination.items,
@@ -49,7 +52,7 @@
     {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
     {% elif eleventyNavigation.key == "home" %}
       <div class="nhsuk-grid-column-full">
-        <h2 class="nhsuk-heading-l">
+        <h2 class="nhsuk-heading-l" id="test-2">
           {{ sections.title or app.sections.title or "Sections" }}
         </h2>
       </div>

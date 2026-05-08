@@ -14,15 +14,15 @@ Emily Webber, the former Head of Agile Delivery for the Government Digital Servi
 
 The definition breaks down the role into three distinct areas and establishes what the role is accountable for:
 
-### Agile and Lean Practices
+## Agile and Lean Practices
 
 You are responsible for ensuring that the team are applying agile and lean practices.
 
-### Team Health and Happiness
+## Team Health and Happiness
 
 You are responsible for making sure the team has everything they need to be productive, that you have the right make-up of capabilities to deliver what is needed and implementing the conditions to create the right environment for effective delivery.
 
-### Delivery Support
+## Delivery Support
 
 You are responsible for ensuring the team have everything they need to do their job.
 
