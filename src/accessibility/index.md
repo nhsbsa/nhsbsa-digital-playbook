@@ -2,7 +2,7 @@
 layout: article
 title: "Accessibility"
 description: "How we create accessible and inclusive services that work for everyone"
-tags: [home, a11y]
+tags: [home]
 order: 2
 related:
   title: Related accessibility articles
