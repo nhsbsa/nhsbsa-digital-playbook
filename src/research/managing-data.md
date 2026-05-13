@@ -46,7 +46,9 @@ There are several standards that you must meet when handling raw data from user 
 - Delete temporary downloads of recordings immediately after use.
 - Upload session recordings promptly to the data library after sessions.
 - Complete folder naming conventions and metadata accurately to improve findability and provide context to the research.
+
 Metadata fields include the:
+
 - name of researcher
 - research session unique ID
 - consent declaration
