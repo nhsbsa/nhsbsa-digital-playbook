@@ -3,7 +3,7 @@ layout: article
 title: "User research at Beta"
 description: "What does a User Researcher do at Beta?"
 tags: research
-order: 4
+order: 5
 ---
 
 ## What is expected from a User Researcher in Beta

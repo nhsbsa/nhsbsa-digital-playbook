@@ -3,7 +3,7 @@ layout: article
 title: "User research at Live"
 description: "What does a User Researcher do at Live?"
 tags: research
-order: 5
+order: 6
 ---
 
 ## What is expected from a User Researcher in Live

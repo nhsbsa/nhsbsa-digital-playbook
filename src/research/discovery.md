@@ -3,7 +3,7 @@ layout: article
 title: "User research at Discovery"
 description: "What does a User Researcher do at Discovery?"
 tags: research
-order: 2
+order: 3
 ---
 
 ## What is expected from a User Researcher in Discovery

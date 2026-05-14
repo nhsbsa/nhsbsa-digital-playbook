@@ -3,7 +3,7 @@ layout: article
 title: "Managing data"
 description: "Learn about how we should handle the data we collect."
 tags: research
-order: 8
+order: 11
 ---
 
 Effective data management makes sure that user research is secure, ethical, reusable, and aligned with our organisational governance standards. Proper handling of research data protects participants, supports transparency, and enables teams to build on existing insights rather than duplicating work.
