@@ -3,7 +3,7 @@ layout: article
 title: "Observing and note taking in user research sessions"
 description: "How you can support by observing and note taking"
 tags: research
-order: 7
+order: 10
 ---
 
 The below guidance has been written to help you support your user researcher through note taking during a user research session. This is a general overview of best practice, and any specific questions you have about note taking should be raised with the user researcher you are taking notes for. 
