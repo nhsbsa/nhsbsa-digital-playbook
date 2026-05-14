@@ -32,9 +32,9 @@ A successful GDS assessment:
 
 Factors that may influence the likelihood of a project going through assessment include: 
 
-volume and type of users of the service – public-facing services are assessed more than those used by NHS employees 
-how long the service has been in the Beta phase 
-how the project is funded 
+- volume and type of users of the service – public-facing services are assessed more than those used by NHS employees 
+- how long the service has been in the Beta phase 
+- how the project is funded 
 
 If you are unsure, ask your team or lead/senior UR if an assessment is expected on your project.  
 
