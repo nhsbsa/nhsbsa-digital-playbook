@@ -18,7 +18,7 @@ A GDS assessment will happen at key stages of the service:
 - end of Private Beta → Beta assessment
 - after Public Beta → Live assessment
 
-After a service passes Live, it moves into a stage known as ‘continuous improvement’. A new 'discovery review' assessment is also being introduced to assess new services before they begin Alpha. 
+After a service passes Live, it moves into a stage known as 'continuous improvement'. A new 'discovery review' assessment is also being introduced to assess new services before they begin Alpha. 
 
 ## Why do they matter? 
 
@@ -71,7 +71,7 @@ It is important to remain alert during the questions on the day as you may have 
 
 ## What happens afterwards? 
 
-Assessors meet privately in a session known as the ‘wash-up’ to gather their insights and discuss what the team did well and areas to improve. They then write a report which they aim to get to the delivery team within 5 days. In this report each standard is rated red, amber or green. These RAG ratings show whether a service is ready to move to the next phase. 
+Assessors meet privately in a session known as the 'wash-up' to gather their insights and discuss what the team did well and areas to improve. They then write a report which they aim to get to the delivery team within 5 days. In this report each standard is rated red, amber or green. These RAG ratings show whether a service is ready to move to the next phase. 
 
 - All green ratings → the service has passed the assessment and can move to the next phase. 
 - Amber or red ratings → this means the assessors have found issues and more work is needed. 
@@ -127,11 +127,11 @@ For Standards 2 to 5, URs support designers by providing evidence and insight.
 
 ### Standard 2 – Solve a whole problem for users 
 
-This Standard relates to how well the service supports users to complete a task from start to finish and find the information they need to do this. UR is important here as a team cannot be confident that they’re solving a problem without thoroughly understanding it.  
+This Standard relates to how well the service supports users to complete a task from start to finish and find the information they need to do this. UR is important here as a team cannot be confident that they're solving a problem without thoroughly understanding it.  
 
 UR input for Standard 2 includes: 
 
-- users’ needs, motivations, and goals 
+- users' needs, motivations, and goals 
 - tasks and pain points 
 - how research informed the service direction 
 
@@ -147,7 +147,7 @@ UR should show research across:
 
 ### Standard 4 – Make the service simple to use 
 
-To help the team meet Standard 4, URs should make sure designers are well-equipped with insights from research. Specifically, to discuss how the service has been optimised to be simple and where UI and content changes have been made to serve users well. Usability testing should demonstrate iterative improvements over time. It’s vital that the UCD team work together to evidence how research has directly shaped design. 
+To help the team meet Standard 4, URs should make sure designers are well-equipped with insights from research. Specifically, to discuss how the service has been optimised to be simple and where UI and content changes have been made to serve users well. Usability testing should demonstrate iterative improvements over time. It's vital that the UCD team work together to evidence how research has directly shaped design. 
 
 ### Standard 5 – Make sure everyone can use the service 
 
@@ -157,9 +157,9 @@ You need to show research with people with a wide range of access needs, includi
 
 - sensory (for example, visual impairments) 
 - cognitive (such as dyslexia and autism) 
-- motor (such as Parkinson’s) 
+- motor (such as Parkinson's) 
 - physical disability 
 
 The UCD team must also consider and test the offline and assisted digital routes. Accessibility testing by quality assurance teams is helpful but not enough. You must conduct research with real users. Aim for at least 20–25% of research participants having access needs, as this mirrors UK population estimates. 
 
-Be aware that participants may not see themselves as someone with ‘access needs’ so it is worth checking with them during the session if they have any health conditions or disabilities that they feel impact how they use tech or online services. 
+Be aware that participants may not see themselves as someone with 'access needs' so it is worth checking with them during the session if they have any health conditions or disabilities that they feel impact how they use tech or online services. 
