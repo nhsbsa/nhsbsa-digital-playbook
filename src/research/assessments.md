@@ -20,7 +20,7 @@ A GDS assessment will happen at key stages of the service:
 
 After a service passes Live, it moves into a stage known as 'continuous improvement'. A new 'discovery review' assessment is also being introduced to assess new services before they begin Alpha. 
 
-## Why do they matter? 
+## Why do they matter?
 
 A successful GDS assessment: 
 
