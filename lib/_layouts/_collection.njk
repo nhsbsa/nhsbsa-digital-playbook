@@ -26,8 +26,11 @@
           }) }} 
         {% endif %}
 
+        <h1 class="nhsuk-heading-xl">
+          {{ title }}
+        </h1>
         <h2 class="nhsuk-heading-l">
-          {{ posts.title or app.posts.title or "Articles" }}
+          {{ posts.title or app.posts.title or "Related articles" }}
         </h2>
         {{ appCard({
           items: pagination.items,
