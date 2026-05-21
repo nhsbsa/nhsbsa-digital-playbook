@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,14 +40,14 @@ Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-frontend/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-frontend/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -154,24 +154,24 @@ Frontends - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
 <h2 id="accessibility" tabindex="-1"><a class="header-anchor" href="#accessibility">Accessibility</a></h2>
 <p>Producing accessibile web sites and applications is a fundamental aspect of frontend development.</p>
-<p>The Government service manual explains more about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction" target="_blank" rel="noopener">making your service accessible</a> and writing an <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility" target="_blank" rel="noopener">accessibility statement</a>.</p>
-<p>The NHS service manual also provides guidance on <a href="https://service-manual.nhs.uk/accessibility" target="_blank" rel="noopener">accessibility</a> including specific advice on <a href="https://service-manual.nhs.uk/accessibility/design" target="_blank" rel="noopener">design</a>, <a href="https://service-manual.nhs.uk/accessibility/development" target="_blank" rel="noopener">development</a> and <a href="https://service-manual.nhs.uk/accessibility/testing" target="_blank" rel="noopener">testing</a>.</p>
+<p>The Government service manual explains more about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction">making your service accessible</a> and writing an <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility">accessibility statement</a>.</p>
+<p>The NHS service manual also provides guidance on <a href="https://service-manual.nhs.uk/accessibility">accessibility</a> including specific advice on <a href="https://service-manual.nhs.uk/accessibility/design">design</a>, <a href="https://service-manual.nhs.uk/accessibility/development">development</a> and <a href="https://service-manual.nhs.uk/accessibility/testing">testing</a>.</p>
 <p>As a frontend developer at the NHSBSA you should:</p>
 <ul>
 <li>Use semantic HTML.</li>
 <li>Use ARIA roles for interactive elements.</li>
 <li>Build user interfaces that work by default without rich client technology such as Javascript.</li>
 <li>Build user interfaces that adopt progressive enhancement and not use graceful degradation.<br>
-Government advice is to <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement" target="_blank" rel="noopener">design the user interfaces with progressive enhancement</a>.</li>
+Government advice is to <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement">design the user interfaces with progressive enhancement</a>.</li>
 </ul>
 <h2 id="nhs-and-gov-design-systems" tabindex="-1"><a class="header-anchor" href="#nhs-and-gov-design-systems">NHS and Gov design systems</a></h2>
-<p>We make use of the <a href="https://service-manual.nhs.uk/design-system" target="_blank" rel="noopener">NHS design system</a> and associated <a href="https://github.com/nhsuk/nhsuk-frontend" target="_blank" rel="noopener">NHS frontend</a> package to align to standard styles, components and patterns that have been proven with robust user testing. In cases where Government branding is required, we adopt the <a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener">Government design system</a> and <a href="https://github.com/alphagov/govuk-frontend" target="_blank" rel="noopener">frontend</a>.</p>
+<p>We make use of the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a> and associated <a href="https://github.com/nhsuk/nhsuk-frontend">NHS frontend</a> package to align to standard styles, components and patterns that have been proven with robust user testing. In cases where Government branding is required, we adopt the <a href="https://design-system.service.gov.uk/">Government design system</a> and <a href="https://github.com/alphagov/govuk-frontend">frontend</a>.</p>
 <p>Both NHS and Gov frontends are implemented in Node.js and Nunjucks. Our preference is to implement frontends in Node.js to take full advantage of the frontend packages.</p>
 <p>We occasionally need to adopt non-standard patterns when user research proves specific difficulties with the standard patterns. Any new pattern should be user tested and then fed back into the NHS or Gov design system and frontend package.</p>
 <h2 id="multi-lingual-support" tabindex="-1"><a class="header-anchor" href="#multi-lingual-support">Multi-lingual support</a></h2>
 <p>Services may need to support content in different languages. The UI should be coded with this in mind from the start. Localising content is more difficult if not considered upfront. Most platforms have inbuilt features or extensions to support it.</p>
 <p>Externalise content in whole sentences, with placeholders for dynamic content: Do not decompose content into sentence fragments as this can break grammar rules when translated to a different language.</p>
-<p>Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner’s Office are available for advice and provide a <a href="https://arts.wales/sites/default/files/2021-02/Bilingual%20Design%20Guide%202018.pdf" target="_blank" rel="noopener">bilingual design guide</a>:</p>
+<p>Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner’s Office are available for advice and provide a <a href="https://arts.wales/sites/default/files/2021-02/Bilingual%20Design%20Guide%202018.pdf">bilingual design guide</a>:</p>
 <ul>
 <li>The website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.</li>
 <li>It should always be possible and easy to switch from one language to another on any page, going straight to the same page in the chosen language.</li>
@@ -183,10 +183,10 @@ same mailbox.</li>
 </ul>
 <h2 id="general-guidance" tabindex="-1"><a class="header-anchor" href="#general-guidance">General guidance</a></h2>
 <ul>
-<li>Our web application must function correctly on the range of browsers and devices specified in the latest <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices" target="_blank" rel="noopener">Government compatibility guidance</a>.</li>
-<li>Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get" target="_blank" rel="noopener">Wikipedia Post/Redirect/Get</a> for more on this pattern.</li>
+<li>Our web application must function correctly on the range of browsers and devices specified in the latest <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">Government compatibility guidance</a>.</li>
+<li>Web based user interface page interactions should follow the POST-Redirect-GET pattern for POSTed data. See <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get">Wikipedia Post/Redirect/Get</a> for more on this pattern.</li>
 <li>HTML markup must contain <code class="md">id</code> attributes to allow functional testing of the user interface. ID format should be agreed with the testers and captured in project documentation.</li>
-<li>URLs must be agreed by a Content Designer and align to <a href="https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk" target="_blank" rel="noopener">URL design standards</a></li>
+<li>URLs must be agreed by a Content Designer and align to <a href="https://www.gov.uk/guidance/content-design/url-standards-for-gov-uk">URL design standards</a></li>
 <li>Prototype code mustn’t be used verbatim. Prototype code is indicative of how a user interface should look and behave, but we don’t require them to meet our production quality standards. Prototypes are there to test designs with users. You will need your skill and coordination with the designer to translate them into production grade code.</li>
 </ul>
 
@@ -195,12 +195,12 @@ same mailbox.</li>
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-frontend&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-frontend&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -228,7 +228,7 @@ same mailbox.</li>
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -237,7 +237,7 @@ same mailbox.</li>
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -245,7 +245,7 @@ same mailbox.</li>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>

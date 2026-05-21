@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,15 +40,15 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/security/security-headers/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/security/security-headers/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
   <meta property="og:description" content="Use HTTP headers to protect our users">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -320,9 +320,9 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>This guidance identifies HTTP headers that must, should and could be used in web applications, as well as those that should not and must not be used.</p>
 <p>If you want to learn more about security headers, check out:</p>
 <ul>
-<li><a href="https://owasp.org/www-project-secure-headers/" target="_blank" rel="noopener">OWASP Secure Headers Project</a></li>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
-<li><a href="https://scotthelme.co.uk/" target="_blank" rel="noopener">Scott Helme</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Secure Headers Project</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
+<li><a href="https://scotthelme.co.uk/">Scott Helme</a></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Consult a security expert</p>
@@ -341,10 +341,10 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>The application component responsible for handling HTTP requests</dd>
 <dt>OWASP</dt>
-<dd><a href="https://owasp.org/" target="_blank" rel="noopener">Open Web Application Security Project</a>®</dd>
+<dd><a href="https://owasp.org/">Open Web Application Security Project</a>®</dd>
 </dl>
 <h2 id="security-header-scan" tabindex="-1"><a class="header-anchor" href="#security-header-scan">Security header scan</a></h2>
-<p>If your site is publicly available, you can make use of this <a href="https://securityheaders.com/" target="_blank" rel="noopener">online service from securityheaders.com</a> to scan your web application.</p>
+<p>If your site is publicly available, you can make use of this <a href="https://securityheaders.com/">online service from securityheaders.com</a> to scan your web application.</p>
 <p><strong>Tick the ‘hide results’ option to prevent a potentially poor graded site from seeking more attention than it already has.</strong></p>
 <h2 id="must-not" tabindex="-1"><a class="header-anchor" href="#must-not">MUST NOT</a></h2>
 <div class="md card">
@@ -352,7 +352,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -368,11 +368,11 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins-hpkp" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins-hpkp</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#public-key-pins" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#public-key-pins</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins-hpkp">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#public-key-pins-hpkp</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#public-key-pins">https://owasp.org/www-project-secure-headers/#public-key-pins</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-aspnetmvc-version" tabindex="-1"><a class="header-anchor" href="#x-aspnetmvc-version">X-AspNetMvc-Version</a></h3>
 <dl class="md">
@@ -396,10 +396,10 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnetmvc-version</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-aspnet-version" tabindex="-1"><a class="header-anchor" href="#x-aspnet-version">X-AspNet-Version</a></h3>
 <dl class="md">
@@ -423,10 +423,10 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-aspnet-version</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-powered-by" tabindex="-1"><a class="header-anchor" href="#x-powered-by">X-Powered-By</a></h3>
 <dl class="md">
@@ -439,15 +439,15 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>Application should not send this header</dd>
 <dt>OWASP</dt>
-<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by</a></dd>
+<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-powered-by</a></dd>
 </dl>
-</div>
+</div class="md">
 <h2 id="should-not" tabindex="-1"><a class="header-anchor" href="#should-not">SHOULD NOT</a></h2>
 <div class="md card">
 <h3 id="expect-ct" tabindex="-1"><a class="header-anchor" href="#expect-ct">Expect-CT</a></h3>
 <dl class="md">
 <dt>Reference</dt>
-<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT</a></dd>
+<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT</a></dd>
 <dt>Guidance</dt>
 <dd>Deprecated in favour of Content Security Policy</dd>
 <dt>Edge</dt>
@@ -455,14 +455,14 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>Migrate to <a href="../content-security-policy">Content-Security-Policy</a></dd>
 <dt>OWASP</dt>
-<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct</a></dd>
+<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct</a></dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="server" tabindex="-1"><a class="header-anchor" href="#server">Server</a></h3>
 <dl class="md">
 <dt>Reference</dt>
-<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server</a></dd>
+<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server</a></dd>
 <dt>Guidance</dt>
 <dd>Unnecesarily exposes information about the infrastructure that can be used to focus exploits. Do not send.</dd>
 <dt>Edge</dt>
@@ -470,15 +470,15 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dt>Application</dt>
 <dd>Application should not send this header</dd>
 <dt>OWASP</dt>
-<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server</a></dd>
+<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#server</a></dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-permitted-cross-domain-policies" tabindex="-1"><a class="header-anchor" href="#x-permitted-cross-domain-policies">X-Permitted-Cross-Domain-Policies</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -495,10 +495,10 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies">https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <h2 id="must" tabindex="-1"><a class="header-anchor" href="#must">MUST</a></h2>
 <p>All headers below <strong>MUST</strong> be used in web application responses</p>
 <div class="md card">
@@ -506,7 +506,7 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -526,28 +526,28 @@ Security headers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#referrer-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#referrer-policy</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#referrer-policy">https://owasp.org/www-project-secure-headers/#referrer-policy</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/referrer-policy" target="_blank" rel="noopener">https://caniuse.com/referrer-policy</a></p>
+<p><a href="https://caniuse.com/referrer-policy">https://caniuse.com/referrer-policy</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="strict-transport-security" tabindex="-1"><a class="header-anchor" href="#strict-transport-security">Strict-Transport-Security</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
 <p>Force use of HTTPS and do not downgrade to HTTP.</p>
 <p>Avoid using <code class="md">preload</code> unless you are intend to submit your site to the HSTS preload list that modern browsers use.<br>
 Adding a domain to the preload list may well affect other services operating on that domain. Always consult our security team if in doubt.<br>
-See <a href="https://hstspreload.org/" target="_blank" rel="noopener">https://hstspreload.org/</a> for more details.<br>
+See <a href="https://hstspreload.org/">https://hstspreload.org/</a> for more details.<br>
 If you choose to use it, the max age MUST be set to 2 years, or it will be ignored</p>
 </dd>
 <dt>Edge</dt>
@@ -564,21 +564,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#http-strict-transport-security" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#http-strict-transport-security</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#http-strict-transport-security">https://owasp.org/www-project-secure-headers/#http-strict-transport-security</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/stricttransportsecurity" target="_blank" rel="noopener">https://caniuse.com/stricttransportsecurity</a></p>
+<p><a href="https://caniuse.com/stricttransportsecurity">https://caniuse.com/stricttransportsecurity</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-content-type-options" tabindex="-1"><a class="header-anchor" href="#x-content-type-options">X-Content-Type-Options</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -598,21 +598,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#x-content-type-options" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#x-content-type-options</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#x-content-type-options">https://owasp.org/www-project-secure-headers/#x-content-type-options</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_x-content-type-options" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-content-type-options</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_x-content-type-options">https://caniuse.com/mdn-http_headers_x-content-type-options</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-frame-options" tabindex="-1"><a class="header-anchor" href="#x-frame-options">X-Frame-Options</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -634,21 +634,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#x-frame-options" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#x-frame-options</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#x-frame-options">https://owasp.org/www-project-secure-headers/#x-frame-options</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/x-frame-options" target="_blank" rel="noopener">https://caniuse.com/x-frame-options</a></p>
+<p><a href="https://caniuse.com/x-frame-options">https://caniuse.com/x-frame-options</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-xss-protection" tabindex="-1"><a class="header-anchor" href="#x-xss-protection">X-XSS-Protection</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -668,22 +668,22 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-xss-protection" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-xss-protection</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#x-xss-protection" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#x-xss-protection</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-xss-protection">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-xss-protection</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#x-xss-protection">https://owasp.org/www-project-secure-headers/#x-xss-protection</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_x-xss-protection" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-xss-protection</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_x-xss-protection">https://caniuse.com/mdn-http_headers_x-xss-protection</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <h2 id="should" tabindex="-1"><a class="header-anchor" href="#should">SHOULD</a></h2>
 <div class="md card">
 <h3 id="content-security-policy" tabindex="-1"><a class="header-anchor" href="#content-security-policy">Content-Security-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -704,21 +704,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://owasp.org/www-project-secure-headers/#content-security-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#content-security-policy</a></p>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#content-security-policy">https://owasp.org/www-project-secure-headers/#content-security-policy</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_content-security-policy-report-only" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_content-security-policy-report-only</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_content-security-policy-report-only">https://caniuse.com/mdn-http_headers_content-security-policy-report-only</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="cross-origin-embedder-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -738,21 +738,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy">https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy">https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="cross-origin-opener-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-opener-policy">Cross-Origin-Opener-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -772,21 +772,21 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy">https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-opener-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-opener-policy</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-opener-policy">https://caniuse.com/mdn-http_headers_cross-origin-opener-policy</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="cross-origin-resource-policy" tabindex="-1"><a class="header-anchor" href="#cross-origin-resource-policy">Cross-Origin-Resource-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -806,22 +806,22 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp</a></p>
-<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy">https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-resource-policy" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_cross-origin-resource-policy</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_cross-origin-resource-policy">https://caniuse.com/mdn-http_headers_cross-origin-resource-policy</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <h2 id="could" tabindex="-1"><a class="header-anchor" href="#could">COULD</a></h2>
 <div class="md card">
 <h3 id="feature-policy" tabindex="-1"><a class="header-anchor" href="#feature-policy">Feature-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -842,19 +842,19 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://owasp.org/www-project-secure-headers/#feature-policy" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#feature-policy</a></p>
+<p><a href="https://owasp.org/www-project-secure-headers/#feature-policy">https://owasp.org/www-project-secure-headers/#feature-policy</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/feature-policy" target="_blank" rel="noopener">https://caniuse.com/feature-policy</a></p>
+<p><a href="https://caniuse.com/feature-policy">https://caniuse.com/feature-policy</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="permissions-policy" tabindex="-1"><a class="header-anchor" href="#permissions-policy">Permissions-Policy</a></h3>
 <dl class="md">
 <dt>Reference</dt>
-<dd><a href="https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field" target="_blank" rel="noopener">https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field</a></dd>
+<dd><a href="https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field">https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field</a></dd>
 <dt>Guidance</dt>
 <dd>Allow and deny the use of browser features in its own frame, and in content within any <code class="md">&lt;iframe&gt;</code> elements in the document</dd>
 <dt>Edge</dt>
@@ -866,14 +866,14 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dt>OWASP</dt>
 <dd>N/A</dd>
 <dt>Compatibility</dt>
-<dd><a href="https://caniuse.com/permissions-policy" target="_blank" rel="noopener">https://caniuse.com/permissions-policy</a></dd>
+<dd><a href="https://caniuse.com/permissions-policy">https://caniuse.com/permissions-policy</a></dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="clear-site-data" tabindex="-1"><a class="header-anchor" href="#clear-site-data">Clear-Site-Data</a></h3>
 <dl class="md">
 <dt>Reference</dt>
-<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data</a></dd>
+<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data</a></dd>
 <dt>Guidance</dt>
 <dd>Clear browsing data (cookies, storage, cache) associated with the requesting website</dd>
 <dt>Edge</dt>
@@ -883,17 +883,17 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dt>Recommended value</dt>
 <dd>N/A</dd>
 <dt>OWASP</dt>
-<dd><a href="https://owasp.org/www-project-secure-headers/#clear-site-data" target="_blank" rel="noopener">https://owasp.org/www-project-secure-headers/#clear-site-data</a></dd>
+<dd><a href="https://owasp.org/www-project-secure-headers/#clear-site-data">https://owasp.org/www-project-secure-headers/#clear-site-data</a></dd>
 <dt>Compatibility</dt>
-<dd><a href="https://caniuse.com/mdn-http_headers_clear-site-data_cache" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_clear-site-data_cache</a></dd>
+<dd><a href="https://caniuse.com/mdn-http_headers_clear-site-data_cache">https://caniuse.com/mdn-http_headers_clear-site-data_cache</a></dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="set-cookie" tabindex="-1"><a class="header-anchor" href="#set-cookie">Set-Cookie</a></h3>
 <dl class="md">
 <dt>Reference</dt>
 <dd>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie</a></p>
 </dd>
 <dt>Guidance</dt>
 <dd>
@@ -903,8 +903,8 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <li><code class="md">Secure</code> to only send over HTTPS</li>
 <li><code class="md">Path</code> to limit to web application scope</li>
 <li>Prefix cookie name with <code class="md">__Secure-</code> as a convention to indicate the cookie is secure</li>
-<li>Read <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP Session Management Cheat Sheet</a> for a detailed explanation on cookie configuration options.</li>
-<li>Read <a href="https://scotthelme.co.uk/tough-cookies/" target="_blank" rel="noopener">Scott Helme’s article on tough cookies</a></li>
+<li>Read <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Session Management Cheat Sheet</a> for a detailed explanation on cookie configuration options.</li>
+<li>Read <a href="https://scotthelme.co.uk/tough-cookies/">Scott Helme’s article on tough cookies</a></li>
 </ul>
 </dd>
 <dt>Edge</dt>
@@ -919,20 +919,20 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 </dd>
 <dt>OWASP</dt>
 <dd>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#set-cookie" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#set-cookie</a></p>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#cookies" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#cookies</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#set-cookie">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#set-cookie</a></p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#cookies">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#cookies</a></p>
 </dd>
 <dt>Compatibility</dt>
 <dd>
-<p><a href="https://caniuse.com/mdn-http_headers_set-cookie" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_set-cookie</a></p>
+<p><a href="https://caniuse.com/mdn-http_headers_set-cookie">https://caniuse.com/mdn-http_headers_set-cookie</a></p>
 </dd>
 </dl>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="x-dns-prefetch-control" tabindex="-1"><a class="header-anchor" href="#x-dns-prefetch-control">X-DNS-Prefetch-Control</a></h3>
 <dl class="md">
 <dt>Reference</dt>
-<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control</a></dd>
+<dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control</a></dd>
 <dt>Guidance</dt>
 <dd>The default behavior of browsers is to perform DNS caching which is good for most websites. If you do not control links on your website, you might want to set off as a value to disable DNS prefetch to avoid leaking information to those domains.</dd>
 <dt>Edge</dt>
@@ -942,18 +942,18 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 <dt>Recommended value</dt>
 <dd><code class="md">off</code></dd>
 <dt>OWASP</dt>
-<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control" target="_blank" rel="noopener">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control</a></dd>
+<dd><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-dns-prefetch-control</a></dd>
 <dt>Compatibility</dt>
-<dd><a href="https://caniuse.com/mdn-http_headers_x-dns-prefetch-control" target="_blank" rel="noopener">https://caniuse.com/mdn-http_headers_x-dns-prefetch-control</a></dd>
+<dd><a href="https://caniuse.com/mdn-http_headers_x-dns-prefetch-control">https://caniuse.com/mdn-http_headers_x-dns-prefetch-control</a></dd>
 </dl>
-</div>
+</div class="md">
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
 <li><a href="../content-security-policy">NHSBSA Content-Security-Policy guidance</a></li>
-<li><a href="https://owasp.org/www-project-secure-headers/" target="_blank" rel="noopener">OWASP Secure Headers Project</a></li>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
-<li><a href="https://securityheaders.com/" target="_blank" rel="noopener">securityheaders.com</a></li>
-<li><a href="https://scotthelme.co.uk/" target="_blank" rel="noopener">Scott Helme</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Secure Headers Project</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html">OWASP HTTP Security Response Headers Cheat Sheet</a></li>
+<li><a href="https://securityheaders.com/">securityheaders.com</a></li>
+<li><a href="https://scotthelme.co.uk/">Scott Helme</a></li>
 </ul>
 
         <hr>
@@ -961,12 +961,12 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=security&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fsecurity%2Fsecurity-headers&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=security&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fsecurity%2Fsecurity-headers&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -994,7 +994,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -1003,7 +1003,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -1011,7 +1011,7 @@ If you choose to use it, the max age MUST be set to 2 years, or it will be ignor
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>

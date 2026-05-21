@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,14 +40,14 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/tech-java/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/technologies/tech-java/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -161,57 +161,57 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p>Java projects must:</p>
 <ul>
 <li>define the source and target Java version in the Maven <code class="md">pom.xml</code> file</li>
-<li>use a Java Version Manager such as <a href="https://github.com/jenv/jenv" target="_blank" rel="noopener">JEnv</a> to manage Java versions in development</li>
+<li>use a Java Version Manager such as <a href="https://github.com/jenv/jenv">JEnv</a> to manage Java versions in development</li>
 </ul>
 <h2 id="ide" tabindex="-1"><a class="header-anchor" href="#ide">IDE</a></h2>
 <p>Choose whatever you’re comfortable with, so long as you can perform your job. Our developers tend to select one of</p>
 <ul>
-<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA</a></li>
-<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a></li>
-<li><a href="https://www.eclipse.org/ide/" target="_blank" rel="noopener">Eclipse</a></li>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a></li>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+<li><a href="https://www.eclipse.org/ide/">Eclipse</a></li>
 </ul>
 <h2 id="build" tabindex="-1"><a class="header-anchor" href="#build">Build</a></h2>
 <ul>
-<li><a href="https://maven.apache.org/" target="_blank" rel="noopener">Maven</a> is our standard Java build tool</li>
-<li>Code coverage with <a href="https://www.jacoco.org/jacoco/trunk/doc/" target="_blank" rel="noopener">JaCoCo</a> and the <a href="https://www.eclemma.org/jacoco/trunk/doc/maven.html" target="_blank" rel="noopener">JaCoCo Maven plugin</a></li>
-<li>Static analysis with <a href="https://www.sonarqube.org/" target="_blank" rel="noopener">SonarQube</a> and the <a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/" target="_blank" rel="noopener">SonarScanner Maven plugin</a></li>
+<li><a href="https://maven.apache.org/">Maven</a> is our standard Java build tool</li>
+<li>Code coverage with <a href="https://www.jacoco.org/jacoco/trunk/doc/">JaCoCo</a> and the <a href="https://www.eclemma.org/jacoco/trunk/doc/maven.html">JaCoCo Maven plugin</a></li>
+<li>Static analysis with <a href="https://www.sonarqube.org/">SonarQube</a> and the <a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/">SonarScanner Maven plugin</a></li>
 </ul>
 <h2 id="application" tabindex="-1"><a class="header-anchor" href="#application">Application</a></h2>
 <p>Our standard Java application stack is built on the Spring ecosystem.</p>
 <ul>
-<li>Applications run in <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> with <a href="https://tomcat.apache.org/" target="_blank" rel="noopener">Apache Tomcat</a> as the embedded application server</li>
-<li>User interfaces with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" target="_blank" rel="noopener">Spring MVC</a> and <a href="https://www.thymeleaf.org/" target="_blank" rel="noopener">Thymeleaf 3</a> for templates</li>
-<li>Web services with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" target="_blank" rel="noopener">Spring MVC</a> or <a href="https://docs.spring.io/spring-data/rest/docs/current/reference/html/" target="_blank" rel="noopener">Spring Data Rest</a> and <a href="https://github.com/FasterXML/jackson" target="_blank" rel="noopener">Jackson</a> for JSON mapping</li>
-<li>Security with <a href="https://spring.io/projects/spring-security" target="_blank" rel="noopener">Spring Security</a></li>
-<li>Data access with <a href="https://spring.io/projects/spring-data-jpa" target="_blank" rel="noopener">Spring Data JPA</a> and <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
-<li>Batch with <a href="https://spring.io/projects/spring-batch" target="_blank" rel="noopener">Spring Batch</a></li>
-<li>Cloud integration with <a href="https://spring.io/projects/spring-cloud" target="_blank" rel="noopener">Spring Cloud</a></li>
-<li>Enterprise Integration Patterns (EIP) using <a href="https://spring.io/projects/spring-integration" target="_blank" rel="noopener">Spring Integration</a></li>
+<li>Applications run in <a href="https://spring.io/projects/spring-boot">Spring Boot</a> with <a href="https://tomcat.apache.org/">Apache Tomcat</a> as the embedded application server</li>
+<li>User interfaces with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html">Spring MVC</a> and <a href="https://www.thymeleaf.org/">Thymeleaf 3</a> for templates</li>
+<li>Web services with <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html">Spring MVC</a> or <a href="https://docs.spring.io/spring-data/rest/docs/current/reference/html/">Spring Data Rest</a> and <a href="https://github.com/FasterXML/jackson">Jackson</a> for JSON mapping</li>
+<li>Security with <a href="https://spring.io/projects/spring-security">Spring Security</a></li>
+<li>Data access with <a href="https://spring.io/projects/spring-data-jpa">Spring Data JPA</a> and <a href="https://hibernate.org/orm/">Hibernate ORM</a></li>
+<li>Batch with <a href="https://spring.io/projects/spring-batch">Spring Batch</a></li>
+<li>Cloud integration with <a href="https://spring.io/projects/spring-cloud">Spring Cloud</a></li>
+<li>Enterprise Integration Patterns (EIP) using <a href="https://spring.io/projects/spring-integration">Spring Integration</a></li>
 </ul>
 <p>We generally use core Java and standard extension packages in preference to third party, although Spring is often used in preference where available:</p>
 <ul>
 <li>Dates and Times using <code class="md">Java.time</code> and not <code class="md">joda</code> or <code class="md">java.util</code></li>
 <li>Transactions using Java Transaction API (<code class="md">javax.transaction</code>)</li>
-<li>Object Relational Mapping using Java Persistence API (<code class="md">javax.persistence</code>) backed by <a href="https://hibernate.org/orm/" target="_blank" rel="noopener">Hibernate ORM</a></li>
-<li>Validation with <a href="https://beanvalidation.org/1.0/spec/" target="_blank" rel="noopener">JSR-303</a> (<code class="md">javax.validation</code>) backed by <a href="https://hibernate.org/validator/" target="_blank" rel="noopener">Hibernate Validator</a></li>
+<li>Object Relational Mapping using Java Persistence API (<code class="md">javax.persistence</code>) backed by <a href="https://hibernate.org/orm/">Hibernate ORM</a></li>
+<li>Validation with <a href="https://beanvalidation.org/1.0/spec/">JSR-303</a> (<code class="md">javax.validation</code>) backed by <a href="https://hibernate.org/validator/">Hibernate Validator</a></li>
 </ul>
 <p>We also use other well known libraries:</p>
 <ul>
-<li>Auto-generate boilerplate code with <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a></li>
-<li><a href="https://swagger.io/specification/" target="_blank" rel="noopener">OpenAPI V3</a> using <a href="https://springdoc.org/" target="_blank" rel="noopener">Springdoc OpenAPI</a></li>
-<li>Logging API with <a href="https://slf4j.org/" target="_blank" rel="noopener">logging_slf4j</a>, annotated with Lombok <a href="https://projectlombok.org/features/log" target="_blank" rel="noopener">@Slf4J</a> and implemention by <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a></li>
-<li>Object mapping is varied. Many projects use <a href="https://mapstruct.org/" target="_blank" rel="noopener">Mapstruct</a> or <a href="https://projectlombok.org/features/Builder" target="_blank" rel="noopener">Lombok builder</a></li>
-<li>Audit using <a href="https://javers.org/" target="_blank" rel="noopener">Javers</a></li>
-<li>We use <a href="https://commons.apache.org/" target="_blank" rel="noopener">Apache commons</a> when Spring equivalents are unsuitable</li>
+<li>Auto-generate boilerplate code with <a href="https://projectlombok.org/">Lombok</a></li>
+<li><a href="https://swagger.io/specification/">OpenAPI V3</a> using <a href="https://springdoc.org/">Springdoc OpenAPI</a></li>
+<li>Logging API with <a href="https://slf4j.org/">logging_slf4j</a>, annotated with Lombok <a href="https://projectlombok.org/features/log">@Slf4J</a> and implemention by <a href="https://logback.qos.ch/">Logback</a></li>
+<li>Object mapping is varied. Many projects use <a href="https://mapstruct.org/">Mapstruct</a> or <a href="https://projectlombok.org/features/Builder">Lombok builder</a></li>
+<li>Audit using <a href="https://javers.org/">Javers</a></li>
+<li>We use <a href="https://commons.apache.org/">Apache commons</a> when Spring equivalents are unsuitable</li>
 </ul>
 <h2 id="testing" tabindex="-1"><a class="header-anchor" href="#testing">Testing</a></h2>
 <ul>
-<li><a href="https://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noopener">JUnit 5</a> as our core testing framework</li>
-<li>Prefer <a href="https://assertj.github.io/doc/" target="_blank" rel="noopener">AssertJ</a> for assertions over Hamcrest matchers</li>
-<li><a href="https://github.com/mockito/mockito" target="_blank" rel="noopener">Mockito</a> for mocking of downstream dependencies</li>
-<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html" target="_blank" rel="noopener">Spring Test</a> including MockMvc and DataJpaTest</li>
-<li>Unit tests run within the Maven <code class="md">test</code> phase with <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">surefire plugin</a></li>
-<li>Integrations tests run within the Maven <code class="md">integration-test</code> phase with <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">failsafe plugin</a>.</li>
+<li><a href="https://junit.org/junit5/docs/current/user-guide/">JUnit 5</a> as our core testing framework</li>
+<li>Prefer <a href="https://assertj.github.io/doc/">AssertJ</a> for assertions over Hamcrest matchers</li>
+<li><a href="https://github.com/mockito/mockito">Mockito</a> for mocking of downstream dependencies</li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html">Spring Test</a> including MockMvc and DataJpaTest</li>
+<li>Unit tests run within the Maven <code class="md">test</code> phase with <a href="https://maven.apache.org/surefire/maven-surefire-plugin/">surefire plugin</a></li>
+<li>Integrations tests run within the Maven <code class="md">integration-test</code> phase with <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/">failsafe plugin</a>.</li>
 </ul>
 
         <hr>
@@ -219,12 +219,12 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Ftech-java&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftechnologies%2Ftech-java&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -252,7 +252,7 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -261,7 +261,7 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -269,7 +269,7 @@ Java - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>

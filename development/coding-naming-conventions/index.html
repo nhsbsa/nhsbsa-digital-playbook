@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,15 +40,15 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-naming-conventions/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-naming-conventions/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
   <meta property="og:description" content="Naming things well from the start can avoid a lot of confusion as a project matures">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -296,7 +296,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
     </td>
   </tr>
 </table>
-</div>
+</div class="md">
 <h3 id="abbreviations" tabindex="-1"><a class="header-anchor" href="#abbreviations">Abbreviations</a></h3>
 <p>Service delivery teams often adopt short form or abbreviations of names. For example, the Maternity Exemption Certificate service is shorted to Matex, Immigration Health Surcharge is abbreviated to IHS. It is ok to use the short form for internal names such as code modules or system urls.</p>
 <p>Use long form names whenever the content may be used outside of the service team. This includes service URLs, public hosted code repository names and READMEs.</p>
@@ -318,7 +318,7 @@ Naming conventions - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <p><code class="md">{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
 <p>Gitlab and Github hosted repository names should use unabbreviated <code class="md">natural</code> case.</p>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="git-branches" tabindex="-1"><a class="header-anchor" href="#git-branches">Git branches</a></h3>
 <p>All branches should be <code class="md">kebab-case</code>, although change ID should be uppercase</p>
@@ -343,21 +343,21 @@ or<br>
 </li>
 </ul>
 <p>See <a href="../dev-git-branching-strategy/">Git branching guidance</a> for a more detailed explanation of Git branch naming</p>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="gitlab-groups" tabindex="-1"><a class="header-anchor" href="#gitlab-groups">Gitlab groups</a></h3>
 <p>Repositories in Gitlab should be organised into ‘groups’. Use unabbreviated <code class="md">natural</code> case for the human readable form, and <code class="md">kebab-case</code> for the URL with this convention:</p>
 <blockquote>
 <p><code class="md">{department}/{service-line}/{service}</code></p>
 </blockquote>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="merge/pull-requests" tabindex="-1"><a class="header-anchor" href="#merge/pull-requests">Merge/Pull Requests</a></h3>
 <p>Merge/pull requests should be raised with <code class="md">natural</code> case and this convention:</p>
 <blockquote>
 <p><code class="md">{change ID} - {brief description}</code></p>
 </blockquote>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="commit-messages" tabindex="-1"><a class="header-anchor" href="#commit-messages">Commit messages</a></h3>
 <p>Commit messages should be <code class="md">natural</code> case and follow this convention:</p>
@@ -366,7 +366,7 @@ or<br>
 </blockquote>
 <p>Its fine to use <code class="md">NO-JIRA</code> as the change ID if the change is a non-functional change, for example if its just updating the README file.</p>
 <p>Commit message regex: <code class="md">([A-Z]{3,4}\-([0-9]+)|Merge|Merging|NO-JIRA)[ ][a-z][a-zA-Z0-9 ]*</code></p>
-</div>
+</div class="md">
 <hr>
 <h2 id="languages" tabindex="-1"><a class="header-anchor" href="#languages">Languages</a></h2>
 <p>For language constructs refer to the <a href="../coding-style-guide/">standard language style guides</a>.</p>
@@ -377,7 +377,7 @@ or<br>
 <p><code class="md">uk.nhs.nhsbsa.{service}.{function}</code></p>
 </blockquote>
 <p>Libraries may omit the <code class="md">service</code> when shared across multiple services.</p>
-</div>
+</div class="md">
 <hr>
 <h2 id="package-managers-and-build-tools" tabindex="-1"><a class="header-anchor" href="#package-managers-and-build-tools">Package managers and build tools</a></h2>
 <div class="md card">
@@ -390,34 +390,34 @@ or<br>
 <blockquote>
 <p><code class="md">{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
-<p>Unit tests run by <a href="https://maven.apache.org/surefire/maven-surefire-plugin/" target="_blank" rel="noopener">Maven Surefire plugin</a> should follow the convention:</p>
+<p>Unit tests run by <a href="https://maven.apache.org/surefire/maven-surefire-plugin/">Maven Surefire plugin</a> should follow the convention:</p>
 <blockquote>
 <p><code class="md">*Test.java</code></p>
 </blockquote>
-<p>Integration tests run by <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank" rel="noopener">Maven Failsafe plugin</a> should follow the convention:</p>
+<p>Integration tests run by <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/">Maven Failsafe plugin</a> should follow the convention:</p>
 <blockquote>
 <p><code class="md">*IT.java</code></p>
 </blockquote>
-</div>
+</div class="md">
 <div class="md card">
 <h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm">NPM</a></h3>
 <p>Package.json <code class="md">name</code> should be <code class="md">kebab-case</code> with this convention:</p>
 <blockquote>
 <p><code class="md">@nhsbsa/{optional service-line}-{service}-{function}-{type}</code></p>
 </blockquote>
-</div>
+</div class="md">
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-naming-conventions&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-naming-conventions&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -445,7 +445,7 @@ or<br>
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -454,7 +454,7 @@ or<br>
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -462,7 +462,7 @@ or<br>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>

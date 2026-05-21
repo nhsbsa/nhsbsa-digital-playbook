@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Logging - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Logging - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,14 +40,14 @@ Logging - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-logging/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding-logging/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Logging - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -193,9 +193,9 @@ Care must be taken when considering logging for audit purposes. <strong>Personal
 Care must be taken when using logs for management information. The production database is a more accurate source of truth. However logs can provide a useful picture of how an application is behaving.</li>
 </ul>
 <h2 id="security" tabindex="-1"><a class="header-anchor" href="#security">Security</a></h2>
-<p>Adhere to best practice secure logging techniques as defined in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP logging cheatsheet</a></p>
-<p>We also use the <a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes" target="_blank" rel="noopener">NCSC guidance for logging for security purposes</a></p>
-<p>Logging must adhere to the <a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard" target="_blank" rel="noopener">Protective Monitoring Standard</a>. In particular, consult the security focussed monitoring standard to understand the various security events that must be logged.</p>
+<p>Adhere to best practice secure logging techniques as defined in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">OWASP logging cheatsheet</a></p>
+<p>We also use the <a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes">NCSC guidance for logging for security purposes</a></p>
+<p>Logging must adhere to the <a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard">Protective Monitoring Standard</a>. In particular, consult the security focussed monitoring standard to understand the various security events that must be logged.</p>
 <h2 id="data-protection" tabindex="-1"><a class="header-anchor" href="#data-protection">Data protection</a></h2>
 <p>Data used in log entries must not include Personally Identifiable Information except for internal system IDs. Logging IDs allows individuals to be identified if necessary by cross reference to a transactional data store. Access to production data stores is controlled.</p>
 <p>For full guidance on use of PII, refer to <a href="../coding-securely-personal-data/">Guidance for coding with Personal Data</a>.</p>
@@ -206,9 +206,9 @@ Care must be taken when using logs for management information. The production da
 <li>Separation of log statements from output channel</li>
 <li>Logging with rich data formats</li>
 </ul>
-<p>In Java, we use <a href="https://slf4j.org/" target="_blank" rel="noopener">Slf4J</a> as our logging API, with <a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a> as the logging implementation. We use the <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a> <code class="md">@slf4j</code> annotation to ease creation of the logger in code.</p>
-<p>In Node, we use <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">Winston</a> for logging.</p>
-<p>We use UTF-8 encoding and output in JSON for simpler integration into <a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a>, our centralised log collation service.</p>
+<p>In Java, we use <a href="https://slf4j.org/">Slf4J</a> as our logging API, with <a href="https://logback.qos.ch/">Logback</a> as the logging implementation. We use the <a href="https://projectlombok.org/">Lombok</a> <code class="md">@slf4j</code> annotation to ease creation of the logger in code.</p>
+<p>In Node, we use <a href="https://www.npmjs.com/package/winston">Winston</a> for logging.</p>
+<p>We use UTF-8 encoding and output in JSON for simpler integration into <a href="https://www.datadoghq.com/">Datadog</a>, our centralised log collation service.</p>
 <h2 id="logging-levels" tabindex="-1"><a class="header-anchor" href="#logging-levels">Logging levels</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">DEBUG</p>
@@ -318,7 +318,7 @@ If tracing session interactions is required, then it is permissable to log a sec
 <li>Depending on the capability of the logging library, delimiters may be automatically included for data items.</li>
 <li>Parsing of logged data should be verified with a working example script</li>
 <li>Don’t leave log parsing until its needed to resolve a live issue. A working script that parses data according to the defined delimiters will verify that the data can be parsed and used.</li>
-<li>Datadog provides a <a href="https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source" target="_blank" rel="noopener">pipeline</a> feature to allow extraction of marked up data items as metrics.</li>
+<li>Datadog provides a <a href="https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source">pipeline</a> feature to allow extraction of marked up data items as metrics.</li>
 </ul>
 <div class="code-tabs">
 <ul>
@@ -378,15 +378,15 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
 </ul>
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html" target="_blank" rel="noopener">OWASP logging cheatsheet</a></li>
-<li><a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes" target="_blank" rel="noopener">NCSC guidance for logging for security purposes</a></li>
-<li><a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard" target="_blank" rel="noopener">Protective Monitoring Standard</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">OWASP logging cheatsheet</a></li>
+<li><a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes">NCSC guidance for logging for security purposes</a></li>
+<li><a href="https://bsa2468.atlassian.net/wiki/spaces/AR/pages/914489921/SEC-003+Protective+Monitoring+Standard">Protective Monitoring Standard</a></li>
 <li><a href="../coding-securely-personal-data/">Guidance for Coding with Personal Data</a></li>
-<li><a href="https://slf4j.org/" target="_blank" rel="noopener">Slf4J</a></li>
-<li><a href="https://logback.qos.ch/" target="_blank" rel="noopener">Logback</a></li>
-<li><a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a></li>
-<li><a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">Winston</a></li>
-<li><a href="https://www.datadoghq.com/" target="_blank" rel="noopener">Datadog</a></li>
+<li><a href="https://slf4j.org/">Slf4J</a></li>
+<li><a href="https://logback.qos.ch/">Logback</a></li>
+<li><a href="https://projectlombok.org/">Lombok</a></li>
+<li><a href="https://www.npmjs.com/package/winston">Winston</a></li>
+<li><a href="https://www.datadoghq.com/">Datadog</a></li>
 </ul>
 
         <hr>
@@ -394,12 +394,12 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-logging&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding-logging&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -427,7 +427,7 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -436,7 +436,7 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -444,7 +444,7 @@ The log and throw anti-pattern creates noisy logs with duplicate log entries for
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
 Coding - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
-    
+    <!-- Google tag (gtag.js) -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,12 +22,12 @@ Coding - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       gtag('config', 'G-NQ562NM01Z');
     </script>
 
-  
+  <!-- New NHSUK asset and font -->
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
-  
+  <!-- NHS Icons -->
   <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
   <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -40,15 +40,15 @@ Coding - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding/">
-  <meta property="og:site_name" content="nhsbsa.nhs.uk">
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/development/coding/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
   <meta property="og:description" content="What do we value when writing code…">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Coding - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" >
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -166,39 +166,39 @@ Good programmers write code that humans can understand.<br>
 </blockquote>
 <p>This page highlights some key advice when coding.</p>
 <h2 id="coding-principles" tabindex="-1"><a class="header-anchor" href="#coding-principles">Coding principles</a></h2>
-<p>There are many principles that we should keep in mind when writing code. You can read about many of these on the <a href="http://principles-wiki.net/start" target="_blank" rel="noopener">Principles wiki</a>. Some principles of note:</p>
+<p>There are many principles that we should keep in mind when writing code. You can read about many of these on the <a href="http://principles-wiki.net/start">Principles wiki</a>. Some principles of note:</p>
 <ul>
-<li><a href="http://principles-wiki.net/principles:don_t_repeat_yourself" target="_blank" rel="noopener">Don’t Repeat Yourself</a></li>
-<li><a href="http://principles-wiki.net/principles:keep_it_simple_stupid" target="_blank" rel="noopener">Keep It Simple Stupid</a></li>
-<li><a href="http://principles-wiki.net/principles:murphy_s_law" target="_blank" rel="noopener">Murphy’s Law</a> - Design for Errors</li>
-<li><a href="http://principles-wiki.net/principles:postel_s_law" target="_blank" rel="noopener">Postel’s Law</a> - Be conservative in what you do, be liberal in what you accept from others</li>
-<li><a href="http://principles-wiki.net/principles:principle_of_least_privilege" target="_blank" rel="noopener">Principle of least privilege</a></li>
-<li><a href="http://principles-wiki.net/collections:solid" target="_blank" rel="noopener">SOLID principles</a> comprising:
+<li><a href="http://principles-wiki.net/principles:don_t_repeat_yourself">Don’t Repeat Yourself</a></li>
+<li><a href="http://principles-wiki.net/principles:keep_it_simple_stupid">Keep It Simple Stupid</a></li>
+<li><a href="http://principles-wiki.net/principles:murphy_s_law">Murphy’s Law</a> - Design for Errors</li>
+<li><a href="http://principles-wiki.net/principles:postel_s_law">Postel’s Law</a> - Be conservative in what you do, be liberal in what you accept from others</li>
+<li><a href="http://principles-wiki.net/principles:principle_of_least_privilege">Principle of least privilege</a></li>
+<li><a href="http://principles-wiki.net/collections:solid">SOLID principles</a> comprising:
 <ul>
-<li><a href="http://principles-wiki.net/principles:single_responsibility_principle" target="_blank" rel="noopener">Single Responsibility Principle</a></li>
-<li><a href="http://principles-wiki.net/principles:open-closed_principle" target="_blank" rel="noopener">Open Closed Principle</a></li>
-<li><a href="http://principles-wiki.net/principles:liskov_substitution_principle" target="_blank" rel="noopener">Liskov Substitution Principle</a></li>
-<li><a href="http://principles-wiki.net/principles:interface_segregation_principle" target="_blank" rel="noopener">Interface Segregation Principle</a></li>
-<li><a href="http://principles-wiki.net/principles:dependency_inversion_principle" target="_blank" rel="noopener">Dependency Inversion Principle</a></li>
+<li><a href="http://principles-wiki.net/principles:single_responsibility_principle">Single Responsibility Principle</a></li>
+<li><a href="http://principles-wiki.net/principles:open-closed_principle">Open Closed Principle</a></li>
+<li><a href="http://principles-wiki.net/principles:liskov_substitution_principle">Liskov Substitution Principle</a></li>
+<li><a href="http://principles-wiki.net/principles:interface_segregation_principle">Interface Segregation Principle</a></li>
+<li><a href="http://principles-wiki.net/principles:dependency_inversion_principle">Dependency Inversion Principle</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="software-development-patterns" tabindex="-1"><a class="header-anchor" href="#software-development-patterns">Software Development Patterns</a></h2>
-<p>Design patterns are common approaches to solving common problems in software development. The book <a href="https://www.goodreads.com/book/show/85009.Design_Patterns" target="_blank" rel="noopener">Design Patterns: Elements of Reusable Object-Oriented Software</a> by the Gang of Four describes the original patterns they identified. They are divided into creational, structural and behavioural patterns and should be understood and used where appropriate.</p>
-<p>The <a href="https://refactoring.guru/design-patterns" target="_blank" rel="noopener">Refactoring Guru</a> website covers design patterns in an engaging format.</p>
+<p>Design patterns are common approaches to solving common problems in software development. The book <a href="https://www.goodreads.com/book/show/85009.Design_Patterns">Design Patterns: Elements of Reusable Object-Oriented Software</a> by the Gang of Four describes the original patterns they identified. They are divided into creational, structural and behavioural patterns and should be understood and used where appropriate.</p>
+<p>The <a href="https://refactoring.guru/design-patterns">Refactoring Guru</a> website covers design patterns in an engaging format.</p>
 <h2 id="clean-code" tabindex="-1"><a class="header-anchor" href="#clean-code">Clean code</a></h2>
 <blockquote>
 <p>“Clean code is code that has been taken care of. Someone has taken the time to keep it simple and orderly. They have paid appropriate attention to details. They have cared.”<br>
 ― Robert C. Martin</p>
 </blockquote>
-<p>We advise all developers to read the seminal book <em><a href="https://www.goodreads.com/en/book/show/3735293-clean-code" target="_blank" rel="noopener">Clean Code: A Handbook of Agile Software Craftsmanship</a></em> by Robert C. Martin.</p>
+<p>We advise all developers to read the seminal book <em><a href="https://www.goodreads.com/en/book/show/3735293-clean-code">Clean Code: A Handbook of Agile Software Craftsmanship</a></em> by Robert C. Martin.</p>
 <p>To get an idea of the scope of Robert Martin’s book, take a look at the <a href="../coding-clean-code/">chapter headings</a>.</p>
 <h2 id="code-smells-and-refactoring" tabindex="-1"><a class="header-anchor" href="#code-smells-and-refactoring">Code smells and refactoring</a></h2>
 <p>Kent Beck coined the term <em>code smell</em> to refer to problems with code that are easy to spot, easy to fix but can signify more serious underlying problems. Martin Fowler described a set of standard code smells and associated patterns to refactor code and fix them.</p>
-<p>We advise all developers to read Martin Fowler’s book <em><a href="https://www.goodreads.com/en/book/show/44936.Refactoring" target="_blank" rel="noopener">Refactoring: Improving the Design of Existing Code</a></em>.</p>
-<p>Alternatively, visit the <a href="https://refactoring.guru/refactoring" target="_blank" rel="noopener">Refactoring</a> website that describes code smells and refactors.</p>
+<p>We advise all developers to read Martin Fowler’s book <em><a href="https://www.goodreads.com/en/book/show/44936.Refactoring">Refactoring: Improving the Design of Existing Code</a></em>.</p>
+<p>Alternatively, visit the <a href="https://refactoring.guru/refactoring">Refactoring</a> website that describes code smells and refactors.</p>
 <h2 id="12-factor-app" tabindex="-1"><a class="header-anchor" href="#12-factor-app">12 Factor App</a></h2>
-<p>Production application code should be written according to principles defined in The <a href="https://12factor.net/" target="_blank" rel="noopener">12 Factor App</a>:</p>
+<p>Production application code should be written according to principles defined in The <a href="https://12factor.net/">12 Factor App</a>:</p>
 <ul>
 <li><strong>Codebase</strong> - One codebase tracked in revision control, many deploys</li>
 <li><strong>Dependencies</strong> - Explicitly declare and isolate dependencies</li>
@@ -215,12 +215,12 @@ Good programmers write code that humans can understand.<br>
 </ul>
 <h2 id="references" tabindex="-1"><a class="header-anchor" href="#references">References</a></h2>
 <ul>
-<li><a href="http://principles-wiki.net/start" target="_blank" rel="noopener">Principles wiki</a></li>
-<li><a href="https://www.goodreads.com/book/show/85009.Design_Patterns" target="_blank" rel="noopener">Design Patterns: Elements of Reusable Object-Oriented Software</a></li>
-<li><a href="https://www.goodreads.com/en/book/show/3735293-clean-code" target="_blank" rel="noopener">Clean Code: A Handbook of Agile Software Craftsmanship</a></li>
-<li><a href="https://www.goodreads.com/en/book/show/44936.Refactoring" target="_blank" rel="noopener">Refactoring: Improving the Design of Existing Code</a></li>
-<li><a href="https://refactoring.guru/refactoring" target="_blank" rel="noopener">Refactoring Guru</a></li>
-<li><a href="https://12factor.net/" target="_blank" rel="noopener">12 Factor App</a></li>
+<li><a href="http://principles-wiki.net/start">Principles wiki</a></li>
+<li><a href="https://www.goodreads.com/book/show/85009.Design_Patterns">Design Patterns: Elements of Reusable Object-Oriented Software</a></li>
+<li><a href="https://www.goodreads.com/en/book/show/3735293-clean-code">Clean Code: A Handbook of Agile Software Craftsmanship</a></li>
+<li><a href="https://www.goodreads.com/en/book/show/44936.Refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+<li><a href="https://refactoring.guru/refactoring">Refactoring Guru</a></li>
+<li><a href="https://12factor.net/">12 Factor App</a></li>
 </ul>
 
         <hr>
@@ -228,12 +228,12 @@ Good programmers write code that humans can understand.<br>
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
           please share your suggestions.</p>
 
-        <p>Before you start, you will need a <a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub account</a>.
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
         Github is an open forum where we collect feedback.</p>
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding&#39;%20" target="_blank" rel="noopener">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=development&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdevelopment%2Fcoding&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -261,7 +261,7 @@ Good programmers write code that humans can understand.<br>
       </div>
     </div>
   </div>
-
+</div>
     </main>
 </div>
 
@@ -270,7 +270,7 @@ Good programmers write code that humans can understand.<br>
     <div class="nhsuk-width-container app-width-container">
       <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
 				
-				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us" target="_blank" rel="noopener">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook" target="_blank" rel="noopener">GitHub</a></li>				</ul>
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
         <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
       </div>
 			<div class="nhsuk-ogl-footer">
@@ -278,7 +278,7 @@ Good programmers write code that humans can understand.<br>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
 				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 				</svg>
-				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated.
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
 				</p>
 			</div>
     </div>
