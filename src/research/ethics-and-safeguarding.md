@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Ethics and safeguarding in user research"
-description: "User research (UR) must always be ethical and safeguard participants, researchers, and product teams."
+description: "Everything you need to know about our approach to ethical research practice"
 tags: research
 order: 14
 ---
