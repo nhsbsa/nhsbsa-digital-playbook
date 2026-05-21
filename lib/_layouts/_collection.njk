@@ -52,7 +52,7 @@
     {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
     {% elif eleventyNavigation.key == "home" %}
       <div class="nhsuk-grid-column-full">
-        <h2 class="nhsuk-heading-l" id="test-2">
+        <h2 class="nhsuk-heading-l">
           {{ sections.title or app.sections.title or "Sections" }}
         </h2>
       </div>
