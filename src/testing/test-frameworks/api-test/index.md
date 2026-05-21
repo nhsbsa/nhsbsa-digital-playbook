@@ -1,41 +1,34 @@
 ---
 layout: article
-title: "API Testing"
-description: "How we test API's in the NHSBSA"
+title: "API testing"
+description: "Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct"
 tags: test-frameworks
 order: 3
+status: Review
 ---
 
-## What are API's?
+#### What is API testing?
 
-APIs (Application Programming Interfaces) are the connections between different systems or layers of an application. Applications often have three layers: a data layer, a service (API) layer, and a presentation (UI) layer. The API layer contains the business logic of an application - the rules of how users can interact with services, data or functions of the service.
+APIs (Application Programming Interfaces) are the connections between different systems or between layers within the application. They are sets of rules or protocols that allow different software applications to communicate and exchange data with each other.
 
-API testing consists of make requests to a single or sometimes multiple API endpoints and validating the response - whether for performance, security, functional correctness, or just a status check.
+At the NHSBSA, our services use public APIs (those that are available on the internet for anyone to use), UK Government APIs (those that are common across UK Government services) and private APIs (those that are used between NHSBSA applications and services)
 
-These requests can be in the form of create POST, return GET, update PUT and delete DELETE requests.
+Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct. API testing concentrates solely on the API and does not consider the other layers within the solution, i.e. the data layer and the UI layer.
 
-Often front end aplications or services are driven from these actions.
+There are many benefits in performing API testing:
 
-There can be private, public or partner API's. 
+- **Early testing**: Once the logic has been built into an API we can test and validate these for correctness in responses and data. This can be a standalone test and does not have to wait for the full service or UI to be built before being tested.
+- **Easier to maintain**: With the dynamic nature of UIs and how much they may be altered during their lifetime, standalone API tests are quicker and easier to create and maintain.
+- **Faster to execute**: API tests are quicker in execution Functional Integration testing as we are not relying on the UI or database. This means we can test quicker and find issues sooner.
+- **More coverage**: Being able to execute tests earlier and quicker means we can increase the test coverage in less or the same amount of time.
+- **Faster to fix**: If an API test fails, the cause and origin of the failure can be easily located, making the resolution and retesting of the issue easier and quicker to perform.
 
-A public API is exactly that available on the internet for anyone to use.
-A private API is used only between applications and services. 
+#### How do we test APIs?
 
-## Why do we do API testing?
+NHSBSA's approved open source tool for API testing is [Karate](https://www.karatelabs.io/).
 
-There are many benefits in performing API testing these include:
+Karate allows testers to write test scripts using a simple, readable feature file format. Using the Behaviour-Driven Development (BDD) style and the **Given**, **When** and **Then** syntax, Karate allows testers to use simple language and plain text to set variables, to use JSON or XML within features to send and validate data, and to automate the full API test suite.
 
-- Early testing: Once the logic has been built into an API we can test and validate these for correctness in responses and data. We don't have to wait for full services or UI's to be built before being tested.
-- Easier to maintain: With the dynamic nature of UI's and how much they are altered and changed due to the ways they are accessed, API's are quicker and easier to create, edit and maintain even in an agile environment.
-- Faster to fix: When API tests fail the cause and origin of the failure can be much easier located, this makes the resolution and retesting of the issue easier and quicker to perform.
-- Speed and Coverage: API tests are quicker in execution than UI testing. This means we can increase and test more coverage in less time than UI tests. This also means we will find more bugs in less time and be able to fix these quicker.
+API tests should consider all business rules, and both positive and negative tests. The [API Test Standard Framework](https://gitlab.com/nhsbsa/ddat/test-community/api-standard-framework) must be used when building the test suite. Once stable, the API test suite should be placed into the CI/CD pipeline for full automation.
 
-## How do we API Test?
-
-The test community approved open source tool for API testing is Karate. Karate allows you script web-service calls using cucumber features.
-
-Using the familiar Given, When and Then syntax Karate goes further and allows you set variables and use JSON or XML in your features
-
-Karate allows to write complete end to end web-service scenarios without writing any code.
-
-For more information on Karate please visit the [Karate github webpage](https://github.com/karatelabs/karate)
+For further information on Karate please visit the [Karate GitHub pages](https://github.com/karatelabs/karate). These contain examples and other guidance on how to create API tests using Karate.

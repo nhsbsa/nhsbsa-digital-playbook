@@ -1,101 +1,79 @@
 ---
 layout: article
 title: "Compatibility Testing"
-description: "How & why we compatibility test in the NHSBSA"
+description: "Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems"
 tags: test-frameworks
-order: 3
-related:
-  tag: compatibility-framework
+order: 4
+status: Review
 ---
 
-## Why we compatibility test at the NHSBSA
 
-Within each project especially those based in the digital workspace the need to perform Compatibility testing is linked to the following requirements:
+#### What is compatibility testing?
 
-- Ability to provide stakeholder's with information about their application regarding functionality, usability and consistency.
-- Ability to analyse the system in different OS environments as well as with different mobile devices (Phones, Tablets).
+Compatibility testing focuses on showing that an application or service works on different devices (e.g. laptops, tablets and phones), on different browsers (e.g. Edge, Firefox, Chrome) and different operating systems (e.g. iOS, Windows).
+
+Our Compatibility Testing is linked to the following requirements:
+
+- Ability to provide stakeholders with information about their application regarding functionality, usability and consistency.
+- Ability to analyse the system in different OS environments as well as with different mobile devices (phones, tablets).
 - Ability to conform to the following GDS Service Standards on performance and durability.
-    - Standard 6   - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.
-    - Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.
-    - Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.
+  - Standard 6 - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.
+  - Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.
+  - Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.
 
-To meet the GDS Standard 10 your testing on your project needs to "work with the devices and browsers your users use" GDS Website.
+To ensure our services meet these requirements we run tests that are representative of the services. These are end-to-end user journey tests that represent how the service behaves using the various browsers, devices and phones.
 
-To ensure our services meet these requirements we run tests that are representative of the services. These are end to end / user journey tests that will represent how the service behaves using the various browsers, devices and phones.
+GDS state "Your service must be universally accessible. This means building it to work on every browser or device that your users access it on." This means that if it is known that users are not going to use certain devices, browsers and/or operating systems then there is little or no need to test on them. Each DDaT service should consider the User Research for new services and monitoring such as Google Analytics for existing services to consider the scope of the test.
 
-Our compatibility coverage is based upon all of the following key requirements:
-- GDS - minimum coverage standards.
-- NHSBSA - technology infrastructure and support.
-- USER RESEARCH - project user base research on browsers and devices used, Google Analytics.
+#### How do we test compatibility?
 
-All three of the above form our NHSBSA compatibility test coverage and standards.
+NHSBSA's approved compatibility test platform is [Saucelabs](https://saucelabs.com/). This gives us access to over 2000 device and browser combinations.
 
-All NHSBSA projects need to comply with the Test Standards on coverage of browsers and devices, this coverage standard can be found on the NHSBSA Compatibility testing coverage page.
+Saucelabs allows testers to test different devices and browsers. We test the latest and latest-1 models and versions where possible, keeping in line with [GDS guidance](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices). Via Saucelabs we have access to both real and virtual devices and can execute both manual and automated tests.
 
-No other coverage will be accepted unless agreed as an exemption with your Test Lead.
-
- ## How we compatibility test
-
- Within the NHSBSA we have provisioned compatibility services from Saucelabs. This enables us to run tests both manually and automated through various browsers, devices and phones. No other compatibility testing service is approved for use as they do not meet our coverage requirements.
-
-We also do not approve the use of seperate tools or licences for the same compatibility service. The NHSBSA has provisioned a central service offering that will meet the needs for all the test community.
+A defined [NHSBSA Compatibility Test Framework](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Compatibility-Testing-framework.aspx) is maintained with details of the current test coverage scope. As this is a dynamic page that is updated at least once a month, the details are not presented here. However, all NHSBSA Testers have access to it via our internal SharePoint pages.
 
 There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.
 
-### Local execution
+#### Local execution
 
-This is where the tests are started and run from the tester's machine by manually entering an execution command on the command line.
+This is where the tests are executed from the tester's machine by manually entering an execution command on the command line. All the defined tests are executed through the Cloud-based test environments.
 
-Local execution of tests through the Saucelabs service runs all tests through the cloud based test environments (which is a standard requirement for NHSBSA test sign off). It executes from the same command line statement structure as automation tests but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the browser, device or phone much easier, it is also better for maintainability and code quality that these are not hard coded into test scripts.
+Local execution of tests through the Saucelabs service executes from the same command line statement structure as automation tests, but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the platform, browser or device much easier. It is also better for maintainability and code quality that these are not hard coded into test scripts.
 
-In order to run tests through Saucelabs the machine used for testing needs to be one of the following:
+In order to run tests through Saucelabs:
 
-- Windows laptop connected to AONVPN.
-- Mac laptop connected to Open VPN
-- For Mac users the Saucelabs connect proxy then needs installing.
+- Internal NHSBSA users need to be connected to Global Protect
+- External users need to be connected with AWS VPN
 
-Only by using the above will Saucelabs be able to access the AWS Test Environments.
+This will allow access via the URL using NHSBSA login credentials.
+
+- All users need to connect via the [Sauce Connect Proxy](https://docs.saucelabs.com/secure-connections/sauce-connect-5/quickstart/)
 
 All tests during development should be run using this method as it can give fast feedback about the tests and the service.
 
-### CI/CD Pipeline execution
+#### CI/CD pipeline execution
 
-In pipeline based projects it will also be possible to run tests either by utilising a schedule or a trigger.
+It is possible to execute tests either by utilising a schedule or a trigger within the CI/DC pipeline.
 
 By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.
 
-By using a trigger either manually (via the play triangle icon) for a job or automatic in the triggering this will allow tests to be run on the latest deployed version of the service in the test environment. 
+By using a trigger either manually (via the play triangle icon) for a job or automatically within the trigger, the tests can be run on the latest deployed version of the service in the test environment.
 
-The tests will run through the compatibility service Saucelabs and utilise the cloud tst environment.
+This is useful for regression compatibility testing.
 
-## How often do I run compatibility tests?
+#### When should compatibility tests be run?
 
-Compatibility tests should be run as often as possible and once these tests have been built into the CI/CD pipeline then these can be run on every build or release.
+Compatibility testing should be considered in scope when a release includes significant new functionality, including new or updated screens. Executing the tests as early as possible will provide fast feedback regarding design and development.
 
-At present much of this testing is still manual in execution so we require compatibility tests to be run for every release. This allows early and fast feedback to be provided to the teams if problems arise.
+Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.
 
-Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases. 
+Once the compatibility tests are in the CI/CD pipeline they can be included in regression testing.
 
-## Test Results
+#### The compatibility test process
 
-For all digital projects the minimum range of devices to test upon are those specified in the NHSBSA compatibility test coverage. 
+During Compatibility Test execution, testers must ensure all test evidence (screenshots, videos) is extracted and saved within the NHSBSA domain (rather than leaving within Saucelabs), preferably JIRA. All Saucelabs devices are cleared of data used once the test is complete.
 
-Following licensing with Saucelabs we will be able to run tests on over 2000 browsers and devices. 
+The test coverage, results and issues faced during testing must be documented in the Compatibility Test Report.
 
-This greatly increases the range of 'real user' experiences that Test can perform on the various platforms before release.
-
-The results from the end to end / user journey tests must then be fed into the compatibility reports.
-
-## Test Reporting
-
-Following execution a Compatibility test completion report will need creating which will show the the coverage, result and any issues faced in the testing.
-
-This report will be a 'living' document that will be under constant review and update as the compatibility of the service is regularly executed for each release.
-
-## After Testing 
-
-When all testing has been completed on Saucelabs please ensure the all test evidence (screenshots, videos etc) has been extracted from the compatibility tool/service.
-
-All test material will stay within the tool for a duration of X days before being removed. After execution every device used is cleared of data used.
-
-Please make sure that you are closing the SauceLab connect proxy tunnel after the test execution.
+Please make sure that you close the Saucelabs connect proxy tunnel after the test execution so there is not impact on other testers' activities.
