@@ -15,7 +15,7 @@ Accessibility is not just about meeting standards. It's about making sure everyo
 
 ## Think about accessibility from the start
 
-In the UK, around 1 in 5 people have a disability, including:
+In the UK, around 1 in 4 people have a disability, including:
 - visual
 - hearing
 - motor (affecting movement)
@@ -26,11 +26,13 @@ Accessibility is for everyone, not just people with permanent disabilities or co
 - health – for example, if you're ill, tired or have a temporary injury
 - equipment – for example, if you're using a mobile device or an older browser
 
-Designing with accessibility in mind from the start will help you:
+Accessibility should be considered from the start of a service, including during discovery, design, procurement and development. Before starting work, teams should consider how disabled people and people with access needs might access and use the service.
+
+[Read more about making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction)
+
+Thinking about accessibility before you start designing your service will help you:
 - make sure that nobody is excluded
 - identify problems early, when they are quicker and cheaper to fix
-
-You can get guidance from GOV.UK on [making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction).
 
 ### Our users
 Our users have a wide range of needs and use different devices and assistive technologies.
