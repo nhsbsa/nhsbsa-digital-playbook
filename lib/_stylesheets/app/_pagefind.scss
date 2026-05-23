@@ -1,0 +1,189 @@
+/* ==========================================================================
+   #PAGEFIND SEARCH
+   ========================================================================== */
+
+/* Pagefind UI overrides to match NHS Design System */
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #005eb8;
+  --pagefind-ui-text: #212b32;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #d8dde0;
+  --pagefind-ui-tag: #f0f4f5;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: "Frutiger W01", Arial, sans-serif;
+}
+
+/* Ensure the form container keeps position context for the clear button */
+.pagefind-ui__form {
+  position: relative !important;
+}
+
+.pagefind-ui__search-input {
+  height: 48px !important;
+  font-size: 19px !important;
+  padding-right: 48px !important;
+
+  &:focus {
+    border: 4px solid $nhsuk-focus-text-color !important;
+    box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color !important;
+    outline: $nhsuk-focus-width solid transparent !important;
+    outline-offset: $nhsuk-focus-width !important;
+  }
+}
+
+/* Clear button — NHS close icon, inside the input */
+.pagefind-ui__search-clear {
+  top: 50% !important;
+  right: 8px !important;
+  transform: translateY(-50%);
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  cursor: pointer !important;
+  overflow: hidden;
+
+  // stylelint-disable-next-line property-no-vendor-prefix
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 6px auto;
+    background-color: $color_nhsuk-grey-1;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  &:hover::after {
+    background-color: $color_nhsuk-black;
+  }
+
+  &:focus {
+    background-color: $nhsuk-focus-color !important;
+    outline: $nhsuk-focus-width solid transparent !important;
+    box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color !important;
+
+    &::after {
+      background-color: $nhsuk-focus-text-color;
+    }
+  }
+}
+
+.pagefind-ui__result-link {
+  color: $color_nhsuk-blue !important;
+
+  &:visited {
+    color: $color_nhsuk-purple !important;
+  }
+
+  &:hover {
+    color: $nhsuk-link-hover-color !important;
+  }
+
+  &:focus {
+    @include nhsuk-focused-text();
+  }
+}
+
+.pagefind-ui__result-excerpt {
+  @include nhsuk-typography-responsive(19);
+
+  color: $color_nhsuk-black;
+}
+
+.pagefind-ui__result-title {
+  @include nhsuk-typography-responsive(24);
+}
+
+.pagefind-ui__button {
+  background-color: $color_nhsuk-green !important;
+  border-radius: $nhsuk-border-radius !important;
+  color: $color_nhsuk-white !important;
+  height: 44px !important;
+
+  &:hover {
+    background-color: $nhsuk-button-hover-color !important;
+  }
+
+  &:focus {
+    background-color: $nhsuk-focus-color !important;
+    box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color !important;
+    color: $nhsuk-focus-text-color !important;
+    outline: $nhsuk-focus-width solid transparent !important;
+  }
+}
+
+/* ==========================================================================
+   #HEADER SEARCH AUTOCOMPLETE SUGGESTIONS
+   ========================================================================== */
+
+.nhsuk-header__search-wrap {
+  position: relative;
+}
+
+.app-search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $color_nhsuk-white;
+  border: 1px solid $color_nhsuk-grey-4;
+  border-top: 0;
+  border-bottom-left-radius: $nhsuk-border-radius;
+  border-bottom-right-radius: $nhsuk-border-radius;
+  // sass-lint:disable-block no-vendor-prefixes, no-color-literals
+  box-shadow: 0 3px 5px rgba($nhsuk-box-shadow-color, $alpha-transparency-50);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.app-search-suggestions__item {
+  border-bottom: 1px solid $color_nhsuk-grey-5;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.app-search-suggestions__link {
+  display: block;
+  padding: nhsuk-spacing(2) nhsuk-spacing(3);
+  color: $color_nhsuk-blue;
+  font-size: $nhsuk-base-font-size;
+  text-decoration: underline;
+
+  &:hover {
+    background-color: $color_nhsuk-blue;
+    color: $color_nhsuk-white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include nhsuk-focused-text();
+  }
+}
+
+.app-search-suggestions__item--active .app-search-suggestions__link {
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  text-decoration: none;
+}
