@@ -14,7 +14,6 @@ We have a legal and moral responsibility to make our services, websites, documen
 Accessibility is not just about meeting standards. It's about making sure everyone can use our services without barriers.
 
 ## Think about accessibility from the start
-
 In the UK, around 1 in 4 people have a disability, including:
 - visual
 - hearing
@@ -26,7 +25,7 @@ Accessibility is for everyone, not just people with permanent disabilities or co
 - health – for example, if you're ill, tired or have a temporary injury
 - equipment – for example, if you're using a mobile device or an older browser
 
-Accessibility should be considered from the start of a service, including during discovery, design, procurement and development. Before starting work, teams should consider how disabled people and people with access needs might access and use the service.
+Accessibility should be considered from the start when delivering a service, including during discovery, design, procurement and development. Before starting work, teams should consider how disabled people and people with access needs might access and use the service.
 
 [Read more about making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction)
 
@@ -60,7 +59,6 @@ All services must:
 - [publish a compliant accessibility statement](https://accessibility-manual.dwp.gov.uk/accessibility-law/accessibility-statements)
 
 ### Web Content Accessibility Guidelines (WCAG)
-
 WCAG is a set of success criteria used to assess accessibility. The current version is WCAG 2.2.
 
 Your service must meet Level AA.
@@ -78,7 +76,6 @@ You can use these resources to find out more about WCAG:
 - [How to meet WCAG (Quick reference) - W3C](https://www.w3.org/WAI/WCAG22/quickref)
 
 ## Accessibility statements
-
 You must publish an accessibility statement for your service.
 
 The statement must explain:
@@ -123,7 +120,6 @@ You must design, develop and test for accessibility before releasing any updates
 If the product includes authoring tools, suppliers must support the creation of accessible content.
 
 ### Accessibility overlays
-
 Some companies offer 'accessibility overlays' or 'widgets' that they claim fix accessibility issues.
 
 We do not accept overlays as a solution as these tools do not make a service compliant with accessibility laws. They:
@@ -135,7 +131,6 @@ Accessibility must be built into the service throughout design and development, 
 
 
 ## Get further support
-
 If you need further help, support or advice, you can contact the digital accessibility team [accessibility@nhsbsa.nhs.uk](mailto:accessibility@nhsbsa.nhs.uk)
 
 ## Acknowledgements
