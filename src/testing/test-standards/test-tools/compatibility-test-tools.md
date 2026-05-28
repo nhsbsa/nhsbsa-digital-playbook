@@ -4,7 +4,6 @@ title: "Compatibility Test Tools"
 description: "The tools, methods and technologies using in compatibility testing"
 tags: test-tools
 order: 4
-status: review
 ---
 
 The following tools, methods and technologies are used in compatibility testing:

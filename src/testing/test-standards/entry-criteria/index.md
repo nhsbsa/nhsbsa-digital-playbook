@@ -4,7 +4,6 @@ title: "Entry Criteria"
 description: "Entry Criteria are the conditions that must be met before starting a test activity to ensure readiness to begin."
 tags: test-standards
 order: 6
-status: review
 ---
 
 ISTQB (basing its content on ISO/IEC 29119) defines entry criteria as the conditions that must be met before starting a test activity to ensure readiness to begin.

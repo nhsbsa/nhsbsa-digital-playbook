@@ -4,7 +4,6 @@ title: "Defect Management"
 description: "All defects raised in the NHSBSA should follow the same defect management process."
 tags: test-standards
 order: 9
-status: review
 ---
 
 A defect, sometimes referred to as a bug or fault, is described by ISTQB as a flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition. A defect, if encountered during execution, may cause a failure of the component or system.

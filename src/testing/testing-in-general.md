@@ -4,7 +4,6 @@ title: "Testing in General"
 description: "An introduction to testing at the NHSBSA, our approach, core frameworks and test community"
 tags: test
 order: 1
-status: Review
 ---
 ## Introduction 
 

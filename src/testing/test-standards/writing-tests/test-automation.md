@@ -4,7 +4,6 @@ title: "Test Automation Process"
 description: "The process needs to be followed when creating, maintaining or performing test automation."
 tags: test-automation
 order: 1
-status: review
 ---
 
 The following process must be followed when creating, maintaining or performing test automation.

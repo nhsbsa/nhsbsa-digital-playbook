@@ -4,7 +4,6 @@ title: "Testing Methods"
 description: "The NHSBSA Test Frameworks and Test Strategy describe the test methods that the Test Community should apply to their test activities."
 tags: test-standards
 order: 1
-status: review
 ---
 
 The NHSBSA Test Frameworks and the NHSBSA Test Strategy describe the test methods that the NHSBSA Test Community should apply to their test activities.

@@ -4,7 +4,6 @@ title: "Functional Acceptance Testing"
 description: "Functional acceptance testing considers the functionality of the service as well as the integration of the service with other services and interfaces."
 tags: test-frameworks
 order: 1
-status: Review
 ---
 
 *'Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system'*. ISTQB

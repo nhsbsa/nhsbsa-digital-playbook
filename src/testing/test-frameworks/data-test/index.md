@@ -4,7 +4,6 @@ title: "Data Testing"
 description: "Data testing is a critical process that involves verifying the accuracy, completeness, and consistency of data"
 tags: test-frameworks
 order: 6
-status: Review
 ---
 
 #### What is data testing?

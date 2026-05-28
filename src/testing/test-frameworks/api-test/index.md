@@ -1,10 +1,9 @@
 ---
 layout: article
-title: "API testing"
+title: "API Testing"
 description: "Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct"
 tags: test-frameworks
 order: 3
-status: Review
 ---
 
 #### What is API testing?

@@ -4,7 +4,6 @@ title: "User Acceptance Testing"
 description: "User Acceptance Testing allows real business users to validate that the delivered solution meets their operational need."
 tags: test-frameworks
 order: 7
-status: Review
 ---
 
 #### What is user acceptance testing?

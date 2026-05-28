@@ -4,7 +4,6 @@ title: "Accessibility Test Tools"
 description: "The tools, methods and technologies using in accessibility testing"
 tags: test-tools
 order: 2
-status: review
 ---
 
 

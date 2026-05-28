@@ -4,7 +4,6 @@ title: "Perfomance Testing"
 description: "Performance testing focuses on key factors like responsiveness, stability, speed, and reliability to ensure the application runs smoothly"
 tags: test-frameworks
 order: 5
-status: Review
 ---
 
 

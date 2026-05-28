@@ -4,7 +4,6 @@ title: "Perfomance Test Tools"
 description: "The tools, methods and technologies using in perfomance testing"
 tags: test-tools
 order: 5
-status: review
 ---
 
 The following tools, methods and technologies are used in performance testing:

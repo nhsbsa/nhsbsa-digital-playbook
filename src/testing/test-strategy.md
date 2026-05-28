@@ -4,7 +4,6 @@ title: "NHSBSA Test Strategy"
 description: "The NHSBSA test strategy defining our principles, approach, methodology and guidance for testing services"
 tags: test
 order: 2
-status: Review
 ---
 ## Introduction 
 The **NHSBSA Test Strategy** is a high-level outline of our approach, scope, objectives and methods for testing our applications and services. It will

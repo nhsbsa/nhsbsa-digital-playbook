@@ -4,7 +4,6 @@ title: "Release Assurance"
 description: "Once testing is signed off, all results, defects, and limitations are documented to support release assurance."
 tags: test-standards
 order: 10
-status: review
 ---
 
 ### Test Sign Off

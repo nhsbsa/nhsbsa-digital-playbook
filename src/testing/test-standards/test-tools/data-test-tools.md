@@ -4,7 +4,6 @@ title: "Data Test Tools"
 description: "The tools, methods and technologies using in data testing"
 tags: test-tools
 order: 6
-status: review
 ---
 
 

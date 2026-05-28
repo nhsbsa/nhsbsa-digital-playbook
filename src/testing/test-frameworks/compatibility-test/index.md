@@ -4,7 +4,6 @@ title: "Compatibility Testing"
 description: "Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems"
 tags: test-frameworks
 order: 4
-status: Review
 ---
 
 

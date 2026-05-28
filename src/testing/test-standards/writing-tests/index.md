@@ -4,7 +4,6 @@ title: "Writing Tests"
 description: "When writing tests, the NHSBSA Test Strategy principles must be followed, with particular emphasis on ensuring full traceability between requirements, test scenarios, and test results."
 tags: test-standards
 order: 5
-status: review
 related:
  tag: test-automation
 ---

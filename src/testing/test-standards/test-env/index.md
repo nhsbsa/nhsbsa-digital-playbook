@@ -4,7 +4,6 @@ title: "Test Environments"
 description: "This refers to our route-to-live principle that must be followed along with the guidelines on the types of testing that should be conducted in each test environment."
 tags: test-standards
 order: 3
-status: review
 ---
 
 ### Route-to-Live

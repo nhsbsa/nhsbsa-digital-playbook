@@ -4,7 +4,6 @@ title: "Functional Acceptance Test Tools"
 description: "The tools, methods and technologies using in functional acceptance testing"
 tags: test-tools
 order: 1
-status: review
 ---
 
 The following tools, methods and technologies are used in functional acceptance testing:

@@ -4,7 +4,6 @@ title: "Exit Criteria"
 description: "Exit Criteria are the set of generic and specific conditions agreed with stakeholders, that all the test process to be officially completed"
 tags: test-standards
 order: 7
-status: review
 ---
 
 ISTQB defines exit criteria as the set of generic and specific conditions agreed with stakeholders, that all the test process to be officially completed and used to report against and plan when to stop testing. In ISO/IEC 29119, this is referred to as the Test Completion Criteria.

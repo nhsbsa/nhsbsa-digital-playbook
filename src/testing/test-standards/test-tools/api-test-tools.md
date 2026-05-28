@@ -4,7 +4,6 @@ title: "API Test tools"
 description: "The tools, methods and technologies using in api testing"
 tags: test-tools
 order: 3
-status: review
 ---
 
 The following tools, methods and technologies are used in API testing:

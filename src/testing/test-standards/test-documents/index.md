@@ -4,7 +4,6 @@ title: "Test Documents"
 description: "Test activities from planning through to execution and reporting must be fully documented."
 tags: test-standards
 order: 8
-status: review
 ---
 
 Test activities from planning through to execution and reporting must be fully documented. This is not only to provide an audit trail of what testing has happened but also to provide the metrics required to show how successful the testing has been.

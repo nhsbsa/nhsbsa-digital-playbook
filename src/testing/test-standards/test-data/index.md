@@ -4,7 +4,6 @@ title: "Test Data"
 description: "Test data is the set of input values and conditions used to test an application's functionality, performance, and reliability."
 tags: test-standards
 order: 4
-status: review
 ---
 
 Test data is the set of input values and conditions used to test an application's functionality, performance, and reliability, including normal, boundary, invalid, stress, and edge cases to validate features and uncover defects.
