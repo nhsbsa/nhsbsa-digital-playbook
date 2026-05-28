@@ -1,0 +1,143 @@
+<div class="nhsbsa-article-meta">
+
+  <dl>
+    {% if params.date %}
+    <div>
+      <dt>Published</dt>
+      <dd><time datetime="{{ params.date | date }}">{{ params.date | date("d LLLL y") }}</time></dd>
+    </div>
+    {% endif %}
+    {% if params.modified %}
+    <div>
+      <dt>Last updated</dt>
+      <dd><time datetime="{{ params.modified | date }}">{{ params.modified | date("d LLLL y") }}</time></dd>
+    </div>
+    {% endif %}
+    {% if params.review.last_reviewed_date %}
+    <div>
+      <dt>Last reviewed</dt>
+      <dd><time datetime="{{ params.review.last_reviewed_date | date }}">{{ params.review.last_reviewed_date | date("d LLLL y") }}</time></dd>
+    </div>
+    {% endif %}
+    {% if params.review.next_review_date %}
+    <div>
+      <dt>Next review due</dt>
+      <dd><time datetime="{{ params.review.next_review_date | date }}">{{ params.review.next_review_date | date("d LLLL y") }}</time></dd>
+    </div>
+    {% endif %}
+  </dl>
+
+{% if params.issuesheet %}
+{% set issuesheet = params.issuesheet %}
+{% set review = params.review %}
+  <section class="nhsbsa-article-meta__section" aria-labelledby="issue-sheet">
+    <h3 id="issue-sheet" tabindex="-1"><a class="header-anchor" href="#issue-sheet">Issue sheet</a></h3>
+    <dl>
+      <div>
+        <dt>Document location</dt>
+        <dd><a href="{{ params.url | url }}">{{ params.url | url }}</a></dd>
+      </div>
+      {% if issuesheet.reference %}
+      <div>
+        <dt>Document reference</dt>
+        <dd>{{ issuesheet.reference }}</dd>
+      </div>
+      {% endif %}
+      {% if params.title %}
+      <div>
+        <dt>Title</dt>
+        <dd>{{ params.title }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.author %}
+      <div>
+        <dt>Author</dt>
+        <dd>{{ issuesheet.author }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.owner %}
+      <div>
+        <dt>Owner</dt>
+        <dd>{{ issuesheet.owner }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.issued_to %}
+      <div>
+        <dt>Issued to</dt>
+        <dd>{{ issuesheet.issued_to }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.reason_issued %}
+      <div>
+        <dt>Reason issued</dt>
+        <dd>{{ issuesheet.reason_issued }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.approved_by %}
+      <div>
+        <dt>Approved by</dt>
+        <dd>{{ issuesheet.approved_by }}</dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.approval_date %}
+      <div>
+        <dt>Approved</dt>
+        <dd><time datetime="{{ issuesheet.approval_date | date }}">{{ issuesheet.approval_date | date("d LLLL y") }}</time></dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.wellbeing_inclusion_approval_date %}
+      <div>
+        <dt>Date of wellbeing and inclusion analysis</dt>
+        <dd><time datetime="{{ issuesheet.wellbeing_inclusion_approval_date | date }}">{{ issuesheet.wellbeing_inclusion_approval_date | date("d LLLL y") }}</time></dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.accessibility_approval_date %}
+      <div>
+        <dt>Date of accessibility review</dt>
+        <dd><time datetime="{{ issuesheet.accessibility_approval_date | date }}">{{ issuesheet.accessibility_approval_date | date("d LLLL y") }}</time></dd>
+      </div>
+      {% endif %}
+      {% if issuesheet.fraud_approval_date %}
+      <div>
+        <dt>Date of fraud review</dt>
+        <dd><time datetime="{{ issuesheet.fraud_approval_date | date }}">{{ issuesheet.fraud_approval_date | date("d LLLL y") }}</time></dd>
+      </div>
+      {% endif %}
+    </dl>
+  </section>
+{% endif %}
+{% if params.issuesheet and params.issuesheet.revisions %}
+  <section class="nhsbsa-article-meta__section" aria-labelledby="revision-history">
+    <h3 id="revision-history" tabindex="-1"><a class="header-anchor" href="#revision-history">Revision history</a></h3>
+    <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Amended by</th>
+            <th>Approved by</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for revision in params.issuesheet.revisions %}
+        <tr>
+        <td data-label="Version">{{ revision.version | blank }}</td>
+        <td data-label="Date">
+          {% if revision.date %}
+          <time datetime="{{ revision.date | date }}">{{ revision.date | date("d LLLL y") }}</time>
+          {% else %}
+          -
+          {% endif %}
+        </td>
+        <td data-label="Amended by">{{ revision.amended_by | blank }}</td>
+        <td data-label="Approved by">{{ revision.approved_by | blank }}</td>
+        <td data-label="Details">{{ revision.details | blank }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+  </section>
+{% endif %}
+
+</div>
