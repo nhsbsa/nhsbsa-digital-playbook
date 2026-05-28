@@ -1,0 +1,333 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="An introduction to testing at the NHSBSA, our approach, core frameworks and test community">
+  <meta name="robots" content="noindex">
+  
+  <title>
+Testing in General - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+  </title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ562NM01Z');
+    </script>
+
+  <!-- New NHSUK asset and font -->
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+  <!-- NHS Icons -->
+  <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
+  <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon-192x192.png?v=43924bfe6c7e">
+
+  <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-144x144.png?v=cf4985872492">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/smalltile-70x70.png?v=29f75b06cf75">
+  <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-150x150.png?v=89688d93af5b">
+  <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
+  <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
+
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/testing-in-general/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:description" content="An introduction to testing at the NHSBSA, our approach, core frameworks and test community">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
+  <meta property="og:title" content="Testing in General - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="">
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+<div id="nhsuk-cookie-banner" data-nosnippet="true" >
+    <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
+        <div class="nhsuk-width-container app-width-container">
+                <h2>NHSBSA Digital, Data and Technology Playbook</h2>
+                    <p>We've put some small files called cookies on your device to make our site work.</p>
+                    <p>We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.</p>
+                    <p>Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">read more about our cookies</a> before you choose.</p>
+
+            <ul>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept_analytics" href="#">I&#39;m OK with analytics cookies</button>
+                </li>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept" href="#">Do not use analytics cookies</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nhsuk-success-banner" id="nhsuk-cookie-confirmation-banner" style="display:none;">
+        <div class="nhsuk-width-container">
+            <p id="nhsuk-success-banner__message">You can change your cookie settings at any time using <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">our cookies page</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+    <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+    
+
+
+<header class="nhsuk-header nhsuk-header--organisation" role="banner">
+  
+  <div class="nhsuk-header__container">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only">      <a class="nhsuk-header__link" href="/nhsbsa-digital-playbook/" aria-label="Business Services Authority  Digital, Data and Technology playbook homepage">  <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+
+        <span class="nhsuk-organisation-name">Business Services Authority</span>
+<span class="nhsuk-organisation-descriptor">Digital, Data and Technology playbook</span>      </a>    </div>
+    </div>
+    
+
+</header>
+
+<div class="nhsuk-width-container app-width-container">
+    <main class="nhsuk-main-wrapper app-main-wrapper" id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container app-width-container">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#introduction">Introduction</a>
+            
+                <ol>
+                    
+                    <li><a href="#unit-test">Unit Test</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#overview-of-core-test-frameworks">Overview of Core Test Frameworks</a>
+            
+                <ol>
+                    
+                    <li><a href="#functional-acceptance-test">Functional Acceptance Test</a>
+            		</li>
+
+                    <li><a href="#accessibility-test">Accessibility Test</a>
+            		</li>
+
+                    <li><a href="#api-test">API Test</a>
+            		</li>
+
+                    <li><a href="#compatibility-test">Compatibility Test</a>
+            		</li>
+
+                    <li><a href="#performance-test">Performance Test</a>
+            		</li>
+
+                    <li><a href="#data-test">Data Test</a>
+            		</li>
+
+                    <li><a href="#under-development">Under Development</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#nhsbsa-ddat-test-community">NHSBSA DDaT Test Community</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
+
+      <div class="app-pane__main-content">
+        <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
+  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+  </svg>
+  Go back</a>
+</div>
+
+      
+        <div class="nhsbsa-article-header">
+          <h1 class="nhsuk-heading-xl">
+            Testing in General
+          </h1>
+          
+        </div>
+      
+
+<h2 id="introduction" tabindex="-1"><a class="header-anchor" href="#introduction">Introduction</a></h2>
+<p>The NHSBSA DDaT Test Playbook aims to describe our test strategy, the types of testing we conduct within the NHSBSA, and the standards we follow.</p>
+<p>The NHSBSA Test community are a group of test professionals who are dedicated to testing NHSBSA services. Testing is part of the NHSBSA Software Engineering profession and testers work closely with NHSBSA software developers, technical and solution architects, and user experience professionals.</p>
+<p>Quality assurance (QA) testing is the process of ensuring that a service is of the highest possible quality for its users. Testing uses different tools, techniques, and frameworks to identify issues within the service and ensures a great user experience for all users once the service is in Production.</p>
+<p>Testers (sometimes referred to as QAs) provide assurance through the design, development and execution of tests on new and existing NHSBSA services. Key responsibilities of this role include assuring the quality of the service and to implement a consistent approach to all testing performed. This ensures the quality of the service can be reported before a release or a change to that service is deployed to Production.</p>
+<p>In the NHSBSA we currently test in line with six core frameworks:</p>
+<ul>
+<li>Functional Acceptance</li>
+<li>Accessibility</li>
+<li>API</li>
+<li>Compatibility</li>
+<li>Performance</li>
+<li>Data Processing</li>
+</ul>
+<p>We are also developing further test frameworks in:</p>
+<ul>
+<li>Dynamic Application Security Testing</li>
+<li>AI Testing (including Robotic Process Automation)</li>
+</ul>
+<p>The NHSBSA Test Strategy describes the scenarios in which it is expected that these core frameworks are followed.</p>
+<p>All our tests are designed, developed, executed, and maintained to the NHSBSA Test Standards. These standards are outlined in the following pages, with further detail found in the Test Community <a href="https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/1706623220/NHSBSA+TEST+STANDARDS">Confluence</a> and <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/NHSBSA-Test-Standards.aspx">SharePoint</a> sites.</p>
+<p>Our approach to testing NHSBSA services follow international software testing standards, namely <a href="https://www.iso.org/standard/81291.html">ISO 29119 (2022)</a>, and the <a href="https://www.gov.uk/service-manual/service-standard">UK Government Digital Service (GDS)</a> service manual.</p>
+<p>Throughout our testing we follow an “<strong>Automate Smartly</strong>” approach. This means we intend to automate as many tests as possible but only if it is smart to do so. Our Test Teams seek to automate to ensure our testing is repeatable and efficient, though testers recognise that it is not always possible or sensible to automate all tests straight away.</p>
+<h3 id="unit-test" tabindex="-1"><a class="header-anchor" href="#unit-test">Unit Test</a></h3>
+<p>Prior to any formal testing by the Test Community, the Development Community is responsible for testing the code they write. They conduct two types of testing:</p>
+<ul>
+<li>Unit Testing – a self-contained test for a unit of functionality (e.g. a Java class or a JavaScript function)</li>
+<li>Integration Testing (“integration in the small”) – a test for a unit of functionality that depends on an interface such as a database or API (using mocks or harnesses)</li>
+</ul>
+<p>NHSBSA follow the test pyramid model as described in the ISTQB Foundation syllabus.</p>
+<p>The pyramid layers represent groups of tests and display how different test objectives are supported by different levels of testing.</p>
+<p>For example, the highest layer:</p>
+<ul>
+<li>the lower the test granularity</li>
+<li>the lower the test isolation (i.e., the degree of dependency on other elements of the system)</li>
+<li>the higher the test execution time</li>
+</ul>
+<p>And the lowest layer:</p>
+<ul>
+<li>the smaller the test (i.e. the amount of functionality being tested)</li>
+<li>the higher the test isolation</li>
+<li>the faster the test</li>
+</ul>
+<p>The layers in between represent a gradual incline/decline to these two states.</p>
+<p>Unit tests fall into the latter category. By their nature, there are short and focussed tests, that are quick to execute and fast to provide results. There are usually many unit tests required to ensure there is sufficient coverage.</p>
+<p>More details can be found in the <a href="../../development/dev-tests">Development pages</a> of the NHSBSA DDaT Playbook.</p>
+<h2 id="overview-of-core-test-frameworks" tabindex="-1"><a class="header-anchor" href="#overview-of-core-test-frameworks">Overview of Core Test Frameworks</a></h2>
+<p>Further details of the core test frameworks can be found here.</p>
+<h3 id="functional-acceptance-test" tabindex="-1"><a class="header-anchor" href="#functional-acceptance-test">Functional Acceptance Test</a></h3>
+<p>Functional acceptance testing deals with the functional testing of user stories to fulfil acceptance criteria. Acceptance criteria are the conditions that software must meet to be accepted by a user.</p>
+<p>Testing these conditions includes happy and unhappy paths (i.e. valid and invalid user journeys), field validations and boundary value tests. Consideration should also be made to the interfaces the service may have, ensuring the full user journey is valid.</p>
+<p>Testing is both manual and automated, following the ‘Automate Smartly’ approach. Testers are also encouraged to conduct exploratory tests to investigate early how users may use the solution.</p>
+<h3 id="accessibility-test" tabindex="-1"><a class="header-anchor" href="#accessibility-test">Accessibility Test</a></h3>
+<p>Regulations came into force for public sector bodies on 23 September 2018. These regulations are in conjunction with the Equality Act 2010 and mean that NHSBSA are not only morally but also legally obliged to ensure their services are accessible to all users. Additionally, under Government Digital Services (GDS) standards, all public sector websites and mobile apps must be accessible within four key principles: <strong>perceivable, operable, understandable and robust (POUR)</strong>.</p>
+<p>The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> were developed as a technical standard to meet the regulations. Accessibility testing focusses on whether a service meets each standard within the guidelines. Specifically, under GDS, NHSBSA must meet the WCAG ‘AA’ standard.</p>
+<p>As well as web applications for both internal and external users, NHSBSA create data dashboards and produce data publications which also need to be accessibility tested.</p>
+<p>All NHSBSA web applications, dashboards and publications must be tested for accessibility. The results from the tests are reflected in the Accessibility Statement allowing users to understand how accessible the product is.</p>
+<p>The NHSBSA Accessibility Test Framework consists of 3 stages:</p>
+<p><strong>Stage 1</strong> - Automated Checkers - these should be used during the development of the product to ensure accessibility is embedded early</p>
+<p><strong>Stage 2</strong> - Manual Checklist - an extensive manual checklist is used to test each product. The checklist considers each of the WCAG guideline items in turn and checks the product meets them</p>
+<p><strong>Stage 3</strong> - Assistive Technologies - a subset of tests is executed using a range of assistive technologies such as screen readers and speech recognition tools to test how the product behaves</p>
+<h3 id="api-test" tabindex="-1"><a class="header-anchor" href="#api-test">API Test</a></h3>
+<p>API (Application Programming Interface) testing aims to determine whether APIs developed within a service meet expectations. Testing concentrates on the business logic within a service, i.e. expected responses to requests in accordance with the rules for when a user interacts with that part of the service. Both happy and unhappy paths (i.e. valid and invalid requests) are tested.</p>
+<p>The API tests are automated and help to ensure all API’s used by services are fit for purpose.</p>
+<h3 id="compatibility-test" tabindex="-1"><a class="header-anchor" href="#compatibility-test">Compatibility Test</a></h3>
+<p>Compatibility testing ensures our services are compatible with a variety of different browsers, devices and operating systems.</p>
+<p>Our services are used by both internal (NHSBSA members of staff) and external users (members of the public). As such we need to show that our services work on different combinations of browsers, devices and operating systems. We follow the <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">GDS Standard in Compatibility Testing</a> to scope the tests that we conduct. [<em>Note: our scope will be reviewed against the refreshed version of the GDS standards imminently.</em>]</p>
+<p>We use the compatibility testing platform SauceLabs to access both real and virtual devices so that our testing has depth and breadth. We automate our Compatibility tests where possible.</p>
+<h3 id="performance-test" tabindex="-1"><a class="header-anchor" href="#performance-test">Performance Test</a></h3>
+<p>Performance testing assesses how our services behave under varying levels of user and transaction load, over time, and under stress. The objective is to identify and remove performance bottlenecks and validate the service scalability.</p>
+<p>The types of performance testing we consider are:</p>
+<ul>
+<li>Load testing – to validate the system responsiveness under expected peak usage</li>
+<li>Soak testing – to assess long-term stability under sustained load</li>
+<li>Stress testing – to determine system limits and graceful failure behaviour</li>
+<li>Spike testing – to measure resilience against sudden traffic surges</li>
+</ul>
+<h3 id="data-test" tabindex="-1"><a class="header-anchor" href="#data-test">Data Test</a></h3>
+<p>Data testing, or data processing testing, verifies the processes and mechanisms of administering large sets of data through the data processing pipeline. It ensures data remains intact and accurate from the ingestion of the data, through the transformation of the data, the storing of the data and the presentation of the data. It ensures the quality and reliability of data used for analysis, decision-making and service delivery.</p>
+<p>Our emerging Data Testing Framework includes functional and non-functional testing, manual and automated test techniques, and standard best practice approaches.</p>
+<h3 id="under-development" tabindex="-1"><a class="header-anchor" href="#under-development">Under Development</a></h3>
+<ul>
+<li>Dynamic Application Security Testing</li>
+<li>AI Testing (including Robotic Process Automation)</li>
+<li>Power BI Report Performance Testing</li>
+</ul>
+<p>Descriptions of these test frameworks will be shared in due course.</p>
+<h2 id="nhsbsa-ddat-test-community" tabindex="-1"><a class="header-anchor" href="#nhsbsa-ddat-test-community">NHSBSA DDaT Test Community</a></h2>
+<p>The NHSBSA DDaT Test Community consists of digital, data and technology test professionals (‘testers’) whose responsibility is to ensure our services, applications and products meet our user needs and quality standards.</p>
+<p>Testers within the NHSBSA follow the standards and guidelines in these pages to ensure we are consistent in our approach. Our permanent members of staff have the opportunity to study for the International Software Testing Qualification Board (ISTQB) certification at a foundation level, ensuring there is consistency in all that we do.</p>
+<p>We are always looking to improve our approach to testing. The Test Community have several Test Guilds that any member of the community can join to learn and develop their own skills and to implement improvements, and regular Community of Practice meet-ups. Discussions are also welcome with our external partners, other areas of DDaT and other government organisations.</p>
+
+        <hr>
+        <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
+        <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+          please share your suggestions.</p>
+
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
+        Github is an open forum where we collect feedback.</p>
+        
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftesting-in-general&#39;%20">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Suggest a change to this page</span>
+  </a>
+</div>
+
+
+
+        <div class="nhsbsa-article--date">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
+    </p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer role="contentinfo">
+  <div class="nhsuk-footer-container">
+    <div class="nhsuk-width-container app-width-container">
+      <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+				
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+			<div class="nhsuk-ogl-footer">
+				<p class="nhsuk-ogl-footer--text">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
+				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+				</svg>
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
+				</p>
+			</div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" async>import mermaid from "https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs";mermaid.initialize({"theme":"base","themeVariables":{"background":"#f0f4f5","primaryColor":"#d8dde0","primaryTextColor":"#000","primaryBorderColor":"#212b32","secondaryColor":"#f0f4f5","secondaryTextColor":"#000","tertiaryColor":"#ffb81C","tertiaryTextColor":"#fff","noteBkgColor":"#fff9c4","noteTextColor":"#000","lineColor":"#212b32","errorBkgColor":"#d5281b","errorTextColor":"#d5281b","git0":"#005eb8","git1":"#007f3b","git2":"#ffb81C","git3":"#ffeb3b","git4":"#d5281b","git5":"#7C2855","git6":"#330072","git7":"#212b32","gitBranchLabel0":"#fff","gitBranchLabel1":"#fff","gitBranchLabel2":"#000","gitBranchLabel3":"#000","gitBranchLabel4":"#fff","gitBranchLabel5":"#fff","gitBranchLabel6":"#fff","gitBranchLabel7":"#fff"},"gitGraph":{"showCommitLabel":false},"loadOnSave":true,"startOnLoad":false});const run=()=>mermaid.run();document.addEventListener('DOMContentLoaded',run);if(document.readyState!=='loading')run();</script>    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3"></script>
+
+
+</body>
+</html>

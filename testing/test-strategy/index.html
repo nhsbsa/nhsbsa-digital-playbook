@@ -1,0 +1,620 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The NHSBSA test strategy defining our principles, approach, methodology and guidance for testing services">
+  <meta name="robots" content="noindex">
+  
+  <title>
+NHSBSA Test Strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+  </title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ562NM01Z');
+    </script>
+
+  <!-- New NHSUK asset and font -->
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+  <!-- NHS Icons -->
+  <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
+  <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon-192x192.png?v=43924bfe6c7e">
+
+  <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-144x144.png?v=cf4985872492">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/smalltile-70x70.png?v=29f75b06cf75">
+  <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-150x150.png?v=89688d93af5b">
+  <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
+  <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
+
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-strategy/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:description" content="The NHSBSA test strategy defining our principles, approach, methodology and guidance for testing services">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
+  <meta property="og:title" content="NHSBSA Test Strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="">
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+<div id="nhsuk-cookie-banner" data-nosnippet="true" >
+    <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
+        <div class="nhsuk-width-container app-width-container">
+                <h2>NHSBSA Digital, Data and Technology Playbook</h2>
+                    <p>We've put some small files called cookies on your device to make our site work.</p>
+                    <p>We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.</p>
+                    <p>Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">read more about our cookies</a> before you choose.</p>
+
+            <ul>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept_analytics" href="#">I&#39;m OK with analytics cookies</button>
+                </li>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept" href="#">Do not use analytics cookies</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nhsuk-success-banner" id="nhsuk-cookie-confirmation-banner" style="display:none;">
+        <div class="nhsuk-width-container">
+            <p id="nhsuk-success-banner__message">You can change your cookie settings at any time using <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">our cookies page</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+    <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+    
+
+
+<header class="nhsuk-header nhsuk-header--organisation" role="banner">
+  
+  <div class="nhsuk-header__container">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only">      <a class="nhsuk-header__link" href="/nhsbsa-digital-playbook/" aria-label="Business Services Authority  Digital, Data and Technology playbook homepage">  <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+
+        <span class="nhsuk-organisation-name">Business Services Authority</span>
+<span class="nhsuk-organisation-descriptor">Digital, Data and Technology playbook</span>      </a>    </div>
+    </div>
+    
+
+</header>
+
+<div class="nhsuk-width-container app-width-container">
+    <main class="nhsuk-main-wrapper app-main-wrapper" id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container app-width-container">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#introduction">Introduction</a>
+            		</li>
+
+                    <li><a href="#test-objectives">Test Objectives</a>
+            		</li>
+
+                    <li><a href="#test-principles">Test Principles</a>
+            
+                <ol>
+                    
+                    <li><a href="#risk-based-testing">Risk Based Testing</a>
+            		</li>
+
+                    <li><a href="#user-centric-testing">User Centric Testing</a>
+            		</li>
+
+                    <li><a href="#behaviour-driven-development-bdd">Behaviour Driven Development (BDD)</a>
+            		</li>
+
+                    <li><a href="#automate-smartly">Automate Smartly</a>
+            		</li>
+
+                    <li><a href="#route-to-live">Route to Live</a>
+            		</li>
+
+                    <li><a href="#shift-left">Shift Left</a>
+            		</li>
+
+                    <li><a href="#independence">Independence</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#testing-approach-and-methodology">Testing Approach and Methodology</a>
+            
+                <ol>
+                    
+                    <li><a href="#test-frameworks">Test Frameworks</a>
+            		</li>
+
+                    <li><a href="#regression-testing">Regression Testing</a>
+            		</li>
+
+                    <li><a href="#user-acceptance-testing">User Acceptance Testing</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#testing-guidance-and-standards">Testing Guidance and Standards</a>
+            
+                <ol>
+                    
+                    <li><a href="#test-tools">Test Tools</a>
+            		</li>
+
+                    <li><a href="#test-environments">Test Environments</a>
+            		</li>
+
+                    <li><a href="#test-data">Test Data</a>
+            		</li>
+
+                    <li><a href="#test-documentation">Test Documentation</a>
+            		</li>
+
+                    <li><a href="#defect-management">Defect Management</a>
+            		</li>
+
+                    <li><a href="#entry-and-exit-criteria">Entry and Exit criteria</a>
+            		</li>
+
+                    <li><a href="#test-reporting">Test Reporting</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#conclusion">Conclusion</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
+
+      <div class="app-pane__main-content">
+        <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
+  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+  </svg>
+  Go back</a>
+</div>
+
+      
+        <div class="nhsbsa-article-header">
+          <h1 class="nhsuk-heading-xl">
+            NHSBSA Test Strategy
+          </h1>
+          
+        </div>
+      
+
+<h2 id="introduction" tabindex="-1"><a class="header-anchor" href="#introduction">Introduction</a></h2>
+<p>The <strong>NHSBSA Test Strategy</strong> is a high-level outline of our approach, scope, objectives and methods for testing our applications and services. It will</p>
+<ul>
+<li>define the principles we follow during the testing and quality assurance process,</li>
+<li>outline the overall approach and methodology, and</li>
+<li>provide high-level guidance for testing through a series of test standards</li>
+</ul>
+<p>The NHSBSA Test Strategy will follow industry best practice and known standards such as ISO 29119: Software and systems engineering – Software testing. Our DDaT Test Community have trained in the internationally recognised qualification on foundational test knowledge, ISTQB Certified Tester Foundation Level (CTFL) thus ensuring consistency in our approach.</p>
+<p>This article will link to other articles within the NHSBSA DDaT Playbook, ensuring consistency across delivery activities within all NHSBSA applications and services.</p>
+<h2 id="test-objectives" tabindex="-1"><a class="header-anchor" href="#test-objectives">Test Objectives</a></h2>
+<p>Our test objectives are to</p>
+<ul>
+<li>
+<p><strong>Ensure a service meets user and business expectations</strong><br>
+Validate that the delivered solution behaves consistently with what users and the business need and expect, providing a reliable and intuitive experience.</p>
+</li>
+<li>
+<p><strong>Confirm the service delivers value and benefits to the user</strong><br>
+Assess whether the system meaningfully improves user workflows, solves real problems, and supports the intended business outcomes.</p>
+</li>
+<li>
+<p><strong>Verify the system is robust, accessible, and performs efficiently</strong><br>
+Test that the solution is stable under normal and peak load, accessible to all intended users, and capable of delivering fast, reliable performance.</p>
+</li>
+<li>
+<p><strong>Ensure the delivery process is smooth, predictable, and simple</strong><br>
+Support a streamlined delivery pipeline by identifying issues as early as possible, enabling efficient handovers, and reducing friction between development, testing, and deployment stages.</p>
+</li>
+<li>
+<p><strong>Promote shared ownership of quality across all roles</strong><br>
+Reinforce the principle that quality is a collective responsibility, ensuring that testers, developers, product owners, and all other team members contribute to building and maintaining a high-quality product.</p>
+</li>
+</ul>
+<h2 id="test-principles" tabindex="-1"><a class="header-anchor" href="#test-principles">Test Principles</a></h2>
+<p>Our approach to testing and quality assurance follows several guiding principles:</p>
+<h3 id="risk-based-testing" tabindex="-1"><a class="header-anchor" href="#risk-based-testing">Risk Based Testing</a></h3>
+<p>It is appreciated that not everything can be tested. However, there is a guiding principle that testing and quality assurance should be a means to reduce the risk of something going wrong in Production. Testing in the NHSBSA therefore concentrates on higher risk and most frequently used features to minimise the risk to the users and the organisations concerned. High-risk areas include complex rules and functionality, third party dependencies and areas of a solution that is known to be prone to defects. Most frequently used features are those features used by most users or are most frequently included within the defined user journeys.</p>
+<p>Risk based testing also allows Testers to articulate outstanding risks should any testing be incomplete or there be outstanding defects upon a solution going into Production.</p>
+<h3 id="user-centric-testing" tabindex="-1"><a class="header-anchor" href="#user-centric-testing">User Centric Testing</a></h3>
+<p>Users are at the forefront of everything NHSBSA designs and builds. It is therefore important that testing and quality assurance activities follow suit. Following clear acceptance criteria based on the user stories identified for the solution, our tests are designed and executed to demonstrate that the acceptance criteria have been met. We ensure our tests are adaptable should user needs change. And we demonstrate that our test coverage sufficiently covers the user requirements. We also ensure we have robust regression testing in place to ensure any change introduced to an application or service has not impacted the existing service.</p>
+<h3 id="behaviour-driven-development-bdd" tabindex="-1"><a class="header-anchor" href="#behaviour-driven-development-bdd">Behaviour Driven Development (BDD)</a></h3>
+<p>Our tests are created in user centric Behaviour-Driven Development (BDD) style as described in the Writing Tests standard, in that our tests are centred around the users and their behavioural needs and requirements. This means our tests are focused from the perspective of the user and not a third person or service.</p>
+<p>The approach also helps non-testers to understand the proposed tests as they are written in non-technical, plain-English language which enables all stakeholders to appreciate the test, its scope and its expected outcomes.</p>
+<p>Functional Acceptance testing, API testing, Performance testing and Data Processing testing all follow the BDD principles.</p>
+<h3 id="automate-smartly" tabindex="-1"><a class="header-anchor" href="#automate-smartly">Automate Smartly</a></h3>
+<p>Automating tests significantly increases the momentum of the software engineering cycle, helps to catch defects early, ensures testing is consistent and repeatable, and improves software quality through an expansion of test coverage. It means that testers are free to conduct more complex tasks and test analysis and enables frequent regression testing to ensure stable builds are released into Production. The NHSBSA’s approach to test automation is to “<strong>Automate Smartly</strong>”. We do not automate everything, but our approach is to automate as much as possible as soon as it is appropriate to do so.</p>
+<p>Points that are considered when determining an individual service’s test automation approach across the core test frameworks are:</p>
+<p>Functional Acceptance, API, Compatibility Testing:</p>
+<ul>
+<li>
+<p>CI/CD pipeline – automated regression test packs are placed in the CI/CD pipeline where they can be triggered manually or, preferably, be scheduled to be executed on a regular basis. This is daily, overnight, where possible.<br>
+The execution model follows the <strong>Automation Pipeline template</strong>, ensuring consistency, standardisation, and full CI/CD alignment across all services.</p>
+</li>
+<li>
+<p>Multi Factor Authentication (MFA) – many (most) NHSBSA services require users to use MFA. This poses a problem with placing automated tests in the CI/CD pipeline as MFA requires manual intervention. We have worked with the NHSBSA DDaT Security team to devise a way to avoid this problem, thus allowing us to automate most of the functional acceptance, compatibility and API tests within the CI/CD pipeline. This can be found <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5427003447/TESTING+SERVICES+WITH+MULTI+FACTOR+AUTHENTICATION+draft">here</a>.</p>
+</li>
+</ul>
+<p>Accessibility Testing:</p>
+<ul>
+<li>we have applied automation where possible and continue to seek ways to further automate the tests within this framework.</li>
+</ul>
+<p>Performance Testing:</p>
+<ul>
+<li>whilst most performance test execution is triggered manually to ensure an element of control; testers will consider if any of the performance tests can be placed in the CI/CD pipeline for regular performance monitoring.</li>
+</ul>
+<p>Data Processing Testing:</p>
+<ul>
+<li>data processing testing will consider the full end-to-end journey of the data within NHSBSA, from data ingestion through the data pipeline (including data transformation) all the way through to data publication. Tools to test the end-to-end journey will be implemented so that the full pipeline can be tested through automation.</li>
+</ul>
+<h3 id="route-to-live" tabindex="-1"><a class="header-anchor" href="#route-to-live">Route to Live</a></h3>
+<p>NHSBSA follow a strict route-to-live policy to ensure there is a stable Software Development Lifecycle (SDLC). All code must go through Unit Testing in the Development environments prior to being released into the formal test environments. Unit Testing is conducted by Developers and includes two types of testing as a minimum – self-contained testing of a unit of code and integration testing (“integration in the small”) where the interaction with an external resource such as an API or a database is tested. More details on the NHSBSA’s approach to Unit Testing can be found <a href="../../development/dev-tests/">here</a>.</p>
+<p>Once release candidate has successfully completed Unit Testing, it is promoted to the Test environment for formal testing. A <strong>Build Acceptance Test</strong> should be executed (preferably within the CI/CD pipeline) to check stability of the revised code baseline. This is encouraged for complex pieces of code or significant pieces of functionality. The route-to-live is then</p>
+<p>Dev -&gt; Test -&gt; Stage -&gt; Production</p>
+<p>For some services an Integration environment will be required to conduct integration testing across modules, components and external interfaces (“integration in the large”), and a separate Performance environment is required for performance testing. The full route-to-live is therefore:</p>
+<p>Dev -&gt; Test -&gt; (Int) -&gt; (Performance) -&gt; Stage -&gt; Production</p>
+<p>A description of the types of tests that are conducted in each environment is described in the Test Environments section below.</p>
+<h3 id="shift-left" tabindex="-1"><a class="header-anchor" href="#shift-left">Shift Left</a></h3>
+<p>Our approach to testing is to conduct the most appropriate testing as early as possible. That is not to say that we seek to conduct formal testing in Dev or early iterations of Test. It means that we test as early as possible and as often as possible when it is most appropriate to do so. Automation testing enables this principle.</p>
+<p>Testers will not conclude test activities until a stable code baseline is developed and the agreed tests have passed. This means that whilst testing may start early, it may continue for a longer period because the tests are not yet successful. However, the shift-left approach does mean that critical defects will be found, and fixed, earlier in the SDLC.</p>
+<p>An example of how a shift left approach has been implemented can be found <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5768151041/TEST+SHIFT-LEFT+APPROACH">here</a>.</p>
+<h3 id="independence" tabindex="-1"><a class="header-anchor" href="#independence">Independence</a></h3>
+<p>A key principle in NHSBSA’s testing strategy is independence. Although developers work to create error-free, quality code, it is not possible to foresee all possible problems whilst an often-complex service is being built. The NHSBSA recognises testing as a profession and a discrete discipline. Introducing independent testing allows services to obtain a more objective and unbiased assessment of the service’s quality and how well it has met the requirements.</p>
+<h2 id="testing-approach-and-methodology" tabindex="-1"><a class="header-anchor" href="#testing-approach-and-methodology">Testing Approach and Methodology</a></h2>
+<h3 id="test-frameworks" tabindex="-1"><a class="header-anchor" href="#test-frameworks">Test Frameworks</a></h3>
+<p>As described here, in the NHSBSA we test following six core frameworks:</p>
+<ul>
+<li>Functional Acceptance</li>
+<li>Accessibility</li>
+<li>API</li>
+<li>Compatibility</li>
+<li>Performance</li>
+<li>Data Processing</li>
+</ul>
+<p>We are also developing further test frameworks in:</p>
+<ul>
+<li>Dynamic Application Security Testing</li>
+<li>AI Testing (including Robotic Process Automation)</li>
+</ul>
+<p>Each core framework describes a distinct test type. The frameworks have been written to provide guidance to testers, the wider service delivery teams and other stakeholders. Not all service releases and/or changes will require all core frameworks to be followed.</p>
+<p>Testers select the appropriate test frameworks for the service/release/change under test and will describe the approach in the <strong>Test Approach</strong> document. The scope of testing is agreed with the Test Lead, the Product Owner, the Technical/Solution Architect and the Lead Delivery Manager for the service. If a test framework (test type) is considered out of scope, an explanation of why this is the case is documented in the Test Approach (for example, there are no new UIs or changes to existing UIs so accessibility testing is out of scope).</p>
+<p>The table below gives a broad view of when a core framework is in scope. Most new services are required to consider all core frameworks prior to its Beta release. However, it is recognised that most digital or technology services often do not include data processing so that is generally omitted from the scope. Similarly, most data processing solutions will not require functional acceptance testing to be in scope unless an application sits on top of the data processing solution.</p>
+<p>Whilst the core frameworks determine a wide and robust test of a service, there may be a requirement to conduct additional testing outside the scope of the core frameworks. If this is the case, the additional test type(s) will be outlined on the service’s Test Approach.</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th style="text-align:center">Functional Acceptance</th>
+<th style="text-align:center">API</th>
+<th style="text-align:center">Accessibility</th>
+<th style="text-align:center">Compatibility</th>
+<th style="text-align:center">Performance</th>
+<th style="text-align:center">Data Processing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Functional Application</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>User Interface</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>API interactions</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>Build and/or configuration (DevOps)</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>Migration to Cloud</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td>Data Pipeline, including transformation of data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td>Presentation of data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td>Regression</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regression-testing" tabindex="-1"><a class="header-anchor" href="#regression-testing">Regression Testing</a></h3>
+<p>ISO 29119 (2022) defines regression testing as “testing performed following modifications to [a service] or to its operational environment, to identify whether failures in unmodified parts of the test item occur”.</p>
+<p>Regression testing is conducted when any new feature, change or defect fix is introduced. The key goals are to verify stability, to identify unintended side effects and to maintain quality.</p>
+<p>Testers will create automated regression packs that can be executed on a recurring basis to ensure new features, changes or defect fixes to existing features have not caused any unchanged features or functionality to fail (or to regress). Where possible, the automated regression test packs are placed in the CI/CD pipeline so they can be scheduled to be executed on a regular basis (preferable daily, overnight).</p>
+<p>When regression testing is conducted due to a feature change or defect fix, then the impacted feature must also be thoroughly retested.</p>
+<h3 id="user-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#user-acceptance-testing">User Acceptance Testing</a></h3>
+<p>User Acceptance Testing (UAT) allows real business users to validate that the delivered solution meets their operational needs. It ensures the product or service is usable, fit for purpose and is ready for production.</p>
+<p>During UAT, real end user representatives test the product in a near production environment (Stage) to confirm that:</p>
+<ul>
+<li>Business workflows function as expected</li>
+<li>The solution meets practical business needs</li>
+<li>The user experience aligns with real usage</li>
+<li>Any usability issues or workflow gaps are discovered before deployment into production</li>
+</ul>
+<p>UAT evaluates business correctness, not technical accuracy.</p>
+<p><strong>The NHSBSA Test Community will support the UAT activities, but it is led by the business representatives.</strong></p>
+<h2 id="testing-guidance-and-standards" tabindex="-1"><a class="header-anchor" href="#testing-guidance-and-standards">Testing Guidance and Standards</a></h2>
+<p>Testing within NHSBSA is defined by a set of guidance and standards as outlined within the NHSBSA DDaT Playbook. This section of the Test Strategy summarises the guidance and standards a delivery team must follow and includes links to the relevant pages within the Playbook or internal collaboration platforms providing further detail.</p>
+<h3 id="test-tools" tabindex="-1"><a class="header-anchor" href="#test-tools">Test Tools</a></h3>
+<p>NHSBSA have selected several test tools to use across the core test frameworks. These are described further in the Test Tech Stack standard.</p>
+<p>The selection of the NHSBSA Test Tool Stack is based on:</p>
+<ul>
+<li>Usability – test tools should be easy to use, available during core hours and be compatible with the NHSBSA core test frameworks</li>
+<li>Cost – opensource tools are the preferred choice</li>
+<li>A successful proof-of-concept (POC) – all tools are subjected to strict POC conditions to determine their suitability</li>
+</ul>
+<p>New tools are considered throughout, with the NHSBSA Test Community always seeking to improve ways of working.</p>
+<p>For example, through a Test Guild, the NHSBSA Test Community are reviewing AI tooling to determine which AI tools can improve our ways of working.</p>
+<h3 id="test-environments" tabindex="-1"><a class="header-anchor" href="#test-environments">Test Environments</a></h3>
+<p>All NHSBSA test activities are conducted in pre-Production environments, apart from Smoke Tests that are conducted in Production after major releases and prior to user access. Each pre-Production environment is independent with environment segregation being fundamental to ensure a robust SDLC.</p>
+<p>NHSBSA development and test activities follow a strict route-to-live policy to ensure there is control on code baselines, builds and releases until they are fully developed, tested and promoted to Production.</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Test Type</th>
+<th>Owner</th>
+<th>Mandatory / Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BUILD</td>
+<td>Unit Test (including “integration in the small”)</td>
+<td>Developers</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>TEST</td>
+<td>Build Acceptance Test, Functional Acceptance Test, API Test, Compatibility Test, Accessibility Test</td>
+<td>Testers</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>INT (Integration)</td>
+<td>Build Acceptance Test, Integration Test (“integration in the large”), End-to-End Test</td>
+<td>Testers</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>PERF (Performance)</td>
+<td>Build Acceptance Test, Performance Test</td>
+<td>Testers</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>STG (Stage)</td>
+<td>Build Acceptance Test, User Acceptance Test (UAT)</td>
+<td>Business / Product Owners</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>PROD (Production)</td>
+<td>Smoke Test</td>
+<td>Live Services</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ephemeral-environments" tabindex="-1"><a class="header-anchor" href="#ephemeral-environments">Ephemeral Environments</a></h4>
+<p>Some services may consider the use of ephemeral environments prior to deploying into the Test environment. The benefits and risks of using ephemeral environments will be documented and considered on a service-by-service basis. Considerations will include:</p>
+<ul>
+<li>the number of proposed ephemeral environments</li>
+<li>the altered route-to-live and how the code baseline will be known and managed</li>
+<li>the interdependencies within the solution and whether introducing multiple release paths introduces too much risk</li>
+</ul>
+<h3 id="test-data" tabindex="-1"><a class="header-anchor" href="#test-data">Test Data</a></h3>
+<p>Test data is required to validate application functionality, interfaces and performance under realistic and varied conditions, detect defects early, ensure requirements are met, and provide traceable coverage of test cases and scenarios. It is important that test data is accurate and successfully meets the conditions of the test(s).</p>
+<p>When considering test data, our approach is to use synthetic data in early test phases so that all paths and edge cases can be covered, including negative and positive scenarios. As the solution and the testing matures through the test phases, production-like data should be used to make the test scenarios as realistic as possible. The Test Data standard describes this further.</p>
+<h3 id="test-documentation" tabindex="-1"><a class="header-anchor" href="#test-documentation">Test Documentation</a></h3>
+<p>It is important to ensure all test activities are documented so that there is a record of the planned and executed tests. The following test documentation will be produced and will following the Test Document standard.</p>
+<ul>
+<li>Test Approach</li>
+<li>Test Plan (which may reside in the Test Approach document)</li>
+<li>Test Scripts</li>
+<li>Test Coverage Report</li>
+<li>Test Completion Report</li>
+</ul>
+<p>The Test Document standard describes the expected content for each of these. The way we write tests is described in the Writing Tests standard.</p>
+<h3 id="defect-management" tabindex="-1"><a class="header-anchor" href="#defect-management">Defect Management</a></h3>
+<p>NHSBSA follow a robust and consistent defect management process. Any disparity between expected and actual results during test execution must be investigated. The NHSBSA Test Community follow the Defect Management standard to ensure defects are captured and resolved as efficiently as possible.</p>
+<p>All defects are recorded in JIRA. When a defect is raised, it will be assigned a severity as observed by the Tester. It is then triaged using the 3 Amigo model - Tester/Developer/Product Owner or similar. This may increase or reduce the severity depending on several factors.</p>
+<p>The defect then goes through the defect management process to resolution. This may result in a fix to the code, a change to the test script or an amendment to the acceptance criteria. In each of these instances, the failed test script will be re-executed. A regression test will also be considered to minimise the risk of regression.</p>
+<p>When all defects are captured and classified correctly, there can be analysis of defect trends. This analysis may result in amendments to overall approach to the testing of the service and will contribute to the continuous improvement of testing that service.</p>
+<h3 id="entry-and-exit-criteria" tabindex="-1"><a class="header-anchor" href="#entry-and-exit-criteria">Entry and Exit criteria</a></h3>
+<p>NHSBSA have defined strict criteria that must be met prior to formal testing commencing. Similarly, NHSBSA have defined strict criteria that must be met before formal testing can be declared complete.</p>
+<p>The NHSBSA Entry Criteria is described in the Entry Criteria standard and is based on best practice and international standards such as ISO/IEC 29119. The Test team will work collaboratively within the Service Delivery team to achieve the criteria. The Test Lead, the Technical Lead, the Delivery Manager and the Product Owner (plus other stakeholders such as the Development Lead) will meet prior to the start of any test phase to agree if the criteria have been met before formal testing begins. Where any Entry Criteria has not been met, a risk will be logged and must be agreed prior to sign off.</p>
+<p>The NHSBSA Exit Criteria is described in the Exit Criteria standard and is based on best practice and international standards such as ISO/IEC 29119. It is sometimes referred to as the Test Completion Criteria. During test execution, the Testers will log the results and collect test metrics (see below) via JIRA. These test metrics will feed into the decision on whether the criteria have been met. The Test Lead, the Technical Lead, the Delivery Manager and the Product Owner (plus other stakeholders such as the Development Lead) will meet to agree if the criteria have been met before agreeing that the testing is complete. Where any Exit Criteria has not been met, a risk will be logged and must be agreed prior to sign off.</p>
+<h3 id="test-reporting" tabindex="-1"><a class="header-anchor" href="#test-reporting">Test Reporting</a></h3>
+<p>The NHSBSA Test Community will report on the outcome of the testing activities via a series of test measurements and metrics.</p>
+<p>Test measurements and metrics will be captured before, during and after testing. The NHSBSA’s tool of choice is JIRA as this enables the testing activities to be linked to the EPIC and User Story tickets which enables progress tracking during a sprint and/or release. It should be noted that JIRA is not a test management tool, but it ensures testing is part of the agile development process.</p>
+<p>Test metrics are essential in determining the release’s quality. They also help evaluate the effectiveness of the testing activities.</p>
+<h4 id="test-metrics" tabindex="-1"><a class="header-anchor" href="#test-metrics">Test Metrics</a></h4>
+<p>The following test metrics will be captured:</p>
+<ul>
+<li>Test coverage – allows verification that each ticket has at least one test, and the user stories have been thoroughly tested</li>
+<li>Total number of tests – within a sprint or a release</li>
+<li>Total number of tests executed</li>
+<li>Total number of tests passed</li>
+<li>Total number of tests failed – with associated defect(s)</li>
+<li>Total number of tests not run – with a reason on why a planned test has not been executed</li>
+<li>Total number of defects raised – during the test phase, including the severity</li>
+<li>Total number of open defects – including the severity, business impact and planned fix date</li>
+</ul>
+<p>The metrics described above will be available at any point during the SDLC. This will allow the Service Delivery team to assess progress.</p>
+<p>As the release/change/fix nears its go live date, the metrics will be pulled into a Test Completion Report for formal reporting, as described in the Test Documentation standard. This will allow an informed decision on whether the release/change/fix should be released into Production.</p>
+<h4 id="test-analysis" tabindex="-1"><a class="header-anchor" href="#test-analysis">Test Analysis</a></h4>
+<p>The collection of the test metrics will allow the testers and their Service Delivery teams to analyse the quality of the release, and their SDLC process. Examples of test analysis are:</p>
+<ul>
+<li>Test script effectiveness = (total number of defects detected / total number of test scripts executed) x 100</li>
+<li>Fixed defects percentage = (total number of flaws fixed / total number of defects detected) x 100</li>
+<li>Severity 1 defect percentage = (total number of severity 1 defects raised / total number of defects detected) x 100</li>
+<li>Defects found in feature percentage = (defects found in feature / total number of defects detected) x 100</li>
+<li>Category of defects found percentage = (defects in category / total number of defects detected) x 100</li>
+<li>Defect leakage (into UAT, into Prod) = number of defects detected into UAT (or Prod) – number of defects that could only be detected in UAT (or Prod)</li>
+<li>Defect leakage percentage = (‘defect leakage (into UAT, into Prod)’ / total number of defects detected) x 100</li>
+</ul>
+<p><em>Category</em> could include requirements, design, environment, data, code, or test gaps.</p>
+<h2 id="conclusion" tabindex="-1"><a class="header-anchor" href="#conclusion">Conclusion</a></h2>
+<p>This NHSBSA Test Strategy and its associated guidance and standards outlines the approach the NHSBSA follow to testing its DDaT services and applications. Designing, building and delivering quality services is everyone’s responsibility, as is ensuring the user requirements have been met. This strategy ensures quality is at the centre of the SDLC, it ensures the user is at the centre of everything the NHSBSA builds and it ensures that issues are found and resolved at the earliest opportunity.</p>
+<p>The NHSBSA Test Community are continually evolving and looking for ways to improve. To that end, this test strategy will be revisited on a regular basis and updated accordingly.</p>
+
+        <hr>
+        <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
+        <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+          please share your suggestions.</p>
+
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
+        Github is an open forum where we collect feedback.</p>
+        
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-strategy&#39;%20">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Suggest a change to this page</span>
+  </a>
+</div>
+
+
+
+        <div class="nhsbsa-article--date">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
+    </p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer role="contentinfo">
+  <div class="nhsuk-footer-container">
+    <div class="nhsuk-width-container app-width-container">
+      <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+				
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+			<div class="nhsuk-ogl-footer">
+				<p class="nhsuk-ogl-footer--text">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
+				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+				</svg>
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
+				</p>
+			</div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" async>import mermaid from "https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs";mermaid.initialize({"theme":"base","themeVariables":{"background":"#f0f4f5","primaryColor":"#d8dde0","primaryTextColor":"#000","primaryBorderColor":"#212b32","secondaryColor":"#f0f4f5","secondaryTextColor":"#000","tertiaryColor":"#ffb81C","tertiaryTextColor":"#fff","noteBkgColor":"#fff9c4","noteTextColor":"#000","lineColor":"#212b32","errorBkgColor":"#d5281b","errorTextColor":"#d5281b","git0":"#005eb8","git1":"#007f3b","git2":"#ffb81C","git3":"#ffeb3b","git4":"#d5281b","git5":"#7C2855","git6":"#330072","git7":"#212b32","gitBranchLabel0":"#fff","gitBranchLabel1":"#fff","gitBranchLabel2":"#000","gitBranchLabel3":"#000","gitBranchLabel4":"#fff","gitBranchLabel5":"#fff","gitBranchLabel6":"#fff","gitBranchLabel7":"#fff"},"gitGraph":{"showCommitLabel":false},"loadOnSave":true,"startOnLoad":false});const run=()=>mermaid.run();document.addEventListener('DOMContentLoaded',run);if(document.readyState!=='loading')run();</script>    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3"></script>
+
+
+</body>
+</html>

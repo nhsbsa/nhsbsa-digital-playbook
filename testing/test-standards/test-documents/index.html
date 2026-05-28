@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta name="description" content="Test activities from planning through to execution and reporting must be fully documented.">
   <meta name="robots" content="noindex">
   
   <title>
-Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -40,13 +40,13 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/compatibility-test/"/>
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-standards/test-documents/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta property="og:description" content="Test activities from planning through to execution and reporting must be fully documented.">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
@@ -110,6 +110,30 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#test-approach">Test Approach</a>
+            		</li>
+
+                    <li><a href="#test-plan">Test Plan</a>
+            		</li>
+
+                    <li><a href="#test-scripts">Test Scripts</a>
+            		</li>
+
+                    <li><a href="#test-coverage-report">Test Coverage Report</a>
+            		</li>
+
+                    <li><a href="#test-completion-report">Test Completion Report</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -122,59 +146,84 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Compatibility Testing
+            Test Documents
           </h1>
           
         </div>
       
 
-<h4 id="what-is-compatibility-testing" tabindex="-1"><a class="header-anchor" href="#what-is-compatibility-testing">What is compatibility testing?</a></h4>
-<p>Compatibility testing focuses on showing that an application or service works on different devices (e.g. laptops, tablets and phones), on different browsers (e.g. Edge, Firefox, Chrome) and different operating systems (e.g. iOS, Windows).</p>
-<p>Our Compatibility Testing is linked to the following requirements:</p>
+<p>Test activities from planning through to execution and reporting must be fully documented. This is not only to provide an audit trail of what testing has happened but also to provide the metrics required to show how successful the testing has been.</p>
+<h3 id="test-approach" tabindex="-1"><a class="header-anchor" href="#test-approach">Test Approach</a></h3>
+<p>For each iteration of testing, be it on a full release introducing new epics and functionality, a change to the existing service or a defect fix, the approach to be taken to test the item under test must be fully documented. This is to ensure buy-in for the test team, the Test Lead and other stakeholders such as the Product Owner and Technical Lead.</p>
+<p>For full releases and significant changes, a Test Approach document must be prepared. This is sometimes referred to as the service’s Test Strategy and should follow guidance in international standard ISO/IEC 29119.</p>
+<p>This document will outline the planned tests under each core test framework. It explains the service under test and the release or change that is going to be made. It then describes the following:</p>
 <ul>
-<li>Ability to provide stakeholders with information about their application regarding functionality, usability and consistency.</li>
-<li>Ability to analyse the system in different OS environments as well as with different mobile devices (phones, tablets).</li>
-<li>Ability to conform to the following GDS Service Standards on performance and durability.
+<li>The strategic view of how the service will be tested</li>
+<li>The pre-requisites for the test activities</li>
+<li>The scope and goals of the test activities, including which core test frameworks are going to be conducted</li>
+<li>The technical set up required for the test, including a description of the test environment(s) (in line with the route-to-live standard)</li>
+<li>The test criteria including the entry and exit criteria</li>
+<li>A clear statement on which of the core test frameworks are included, for those not included, a clear statement on why not</li>
+<li>A clear statement on what is in scope including links to all the epics and user stories</li>
+<li>A clear statement on what is out of scope within each core test framework</li>
+<li>The approach to regression testing</li>
+<li>The test data requirements</li>
+<li>The test execution method, including what will be automated and what will be manual tested, and what will sit within the CI/CD pipeline</li>
+<li>The method in which the test scripts will be captured and stored</li>
+<li>The method in which the test results will be captured, stored and reported</li>
+<li>The defect management process</li>
+<li>Items included in a Test Plan (see below)</li>
+</ul>
+<p>A copy of the NHSBSA Test Approach template can be found <a href="https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx">here</a>.</p>
+<h3 id="test-plan" tabindex="-1"><a class="header-anchor" href="#test-plan">Test Plan</a></h3>
+<p>Often a service’s Test Plan is included in the Test Approach. This is acceptable for full releases or significant changes as the approach to testing may be new or significantly changed and the plan for testing needs to be outlined as an overall approach.</p>
+<p>For smaller changes or defect fixes where the general approach to testing will continue to follow the latest Test Approach for that service, a separate Test Plan can be written. This can be written and stored in the service’s Confluence domain but must link to the overarching Test Approach it is drawing on.</p>
+<p>We follow guidance provided in international standard ISO/IEC 29119. It must include a description of:</p>
 <ul>
-<li>Standard 6 - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.</li>
-<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.</li>
-<li>Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.</li>
+<li>The test phases (the core test frameworks) that are planned</li>
+<li>The epics and user stories under test via links to the JIRA tickets</li>
+<li>The entry/exit criteria</li>
+<li>The test tools to be used</li>
+<li>The test environments</li>
+<li>The test data</li>
+<li>The test schedule</li>
+</ul>
+<h3 id="test-scripts" tabindex="-1"><a class="header-anchor" href="#test-scripts">Test Scripts</a></h3>
+<p>All test scripts must take the format described in the Writing Tests standard, and must be stored in a Git repository, clearly marked specific to the service under test. They must not be stored locally.</p>
+<p>Test scripting must consider positive and negative scenarios, edge cases and boundary analysis. There must be a link to the appropriate epics/user stories/acceptance criteria.</p>
+<p>All test scripts should be scanned in the automation repository by SonarQube and have no blocker or high severity issues.</p>
+<h3 id="test-coverage-report" tabindex="-1"><a class="header-anchor" href="#test-coverage-report">Test Coverage Report</a></h3>
+<p>A key indicator of a robust test approach is the test coverage. The NHSBSA Test Community aim for 100% coverage of all in-scope epics and user stories (functional and non-functional features) through the different core test frameworks.</p>
+<p>JIRA tickets are the easiest way to demonstrate coverage of testing across the core test frameworks (and beyond, where necessary). The NHSBSA DDaT Test Community are currently designing a standard in which all services can demonstrate the coverage of their tests using JIRA as a tool. This will become the standard to produce a Test Coverage Report. Until this is complete, services must validate test coverage through any means at their disposal – this may be by using JIRA, Confluence, Excel or some other tool. The test coverage should be signed off by the Test Lead, the Product Owner and the Technical Lead.</p>
+<p>Where there are gaps in coverage, a risk analysis must be conducted so that all stakeholders can agree whether the gap is acceptable or not.</p>
+<h3 id="test-completion-report" tabindex="-1"><a class="header-anchor" href="#test-completion-report">Test Completion Report</a></h3>
+<p>The NHSBSA Test community share their test results and outcomes via a series of test reports. The collection of these test reports makes up the Test Completion Report.</p>
+<p>Test reports define the outcome of a test or a series of tests. They are produced so that the appropriate stakeholders can understand what testing has been conducted, what has been successful and what has not been successful. It allows stakeholders to understand the outstanding issues and appreciate the residual risk. This enables stakeholders to make an informed decision on whether a release, change or fix should be deployed into Production or not.</p>
+<p>JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the guidance found <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx">here</a> to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.</p>
+<p>The information provided in the test report(s) should follow the international standard ISO/IEC 29119.</p>
+<p>In terms of Accessibility Testing, the NHSBSA’s <a href="https://nhsbsauk.sharepoint.com/sites/digital-accessibility/Shared%20Documents/Forms/Visitor.aspx?ovuser=cf6d0482%2D86b1%2D4f88%2D8c0c%2D3b4de4cb402c%2Cnicola%2Eyoung%40nhsbsa%2Enhs%2Euk&amp;OR=Teams%2DHL&amp;CT=1715692395854&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDAzMzEwMTgxNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">Accessibility Test Report</a> should be used to demonstrated that all tests within the phased approach to accessibility testing have been conducted and their outcome has been reported.</p>
+<p>In terms of Performance Testing, the NHSBSA’s <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx">Performance Test Report</a> should be used. This report provides the performance metrics collected during performance test execution that are analysed to understand the service’s performance under load.</p>
+<p>The Test Completion Report contains reports from all core test frameworks, plus any additional testing that was required. Testers must make sure the following is included:</p>
+<ul>
+<li>All testing that is in scope, including each core test framework and any additional testing
+<ul>
+<li>This may include links to separate test reports such as the accessibility report and/or the performance test report</li>
 </ul>
 </li>
-</ul>
-<p>To ensure our services meet these requirements we run tests that are representative of the services. These are end-to-end user journey tests that represent how the service behaves using the various browsers, devices and phones.</p>
-<p>GDS state “Your service must be universally accessible. This means building it to work on every browser or device that your users access it on.” This means that if it is known that users are not going to use certain devices, browsers and/or operating systems then there is little or no need to test on them. Each DDaT service should consider the User Research for new services and monitoring such as Google Analytics for existing services to consider the scope of the test.</p>
-<h4 id="how-do-we-test-compatibility" tabindex="-1"><a class="header-anchor" href="#how-do-we-test-compatibility">How do we test compatibility?</a></h4>
-<p>NHSBSA’s approved compatibility test platform is <a href="https://saucelabs.com/">Saucelabs</a>. This gives us access to over 2000 device and browser combinations.</p>
-<p>Saucelabs allows testers to test different devices and browsers. We test the latest and latest-1 models and versions where possible, keeping in line with <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">GDS guidance</a>. Via Saucelabs we have access to both real and virtual devices and can execute both manual and automated tests.</p>
-<p>A defined <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Compatibility-Testing-framework.aspx">NHSBSA Compatibility Test Framework</a> is maintained with details of the current test coverage scope. As this is a dynamic page that is updated at least once a month, the details are not presented here. However, all NHSBSA Testers have access to it via our internal SharePoint pages.</p>
-<p>There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.</p>
-<h4 id="local-execution" tabindex="-1"><a class="header-anchor" href="#local-execution">Local execution</a></h4>
-<p>This is where the tests are executed from the tester’s machine by manually entering an execution command on the command line. All the defined tests are executed through the Cloud-based test environments.</p>
-<p>Local execution of tests through the Saucelabs service executes from the same command line statement structure as automation tests, but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the platform, browser or device much easier. It is also better for maintainability and code quality that these are not hard coded into test scripts.</p>
-<p>In order to run tests through Saucelabs:</p>
+<li>Clear <strong>Test Metrics</strong>:
 <ul>
-<li>Internal NHSBSA users need to be connected to Global Protect</li>
-<li>External users need to be connected with AWS VPN</li>
+<li>Tests executed</li>
+<li>Tests passed</li>
+<li>Test failed</li>
+<li>Tests not run</li>
 </ul>
-<p>This will allow access via the URL using NHSBSA login credentials.</p>
-<ul>
-<li>All users need to connect via the <a href="https://docs.saucelabs.com/secure-connections/sauce-connect-5/quickstart/">Sauce Connect Proxy</a></li>
+</li>
+<li>Links from failed tests to defects</li>
+<li>Links from tests not run to risks</li>
+<li>Links from defects to risks, including their business impact – this is mandatory for all outstanding (not closed) defects</li>
+<li>A description of how the Exit Criteria has been met</li>
 </ul>
-<p>All tests during development should be run using this method as it can give fast feedback about the tests and the service.</p>
-<h4 id="ci/cd-pipeline-execution" tabindex="-1"><a class="header-anchor" href="#ci/cd-pipeline-execution">CI/CD pipeline execution</a></h4>
-<p>It is possible to execute tests either by utilising a schedule or a trigger within the CI/DC pipeline.</p>
-<p>By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.</p>
-<p>By using a trigger either manually (via the play triangle icon) for a job or automatically within the trigger, the tests can be run on the latest deployed version of the service in the test environment.</p>
-<p>This is useful for regression compatibility testing.</p>
-<h4 id="when-should-compatibility-tests-be-run" tabindex="-1"><a class="header-anchor" href="#when-should-compatibility-tests-be-run">When should compatibility tests be run?</a></h4>
-<p>Compatibility testing should be considered in scope when a release includes significant new functionality, including new or updated screens. Executing the tests as early as possible will provide fast feedback regarding design and development.</p>
-<p>Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.</p>
-<p>Once the compatibility tests are in the CI/CD pipeline they can be included in regression testing.</p>
-<h4 id="the-compatibility-test-process" tabindex="-1"><a class="header-anchor" href="#the-compatibility-test-process">The compatibility test process</a></h4>
-<p>During Compatibility Test execution, testers must ensure all test evidence (screenshots, videos) is extracted and saved within the NHSBSA domain (rather than leaving within Saucelabs), preferably JIRA. All Saucelabs devices are cleared of data used once the test is complete.</p>
-<p>The test coverage, results and issues faced during testing must be documented in the Compatibility Test Report.</p>
-<p>Please make sure that you close the Saucelabs connect proxy tunnel after the test execution so there is not impact on other testers’ activities.</p>
+<p>A Test Completion Report must be reviewed and signed off by the NHSBSA Test Lead, the Product Owner, the Technical Lead and the Delivery Manager.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -186,7 +235,7 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-frameworks%2Fcompatibility-test%2Findex&#39;%20">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-standards%2Ftest-documents%2Findex&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>

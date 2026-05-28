@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="How &amp;amp; why we acceptance test in the NHSBSA">
+  <meta name="description" content="Functional acceptance testing considers the functionality of the service as well as the integration of the service with other services and interfaces.">
   <meta name="robots" content="noindex">
   
   <title>
-Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Functional Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -42,11 +42,11 @@ Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
   <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/acceptance-test/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="How &amp;amp; why we acceptance test in the NHSBSA">
+  <meta property="og:description" content="Functional acceptance testing considers the functionality of the service as well as the integration of the service with other services and interfaces.">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Functional Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
@@ -116,16 +116,22 @@ Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
-                    <li><a href="#what-is-acceptance-testing">What is acceptance testing?</a>
+                    <li><a href="#functional-acceptance-test-principles">Functional Acceptance Test Principles</a>
+            
+                <ol>
+                    
+                    <li><a href="#automate-smartly">Automate Smartly</a>
             		</li>
 
-                    <li><a href="#why-do-we-write-in-a-user-centric-way">Why do we write in a user centric way?</a>
+                    <li><a href="#test-automation">Test Automation</a>
             		</li>
 
-                    <li><a href="#whats-included-in-our-acceptance-tests">Whats included in our acceptance tests?</a>
+                    <li><a href="#behaviour-driven-development-bdd">Behaviour-Driven Development (BDD)</a>
             		</li>
 
-                    <li><a href="#how-our-acceptance-tests-structured">How our acceptance tests structured?</a>
+                    <li><a href="#integration-testing">Integration Testing</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </div>
@@ -143,92 +149,62 @@ Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Acceptance Testing
+            Functional Acceptance Testing
           </h1>
           
         </div>
       
 
-<h2 id="what-is-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#what-is-acceptance-testing">What is acceptance testing?</a></h2>
-<p>‘Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system’. ISTQB</p>
-<p>All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests.</p>
-<p>We employ an ‘automation by default’ approach to testing so unless not possible or constrained then tests must be automated. Over 90% of our current acceptance tests are automated.</p>
-<p>The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.</p>
-<p>Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person. All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don’t press this or click that like in more traditional test plans and scripts. We talk as the user would express a scenario or situation ‘Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC’.</p>
-<p>Only in circumstances where these actions are needed to prove a clear acceptance criteria can they be used.</p>
-<h2 id="why-do-we-write-in-a-user-centric-way" tabindex="-1"><a class="header-anchor" href="#why-do-we-write-in-a-user-centric-way">Why do we write in a user centric way?</a></h2>
-<p>Everything we do whether it is designing a new service or testing it involves the users and what they need or require.</p>
-<p>There is no use for a service that disrupts, confuses or stops the user from using it to get want they want or need in the quickest time possible.</p>
-<p>So to be able to assure our services meet these needs then we identify clear acceptance criteria expressing these needs and then our tests validate and assure these needs have been met.</p>
-<p>Of course user needs change and evolve, so therefore our tests need to be able to do this so we created our framework to be easy to understand, adaptable and easy to maintain so that flexibility and change can be incorporated anytime this happens.</p>
-<p>Within each project there is a need to perform testing which can be linked to the following requirements:</p>
-<p>Ability to provide stakeholder with information that system under development works as described in product requirements<br>
-Ability to conform to the following GDS Service Standards</p>
+<p><em>‘Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system’</em>. ISTQB</p>
+<p>What is functional acceptance testing?</p>
+<p>Functional acceptance testing is a fundamental part of the NHSBSA Test Standards. It considers the functionality of the service as well as the integration of the service with other services and interfaces. Whilst NHSBSA refer to this type of testing as “acceptance testing”, it in fact incorporates the following ISO/IEC/IEE 29119 Test Levels:</p>
 <ul>
-<li>Standard 6 - Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.</li>
-<li>Standard 7 - Evaluate what user data and information the digital service will be providing or storing and address the security level, legal responsibilities, privacy issues and risks associated with the service (consulting with experts where appropriate).</li>
-<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.<br>
-Utilising an Automation Test Framework to test Front end, Back end and API services is recognised as a way to provide consistent tests that can reused and validate functionality and regression testing</li>
+<li>Integration Testing (“in the large”)</li>
+<li>System Testing</li>
+<li>Systems Integration Testing</li>
 </ul>
-<h2 id="whats-included-in-our-acceptance-tests" tabindex="-1"><a class="header-anchor" href="#whats-included-in-our-acceptance-tests">Whats included in our acceptance tests?</a></h2>
-<p>All acceptance tests in the NHSBSA provide assurance by testing the following base coverage:</p>
+<h2 id="functional-acceptance-test-principles" tabindex="-1"><a class="header-anchor" href="#functional-acceptance-test-principles">Functional Acceptance Test Principles</a></h2>
+<h3 id="automate-smartly" tabindex="-1"><a class="header-anchor" href="#automate-smartly">Automate Smartly</a></h3>
+<p>Automation is the implementation of an automation test tool(s) to execute test cases. It is well suited for services that require testing to be repeated multiple times. It is often applied once a service has been through an initial manual testing process.</p>
+<p>NHSBSA’s approach is to automate as many tests as possible, but only when it is smart to do so. Test teams should ensure testing is repeatable and efficient. However, teams should also recognise that it is not always possible to automate the tests or sensible to automate all tests straight away.</p>
+<p>Functional Acceptance Testing concentrates on the functionality the user is exposed to when using the service. In many instances, it is more sensible to start testing using localised manual tests. This is especially the case where items such as UI designs have not yet been finalised. Whilst it is useful to start testing as early as possible, it is not wise to invest the time in automating tests that may need amending later due to expected changes in the item under test.</p>
+<p>Manual tests may also be preferred over automation testing where complex or highly dynamic workflows require a more flexible approach. For example, workflows that depend on multiple variables, unpredictable paths, or complex user interactions (e.g. a new feature with user-customisable settings or experimental features).</p>
+<p>Additionally, the test community are encouraged to conduct <strong>exploratory tests</strong> when applicable. These are manual tests where testers actively explore early versions of the solution to assess the user experience. It allows the tester to explore the solution spontaneously, making personal decisions rather than following pre-defined user journeys. By focussing on discovery and investigation, exploratory testing often uncovers issues and edge cases that more formal testing overlooks. This offers deeper insights into the quality and usability.</p>
+<h3 id="test-automation" tabindex="-1"><a class="header-anchor" href="#test-automation">Test Automation</a></h3>
+<p>As soon as possible, and once designs are close to being finalised, test teams should revert their efforts to automating the tests using Serenity / Selenium.</p>
+<p>Our standard framework can be found on GitLab here: <a href="https://gitlab.com/nhsbsa/ddat/test-community/java-serenity-automation-framework">Java Serenity Automation Framework</a>.</p>
 <ul>
-<li>Functionality / behaviour of a service according to acceptance criteria.</li>
-<li>Validation of service inputs must include Valid, Invalid, None entry &amp; Verification scenarios (e.g. field lengths, acceptance levels).</li>
-<li>User Journeys, happy and unhappy paths, service scope limitations or redirects.</li>
-<li>Boundary Value Analysis and Equivalence Partitioning test methods are implemented to test range and limits of services.</li>
-<li>Integration with other services or providers.</li>
-<li>Regression to ensure the continued assurance of all the service is not affected by any change or improvement.</li>
+<li>Automation should concentrate on tests that are likely to be executed repeatedly</li>
+<li>The test team should be seeking 100% coverage within their automation test suite</li>
+<li>Automation test suites should include positive, negative and edge test cases.</li>
 </ul>
-<h2 id="how-our-acceptance-tests-structured" tabindex="-1"><a class="header-anchor" href="#how-our-acceptance-tests-structured">How our acceptance tests structured?</a></h2>
-<p>All of our tests are created in user centric BDD using Cucumber. Whether these are manual or automated tests all scripts, scenarios and cases are produced in the same format.</p>
-<p>We also use the following in our tests:</p>
+<p><strong>The Regression Test Suite must be automated.</strong> The aim of the regression test should be that it can be placed in the CI/CD pipeline and/or it can easily be executed iteratively or on a nightly basis.</p>
+<p>To avoid data dependency within our test packs, any new automation framework must be set up with a dynamic data approach, so that static data is not used, and data independence is maintained.</p>
+<h3 id="behaviour-driven-development-bdd" tabindex="-1"><a class="header-anchor" href="#behaviour-driven-development-bdd">Behaviour-Driven Development (BDD)</a></h3>
+<p>Our Functional Acceptance Tests (manual and automated) are created in user centric Behaviour-Driven Development (BDD) style. The tool choice for our BDD test scripts can be found within the NHSBSA Test Tech Stack.</p>
+<p>Our BDD tests are centred around the users and their behavioural needs and requirements. This means our tests are focused from the perspective of the user and not a third person or service.</p>
+<p>All wording is in clear natural English language and does not include technical or test jargon or speech. For example, in our test scripts we do not follow the traditional style of “press this” or “click that”. Instead, we write our tests as the user would express a scenario or situation. For example:</p>
+<blockquote>
+<p>Given I am on the NHSBSA PPC website<br>
+When I want to buy a 12 month PPC by card<br>
+Then I will be able to buy a 12 month PPC by card</p>
+</blockquote>
+<p>Only in circumstances where these actions are needed to prove a clear acceptance criterion can they be used.</p>
+<p><strong>Note that API testing, Performance testing and Data Procession testing also consider BDD – the approach described above also applies to these core test frameworks.</strong></p>
+<h3 id="integration-testing" tabindex="-1"><a class="header-anchor" href="#integration-testing">Integration Testing</a></h3>
+<p>Functional Acceptance Testing should include integration testing across the full user journey (“integration in the large”). This means that any internal or external interface should be included in the test scenarios. In most cases, the interface is an API which integrates with a secondary solution (see the API Test Framework), though in other cases the interface may be a common component or a component specific to that service.</p>
+<p>Examples of integration points and interfaces that must be included in the end-to-end integration testing include, but are not limited to:</p>
 <ul>
-<li>Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.</li>
-<li>User Centric BDD - BDD uses human-readable descriptions of software user requirements as the basis for software tests. Each test is based on a user story written in the formally specified clear natural English language. User Centric BDD ensures all test scenarios written in Gherkin syntax are from a users perspective and phased as a user would describe a scenario or circumstance.</li>
-<li>Gherkin - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. Each keyword helps the user and tester to understand the requirements and scenarios more clearly, these keywords include Given (pre-condition), When (action), Then (result).</li>
-<li>Selenium - a collection of language specific bindings to drive a browser - the way it is meant to be driven.</li>
-<li>Java - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
-<li>Ruby - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
-<li>Dedicated use of Test Environments:
-<ul>
-<li>Legacy - test environments not in the cloud use environments in our legacy infrastructure.</li>
-<li>Cloud - test environments in CI/CD pipelines are used.</li>
-<li>Local environments - where a test environment is not setup, running an application locally on a PC/Mac can provide access to developed systems. This may also be used where access to specific scenarios can not be achieved in the test environments due to governance restrictions.</li>
+<li>GovNotify API</li>
+<li>Card Payment Services</li>
+<li>Apple Pay / Google Pay</li>
+<li>File Upload</li>
+<li>Service specific Microsoft Dynamics component</li>
+<li>Contact the BSA Microsoft Dynamics component</li>
+<li>Address Search</li>
 </ul>
-</li>
-</ul>
-        	<ul class="nhsuk-grid-row nhsuk-card-group">
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing/test-frameworks/acceptance-test/manual-acceptance-testing/">Manual Acceptance testing</a>
-						</h2>
-						
-					</div>
-					<p class="nhsuk-card__description">What, how and where we manually acceptance test at the NHSBSA</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-02-04T17:27:04.000Z">4 February 2022</time>	
-				</div>
-			</div>
-		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing/test-frameworks/acceptance-test/automated-acceptance-testing/">Automated Acceptance testing</a>
-						</h2>
-						
-					</div>
-					<p class="nhsuk-card__description">What, how and why we automate acceptance test at the NHSBSA</p>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2022-03-24T15:43:32.000Z">24 March 2022</time>	
-				</div>
-			</div>
-		</li>
-	</ul>
-
+<p>Where it is not possible to test against an external interface, testers must consider a test stub or harness to ensure the full end-to-end user journey can be incorporated into test scenarios.</p>
+<p>Integration testing also needs to be included when the solution is built by developing different modules or components. This is conducted in a fully integrated test environment (sometimes referred to as ‘INT’) and demonstrates that the different modules or components can integrate to support the full user journey.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -253,7 +229,7 @@ Utilising an Automation Test Framework to test Front end, Back end and API servi
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2022-02-04T17:27:04.000Z">4 February 2022</time>
+      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
     </p>
 </div>
 

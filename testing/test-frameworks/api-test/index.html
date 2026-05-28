@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="How we test API’s in the NHSBSA">
+  <meta name="description" content="Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct">
   <meta name="robots" content="noindex">
   
   <title>
@@ -42,7 +42,7 @@ API Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
   <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/api-test/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="How we test API’s in the NHSBSA">
+  <meta property="og:description" content="Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
@@ -110,24 +110,6 @@ API Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
-      <div class="app-pane__side-bar">
-        <nav class="app-side-nav">
-        <h2 class="app-side-nav__heading">Contents</h2>
-        <div class="nhsbsa-nav__list">
-                <ol>
-                    
-                    <li><a href="#what-are-apis">What are API’s?</a>
-            		</li>
-
-                    <li><a href="#why-do-we-do-api-testing">Why do we do API testing?</a>
-            		</li>
-
-                    <li><a href="#how-do-we-api-test">How do we API Test?</a>
-            		</li>
-                </ol>
-            </div>
-        </nav>
-      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -146,27 +128,23 @@ API Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<h2 id="what-are-apis" tabindex="-1"><a class="header-anchor" href="#what-are-apis">What are API’s?</a></h2>
-<p>APIs (Application Programming Interfaces) are the connections between different systems or layers of an application. Applications often have three layers: a data layer, a service (API) layer, and a presentation (UI) layer. The API layer contains the business logic of an application - the rules of how users can interact with services, data or functions of the service.</p>
-<p>API testing consists of make requests to a single or sometimes multiple API endpoints and validating the response - whether for performance, security, functional correctness, or just a status check.</p>
-<p>These requests can be in the form of create POST, return GET, update PUT and delete DELETE requests.</p>
-<p>Often front end aplications or services are driven from these actions.</p>
-<p>There can be private, public or partner API’s.</p>
-<p>A public API is exactly that available on the internet for anyone to use.<br>
-A private API is used only between applications and services.</p>
-<h2 id="why-do-we-do-api-testing" tabindex="-1"><a class="header-anchor" href="#why-do-we-do-api-testing">Why do we do API testing?</a></h2>
-<p>There are many benefits in performing API testing these include:</p>
+<h4 id="what-is-api-testing" tabindex="-1"><a class="header-anchor" href="#what-is-api-testing">What is API testing?</a></h4>
+<p>APIs (Application Programming Interfaces) are the connections between different systems or between layers within the application. They are sets of rules or protocols that allow different software applications to communicate and exchange data with each other.</p>
+<p>At the NHSBSA, our services use public APIs (those that are available on the internet for anyone to use), UK Government APIs (those that are common across UK Government services) and private APIs (those that are used between NHSBSA applications and services)</p>
+<p>Any API developed by the NHSBSA must be tested to ensure its business logic and responses to requests are correct. API testing concentrates solely on the API and does not consider the other layers within the solution, i.e. the data layer and the UI layer.</p>
+<p>There are many benefits in performing API testing:</p>
 <ul>
-<li>Early testing: Once the logic has been built into an API we can test and validate these for correctness in responses and data. We don’t have to wait for full services or UI’s to be built before being tested.</li>
-<li>Easier to maintain: With the dynamic nature of UI’s and how much they are altered and changed due to the ways they are accessed, API’s are quicker and easier to create, edit and maintain even in an agile environment.</li>
-<li>Faster to fix: When API tests fail the cause and origin of the failure can be much easier located, this makes the resolution and retesting of the issue easier and quicker to perform.</li>
-<li>Speed and Coverage: API tests are quicker in execution than UI testing. This means we can increase and test more coverage in less time than UI tests. This also means we will find more bugs in less time and be able to fix these quicker.</li>
+<li><strong>Early testing</strong>: Once the logic has been built into an API we can test and validate these for correctness in responses and data. This can be a standalone test and does not have to wait for the full service or UI to be built before being tested.</li>
+<li><strong>Easier to maintain</strong>: With the dynamic nature of UIs and how much they may be altered during their lifetime, standalone API tests are quicker and easier to create and maintain.</li>
+<li><strong>Faster to execute</strong>: API tests are quicker in execution Functional Integration testing as we are not relying on the UI or database. This means we can test quicker and find issues sooner.</li>
+<li><strong>More coverage</strong>: Being able to execute tests earlier and quicker means we can increase the test coverage in less or the same amount of time.</li>
+<li><strong>Faster to fix</strong>: If an API test fails, the cause and origin of the failure can be easily located, making the resolution and retesting of the issue easier and quicker to perform.</li>
 </ul>
-<h2 id="how-do-we-api-test" tabindex="-1"><a class="header-anchor" href="#how-do-we-api-test">How do we API Test?</a></h2>
-<p>The test community approved open source tool for API testing is Karate. Karate allows you script web-service calls using cucumber features.</p>
-<p>Using the familiar Given, When and Then syntax Karate goes further and allows you set variables and use JSON or XML in your features</p>
-<p>Karate allows to write complete end to end web-service scenarios without writing any code.</p>
-<p>For more information on Karate please visit the <a href="https://github.com/karatelabs/karate">Karate github webpage</a></p>
+<h4 id="how-do-we-test-apis" tabindex="-1"><a class="header-anchor" href="#how-do-we-test-apis">How do we test APIs?</a></h4>
+<p>NHSBSA’s approved open source tool for API testing is <a href="https://www.karatelabs.io/">Karate</a>.</p>
+<p>Karate allows testers to write test scripts using a simple, readable feature file format. Using the Behaviour-Driven Development (BDD) style and the <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong> syntax, Karate allows testers to use simple language and plain text to set variables, to use JSON or XML within features to send and validate data, and to automate the full API test suite.</p>
+<p>API tests should consider all business rules, and both positive and negative tests. The <a href="https://gitlab.com/nhsbsa/ddat/test-community/api-standard-framework">API Test Standard Framework</a> must be used when building the test suite. Once stable, the API test suite should be placed into the CI/CD pipeline for full automation.</p>
+<p>For further information on Karate please visit the <a href="https://github.com/karatelabs/karate">Karate GitHub pages</a>. These contain examples and other guidance on how to create API tests using Karate.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -191,7 +169,7 @@ A private API is used only between applications and services.</p>
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2022-02-04T17:27:04.000Z">4 February 2022</time>
+      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
     </p>
 </div>
 

@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta name="description" content="How to raise, manage and retest defects in the NHSBSA">
   <meta name="robots" content="noindex">
   
   <title>
-Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Defect Management - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -40,13 +40,13 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/compatibility-test/"/>
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing-old/defect-management/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta property="og:description" content="How to raise, manage and retest defects in the NHSBSA">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Defect Management - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
@@ -110,6 +110,36 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#how-what-and-when-do-we-raise-defects">How, what and when do we raise defects?</a>
+            		</li>
+
+                    <li><a href="#defect-evidence">Defect evidence</a>
+            		</li>
+
+                    <li><a href="#release-acceptance">Release acceptance</a>
+            
+                <ol>
+                    
+                    <li><a href="#acceptance-test-defects">Acceptance test defects</a>
+            		</li>
+
+                    <li><a href="#accessibility-defects">Accessibility defects</a>
+            		</li>
+
+                    <li><a href="#defect-classification-and-release-standard">Defect classification and release standard</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -122,59 +152,139 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Compatibility Testing
+            Defect Management
           </h1>
           
         </div>
       
 
-<h4 id="what-is-compatibility-testing" tabindex="-1"><a class="header-anchor" href="#what-is-compatibility-testing">What is compatibility testing?</a></h4>
-<p>Compatibility testing focuses on showing that an application or service works on different devices (e.g. laptops, tablets and phones), on different browsers (e.g. Edge, Firefox, Chrome) and different operating systems (e.g. iOS, Windows).</p>
-<p>Our Compatibility Testing is linked to the following requirements:</p>
+<h2 id="how-what-and-when-do-we-raise-defects" tabindex="-1"><a class="header-anchor" href="#how-what-and-when-do-we-raise-defects">How, what and when do we raise defects?</a></h2>
+<p>All defects regardless of the test framework must be logged in the NHSBSA approved tool, Jira.</p>
+<p>The only exemption to the above is if the issue is communicated, discussed and can be fixed quicker than raising the defect in Jira.</p>
+<p>Every defect needs to be assessed. If the defect after consultation with developers is minor and can be fixed quickly then these do not need formally raising. This saves time as the defect raising process can often take longer than the fix.</p>
+<p>Please be aware though the above process must not be used as a way of avoiding raising defects.</p>
+<p>If the fix is to be completed later than 1 hour from raising it then a formal defect needs raising to avoid compliancy or forgetfulness.</p>
+<p>All formally raised defects within the NHSBSA must be raised in Jira and are owned by the testers on the project.</p>
+<p>Testers must own and maintain the defect triage and management process.</p>
+<p>Testers must endeavour to promote defect resolution within sprint planning sessions, especially with Accessibility error defects.</p>
+<h2 id="defect-evidence" tabindex="-1"><a class="header-anchor" href="#defect-evidence">Defect evidence</a></h2>
+<p>All automation tests as standard must have screenshot capture incorporated and active on execution.</p>
+<p>Screenshots do not need to be stored for successful tests. Successful tests can and will be re-run if the need arises for this evidence.</p>
+<p>For unsuccessful and failed tests, screenshots must be kept and stored in the defect in Jira.</p>
+<p>During script development, no current central or cloud solution exists for the storage of this material so these should be stored locally. The management of these screenshots is then at the discretion of the automation tester.</p>
+<p>During pipeline execution, screenshots must not be active as the storage for this material is not available in the pipeline infrastructure.</p>
+<h2 id="release-acceptance" tabindex="-1"><a class="header-anchor" href="#release-acceptance">Release acceptance</a></h2>
+<h3 id="acceptance-test-defects" tabindex="-1"><a class="header-anchor" href="#acceptance-test-defects">Acceptance test defects</a></h3>
+<p>The following defect severity must be adhered to with acceptance test defects:</p>
+<h4 id="high-level-defects" tabindex="-1"><a class="header-anchor" href="#high-level-defects">High level defects</a></h4>
+<p>These are defects that include:</p>
 <ul>
-<li>Ability to provide stakeholders with information about their application regarding functionality, usability and consistency.</li>
-<li>Ability to analyse the system in different OS environments as well as with different mobile devices (phones, tablets).</li>
-<li>Ability to conform to the following GDS Service Standards on performance and durability.
-<ul>
-<li>Standard 6 - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.</li>
-<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.</li>
-<li>Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.</li>
+<li>A workaround would require significant additional user effort.</li>
+<li>Impacts a large number of users and crucial user goals.</li>
+<li>Some loss of revenue and / or loss or reputation as a consequence of multiple users and / or customers experience the outage.</li>
+<li>A workaround and/or fix should be prioritised</li>
 </ul>
+<p>The inclusion of high severity defects in releases must not be released without valid justification and risk(s) approved by Product Owner or Delivery Manager.</p>
+<h4 id="medium-level-defects" tabindex="-1"><a class="header-anchor" href="#medium-level-defects">Medium level defects</a></h4>
+<p>These are defects that include:</p>
+<ul>
+<li>A workaround would require moderate additional user effort.</li>
+<li>Impacts a moderate number of users and no crucial user goals.</li>
+<li>It is possible to fix at a future point without impacting users or operations.</li>
+<li>Is needed prior to business acceptance.</li>
+</ul>
+<p>The inclusion of 3 or more medium severity defects in releases must not be released without valid justification and risk(s) approved by Product Owner or Delivery Manager.</p>
+<h4 id="low-level-defects" tabindex="-1"><a class="header-anchor" href="#low-level-defects">Low level defects</a></h4>
+<p>These are defects that include:</p>
+<ul>
+<li>A workaround would require very low additional user effort.</li>
+<li>Minor operational and user impact and no user goals are affected.</li>
+<li>Does not cause serious confusion to the user.</li>
+<li>Is not needed prior to business acceptance.</li>
+</ul>
+<p>Low level defects do not need approval for release but every effort should be made to resolve all defects before release.</p>
+<h3 id="accessibility-defects" tabindex="-1"><a class="header-anchor" href="#accessibility-defects">Accessibility defects</a></h3>
+<p>These issues must be logged by issue and not screen, tool or stage.</p>
+<p>Raising defects by screen, tool or stage will not give a true representation of accessibility compliance.</p>
+<ul>
+<li>
+<p>Screen affected is an attribute to be included in raised defects to specify affected areas.</p>
+</li>
+<li>
+<p>Stage is not needed in defects as this is for framework guidance.</p>
+</li>
+<li>
+<p>Tools should be specified in the defect using the below prefixes.</p>
 </li>
 </ul>
-<p>To ensure our services meet these requirements we run tests that are representative of the services. These are end-to-end user journey tests that represent how the service behaves using the various browsers, devices and phones.</p>
-<p>GDS state “Your service must be universally accessible. This means building it to work on every browser or device that your users access it on.” This means that if it is known that users are not going to use certain devices, browsers and/or operating systems then there is little or no need to test on them. Each DDaT service should consider the User Research for new services and monitoring such as Google Analytics for existing services to consider the scope of the test.</p>
-<h4 id="how-do-we-test-compatibility" tabindex="-1"><a class="header-anchor" href="#how-do-we-test-compatibility">How do we test compatibility?</a></h4>
-<p>NHSBSA’s approved compatibility test platform is <a href="https://saucelabs.com/">Saucelabs</a>. This gives us access to over 2000 device and browser combinations.</p>
-<p>Saucelabs allows testers to test different devices and browsers. We test the latest and latest-1 models and versions where possible, keeping in line with <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">GDS guidance</a>. Via Saucelabs we have access to both real and virtual devices and can execute both manual and automated tests.</p>
-<p>A defined <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Compatibility-Testing-framework.aspx">NHSBSA Compatibility Test Framework</a> is maintained with details of the current test coverage scope. As this is a dynamic page that is updated at least once a month, the details are not presented here. However, all NHSBSA Testers have access to it via our internal SharePoint pages.</p>
-<p>There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.</p>
-<h4 id="local-execution" tabindex="-1"><a class="header-anchor" href="#local-execution">Local execution</a></h4>
-<p>This is where the tests are executed from the tester’s machine by manually entering an execution command on the command line. All the defined tests are executed through the Cloud-based test environments.</p>
-<p>Local execution of tests through the Saucelabs service executes from the same command line statement structure as automation tests, but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the platform, browser or device much easier. It is also better for maintainability and code quality that these are not hard coded into test scripts.</p>
-<p>In order to run tests through Saucelabs:</p>
+<p>Defects by issue will also allow us to collate metrics and do analysis on common and replicated issues and where they occur.</p>
+<p>All defect prefixes should include the tool and defect type:</p>
 <ul>
-<li>Internal NHSBSA users need to be connected to Global Protect</li>
-<li>External users need to be connected with AWS VPN</li>
+<li>WE - Wave error</li>
+<li>WA - Wave alert</li>
+<li>LE - Lighthouse error</li>
+<li>AE - Axe error</li>
+<li>AA - Axe alert</li>
+<li>ME - Manual checklist error</li>
+<li>SR - Screen Reader error</li>
+<li>SREC - Speech Recognition error</li>
+<li>PDF - PDF document error</li>
+<li>WORD - Word document error</li>
+<li>EXCEL - Excel document error</li>
+<li>PP - Powerpoint document error</li>
 </ul>
-<p>This will allow access via the URL using NHSBSA login credentials.</p>
+<h3 id="defect-classification-and-release-standard" tabindex="-1"><a class="header-anchor" href="#defect-classification-and-release-standard">Defect classification and release standard</a></h3>
+<h4 id="high-level-defects-1" tabindex="-1"><a class="header-anchor" href="#high-level-defects-1">High level defects</a></h4>
+<p>These include:</p>
 <ul>
-<li>All users need to connect via the <a href="https://docs.saucelabs.com/secure-connections/sauce-connect-5/quickstart/">Sauce Connect Proxy</a></li>
+<li>Wave Errors</li>
+<li>Wave Contrast Errors</li>
+<li>Lighthouse mobile test with result under 100</li>
+<li>Lighthouse desktop test with result under 100</li>
+<li>Axe Critical</li>
+<li>Axe Serious</li>
+<li>Any Manual Checklist errors/failures</li>
+<li>Any Screen Reader Checklist errors/failures</li>
+<li>Any Speech Recognition errors/failures</li>
 </ul>
-<p>All tests during development should be run using this method as it can give fast feedback about the tests and the service.</p>
-<h4 id="ci/cd-pipeline-execution" tabindex="-1"><a class="header-anchor" href="#ci/cd-pipeline-execution">CI/CD pipeline execution</a></h4>
-<p>It is possible to execute tests either by utilising a schedule or a trigger within the CI/DC pipeline.</p>
-<p>By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.</p>
-<p>By using a trigger either manually (via the play triangle icon) for a job or automatically within the trigger, the tests can be run on the latest deployed version of the service in the test environment.</p>
-<p>This is useful for regression compatibility testing.</p>
-<h4 id="when-should-compatibility-tests-be-run" tabindex="-1"><a class="header-anchor" href="#when-should-compatibility-tests-be-run">When should compatibility tests be run?</a></h4>
-<p>Compatibility testing should be considered in scope when a release includes significant new functionality, including new or updated screens. Executing the tests as early as possible will provide fast feedback regarding design and development.</p>
-<p>Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.</p>
-<p>Once the compatibility tests are in the CI/CD pipeline they can be included in regression testing.</p>
-<h4 id="the-compatibility-test-process" tabindex="-1"><a class="header-anchor" href="#the-compatibility-test-process">The compatibility test process</a></h4>
-<p>During Compatibility Test execution, testers must ensure all test evidence (screenshots, videos) is extracted and saved within the NHSBSA domain (rather than leaving within Saucelabs), preferably JIRA. All Saucelabs devices are cleared of data used once the test is complete.</p>
-<p>The test coverage, results and issues faced during testing must be documented in the Compatibility Test Report.</p>
-<p>Please make sure that you close the Saucelabs connect proxy tunnel after the test execution so there is not impact on other testers’ activities.</p>
+<p>These defects must be fixed before release.</p>
+<p>If issues are not fixed then either:</p>
+<ul>
+<li>
+<p>The release does not occur or</p>
+</li>
+<li>
+<p>Valid justifications are given to add into the defects and accessibility report to identify and cover such risks to legal legislation.</p>
+</li>
+<li>
+<p>These risks are signed off by the delivery manager or product owner on behalf of the NHSBSA.</p>
+</li>
+<li>
+<p>All outstanding issues must be included in accessibility statement.</p>
+</li>
+</ul>
+<h4 id="medium-level-defects-1" tabindex="-1"><a class="header-anchor" href="#medium-level-defects-1">Medium level defects</a></h4>
+<p>These include:</p>
+<ul>
+<li>Wave Alerts</li>
+<li>Axe Moderate</li>
+<li>Axe Minor</li>
+<li>Axe Review</li>
+</ul>
+<p>Must be raised and a fix planned.</p>
+<p>Under project discretion to plan fix into a release.</p>
+<p>These are often issues where a problem has been found but a workaround can help to lessen the impact of the problem. Justification and evidence that this workaround does not negatively affect users must be available.</p>
+<h4 id="reviews" tabindex="-1"><a class="header-anchor" href="#reviews">Reviews</a></h4>
+<p>These include:</p>
+<ul>
+<li>Wave Features</li>
+<li>Wave Structural Elements</li>
+<li>Wave HTML &amp; Aria</li>
+</ul>
+<p>Features, Structural Elements and Aria are parts of the website that need to be reviewed to check that they are accessible.</p>
+<p>These need to be reviewed by testers and developers to ensure they are accessible and once covered can lead to full accessibility compliance to the regulations.</p>
+<p>The aim of all services has to be fix all accessibility issues. No project can claim full compliance of the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">latest published WCAG standard</a> to ‘AA’ standard until all issues High and Medium are fixed or justified.</p>
+<p>Please remember: when defects and issues are closed please ensure the project knows to remove these issues from the website’s accessibility statement.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -186,7 +296,7 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-frameworks%2Fcompatibility-test%2Findex&#39;%20">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting-old%2Fdefect-management&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>

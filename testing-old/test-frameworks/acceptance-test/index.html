@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta name="description" content="How &amp;amp; why we acceptance test in the NHSBSA">
   <meta name="robots" content="noindex">
   
   <title>
-Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -40,13 +40,13 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/compatibility-test/"/>
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta property="og:description" content="How &amp;amp; why we acceptance test in the NHSBSA">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Acceptance Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
@@ -110,6 +110,27 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#what-is-acceptance-testing">What is acceptance testing?</a>
+            		</li>
+
+                    <li><a href="#why-do-we-write-in-a-user-centric-way">Why do we write in a user centric way?</a>
+            		</li>
+
+                    <li><a href="#whats-included-in-our-acceptance-tests">Whats included in our acceptance tests?</a>
+            		</li>
+
+                    <li><a href="#how-our-acceptance-tests-structured">How our acceptance tests structured?</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -122,59 +143,92 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Compatibility Testing
+            Acceptance Testing
           </h1>
           
         </div>
       
 
-<h4 id="what-is-compatibility-testing" tabindex="-1"><a class="header-anchor" href="#what-is-compatibility-testing">What is compatibility testing?</a></h4>
-<p>Compatibility testing focuses on showing that an application or service works on different devices (e.g. laptops, tablets and phones), on different browsers (e.g. Edge, Firefox, Chrome) and different operating systems (e.g. iOS, Windows).</p>
-<p>Our Compatibility Testing is linked to the following requirements:</p>
+<h2 id="what-is-acceptance-testing" tabindex="-1"><a class="header-anchor" href="#what-is-acceptance-testing">What is acceptance testing?</a></h2>
+<p>‘Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system’. ISTQB</p>
+<p>All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests.</p>
+<p>We employ an ‘automation by default’ approach to testing so unless not possible or constrained then tests must be automated. Over 90% of our current acceptance tests are automated.</p>
+<p>The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.</p>
+<p>Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person. All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don’t press this or click that like in more traditional test plans and scripts. We talk as the user would express a scenario or situation ‘Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC’.</p>
+<p>Only in circumstances where these actions are needed to prove a clear acceptance criteria can they be used.</p>
+<h2 id="why-do-we-write-in-a-user-centric-way" tabindex="-1"><a class="header-anchor" href="#why-do-we-write-in-a-user-centric-way">Why do we write in a user centric way?</a></h2>
+<p>Everything we do whether it is designing a new service or testing it involves the users and what they need or require.</p>
+<p>There is no use for a service that disrupts, confuses or stops the user from using it to get want they want or need in the quickest time possible.</p>
+<p>So to be able to assure our services meet these needs then we identify clear acceptance criteria expressing these needs and then our tests validate and assure these needs have been met.</p>
+<p>Of course user needs change and evolve, so therefore our tests need to be able to do this so we created our framework to be easy to understand, adaptable and easy to maintain so that flexibility and change can be incorporated anytime this happens.</p>
+<p>Within each project there is a need to perform testing which can be linked to the following requirements:</p>
+<p>Ability to provide stakeholder with information that system under development works as described in product requirements<br>
+Ability to conform to the following GDS Service Standards</p>
 <ul>
-<li>Ability to provide stakeholders with information about their application regarding functionality, usability and consistency.</li>
-<li>Ability to analyse the system in different OS environments as well as with different mobile devices (phones, tablets).</li>
-<li>Ability to conform to the following GDS Service Standards on performance and durability.
+<li>Standard 6 - Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.</li>
+<li>Standard 7 - Evaluate what user data and information the digital service will be providing or storing and address the security level, legal responsibilities, privacy issues and risks associated with the service (consulting with experts where appropriate).</li>
+<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.<br>
+Utilising an Automation Test Framework to test Front end, Back end and API services is recognised as a way to provide consistent tests that can reused and validate functionality and regression testing</li>
+</ul>
+<h2 id="whats-included-in-our-acceptance-tests" tabindex="-1"><a class="header-anchor" href="#whats-included-in-our-acceptance-tests">Whats included in our acceptance tests?</a></h2>
+<p>All acceptance tests in the NHSBSA provide assurance by testing the following base coverage:</p>
 <ul>
-<li>Standard 6 - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.</li>
-<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.</li>
-<li>Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.</li>
+<li>Functionality / behaviour of a service according to acceptance criteria.</li>
+<li>Validation of service inputs must include Valid, Invalid, None entry &amp; Verification scenarios (e.g. field lengths, acceptance levels).</li>
+<li>User Journeys, happy and unhappy paths, service scope limitations or redirects.</li>
+<li>Boundary Value Analysis and Equivalence Partitioning test methods are implemented to test range and limits of services.</li>
+<li>Integration with other services or providers.</li>
+<li>Regression to ensure the continued assurance of all the service is not affected by any change or improvement.</li>
+</ul>
+<h2 id="how-our-acceptance-tests-structured" tabindex="-1"><a class="header-anchor" href="#how-our-acceptance-tests-structured">How our acceptance tests structured?</a></h2>
+<p>All of our tests are created in user centric BDD using Cucumber. Whether these are manual or automated tests all scripts, scenarios and cases are produced in the same format.</p>
+<p>We also use the following in our tests:</p>
+<ul>
+<li>Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.</li>
+<li>User Centric BDD - BDD uses human-readable descriptions of software user requirements as the basis for software tests. Each test is based on a user story written in the formally specified clear natural English language. User Centric BDD ensures all test scenarios written in Gherkin syntax are from a users perspective and phased as a user would describe a scenario or circumstance.</li>
+<li>Gherkin - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. Each keyword helps the user and tester to understand the requirements and scenarios more clearly, these keywords include Given (pre-condition), When (action), Then (result).</li>
+<li>Selenium - a collection of language specific bindings to drive a browser - the way it is meant to be driven.</li>
+<li>Java - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
+<li>Ruby - A language supported by the cucumber project to implement cucumber steps using Selenium.</li>
+<li>Dedicated use of Test Environments:
+<ul>
+<li>Legacy - test environments not in the cloud use environments in our legacy infrastructure.</li>
+<li>Cloud - test environments in CI/CD pipelines are used.</li>
+<li>Local environments - where a test environment is not setup, running an application locally on a PC/Mac can provide access to developed systems. This may also be used where access to specific scenarios can not be achieved in the test environments due to governance restrictions.</li>
 </ul>
 </li>
 </ul>
-<p>To ensure our services meet these requirements we run tests that are representative of the services. These are end-to-end user journey tests that represent how the service behaves using the various browsers, devices and phones.</p>
-<p>GDS state “Your service must be universally accessible. This means building it to work on every browser or device that your users access it on.” This means that if it is known that users are not going to use certain devices, browsers and/or operating systems then there is little or no need to test on them. Each DDaT service should consider the User Research for new services and monitoring such as Google Analytics for existing services to consider the scope of the test.</p>
-<h4 id="how-do-we-test-compatibility" tabindex="-1"><a class="header-anchor" href="#how-do-we-test-compatibility">How do we test compatibility?</a></h4>
-<p>NHSBSA’s approved compatibility test platform is <a href="https://saucelabs.com/">Saucelabs</a>. This gives us access to over 2000 device and browser combinations.</p>
-<p>Saucelabs allows testers to test different devices and browsers. We test the latest and latest-1 models and versions where possible, keeping in line with <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">GDS guidance</a>. Via Saucelabs we have access to both real and virtual devices and can execute both manual and automated tests.</p>
-<p>A defined <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Compatibility-Testing-framework.aspx">NHSBSA Compatibility Test Framework</a> is maintained with details of the current test coverage scope. As this is a dynamic page that is updated at least once a month, the details are not presented here. However, all NHSBSA Testers have access to it via our internal SharePoint pages.</p>
-<p>There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.</p>
-<h4 id="local-execution" tabindex="-1"><a class="header-anchor" href="#local-execution">Local execution</a></h4>
-<p>This is where the tests are executed from the tester’s machine by manually entering an execution command on the command line. All the defined tests are executed through the Cloud-based test environments.</p>
-<p>Local execution of tests through the Saucelabs service executes from the same command line statement structure as automation tests, but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the platform, browser or device much easier. It is also better for maintainability and code quality that these are not hard coded into test scripts.</p>
-<p>In order to run tests through Saucelabs:</p>
-<ul>
-<li>Internal NHSBSA users need to be connected to Global Protect</li>
-<li>External users need to be connected with AWS VPN</li>
-</ul>
-<p>This will allow access via the URL using NHSBSA login credentials.</p>
-<ul>
-<li>All users need to connect via the <a href="https://docs.saucelabs.com/secure-connections/sauce-connect-5/quickstart/">Sauce Connect Proxy</a></li>
-</ul>
-<p>All tests during development should be run using this method as it can give fast feedback about the tests and the service.</p>
-<h4 id="ci/cd-pipeline-execution" tabindex="-1"><a class="header-anchor" href="#ci/cd-pipeline-execution">CI/CD pipeline execution</a></h4>
-<p>It is possible to execute tests either by utilising a schedule or a trigger within the CI/DC pipeline.</p>
-<p>By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.</p>
-<p>By using a trigger either manually (via the play triangle icon) for a job or automatically within the trigger, the tests can be run on the latest deployed version of the service in the test environment.</p>
-<p>This is useful for regression compatibility testing.</p>
-<h4 id="when-should-compatibility-tests-be-run" tabindex="-1"><a class="header-anchor" href="#when-should-compatibility-tests-be-run">When should compatibility tests be run?</a></h4>
-<p>Compatibility testing should be considered in scope when a release includes significant new functionality, including new or updated screens. Executing the tests as early as possible will provide fast feedback regarding design and development.</p>
-<p>Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.</p>
-<p>Once the compatibility tests are in the CI/CD pipeline they can be included in regression testing.</p>
-<h4 id="the-compatibility-test-process" tabindex="-1"><a class="header-anchor" href="#the-compatibility-test-process">The compatibility test process</a></h4>
-<p>During Compatibility Test execution, testers must ensure all test evidence (screenshots, videos) is extracted and saved within the NHSBSA domain (rather than leaving within Saucelabs), preferably JIRA. All Saucelabs devices are cleared of data used once the test is complete.</p>
-<p>The test coverage, results and issues faced during testing must be documented in the Compatibility Test Report.</p>
-<p>Please make sure that you close the Saucelabs connect proxy tunnel after the test execution so there is not impact on other testers’ activities.</p>
+        	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/automated-acceptance-testing/">Automated Acceptance testing</a>
+						</h2>
+						
+					</div>
+					<p class="nhsuk-card__description">What, how and why we automate acceptance test at the NHSBSA</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/testing-old/test-frameworks/acceptance-test/manual-acceptance-testing/">Manual Acceptance testing</a>
+						</h2>
+						
+					</div>
+					<p class="nhsuk-card__description">What, how and where we manually acceptance test at the NHSBSA</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -186,7 +240,7 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-frameworks%2Fcompatibility-test%2Findex&#39;%20">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting-old%2Ftest-frameworks%2Facceptance-test%2Findex&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>

@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta name="description" content="Checklists and Assistive technologies in use at the NHSBSA">
   <meta name="robots" content="noindex">
   
   <title>
-Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Checklists &amp; Assistive Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -40,13 +40,13 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
   <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
 
-  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing/test-frameworks/compatibility-test/"/>
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/testing-old/test-frameworks/accessibility-test/checklists-assistive-technologies/"/>
   <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
-  <meta property="og:description" content="Compatibility testing focuses on showing that an application or service works on different devices, different browsers and different operating systems">
+  <meta property="og:description" content="Checklists and Assistive technologies in use at the NHSBSA">
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Checklists &amp; Assistive Technologies - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=bea7abdb6430" media="all" rel="stylesheet" type="text/css" />
 
@@ -110,6 +110,30 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container app-width-container">
     <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#checklists">Checklists</a>
+            
+                <ol>
+                    
+                    <li><a href="#manual-checklist">Manual Checklist</a>
+            		</li>
+
+                    <li><a href="#screen-reader-checklist">Screen Reader Checklist</a>
+            		</li>
+
+                    <li><a href="#where-to-get-these-tools">Where to get these tools</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
 
       <div class="app-pane__main-content">
         <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
@@ -122,59 +146,43 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Compatibility Testing
+            Checklists &amp; Assistive Technologies
           </h1>
           
         </div>
       
 
-<h4 id="what-is-compatibility-testing" tabindex="-1"><a class="header-anchor" href="#what-is-compatibility-testing">What is compatibility testing?</a></h4>
-<p>Compatibility testing focuses on showing that an application or service works on different devices (e.g. laptops, tablets and phones), on different browsers (e.g. Edge, Firefox, Chrome) and different operating systems (e.g. iOS, Windows).</p>
-<p>Our Compatibility Testing is linked to the following requirements:</p>
+<h2 id="checklists" tabindex="-1"><a class="header-anchor" href="#checklists">Checklists</a></h2>
+<p>To widen our testing coverage we manually check on various accessibility focus areas where accessibility issues are likely to occur or where we have encountered either WCAG conflicts or issues from audits.</p>
+<h3 id="manual-checklist" tabindex="-1"><a class="header-anchor" href="#manual-checklist">Manual Checklist</a></h3>
+<p>Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.</p>
+<p>This checklist compromises of 28 areas including non java script operation, titles, urls and tab indexes where manual tests can identify issues that would affect the usability of a service but are still within the scope of WCAG guidelines.</p>
+<h3 id="screen-reader-checklist" tabindex="-1"><a class="header-anchor" href="#screen-reader-checklist">Screen Reader Checklist</a></h3>
+<p>To complement the manual and automated checks we also use assistive technologies to test if the services work and operate correctly for users of screen readers, speech recognition or screen magnifiers.</p>
+<p>These tests including a checklist for screen readers to look into accessibility focus areas as well as testing representative user journeys with assistive technologies.</p>
+<p>We use the following assistive technologies to test our services:</p>
 <ul>
-<li>Ability to provide stakeholders with information about their application regarding functionality, usability and consistency.</li>
-<li>Ability to analyse the system in different OS environments as well as with different mobile devices (phones, tablets).</li>
-<li>Ability to conform to the following GDS Service Standards on performance and durability.
-<ul>
-<li>Standard 6 - Evaluate tools and systems - the evaluation and use of tools for your system and development environment.</li>
-<li>Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.</li>
-<li>Standard 13 - To pass the beta and live assessments you also need to show that the service is responsive and works on mobile devices.</li>
+<li>Screen Readers (NVDA on Windows and Voice Over on Macs)</li>
+<li>Speech Recognition (Dragon on Windows and Voice Control on Macs)</li>
+<li>Screen Magnifiers (Zoom and magnifers on both machine types)</li>
 </ul>
+<h3 id="where-to-get-these-tools" tabindex="-1"><a class="header-anchor" href="#where-to-get-these-tools">Where to get these tools</a></h3>
+<ul>
+<li>
+<p>Screen Readers:<br>
+NVDA - To download it please go to <a href="https://www.nvaccess.org/download/">NVDA download page</a><br>
+Voice Over - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Over’ or press the command &amp; F5 keys.</p>
+</li>
+<li>
+<p>Speech Recognition:<br>
+Dragon - This is a licenced tool and to request a licence please contact you NHSBSA test lead.<br>
+Voice Control - this is pre-installed on all macs, to access open system preferences, open Accessibility, click on Voice Over and click on ‘enable Voice Control’.</p>
+</li>
+<li>
+<p>Magnifiers:<br>
+These are both available on Windows and Macs. You can also use the Zoom feature in Chrome, Firefox and Edge.</p>
 </li>
 </ul>
-<p>To ensure our services meet these requirements we run tests that are representative of the services. These are end-to-end user journey tests that represent how the service behaves using the various browsers, devices and phones.</p>
-<p>GDS state “Your service must be universally accessible. This means building it to work on every browser or device that your users access it on.” This means that if it is known that users are not going to use certain devices, browsers and/or operating systems then there is little or no need to test on them. Each DDaT service should consider the User Research for new services and monitoring such as Google Analytics for existing services to consider the scope of the test.</p>
-<h4 id="how-do-we-test-compatibility" tabindex="-1"><a class="header-anchor" href="#how-do-we-test-compatibility">How do we test compatibility?</a></h4>
-<p>NHSBSA’s approved compatibility test platform is <a href="https://saucelabs.com/">Saucelabs</a>. This gives us access to over 2000 device and browser combinations.</p>
-<p>Saucelabs allows testers to test different devices and browsers. We test the latest and latest-1 models and versions where possible, keeping in line with <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">GDS guidance</a>. Via Saucelabs we have access to both real and virtual devices and can execute both manual and automated tests.</p>
-<p>A defined <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Compatibility-Testing-framework.aspx">NHSBSA Compatibility Test Framework</a> is maintained with details of the current test coverage scope. As this is a dynamic page that is updated at least once a month, the details are not presented here. However, all NHSBSA Testers have access to it via our internal SharePoint pages.</p>
-<p>There are two ways to run the compatibility tests, locally from your machine or in a CI/CD pipeline.</p>
-<h4 id="local-execution" tabindex="-1"><a class="header-anchor" href="#local-execution">Local execution</a></h4>
-<p>This is where the tests are executed from the tester’s machine by manually entering an execution command on the command line. All the defined tests are executed through the Cloud-based test environments.</p>
-<p>Local execution of tests through the Saucelabs service executes from the same command line statement structure as automation tests, but with some extra capabilities (choice of platform, browser, device etc) added to the command. This allows the tester to define and change the platform, browser or device much easier. It is also better for maintainability and code quality that these are not hard coded into test scripts.</p>
-<p>In order to run tests through Saucelabs:</p>
-<ul>
-<li>Internal NHSBSA users need to be connected to Global Protect</li>
-<li>External users need to be connected with AWS VPN</li>
-</ul>
-<p>This will allow access via the URL using NHSBSA login credentials.</p>
-<ul>
-<li>All users need to connect via the <a href="https://docs.saucelabs.com/secure-connections/sauce-connect-5/quickstart/">Sauce Connect Proxy</a></li>
-</ul>
-<p>All tests during development should be run using this method as it can give fast feedback about the tests and the service.</p>
-<h4 id="ci/cd-pipeline-execution" tabindex="-1"><a class="header-anchor" href="#ci/cd-pipeline-execution">CI/CD pipeline execution</a></h4>
-<p>It is possible to execute tests either by utilising a schedule or a trigger within the CI/DC pipeline.</p>
-<p>By setting up a schedule, the tests will run when they are planned to execute in the pipeline utilising both the automation tests and environments when these are quiet. This should be a regular nightly exercise to fully utilise the capability of the pipelines, environments and to aid testers with extra testing capacity.</p>
-<p>By using a trigger either manually (via the play triangle icon) for a job or automatically within the trigger, the tests can be run on the latest deployed version of the service in the test environment.</p>
-<p>This is useful for regression compatibility testing.</p>
-<h4 id="when-should-compatibility-tests-be-run" tabindex="-1"><a class="header-anchor" href="#when-should-compatibility-tests-be-run">When should compatibility tests be run?</a></h4>
-<p>Compatibility testing should be considered in scope when a release includes significant new functionality, including new or updated screens. Executing the tests as early as possible will provide fast feedback regarding design and development.</p>
-<p>Leaving compatibility testing too late in the development lifecycle increases the risk of problems arising which could result in severe rework and issues potentially delaying or cancelling releases.</p>
-<p>Once the compatibility tests are in the CI/CD pipeline they can be included in regression testing.</p>
-<h4 id="the-compatibility-test-process" tabindex="-1"><a class="header-anchor" href="#the-compatibility-test-process">The compatibility test process</a></h4>
-<p>During Compatibility Test execution, testers must ensure all test evidence (screenshots, videos) is extracted and saved within the NHSBSA domain (rather than leaving within Saucelabs), preferably JIRA. All Saucelabs devices are cleared of data used once the test is complete.</p>
-<p>The test coverage, results and issues faced during testing must be documented in the Compatibility Test Report.</p>
-<p>Please make sure that you close the Saucelabs connect proxy tunnel after the test execution so there is not impact on other testers’ activities.</p>
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -186,7 +194,7 @@ Compatibility Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         
 
 <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting%2Ftest-frameworks%2Fcompatibility-test%2Findex&#39;%20">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=general-playbook-ideas&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Ftesting-old%2Ftest-frameworks%2Faccessibility-test%2Fchecklists-assistive-technologies&#39;%20">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
