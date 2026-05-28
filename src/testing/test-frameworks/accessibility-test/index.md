@@ -1,120 +1,127 @@
 ---
 layout: article
 title: "Accessibility Testing"
-description: "How & why we accessibility test in the NHSBSA"
+description: "Accessibility Testing is to ensure the NHSBSA meet the legislation and the standards, and to ensure our services, dashboards and publications can be used by users with accessibility needs"
 tags: test-frameworks
-order: 3
-related:
-  tag: accessibility-framework
+order: 2
 ---
 
-## Why do we accessibility test in the NHSBSA
 
-New regulations came into force for public sector bodies on 23 September 2018. These regulations meant all websites or mobile apps must be accessible in four key areas: ‘perceivable, operable, understandable and robust’.
+Why do we test accessibility?
 
-The full name of the regulations is: Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
+Regulations came into force for public sector bodies in 2018 - [Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/made). These regulations stated that all public sector websites or mobile apps must be accessible in four key areas:
 
-The 2018 regulations build on the existing obligations to people who have a disability under the Equality Act 2010 (or the Disability Discrimination Act 1995 in Northern Ireland). This states that all UK service providers must consider ‘reasonable adjustments’ for disabled people.
+- Perceivable
+- Operable
+- Understandable
+- Robust
 
-To ensure we meet this legislation an accessibility framework was developed and this has quickly become one of the core test frameworks the test community uses to ensure every product or service is accessible.
+The 2018 regulations built on the existing obligations to people who have a disability under the [Equality Act 2010 (or the Disability Discrimination Act 1995 in Northern Ireland)](https://www.legislation.gov.uk/ukpga/2010/15/contents). This states that all UK service providers must consider 'reasonable adjustments' for disabled people.
 
-This means testing to ensure services meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard as well as ensuring our services can be used by anyone with any accessibility needs.
+Additionally, [Government Digital Services (GDS)](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) clearly state that public sector services (including those used internally) must be open to all. This is not only a moral obligation but also a legal requirement.
 
-To meet this legislation the NHSBSA has to adhere to the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) and achieve at minimum 'AA' standard. 
+At the NHSBSA, as with all UK government bodies, we follow the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). We design, develop and test our services to the latest published WCAG standard. When a service (web application, dashboard, publication or anything that is user facing) is promoted to Production, an Accessibility Statement is published to advise users its accessibility status.
 
-The latest published WCAG standard can be found here: https://www.w3.org/WAI/standards-guidelines/wcag/
+The WCAG standard has 3 levels for web application accessibility:
 
-The accessibility standard levels are as follows:
+- Level A -- the most basic web accessibility features
+- Level AA -- deals with the biggest and most common barriers for users with accessible needs
+- Level AAA -- the highest and most complex level of web accessibility
 
-- Level A – the most basic web accessibility features
+Whilst our internal and external facing web applications, dashboards and publications *must* meet the 'AA' standard, we aim to meet 'AAA' where possible.
 
-- Level AA – deals with the biggest and most common barriers for disabled users
+What is accessibility testing?
 
-- Level AAA – the highest (and most complex) level of web accessibility
+To ensure the NHSBSA meet the legislation and the standards, and to ensure our services, dashboards and publications can be used by users with accessibility needs, we have developed an Accessibility Test Framework.
 
-All our websites have to meet at minimum 'AA' standard on all websites but we should be aiming for the highest 'AAA' level whether the website is internal or externally facing, for 1 user or a million users.​​​​​​​
+We test that our services are accessible by combining both automated and manual testing tools and techniques.
 
-We assure all our services are accessible by combining both automated and manual testing tools and techniques in order to meet our users needs.
+The scope of accessibility testing includes:
 
-There is more information / guidance on the latest published WCAG standard available on the [World Wide Web Consortium (W3C)](https://www.w3.org/WAI/standards-guidelines/wcag/) website.
-
-## Whats in the scope for accessibility testing?
-
-The scope of accessibility testing includes every web based service whether this is for internal or external use or release, whether this is for 1 person or 5 million people, all our users are to catered for.
-
-Scope of accessibility coverage includes:
 - All website content, functionality and interactions.
-- Any document are uploaded, downloaded, used or displayed by the service.
-- Any authentication mechanisms used for service or website login.
-- External material/links, the service should assess the benefits and usage of using external material. Testing of this material and communication with the third parties of any issues that arise.
-- Any third party features or products that a service uses or consumes.
-- Any third party or off the shelf products used by or conjunction with a service.
+- Any document that is uploaded, downloaded, used or displayed by a service.
+- Any authentication mechanism used by a service.
+- Any third-party features or products that a service uses or consumes.
+- Any third-party or off the shelf products used by or in conjunction with a service.
+- Any third-party or off the shelf product used within the NHSBSA (with the expectation that the testing is conducted by the vendor)
+- Any dashboard or similar displaying data or data analysis produced by the NHSBSA
+- Any data publication producing data or data analysis from the NHSBSA
+- Any email template that is produced and sent by a NHSBSA service
 
-If any of the above scope is not covered then this must be risk approved by a delivery manager and service owner. 
-Any none coverage should also be add to the Accessibility statement(s) for transparency.
+Accessibility Testing must be conducted for all new web applications, dashboards and publications. A targeted regression test must be conducted when the web application, dashboard or publication is updated or refreshed.
+
+## Accessibility Test Framework
 
 
-## Accessibility testing framework
+No one technique will fully test or find all accessibility issues. We use a combination of techniques and tools to ensure our testing is as comprehensive as we can make it. Our approach is regularly reviewed to ensure it is adequate and is providing the appropriate assurance to our users.
 
-Our accessibility test framework is a combination of manual and automated testing techniques.
+### Stage 1 -- Automated Checkers
 
-No one technique alone will fully test or find all issues so using a combination ensures our test coverage is relevant and as comprehensive as we can make it.
+There are many different tools and checkers available both in the licensed and open-source markets. Just because a tool is licensed does not mean it assures a higher or better quality of results than a free offering. Each tool we use has been investigated for their benefits and weaknesses.
 
-### Stage 1 - Automated checkers
+Additionally, no one tool will give you 100 coverage and checks on the guidelines. Many tools may only find 40% or below of issues that exist on a website. Therefore, a combined approach of different tools and techniques (manual and automated) gives us better results.
 
-There are many different tools and checkers available both in the licensed and open source markets. Just because a tool is licensed does not mean it assures a higher or better quality of results than a free offering, each tool we use has been investigated for their benefits and weaknesses.
+The NHSBSA accessibility test framework includes the following automated checkers (browser plugins):
 
-No one tool will give you full perfect checks on the guidelines either, many tools only actually find 40% or below of issues that exist on your website. Therefore a combined approach of mixed tools and techniques (manual and automated) will give us better results.
+- Wave
+- Axe
+- Lighthouse
 
-The NHSBSA tests uses the following automated checkers:
+We have developed an automated accessibility test framework, thus making the testing at this stage as efficient as possible.
 
-- Accessibility Browser Plugins: Wave, Axe and Lighthouse. (All open source)
+### Stage 2 -- Manual Checklist
 
-### Stage 2 - Manual checklist & Assistive Technologies
+To widen our testing coverage, a manual checklist has been developed to check each WCAG guideline in turn. It includes checks on screen orientation and keyboard navigation through to error handling and use of colour in services. We also manually check accessibility patterns and focus areas where we know issues may arise.
 
-To widen our testing coverage we also manually check on various accessibility patterns and focus areas where we have encountered either WCAG conflicts or issues from audits.
+We use the manual checklist to test our web applications as well as data products such as dashboards and data publications.
 
-This manual checklist includes checks from screen orientation, keyboard navigation through to error handling and use of colour in services.
+It is noted that the manual checklist takes time to complete. Its coverage and its suitability are regularly reviewed, and appropriate updates are made to ensure it is fit for purpose. The review includes an efficiency review to check we have identified improvements that can be implemented.
 
-Accessibility of a service is more than just complying to the legal guidelines, we also have to ensure our users can use the service without having any problems.
+### Stage 3 -- Assistive Technologies
 
-To test this we implement checks using assistive technologies to test our services are operable and robust for all users. The assistive technologies we user are:
+The accessibility of a service is more than just complying to the legal guidelines. We also ensure our users can use the service with little or no barriers. Some users may use assistive technology to access NHSBSA services. Our testing therefore must include checks using assistive technologies to ensure our services are operable and robust for all users.
 
-- Screen Readers - NVDA on Windows and Voice Over on Mac machines.
-- Speech Recognition - Dragon on Windows and Voice Control on Mac machines.
-- Screen Magnifiers - Browser and machine based tools like Zoom features.
+The NHSBSA accessibility test framework includes the following assistive technologies:
 
-### Stage 3 - Accessibility Statements
+Screen Readers
 
-Each website must by law have an accurate and up to date accessibility statement.
+- Voice Over on Mac OS X
+- NVDA on Windows
+- JAWS
 
-The creation and updating of all accessibility statements is a team responsibility but testers are involved in adding and updating any issues and WCAG contradictions thst may exist.
+Speech Recognition
 
-Issues that make their way to statements are those that have been found, raised but can not be fixed at present. 
-To be included in an accessibility statement these issues would need full justified reasoning as well as approved risk raised before the s. These have to be included in the statements.
+- Voice Control on Mac OS X
+- Dragon on Windows
 
-It is a testers responsibility to ensure the following with statements:
+Screen Magnifiers
 
-- All issues outstanding are included in the statements
-- The issues are in natural english language and not tool or technical jargon.
+- Windows Magnifier
+- Apple Zoom
+
+Also:
+
+- Adobe Acrobat Pro -- PDF checker
+
+### Accessibility Test Report
+
+Once all three accessibility test stages are complete, a comprehensive Accessibility Test Report is produced outlining the issues that have been found during testing.
+
+All issues (defects) will be assessed. The aim will be to fix as many of the issues as possible, particularly the high priority issues, prior to the service going into Production. If there are any issues the Accessibility Test Report must be stored within the service's document management system as it will be checked should the service be audited by GDS.
+
+### Accessibility Statement
+
+Each public sector user facing service must by law have an accurate and up to date Accessibility Statement.
+
+The Accessibility Statement is created and maintained by the service team responsible for that service. It must reflect the current accessibility of the service so that users are aware of any limitations.
+
+It is a testers responsibility to ensure the following:
+
+- The most up to date NHSBSA Accessibility Statement template has been used.
+- All issues outstanding are included in the Statement.
+- The issues are written in natural English language and not tool or technical jargon.
 - Each issue has a related compliance failure criteria, which references the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/).
-- All wording is in line with BSA accessibility standards (please see the accessibility standards area).
-- All issues have a fix date (this has to be agreed by the project).
+- All outstanding issues are included in a Services backlog.
+- All wording is in line with NHSBSA [accessibility statement wording standard](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/Accessibility-Statement-Wording-Library.aspx).
 
-All the tools we use in our Accessibility Framework have been chosen after studying research and guidance provide by GDS, NHS service manual and BSA Test and Service Design communities.
-
-## What to raise as issues
-
-All websites should be using the latest version of the government toolkit in order to reach 'AA' compliance at least. 
-
-Please check the accessibility testing defect management page for how to raise any accessibility defects.
-
-## Scope of testing
-
-Accessibility testing must be performed on all new UI screens and any that have been amended. For regression purposes we also need at least two existing screens not affected by any changes to be retested.
-
-In release reports this breakdown must be clear in the release focus section and in the accessibility report all tested (new or retested) screens must be highlighted in green.
-
-## Reporting
-
-All accessibility tests results must be recorded in an Accessibility Test Report, this report is used as evidence in the event of an accessibility audit.
+The draft Accessibility Statement is reviewed by the service's Test Lead, the service's Content Designer, the NHSBSA Colleague Experience team and the NHSBSA Digital and Online team to ensure the standard has been met. Once approved it is attached to the user facing interface so that all users have access to it.

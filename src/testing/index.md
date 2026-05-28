@@ -9,4 +9,7 @@ pagination:
   data: collections.test
   size: 50
   alias: articles
+reviewInfo:
+    last_reviewed_date: 2023-05-06
+    review_cycle: ANNUAL
 ---

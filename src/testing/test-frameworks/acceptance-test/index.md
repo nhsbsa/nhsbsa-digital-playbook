@@ -1,71 +1,79 @@
 ---
 layout: article
-title: "Acceptance Testing"
-description: "How & why we acceptance test in the NHSBSA"
+title: "Functional Acceptance Testing"
+description: "Functional acceptance testing considers the functionality of the service as well as the integration of the service with other services and interfaces."
 tags: test-frameworks
 order: 1
-related:
-  tag: acceptance-framework
 ---
 
-## What is acceptance testing?
+*'Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system'*. ISTQB
 
-'Formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether to accept the system'. ISTQB
+What is functional acceptance testing?
 
-All of our acceptance tests within the NHSBSA test community are created in BDD using cucumber whether this is for manual or automated tests.
+Functional acceptance testing is a fundamental part of the NHSBSA Test Standards. It considers the functionality of the service as well as the integration of the service with other services and interfaces. Whilst NHSBSA refer to this type of testing as "acceptance testing", it in fact incorporates the following ISO/IEC/IEE 29119 Test Levels:
 
-We employ an 'automation by default' approach to testing so unless not possible or constrained then tests must be automated. Over 90% of our current acceptance tests are automated.
+- Integration Testing ("in the large")
+- System Testing
+- Systems Integration Testing
 
-The tool choice for these BDD scripts comes from the NHSBSA Test Tech Stack.
+## Functional Acceptance Test Principles
 
-Our BDD tests are centred around the users and their behavioural needs and requirements hence our tests are focused from the perspective of the user and not a third person. All wording is in clear natural english language and does not include technical or test jargon or speech, for example in our tests we don't press this or click that like in more traditional test plans and scripts. We talk as the user would express a scenario or situation 'Given I am on the NHSBSA PPC website, When I want to buy a 12 month PPC Then I will able to buy a 12 month PPC'.
+### Automate Smartly
 
-Only in circumstances where these actions are needed to prove a clear acceptance criteria can they be used.
+Automation is the implementation of an automation test tool(s) to execute test cases. It is well suited for services that require testing to be repeated multiple times. It is often applied once a service has been through an initial manual testing process.
 
-## Why do we write in a user centric way?
+NHSBSA's approach is to automate as many tests as possible, but only when it is smart to do so. Test teams should ensure testing is repeatable and efficient. However, teams should also recognise that it is not always possible to automate the tests or sensible to automate all tests straight away.
 
-Everything we do whether it is designing a new service or testing it involves the users and what they need or require.
+Functional Acceptance Testing concentrates on the functionality the user is exposed to when using the service. In many instances, it is more sensible to start testing using localised manual tests. This is especially the case where items such as UI designs have not yet been finalised. Whilst it is useful to start testing as early as possible, it is not wise to invest the time in automating tests that may need amending later due to expected changes in the item under test.
 
-There is no use for a service that disrupts, confuses or stops the user from using it to get want they want or need in the quickest time possible.
+Manual tests may also be preferred over automation testing where complex or highly dynamic workflows require a more flexible approach. For example, workflows that depend on multiple variables, unpredictable paths, or complex user interactions (e.g. a new feature with user-customisable settings or experimental features).
 
-So to be able to assure our services meet these needs then we identify clear acceptance criteria expressing these needs and then our tests validate and assure these needs have been met.
+Additionally, the test community are encouraged to conduct **exploratory tests** when applicable. These are manual tests where testers actively explore early versions of the solution to assess the user experience. It allows the tester to explore the solution spontaneously, making personal decisions rather than following pre-defined user journeys. By focussing on discovery and investigation, exploratory testing often uncovers issues and edge cases that more formal testing overlooks. This offers deeper insights into the quality and usability.
 
-Of course user needs change and evolve, so therefore our tests need to be able to do this so we created our framework to be easy to understand, adaptable and easy to maintain so that flexibility and change can be incorporated anytime this happens.
+### Test Automation
 
-Within each project there is a need to perform testing which can be linked to the following requirements:
+As soon as possible, and once designs are close to being finalised, test teams should revert their efforts to automating the tests using Serenity / Selenium.
 
-Ability to provide stakeholder with information that system under development works as described in product requirements
-Ability to conform to the following GDS Service Standards
+Our standard framework can be found on GitLab here: [Java Serenity Automation Framework](https://gitlab.com/nhsbsa/ddat/test-community/java-serenity-automation-framework).
 
-- Standard 6 - Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.
-- Standard 7 - Evaluate what user data and information the digital service will be providing or storing and address the security level, legal responsibilities, privacy issues and risks associated with the service (consulting with experts where appropriate).
-- Standard 10 - Be able to test the end-to-end service in an environment identical to that of the live version, including on all common browsers and devices, and using dummy accounts and a representative sample of users.
-Utilising an Automation Test Framework to test Front end, Back end and API services is recognised as a way to provide consistent tests that can reused and validate functionality and regression testing
+- Automation should concentrate on tests that are likely to be executed repeatedly
+- The test team should be seeking 100% coverage within their automation test suite
+- Automation test suites should include positive, negative and edge test cases.
 
-## Whats included in our acceptance tests?
+**The Regression Test Suite must be automated.** The aim of the regression test should be that it can be placed in the CI/CD pipeline and/or it can easily be executed iteratively or on a nightly basis.
 
-All acceptance tests in the NHSBSA provide assurance by testing the following base coverage:
+To avoid data dependency within our test packs, any new automation framework must be set up with a dynamic data approach, so that static data is not used, and data independence is maintained.
 
-- Functionality / behaviour of a service according to acceptance criteria.
-- Validation of service inputs must include Valid, Invalid, None entry & Verification scenarios (e.g. field lengths, acceptance levels).
-- User Journeys, happy and unhappy paths, service scope limitations or redirects.
-- Boundary Value Analysis and Equivalence Partitioning test methods are implemented to test range and limits of services.
-- Integration with other services or providers.
-- Regression to ensure the continued assurance of all the service is not affected by any change or improvement.
+### Behaviour-Driven Development (BDD)
 
-## How our acceptance tests structured?
+Our Functional Acceptance Tests (manual and automated) are created in user centric Behaviour-Driven Development (BDD) style. The tool choice for our BDD test scripts can be found within the NHSBSA Test Tech Stack.
 
-All of our tests are created in user centric BDD using Cucumber. Whether these are manual or automated tests all scripts, scenarios and cases are produced in the same format.
+Our BDD tests are centred around the users and their behavioural needs and requirements. This means our tests are focused from the perspective of the user and not a third person or service.
 
-We also use the following in our tests:
+All wording is in clear natural English language and does not include technical or test jargon or speech. For example, in our test scripts we do not follow the traditional style of "press this" or "click that". Instead, we write our tests as the user would express a scenario or situation. For example:
 
-- Cucumber - a software tool that supports behavior-driven development. Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.
-- User Centric BDD - BDD uses human-readable descriptions of software user requirements as the basis for software tests. Each test is based on a user story written in the formally specified clear natural English language. User Centric BDD ensures all test scenarios written in Gherkin syntax are from a users perspective and phased as a user would describe a scenario or circumstance.
-- Gherkin - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. Each keyword helps the user and tester to understand the requirements and scenarios more clearly, these keywords include Given (pre-condition), When (action), Then (result).
-- Selenium - a collection of language specific bindings to drive a browser - the way it is meant to be driven.
-- Java - A language supported by the cucumber project to implement cucumber steps using Selenium.
-- Ruby - A language supported by the cucumber project to implement cucumber steps using Selenium.
-- Dedicated use of Test Environments:
-  - Legacy - test environments not in the cloud use environments in our legacy infrastructure.
-  - Cloud - test environments in CI/CD pipelines are used.
-  - Local environments - where a test environment is not setup, running an application locally on a PC/Mac can provide access to developed systems. This may also be used where access to specific scenarios can not be achieved in the test environments due to governance restrictions.
+> Given I am on the NHSBSA PPC website\
+> When I want to buy a 12 month PPC by card\
+> Then I will be able to buy a 12 month PPC by card
+
+Only in circumstances where these actions are needed to prove a clear acceptance criterion can they be used.
+
+**Note that API testing, Performance testing and Data Procession testing also consider BDD -- the approach described above also applies to these core test frameworks.**
+
+### Integration Testing
+
+Functional Acceptance Testing should include integration testing across the full user journey ("integration in the large"). This means that any internal or external interface should be included in the test scenarios. In most cases, the interface is an API which integrates with a secondary solution (see the API Test Framework), though in other cases the interface may be a common component or a component specific to that service.
+
+Examples of integration points and interfaces that must be included in the end-to-end integration testing include, but are not limited to:
+
+- GovNotify API
+- Card Payment Services
+- Apple Pay / Google Pay
+- File Upload
+- Service specific Microsoft Dynamics component
+- Contact the BSA Microsoft Dynamics component
+- Address Search
+
+Where it is not possible to test against an external interface, testers must consider a test stub or harness to ensure the full end-to-end user journey can be incorporated into test scenarios.
+
+Integration testing also needs to be included when the solution is built by developing different modules or components. This is conducted in a fully integrated test environment (sometimes referred to as 'INT') and demonstrates that the different modules or components can integrate to support the full user journey.
