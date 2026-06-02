@@ -9867,6 +9867,14 @@ a.header-anchor {
   text-decoration: none;
 }
 
+/* Skip link */
+.nhsuk-skip-link:focus {
+  display: block;
+  position: static;
+  padding: 10px;
+  text-decoration: underline;
+}
+
 blockquote {
   max-width: calc(100% - 80px);
 }
@@ -10118,6 +10126,10 @@ a.nhsuk-footer__list-item-link:visited {
 @media (min-width: 48.0625em) {
   .nhsuk-card__header {
     display: block;
+  }
+
+  .nhsuk-card__header .nhsuk-tag, .nhsuk-card__header .nhsbsa-status-tag, .nhsuk-card__header .t_decommission > strong, .nhsuk-card__header .t_deprecate > strong, .nhsuk-card__header .t_adopt > strong, .nhsuk-card__header .t_assess > strong, .nhsuk-card__header .t_pending > strong, .nhsuk-card__header .tag > strong {
+    margin-top: 5px;
   }
 }
 /* Article Content */
