@@ -15,6 +15,14 @@ a.header-anchor {
   text-decoration: none;
 }
 
+/* Skip link */
+.nhsuk-skip-link:focus {
+	display:block;
+	position: static;
+	padding: 10px;
+	text-decoration: underline;
+}
+
 blockquote {
 	@extend .nhsuk-inset-text;
 	max-width: calc(100% - 80px);
@@ -233,10 +241,12 @@ a.nhsuk-footer__list-item-link:visited {
 		float: left;
 	}	
 }
-
 @media (min-width: 48.0625em) {
  .nhsuk-card__header {
 		display: block;
+	}
+	.nhsuk-card__header .nhsuk-tag {
+		margin-top: 5px;
 	}
 }
 
