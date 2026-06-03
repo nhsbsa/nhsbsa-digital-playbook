@@ -3,7 +3,7 @@ layout: article
 title: "Peer review"
 description: "The process for reviewing changes in production code"
 tags: dev
-order: 8
+order: 10
 review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL

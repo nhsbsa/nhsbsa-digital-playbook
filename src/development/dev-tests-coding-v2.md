@@ -1,27 +1,51 @@
 ---
 layout: article
 title: "Writing clean tests"
-tags: dev_testing
-order: 10
+tags: [dev, dev_testing]
+order:
+  dev: 8
+  dev_testing: 1
 status: DRAFT
+related:
+  tag: dev_testing
 ---
-Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.
+Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read unit tests and understand what the code is supposed to do.
 
 A clean test is one that can be easily read and understood. Writing clean tests removes barriers to understanding and ensures that the code is doing what is intended.
 
 Have you ever reviewed code and spent more time trying to understand the test than the functional code? Have you ever given up and just accepted the change? After all, the author probably knew what they were doing, right?
 
-This page shows improvements that can be made to lower the bar for comprehension.
+This article covers Test Driven Development and the principles and patterns for writing clean, readable tests. For required test types, coverage standards, and infrastructure patterns, see [Developer Testing](../dev-tests-v2/).
+
+## Test Driven Development
+
+We strongly encourage developers to adopt Test Driven Development (TDD).
+
+Write tests alongside production code in an iterative fashion according to these rules:
+
+* You may not write production code until you have written a failing unit test.
+* You may not write more of a unit test than is sufficient to fail — and not compiling is failing.
+* You may not write more production code than is sufficient to pass the currently failing test.
+
+This is often described as _Red_, _Green_, _Refactor_:
+
+* __Red__
+  Write a failing test that describes the next small piece of behaviour you want to implement. The test defines the requirement.
+* __Green__
+  Write the minimum production code needed to make the test pass. Don't worry about quality yet — just make it green.
+* __Refactor__
+  Clean up the implementation with confidence, knowing the tests will catch any regressions.
+
+Do not write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you — it's better to write things down than forget them. But TDD is iterative; it's not defining an entire specification before writing the functional code.
 
 ## Test code principles
 
 * __Test cases MUST NOT use real, production data__
-  In some circumstances, we test against anonymised production data. We pseudonymise or anonymise the identity of data subjects according to the [NHSBSA Anonymisation and Pseudonymisation standard][nhsbsa_anonymisation_and_pseudonymisation_standard].
-  In exceptional circumstances use of real personal data is allowed where it can be justified and is approved by our Internal Governance and Information Security departments. Projects that test with real personal data must apply production controls in the testing environment.
+  Tests should be written against requirements and crafted to cover the different boundary conditions and execution paths that are needed to filfill them. There is no need to use production data to verify expected behaviour. If defects are found in production, then the circumstances should be replicated with synthetic fixture data only.
 
 * __Tests must be written with the same care as production code__
   Tests must change as production code evolves. The dirtier the tests, the harder they are to change. The more tangled the test code, the more likely it is that you will spend more time cramming new tests into the suite than it takes to write the new production code. As you modify the production code, old tests start to fail, and the mess in the test code makes it hard to get those tests to pass again. So the tests become viewed as an ever-increasing liability.
-  Test cases should follow clean code principles with the intent of being easily understood.
+  Test cases should follow [clean code](../coding/#clean-code) principles with the intent of being easily understood.
 
 * __Tests should be fast__
   Tests should run quickly. When they run slowly, you won't want to run them frequently. If you don't run them frequently, you won't find problems early enough to fix them easily. You won't feel as free to clean up the code. Eventually the code will begin to rot.
@@ -30,7 +54,7 @@ This page shows improvements that can be made to lower the bar for comprehension
   One test must not set up the conditions for the next test. You must be able to run each test independently and in any order. When tests depend on each other, the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.
 
 * __Tests must be repeatable in any environment__
-  You should be able to run the tests in the production environment, in the QA environment, and on your laptop without a network. If your tests aren't repeatable in any environment, you'll always have an excuse for why they fail.
+  You should be able to run the tests in continuous integration or on your laptop without a network. If your tests aren't repeatable in any environment, you'll always have an excuse for why they fail.
   Fixture data and configuration must be managed within the test.
 
 * __Tests must be self-validating__
@@ -40,7 +64,7 @@ This page shows improvements that can be made to lower the bar for comprehension
 
 * __Tests should be written in a timely fashion__
   If you write tests after the production code, you may find the production code is hard to test, or not design it to be testable at all.
-  Unit tests should be written just before the production code that makes them pass. Production code is then designed to be tested and is simpler to test.
+  Follow [Test Driven Development](#test-driven-development) (TDD) so that unit tests are written just before the production code that makes them pass. Production code is then designed to be tested and is simpler to test.
 
 ## Naming
 
@@ -75,7 +99,7 @@ Test cases should use a standard BDD structure of:
 * `When` — to call the method under test
 * `Then` — make assertions on the actual response (and verify any mock interactions)
 
-This is also sometimes referred to as `Arrange`, `Act`, `Assert`.
+This is sometimes referred to as `Arrange`, `Act`, `Assert`.
 
 For frameworks that do not impose this structure in their API, readability is improved by use of comments.
 
@@ -89,7 +113,7 @@ For frameworks that do not impose this structure in their API, readability is im
 
 There is no need to write anything beside the comments as they are simply delimiters. The intention is to provide a clean structure for your test.
 
-If you're unable to segment your tests using these three comments in the right order, then your test probably isn't clean.
+If you're unable to segment a test by these three actions in the right order, then the test probably isn't clean.
 
 ## Avoid shared fixture data
 
@@ -112,7 +136,7 @@ A better approach is to declare fixture data within the test.
 
 ## Create fixture data in factory methods
 
-Avoiding shared fixture data could result in lots of object creation code within our tests. This is acceptable if object creation can be done with clear intent using a one-liner 'builder' pattern. But even using builders, object creation can span multiple lines of distracting boilerplate.
+Avoiding shared fixture data can introduce boilerplate object creation code within the tests themselves. This is acceptable if object creation can be done with clear intent using a one-liner 'builder' pattern. But even using builders, object creation can span multiple lines of distracting boilerplate.
 
 A simple solution is to use factory methods within the test class.
 
@@ -129,7 +153,7 @@ Use methods with clear names for creating fixture data when it is needed. Name t
 
 When code is dependent on date or time, your tests must take control of time so they can test all the different flows and expectations.
 
-Avoid hardcoding fixture data to specific dates or times far in the future. Such tests will eventually fail and another developer will have to investigate and fix the problem.
+Do not hardcode fixture data to specific dates or times far in the future. Those tests will eventually fail and another developer will have to investigate and fix the problem.
 
 There are two common approaches to testing with time:
 
@@ -145,7 +169,7 @@ There are two common approaches to testing with time:
 
 ## Test one thing
 
-If you adopt Test Driven Development (TDD) you should find that your test cases are lean, with just enough fixture data to test a single additional requirement.
+Test Driven Development (TDD) ensures that test cases are lean, with just enough fixture data to test a single additional requirement.
 
 If you find that each additional test case is performing all the previous steps to initialise your fixtures, you're doing too much work and diluting the purpose of the test.
 
