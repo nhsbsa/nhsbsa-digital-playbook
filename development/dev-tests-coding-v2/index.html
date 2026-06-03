@@ -115,6 +115,9 @@ Writing clean tests - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         <div class="nhsbsa-nav__list">
                 <ol>
                     
+                    <li><a href="#test-driven-development">Test Driven Development</a>
+            		</li>
+
                     <li><a href="#test-code-principles">Test code principles</a>
             		</li>
 
@@ -182,21 +185,38 @@ Writing clean tests - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
-<p>Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.</p>
+<p>Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read unit tests and understand what the code is supposed to do.</p>
 <p>A clean test is one that can be easily read and understood. Writing clean tests removes barriers to understanding and ensures that the code is doing what is intended.</p>
 <p>Have you ever reviewed code and spent more time trying to understand the test than the functional code? Have you ever given up and just accepted the change? After all, the author probably knew what they were doing, right?</p>
-<p>This page shows improvements that can be made to lower the bar for comprehension.</p>
+<p>This article covers Test Driven Development and the principles and patterns for writing clean, readable tests. For required test types, coverage standards, and infrastructure patterns, see <a href="../dev-tests-v2/">Developer Testing</a>.</p>
+<h2 id="test-driven-development" tabindex="-1"><a class="header-anchor" href="#test-driven-development">Test Driven Development</a></h2>
+<p>We strongly encourage developers to adopt Test Driven Development (TDD).</p>
+<p>Write tests alongside production code in an iterative fashion according to these rules:</p>
+<ul>
+<li>You may not write production code until you have written a failing unit test.</li>
+<li>You may not write more of a unit test than is sufficient to fail — and not compiling is failing.</li>
+<li>You may not write more production code than is sufficient to pass the currently failing test.</li>
+</ul>
+<p>This is often described as <em>Red</em>, <em>Green</em>, <em>Refactor</em>:</p>
+<ul>
+<li><strong>Red</strong><br>
+Write a failing test that describes the next small piece of behaviour you want to implement. The test defines the requirement.</li>
+<li><strong>Green</strong><br>
+Write the minimum production code needed to make the test pass. Don’t worry about quality yet — just make it green.</li>
+<li><strong>Refactor</strong><br>
+Clean up the implementation with confidence, knowing the tests will catch any regressions.</li>
+</ul>
+<p>Do not write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you — it’s better to write things down than forget them. But TDD is iterative; it’s not defining an entire specification before writing the functional code.</p>
 <h2 id="test-code-principles" tabindex="-1"><a class="header-anchor" href="#test-code-principles">Test code principles</a></h2>
 <ul>
 <li>
 <p><strong>Test cases MUST NOT use real, production data</strong><br>
-In some circumstances, we test against anonymised production data. We pseudonymise or anonymise the identity of data subjects according to the <a href="https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&amp;web=1&amp;e=SPLOtZ">NHSBSA Anonymisation and Pseudonymisation standard</a>.<br>
-In exceptional circumstances use of real personal data is allowed where it can be justified and is approved by our Internal Governance and Information Security departments. Projects that test with real personal data must apply production controls in the testing environment.</p>
+Tests should be written against requirements and crafted to cover the different boundary conditions and execution paths that are needed to filfill them. There is no need to use production data to verify expected behaviour. If defects are found in production, then the circumstances should be replicated with synthetic fixture data only.</p>
 </li>
 <li>
 <p><strong>Tests must be written with the same care as production code</strong><br>
 Tests must change as production code evolves. The dirtier the tests, the harder they are to change. The more tangled the test code, the more likely it is that you will spend more time cramming new tests into the suite than it takes to write the new production code. As you modify the production code, old tests start to fail, and the mess in the test code makes it hard to get those tests to pass again. So the tests become viewed as an ever-increasing liability.<br>
-Test cases should follow clean code principles with the intent of being easily understood.</p>
+Test cases should follow <a href="../coding/#clean-code">clean code</a> principles with the intent of being easily understood.</p>
 </li>
 <li>
 <p><strong>Tests should be fast</strong><br>
@@ -208,7 +228,7 @@ One test must not set up the conditions for the next test. You must be able to r
 </li>
 <li>
 <p><strong>Tests must be repeatable in any environment</strong><br>
-You should be able to run the tests in the production environment, in the QA environment, and on your laptop without a network. If your tests aren’t repeatable in any environment, you’ll always have an excuse for why they fail.<br>
+You should be able to run the tests in continuous integration or on your laptop without a network. If your tests aren’t repeatable in any environment, you’ll always have an excuse for why they fail.<br>
 Fixture data and configuration must be managed within the test.</p>
 </li>
 <li>
@@ -220,7 +240,7 @@ Tests should be written against the public interfaces of production code, not ag
 <li>
 <p><strong>Tests should be written in a timely fashion</strong><br>
 If you write tests after the production code, you may find the production code is hard to test, or not design it to be testable at all.<br>
-Unit tests should be written just before the production code that makes them pass. Production code is then designed to be tested and is simpler to test.</p>
+Follow <a href="#test-driven-development">Test Driven Development</a> (TDD) so that unit tests are written just before the production code that makes them pass. Production code is then designed to be tested and is simpler to test.</p>
 </li>
 </ul>
 <h2 id="naming" tabindex="-1"><a class="header-anchor" href="#naming">Naming</a></h2>
@@ -265,7 +285,7 @@ Unit tests should be written just before the production code that makes them pas
 <li><code class="md">When</code> — to call the method under test</li>
 <li><code class="md">Then</code> — make assertions on the actual response (and verify any mock interactions)</li>
 </ul>
-<p>This is also sometimes referred to as <code class="md">Arrange</code>, <code class="md">Act</code>, <code class="md">Assert</code>.</p>
+<p>This is sometimes referred to as <code class="md">Arrange</code>, <code class="md">Act</code>, <code class="md">Assert</code>.</p>
 <p>For frameworks that do not impose this structure in their API, readability is improved by use of comments.</p>
 <pre class="language-java"><code class="language-java"><span class="token comment">//given</span>
 
@@ -273,7 +293,7 @@ Unit tests should be written just before the production code that makes them pas
 
 <span class="token comment">//then</span></code></pre>
 <p>There is no need to write anything beside the comments as they are simply delimiters. The intention is to provide a clean structure for your test.</p>
-<p>If you’re unable to segment your tests using these three comments in the right order, then your test probably isn’t clean.</p>
+<p>If you’re unable to segment a test by these three actions in the right order, then the test probably isn’t clean.</p>
 <h2 id="avoid-shared-fixture-data" tabindex="-1"><a class="header-anchor" href="#avoid-shared-fixture-data">Avoid shared fixture data</a></h2>
 <p>Fixtures are data-sets that you use to test scenarios with your code.</p>
 <p>An anti-pattern is to define test fixture data at the top of a class and re-use it across different test cases. There are problems with this approach:</p>
@@ -291,7 +311,7 @@ As you read the test cases, you will need to go back to the shared data and keep
 </ul>
 <p>A better approach is to declare fixture data within the test.</p>
 <h2 id="create-fixture-data-in-factory-methods" tabindex="-1"><a class="header-anchor" href="#create-fixture-data-in-factory-methods">Create fixture data in factory methods</a></h2>
-<p>Avoiding shared fixture data could result in lots of object creation code within our tests. This is acceptable if object creation can be done with clear intent using a one-liner ‘builder’ pattern. But even using builders, object creation can span multiple lines of distracting boilerplate.</p>
+<p>Avoiding shared fixture data can introduce boilerplate object creation code within the tests themselves. This is acceptable if object creation can be done with clear intent using a one-liner ‘builder’ pattern. But even using builders, object creation can span multiple lines of distracting boilerplate.</p>
 <p>A simple solution is to use factory methods within the test class.</p>
 <ul>
 <li><strong>Less verbose</strong><br>
@@ -304,7 +324,7 @@ As objects are created within the test, they can be assigned to variables that s
 <p>Use methods with clear names for creating fixture data when it is needed. Name the fixture variables to further clarify the intent within the test.</p>
 <h2 id="testing-with-date-and-time" tabindex="-1"><a class="header-anchor" href="#testing-with-date-and-time">Testing with date and time</a></h2>
 <p>When code is dependent on date or time, your tests must take control of time so they can test all the different flows and expectations.</p>
-<p>Avoid hardcoding fixture data to specific dates or times far in the future. Such tests will eventually fail and another developer will have to investigate and fix the problem.</p>
+<p>Do not hardcode fixture data to specific dates or times far in the future. Those tests will eventually fail and another developer will have to investigate and fix the problem.</p>
 <p>There are two common approaches to testing with time:</p>
 <ul>
 <li>
@@ -322,7 +342,7 @@ In the <a href="https://github.com/wix/tdd-katas">Greeter kata</a>, a salutation
 </li>
 </ul>
 <h2 id="test-one-thing" tabindex="-1"><a class="header-anchor" href="#test-one-thing">Test one thing</a></h2>
-<p>If you adopt Test Driven Development (TDD) you should find that your test cases are lean, with just enough fixture data to test a single additional requirement.</p>
+<p>Test Driven Development (TDD) ensures that test cases are lean, with just enough fixture data to test a single additional requirement.</p>
 <p>If you find that each additional test case is performing all the previous steps to initialise your fixtures, you’re doing too much work and diluting the purpose of the test.</p>
 <p>The reader of a test need only see the data required for one scenario at a time. Consider what is needed to satisfy the test case and nothing more. If you are covering something else, write a different test case for that scenario.</p>
 <h2 id="coverage-considerations" tabindex="-1"><a class="header-anchor" href="#coverage-considerations">Coverage considerations</a></h2>
@@ -363,6 +383,61 @@ A change in the object created by the function under test will require a refacto
 <li><a href="https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&amp;web=1&amp;e=SPLOtZ">NHSBSA Anonymisation and Pseudonymisation standard</a></li>
 <li><a href="https://phauer.com/2019/modern-best-practices-testing-java/">Modern Best Practices for Testing in Java</a></li>
 </ul>
+        	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-v2/">Testing for Developers</a>
+						</h2>
+						  <strong class="nhsuk-tag nhsuk-tag--grey">
+  DRAFT
+</strong>
+
+
+					</div>
+					<p class="nhsuk-card__description">We always write automated tests around our code</p>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2026-06-03T09:03:14.000Z">3 June 2026</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-integration/">Writing integration tests (Java)</a>
+						</h2>
+						  <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
+</strong>
+
+
+					</div>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2023-05-06T10:02:50.000Z">6 May 2023</time>	
+				</div>
+			</div>
+		</li>
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-coding/">Writing clean tests</a>
+						</h2>
+						  <strong class="nhsuk-tag nhsuk-tag--yellow">
+  REVIEW
+</strong>
+
+
+					</div>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2024-07-23T07:53:57.000Z">23 July 2024</time>	
+				</div>
+			</div>
+		</li>
+	</ul>
+
 
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
@@ -387,7 +462,7 @@ A change in the object created by the function under test will require a refacto
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2026-05-31T09:57:04.000Z">31 May 2026</time>
+      Published: <time datetime="2026-06-03T09:03:14.000Z">3 June 2026</time>
     </p>
 </div>
 

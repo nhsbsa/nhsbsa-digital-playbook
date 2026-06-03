@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex">
   
   <title>
-Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+Testing for Developers - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   </title>
 
     <!-- Google tag (gtag.js) -->
@@ -46,7 +46,7 @@ Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_GB"/>
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
-  <meta property="og:title" content="Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+  <meta property="og:title" content="Testing for Developers - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
   <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=7873905b137d" media="all" rel="stylesheet" type="text/css" />
 
@@ -119,43 +119,40 @@ Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
                     <li><a href="#test-scope-for-developers">Test scope for developers</a>
             		</li>
 
-                    <li><a href="#test-driven-development">Test Driven Development</a>
+                    <li><a href="#build-environment">Build environment</a>
+            		</li>
+
+                    <li><a href="#test-coverage">Test coverage</a>
+            		</li>
+
+                    <li><a href="#integration-strategies">Integration strategies</a>
             		</li>
 
                     <li><a href="#unit-testing-scope">Unit testing scope</a>
             
                 <ol>
                     
-                    <li><a href="#module-tests">Module tests</a>
+                    <li><a href="#modular-tests">Modular tests</a>
             		</li>
 
                     <li><a href="#mocking">Mocking</a>
             		</li>
 
-                    <li><a href="#mvc-unit-tests">MVC unit tests</a>
+                    <li><a href="#web-layer-unit-tests">Web layer unit tests</a>
             		</li>
 
-                    <li><a href="#api-unit-tests">API unit tests</a>
+                    <li><a href="#api-layer-unit-tests">API layer unit tests</a>
             		</li>
 
                     <li><a href="#data-access-layer-tests">Data access layer tests</a>
             		</li>
 
-                    <li><a href="#api-client-tests">API Client tests</a>
-            		</li>
-
-                    <li><a href="#cloud-native-tests">Cloud Native tests</a>
+                    <li><a href="#api-client-tests">API client tests</a>
             		</li>
                 </ol>
             		</li>
 
                     <li><a href="#component-testing-scope">Component testing scope</a>
-            		</li>
-
-                    <li><a href="#integration-testing">Integration testing</a>
-            		</li>
-
-                    <li><a href="#test-coverage">Test coverage</a>
             		</li>
 
                     <li><a href="#technology-choices">Technology choices</a>
@@ -176,7 +173,7 @@ Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
         <div class="nhsbsa-article-header">
           <h1 class="nhsuk-heading-xl">
-            Developer Testing
+            Testing for Developers
           </h1>
             <strong class="nhsuk-tag nhsuk-tag--grey">
   DRAFT
@@ -186,61 +183,164 @@ Developer Testing - NHSBSA Digital, Data and Technology Playbook - NHSBSA
         </div>
       
 
+<p>This article defines the test types developers must write, the coverage standards they must meet, and the infrastructure patterns for connecting tests to external resources. For guidance on Test Driven Development and writing good quality tests, see <a href="../dev-tests-coding/">writing clean tests</a>.</p>
 <h2 id="test-scope-for-developers" tabindex="-1"><a class="header-anchor" href="#test-scope-for-developers">Test scope for developers</a></h2>
-<p>Developers are responsible for testing the code they write. We require two types of test as a minimum:</p>
+<p>Developers are responsible for testing the code they write. We require two types of test:</p>
 <ul>
 <li><strong>Unit test</strong><br>
-A self-contained test for a unit of functionality. A unit is the smallest amount of code exposed by a module’s public interface.</li>
+A self-contained test for a unit of functionality. A unit is the smallest amount of code exposed by a module’s public interface, <em>that can be tested in isolation</em>.</li>
 <li><strong>Component test</strong><br>
 A test for a full-stack, deployable component. The interactions between all modules within a component should be tested as an integrated whole.</li>
 </ul>
-<p>Unit tests are fast and focused — they verify individual modules work correctly in isolation. Component tests are broader — they verify that modules work correctly together as a deployed whole. Both are required; neither substitutes for the other.</p>
-<h2 id="test-driven-development" tabindex="-1"><a class="header-anchor" href="#test-driven-development">Test Driven Development</a></h2>
-<p>We encourage developers to adopt Test Driven Development (TDD).</p>
-<p>Write tests alongside production code in an iterative fashion according to these rules:</p>
+<p>Unit tests are fast and focused — they verify individual modules work correctly in isolation. Unit tests form the bottom of the test pyramid, aiming to cover the full range of execution branches in highly controlled and isolated conditions.</p>
+<p>Component tests are broader — they verify that modules work correctly together as a deployed whole. Component tests sit above unit tests in the test pyramid, with fewer permutations tested but focussing on interactions. Unlike unit tests, no module within the component is mocked — all internal implementations are real.</p>
+<h2 id="build-environment" tabindex="-1"><a class="header-anchor" href="#build-environment">Build environment</a></h2>
+<p>Unit and Component tests run in a build environment, either on a local workstation or a Continuous Integration (CI) server. Code is not deployed into a pre-production environment as Testers use, but executes within a test runner. The test runner provides an isolated runtime restricted to the code under test.</p>
 <ul>
-<li>You may not write production code until you have written a failing unit test.</li>
-<li>You may not write more of a unit test than is sufficient to fail — and not compiling is failing.</li>
-<li>You may not write more production code than is sufficient to pass the currently failing test.</li>
+<li>
+<p><strong>Local development</strong><br>
+Developers run the full test suite locally before pushing code. Tests must complete quickly enough that running them locally is not a burden. Slow tests discourage frequent runs, which undermines the fast feedback that testing provides.</p>
+</li>
+<li>
+<p><strong>Continuous Integration</strong><br>
+The CI server provides a clean, reproducible environment for each build. Failed tests must prevent code propagating to the next step along the route to live.</p>
+</li>
 </ul>
-<p>This is often described as <em>Red</em>, <em>Green</em>, <em>Refactor</em>:</p>
+<p>Environments should be as equivalent as possible along the entire route to live — from a developer’s local workstation, through the CI build, into pre-production environments (dev, test, and staging), and finally to production. Differences between environments are a source of bugs that only appear late in the pipeline, where they are more costly to diagnose and fix.</p>
+<h2 id="test-coverage" tabindex="-1"><a class="header-anchor" href="#test-coverage">Test coverage</a></h2>
+<p>All unit tests must meet a minimum coverage threshold of <strong>80% line</strong> and <strong>80% branch</strong> coverage. These thresholds must be enforced in the build pipeline so that a build fails if coverage drops below the standard.</p>
+<p>Coverage must be measured against production code only. Test code, generated code, and framework boilerplate should be excluded from coverage reports.</p>
+<p>Coverage metrics are an indicator, not a guarantee of quality tests. Focus on writing meaningful tests that verify behaviour — coverage is a safety net to identify untested code paths, not a metric to game.</p>
+<p>For guidance on writing good quality tests, refer to <a href="../dev-tests-coding/">writing clean tests</a>.</p>
+<h2 id="integration-strategies" tabindex="-1"><a class="header-anchor" href="#integration-strategies">Integration strategies</a></h2>
+<p>Unit and component tests may need to interact with external resources — databases, HTTP APIs, message queues, and cloud services. These must never connect to an externally managed resource such as pre-production environments. Instead, substitute each resource with a test controlled equivalent appropriate to its type:</p>
 <ul>
-<li><strong>Red</strong><br>
-Write a failing test that describes the next small piece of behaviour you want to implement. The test defines the requirement.</li>
-<li><strong>Green</strong><br>
-Write the minimum production code needed to make the test pass. Don’t worry about quality yet — just make it green.</li>
-<li><strong>Refactor</strong><br>
-Clean up the implementation with confidence, knowing the tests will catch any regressions.</li>
+<li><strong>Like-for-like containers</strong> — run the actual technology in a Docker container for resources where behavioural fidelity matters, such as databases and message brokers. Use <a href="https://testcontainers.com/">Testcontainers</a> to manage container lifecycle within the test suite. In Java, combine with <code class="md">@DataJpaTest</code> to slice the Spring context for unit tests against databases.</li>
+<li><strong>Mock servers</strong> — substitute downstream HTTP APIs with a mock server trained to return specific responses and error conditions. For component tests, use <a href="https://wiremock.org/">WireMock</a> standalone via Testcontainers — it works with any language and supports OpenAPI stub generation. For unit tests, prefer a lightweight in-process alternative: <a href="https://www.wheresrhys.co.uk/fetch-mock/">fetch-mock</a> (Node.js) or <a href="https://github.com/getsentry/responses">responses</a> (Python).</li>
+<li><strong>Cloud native replicas</strong> — use <a href="https://floci.io/">Floci</a> to provide local equivalents of AWS services (S3, SQS, DynamoDB, Lambda, and others). Floci is a drop-in replacement for LocalStack running on the same port with no auth token required. Testcontainers provides a <code class="md">LocalStackContainer</code> module that is compatible with Floci. Configure the AWS SDK to point at the Floci endpoint rather than real AWS.</li>
 </ul>
-<p>Do not write all the tests upfront. You may find it practical to jot down dummy tests as they occur to you — it’s better to write things down than forget them. But TDD is iterative; it’s not defining an entire specification before writing the functional code.</p>
 <h2 id="unit-testing-scope" tabindex="-1"><a class="header-anchor" href="#unit-testing-scope">Unit testing scope</a></h2>
 <p>Unit tests should isolate the functionality under test to the smallest possible scope. However, sometimes it is not possible or advisable to test in complete isolation.</p>
-<h3 id="module-tests" tabindex="-1"><a class="header-anchor" href="#module-tests">Module tests</a></h3>
-<p>Most languages support modularisation and encapsulation, allowing collections of methods and data to be treated as a unit. This may be an object-oriented class or a module that exports a public functional interface. In either case, unit tests should target the public interface only. Encapsulated implementation methods should not be tested directly.</p>
+<h3 id="modular-tests" tabindex="-1"><a class="header-anchor" href="#modular-tests">Modular tests</a></h3>
+<p>Most languages support modularisation and encapsulation, allowing collections of methods and data to be treated as a unit: An object-oriented class or a file with public functions. In either case, unit tests should target the public interface only. Encapsulated, private implementation methods should not be tested directly.</p>
+<pre class="mermaid">classDiagram
+    accTitle: &#x22;Module tests&#x22;
+    accDescr: &#x22;Class diagram showing a production class with a public method and a test class with several test methods, with a dependency arrow from the test class to the production class labelled tests&#x22;
+    class OrderService:::production {
+        +placeOrder(item)
+        -verifyOrder(item)
+    }
+    class OrderServiceTest:::test {
+        shouldPlaceOrderWhenItemIsValid()
+        shouldThrowWhenItemIsNull()
+        shouldReturnIdWhenOrderSucceeds()
+    }
+    OrderServiceTest ..&#x3E; OrderService : tests
+    classDef production fill:#007f3b,color:#ffffff,stroke:#212b32
+    classDef test fill:#005eb8,color:#ffffff,stroke:#212b32
+</pre>
+<p><code class="md">OrderServiceTest</code> targets the public interface of <code class="md">OrderService</code>. Each test method names the behaviour it verifies. The production class has no knowledge of the test class.</p>
 <h3 id="mocking" tabindex="-1"><a class="header-anchor" href="#mocking">Mocking</a></h3>
 <p>To isolate testing to a unit, downstream dependencies may be mocked. Mocking frameworks support:</p>
 <ul>
-<li>substitution - a mock will act in place of a dependency</li>
-<li>training - a mock can behave as directed by the test and make appropriate response</li>
-<li>verification - mock inputs are asserted against expected values</li>
+<li><strong>substitution</strong> - a mock will act in place of a dependency</li>
+<li><strong>training</strong> - a mock can behave as directed by the test and make appropriate responses</li>
+<li><strong>verification</strong> - actual inputs into mocks are verified against expected values</li>
 </ul>
 <p>Mocking frameworks are available as language specific libraries for mocking modules, or as standalone services for external, downstream APIs.</p>
-<h3 id="mvc-unit-tests" tabindex="-1"><a class="header-anchor" href="#mvc-unit-tests">MVC unit tests</a></h3>
-<p>The Model, View, Controller (MVC) of a user interface must be tested as a whole. Use frameworks such as Spring MvcTest or Supertest to send a crafted request to a URL and validate the response. The test should invoke the responsible controller and assert on the rendered view. Services below the controller are outside the scope of an MVC unit test and should be mocked. Assertions should be made on mocks <em>and</em> the rendered view. Verifying views at a unit level can save time and effort as they can cover multiple permutations without the overhead of the full environment in an acceptance test.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;Mocking&#x22;
+    accDescr: &#x22;Sequence diagram showing a test class training a mock, calling a production class which internally calls the mock, and then verifying the mock interaction&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as OrderServiceTest
+    end
+    box rgb(207, 232, 214) Production
+        participant S as OrderService
+    end
+    box rgb(255, 240, 200) Mock
+        participant M as PaymentGateway
+    end
+
+    T-&#x3E;&#x3E;M: train (returns success)
+    T-&#x3E;&#x3E;S: placeOrder(item)
+    S-&#x3E;&#x3E;M: charge(item)
+    M--&#x3E;&#x3E;S: success
+    S--&#x3E;&#x3E;T: orderId
+    T-&#x3E;&#x3E;M: verify charge(item) called once
+</pre>
+<p>The test trains the mock before exercising <code class="md">OrderService</code>. The production class calls the mock as part of its normal logic — it has no knowledge it is being tested. After the call, the test verifies the mock received the expected inputs, confirming the production class behaved correctly.</p>
+<h3 id="web-layer-unit-tests" tabindex="-1"><a class="header-anchor" href="#web-layer-unit-tests">Web layer unit tests</a></h3>
+<p>The web layer or Model, View, Controller (MVC) of a user interface should be tested as a whole. Use frameworks such as Spring MvcTest or Supertest to send a crafted request to a URL and validate the response. The test should invoke the responsible controller and assert on the rendered view. Services below the controller are outside the scope of an MVC unit test and should be mocked. Assertions should be made on mocks <em>and</em> the rendered view. Verifying views at a unit level can save time and effort as they can cover multiple permutations without the overhead of the full environment in an acceptance test.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;MVC unit tests&#x22;
+    accDescr: &#x22;Sequence diagram showing a test sending a request via an MVC framework to a controller, which calls a mock service and renders a view with model data, then the test asserts on the rendered view and verifies the mock&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as OrderControllerTest
+    end
+    box rgb(230, 215, 245) Test Framework
+        participant F as Web Test Utility
+    end
+    box rgb(207, 232, 214) Production
+        participant C as OrderController
+        participant V as orderConfirmationView
+    end
+    box rgb(255, 240, 200) Mock
+        participant M as OrderService
+    end
+
+    T-&#x3E;&#x3E;M: train (returns success)
+    T-&#x3E;&#x3E;F: GET /orders/123
+    F-&#x3E;&#x3E;C: handleRequest()
+    C-&#x3E;&#x3E;M: getOrder(123)
+    M--&#x3E;&#x3E;C: order (model data)
+    C-&#x3E;&#x3E;V: render(model)
+    V--&#x3E;&#x3E;F: rendered HTML
+    F--&#x3E;&#x3E;T: HTTP response
+    T-&#x3E;&#x3E;T: assert status, headings, model data
+    T-&#x3E;&#x3E;M: verify getOrder(123) called once
+</pre>
+<p>The test drives the full MVC stack through the framework — the controller, model, and view all execute as normal. Only the downstream service is replaced with a mock. After the response is returned, the test asserts on both the rendered view and the mock, confirming that the correct data was fetched and correctly rendered.</p>
 <p>Assert on:</p>
 <ul>
 <li><strong>HTTP status code</strong> — correct status for each scenario (200, 302, 400, 404, etc.)</li>
-<li><strong>Page structure</strong> — correct page title, heading, and any breadcrumbs or navigation</li>
+<li><strong>Semantic and accessible HTML</strong> — page structure supports accessible navigation; every form input has an associated <code class="md">&lt;label&gt;</code>; error messages are linked to their input via <code class="md">aria-describedby</code></li>
+<li><strong>Page information</strong> — correct page title, heading, and any breadcrumbs or navigation</li>
 <li><strong>Model data rendered</strong> — values from the model appear in the correct locations in the view</li>
 <li><strong>Conditional content</strong> — content that shows or hides based on model state renders correctly for each condition</li>
 <li><strong>Form pre-population</strong> — form fields are pre-populated with model values on re-display after a validation failure</li>
-<li><strong>Validation errors</strong> — error messages appear against the relevant field, and an error summary is rendered at the top of the page</li>
-<li><strong>Semantic HTML</strong> — every form input has an associated <code class="md">&lt;label&gt;</code>; error messages are linked to their input via <code class="md">aria-describedby</code></li>
+<li><strong>Validation errors</strong> — every potential error displays a message appear against the relevant field, and an error summary is rendered at the top of the page</li>
 <li><strong>Links and redirects</strong> — links point to the correct URLs; successful form submissions redirect to the expected destination</li>
 <li><strong>Security headers</strong> — required headers are present and aligned to our standards; see <a href="../../security/security-headers/">Security headers</a> and <a href="../../security/content-security-policy/">Content Security Policy</a></li>
 </ul>
-<h3 id="api-unit-tests" tabindex="-1"><a class="header-anchor" href="#api-unit-tests">API unit tests</a></h3>
-<p>API unit tests follow the same approach as MVC tests. Send a crafted HTTP request and assert on the response. Services below the controller should be mocked.</p>
+<h3 id="api-layer-unit-tests" tabindex="-1"><a class="header-anchor" href="#api-layer-unit-tests">API layer unit tests</a></h3>
+<p>The API layer should be tested using the same approach as web layer tests. Send a crafted HTTP request and assert on the response. Services below the controller should be mocked.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;API unit tests&#x22;
+    accDescr: &#x22;Sequence diagram showing a test sending a request via an API framework to a controller, which calls a mock service and serialises the response to JSON, then the test asserts on the HTTP response and verifies the mock&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as OrderApiTest
+    end
+    box rgb(230, 215, 245) Test Framework
+        participant F as Web Test Utility
+    end
+    box rgb(207, 232, 214) Production
+        participant C as OrderController
+    end
+    box rgb(255, 240, 200) Mock
+        participant M as OrderService
+    end
+
+    T-&#x3E;&#x3E;M: train (returns order)
+    T-&#x3E;&#x3E;F: GET /api/orders/123
+    F-&#x3E;&#x3E;C: handleRequest()
+    C-&#x3E;&#x3E;M: getOrder(123)
+    M--&#x3E;&#x3E;C: order
+    C--&#x3E;&#x3E;F: serialised JSON
+    F--&#x3E;&#x3E;T: HTTP response
+    T-&#x3E;&#x3E;T: assert status, response body, headers
+    T-&#x3E;&#x3E;M: verify getOrder(123) called once
+</pre>
+<p>The test drives the full API stack through the framework — the controller executes as normal. Only the downstream service is replaced with a mock. After the response is returned, the test asserts on both the HTTP response and the mock, confirming that the correct data was fetched and correctly serialised.</p>
 <p>Assert on:</p>
 <ul>
 <li><strong>HTTP status code</strong> — correct status for success and each error case</li>
@@ -251,7 +351,31 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 <li><strong>Security headers</strong> — required headers are present and aligned to our standards; see <a href="../../security/security-headers/">Security headers</a></li>
 </ul>
 <h3 id="data-access-layer-tests" tabindex="-1"><a class="header-anchor" href="#data-access-layer-tests">Data access layer tests</a></h3>
-<p>Data access layer modules must be tested against a production-like database running in a Docker container. There is no reason to mock a database or to use a non-production in-memory equivalent such as H2.</p>
+<p>The data access layer must be tested against a production-like database running in a Docker container. There is no value in testing production queries against a mock database interface. Using a non-production in-memory equivalent such as H2 risks inconsistent responses. Docker databases that are equivalent to production, with liquibase controlled schemas provide an ideal solution to test data access entities and queries.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;Data access layer tests&#x22;
+    accDescr: &#x22;Sequence diagram showing a test seeding fixture data into a database, calling a repository which queries the database and maps results to an entity, then the test asserts on the returned entity&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as DataAccessTest
+    end
+    box rgb(207, 232, 214) Production
+        participant R as OrderRepository
+        participant E as Order
+    end
+    box rgb(235, 235, 235) DB Container
+        participant DB as Orders
+    end
+ 
+    T-&#x3E;&#x3E;DB: seed fixture data
+    T-&#x3E;&#x3E;R: findOrder(123)
+    R-&#x3E;&#x3E;DB: SELECT * FROM orders WHERE id = 123
+    DB--&#x3E;&#x3E;R: row data
+    R-&#x3E;&#x3E;E: map(row data)
+    E--&#x3E;&#x3E;R: Order
+    R--&#x3E;&#x3E;T: Order
+    T-&#x3E;&#x3E;E: assert id, name, status
+</pre>
+<p>The test owns the fixture data — it seeds known rows before each scenario. The repository and entity execute as normal against a real database schema. There is no mocking; the test validates the full data access path including SQL, ORM mapping, and entity field values.</p>
 <p>Assert on:</p>
 <ul>
 <li><strong>Entity mapping</strong> — ORM entities map correctly to the schema (column names, types, relationships and constraints)</li>
@@ -259,12 +383,37 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 <li><strong>Filtering</strong> — <code class="md">WHERE</code> clauses return only matching records; provide fixture data that should <em>not</em> appear to confirm correct filtering</li>
 <li><strong>Joins</strong> — joined queries return the correct combined data; provide fixture data for unmatched rows in related tables to guard against missing join conditions</li>
 <li><strong>Ordering</strong> — queries with ordering return records in the expected sequence</li>
-<li><strong>Aggregates</strong> — aggregate queries (<code class="md">COUNT</code>, <code class="md">SUM</code>, <code class="md">AVG</code>, etc.) return the correct computed value across the fixture data</li>
+<li><strong>Aggregation</strong> — aggregate queries (<code class="md">COUNT</code>, <code class="md">SUM</code>, <code class="md">AVG</code>, etc.) return the correct computed value across the fixture data</li>
 <li><strong>Empty results</strong> — queries return an empty result rather than an error when no records match</li>
 <li><strong>Write operations</strong> — inserts, updates, and deletes produce the expected state in the database</li>
 </ul>
-<h3 id="api-client-tests" tabindex="-1"><a class="header-anchor" href="#api-client-tests">API Client tests</a></h3>
-<p>API client modules encapsulate calls to downstream HTTP services. Test them in isolation using a mock server trained to return controlled responses. Where possible, construct the mock server from an OpenAPI Specification to validate that the client conforms to the contract.</p>
+<h3 id="api-client-tests" tabindex="-1"><a class="header-anchor" href="#api-client-tests">API client tests</a></h3>
+<p>An API client module encapsulates calls to a downstream service. Test against a mock object or mock server trained to return controlled responses. Where possible, construct the mock from a contract specification (such as <a href="https://spec.openapis.org/oas/latest.html">OpenAPI</a>) to validate that the client conforms to the contract.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;API client tests&#x22;
+    accDescr: &#x22;Sequence diagram showing a test training a mock server, calling an API client which sends an HTTP request to the mock server, receives a response, deserialises it, and returns a domain object, then the test asserts on the returned object and the request received by the mock server&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as PaymentClientTest
+    end
+    box rgb(207, 232, 214) Production
+        participant C as PaymentGatewayClient
+        participant R as PaymentResult
+    end
+    box rgb(255, 240, 200) Mock
+        participant M as Mock Server
+    end
+
+    T-&#x3E;&#x3E;M: train (POST /payments &#x2192; 200 OK)
+    T-&#x3E;&#x3E;C: charge(item)
+    C-&#x3E;&#x3E;M: POST /payments
+    M--&#x3E;&#x3E;C: 200 OK (JSON body)
+    C-&#x3E;&#x3E;R: deserialise response
+    R--&#x3E;&#x3E;C: PaymentResult
+    C--&#x3E;&#x3E;T: PaymentResult
+    T-&#x3E;&#x3E;R: assert fields
+    T-&#x3E;&#x3E;M: verify POST /payments with correct body and headers
+</pre>
+<p>The test trains the mock server before invoking the client. The client sends a real HTTP request to the mock server — it has no knowledge it is being tested. After the call, the test asserts on the returned domain object and verifies the mock received the correct request, confirming that the client serialises and deserialises correctly and sends the expected headers and body.</p>
 <p>Assert on:</p>
 <ul>
 <li><strong>Request structure</strong> — the client sends the correct HTTP method, URL path, query parameters, and request body</li>
@@ -274,33 +423,52 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 <li><strong>Timeout and network failure</strong> — the client handles connection timeouts and network errors without propagating unexpected exceptions</li>
 <li><strong>Retry behaviour</strong> — if the client implements retry logic, it retries on transient failures and stops after the configured limit</li>
 </ul>
-<h3 id="cloud-native-tests" tabindex="-1"><a class="header-anchor" href="#cloud-native-tests">Cloud Native tests</a></h3>
-<p>Code that interacts with cloud native services must never call real endpoints in unit tests. Mock SDK clients directly using the appropriate library for the language. Test the handler or service logic in isolation, training the mock to return expected responses for each scenario.</p>
-<p>Invoke the entrypoint directly with a crafted input — an event object, message payload, or HTTP request as appropriate. Mock any downstream SDK clients.</p>
-<p>For cloud native integrations in component tests, see <a href="#integration-testing">Integration testing</a>.</p>
-<p>Assert on:</p>
-<ul>
-<li><strong>SDK invocations</strong> — the correct service method is called (e.g. <code class="md">s3.putObject</code>, <code class="md">sqs.sendMessage</code>, <code class="md">dynamodb.getItem</code>)</li>
-<li><strong>SDK parameters</strong> — the correct parameters are passed to each SDK call, including resource identifiers and payload content</li>
-<li><strong>Handler or service response</strong> — the correct response or return value is produced for each scenario</li>
-<li><strong>Downstream failure handling</strong> — when an SDK call fails, the handler returns the appropriate error response or raises the expected exception</li>
-</ul>
 <h2 id="component-testing-scope" tabindex="-1"><a class="header-anchor" href="#component-testing-scope">Component testing scope</a></h2>
 <p>A component test exercises the full stack of a deployable component, testing the interactions between all of its modules as a whole. No internal module within the component should be mocked. External dependencies outside the component boundary are substituted with controlled equivalents — containers, mock servers, or cloud service replicas as appropriate.</p>
 <p>Drive the component through its real external interface — HTTP endpoints, queue consumers, event handlers — and assert on its real outputs and the resulting state of its external dependencies. Fixture data, infrastructure setup, and teardown must all be managed within the test suite.</p>
-<p>For guidance on substituting external dependencies such as databases, AWS services, and downstream APIs, see <a href="#integration-testing">Integration testing</a>.</p>
-<h2 id="integration-testing" tabindex="-1"><a class="header-anchor" href="#integration-testing">Integration testing</a></h2>
-<p>Unit and component tests frequently need to interact with external resources — databases, HTTP APIs, message queues, and cloud services. These must never connect to shared or production environments. Instead, substitute each resource with a controlled equivalent appropriate to its type:</p>
-<ul>
-<li><strong>Like-for-like containers</strong> — run the actual technology in a Docker container for resources where behavioural fidelity matters, such as databases and message brokers. Use <a href="https://testcontainers.com/">Testcontainers</a> to manage container lifecycle within the test suite. In Java, combine with <code class="md">@DataJpaTest</code> to slice the Spring context for data access layer tests.</li>
-<li><strong>Mock servers</strong> — substitute downstream HTTP APIs with a mock server trained to return specific responses and error conditions. For component tests, use <a href="https://wiremock.org/">WireMock</a> standalone via Testcontainers — it works with any language and supports OpenAPI stub generation. For unit tests, prefer a lightweight in-process alternative: <a href="https://www.wheresrhys.co.uk/fetch-mock/">fetch-mock</a> (Node.js) or <a href="https://github.com/getsentry/responses">responses</a> (Python).</li>
-<li><strong>Cloud native replicas</strong> — use <a href="https://localstack.cloud/">LocalStack</a> to provide local equivalents of AWS services (S3, SQS, DynamoDB, Lambda, and others). Testcontainers provides a dedicated <code class="md">LocalStackContainer</code> module. Configure the AWS SDK to point at the LocalStack endpoint rather than real AWS.</li>
-</ul>
-<h2 id="test-coverage" tabindex="-1"><a class="header-anchor" href="#test-coverage">Test coverage</a></h2>
-<p>All unit tests must meet a minimum coverage threshold of <strong>80% line coverage</strong> and <strong>80% branch coverage</strong>. These thresholds must be enforced in the build pipeline so that a build fails if coverage drops below the standard.</p>
-<p>Coverage should be measured against production code only. Test code, generated code, and framework boilerplate should be excluded from coverage reports.</p>
-<p>Coverage metrics are an indicator, not a guarantee of quality tests. Focus on writing meaningful tests that verify behaviour — coverage is a safety net to identify untested code paths, not a metric to game.</p>
-<p>For guidance on writing good quality tests, refer to <a href="../dev-tests-coding/">writing clean tests</a>.</p>
+<pre class="mermaid">sequenceDiagram
+    accTitle: &#x22;Component test&#x22;
+    accDescr: &#x22;Sequence diagram showing a full-stack component test: the test seeds a database and trains a mock server, then sends an HTTP request through the web framework to the controller, which calls a service, which calls both a repository against a real database container and an API client against a mock server, before the response is returned and the test asserts on the HTTP response and the resulting database state&#x22;
+    box rgb(207, 226, 255) Test
+        participant T as OrderComponentTest
+    end
+    box rgb(230, 215, 245) Framework
+        participant F as Web Framework
+    end
+    box rgb(207, 232, 214) Production
+        participant C as OrderController
+        participant S as OrderService
+        participant R as OrderRepository
+        participant A as PaymentGatewayClient
+    end
+    box rgb(235, 235, 235) DB Container
+        participant DB as Orders
+    end
+    box rgb(255, 240, 200) Mock
+        participant M as Mock Server
+    end
+
+    T-&#x3E;&#x3E;DB: seed fixture data
+    T-&#x3E;&#x3E;M: train (POST /payments &#x2192; 200 OK)
+    T-&#x3E;&#x3E;F: POST /orders
+    F-&#x3E;&#x3E;C: handleRequest()
+    C-&#x3E;&#x3E;S: placeOrder(item)
+    S-&#x3E;&#x3E;R: save(order)
+    R-&#x3E;&#x3E;DB: INSERT INTO orders
+    DB--&#x3E;&#x3E;R: saved row
+    R--&#x3E;&#x3E;S: Order
+    S-&#x3E;&#x3E;A: charge(item)
+    A-&#x3E;&#x3E;M: POST /payments
+    M--&#x3E;&#x3E;A: 200 OK
+    A--&#x3E;&#x3E;S: PaymentResult
+    S--&#x3E;&#x3E;C: orderId
+    C--&#x3E;&#x3E;F: redirect /orders/123
+    F--&#x3E;&#x3E;T: HTTP 302
+    T-&#x3E;&#x3E;T: assert status, location header
+    T-&#x3E;&#x3E;DB: assert order persisted with correct state
+    T-&#x3E;&#x3E;M: verify POST /payments with correct body
+</pre>
+<p>No internal module is mocked — the controller, service, repository, and API client all execute as normal. The database runs in a container seeded with fixture data; the downstream payment API is replaced by a trained mock server. After the response, the test asserts on the HTTP response, the resulting database state, and the requests received by the mock server.</p>
 <h2 id="technology-choices" tabindex="-1"><a class="header-anchor" href="#technology-choices">Technology choices</a></h2>
 <p>The following table summarises the recommended libraries by language for each test type.</p>
 <table>
@@ -314,50 +482,67 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 </thead>
 <tbody>
 <tr>
-<td>Test runner</td>
+<td><strong>Test runner</strong></td>
 <td>JUnit</td>
-<td>Vitest</td>
+<td>Jest</td>
 <td>pytest</td>
 </tr>
 <tr>
-<td>Mocking</td>
+<td><strong>Mocking</strong></td>
 <td>Mockito</td>
 <td>Jest mocks</td>
 <td>pytest-mock</td>
 </tr>
 <tr>
-<td>MVC / API unit tests</td>
+<td><strong>MVC / API unit tests</strong></td>
 <td>Spring MvcTest</td>
 <td>Supertest</td>
 <td>Flask test client</td>
 </tr>
 <tr>
-<td>Data access layer</td>
+<td><strong>Data access layer</strong></td>
 <td><code class="md">@DataJpaTest</code> + Testcontainers</td>
 <td>Testcontainers</td>
 <td>Testcontainers</td>
 </tr>
 <tr>
-<td>API client mocking</td>
+<td><strong>API client mocking</strong></td>
 <td>WireMock</td>
 <td><a href="https://www.wheresrhys.co.uk/fetch-mock/">fetch-mock</a></td>
 <td><a href="https://github.com/getsentry/responses">responses</a></td>
 </tr>
 <tr>
-<td>AWS SDK mocking</td>
+<td><strong>AWS SDK mocking</strong></td>
 <td>Mockito + AWS SDK v2</td>
 <td>@aws-sdk/client-mock</td>
 <td>moto</td>
 </tr>
 <tr>
-<td>Cloud native replicas</td>
-<td>LocalStack</td>
-<td>LocalStack</td>
-<td>LocalStack</td>
+<td><strong>Cloud native replicas</strong></td>
+<td><a href="https://floci.io/">Floci</a></td>
+<td><a href="https://floci.io/">Floci</a></td>
+<td><a href="https://floci.io/">Floci</a></td>
 </tr>
 </tbody>
 </table>
         	<ul class="nhsuk-grid-row nhsuk-card-group">
+		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+			<div class="nhsuk-card nhsuk-card--clickable">
+				<div class="nhsuk-card__content">
+					<div class="nhsuk-card__header">
+						<h2 class="nhsuk-card__heading nhsuk-heading-m">
+							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-coding-v2/">Writing clean tests</a>
+						</h2>
+						  <strong class="nhsuk-tag nhsuk-tag--grey">
+  DRAFT
+</strong>
+
+
+					</div>
+					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2026-06-03T09:03:14.000Z">3 June 2026</time>	
+				</div>
+			</div>
+		</li>
 		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
 			<div class="nhsuk-card nhsuk-card--clickable">
 				<div class="nhsuk-card__content">
@@ -392,23 +577,6 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 				</div>
 			</div>
 		</li>
-		<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-			<div class="nhsuk-card nhsuk-card--clickable">
-				<div class="nhsuk-card__content">
-					<div class="nhsuk-card__header">
-						<h2 class="nhsuk-card__heading nhsuk-heading-m">
-							<a class="nhsuk-card__link" href="/nhsbsa-digital-playbook/development/dev-tests-coding-v2/">Writing clean tests</a>
-						</h2>
-						  <strong class="nhsuk-tag nhsuk-tag--grey">
-  DRAFT
-</strong>
-
-
-					</div>
-					<time class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" datetime="2026-05-31T09:57:04.000Z">31 May 2026</time>	
-				</div>
-			</div>
-		</li>
 	</ul>
 
 
@@ -435,7 +603,7 @@ Clean up the implementation with confidence, knowing the tests will catch any re
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2026-05-31T09:57:04.000Z">31 May 2026</time>
+      Published: <time datetime="2026-06-03T09:03:14.000Z">3 June 2026</time>
     </p>
 </div>
 
