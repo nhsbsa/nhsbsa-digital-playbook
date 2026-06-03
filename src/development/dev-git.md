@@ -3,7 +3,7 @@ layout: article
 title: "Git"
 description: "Define how your team use Git to avoid confusion and reduce risk"
 tags: [dev]
-order: 8
+order: 11
 status: REVIEW
 related:
   title: Related articles
