@@ -19,7 +19,7 @@
     grid-column: 1 / -1;
   }
 
-  h3 {
+  h3, .nhsbsa-revision__table caption {
     @include nhsuk-typography-responsive(19);
     color: $nhsuk-secondary-text-color;
     font-weight: bold;
