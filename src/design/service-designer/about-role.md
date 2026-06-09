@@ -47,7 +47,8 @@ CX and UCD teams work in partnership to inform, influence and action improvement
 - be an engaged and active member within the NHSBSA design community
 - to collaborate with the CX team on customer journey maps
 - to make sure customer journey maps reflect research findings that underpin user journey steps, actions, goals, pains and functions within the business  
-- to identify potential improvements that align with user and business needs 
+- to identify potential improvements that align with user and business needs
+- to be adaptable and responsive, with the ability to move between projects sometimes at short notice to support changing business priorities and user needs while maintaining continuity and quality of design work
 
 ### Expectations of Junior Designers
 

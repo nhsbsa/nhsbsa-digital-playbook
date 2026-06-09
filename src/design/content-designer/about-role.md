@@ -50,6 +50,7 @@ Content designers at all of these role levels:
 - make sure language is consistent across all channels, aligning what the service says with what it does
 - take part in design reviews and content critiques
 - engage with and contribute to the NHSBSA and cross-government content communities
+- to be adaptable and responsive, with the ability to move between projects sometimes at short notice to support changing business priorities and user needs while maintaining continuity and quality of design work
 
 Our content designers work with:
 - interaction designers to prototype and iterate designs
