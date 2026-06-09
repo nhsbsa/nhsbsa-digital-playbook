@@ -41,6 +41,7 @@ Prototypes are design artefacts, not an exact representation of the fully develo
 - share prototypes, user flows and user journey maps
 - take part in design reviews and design critiques
 - be an engaged and active member within the NHSBSA design community
+- to be adaptable and responsive, with the ability to move between projects sometimes at short notice to support changing business priorities and user needs while maintaining continuity and quality of design work
 
 ### Expectations of Junior Designers
 
