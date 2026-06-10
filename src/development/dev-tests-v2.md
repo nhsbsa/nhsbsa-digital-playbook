@@ -59,7 +59,7 @@ Unit and component tests may need to interact with external resources — databa
 
 Unit tests should isolate the functionality under test to the smallest possible scope. However, sometimes it is not possible or advisable to test in complete isolation.
 
-### Modular tests
+### Functional unit
 
 Most languages support modularisation and encapsulation, allowing collections of methods and data to be treated as a unit: An object-oriented class or a file with public functions. In either case, unit tests should target the public interface only. Encapsulated, private implementation methods should not be tested directly.
 
@@ -116,7 +116,7 @@ sequenceDiagram
 
 The test trains the mock before exercising `OrderService`. The production class calls the mock as part of its normal logic — it has no knowledge it is being tested. After the call, the test verifies the mock received the expected inputs, confirming the production class behaved correctly.
 
-### Web layer unit tests
+### Web layer tests
 
 The web layer or Model, View, Controller (MVC) of a user interface should be tested as a whole. Use frameworks such as Spring MvcTest or Supertest to send a crafted request to a URL and validate the response. The test should invoke the responsible controller and assert on the rendered view. Services below the controller are outside the scope of an MVC unit test and should be mocked. Assertions should be made on mocks _and_ the rendered view. Verifying views at a unit level can save time and effort as they can cover multiple permutations without the overhead of the full environment in an acceptance test.
 
@@ -164,7 +164,7 @@ Assert on:
 * **Links and redirects** — links point to the correct URLs; successful form submissions redirect to the expected destination
 * **Security headers** — required headers are present and aligned to our standards; see [Security headers](../../security/security-headers/) and [Content Security Policy](../../security/content-security-policy/)
 
-### API layer unit tests
+### API layer tests
 
 The API layer should be tested using the same approach as web layer tests. Send a crafted HTTP request and assert on the response. Services below the controller should be mocked.
 
@@ -205,6 +205,7 @@ Assert on:
 * **Error responses** — correct error structure and message for each failure scenario
 * **Content-Type header** — response is serialised in the expected format (e.g. `application/json`)
 * **Authentication behaviour** — unauthenticated requests return `401`; requests without the required permissions return `403`
+* **Contract conformance** — responses conform to the service's published OpenAPI specification; use a schema validator to assert that response bodies, status codes, and content types match the declared contract
 * **Security headers** — required headers are present and aligned to our standards; see [Security headers](../../security/security-headers/)
 
 ### Data access layer tests
@@ -251,7 +252,9 @@ Assert on:
 
 ### API client tests
 
-An API client module encapsulates calls to a downstream service. Test against a mock object or mock server trained to return controlled responses. Where possible, construct the mock from a contract specification (such as [OpenAPI](https://spec.openapis.org/oas/latest.html)) to validate that the client conforms to the contract.
+An API client module encapsulates calls to a downstream service. Verifying the payload sent to a downstream API — including that required fields are present and no unexpected fields are added — is a developer responsibility. Test teams have no programmatic means of intercepting inter-service traffic, so this must be covered in code.
+
+Test against a mock server trained to behave according to the downstream service's published [OpenAPI](https://spec.openapis.org/oas/latest.html) specification. Generate or validate the mock's stubs from the actual contract so that you are verifying the client against the real API, not a hand-crafted approximation. Where a downstream service does not publish a contract, train the mock server to return controlled responses and verify the request received by the mock.
 
 ```mermaid
 sequenceDiagram
@@ -295,6 +298,8 @@ Assert on:
 A component test exercises the full stack of a deployable component, testing the interactions between all of its modules as a whole. No internal module within the component should be mocked. External dependencies outside the component boundary are substituted with controlled equivalents — containers, mock servers, or cloud service replicas as appropriate.
 
 Drive the component through its real external interface — HTTP endpoints, queue consumers, event handlers — and assert on its real outputs and the resulting state of its external dependencies. Fixture data, infrastructure setup, and teardown must all be managed within the test suite.
+
+Component tests are not multi-page journey tests. Web-layer unit tests cover the full set of error conditions and all navigation paths out of each individual controller — verifying that every possible outcome routes correctly. Component tests cover what the unit layer cannot: behaviour that can only be reproduced with all modules wired together, such as a validation rule driven by data held in the database, or an error path that requires the full service-to-repository-to-database chain. Journeys across multiple pages or components are verified by the test team's acceptance suite.
 
 ```mermaid
 sequenceDiagram
@@ -355,3 +360,5 @@ The following table summarises the recommended libraries by language for each te
 | **API client mocking** | WireMock | [fetch-mock](https://www.wheresrhys.co.uk/fetch-mock/) | [responses](https://github.com/getsentry/responses) |
 | **AWS SDK mocking** | Mockito + AWS SDK v2 | @aws-sdk/client-mock | moto |
 | **Cloud native replicas** | [Floci](https://floci.io/) | [Floci](https://floci.io/) | [Floci](https://floci.io/) |
+
+Browser automation tools such as Selenium and Playwright are not developer unit or component testing tools — they are used by the test team for acceptance testing. Developers testing UI behaviour should use the web framework test utilities described in [Web layer tests](#web-layer-tests) above.
