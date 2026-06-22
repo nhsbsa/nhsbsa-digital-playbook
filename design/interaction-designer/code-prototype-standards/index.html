@@ -1,0 +1,412 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="What standards code prototypes follow">
+  <meta name="robots" content="noindex">
+  
+  <title>
+Code prototype standards - NHSBSA Digital, Data and Technology Playbook - NHSBSA
+  </title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NQ562NM01Z" type="text/plain" data-cookieconsent="statistics"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ562NM01Z');
+    </script>
+
+  <!-- New NHSUK asset and font -->
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+  <!-- NHS Icons -->
+  <link rel="shortcut icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.ico?v=68c7f017cfba" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png?v=15a5044def06">
+  <link rel="mask-icon" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/favicon-192x192.png?v=43924bfe6c7e">
+
+  <meta name="msapplication-TileImage" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-144x144.png?v=cf4985872492">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/smalltile-70x70.png?v=29f75b06cf75">
+  <meta name="msapplication-square150x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/mediumtile-150x150.png?v=89688d93af5b">
+  <meta name="msapplication-wide310x150logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/widetile-310x150.png?v=535c3996630d">
+  <meta name="msapplication-square310x310logo" content="/nhsbsa-digital-playbook/nhsuk-frontend/assets/favicons/largetile-310x310.png?v=294742e00ff4">
+
+  <meta property="og:url" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/design/interaction-designer/code-prototype-standards/"/>
+  <meta property="og:site_name" content="nhsbsa.nhs.uk"/>
+  <meta property="og:description" content="What standards code prototypes follow">
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
+  <meta property="og:title" content="Code prototype standards - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
+
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=7873905b137d" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="">
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+<div id="nhsuk-cookie-banner" data-nosnippet="true" >
+    <div class="nhsuk-cookie-banner" id="cookiebanner" style="display:none;" data-cookie-version="1" data-policy-url="/nhsbsa-digital-playbook/cookie-policy/">
+        <div class="nhsuk-width-container app-width-container">
+                <h2>NHSBSA Digital, Data and Technology Playbook</h2>
+                    <p>We've put some small files called cookies on your device to make our site work.</p>
+                    <p>We'd also like to use analytics cookies. These send anonymous information about how our site is used to a service called Google Analytics. We use this information to improve our site.</p>
+                    <p>Let us know if this is OK. We'll use a cookie to save your choice across all our digital services for the next 3 calendar months. You can <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">read more about our cookies</a> before you choose.</p>
+
+            <ul>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept_analytics" href="#">I&#39;m OK with analytics cookies</button>
+                </li>
+                <li>
+                    <button class='nhsuk-button' id="nhsuk-cookie-banner__link_accept" href="#">Do not use analytics cookies</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nhsuk-success-banner" id="nhsuk-cookie-confirmation-banner" style="display:none;">
+        <div class="nhsuk-width-container">
+            <p id="nhsuk-success-banner__message">You can change your cookie settings at any time using <a id="nhsuk-cookie-banner__link" href="/nhsbsa-digital-playbook/cookie-policy/" data-policy-url=/nhsbsa-digital-playbook/cookie-policy/">our cookies page</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+    <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
+
+
+    
+
+
+<header class="nhsuk-header nhsuk-header--organisation" role="banner">
+  
+  <div class="nhsuk-header__container">
+    <div class="nhsuk-header__logo nhsuk-header__logo--only">      <a class="nhsuk-header__link" href="/nhsbsa-digital-playbook/" aria-label="Business Services Authority  Digital, Data and Technology playbook homepage">  <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+    <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+    <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+  </svg>
+
+        <span class="nhsuk-organisation-name">Business Services Authority</span>
+<span class="nhsuk-organisation-descriptor">Digital, Data and Technology playbook</span>      </a>    </div>
+    </div>
+    
+
+</header>
+
+<div class="nhsuk-width-container app-width-container">
+    <main class="nhsuk-main-wrapper app-main-wrapper" id="main-content" role="main">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container app-width-container">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+        <h2 class="app-side-nav__heading">Contents</h2>
+        <div class="nhsbsa-nav__list">
+                <ol>
+                    
+                    <li><a href="#password-protection">Password protection</a>
+            		</li>
+
+                    <li><a href="#up-to-date-readme-file">Up to date readme file</a>
+            
+                <ol>
+                    
+                    <li><a href="#what-you-can-include">What you can include</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#informative-index-page">Informative index page</a>
+            		</li>
+
+                    <li><a href="#version-history">Version history</a>
+            
+                <ol>
+                    
+                    <li><a href="#what-to-include-within-each-version">What to include within each version</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#code-comments">Code comments</a>
+            		</li>
+
+                    <li><a href="#custom-components-and-patterns">Custom components and patterns</a>
+            
+                <ol>
+                    
+                    <li><a href="#sharing-custom-designs">Sharing custom designs</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#routes-file-versioning">Routes file versioning</a>
+            
+                <ol>
+                    
+                    <li><a href="#example-main-routesjs-file">Example main routes.js file</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#clear-folder-structure">Clear folder structure</a>
+            
+                <ol>
+                    
+                    <li><a href="#example-folder-structures">Example folder structures</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#footer-copyright">Footer copyright</a>
+            		</li>
+
+                    <li><a href="#prototype-data">Prototype data</a>
+            
+                <ol>
+                    
+                    <li><a href="#example-of-directing-specific-flows">Example of directing specific flows</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#use-of-nunjucks">Use of nunjucks</a>
+            
+                <ol>
+                    
+                    <li><a href="#nunjucks-support">Nunjucks support</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#footer-links">Footer links</a>
+            		</li>
+                </ol>
+            </div>
+        </nav>
+      </div>
+
+      <div class="app-pane__main-content">
+        <div class="nhsuk-back-link no-js">  <a class="nhsuk-back-link__link" href="javascript:history.back()">
+  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+  </svg>
+  Go back</a>
+</div>
+
+      
+        <div class="nhsbsa-article-header">
+          <h1 class="nhsuk-heading-xl">
+            Code prototype standards
+          </h1>
+            <strong class="nhsuk-tag nhsuk-tag--grey">
+  DRAFT
+</strong>
+
+
+        </div>
+      
+
+<p>This guide lists all standards to be followed for code prototypes within the NHS Business Services Authority.</p>
+<hr>
+<h2 id="password-protection" tabindex="-1"><a class="header-anchor" href="#password-protection">Password protection</a></h2>
+<p>All prototypes are to follow the same password format as per agreed with Information Governance, this allows easier access internally.</p>
+<p>Prototype passwords should be set to, NHSBSA.</p>
+<hr>
+<h2 id="up-to-date-readme-file" tabindex="-1"><a class="header-anchor" href="#up-to-date-readme-file">Up to date readme file</a></h2>
+<p>The readme file should be clear and concise, written in plain english, accessible to technical and non-technical people, and keep use of acronyms to a minimum.</p>
+<h3 id="what-you-can-include" tabindex="-1"><a class="header-anchor" href="#what-you-can-include">What you can include</a></h3>
+<ul>
+<li>overview of the service or product</li>
+<li>what phase the service or product is in</li>
+<li>tech stack used (Node.js, NHS.UK Frontend, NHS.UK Prototype Kit, Nunjucks, HTML, CSS, JavaScript)</li>
+<li>prototype disclaimer i.e. may contain incomplete functionality, may use mock or static data, is subject to change, should not be used for operational or live decision-making</li>
+<li>NHSBSA specific instructions on installing</li>
+<li>instructions for running local</li>
+</ul>
+<hr>
+<h2 id="informative-index-page" tabindex="-1"><a class="header-anchor" href="#informative-index-page">Informative index page</a></h2>
+<p>The index page of a prototype should be informative and provide easy access to the following:</p>
+<ul>
+<li>overview of the service or product</li>
+<li>what phase the service or product is in</li>
+<li>latest prototype version link</li>
+<li>link to version history</li>
+<li>link to supporting documentation i.e. design log, confluence pages</li>
+<li>UCD members name and email (optional)</li>
+</ul>
+<hr>
+<h2 id="version-history" tabindex="-1"><a class="header-anchor" href="#version-history">Version history</a></h2>
+<p>All prototypes are to have a version history, and is accessible via the frontend. This should clearly present each version of the prototype, starting with the most recent.</p>
+<p>If your list of versions goes beyond a point where the page is getting too long, use the pagination component.</p>
+<h3 id="what-to-include-within-each-version" tabindex="-1"><a class="header-anchor" href="#what-to-include-within-each-version">What to include within each version</a></h3>
+<ul>
+<li>version number</li>
+<li>last updated (date)</li>
+<li>list of what the version includes i.e. iterations that have been made</li>
+<li>directory of all pages to allow quick access to any page</li>
+<li>relevant links to additional information i.e. design log</li>
+</ul>
+<hr>
+<h2 id="code-comments" tabindex="-1"><a class="header-anchor" href="#code-comments">Code comments</a></h2>
+<p>Provide comments against all custom code which may require additional context for a new designer on what it is doing.</p>
+<p>If you think it could take some understanding, provide comments.</p>
+<hr>
+<h2 id="custom-components-and-patterns" tabindex="-1"><a class="header-anchor" href="#custom-components-and-patterns">Custom components and patterns</a></h2>
+<p>All custom designs must be documented in a design log, this should clearly state:</p>
+<ol>
+<li>why there was a need to go off-pattern</li>
+<li>what steps were taken to try and reuse a common component or pattern</li>
+<li>what research has been completed for this off-pattern design</li>
+<li>is it fully accessible to WCAG 2.2 standards</li>
+</ol>
+<p>If you have created any custom components or patterns, all custom classes must start with the following prefix, <code class="md">.nhsbsa-custom-componentName</code>, this will allow someone to find custom designs easier.</p>
+<p>Once fully tested with users, share these with the BSA community and wider public sector.</p>
+<h3 id="sharing-custom-designs" tabindex="-1"><a class="header-anchor" href="#sharing-custom-designs">Sharing custom designs</a></h3>
+<p><a href="https://service-manual.nhs.uk/community-and-contribution/propose-component-pattern">NHS - propose a component or pattern</a><br>
+<a href="https://design-system.service.gov.uk/community/propose-a-component-or-pattern/">GOV.UK - propose a component or pattern</a></p>
+<p>You can also share custom designs on the <a href="https://ukgovernmentdigital.slack.com/">x-gov slack</a> and <a href="https://nhs-service-manual.slack.com/signup#/domain-signup">nhs service manual channels</a>.</p>
+<hr>
+<h2 id="routes-file-versioning" tabindex="-1"><a class="header-anchor" href="#routes-file-versioning">Routes file versioning</a></h2>
+<p>Routes.js should be versioned along with a new iteration of the prototype, each version of the prototype created should have it’s own routes.js file, this will then be added to the main routes.js file at the root of your app folder.</p>
+<p>For example, You would create a partial routes.js file (_routes.js) within the new version folder<br>
+<code class="md">views/v3/_routes.js</code>, this would then be mounted (included) into the main routers file.</p>
+<h3 id="example-main-routesjs-file" tabindex="-1"><a class="header-anchor" href="#example-main-routesjs-file">Example main routes.js file</a></h3>
+<pre><code class="md">// External dependencies
+const express = require('express');
+const router = express.Router();
+
+// versioned prototype routes
+router.use('/v3', require('./views/v3/_routes'));
+router.use('/v2', require('./views/v2/_routes'));
+router.use('/v1', require('./views/v1/_routes'));
+
+module.exports = router;
+</code></pre>
+<hr>
+<h2 id="clear-folder-structure" tabindex="-1"><a class="header-anchor" href="#clear-folder-structure">Clear folder structure</a></h2>
+<p>All prototypes should be versioned, therefor folder structure should also be clear.</p>
+<h3 id="example-folder-structures" tabindex="-1"><a class="header-anchor" href="#example-folder-structures">Example folder structures</a></h3>
+<pre><code class="md">app/views/
+- v1
+- v2
+- v3
+</code></pre>
+<p>If your set up varies, each variation should also be clearly structured, for example,</p>
+<pre><code class="md">app/views/admin/
+- v1
+- v2
+- v3
+
+app/views/external/
+- v1
+- v2
+- v3
+</code></pre>
+<hr>
+<h2 id="footer-copyright" tabindex="-1"><a class="header-anchor" href="#footer-copyright">Footer copyright</a></h2>
+<p>Prototypes should have the default NHS England copyright changed to Crown copyright.</p>
+<p>On a live service, this notice may differ depending on where the service is located, you may need to seek legal advice within your service around ownership.</p>
+<p>Reach out to the Head of Service or Product Owner for confirmation of service or product ownership.</p>
+<hr>
+<h2 id="prototype-data" tabindex="-1"><a class="header-anchor" href="#prototype-data">Prototype data</a></h2>
+<p>Provide less restrictions on data required to navigate through a prototype’s happy path.</p>
+<p>When providing different flows and unhappy paths, then provide the relevant data needed clearly, or provide a different way to start the flow, for example, a way for someone to choose which flow they want to go through.</p>
+<h3 id="example-of-directing-specific-flows" tabindex="-1"><a class="header-anchor" href="#example-of-directing-specific-flows">Example of directing specific flows</a></h3>
+<p>This can be done by providing buttons, radio buttons or checkboxes at the beginning to decide a specific user flow to take, instead of needing to enter specific data to navigate the prototype screens.</p>
+<hr>
+<h2 id="use-of-nunjucks" tabindex="-1"><a class="header-anchor" href="#use-of-nunjucks">Use of nunjucks</a></h2>
+<p>Nunjucks is provided for common components in the NHS Service Manual, it is recommended to use these where possible, this is to allow an easier update of the prototype with less manual input being required.</p>
+<p>This is optional, you will not be expected to use nunjucks if your prototype requires custom code to be written, or if you require further skills in the use of nunjucks.</p>
+<h3 id="nunjucks-support" tabindex="-1"><a class="header-anchor" href="#nunjucks-support">Nunjucks support</a></h3>
+<ul>
+<li><a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks template documents</a></li>
+<li>You can see nunjucks used in <a href="https://prototype-kit.service-manual.nhs.uk/guides/build-basic-prototype/">Build a basic prototype</a> on the service manual</li>
+</ul>
+<hr>
+<h2 id="footer-links" tabindex="-1"><a class="header-anchor" href="#footer-links">Footer links</a></h2>
+<p>At the time of prototyping, include relevant footer links.</p>
+<p>For example,</p>
+<ul>
+<li>Accessibility statement</li>
+<li>Cookies</li>
+<li>Privacy policy</li>
+<li>Terms and conditions</li>
+</ul>
+<p>New links may need adding at a later stage.</p>
+
+        <hr>
+        <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
+        <p>If you spot anything factually incorrect with this page or have ideas for improvement,
+          please share your suggestions.</p>
+
+        <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>.
+        Github is an open forum where we collect feedback.</p>
+        
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook/discussions/new?category=UCD&amp;template=General-Playbook-Ideas.md&amp;title=Change%20to%20page%20&#39;%2Fdesign%2Finteraction-designer%2Fcode-prototype-standards&#39;%20">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Suggest a change to this page</span>
+  </a>
+</div>
+
+
+
+        <div class="nhsbsa-article--date">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
+      Published: <time datetime="2026-06-22T14:42:12.000Z">22 June 2026</time>
+    </p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer role="contentinfo">
+  <div class="nhsuk-footer-container">
+    <div class="nhsuk-width-container app-width-container">
+      <div class="nhsuk-footer" id="nhsuk-footer">				<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+				
+				<ul class="nhsuk-footer__list">					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/accessibility-statement/">Accessibility statement</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/contact-us">Contact us</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsbsa-digital-playbook/cookie-policy/">Cookies</a></li>					<li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsbsa/nhsbsa-digital-playbook">GitHub</a></li>				</ul>
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+			<div class="nhsuk-ogl-footer">
+				<p class="nhsuk-ogl-footer--text">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false">
+				<path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+				</svg>
+				All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
+				</p>
+			</div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" async>import mermaid from "https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs";mermaid.initialize({"theme":"base","themeVariables":{"background":"#f0f4f5","primaryColor":"#d8dde0","primaryTextColor":"#000","primaryBorderColor":"#212b32","secondaryColor":"#f0f4f5","secondaryTextColor":"#000","tertiaryColor":"#ffb81C","tertiaryTextColor":"#fff","noteBkgColor":"#fff9c4","noteTextColor":"#000","lineColor":"#212b32","errorBkgColor":"#d5281b","errorTextColor":"#d5281b","git0":"#005eb8","git1":"#007f3b","git2":"#ffb81C","git3":"#ffeb3b","git4":"#d5281b","git5":"#7C2855","git6":"#330072","git7":"#212b32","gitBranchLabel0":"#fff","gitBranchLabel1":"#fff","gitBranchLabel2":"#000","gitBranchLabel3":"#000","gitBranchLabel4":"#fff","gitBranchLabel5":"#fff","gitBranchLabel6":"#fff","gitBranchLabel7":"#fff"},"gitGraph":{"showCommitLabel":false},"loadOnSave":true,"startOnLoad":false});const run=()=>mermaid.run();document.addEventListener('DOMContentLoaded',run);if(document.readyState!=='loading')run();</script>    <script src="/nhsbsa-digital-playbook/javascripts/nhsuk.min.js?v=c25341999277"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/application.js?v=13016328ce1d"></script>
+    <script src="/nhsbsa-digital-playbook/javascripts/cookie-banner.js?v=d12e888d2db3"></script>
+
+
+</body>
+</html>
