@@ -84,3 +84,13 @@ To be inclusive of individuals with additional needs, it’s important to offer 
 Safeguarding does not always end when the research ends. Depending on the UR method and topic, it may be useful to signpost participants to relevant support organisations. Provide links to local or national services and charities, particularly if the topic is sensitive or the session has covered difficult themes.
 
 Check on your own wellbeing by debriefing with your team to reflect on how the research has affected you and if any ethical issues have been identified that may need to be raised with the UR lead.
+
+## Seeking support
+A Research Ethics Community of Practice (CoP) provides research ethics support to URs at the BSA. This group consists of experienced URs and ReOps colleagues who are available to:
+
+- Respond to ad hoc queries regarding ethical UR practice at the BSA
+- Peer review documentation from an ethical perspective, including face-to-face research plans and research being conducted on sensitive topics or with a vulnerable/high-risk demographic groups
+- Provide debrief support to URs following challenging research sessions
+- Advise on the safeguarding process - what to do to effectively safeguard participants/yourself as a UR
+
+To access this support, email [research.ethics@nhsbsa.nhs.uk](mailto:research.ethics@nhsbsa.nhs.uk)
