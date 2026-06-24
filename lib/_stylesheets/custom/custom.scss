@@ -136,14 +136,6 @@ a.nhsuk-footer__list-item-link:visited {
     padding: 0 0 nhsuk-spacing(3) 0;
 }
 
-/* search input */
-// space between header and input on smaller devices
-@media only screen and (max-width:899px) {
-  .app-site-search__wrapper{
-    margin-top:10px;
-  }
-}
-
 /* breadcrumbs */
 // Very temporary fix for showing breadcrumbs on mobile
 @media (max-width: 40.0525em){
