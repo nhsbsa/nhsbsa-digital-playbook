@@ -88,9 +88,9 @@ Check on your own wellbeing by debriefing with your team to reflect on how the r
 ## Seeking support
 A Research Ethics Community of Practice (CoP) provides research ethics support to URs at the BSA. This group consists of experienced URs and ReOps colleagues who are available to:
 
-- Respond to ad hoc queries regarding ethical UR practice at the BSA
-- Peer review documentation from an ethical perspective, including face-to-face research plans and research being conducted on sensitive topics or with a vulnerable/high-risk demographic groups
-- Provide debrief support to URs following challenging research sessions
-- Advise on the safeguarding process - what to do to effectively safeguard participants/yourself as a UR
+- respond to ad hoc queries regarding ethical UR practice at the BSA
+- peer review documentation from an ethical perspective, including face-to-face research plans and research being conducted on sensitive topics or with a vulnerable/high-risk demographic groups
+- provide debrief support to URs following challenging research sessions
+- advise on the safeguarding process - what to do to effectively safeguard participants/yourself as a UR
 
 To access this support, email [research.ethics@nhsbsa.nhs.uk](mailto:research.ethics@nhsbsa.nhs.uk)
