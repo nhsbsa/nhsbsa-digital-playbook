@@ -24,7 +24,7 @@ issuesheet:
           approved_by: "Approver initials"
           details: "Initial release"
 ---
-The playbook allows you to declare an issue sheet and document review information using frontmatter data.
+The playbook allows you to declare an issue sheet and document review information using frontmatter data. Document meta information such as publish date, the issue sheet and revision history are displayed at the foot of the page.
 
 ## Document status
 
