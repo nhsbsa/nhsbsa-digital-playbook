@@ -8,15 +8,24 @@ order: 3
 
 ## What is expected from a Service Designer in Alpha
 
-In the Alpha phase, the team aims to develop and refine early versions of the product or service. As a Service Designer, your key responsibilities might involve:
+In the Alpha phase, the team aims to experiment, test and refine early versions of the product or service. As a Service Designer, your key responsibilities might involve: 
 
+- collaborating with cross-functional team members (user researchers, interaction designers, content designers, business analysts, technical architects, delivery managers, product owners, etc.) to refine service concepts based on user feedback 
+- defining the current (as-is) and future (to‑be) service blueprints, along with supporting service design artefacts for the alpha phase
+- working collaboratively across departments to refine technology and service processes ahead of delivery 
+- designing sustainable processes and shaping operational models to ensure efficient, resilient service delivery, with appropriate consideration of risks and constraints once the service is live 
+- ensuring a consistent user experience aligned with other NHS and government services 
+- considering all user journeys into and out of the service, including effective signposting and clear end‑of‑service transitions 
+- understanding the context in which different user groups interact with the service, including primary, secondary and tertiary users and stakeholders 
+- clearly articulating the reasoning behind design, policy and delivery choices across the full-service ecosystem to all users and stakeholders, both internal and external 
+- maintaining a design history or log to document how the service evolves over time, capturing what was created, why decisions were made, and how changes responded to user and business needs
+- working with other departments such as technical and procedural, comms, contact centre, print services and online teams to understand the capability and constraints of the ask as well as assessing needs of all parties for successful delivery of the service 
 
-- collaborating with cross-functional team members (user researchers, business analysts, technical architects, delivery managers, product owners, etc.) to refine service concepts based on user feedback.
-- defining the service blueprint and refining technologies and process with cross-departmental teams for delivery
-- creating processes and influencing operations that will ensure the futureproofing and efficient delivery/ return of a service once implemented and running with appropriate due diligence to risk and constraint 
-- creating a consistent user experience with other NHS / GOV services
-- considering all routes that users take into and out of the service
-- considering the context of each user group i.e. how the service will look and work for all demographics
-- making clear rationale with all stakeholders and users, both internal and external for the full service ecosystem and not just one element of the service
-- documenting the changes to the service over time using a UCD Log i.e. what was created and why, what you planned to test (hypothesis) and what did you find 
+### What outputs are expected from an Service Designer in Alpha
 
+Service Designer outputs should include the design artefacts appropriate to the phase and needs of the service, for example:
+- to-be blueprints maps – Illustrating proposed end‑to‑end experiences across channelsshowing actors, touchpoints, channels, and dependencies and opportunity areas – where change could have the biggest impact 
+- ecosystem or stakeholder maps – organisations, teams, suppliers, and relationships 
+- empathy mapping – to help the team move beyond what users do, to understand why they do it, grounding service design decisions in real user insight rather than assumptions 
+- policy and legislative constraints summary – what shapes or limits the service 
+- to-be focused user journey – identifying touch points, pain and gain points
