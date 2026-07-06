@@ -10,7 +10,7 @@ order: 5
 
 During beta, the focus is on reducing risk while refining and optimising the service to better meet the needs of users and stakeholders.
 
-Beta focuses on the service moving rom ideas and prototypes into a working usable product or service. It builds on what was leaened in discovery and alpha and prepares the service for real-world use and eventual live release.
+Beta focuses on the service moving from ideas and prototypes into a working usable product or service. It builds on what was learnt in discovery and alpha and prepares the service for real-world use and eventual live release.
 
 There are two phases within beta:
 - private beta, being a limited release to a sample group of real users to test the service in a controlled way
@@ -19,7 +19,7 @@ There are two phases within beta:
 ### Interaction design involvement
 
 As an interaction designer, you might be involved in:
-- taking the design you've agreed on and working with the service team in testing it with a small, controlled group of users to underestand how it works and remove any risks before live
+- taking the design you've agreed on and working with the service team in testing it with a small, controlled group of users to understand how it works and remove any risks before live
 - working collaboratively with the team to decide whether identified issues require further testing or can be safely released and measures, considering risk, delivery impact, user satisfaction, accessibility and inclusivity requirements, assisted digital needs and cost
 - ensuring solutions are inclusive and accessible to everyone, offering both digital and offline routes, and meeting all user needs identified through research
 - ensuring interaction design solutions meet the latest published [WCAG standards](https://www.w3.org/TR/WCAG22/) to 'AA' standard
