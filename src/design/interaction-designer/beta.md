@@ -8,13 +8,30 @@ order: 5
 
 ## What is expected from an Interaction Designer in Beta
 
-During the Beta phase, the product is closer to its final form, and the focus is on refining and optimising the user experience. As an Interaction Designer, you might be involved in:
+During beta, the focus is on reducing risk while refining and optimising the service to better meet the needs of users and stakeholders.
 
-- taking your best idea from alpha and start building it for real with a select group of users (this is known as Private Beta)
-- working with the team to decide whether changes need to be usability tested or can be shipped and measured
-- helping track down work to be done based on user feedback
-- ensuring that solutions are built for everyone - not just a select few
-- ensuring that solutions meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard
-- contributing and sharing any new design patterns that are developed to meet user needs within the NHS / GOV design communities
-- observing user research and analysing data and analytics
-- documenting the changes to the service over time using a UCD log i.e. what was created and why, what you planned to test (hypothesis) and what did you find
+Beta focuses on the service moving from ideas and prototypes into a working usable product or service. It builds on what was learnt in discovery and alpha and prepares the service for real-world use and eventual live release.
+
+There are two phases within beta:
+- private beta, being a limited release to a sample group of real users to test the service in a controlled way
+- public beta, being open to the public, often promoted more widely to get broader user feedback
+
+### Interaction design involvement
+
+As an interaction designer, you might be involved in:
+- taking the design you've agreed on and working with the service team in testing it with a small, controlled group of users to understand how it works and remove any risks before live
+- working collaboratively with the team to decide whether identified issues require further testing or can be safely released and measures, considering risk, delivery impact, user satisfaction, accessibility and inclusivity requirements, assisted digital needs and cost
+- ensuring solutions are inclusive and accessible to everyone, offering both digital and offline routes, and meeting all user needs identified through research
+- ensuring interaction design solutions meet the latest published [WCAG standards](https://www.w3.org/TR/WCAG22/) to 'AA' standard
+- observing user research and contributing to the analysis of key success metrics such as google analytics data and customer satisfaction (CSAT) scores
+- maintaining a design history to document how the service evolves over time, capturing what was created, why decisions were made, and how changes responded to user and business needs
+- actively contributing reusable processes and operational best practice that can be adopted across NHSBSA and shared across government
+
+### What outputs are expected from an Interaction Designer in Beta
+
+Interaction designer outputs should include the design artefacts appropriate to the phase and needs of the service, for example:
+- rapid, code prototyping informed by pilot insights and user research
+- annotated user flow map
+- technical feasibility risk log, as and when appropriate
+- contribute to a risks and constraints log
+- document any custom components and patterns, and share within NHSBSA, NHS and GOV.UK communities
