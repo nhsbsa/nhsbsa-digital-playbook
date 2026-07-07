@@ -5,7 +5,6 @@ description: "What standards code prototypes follow"
 tags: interaction-design
 order: 8
 ---
---- 
 
 ## Password protection
 All prototypes are to follow the same password format as per agreed with Information Governance, this allows easier access internally.
