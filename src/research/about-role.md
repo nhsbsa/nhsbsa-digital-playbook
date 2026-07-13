@@ -27,39 +27,38 @@ In the earliest stages of development, user research plays an integral role in h
 
 ## Expectations of a User Researcher
 
-### Expecations of ALL User Researchers
+### Expectations of All User Researchers
+- collaborate effectively with multidisciplinary teams and stakeholders
+- recruit inclusively and conduct research using appropriate methods
+- analyse data and communicate actionable insights
+- manage research data in line with BSA standards
+- advocate for users and user-centred design
+- work effectively in agile environments
+- share knowledge and support colleagues
+- contribute to the User Research community
+- take ownership of professional development
+- maintain high standards of quality, ethics and professionalism
+- adapt to business need, including moving between projects at short notice
 
-- work to GOV and NHS service standards
-- ensure that accessibility needs are represented in user research findings
-- collaborate and share work with other User Centred Design (UCD) professionals.
-- contribute to research playbacks outlining research findings
-- invite others to take part in user research sessions – especially those within their development team
-- understand and adhere to relevant policies and procedures ensuring legal and appropriate handling of research data in line with the Research Operations Team (link?)
+### Expectations of Junior User Researchers 
+- support research delivery through observation, note-taking and supervised research sessions
+- contribute to research outputs and present findings with support from more senior researchers
+- develop stakeholder management and influencing skills
+- build awareness of GDS service standards and UCD principles
 
-### Expectations of Junior User Researchers
+### Expectations of User Researchers 
+- lead end-to-end research activities across the research lifecycle
+- build stakeholder relationships and influence decisions through evidence
+- produce and communicate high-quality research outputs
+- promote UCD best practice within project teams
 
-- can explain why research methodologies have been chosen
-- works collaboratively
-- takes responsibility as part of a service team
-- can recognise user issues and important needs
-- looks to develop their research skillset whilst working alongside more senior researchers
-
-### Expectations of Midweight User Researchers
-
-- can work independently within a multidisciplinary team
-- can be trusted to make informed decisions and explain the rationale to others
-- can recognise when to ask for further guidance and support
-- contributes to a User Research plan
-- can interpret, analyse and report back research findings to the wider delivery team
-
-### Expectations of Senior User Researchers
-
-- works with minimal support and can influence and mentor others
-- will work with delivery managers and product owners to identify and plan future research requirements and influence change where necessary
-- may have responsibility across complex services
-- helps to set direction and embed good practice within teams
-- oversees and guides more junior staff to ensure best practice and delivery
-- makes important decisions based on research and understand how this research impacts the wider delivery landscape
+### Expectations of Senior User Researchers 
+- set research direction and oversee research across one or more projects
+- provide strategic advice on delivery, agile working, resourcing and GDS assessments
+- influence senior stakeholders and manage project risks
+- assure the quality of research, outputs and research practices
+- lead and develop researchers through coaching, mentoring and feedback
+- champion the User Research profession, GDS readiness and UCD best practice across the organisation
 
 For a more in-depth overview of the specific expectations of User Researchers at different grades, see the Digital Data and Technology (DDaT) guidance published by UK Gov here [https://www.gov.uk/guidance/user-researcher](https://www.gov.uk/guidance/user-researcher)
 
