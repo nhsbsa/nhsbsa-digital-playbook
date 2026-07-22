@@ -12,7 +12,7 @@ The product owner is accountable for maximising the value of the product resulti
 
 Product owners shape and steer the product towards a vision and will take feedback and influence from stakeholders within the organisation, users, and the market to ensure the development team is building the right thing.
 
-#### Product owners are accountable for:
+### Product owners are accountable for:
 
 - the successful delivery of user centred products
 - defining the product strategy and vision – in line with service vision and objectives
@@ -26,7 +26,7 @@ Product owners shape and steer the product towards a vision and will take feedba
 - monitoring product quality and setting appropriate objectives and key results (OKRs) and key performance indicators (KPIs)
 - using expertise to understand and communicate scope and constraints to manage expectations with all stakeholders. For example, user centered design (UCD) and development team
 
-#### Product owners do not:
+### Product owners do not:
 
 - create or own the delivery plan
 - manage or dictate team tasks
