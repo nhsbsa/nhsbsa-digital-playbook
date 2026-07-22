@@ -32,7 +32,7 @@ This document will outline the planned tests under each core test framework. It 
 - The defect management process
 - Items included in a Test Plan (see below)
 
-A copy of the NHSBSA Test Approach template can be found [here](https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx).
+[View the NHSBSA Test Approach template](https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx).
 
 ## Test Plan
 
@@ -72,7 +72,7 @@ The NHSBSA Test community share their test results and outcomes via a series of 
 
 Test reports define the outcome of a test or a series of tests. They are produced so that the appropriate stakeholders can understand what testing has been conducted, what has been successful and what has not been successful. It allows stakeholders to understand the outstanding issues and appreciate the residual risk. This enables stakeholders to make an informed decision on whether a release, change or fix should be deployed into Production or not.
 
-JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the guidance found [here](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx) to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.
+JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the [DDaT Test Reports guidance](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx) to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.
 
 The information provided in the test report(s) should follow the international standard ISO/IEC 29119.
 
