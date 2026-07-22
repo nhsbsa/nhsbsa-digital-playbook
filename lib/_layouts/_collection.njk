@@ -26,9 +26,12 @@
           }) }} 
         {% endif %}
 
-        <h1 class="nhsuk-heading-xl">
-          {{ title }}
-        </h1>
+        {% if not hero %}
+          <h1 class="nhsuk-heading-xl">
+            {{ title }}
+          </h1>
+        {% endif %}
+
         <h2 class="nhsuk-heading-l">
           {{ posts.title or app.posts.title or "Related articles" }}
         </h2>
