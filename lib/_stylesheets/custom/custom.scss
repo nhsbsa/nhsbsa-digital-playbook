@@ -377,7 +377,7 @@ pre[class*="language-"] {
 }
 
 .namespace {
-	opacity: .7;
+	opacity: 1;
 }
 
 .token.property,
@@ -396,7 +396,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: rgb(89, 125, 15);
+	color: #2C4007B3;
 }
 
 .token.operator,
