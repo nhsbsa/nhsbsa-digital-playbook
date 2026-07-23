@@ -1,0 +1,12 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000
+  },
+  "urls": [
+    "http://localhost:8080/nhsbsa-digital-playbook/",
+    "http://localhost:8080/nhsbsa-digital-playbook/accessibility/",
+    "http://localhost:8080/nhsbsa-digital-playbook/development/coding-licences/",
+    "http://localhost:8080/nhsbsa-digital-playbook/testing/testing-in-general/"
+  ]
+}
