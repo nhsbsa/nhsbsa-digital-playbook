@@ -1,7 +1,8 @@
 {
   "defaults": {
     "standard": "WCAG2AA",
-    "timeout": 30000
+    "timeout": 30000,
+    "runners": ["axe", "htmlcs"]
   },
   "urls": [
     "http://localhost:8080/nhsbsa-digital-playbook/",
