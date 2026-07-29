@@ -83,7 +83,7 @@ This statement was prepared on 4 December 2025. It was last reviewed on 29 July 
 
 This website was last tested on 17 July 2026 against the WCAG 2.2 AA standard. 
 
-The test was carried out by the NHSBSA Accessibility team. The most viewed pages were tested using automated testing tools by our website team. A further audit of the website was carried out to the WCAG 2.2 AA standard.
+The test was carried out by the NHSBSA Accessibility teams. Each of the website’s template types and most viewed pages were tested using automated tools by our website team. A further audit of the website was carried out to the WCAG 2.2 AA standard.
 
 We tested all the website screens to meet ‘AA’ WCAG 2.2 standards, using manual and automated tests.
 
