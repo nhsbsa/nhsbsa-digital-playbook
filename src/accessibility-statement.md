@@ -21,8 +21,7 @@ We’ve also made the website text as simple as possible to understand.
 
 - tab components are not fully accessible using a keyboard
 - some information is not announced correctly by screen readers
-- some content is not fully accessible using a keyboard
-- some pages require horizontal scrolling when viewed at 200% zoom or higher
+- some content disappears when zoomed in to 175%
 
 ## Feedback and contact information
 
@@ -61,9 +60,7 @@ A tabbed navigation component used on two pages of the website is not fully acce
 
 Some lists are not marked up correctly. Screen readers may not identify them as lists or announce the number of items they contain. This fails WCAG 2.2 success criterion 1.3.1 (Info and Relationships).
 
-Some scrollable areas cannot be accessed or operated using a keyboard alone. This may prevent keyboard-only users from accessing all content. This fails WCAG 2.2 success criterion 2.1.1 (Keyboard).
-
-Some pages display horizontal scrolling when zoomed to 200% or higher. This can make content more difficult to use for people with low vision. This fails WCAG 2.2 success criterion 1.4.10 (Reflow).
+When some pages are zoomed in to 175% the contents panel is no longer accessible. This fails WCAG 2.2 success criterion 1.4.10 (Reflow).
 
 ## Third-party content and services
 
