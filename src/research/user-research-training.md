@@ -2,8 +2,8 @@
 layout: article
 title: "User research training"
 description: "Opportunities for the user research community"
-tags: training
-order: 3
+tags: research
+order: 15
 ---
 
 The UCD Leadership Team regularly shares training opportunities for the user research community.
