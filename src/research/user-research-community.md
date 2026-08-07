@@ -17,14 +17,14 @@ You could use a session to:
 * discuss work from a previous role or organisation
 * run a short training or knowledge-sharing session
 
-If there's a topic you'd like to discuss, you can sign up for a session on the UR Community schedule.
+If there's a topic you'd like to discuss, you can sign up for a session on the [UR Community schedule](https://nhsbsauk.sharepoint.com/:x:/t/CommunitiesofPractice75/IQD5cJlkf7FfSLIUcpJmflalAQJopWuj9pEJuNr6Dft15LA?e=V1CAfG).
 
 Everyone is encouraged to lead community sessions, either on their own or with colleagues. We also welcome guest speakers from academia, private sector organisations, other government departments and training providers.
 
 If you’d like to invite colleagues from the wider UCD Community to your session, you should contact the UR leads.
 You should be added to the UR Community invite during onboarding. If you do not receive the invite, contact the UR leads.
 
-All sessions are recorded. If you miss a session, you can find the recordings in the Community sessions folder.
+All sessions are recorded. If you miss a session, you can find the recordings in the [Community sessions](https://nhsbsauk.sharepoint.com/:f:/t/CommunitiesofPractice75/IgBd28yJsA_JS7Tk03JjGEO7AXteWvgNDCq5OlAWnrouHPc?e=LGf4Bc) folder.
 
 ## UCD newsletters
 
