@@ -13,7 +13,7 @@ For a great article on writing clean tests in Java, read this article:
 
 ## Background
 
-Unit tests serve as the specification for a class or function. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.
+Unit tests serve as the specification for a class, function, or component behaviour. Someone who is new to a codebase should be able to read a unit test and understand what the code is supposed to do.
 
 A clean test is one that can be easily read and understood. Writing clean tests is important as it removes barriers to understanding and ensures that the code is doing what is intended.
 
