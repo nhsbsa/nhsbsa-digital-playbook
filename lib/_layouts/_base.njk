@@ -119,6 +119,9 @@
     {{ header({
       "homeHref": homeUrl,
       "ariaLabel": siteMeta.header.description,
+      "showSearch": "true",
+      "searchAction": "/search/" | url,
+      "searchInputName": "q",
       "organisation": {
         "name": siteMeta.header.organisation,
         "descriptor": siteMeta.header.description
@@ -141,6 +144,7 @@
     <script src="{{ '/javascripts/nhsuk.min.js' | url }}"></script>
     <script src="{{ '/javascripts/application.js' | url }}"></script>
     <script src="{{ '/javascripts/cookie-banner.js' | url }}"></script>
+    <script src="{{ '/javascripts/search-autocomplete.js' | url }}"></script>
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 

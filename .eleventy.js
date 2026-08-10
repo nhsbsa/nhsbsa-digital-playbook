@@ -80,7 +80,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('pretty', require('./lib/_filters/pretty'));
   eleventyConfig.addFilter('slug', require('./lib/_filters/slug'));
   eleventyConfig.addFilter('sort', require('./lib/_filters/sort'));
-  eleventyConfig.addFilter('tokenize', require('./lib/_filters/tokenize'));
   eleventyConfig.addFilter(
     'totalFromRows',
     require('./lib/_filters/total-from-rows'),
