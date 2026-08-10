@@ -38,7 +38,7 @@ To meet security standards, multi factor authentication (MFA) is being mandated 
 
 The NHSBSA Test Community continuously improve our approach to testing. This means new technologies and innovations are considered to ensure we are being as efficient and accurate as possible. Artificial intelligence (AI) test tools are now commonly used across the DDaT private and public sectors. It is therefore important that the NHSBSA look at these tools to see if they would be beneficial to us.
 
-The NHSBSA Test Guilds are considering different tools as they come on the market. The current list can be found [here](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5333647573/USING+AI+IN+TESTING+draft?atlOrigin=eyJpIjoiZGZkZTIxOTVjMzYxNDc4MDkzYTZjZWNlMjIxMzk2NmEiLCJwIjoiYyJ9). When considering new tools, the Test Guilds, and other stakeholders, must be aware of the guidance on the use of AI in testing:
+The NHSBSA Test Guilds are considering different tools as they come on the market. The current list can be found in [Using AI in Testing](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5333647573/USING+AI+IN+TESTING+draft?atlOrigin=eyJpIjoiZGZkZTIxOTVjMzYxNDc4MDkzYTZjZWNlMjIxMzk2NmEiLCJwIjoiYyJ9). When considering new tools, the Test Guilds, and other stakeholders, must be aware of the guidance on the use of AI in testing:
 
 - The NHSBSA's [guidance on the use of AI](https://nhsbsauk.sharepoint.com/sites/MyHub-Help/SitePages/NHSBSA-guidance-for-using-generative-artificial-intelligence-in-the-workplace.aspx) in the workplace must be followed. This includes instructions on the use of Microsoft CoPilot
 - To make use of GitHub CoPilot, [follow the DDaT SEng guidance](https://bsa2468.atlassian.net/wiki/spaces/KB/pages/4897832992) and access instructions

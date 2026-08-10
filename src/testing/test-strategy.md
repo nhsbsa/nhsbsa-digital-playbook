@@ -68,7 +68,7 @@ Functional Acceptance, API, Compatibility Testing:
 - CI/CD pipeline -- automated regression test packs are placed in the CI/CD pipeline where they can be triggered manually or, preferably, be scheduled to be executed on a regular basis. This is daily, overnight, where possible.\
   The execution model follows the **Automation Pipeline template**, ensuring consistency, standardisation, and full CI/CD alignment across all services.
 
-- Multi Factor Authentication (MFA) -- many (most) NHSBSA services require users to use MFA. This poses a problem with placing automated tests in the CI/CD pipeline as MFA requires manual intervention. We have worked with the NHSBSA DDaT Security team to devise a way to avoid this problem, thus allowing us to automate most of the functional acceptance, compatibility and API tests within the CI/CD pipeline. This can be found [here](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5427003447/TESTING+SERVICES+WITH+MULTI+FACTOR+AUTHENTICATION+draft).
+- Multi Factor Authentication (MFA) -- many (most) NHSBSA services require users to use MFA. This poses a problem with placing automated tests in the CI/CD pipeline as MFA requires manual intervention. We have worked with the NHSBSA DDaT Security team to devise a way to avoid this problem, thus allowing us to automate most of the functional acceptance, compatibility and API tests within the CI/CD pipeline. This can be found in [Testing services with multi factor authentication](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5427003447/TESTING+SERVICES+WITH+MULTI+FACTOR+AUTHENTICATION+draft).
 
 Accessibility Testing:
 
@@ -84,7 +84,7 @@ Data Processing Testing:
 
 ### Route to Live
 
-NHSBSA follow a strict route-to-live policy to ensure there is a stable Software Development Lifecycle (SDLC). All code must go through Unit Testing in the Development environments prior to being released into the formal test environments. Unit Testing is conducted by Developers and includes two types of testing as a minimum -- self-contained testing of a unit of code and integration testing ("integration in the small") where the interaction with an external resource such as an API or a database is tested. More details on the NHSBSA's approach to Unit Testing can be found [here](../../development/dev-tests/).
+NHSBSA follow a strict route-to-live policy to ensure there is a stable Software Development Lifecycle (SDLC). All code must go through Unit Testing in the Development environments prior to being released into the formal test environments. Unit Testing is conducted by Developers and includes two types of testing as a minimum -- self-contained testing of a unit of code and integration testing ("integration in the small") where the interaction with an external resource such as an API or a database is tested. More details on the NHSBSA's approach to Unit Testing can be found in the [NHSBSA approach to unit testing](../../development/dev-tests/).
 
 Once release candidate has successfully completed Unit Testing, it is promoted to the Test environment for formal testing. A **Build Acceptance Test** should be executed (preferably within the CI/CD pipeline) to check stability of the revised code baseline. This is encouraged for complex pieces of code or significant pieces of functionality. The route-to-live is then
 
@@ -102,7 +102,7 @@ Our approach to testing is to conduct the most appropriate testing as early as p
 
 Testers will not conclude test activities until a stable code baseline is developed and the agreed tests have passed. This means that whilst testing may start early, it may continue for a longer period because the tests are not yet successful. However, the shift-left approach does mean that critical defects will be found, and fixed, earlier in the SDLC.
 
-An example of how a shift left approach has been implemented can be found [here](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5768151041/TEST+SHIFT-LEFT+APPROACH).
+An example of how a shift left approach has been implemented can be found in the [Test shift-left approach](https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5768151041/TEST+SHIFT-LEFT+APPROACH).
 
 ### Independence
 
