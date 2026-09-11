@@ -88,7 +88,7 @@ Including all types of users in your research will help you to:
 
 - understand how people with different needs or abilities might use your service, as well as the barriers they face
 - refine your design, functionality and content based on how different kinds of users experience them
-- meet [government accessibility requirements](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements)
+- meet [government accessibility requirements](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#how-to-meet-government-accessibility-requirements)
 
 ### 3. Find what works, not what’s popular
 

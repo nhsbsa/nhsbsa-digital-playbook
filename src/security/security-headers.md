@@ -177,7 +177,7 @@ Edge
 : Edge should not send this header
 
 Application
-: Migrate to [Content-Security-Policy](../content-security-policy)
+: Migrate to [Content-Security-Policy](../../content-security-policy/)
 
 OWASP
 : <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#expect-ct>

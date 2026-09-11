@@ -50,7 +50,7 @@ We use [markdown-it-container][markdown_it_container] to wrap sections of conten
 
 Wrap the markdown content with `::: card` and `:::` markers
 
-This is particularly effective when combined with [definition lists](../markdown#definition-list).
+This is particularly effective when combined with [definition lists](#definition-list).
 
 ```text
 ::: card

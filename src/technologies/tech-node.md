@@ -13,7 +13,7 @@ Here’s a list of our preferred technology choices when implementing in Node.js
 
 ## Node.js versions
 
-Refer to the [Release adoption schedule](../tech-release-adoption-schedule)
+Refer to the [Release adoption schedule](../tech-release-adoption-schedule/)
 
 Node projects must:
 
