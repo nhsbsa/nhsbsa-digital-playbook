@@ -80,7 +80,7 @@ Once you’ve fully tested this component with users, you should share these wit
 [NHS - propose a component or pattern](https://service-manual.nhs.uk/community-and-contribution/propose-component-pattern)
 [GOV.UK - propose a component or pattern](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/)
 
-You can also share custom designs on the [x-gov Slack](https://ukgovernmentdigital.slack.com/) and [NHS service manual channels](https://nhs-service-manual.slack.com/signup#/domain-signup).
+You can also share custom designs on the [x-gov Slack](https://ukgovernmentdigital.slack.com/) and [NHS service manual channels](https://nhs-service-manual.slack.com/signup/).
 
 ---
 

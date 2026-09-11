@@ -5,7 +5,7 @@ description: "An introduction to testing at the NHSBSA, our approach, core frame
 tags: test
 order: 1
 ---
-## Introduction 
+## Introduction
 
 The NHSBSA DDaT Test Playbook aims to describe our test strategy, the types of testing we conduct within the NHSBSA, and the standards we follow.
 
@@ -64,7 +64,7 @@ The layers in between represent a gradual incline/decline to these two states.
 
 Unit tests fall into the latter category. By their nature, there are short and focussed tests, that are quick to execute and fast to provide results. There are usually many unit tests required to ensure there is sufficient coverage.
 
-More details can be found in the [Development pages](../../development/dev-tests) of the NHSBSA DDaT Playbook.
+More details can be found in the [Development pages](../../development/dev-tests/) of the NHSBSA DDaT Playbook.
 
 ## Overview of Core Test Frameworks
 

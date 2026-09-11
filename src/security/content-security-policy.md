@@ -301,23 +301,6 @@ Recommended value
 :::
 ::: card
 
-### plugin-types
-
-Reference
-: Defines valid MIME types for plugins invoked via `<object>` and `<embed>`. To load an `<applet>` you must specify `application/x-java-applet`.
-
-  * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types>
-
-Guidance
-: Use recommended value of `'none'`
-  Consult with security team if a plugin is required
-
-Recommended value
-:  `'none'`
-
-:::
-::: card
-
 ### prefetch-src
 
 Reference

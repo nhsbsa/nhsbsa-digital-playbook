@@ -25,7 +25,7 @@ We encourage you to explore resources from government, industry and academia.
 * [Human Centred Design Tools (Victorian Government)](https://www.vic.gov.au/methods-human-centred-design-tools-and-references)
 * [Digital Society School Design Toolkit](https://toolkits.dss.cloud/design/)
 * [Austin Center for Design](https://www.ac4d.com/worksheets)
-* [Hyper Island Toolbox](https://toolbox.hyperisland.com/)
+* [Hyper Island Toolbox](https://hyperisland.com/en/toolbox-request-access)
 
 ## Accessibility and inclusive design
 

@@ -170,7 +170,7 @@ Consider the direction of flow for code change:
 
 The normal direction of flow for change is left to right: A developer creates a feature branch to make a change. The change is promoted to a release candidate branch and then merged into the production, `main` branch.
 
-* Promoting code must always be merged via a [peer review process](../coding-peer-review)
+* Promoting code must always be merged via a [peer review process](../coding-peer-review/)
 * Ensure promoted code is clean with few, logical commits
 * Favour fast forward merge over merge commits
 
@@ -187,7 +187,7 @@ Often a branch of code will fall behind the downstream code on the right, especi
 We recommend against using shared branches between collaborators. Prefer author specific branches, with peer-reviewed merges.
 
 * Shared branches miss the review step between collaborators
-* There is increased chance of merge commits and complex Git history when pulling divergent changes. See [Git configuration](git-configuration) for controlling pull behaviour.
+* There is increased chance of merge commits and complex Git history when pulling divergent changes. See [Git configuration](#git-configuration) for controlling pull behaviour.
 
 ## Rebasing
 

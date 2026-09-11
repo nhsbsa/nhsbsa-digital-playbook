@@ -8,7 +8,7 @@ order: 5
 To write a new article:
 
 * Create a new file in a subdirectory of the `/src` folder.
-  Read about our [information architecture](../information-architecture) to decide which subdirectory to use.
+  Read about our [information architecture](../information-architecture/) to decide which subdirectory to use.
   Name the file with a `.md` file extension.
 
   e.g. `my-article.md`
@@ -41,7 +41,7 @@ order: numeric-order
 
 You can declare status, issue sheet and document review information in the frontmatter data.
 
-See the [document control](../document-control) article for details.
+See the [document control](../document-control/) article for details.
 
 ### Content
 
@@ -67,7 +67,7 @@ related:
   tag: another-tag
 ```
 
-In this example, we will display all articles that have the tag, `another-tag`. If you look at the bottom of the [how to contribute article](../../how-to-contribute), you can see how related articles appear.
+In this example, we will display all articles that have the tag, `another-tag`. If you look at the bottom of the [how to contribute article](../../how-to-contribute/), you can see how related articles appear.
 
 ### Using tags and order
 

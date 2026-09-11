@@ -23,7 +23,7 @@ The high level process is:
 
 All new code should be committed on a topic branch from the mainline production code (main).
 
-Topic branches should follow the [naming convention](../coding-naming-conventions):
+Topic branches should follow the [naming convention](../coding-naming-conventions/):
 
 > `{change-type}/{JIRA ticket number}-{dash separated human description}`
 
@@ -48,7 +48,7 @@ Branches should be pushed to gitlab no less than daily to ensure safe-keeping of
 * __Ensure the build passes__
   Builds must pass all code quality checks.
 * __Tests are written__
-  Review the [testing guidelines](../dev-tests-coding) to make sure they are fit for purpose.
+  Review the [testing guidelines](../dev-tests-coding/) to make sure they are fit for purpose.
 * __Consider squashing commits__
   Squashing commits can provide a cleaner Git history, and removes unwanted or experimental changes.
   Forced pushes can make it difficult for your reviewer to collaborate. Take time to keep them informed.
