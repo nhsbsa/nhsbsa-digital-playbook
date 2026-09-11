@@ -40,7 +40,7 @@ Inappropriate language
 
 Personally Identifiable Information (PII)
 : PII other than contributor identity should never be checked into source code repositories.
-  Before removing PII data from source code, [raise a security incident](../../security) with the Information Security team.
+  Before removing PII data from source code, [raise a security incident](../../security/) with the Information Security team.
 
 :::
 
@@ -68,7 +68,7 @@ X-Gov collaborators and general public
 
 ## Raise an incident
 
-[Raise a security incident](../../security) with the Information Security team when you discover secrets committed to a repository. They will ensure you have documented approval from these stakeholders, prior to any destructive rewrite:
+[Raise a security incident](../../security/) with the Information Security team when you discover secrets committed to a repository. They will ensure you have documented approval from these stakeholders, prior to any destructive rewrite:
 
 * Information Governance
 * Security Operations

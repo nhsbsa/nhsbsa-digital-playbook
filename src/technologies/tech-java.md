@@ -11,7 +11,7 @@ Here's a list of our preferred technology choices when implementing in Java. We'
 
 ## Java language versions
 
-Refer to the [Release adoption schedule](../tech-release-adoption-schedule)
+Refer to the [Release adoption schedule](../tech-release-adoption-schedule/)
 
 Java projects must:
 
