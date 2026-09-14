@@ -6,9 +6,10 @@ order: 20
 related:
   tag: node
 review:
-    last_reviewed_date: 2023-05-06
-    review_cycle: ANNUAL
+  last_reviewed_date: 2023-05-06
+  review_cycle: ANNUAL
 ---
+
 Here’s a list of our preferred technology choices when implementing in Node.js. We’re not prescriptive in these choices, but have a good reason to deviate from the norm. If you there’s a better option, raise it at the Developer Community.
 
 ## Node.js versions
@@ -17,8 +18,14 @@ Refer to the [Release adoption schedule](../tech-release-adoption-schedule)
 
 Node projects must:
 
-* use [NVM](https://github.com/nvm-sh/nvm) to manage Node versions in development
-* use an `.nvmrc` file, checked in to source control, to identify the Node version in use
+* use [NVM](https://github.com/nvm-sh/nvm) to manage Node.js versions in development
+* use an `.nvmrc` file, checked in to source control, to identify the Node.js version in use
+* use `Corepack` to manage package manager versions consistently across environments
+* define the `packageManager` field in `package.json`
+
+## Package Management
+
+[pnpm](../tech-pnpm) is the preferred package manager for Node.js projects.
 
 ## IDE
 
