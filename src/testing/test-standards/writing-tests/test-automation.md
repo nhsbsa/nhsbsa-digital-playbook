@@ -8,7 +8,7 @@ order: 1
 
 The following process must be followed when creating, maintaining or performing test automation.
 
-#### Pre-automation
+## Pre-automation
 
 Before any test automation is started the following pre-requisites must be met:
 
@@ -18,9 +18,9 @@ Before any test automation is started the following pre-requisites must be met:
 - The user stories have been created, reviewed and agreed by the whole delivery team, including 3 Amigos (including testers).
 - The automation scope and approach have been included in the project Test Approach document and has been agreed by the technical and delivery leads.
 
-Setup your sprint or release test completion report for inclusion of results. See guidance on how to link test results to Jira tickets [here](https://nhsbsauk.sharepoint.com/:w:/r/sites/Digital872/_layouts/15/Doc.aspx?sourcedoc=%7B41072E2C-B389-40FC-AF5D-83C1CDD84515%7D&file=Guidance-for-Sprint-and-Release-Test-Reports.docx&action=default&mobileredirect=true).
+Setup your sprint or release test completion report for inclusion of results. See guidance on how to [teslink test results to Jira tickets (DOCX, 13.2MB)](https://nhsbsauk.sharepoint.com/:w:/r/sites/Digital872/_layouts/15/Doc.aspx?sourcedoc=%7B41072E2C-B389-40FC-AF5D-83C1CDD84515%7D&file=Guidance-for-Sprint-and-Release-Test-Reports.docx&action=default&mobileredirect=true).
 
-#### During automation
+## During automation
 
 As code is not always immediately available to testers it is valid to:
 
@@ -39,14 +39,14 @@ Once code is ready for test and deployment to the TEST environment (which must b
 - Revisit all scripts and add in the relevant locator elements, field names etc that may not have been accepted or ready in earlier development.
 - Once your code is validated and meets acceptance criteria then your acceptance test can be baselined and added to your regression pack.
 
-#### After test execution
+## After test execution
 
 The test results must be validated.
 
 - All results must be output from the terminal window and in html reports.
 - These results must be checked for validity as tests can pass even if the actual test fails. (For example, if a happy path completes its journey through the service and does a final page assertion then it will show as passed but the test might have missed checks or routing that is vital to the journey.)
 
-#### Regression testing
+## Regression testing
 
 Before testing can complete, regression testing must be performed.
 

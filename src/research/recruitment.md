@@ -254,7 +254,7 @@ Love2Shop:
 - Participants can use paper voucher in stores
 - Vouchers will get sent to Stella House, but can get reception to send directly to UR or ReOps 
 
-[NHSBSA-Research-Incentives-Policy-v1.1.docx](https://nhsbsauk.sharepoint.com/:w:/t/UserResearchLibrary/IQAM5MTzJKgfTqpE6Nb8xcB8AVCHsAp7tEPSOXMR7EArmlk?e=oOImcl)
+[NHSBSA Incentives Policy (DOC, 258KB)](https://nhsbsauk.sharepoint.com/:w:/t/UserResearchLibrary/IQAM5MTzJKgfTqpE6Nb8xcB8AVCHsAp7tEPSOXMR7EArmlk?e=oOImcl)
 
 ## Storing participant data 
  

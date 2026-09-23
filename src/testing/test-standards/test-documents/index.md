@@ -8,7 +8,7 @@ order: 8
 
 Test activities from planning through to execution and reporting must be fully documented. This is not only to provide an audit trail of what testing has happened but also to provide the metrics required to show how successful the testing has been.
 
-### Test Approach
+## Test Approach
 
 For each iteration of testing, be it on a full release introducing new epics and functionality, a change to the existing service or a defect fix, the approach to be taken to test the item under test must be fully documented. This is to ensure buy-in for the test team, the Test Lead and other stakeholders such as the Product Owner and Technical Lead.
 
@@ -32,9 +32,9 @@ This document will outline the planned tests under each core test framework. It 
 - The defect management process
 - Items included in a Test Plan (see below)
 
-A copy of the NHSBSA Test Approach template can be found [here](https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx).
+[View the NHSBSA Test Approach template](https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx).
 
-### Test Plan
+## Test Plan
 
 Often a service's Test Plan is included in the Test Approach. This is acceptable for full releases or significant changes as the approach to testing may be new or significantly changed and the plan for testing needs to be outlined as an overall approach.
 
@@ -50,7 +50,7 @@ We follow guidance provided in international standard ISO/IEC 29119. It must inc
 - The test data
 - The test schedule
 
-### Test Scripts
+## Test Scripts
 
 All test scripts must take the format described in the Writing Tests standard, and must be stored in a Git repository, clearly marked specific to the service under test. They must not be stored locally.
 
@@ -58,7 +58,7 @@ Test scripting must consider positive and negative scenarios, edge cases and bou
 
 All test scripts should be scanned in the automation repository by SonarQube and have no blocker or high severity issues.
 
-### Test Coverage Report
+## Test Coverage Report
 
 A key indicator of a robust test approach is the test coverage. The NHSBSA Test Community aim for 100% coverage of all in-scope epics and user stories (functional and non-functional features) through the different core test frameworks.
 
@@ -66,13 +66,13 @@ JIRA tickets are the easiest way to demonstrate coverage of testing across the c
 
 Where there are gaps in coverage, a risk analysis must be conducted so that all stakeholders can agree whether the gap is acceptable or not.
 
-### Test Completion Report
+## Test Completion Report
 
 The NHSBSA Test community share their test results and outcomes via a series of test reports. The collection of these test reports makes up the Test Completion Report.
 
 Test reports define the outcome of a test or a series of tests. They are produced so that the appropriate stakeholders can understand what testing has been conducted, what has been successful and what has not been successful. It allows stakeholders to understand the outstanding issues and appreciate the residual risk. This enables stakeholders to make an informed decision on whether a release, change or fix should be deployed into Production or not.
 
-JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the guidance found [here](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx) to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.
+JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the [DDaT Test Reports guidance](https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx) to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.
 
 The information provided in the test report(s) should follow the international standard ISO/IEC 29119.
 
@@ -95,4 +95,3 @@ The Test Completion Report contains reports from all core test frameworks, plus 
 - A description of how the Exit Criteria has been met
 
 A Test Completion Report must be reviewed and signed off by the NHSBSA Test Lead, the Product Owner, the Technical Lead and the Delivery Manager.
-
