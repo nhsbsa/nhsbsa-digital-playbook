@@ -26,7 +26,7 @@ There are many benefits in performing API testing:
 
 NHSBSA's approved open source tool for API testing is [Karate](https://www.karatelabs.io/).
 
-Karate allows testers to write test scripts using a simple, readable feature file format. Using the Behaviour-Driven Development (BDD) style and the **Given**, **When** and **Then** syntax, Karate allows testers to use simple language and plain text to set variables, to use JSON or XML within features to send and validate data, and to automate the full API test suite.
+Karate allows testers to write test scripts using a simple, readable feature file format. Using the [Behaviour-Driven Development (BDD) style](../acceptance-test/#behaviour-driven-development-bdd) and the **Given**, **When** and **Then** syntax, Karate allows testers to use simple language and plain text to set variables, to use JSON or XML within features to send and validate data, and to automate the full API test suite.
 
 API tests should consider all business rules, and both positive and negative tests. The [API Test Standard Framework](https://gitlab.com/nhsbsa/ddat/test-community/api-standard-framework) must be used when building the test suite. Once stable, the API test suite should be placed into the CI/CD pipeline for full automation.
 
