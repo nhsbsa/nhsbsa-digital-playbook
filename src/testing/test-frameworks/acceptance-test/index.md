@@ -46,7 +46,7 @@ To avoid data dependency within our test packs, any new automation framework mus
 
 ### Behaviour-Driven Development (BDD)
 
-Our Functional Acceptance Tests (manual and automated) are created in user centric Behaviour-Driven Development (BDD) style. The tool choice for our BDD test scripts can be found within the NHSBSA Test Tech Stack.
+Our Functional Acceptance Tests (manual and automated) are created in user centric Behaviour-Driven Development (BDD) style. The tool choice for our BDD test scripts can be found within the [NHSBSA Test Tech Stack](../../test-standards/test-tools/acceptance-test-tools/).
 
 Our BDD tests are centred around the users and their behavioural needs and requirements. This means our tests are focused from the perspective of the user and not a third person or service.
 
@@ -62,7 +62,7 @@ Only in circumstances where these actions are needed to prove a clear acceptance
 
 ### Integration Testing
 
-Functional Acceptance Testing should include integration testing across the full user journey ("integration in the large"). This means that any internal or external interface should be included in the test scenarios. In most cases, the interface is an API which integrates with a secondary solution (see the API Test Framework), though in other cases the interface may be a common component or a component specific to that service.
+Functional Acceptance Testing should include integration testing across the full user journey ("integration in the large"). This means that any internal or external interface should be included in the test scenarios. In most cases, the interface is an API which integrates with a secondary solution (see the [API Test Framework](../api-test/)), though in other cases the interface may be a common component or a component specific to that service.
 
 Examples of integration points and interfaces that must be included in the end-to-end integration testing include, but are not limited to:
 
