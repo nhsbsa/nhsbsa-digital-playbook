@@ -26,7 +26,7 @@ We use these languages:
   We prefer Node.js for our Lambda implementations.
 
 * __Python__ 
-  We use Python pervasively across our Data Science, Machine Learning and Data Engineering projects.  
+  We use Python extensively across our Data Science, Machine Learning and Data Engineering projects.  
   We use Python in operational systems that incorporate AI capabilities. 
   We also use Python as a utility scripting language.
 
