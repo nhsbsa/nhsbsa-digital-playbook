@@ -11,7 +11,7 @@ review:
     last_reviewed_date: 2026-09-30
     review_cycle: ANNUAL
 ---
-Here's a list of our preferred technology choices when implementing in Python. We're not prescriptive in these choices, but have a good reason to deviate from the norm. If you feel there's a better option, raise it at the Developer Community.
+Here's a list of our preferred technology choices when implementing in Python. If you feel there's a better option, raise it at the Developer Community.
 
 ## Python versions
 
@@ -66,7 +66,8 @@ Choose application frameworks and libraries that fit the workload. Prefer establ
 - Use [Great Expectations](https://docs.greatexpectations.io/) for comprehensive data-quality suites and documentation where needed.
 - Use [JupyterLab](https://jupyter.org/) for notebook-based experimentation and [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking.
 - Use [scikit-learn](https://scikit-learn.org/) for feature engineering, traditional machine learning and model evaluation.
-- Use [PyTorch](https://pytorch.org/) for deep learning, or [TensorFlow](https://www.tensorflow.org/) when model dependencies require it.
+- Use [PyTorch](https://pytorch.org/) for deep learning.
+- Only use [TensorFlow](https://www.tensorflow.org/) when model dependencies require it.
 - Store models in the training framework's native serialisation format. Consider [ONNX](https://onnx.ai/) when the model and target runtime support portable deployment.
 - Use [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) or [Plotly](https://plotly.com/python/) for visualisation.
 
