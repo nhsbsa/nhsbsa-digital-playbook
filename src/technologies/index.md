@@ -24,9 +24,10 @@ We use these languages:
   Our more recent front-ends use Nodes.js, usually written in Javascript or Typescript.
   We prefer Node.js for our Lambda implementations.
 
-* __Python__ (currently in ‘assess’)
-  We are looking at Python for some Machine Learning/AI projects. Its also used in some of our platform scripts.
-  Consult your Delivery Manager and Professional Lead if you are considering using Python.
+* __Python__ 
+  We use Python pervasively across our Data Science, Machine Learning and Data Engineering projects.  
+  We use Python in operational systems that incorporate AI capabilities. 
+  We also use Python as a utility scripting language.
 
 ## Data stores
 
