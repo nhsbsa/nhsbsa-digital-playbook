@@ -3,6 +3,7 @@ layout: article
 title: "Technologies"
 description: "Find out what our technology stacks are"
 tags: [home, dev]
+status: REVIEW
 order: 
   home: 8
   dev: 100

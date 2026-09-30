@@ -1,8 +1,10 @@
 ---
 layout: article
 title: "Python"
+description: "Preferred technology choices when implementing in Python."
 tags: tech
 order: 20
+status: REVIEW
 related:
   tag: python
 review:
