@@ -18,7 +18,7 @@ Before any test automation is started the following pre-requisites must be met:
 - The user stories have been created, reviewed and agreed by the whole delivery team, including 3 Amigos (including testers).
 - The automation scope and approach have been included in the project Test Approach document and has been agreed by the technical and delivery leads.
 
-Setup your sprint or release test completion report for inclusion of results. See guidance on how to [teslink test results to Jira tickets (DOCX, 13.2MB)](https://nhsbsauk.sharepoint.com/:w:/r/sites/Digital872/_layouts/15/Doc.aspx?sourcedoc=%7B41072E2C-B389-40FC-AF5D-83C1CDD84515%7D&file=Guidance-for-Sprint-and-Release-Test-Reports.docx&action=default&mobileredirect=true).
+Setup your sprint or release test completion report for inclusion of results. See guidance on how to [link test results to Jira tickets (DOCX, 13.2MB)](https://nhsbsauk.sharepoint.com/:w:/r/sites/Digital872/_layouts/15/Doc.aspx?sourcedoc=%7B41072E2C-B389-40FC-AF5D-83C1CDD84515%7D&file=Guidance-for-Sprint-and-Release-Test-Reports.docx&action=default&mobileredirect=true).
 
 ## During automation
 
