@@ -38,38 +38,54 @@ Choose an IDE that supports your work. Common choices are [VS Code](https://code
 ## Build
 
 - Use the [`src/` layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) for deployable applications and libraries.
-- Use [uv](https://docs.astral.sh/uv/) for project virtual environments, dependencies, lockfiles and builds.
-- Use [Hatchling](https://pypi.org/project/hatchling/) as the build backend.
-- Commit `uv.lock` for reproducible dependency resolution. Declare project metadata, direct dependencies and tool configuration in `pyproject.toml`; the lockfile records resolved versions.
-- Export other dependency files, such as [requirements.txt](https://pip.pypa.io/en/stable/reference/requirements-file-format/), from the lockfile when needed.
 - Use [Ruff](https://docs.astral.sh/ruff/) for formatting and linting, and [Pyright](https://github.com/microsoft/pyright) for static type checking.
 - Use [SonarQube](https://www.sonarsource.com/products/sonarqube/) for static analysis and [Bandit](https://bandit.readthedocs.io/) for Python security checks.
-- Use [DetectSecrets](https://pypi.org/project/detect-secrets/) for secret leak detection.
+- Use [GitLeaks](https://github.com/gitleaks/gitleaks) for secret leak detection.  Refer to our [secrets detection guide]() for more information.
 - Use [Deptry](https://deptry.com/) to compare dependency declarations with imports.
 
 ## Application
 
 Choose application frameworks and libraries that fit the workload. Prefer established, maintained projects and the Python standard library where they meet the need; avoid introducing dependencies without a clear benefit.
 
+- Use [uv](https://docs.astral.sh/uv/) for project virtual environments, dependencies, lockfiles and builds within applications.
+- Use [Hatchling](https://pypi.org/project/hatchling/) as the build backend.
+- Commit `uv.lock` for reproducible dependency resolution. Declare project metadata, direct dependencies and tool configuration in `pyproject.toml`; the lockfile records resolved versions.
+- Export other dependency files, such as [requirements.txt](https://pip.pypa.io/en/stable/reference/requirements-file-format/), from the lockfile when needed.
 - Read deployment-specific configuration from environment variables at the process boundary. Use [python-dotenv](https://pypi.org/project/python-dotenv/) only for local development; never commit credentials.
-- Choose a framework that fits the service: [Django](https://www.djangoproject.com/) for batteries-included applications, [FastAPI](https://fastapi.tiangolo.com/) for typed ASGI APIs, or [Flask](https://flask.palletsprojects.com/) for smaller WSGI services. Deploy ASGI applications with a production server such as [Uvicorn](https://uvicorn.dev/).
-- Use [HTTPX](https://www.python-httpx.org/) or [Requests](https://requests.readthedocs.io/) for HTTP clients. Set explicit timeouts, validate external responses and handle redirects carefully when sending credentials.
+- Python-based UI frameworks are not used for enterprise front-end applications. Front-end development is performed using TypeScript-based frameworks within the Node.js ecosystem. Refer to [node.js guide](./tech-node.md) for more information.
+- Choose a backend framework that fits the service: [FastAPI](https://fastapi.tiangolo.com/) for typed ASGI APIs, or [Flask](https://flask.palletsprojects.com/) for smaller WSGI services. Deploy ASGI applications with a production server such as [Uvicorn](https://uvicorn.dev/).
+- Use [typer](https://typer.tiangolo.com/) for CLI applications.
+- Use [HTTPX](https://www.python-httpx.org/) for HTTP clients. Set explicit timeouts, validate external responses and handle redirects carefully when sending credentials.
 - Use [Pydantic](https://docs.pydantic.dev/latest/) for record-centric data validation.
 - Use `datetime` and [`zoneinfo`](https://docs.python.org/3/library/zoneinfo.html) for date and time handling.
-- Use Python's `logging` package with structured fields and appropriate correlation or run identifiers. Do not log credentials or sensitive data. Use [OpenTelemetry](https://opentelemetry-python.readthedocs.io/en/stable/index.html) for tracing.
-- Use [SQLAlchemy](https://www.sqlalchemy.org/) for object-relational mapping and [Alembic](https://alembic.sqlalchemy.org/) for database migrations.
+- Use [structlog](https://www.structlog.org/en/stable/) for logging. Refer to our [logging guide](../development/coding-logging.md) for more information.
+- Use [OpenTelemetry](https://opentelemetry-python.readthedocs.io/en/stable/index.html) for tracing.
+- Use [SQLAlchemy](https://www.sqlalchemy.org/) for object-relational mapping and [Liquibase](https://alembic.sqlalchemy.org/) for database migrations.  Refer to our [data stores guide](../technologies/#data-stores) for more information.
 - Use [Babel](https://babel.pocoo.org/) for internationalisation.
 
-## Machine Learning and Data Engineering
+## Orchestration
+- Use [Apache Airflow](https://airflow.apache.org/) for worklow as Python code.
 
-- Use [pandas](https://pandas.pydata.org/) when DataFrame operations suit the workload, and [Pandera](https://pandera.readthedocs.io/en/stable/) to validate important dataset contracts.
+## Data Engineering
+- Use [pandas](https://pandas.pydata.org/) for declarative, set-based operations for datasets ranging from MBs to GBs in size. 
+- Use [pyspark](https://spark.apache.org/docs/latest/api/python/index.html) for declarative, set-based operations for datasets ranging from 10s of GBs to TBs in size. 
+- Use [Pandera](https://pandera.readthedocs.io/en/stable/) to validate important dataset contracts.
 - Use [Great Expectations](https://docs.greatexpectations.io/) for comprehensive data-quality suites and documentation where needed.
-- Use [JupyterLab](https://jupyter.org/) for notebook-based experimentation and [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking.
+
+
+## Machine Learning and Data Science
+- Use [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) for virtual environment management and package dependencies as part of data science, scientific computing, or machine learning workloads that depend on complex native libraries, GPU toolchains, or non-Python dependencies.
+- Use [JupyterLab](https://jupyter.org/) for notebook-based experimentation.
+- Use [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking. 
+- Use [MLflow Model Registry](https://mlflow.org/classical-ml/model-registry/) for model version and lifecycle management. Store models in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store models directly in source-control repositories.
+- Use [DVC](https://dvc.org/) when projects require dataset versioning, experiment reproducibility, or pipeline lineage. Store datasets in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store datasets directly in source-control repositories.
 - Use [scikit-learn](https://scikit-learn.org/) for feature engineering, traditional machine learning and model evaluation.
 - Use [PyTorch](https://pytorch.org/) for deep learning.
 - Only use [TensorFlow](https://www.tensorflow.org/) when model dependencies require it.
 - Store models in the training framework's native serialisation format. Consider [ONNX](https://onnx.ai/) when the model and target runtime support portable deployment.
 - Use [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) or [Plotly](https://plotly.com/python/) for visualisation.
+- Use [streamlit](https://streamlit.io/) for data sharing UI-applications.
+
 
 ## Testing
 
