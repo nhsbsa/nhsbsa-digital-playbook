@@ -96,7 +96,7 @@ __Node.js__
 : NPM package management using `package.json`
 
 __Python__
-: Pip package management using `pyproject.toml`
+: uv package management using `pyproject.toml` or conda package management using `environment.yml`.
   Always use virtual environments to isolate project-specific dependencies from a shared or base OS Python installation
 
 __Ruby__
