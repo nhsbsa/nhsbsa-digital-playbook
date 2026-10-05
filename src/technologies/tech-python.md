@@ -92,11 +92,6 @@ These choices apply to dataset processing and validation in data engineering, an
 - Use [Pandera](https://pandera.readthedocs.io/en/stable/) to validate important dataset contracts.
 - Use [Great Expectations](https://docs.greatexpectations.io/) for comprehensive data-quality suites and documentation where needed.
 - Use [DVC](https://dvc.org/) when projects require dataset versioning, experiment reproducibility or pipeline lineage. Store datasets in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store datasets directly in source-control repositories.
-
-## Data engineering
-
-Apply the shared [Data processing](#data-processing) choices when implementing data pipelines.
-
 - Use [Apache Airflow](https://airflow.apache.org/) for workflow orchestration using Python code.
 
 ## Machine learning and data science
