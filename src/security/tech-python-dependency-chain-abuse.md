@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Protecting against Python dependency chain abuse"
+description: "Guidance on reviewing, scanning and installing Python dependencies to reduce supply-chain risks in uv and conda projects."
 tags: [python, security]
 order: 20
 status: REVIEW
