@@ -246,14 +246,14 @@ PPC
 PS
 : Patient Services
 
-MATEX
-: Maternity Exemptions
+Matex
+: Maternity exemptions (or maternity exemption certificates)
 
 MCCD
 : Medical Certificate of Cause of Death
 
-MEDEX
-: Medical Exemptions
+Medex
+: Medical exemptions (or medical exemption certificates)
 
 MES
 : Medical Examiners Service
