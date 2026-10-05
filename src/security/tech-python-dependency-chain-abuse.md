@@ -5,6 +5,8 @@ description: "Guidance on reviewing, scanning and installing Python dependencies
 tags: [python, security]
 order: 20
 status: REVIEW
+related:
+  tag: python
 review:
     last_reviewed_date: 2026-10-05
     review_cycle: ANNUAL
