@@ -112,6 +112,10 @@ Where source builds are necessary, use a controlled build environment without pr
 
 Use approved, version-controlled tooling that supports the commands below. The uv audit and automatic malware-check features are currently preview features; confirm support in the project's approved uv version before relying on them.
 
+:::: tabs Dependency manager
+
+::: tab uv
+
 ### uv-managed projects
 
 The following example adds `aspectlib==2.0.0`. The version is illustrative, not an endorsement of its safety. Review the package, publisher, source and transitive dependencies first.
@@ -197,6 +201,10 @@ uv remove aspectlib --no-sync --no-build
 
 If compromise is suspected, follow [Malware response](#malware-response) rather than treating removal as remediation.
 
+:::
+
+::: tab conda
+
 ### conda-managed projects
 
 #### 1. Generate or update the lockfile
@@ -226,3 +234,7 @@ conda-lock install --name python-project conda-lock.yml
 ```
 
 Use this approach in local development, CI and container builds rather than resolving again from `environment.yml`. Do not subsequently add packages with ad hoc conda or pip installations; update the specification and repeat the review process.
+
+:::
+
+::::
