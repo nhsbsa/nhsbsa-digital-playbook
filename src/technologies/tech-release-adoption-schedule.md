@@ -224,6 +224,8 @@ __DECOMMISSION__
 
 ## PostgreSQL
 
+PostgreSQL upgrade to a new major version is not a trivial task. We recommend upgrading on alternate majors. i.e. on a 2 year cycle
+
 ::: details How we work out the adoption schedule for PostgreSQL
 
 We follow the [PostgreSQL versioning policy](https://www.postgresql.org/support/versioning/).

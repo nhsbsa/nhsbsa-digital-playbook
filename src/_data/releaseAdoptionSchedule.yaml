@@ -34,15 +34,15 @@ nodejs:
     decommission: 2022-04-30
 nodejs_aws_lambda:
   - version: v26
-    release: 2026-11-31
+    release: 2026-11-30
     adopt: 2027-05-31
     decommission: 2029-04-30
   - version: v24
-    release: 2025-11-31
+    release: 2025-11-30
     adopt: 2026-05-31
     decommission: 2028-04-30
   - version: v22
-    release: 2024-11-31
+    release: 2024-11-30
     adopt: 2025-05-31
     decommission: 2027-04-30
   - version: v20
@@ -87,6 +87,10 @@ java:
     adopt: 2015-09-01
     decommission: 2022-03-01
 spring_boot:
+  - version: 4.1.x
+    release: 2026-06-01
+    adopt: 2027-07-01
+    decommission: 2028-07-01
   - version: 4.0.x
     release: 2025-11-01
     adopt: 2026-01-01
