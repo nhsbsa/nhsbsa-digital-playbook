@@ -221,7 +221,7 @@ A test Domain Specific Language is a useful technique that may be re-used across
 
 ## References
 
-* [NHSBSA Anonymisation and Pseudonymisation standard][nhsbsa_anonymisation_and_pseudonymisation_standard]
+* [NHSBSA Anonymisation and Pseudonymisation standard (PDF, 384KB)][nhsbsa_anonymisation_and_pseudonymisation_standard]
 * [Modern Best Practices for Testing in Java][modern_best_practices_testing_java]
 
 [nhsbsa_anonymisation_and_pseudonymisation_standard]: <https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&web=1&e=SPLOtZ>

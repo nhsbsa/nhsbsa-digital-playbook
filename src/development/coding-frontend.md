@@ -37,7 +37,7 @@ Services may need to support content in different languages. The UI should be co
 
 Externalise content in whole sentences, with placeholders for dynamic content: Do not decompose content into sentence fragments as this can break grammar rules when translated to a different language.
 
-Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner's Office are available for advice and provide a [bilingual design guide][wlc_bilingual_design_guide]:
+Services should understand whether they have a statutory duty to provide a Welsh language service. The Welsh Language Commisioner's Office are available for advice and provide a [bilingual design guide (PDF, 2.8MB)][wlc_bilingual_design_guide]:
 
 * The website front page should be bilingual, with a clear language choice option. The best way to do this is with a ‘splash’ page.
 * It should always be possible and easy to switch from one language to another on any page, going straight to the same page in the chosen language.
