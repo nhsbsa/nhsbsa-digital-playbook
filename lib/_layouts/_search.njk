@@ -1,8 +1,8 @@
 {% extends "_base.njk" %}
 
 {% block stylesheets %}
-  <link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" />
   <link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet">
+  <link href="{{ '/stylesheets/application.css' | url }}" media="all" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block header %}
@@ -21,9 +21,25 @@
 <div class="nhsuk-width-container {{ containerClasses }}">
   <main class="nhsuk-main-wrapper" id="main-content" role="main">
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <h1 class="nhsuk-heading-xl">Search</h1>
-        <div id="search-results" data-pagefind-ignore></div>
+      <div class="nhsuk-grid-column-three-quarters app-search">
+        <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Search the playbook</h1>
+        <p class="nhsuk-body-l">Find guidance, standards and resources for delivering digital services.</p>
+        <label class="nhsuk-label nhsuk-label--s" for="playbook-search">Search by keyword or topic</label>
+        <p class="nhsuk-hint" id="search-hint">Results update as you type.</p>
+        <div id="search-results" data-pagefind-ignore data-base-url="{{ '/' | url }}"></div>
+        <p id="search-unavailable" role="status" hidden>Search is temporarily unavailable. Try reloading this page or <a href="{{ '/' | url }}">browse the playbook</a>.</p>
+        <div id="search-start" class="app-search-start" hidden>
+          <h2 class="nhsuk-heading-m">Explore the playbook</h2>
+          <p>Try a topic such as accessibility, user research or coding standards, or browse a section.</p>
+          <ul class="nhsuk-list app-search-topics">
+            <li><a href="{{ '/design/' | url }}">Design</a></li>
+            <li><a href="{{ '/development/' | url }}">Development</a></li>
+            <li><a href="{{ '/research/' | url }}">User research</a></li>
+            <li><a href="{{ '/delivery/' | url }}">Delivery</a></li>
+            <li><a href="{{ '/product/' | url }}">Product</a></li>
+          </ul>
+        </div>
+        <noscript><p>Turn on JavaScript to search, or <a href="{{ '/' | url }}">browse the playbook</a>.</p></noscript>
       </div>
     </div>
   </main>
@@ -32,20 +48,5 @@
 
 {% block pageScripts %}
   <script src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      var pagefindUI = new PagefindUI({
-        element: '#search-results',
-        showSubResults: true,
-        showImages: false,
-        baseUrl: '{{ "/" | url }}'
-      });
-
-      var params = new URLSearchParams(window.location.search);
-      var query = params.get('q');
-      if (query) {
-        pagefindUI.triggerSearch(query);
-      }
-    });
-  </script>
+  <script src="{{ '/javascripts/search-page.js' | url }}"></script>
 {% endblock %}

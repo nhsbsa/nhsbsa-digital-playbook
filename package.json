@@ -7,7 +7,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",
+    "start": "cross-env NODE_ENV=development npx @11ty/eleventy --serve --pathprefix 'nhsbsa-digital-playbook'",
     "build": "cross-env NODE_ENV=production npx eleventy --pathprefix 'nhsbsa-digital-playbook' && npx pagefind --site _site/nhsbsa-digital-playbook",
     "test": "cross-env NODE_ENV=test jest",
     "test:eslint": "cross-env NODE_ENV=test npx eslint .",

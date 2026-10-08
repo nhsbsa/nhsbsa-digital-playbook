@@ -1,4 +1,8 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget('lib/_layouts/');
+  eleventyConfig.addWatchTarget('lib/_stylesheets/');
+  eleventyConfig.addWatchTarget('lib/_javascripts/');
+
   // Template libraries
   eleventyConfig.setLibrary('njk', require('./lib/_libraries/nunjucks'));
   eleventyConfig.setLibrary('md', require('./lib/_libraries/markdown'));

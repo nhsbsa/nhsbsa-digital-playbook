@@ -19,7 +19,7 @@
     <div class="app-pane">
       {% if content | toc %}
       <div class="app-pane__side-bar">
-        <nav class="app-side-nav">
+        <nav class="app-side-nav" data-pagefind-ignore>
         <h2 class="app-side-nav__heading">Contents</h2>
         {{ content | toc | safe }}
         </nav>
@@ -37,11 +37,12 @@
           <h1 class="nhsuk-heading-xl">
             {{ title }}
           </h1>
-          {{ appBadges({
+          <div data-pagefind-ignore>{{ appBadges({
               badges: badges
-          }) }}
+          }) }}</div>
         </div>
       
+        <div data-pagefind-ignore>
         {% call appIssueSheet({
           title: title,
           url: page.url,
@@ -50,6 +51,7 @@
           revisions: revisions
         }) %}
         {% endcall %}
+        </div>
 
         {% call appProse({
           prose: content
@@ -70,6 +72,7 @@
 
         {%- endcall %}
 
+        <div data-pagefind-ignore>
         <hr>
         <h2 class="nhsuk-heading-l header-anchor" id="improve-the-playbook">Improve the playbook</h2>
         <p>If you spot anything factually incorrect with this page or have ideas for improvement,
@@ -89,6 +92,7 @@
             modified: modified,
             review: review
         }) }}
+        </div>
 
         </div>
       </div>
