@@ -205,6 +205,31 @@ java_aws_lambda:
     release: 2015-06-01
     adopt: 2016-12-01
     decommission: 2024-02-08
+python:
+  - version: 3.14
+    release: 2025-10-07
+    adopt: 2026-04-07
+    decommission: 2030-10-31
+  - version: 3.13
+    release: 2024-10-07
+    adopt: 2025-04-07
+    decommission: 2029-10-31
+  - version: 3.12
+    release: 2023-10-02
+    adopt: 2024-04-02
+    decommission: 2028-10-31
+  - version: 3.11
+    release: 2022-10-24
+    adopt: 2023-04-24
+    decommission: 2027-10-31
+  - version: 3.10
+    release: 2021-10-04
+    adopt: 2022-04-04
+    decommission: 2026-10-31
+  - version: 3.9
+    release: 2020-10-05
+    adopt: 2021-04-05
+    decommission: 2025-10-31
 ruby:
   - version: "4.0"
     release: 2025-12-25
