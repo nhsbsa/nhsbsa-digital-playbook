@@ -3,7 +3,7 @@ layout: article
 title: "Training & Resources"
 description: "Suggested Interaction Design training and resources"
 review:
-    last_reviewed_date: 2024-02-27
+    last_reviewed_date: 2026-10-13
     review_cycle: ANNUAL
 tags: interaction-design
 order: 9
