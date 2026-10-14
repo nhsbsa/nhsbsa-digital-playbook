@@ -102,7 +102,7 @@ Whenever you install, update or audit dependencies with pnpm - locally, in CI or
 This is in addition to, not instead of, our existing [malware and vulnerability scanning](#6-malware-and-vulnerability-scanning) with OSV Scanner.
 !!!
 
-Commit `pnpm-lock.yaml` to source control, and don't keep any other lockfiles (such as `package-lock.json`) in the project.
+Commit `pnpm-lock.yaml` to source control
 
 If any dependencies rely on lifecycle scripts to function, and are blocked by `ignoreScripts`, review and explicitly approve only the ones you trust:
 
