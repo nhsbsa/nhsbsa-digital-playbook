@@ -20,6 +20,12 @@ Node projects must:
 * use [NVM](https://github.com/nvm-sh/nvm) to manage Node versions in development
 * use an `.nvmrc` file, checked in to source control, to identify the Node version in use
 
+## Package management
+
+We're adopting [pnpm](https://pnpm.io/) for faster, more disk space efficient installs, and stronger supply chain security guardrails.
+
+See our guide on [using pnpm](../tech-node-pnpm/) for how to install and configure it securely.
+
 ## IDE
 
 Choose whatever you’re comfortable with, so as long as you can perform your
