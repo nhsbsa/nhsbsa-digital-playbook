@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Using pnpm"
-description: "Migrating a Node.js project from npm to pnpm, and configuring it securely"
+description: "How we install and configure pnpm for Node.js projects"
 status: DRAFT
 tags: [tech, node]
 order: 21
@@ -11,19 +11,17 @@ review:
 ---
 [pnpm](https://pnpm.io/) is a fast, disk space efficient package manager for Node.js. It's a drop-in alternative to npm, and provides stronger guardrails against [dependency chain abuse](../../security/tech-node-dependency-chain-abuse/) out of the box.
 
-This guide covers migrating an existing npm project to pnpm, and configuring it in line with our Node.js security practices.
+This guide covers how we set up and configure pnpm in a Node.js project, in line with our Node.js security practices.
 
-## 1. Decide your runtime baseline
+## 1. Runtime baseline
 
-Before starting:
-
-* Confirm the Node.js version you'll use is compatible with your target pnpm version
-* Confirm the CI image and any Docker base images match your local Node.js baseline
+* Use a Node.js version that is compatible with your pnpm version
+* Make sure the CI image and any Docker base images match your local Node.js baseline
 * Continue to use [NVM and a checked in `.nvmrc` file](../tech-node/#nodejs-versions) to manage Node.js versions in development
 
 ## 2. Install pnpm
 
-Use [Corepack](https://nodejs.org/api/corepack.html) to install and pin pnpm alongside your existing NVM managed Node.js version:
+Use [Corepack](https://nodejs.org/api/corepack.html) to install and pin pnpm alongside your NVM managed Node.js version:
 
 ```bash
 corepack enable
@@ -62,11 +60,11 @@ packages:
   - './packages/*'
 ```
 
-See [Mitigating supply chain attacks](https://pnpm.io/supply-chain-security) for the reasoning behind these settings. They're a stricter equivalent of our existing [NPM configuration guidance](../../security/tech-node-dependency-chain-abuse/#npm-configuration): disabling scripts by default, and delaying adoption of newly published versions so that compromised releases are more likely to have been caught and pulled first.
+See [Mitigating supply chain attacks](https://pnpm.io/supply-chain-security) for the reasoning behind these settings. They're a stricter equivalent of our [NPM configuration guidance](../../security/tech-node-dependency-chain-abuse/#npm-configuration): disabling scripts by default, and delaying adoption of newly published versions so that compromised releases are more likely to have been caught and pulled first.
 
 ### 3.2 `package.json` enforcement
 
-Pin the Node.js and pnpm versions your project requires, and fail fast if a developer or build agent uses the wrong tool:
+Pin the Node.js and pnpm versions your project requires, and fail fast if a developer or build agent uses the wrong tool (for example, npm):
 
 ```json
 {
@@ -95,31 +93,16 @@ Notes:
 * `devEngines.runtime.onFail` also accepts `"warn"` or `"download"`. We use `"error"` so that CI and Docker builds fail loudly on a runtime mismatch, rather than silently downloading an unreviewed Node.js build.
 * Adjust the Node.js and pnpm version ranges to match your [release adoption schedule](../tech-release-adoption-schedule/).
 
-## 4. Convert the lockfile and install
+## 4. Installing dependencies
 
 !!! warning Follow the pnpm supply chain security guide for all installs
 
-Whenever you install, update or audit dependencies with pnpm - locally, in CI or in a Dockerfile - ensure to use the [3.1 configuration guardrails](#31-pnpm-workspaceyaml) above.
+Whenever you install, update or audit dependencies with pnpm - locally, in CI or in a Dockerfile - ensure you use the [3.1 configuration guardrails](#31-pnpm-workspaceyaml) above.
 
-This is in addition to, not instead of, our existing [malware and vulnerability scanning](#6-update-malware-and-vulnerability-scanning) with OSV Scanner.
+This is in addition to, not instead of, our existing [malware and vulnerability scanning](#6-malware-and-vulnerability-scanning) with OSV Scanner.
 !!!
 
-Generate `pnpm-lock.yaml` from your existing npm lockfile:
-
-```bash
-pnpm import
-pnpm install
-```
-
-`pnpm import` reads from whichever of these is present:
-
-* `package-lock.json`
-
-After validating the install and test suite pass, remove the old lockfile so it doesn't drift out of sync:
-
-```bash
-rm -f package-lock.json
-```
+Commit `pnpm-lock.yaml` to source control, and don't keep any other lockfiles (such as `package-lock.json`) in the project.
 
 If any dependencies rely on lifecycle scripts to function, and are blocked by `ignoreScripts`, review and explicitly approve only the ones you trust:
 
@@ -127,33 +110,33 @@ If any dependencies rely on lifecycle scripts to function, and are blocked by `i
 pnpm approve-builds
 ```
 
-## 5. Migrate developer commands
+## 5. Developer commands
 
-| npm | pnpm |
+| Task | Command |
 | --- | --- |
-| `npm install` | `pnpm install` |
-| `npm ci` | `pnpm ci` |
-| `npm install <pkg>` | `pnpm add <pkg>` |
-| `npm install -D <pkg>` | `pnpm add -D <pkg>` |
-| `npm run <script>` | `pnpm <script>` |
-| `npm run <script> --workspace=<pkg>` | `pnpm --filter <pkg> <script>` |
-| `npx <pkg>` | `pnpm exec <pkg>` |
-| n/a | `pnpm -r <command>` runs a command across all workspace packages |
+| Install dependencies (reproducible) | `pnpm ci` |
+| Install dependencies (updating the lockfile) | `pnpm install` |
+| Add a dependency | `pnpm add <pkg>` |
+| Add a dev dependency | `pnpm add -D <pkg>` |
+| Run a script | `pnpm <script>` |
+| Run a script in a workspace package | `pnpm --filter <pkg> <script>` |
+| Run a binary from a declared dependency | `pnpm exec <pkg>` |
+| Run a command across all workspace packages | `pnpm -r <command>` |
 
 !!! warning Use `pnpm ci` for reproducible installs
 
 Since pnpm v11, `pnpm ci` is the direct equivalent of `npm ci`. It removes `node_modules` and then runs `pnpm install --frozen-lockfile`, which fails if `pnpm-lock.yaml` is missing or out of sync with `package.json`, rather than updating it.
 
-All users of pnpm **must** use `pnpm ci` to install dependencies in local development, CI build jobs and Dockerfile builds, in the same way we require `npm ci` today.
+All users of pnpm **must** use `pnpm ci` to install dependencies in local development, CI build jobs and Dockerfile builds, in the same way we require `npm ci` for npm projects.
 !!!
 
 As with npm, avoid running install scripts as ad-hoc command line calls, and don't use global installs.
 
-If you previously ran `npx <pkg>`, prefer `pnpm exec <pkg>` over `pnpm dlx <pkg>`. `pnpm exec` only runs a binary from a package that is already declared as a dependency in `package.json` and installed from the lockfile, so it can be reviewed and scanned like any other dependency. `pnpm dlx` (like `npx`) fetches and executes a package on demand without it being declared anywhere, so it carries the same [uncontrolled dependency](../../security/tech-node-dependency-chain-abuse/#declare-dependencies) risk as `npx` and should be avoided in the same way.
+Use `pnpm exec <pkg>` rather than `pnpm dlx <pkg>`. `pnpm exec` only runs a binary from a package that is already declared as a dependency in `package.json` and installed from the lockfile, so it can be reviewed and scanned like any other dependency. `pnpm dlx` (like `npx`) fetches and executes a package on demand without it being declared anywhere, so it carries the same [uncontrolled dependency](../../security/tech-node-dependency-chain-abuse/#declare-dependencies) risk as `npx` and should be avoided in the same way.
 
-## 6. Update malware and vulnerability scanning
+## 6. Malware and vulnerability scanning
 
-Continue to scan the lockfile for malware and vulnerabilities before install, as described in our [OSV Scanner guidance](../../security/tech-node-dependency-chain-abuse/#osv-scanner), pointing it at `pnpm-lock.yaml` instead of `package-lock.json`:
+Scan the lockfile for malware and vulnerabilities before install, as described in our [OSV Scanner guidance](../../security/tech-node-dependency-chain-abuse/#osv-scanner), pointing it at `pnpm-lock.yaml`:
 
 ```bash
 osv-scanner scan -f markdown --lockfile=pnpm-lock.yaml --output osvscan.md
@@ -215,25 +198,13 @@ EXPOSE 3000
 CMD [ "node", "dist/index.js" ]
 ```
 
-## 9. Validation checklist
+## 9. Project checklist
 
-* `pnpm install` succeeds locally
-* `pnpm test` passes
-* `pnpm run build` passes
-* `pnpm-lock.yaml` is committed
-* `package-lock.json` and any other npm lockfiles are removed
+* `pnpm ci`, `pnpm test` and `pnpm run build` succeed locally
+* `pnpm-workspace.yaml` and the `package.json` `engines` / `devEngines` settings are in place
+* `pnpm-lock.yaml` is committed, and no other lockfiles are present
 * CI and Dockerfiles use `pnpm ci`
 * OSV Scanner is scanning `pnpm-lock.yaml`
-* All scripts in `package.json` are updated to their pnpm equivalents and run correctly
-* Team documentation is updated with the new pnpm commands
-
-## 10. Suggested rollout
-
-1. Raise a dedicated migration merge request - don't mix in feature changes
-2. Add the toolchain pinning and guardrails from steps 2 and 3 first
-3. Import the lockfile and validate build/test parity locally
-4. Update CI and Docker configuration, and confirm a clean pipeline run
-5. Merge once CI and runtime behaviour are stable, then remove the old npm lockfile
 
 ## References
 

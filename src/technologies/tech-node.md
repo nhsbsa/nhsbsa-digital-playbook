@@ -22,9 +22,9 @@ Node projects must:
 
 ## Package management
 
-We're migrating projects from npm to [pnpm](https://pnpm.io/) for faster, more disk space efficient installs, and stronger supply chain security guardrails.
+We're adopting [pnpm](https://pnpm.io/) for faster, more disk space efficient installs, and stronger supply chain security guardrails.
 
-See our guide on [using pnpm](../tech-node-pnpm/) for migrating an existing project and configuring it securely.
+See our guide on [using pnpm](../tech-node-pnpm/) for how to install and configure it securely.
 
 ## IDE
 
