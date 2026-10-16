@@ -76,6 +76,6 @@ Do not write all the tests upfront. You may find it practical to jot down dummy 
 
 ## References
 
-* [NHSBSA Anonymisation and Pseudonymisation standard][nhsbsa_anonymisation_and_pseudonymisation_standard]
+* [NHSBSA Anonymisation and Pseudonymisation standard (PDF, 384KB)][nhsbsa_anonymisation_and_pseudonymisation_standard]
 
 [nhsbsa_anonymisation_and_pseudonymisation_standard]: <https://nhsbsauk.sharepoint.com/:b:/r/sites/InformationSecurity/SiteAssets/SitePages/NHS-BSA-Information-Security-Policies/Anonymisartion-and-Pseudonymisation-Standard.pdf?csf=1&web=1&e=SPLOtZ>
