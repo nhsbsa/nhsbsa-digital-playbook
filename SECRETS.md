@@ -14,7 +14,7 @@ Install the following:
 
 ## Contributors
 
-Git hooks can’t be commited into source control, so contributors must install manually.
+Git hooks can’t be committed into source control, so contributors must install manually.
 
 * Install the Gitleaks git hook using the pre-commit framework.
 
