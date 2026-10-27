@@ -46,7 +46,7 @@ Support participants by:
 - checking if participants would like to end the session if they become distressed
 
 ## Safeguarding
-Safeguarding applies to all UR, but it’s especially important when conducting research with children, vulnerable adults, or those with health conditions. To understand escalation processes and signposting options, read the [NHSBSA safeguarding policy](https://nhsbsauk.sharepoint.com/:w:/r/sites/People/_layouts/15/Doc.aspx?sourcedoc=%7BE7D1AEF7-F288-4624-970C-17FF1DDA991A%7D&file=NHSBSA%20Safeguarding%20Policy%20(V1)%2007.2025.docx&action=default&mobileredirect=true&or=WORD-WEB.BODY.NT&ct=1779273986679).
+Safeguarding applies to all UR, but it’s especially important when conducting research with children, vulnerable adults, or those with health conditions. To understand escalation processes and signposting options, read the [NHSBSA safeguarding policy (DOC, 335KB)](https://nhsbsauk.sharepoint.com/:w:/r/sites/People/_layouts/15/Doc.aspx?sourcedoc=%7BE7D1AEF7-F288-4624-970C-17FF1DDA991A%7D&file=NHSBSA%20Safeguarding%20Policy%20(V1)%2007.2025.docx&action=default&mobileredirect=true&or=WORD-WEB.BODY.NT&ct=1779273986679).
 
 Our consent process states we will not share individuals' data before anonymising it. However, safeguarding is one situation in which we can break this agreement. If the participant expresses an intent to hurt themselves or someone else, we have a duty to report this using the NHSBSA safeguarding process. Be transparent with your participant about this when discussing the consent process. If your participant shares concerning information, stay calm, listen and document it factually.
 

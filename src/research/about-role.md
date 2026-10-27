@@ -60,7 +60,7 @@ In the earliest stages of development, user research plays an integral role in h
 - lead and develop researchers through coaching, mentoring and feedback
 - champion the User Research profession, GDS readiness and UCD best practice across the organisation
 
-For a more in-depth overview of the specific expectations of User Researchers at different grades, see the Digital Data and Technology (DDaT) guidance published by UK Gov here [https://www.gov.uk/guidance/user-researcher](https://www.gov.uk/guidance/user-researcher)
+For a more in-depth overview of the specific expectations of User Researchers at different grades, see the [User Researcher role in the Digital, Data and Technology (DDaT) Profession Capability Framework](https://www.gov.uk/guidance/user-researcher)
 
 ## User Research Principles
 
