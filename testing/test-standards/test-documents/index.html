@@ -48,7 +48,7 @@ Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=7873905b137d" media="all" rel="stylesheet" type="text/css" />
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=a79b38a7f7fa" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -153,7 +153,7 @@ Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
       
 
 <p>Test activities from planning through to execution and reporting must be fully documented. This is not only to provide an audit trail of what testing has happened but also to provide the metrics required to show how successful the testing has been.</p>
-<h3 id="test-approach" tabindex="-1"><a class="header-anchor" href="#test-approach">Test Approach</a></h3>
+<h2 id="test-approach" tabindex="-1"><a class="header-anchor" href="#test-approach">Test Approach</a></h2>
 <p>For each iteration of testing, be it on a full release introducing new epics and functionality, a change to the existing service or a defect fix, the approach to be taken to test the item under test must be fully documented. This is to ensure buy-in for the test team, the Test Lead and other stakeholders such as the Product Owner and Technical Lead.</p>
 <p>For full releases and significant changes, a Test Approach document must be prepared. This is sometimes referred to as the service’s Test Strategy and should follow guidance in international standard ISO/IEC 29119.</p>
 <p>This document will outline the planned tests under each core test framework. It explains the service under test and the release or change that is going to be made. It then describes the following:</p>
@@ -174,8 +174,8 @@ Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>The defect management process</li>
 <li>Items included in a Test Plan (see below)</li>
 </ul>
-<p>A copy of the NHSBSA Test Approach template can be found <a href="https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx">here</a>.</p>
-<h3 id="test-plan" tabindex="-1"><a class="header-anchor" href="#test-plan">Test Plan</a></h3>
+<p><a href="https://nhsbsauk.sharepoint.com.mcas.ms/sites/Digital872/SitePages/Test-Approach-Documents.aspx">View the NHSBSA Test Approach template</a>.</p>
+<h2 id="test-plan" tabindex="-1"><a class="header-anchor" href="#test-plan">Test Plan</a></h2>
 <p>Often a service’s Test Plan is included in the Test Approach. This is acceptable for full releases or significant changes as the approach to testing may be new or significantly changed and the plan for testing needs to be outlined as an overall approach.</p>
 <p>For smaller changes or defect fixes where the general approach to testing will continue to follow the latest Test Approach for that service, a separate Test Plan can be written. This can be written and stored in the service’s Confluence domain but must link to the overarching Test Approach it is drawing on.</p>
 <p>We follow guidance provided in international standard ISO/IEC 29119. It must include a description of:</p>
@@ -188,18 +188,18 @@ Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 <li>The test data</li>
 <li>The test schedule</li>
 </ul>
-<h3 id="test-scripts" tabindex="-1"><a class="header-anchor" href="#test-scripts">Test Scripts</a></h3>
+<h2 id="test-scripts" tabindex="-1"><a class="header-anchor" href="#test-scripts">Test Scripts</a></h2>
 <p>All test scripts must take the format described in the Writing Tests standard, and must be stored in a Git repository, clearly marked specific to the service under test. They must not be stored locally.</p>
 <p>Test scripting must consider positive and negative scenarios, edge cases and boundary analysis. There must be a link to the appropriate epics/user stories/acceptance criteria.</p>
 <p>All test scripts should be scanned in the automation repository by SonarQube and have no blocker or high severity issues.</p>
-<h3 id="test-coverage-report" tabindex="-1"><a class="header-anchor" href="#test-coverage-report">Test Coverage Report</a></h3>
+<h2 id="test-coverage-report" tabindex="-1"><a class="header-anchor" href="#test-coverage-report">Test Coverage Report</a></h2>
 <p>A key indicator of a robust test approach is the test coverage. The NHSBSA Test Community aim for 100% coverage of all in-scope epics and user stories (functional and non-functional features) through the different core test frameworks.</p>
 <p>JIRA tickets are the easiest way to demonstrate coverage of testing across the core test frameworks (and beyond, where necessary). The NHSBSA DDaT Test Community are currently designing a standard in which all services can demonstrate the coverage of their tests using JIRA as a tool. This will become the standard to produce a Test Coverage Report. Until this is complete, services must validate test coverage through any means at their disposal – this may be by using JIRA, Confluence, Excel or some other tool. The test coverage should be signed off by the Test Lead, the Product Owner and the Technical Lead.</p>
 <p>Where there are gaps in coverage, a risk analysis must be conducted so that all stakeholders can agree whether the gap is acceptable or not.</p>
-<h3 id="test-completion-report" tabindex="-1"><a class="header-anchor" href="#test-completion-report">Test Completion Report</a></h3>
+<h2 id="test-completion-report" tabindex="-1"><a class="header-anchor" href="#test-completion-report">Test Completion Report</a></h2>
 <p>The NHSBSA Test community share their test results and outcomes via a series of test reports. The collection of these test reports makes up the Test Completion Report.</p>
 <p>Test reports define the outcome of a test or a series of tests. They are produced so that the appropriate stakeholders can understand what testing has been conducted, what has been successful and what has not been successful. It allows stakeholders to understand the outstanding issues and appreciate the residual risk. This enables stakeholders to make an informed decision on whether a release, change or fix should be deployed into Production or not.</p>
-<p>JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the guidance found <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx">here</a> to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.</p>
+<p>JIRA is the preferred tool to report the outcome of tests (apart from Accessibility Testing, Compatibility Testing and Performance Testing where additional details is required). Testers should follow the <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx">DDaT Test Reports guidance</a> to build their test report(s). This provides an efficient way to report on the outcome of the testing via the tests described in JIRA tickets and allows testers to highlight outstanding defects and other issues.</p>
 <p>The information provided in the test report(s) should follow the international standard ISO/IEC 29119.</p>
 <p>In terms of Accessibility Testing, the NHSBSA’s <a href="https://nhsbsauk.sharepoint.com/sites/digital-accessibility/Shared%20Documents/Forms/Visitor.aspx?ovuser=cf6d0482%2D86b1%2D4f88%2D8c0c%2D3b4de4cb402c%2Cnicola%2Eyoung%40nhsbsa%2Enhs%2Euk&amp;OR=Teams%2DHL&amp;CT=1715692395854&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDAzMzEwMTgxNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">Accessibility Test Report</a> should be used to demonstrated that all tests within the phased approach to accessibility testing have been conducted and their outcome has been reported.</p>
 <p>In terms of Performance Testing, the NHSBSA’s <a href="https://nhsbsauk.sharepoint.com/sites/Digital872/SitePages/T.aspx">Performance Test Report</a> should be used. This report provides the performance metrics collected during performance test execution that are analysed to understand the service’s performance under load.</p>
@@ -248,7 +248,7 @@ Test Documents - NHSBSA Digital, Data and Technology Playbook - NHSBSA
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
+      Published: <time datetime="2026-07-22T15:18:43.000Z">22 July 2026</time>
     </p>
 </div>
 

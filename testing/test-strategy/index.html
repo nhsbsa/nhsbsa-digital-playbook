@@ -48,7 +48,7 @@ NHSBSA Test Strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA
   <meta property="og:image" content="https://nhsbsa.github.io/nhsbsa-digital-playbook/images/opengraph-image.png?v=b6b84e727630">
   <meta property="og:title" content="NHSBSA Test Strategy - NHSBSA Digital, Data and Technology Playbook - NHSBSA">
 
-  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=7873905b137d" media="all" rel="stylesheet" type="text/css" />
+  <link href="/nhsbsa-digital-playbook/stylesheets/application.css?v=a79b38a7f7fa" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -269,7 +269,7 @@ Reinforce the principle that quality is a collective responsibility, ensuring th
 The execution model follows the <strong>Automation Pipeline template</strong>, ensuring consistency, standardisation, and full CI/CD alignment across all services.</p>
 </li>
 <li>
-<p>Multi Factor Authentication (MFA) – many (most) NHSBSA services require users to use MFA. This poses a problem with placing automated tests in the CI/CD pipeline as MFA requires manual intervention. We have worked with the NHSBSA DDaT Security team to devise a way to avoid this problem, thus allowing us to automate most of the functional acceptance, compatibility and API tests within the CI/CD pipeline. This can be found <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5427003447/TESTING+SERVICES+WITH+MULTI+FACTOR+AUTHENTICATION+draft">here</a>.</p>
+<p>Multi Factor Authentication (MFA) – many (most) NHSBSA services require users to use MFA. This poses a problem with placing automated tests in the CI/CD pipeline as MFA requires manual intervention. We have worked with the NHSBSA DDaT Security team to devise a way to avoid this problem, thus allowing us to automate most of the functional acceptance, compatibility and API tests within the CI/CD pipeline. This can be found in <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5427003447/TESTING+SERVICES+WITH+MULTI+FACTOR+AUTHENTICATION+draft">Testing services with multi factor authentication</a>.</p>
 </li>
 </ul>
 <p>Accessibility Testing:</p>
@@ -285,7 +285,7 @@ The execution model follows the <strong>Automation Pipeline template</strong>, e
 <li>data processing testing will consider the full end-to-end journey of the data within NHSBSA, from data ingestion through the data pipeline (including data transformation) all the way through to data publication. Tools to test the end-to-end journey will be implemented so that the full pipeline can be tested through automation.</li>
 </ul>
 <h3 id="route-to-live" tabindex="-1"><a class="header-anchor" href="#route-to-live">Route to Live</a></h3>
-<p>NHSBSA follow a strict route-to-live policy to ensure there is a stable Software Development Lifecycle (SDLC). All code must go through Unit Testing in the Development environments prior to being released into the formal test environments. Unit Testing is conducted by Developers and includes two types of testing as a minimum – self-contained testing of a unit of code and integration testing (“integration in the small”) where the interaction with an external resource such as an API or a database is tested. More details on the NHSBSA’s approach to Unit Testing can be found <a href="../../development/dev-tests/">here</a>.</p>
+<p>NHSBSA follow a strict route-to-live policy to ensure there is a stable Software Development Lifecycle (SDLC). All code must go through Unit Testing in the Development environments prior to being released into the formal test environments. Unit Testing is conducted by Developers and includes two types of testing as a minimum – self-contained testing of a unit of code and integration testing (“integration in the small”) where the interaction with an external resource such as an API or a database is tested. More details on the NHSBSA’s approach to Unit Testing can be found in the <a href="../../development/dev-tests/">NHSBSA approach to unit testing</a>.</p>
 <p>Once release candidate has successfully completed Unit Testing, it is promoted to the Test environment for formal testing. A <strong>Build Acceptance Test</strong> should be executed (preferably within the CI/CD pipeline) to check stability of the revised code baseline. This is encouraged for complex pieces of code or significant pieces of functionality. The route-to-live is then</p>
 <p>Dev -&gt; Test -&gt; Stage -&gt; Production</p>
 <p>For some services an Integration environment will be required to conduct integration testing across modules, components and external interfaces (“integration in the large”), and a separate Performance environment is required for performance testing. The full route-to-live is therefore:</p>
@@ -294,7 +294,7 @@ The execution model follows the <strong>Automation Pipeline template</strong>, e
 <h3 id="shift-left" tabindex="-1"><a class="header-anchor" href="#shift-left">Shift Left</a></h3>
 <p>Our approach to testing is to conduct the most appropriate testing as early as possible. That is not to say that we seek to conduct formal testing in Dev or early iterations of Test. It means that we test as early as possible and as often as possible when it is most appropriate to do so. Automation testing enables this principle.</p>
 <p>Testers will not conclude test activities until a stable code baseline is developed and the agreed tests have passed. This means that whilst testing may start early, it may continue for a longer period because the tests are not yet successful. However, the shift-left approach does mean that critical defects will be found, and fixed, earlier in the SDLC.</p>
-<p>An example of how a shift left approach has been implemented can be found <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5768151041/TEST+SHIFT-LEFT+APPROACH">here</a>.</p>
+<p>An example of how a shift left approach has been implemented can be found in the <a href="https://bsa2468.atlassian.net/wiki/spaces/SENG/pages/5768151041/TEST+SHIFT-LEFT+APPROACH">Test shift-left approach</a>.</p>
 <h3 id="independence" tabindex="-1"><a class="header-anchor" href="#independence">Independence</a></h3>
 <p>A key principle in NHSBSA’s testing strategy is independence. Although developers work to create error-free, quality code, it is not possible to foresee all possible problems whilst an often-complex service is being built. The NHSBSA recognises testing as a profession and a discrete discipline. Introducing independent testing allows services to obtain a more objective and unbiased assessment of the service’s quality and how well it has met the requirements.</p>
 <h2 id="testing-approach-and-methodology" tabindex="-1"><a class="header-anchor" href="#testing-approach-and-methodology">Testing Approach and Methodology</a></h2>
@@ -578,7 +578,7 @@ The execution model follows the <strong>Automation Pipeline template</strong>, e
 
         <div class="nhsbsa-article--date">
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-0">
-      Published: <time datetime="2026-05-28T10:21:54.000Z">28 May 2026</time>
+      Published: <time datetime="2026-07-22T15:18:43.000Z">22 July 2026</time>
     </p>
 </div>
 

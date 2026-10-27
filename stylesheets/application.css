@@ -8461,6 +8461,7 @@ pre[class*=language-] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
+  text-wrap: auto;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -8561,7 +8562,7 @@ pre[class*=language-] {
 
 .token.function,
 .token.class-name {
-  color: #DD4A68;
+  color: #D93656;
 }
 
 .token.regex,
@@ -10187,6 +10188,7 @@ pre[class*=language-] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
+  text-wrap: auto;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -10253,7 +10255,7 @@ pre[class*=language-] {
 }
 
 .namespace {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .token.property,
@@ -10272,7 +10274,7 @@ pre[class*=language-] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #597d0f;
+  color: #2C4007B3;
 }
 
 .token.operator,
@@ -10292,7 +10294,7 @@ pre[class*=language-] {
 
 .token.function,
 .token.class-name {
-  color: #DD4A68;
+  color: #D93656;
 }
 
 .token.regex,
