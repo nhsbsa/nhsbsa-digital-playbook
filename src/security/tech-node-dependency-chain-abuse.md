@@ -48,16 +48,24 @@ Suppliers to the NHSBSA must notify our [Security](../../security/) team of comp
 
 On download and install of new or updated packages, pre-install and post-install scripts will execute. It is too late to scan after malware has executed.
 
-__Always__ use the OSV scanner to scan the `package-lock.json` __before__ install, update or audit of packages.
+__Always__ use the OSV scanner to scan the lockfile __before__ install, update or audit of packages.
 
 See the [safe execution](#safe-execution) section below for more detail.
 !!!
 
-To scan a package lock for malware and vulnerabilities:
+To scan a lockfile for malware and vulnerabilities:
 
-```bash
-osv-scanner scan -f markdown --lockfile=package-lock.json --output osvscan.md
-```
+* If using __npm__, scan `package-lock.json`:
+
+    ```bash
+    osv-scanner scan -f markdown --lockfile=package-lock.json --output osvscan.md
+    ```
+
+* If using __pnpm__, scan `pnpm-lock.yaml` instead:
+
+    ```bash
+    osv-scanner scan -f markdown --lockfile=pnpm-lock.yaml --output osvscan.md
+    ```
 
 This will write a markdown formatted report. Other formats are available (table, html, vertical, json, markdown, sarif, gh-annotations, cyclonedx-1-4, cyclonedx-1-5, spdx-2-3). Scan reports should be Git ignored to avoid unnecessary maintenance.
 
@@ -166,9 +174,15 @@ Packages must **not** be downloaded and installed when there is a risk of updati
 
 Use [OSV Scanner](#osv-scanner) to scan for malware:
 
-```bash
-osv-scanner scan -f markdown --lockfile=package-lock.json --output osvscan.md
-```
+* If using __npm__:
+    ```bash
+    osv-scanner scan -f markdown --lockfile=package-lock.json --output osvscan.md
+    ```
+
+* If using __pnpm__:
+    ```bash
+    osv-scanner scan -f markdown --lockfile=pnpm-lock.yaml --output osvscan.md
+    ```
 
 ### 3. Safe install
 
