@@ -89,7 +89,7 @@ These choices apply to dataset processing and validation in data engineering, an
 
 - Use [pandas](https://pandas.pydata.org/) for declarative, set-based operations on datasets that can be processed in memory, typically ranging from MBs to GBs in size.
 - Use [PySpark](https://spark.apache.org/docs/latest/api/python/index.html) for declarative, set-based operations that require distributed processing, typically on datasets ranging from tens of GBs to TBs in size.
-- Use [Apache Airflow](https://airflow.apache.org/) for workflow orchestration using Python code.
+- Use [Microsoft Fabric Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview), [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) or [Apache Airflow](https://airflow.apache.org/) for workflow orchestration.
 
 ## Machine learning and data science
 
