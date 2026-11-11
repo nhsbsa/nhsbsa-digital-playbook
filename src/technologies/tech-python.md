@@ -11,7 +11,6 @@ review:
     last_reviewed_date: 2026-09-30
     review_cycle: ANNUAL
 ---
-Here's a list of our preferred technology choices when implementing in Python. If you feel there's a better option, raise it at the Developer Community.
 
 Apply the shared standards to every Python project, then use the workload-specific guidance relevant to your project. A project may use guidance from more than one section; for example, a model-serving API uses both application and machine-learning guidance.
 
@@ -23,7 +22,7 @@ Use [pyenv](https://github.com/pyenv/pyenv) as a baseline Python runtime manager
 
 Python projects must:
 
-- Use a supported version of [CPython](https://www.python.org/), not an alternative implementation such as [PyPy](https://pypy.org/) or [IronPython](https://ironpython.net/).
+- Use a supported version of [CPython](https://www.python.org/). Alternative implementations such as [PyPy](https://pypy.org/) or [IronPython](https://ironpython.net/) are not supported.
 - Commit a `.python-version` file to identify the Python version in use.
 - Declare the supported Python range in `pyproject.toml`.
 
@@ -41,7 +40,7 @@ Choose an IDE that supports your work. Common choices are [VS Code](https://code
 
 - Use [`pyproject.toml`](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) as the standard project configuration file. Declare project metadata and tool configuration there. For uv-managed projects and installable Python packages, also declare direct Python package dependencies there.
 - Use the [`src/` layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) for deployable applications and libraries.
-- Use [Hatchling](https://pypi.org/project/hatchling/) as the build backend.
+- Use [Hatchling](https://pypi.org/project/hatchling/)  as the standard build backend where a project needs to produce a distributable Python package, such as a shared library. Deployable applications do not need to use Hatchling unless there is a deliberate requirement to package the application as a wheel or source distribution.
 
 ### Environments and dependencies
 
@@ -57,9 +56,10 @@ Choose environment tooling based on dependency requirements, rather than whether
 
 ### Code quality and security
 
+- Follow the [recommended Python style guide](../../development/coding-style-guide/)
 - Use [Ruff](https://docs.astral.sh/ruff/) for formatting and linting, and [Pyright](https://github.com/microsoft/pyright) for static type checking.
 - Use [SonarQube](https://www.sonarsource.com/products/sonarqube/) for static analysis and [Bandit](https://bandit.readthedocs.io/) for Python security checks.
-- Use [GitLeaks](https://github.com/gitleaks/gitleaks) for secret leak detection.  Refer to our [secrets detection guide]() for more information.
+- Use [GitLeaks](https://github.com/gitleaks/gitleaks) for secret leak detection.  Refer to our [secrets detection guide](../../development/coding-secrets-detection/) for more information.
 - Use [Deptry](https://deptry.com/) to compare dependency declarations with imports.
 
 ## Common libraries
@@ -70,7 +70,7 @@ These choices apply across applications, data pipelines and machine-learning wor
 - Use [HTTPX](https://www.python-httpx.org/) for HTTP clients. Set explicit timeouts, validate external responses and handle redirects carefully when sending credentials.
 - Use [Pydantic](https://docs.pydantic.dev/latest/) for record-centric data validation.
 - Use `datetime` and [`zoneinfo`](https://docs.python.org/3/library/zoneinfo.html) for date and time handling.
-- Use [structlog](https://www.structlog.org/en/stable/) for logging. Refer to our [logging guide](../development/coding-logging.md) for more information.
+- Use [structlog](https://www.structlog.org/en/stable/) for logging. Refer to our [logging guide](../../development/coding-logging/) for more information.
 - Use [OpenTelemetry](https://opentelemetry-python.readthedocs.io/en/stable/index.html) for tracing.
 
 ## Application
@@ -79,9 +79,9 @@ Choose established, maintained frameworks and libraries that fit the service or 
 
 - Choose a backend framework that fits the service: [FastAPI](https://fastapi.tiangolo.com/) for typed ASGI APIs, or [Flask](https://flask.palletsprojects.com/) for smaller WSGI services. Deploy ASGI applications with a production server such as [Uvicorn](https://uvicorn.dev/).
 - Use [Typer](https://typer.tiangolo.com/) for CLI applications.
-- Use [SQLAlchemy](https://www.sqlalchemy.org/) for object-relational mapping and [Liquibase](https://alembic.sqlalchemy.org/) for database migrations.  Refer to our [data stores guide](../technologies/#data-stores) for more information.
+- Use [SQLAlchemy](https://www.sqlalchemy.org/) for object-relational mapping and [Liquibase](https://www.liquibase.com/) for database migrations.  Refer to our [data stores guide](../technologies/#data-stores) for more information.
 - Use [Babel](https://babel.pocoo.org/) for internationalisation.
-- Python-based UI frameworks are not used for enterprise front-end applications. Front-end development is performed using TypeScript-based frameworks within the Node.js ecosystem. Refer to the [Node.js guide](./tech-node.md) for more information. Data exploration and sharing interfaces are covered under [Machine learning and data science](#machine-learning-and-data-science).
+- Python-based UI frameworks are **not used for enterprise front-end applications**. Front-end development is performed using TypeScript-based frameworks within the Node.js ecosystem. Refer to the [Node.js guide](../tech-node/) for more information. Data exploration and sharing interfaces are covered under [Machine learning and data science](#machine-learning-and-data-science).
 
 ## Data processing
 
@@ -89,9 +89,6 @@ These choices apply to dataset processing and validation in data engineering, an
 
 - Use [pandas](https://pandas.pydata.org/) for declarative, set-based operations on datasets that can be processed in memory, typically ranging from MBs to GBs in size.
 - Use [PySpark](https://spark.apache.org/docs/latest/api/python/index.html) for declarative, set-based operations that require distributed processing, typically on datasets ranging from tens of GBs to TBs in size.
-- Use [Pandera](https://pandera.readthedocs.io/en/stable/) to validate important dataset contracts.
-- Use [Great Expectations](https://docs.greatexpectations.io/) for comprehensive data-quality suites and documentation where needed.
-- Use [DVC](https://dvc.org/) when projects require dataset versioning, experiment reproducibility or pipeline lineage. Store datasets in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store datasets directly in source-control repositories.
 - Use [Apache Airflow](https://airflow.apache.org/) for workflow orchestration using Python code.
 
 ## Machine learning and data science
@@ -100,11 +97,10 @@ Apply the shared [Data processing](#data-processing) choices for dataset prepara
 
 ### Exploration and experimentation
 
-- Use [JupyterLab](https://jupyter.org/) for notebook-based experimentation.
-- Use [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) or [Plotly](https://plotly.com/python/) for visualisation.
+- Use [Microsoft Fabric Notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/author-execute-notebook) or [JupyterLab](https://jupyter.org/) for notebook-based experimentation.
 - Use [Streamlit](https://streamlit.io/) for data exploration and sharing interfaces, not enterprise front-end applications.
 - Use [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking.
-
+`
 ### Training and model lifecycle
 
 - Use [MLflow Model Registry](https://mlflow.org/classical-ml/model-registry/) for model version and lifecycle management. Store models in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store models directly in source-control repositories.
@@ -112,6 +108,9 @@ Apply the shared [Data processing](#data-processing) choices for dataset prepara
 - Use [PyTorch](https://pytorch.org/) for deep learning.
 - Only use [TensorFlow](https://www.tensorflow.org/) when model dependencies require it.
 - Store models in the training framework's native serialisation format. Consider [ONNX](https://onnx.ai/) when the model and target runtime support portable deployment.
+- Apply Python versions, Compatibility exceptions and Safe Dependency Management to both training and consuming environments.
+- Keep Python, machine-learning frameworks and dependencies compatible between training and consuming environments.
+- When training or exporting a model, scan and apply required security updates, then retrain and validate the model before updating both environments together.
 
 ## Testing
 
