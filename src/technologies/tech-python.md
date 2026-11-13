@@ -12,6 +12,12 @@ review:
     review_cycle: ANNUAL
 ---
 
+## Guidance scope
+
+This playbook outlines what should and should not be used when working with Python. Different teams in different areas can use their own judgement as to what must apply to your context.
+
+If you have reason to deviate from this guidance, you may do so. When you deviate, include clear justification for your decision.
+
 Apply the shared standards to every Python project, then use the workload-specific guidance relevant to your project. A project may use guidance from more than one section; for example, a model-serving API uses both application and machine-learning guidance.
 
 ## Python versions
@@ -105,9 +111,8 @@ Apply the shared [Data processing](#data-processing) choices for dataset prepara
 
 - Use [MLflow Model Registry](https://mlflow.org/classical-ml/model-registry/) for model version and lifecycle management. Store models in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store models directly in source-control repositories.
 - Use [scikit-learn](https://scikit-learn.org/) for feature engineering, traditional machine learning and model evaluation.
-- Use [PyTorch](https://pytorch.org/) for deep learning.
-- Only use [TensorFlow](https://www.tensorflow.org/) when model dependencies require it.
 - Store models in the training framework's native serialisation format. Consider [ONNX](https://onnx.ai/) when the model and target runtime support portable deployment.
+- Do not store models using [pickle](https://docs.python.org/3/library/pickle.html) format in production environments.
 - Apply Python versions, Compatibility exceptions and Safe Dependency Management to both training and consuming environments.
 - Keep Python, machine-learning frameworks and dependencies compatible between training and consuming environments.
 - When training or exporting a model, scan and apply required security updates, then retrain and validate the model before updating both environments together.
