@@ -107,7 +107,7 @@ Apply the shared [Data processing](#data-processing) choices for dataset prepara
 - Use [Microsoft Fabric Notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/author-execute-notebook) or [JupyterLab](https://jupyter.org/) for notebook-based experimentation.
 - Use [Streamlit](https://streamlit.io/) for data exploration and sharing interfaces, not enterprise front-end applications.
 - Use [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking.
-`
+
 ### Training and model lifecycle
 
 - Use [MLflow Model Registry](https://mlflow.org/classical-ml/model-registry/) for model version and lifecycle management. Store models in approved object storage such as Amazon S3 or Azure Blob Storage. Do not store models directly in source-control repositories.
