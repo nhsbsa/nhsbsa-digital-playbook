@@ -52,6 +52,14 @@ In Java, we use [Slf4J][java_slf4j] as our logging API, with [Logback][java_logb
 
 In Node, we use [Winston][node_winston] for logging.
 
+In Python, we use [structlog][python_structlog]. The examples below assume a logger created with:
+
+```python
+import structlog
+
+logger = structlog.get_logger(__name__)
+```
+
 We use UTF-8 encoding and output in JSON for simpler integration into [Datadog][datadog], our centralised log collation service.
 
 ## Logging levels
@@ -122,7 +130,11 @@ System.out.println("A useful log statement");
 console.log("A useful log statement");
 ```
 
-Logging libraries should provide data as arguments to log messages with placeholders. This has performance benefits in languages such as Java, but more importantly it allows data to be sanitised within the library. For instance, use this form:
+```python [g1:Python]
+print("A useful log statement")
+```
+
+Logging libraries should provide data as arguments to log messages with placeholders or as structured fields. This has performance benefits in languages such as Java, but more importantly it allows data to be sanitised within the library when suitable sanitisation is configured. For instance, use this form:
 
 ```java [g1:Java]
 logger.info("Here is some data - {}", data);
@@ -130,6 +142,10 @@ logger.info("Here is some data - {}", data);
 
 ```javascript [g1:Javascript]
 logger.log('info', 'Here is some data -  %s', data);
+```
+
+```python [g1:Python]
+logger.info("Here is some data", data=data)
 ```
 
 and avoid this form:
@@ -142,6 +158,12 @@ logger.info("Here is some data - " + data);
 logger.log('info', 'Here is some data - ' + data);
 ```
 
+```python [g1:Python]
+logger.info(f"Here is some data - {data}")
+```
+
+With structlog, keep the event message separate from contextual data by passing data as keyword arguments. These fields can be processed and rendered as JSON using `structlog.processors.JSONRenderer` configured at application startup. Structured fields do not automatically remove PII or secrets; only pass data that is safe to log.
+
 ### Content
 
 Log entries should represent atomic events with contextual information to understand the event.
@@ -150,32 +172,51 @@ Log entries should represent atomic events with contextual information to unders
 * Contextual information should include the application flow and logic that caused the event
 * Contextual information should include enough data to identify what caused the event
 
-Data used in log entries should be prefixed with a contextual keyword (e.g. `User:`) and wrapped in delimiters (e.g. `[]`) to facilitate parsing
+Data used in text log entries should be prefixed with a contextual keyword (e.g. `User:`) and wrapped in delimiters (e.g. `[]`) to facilitate parsing. For structured JSON logs, use descriptive field names instead.
 
 * Depending on the capability of the logging library, delimiters may be automatically included for data items.
 * Parsing of logged data should be verified with a working example script
 * Don’t leave log parsing until its needed to resolve a live issue. A working script that parses data according to the defined delimiters will verify that the data can be parsed and used.
 * Datadog provides a [pipeline](https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source) feature to allow extraction of marked up data items as metrics.
 
-```java [g1:Javascript]
+```java [g1:Java]
 logger.info("User: [{}] successfully authenticated", user.getId())
 ```
 
-```java [g1:Javascript]
+```javascript [g1:Javascript]
 logger.info("User: [%s] successfully authenticated", user.id)
+```
+
+```python [g1:Python]
+logger.info("User successfully authenticated", user_id=user.id)
 ```
 
 Data in log statements should be placed in order of relevance to the event
 
 * When reviewing log files it is very helpful to see data in priority order within a single log statement so that the most important aspect of the event is read first. For instance, you may want to search for all log events on a particular case by ID. Once that is done, the actual case ID become less relevant than the thing that happened to it.
 
-```java [g1:Javascript]
+```java [g1:Java]
 logger.info("Changed NewState: [{}] for Case: [{}]", case.getState(), case.getId());
 ```
 
-```java [g1:Javascript]
+```javascript [g1:Javascript]
 logger.info("Change NewState: [%s] for Case: [%s]", case.state, case.id);
 ```
+
+```python [g1:Python]
+logger.info("Changed case state", new_state=case.state, case_id=case.id)
+```
+
+In Python, use structlog's `bind()` method to attach shared context to a logger without repeating the fields in every log statement:
+
+```python
+case_logger = logger.bind(case_id=case.id)
+
+case_logger.info("Case processing started")
+case_logger.info("Changed case state", new_state=case.state)
+```
+
+Both events include `case_id`. The `bind()` method returns a new logger without modifying the original logger. Keep the bound logger scoped to the relevant operation so that its context is not reused for another case.
 
 ### Error cases
 
@@ -189,6 +230,15 @@ Exceptions should be logged with a full stack trace
 
 Applications should provide a top level exception handler so that all exceptions are logged.
 
+In Python, call `logger.exception()` inside an exception handler to include the current exception and its stack trace. Configure `structlog.processors.format_exc_info` before `structlog.processors.JSONRenderer` to include the stack trace in JSON logs. Review exception messages for sensitive data before logging them, and do not enable capture of local variables in tracebacks.
+
+```python
+try:
+  process_case(case)
+except CaseProcessingError:
+  logger.exception("Case processing failed", case_id=case.id)
+```
+
 Asynchronous code must be guarded to ensure that exceptions do not propagate and break subsequent calls in the framework.
 
 Known errors should be logged with a unique error code to identify them. This requires the development team to create and maintain a catalogue of known system errors and codes
@@ -201,6 +251,16 @@ logger.error("[{}] OldStatus: [{}] NewStatus: [{}] disallowed for Case: [{}]",
 ```javascript [g1:Javascript]
 logger.error("[%s] OldStatus: [%s] NewStatus: [%s] disallowed for Case: [%s]", 
     ServiceErrors.CASE_INVALID_STATUS_CHANGE, case.status, newStatus, case.id);
+```
+
+```python [g1:Python]
+logger.error(
+  "Case status change disallowed",
+  error_code=ServiceErrors.CASE_INVALID_STATUS_CHANGE,
+  old_status=case.status,
+  new_status=new_status,
+  case_id=case.id,
+)
 ```
 
 ## Log review
@@ -222,6 +282,7 @@ A review of log events must be undertaken prior to any minor release. A log revi
 * [Logback][java_logback]
 * [Lombok][java_lombok]
 * [Winston][node_winston]
+* [structlog][python_structlog]
 * [Datadog][datadog]
 
 [owasp_logging_cheatsheet]: <https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html>
@@ -232,4 +293,5 @@ A review of log events must be undertaken prior to any minor release. A log revi
 [java_logback]: <https://logback.qos.ch/>
 [java_lombok]: <https://projectlombok.org/>
 [node_winston]: <https://www.npmjs.com/package/winston>
+[python_structlog]: <https://www.structlog.org/en/stable/>
 [datadog]: <https://www.datadoghq.com/>
