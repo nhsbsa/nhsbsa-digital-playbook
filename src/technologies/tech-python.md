@@ -14,11 +14,12 @@ review:
 
 ## Guidance scope
 
-This playbook outlines what should and should not be used when working with Python. Different teams in different areas can use their own judgement as to what must apply to your context.
+This playbook outlines what should and should not be used when working with Python. 
+
+Python is used widely across the organisation to support a variety of needs and use cases, from live systems in production to interactive notebooks for data analysis. Different teams in different areas use can use their own judgement as to what must apply to your context.
 
 If you have reason to deviate from this guidance, you may do so. When you deviate, include clear justification for your decision.
 
-Apply the shared standards to every Python project, then use the workload-specific guidance relevant to your project. A project may use guidance from more than one section; for example, a model-serving API uses both application and machine-learning guidance.
 
 ## Python versions
 
