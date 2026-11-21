@@ -12,13 +12,30 @@ review:
     review_cycle: ANNUAL
 ---
 
+## NHSBSA Mandatory Rules
+
+Teams should be self directing and adopt tools and processes to fit their circumstances, however we have these non-negotiable standards that must be adhered to in all Python code, whether analytical (such as notebooks, data pipelines and machine learning) or operational (such as services and applications):
+
+* __Use supported CPython__
+  Projects must use a supported version of [CPython](https://www.python.org/). Alternative implementations such as PyPy or IronPython are not supported. Commit a `.python-version` file to identify the version in use, and declare the supported Python range in `pyproject.toml`. See [Python versions](#python-versions).
+* __Lock and review dependencies__
+  Dependencies must be locked to reviewed versions and the lockfile committed. A pinned version is not necessarily safe. Review new and updated dependencies, and follow the [Python dependency-chain protection guidance](../../security/tech-python-dependency-chain-abuse/) before installing or updating packages. See [Environments and dependencies](#environments-and-dependencies).
+* __Never commit credentials__
+  Credentials and other secrets must never be committed to source control. Use [python-dotenv](https://pypi.org/project/python-dotenv/) only for local development, and read deployment-specific configuration from environment variables at the process boundary. See [Common libraries](#common-libraries).
+* __No Python UI frameworks for enterprise front-ends__
+  Enterprise front-end applications must be built with TypeScript-based frameworks in the Node.js ecosystem, not Python-based UI frameworks. See the [Node.js guide](../tech-node/).
+* __Models are not held in source control or pickled in production__
+  Machine-learning models must not be stored in source-control repositories, and must not be stored using [pickle](https://docs.python.org/3/library/pickle.html) format in production environments. See [Training and model lifecycle](#training-and-model-lifecycle).
+* __Keep training and consuming environments aligned__
+  Python versions, machine-learning frameworks and dependencies must be compatible between training and consuming environments. Security updates must be applied, and the model retrained and validated, before both environments are updated together.
+
 ## Guidance scope
 
 This playbook outlines what should and should not be used when working with Python. 
 
-Python is used widely across the organisation to support a variety of needs and use cases, from live systems in production to interactive notebooks for data analysis. Different teams in different areas use can use their own judgement as to what must apply to your context.
+Python is used widely across the organisation to support a variety of needs and use cases, from live systems in production to interactive notebooks for data analysis. Different teams in different areas can use their own judgement as to what applies to your context, except for the [mandatory rules](#nhsbsa-mandatory-rules) above.
 
-If you have reason to deviate from this guidance, you may do so. When you deviate, include clear justification for your decision.
+If you have reason to deviate from the remaining guidance, you may do so. When you deviate, include clear justification for your decision.
 
 
 ## Python versions
@@ -88,7 +105,7 @@ Choose established, maintained frameworks and libraries that fit the service or 
 - Use [Typer](https://typer.tiangolo.com/) for CLI applications.
 - Use [SQLAlchemy](https://www.sqlalchemy.org/) for object-relational mapping and [Liquibase](https://www.liquibase.com/) for database migrations.  Refer to our [data stores guide](../technologies/#data-stores) for more information.
 - Use [Babel](https://babel.pocoo.org/) for internationalisation.
-- Python-based UI frameworks are **not used for enterprise front-end applications**. Front-end development is performed using TypeScript-based frameworks within the Node.js ecosystem. Refer to the [Node.js guide](../tech-node/) for more information. Data exploration and sharing interfaces are covered under [Machine learning and data science](#machine-learning-and-data-science).
+- Python-based UI frameworks are **not used for enterprise front-end applications**. Front-end development is performed using TypeScript-based frameworks within the Node.js ecosystem. Refer to the [Node.js guide](../tech-node/) for more information.
 
 ## Data processing
 
@@ -96,7 +113,13 @@ These choices apply to dataset processing and validation in data engineering, an
 
 - Use [pandas](https://pandas.pydata.org/) for declarative, set-based operations on datasets that can be processed in memory, typically ranging from MBs to GBs in size.
 - Use [PySpark](https://spark.apache.org/docs/latest/api/python/index.html) for declarative, set-based operations that require distributed processing, typically on datasets ranging from tens of GBs to TBs in size.
-- Use [Microsoft Fabric Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview), [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) or [Apache Airflow](https://airflow.apache.org/) for workflow orchestration.
+  - On AWS, use [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html) to run and orchestrate PySpark ETL jobs.
+
+### Workflow orchestration
+
+- Use [Microsoft Fabric Pipelines](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview) as the default for workflow orchestration on the modern data platform.
+- Use [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) for workflow orchestration on AWS.
+- Use [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html) workflows and triggers to orchestrate ETL jobs, and Step Functions where a workflow spans other AWS services.
 
 ## Machine learning and data science
 
@@ -105,7 +128,6 @@ Apply the shared [Data processing](#data-processing) choices for dataset prepara
 ### Exploration and experimentation
 
 - Use [Microsoft Fabric Notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/author-execute-notebook) or [JupyterLab](https://jupyter.org/) for notebook-based experimentation.
-- Use [Streamlit](https://streamlit.io/) for data exploration and sharing interfaces, not enterprise front-end applications.
 - Use [MLflow](https://mlflow.org/docs/latest/index.html) for experiment tracking.
 
 ### Training and model lifecycle
