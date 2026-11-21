@@ -194,6 +194,30 @@ __DECOMMISSION__
 
 {{ schedule.appReleaseAdoptionSchedule('java_aws_lambda') }}
 
+## Python
+
+::: details How we work out the adoption schedule for Python
+
+We follow the [Python release schedule](https://devguide.python.org/versions/).
+Python has an annual release cycle and each version receives five years of support.
+
+::: card
+
+__ASSESS__
+: on _initial release_
+
+__ADOPT__
+: 6 months after _initial release_
+
+__DECOMMISSION__
+: by _end of life_
+
+:::
+
+{{ schedule.appReleaseAdoptionSchedule('python') }}
+
+See the [Python Technology Playbook](../tech-python/) for recommendations and guidance on workload-specific exceptions to this schedule.
+
 ## Ruby
 
 Ruby is a deprecated language for use in the NHSBSA. Existing projects using Ruby should maintain versions in accordance with this schedule.

@@ -9,7 +9,7 @@ review:
     last_reviewed_date: 2023-05-06
     review_cycle: ANNUAL
 ---
-Here’s a list of our preferred technology choices when implementing in Node.js. We’re not prescriptive in these choices, but have a good reason to deviate from the norm. If you there’s a better option, raise it at the Developer Community.
+Here’s a list of our preferred technology choices when implementing in Node.js. If you there’s a better option, raise it at the Developer Community.
 
 ## Node.js versions
 
