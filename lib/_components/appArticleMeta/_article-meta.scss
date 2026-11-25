@@ -1,0 +1,119 @@
+/* ==========================================================================
+   COMPONENTS / #ARTICLE-META
+   ========================================================================== */
+
+.nhsbsa-article-meta {
+  border-top: 1px solid $nhsuk-border-color;
+  padding-top: nhsuk-spacing(4);
+  width: 100%;
+  margin-top: nhsuk-spacing(8);
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: nhsuk-spacing(2);
+
+  @include mq($until: tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  > * {
+    grid-column: 1 / -1;
+  }
+
+  h3, .nhsbsa-revision__table caption {
+    @include nhsuk-typography-responsive(19);
+    color: $nhsuk-secondary-text-color;
+    font-weight: bold;
+    margin-top: nhsuk-spacing(2);
+    margin-bottom: nhsuk-spacing(2);
+  }
+
+  dt,
+  dd {
+    @include nhsuk-typography-responsive(16);
+    color: $nhsuk-secondary-text-color;
+    margin-bottom: 0;
+  }
+
+  dl {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    margin: 0;
+
+    div {
+      display: contents;
+    }
+
+    dt {
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+
+      &::after {
+        content: ':';
+      }
+    }
+
+    dd {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__section {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    border-top: 1px solid $nhsuk-border-color;
+    margin-top: nhsuk-spacing(4);
+    padding-top: nhsuk-spacing(2);
+
+    > * {
+      grid-column: 1 / -1;
+    }
+  }
+
+  table {
+    margin-bottom: 0;
+
+    th,
+    td {
+      @include nhsuk-typography-responsive(16);
+      color: $nhsuk-secondary-text-color;
+      padding: nhsuk-spacing(2);
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    td {
+      font-weight: 400;
+    }
+
+    @include mq($until: tablet) {
+      thead {
+        display: none;
+      }
+
+      tr {
+        display: block;
+        border-bottom: 1px solid $nhsuk-border-color;
+        padding: nhsuk-spacing(2) 0;
+      }
+
+      td {
+        display: block;
+        border: none;
+        padding: nhsuk-spacing(1) 0;
+
+        &::before {
+          content: attr(data-label);
+          display: block;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
