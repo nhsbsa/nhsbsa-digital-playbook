@@ -51,7 +51,7 @@ It should catalogue service specific secrets, the secret detection rule IDs and 
 
 ## Dealing with committed secrets
 
-[Raise a security incident](../../security) with the Information Security team when you discover secrets committed to a repository. They will engage with the relevant stakeholders to assess the impact, agree remediation actions, and provide an audit trail.
+[Raise a security incident](../../security/) with the Information Security team when you discover secrets committed to a repository. They will engage with the relevant stakeholders to assess the impact, agree remediation actions, and provide an audit trail.
 
 ### Revoke keys immediately
 

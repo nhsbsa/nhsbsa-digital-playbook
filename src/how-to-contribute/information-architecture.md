@@ -22,11 +22,11 @@ We have broken down our content into these initial themes:
 * _Role based_
   * Delivery (including agile)
   * Content Design
-  * [Research](../../research)
-  * [Design](../../design)
+  * [Research](../../research/)
+  * [Design](../../design/)
   * Architecture
-  * [Development](../../development)
-  * [Testing](../../testing)
+  * [Development](../../development/)
+  * [Testing](../../testing/)
   * Platform
   * Support
 * _People and ways of working_

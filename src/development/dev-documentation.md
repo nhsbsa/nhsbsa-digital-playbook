@@ -2,7 +2,7 @@
 layout: article
 title: "Standard code repository files"
 tags: dev
-order: 12
+order: 14
 related:
   tag: dev_docs
 review:

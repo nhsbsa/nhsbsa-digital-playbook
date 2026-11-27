@@ -1,20 +1,24 @@
 ---
 layout: article
-title: "Content design at Beta"
-description: "What does a Content Designer do at Beta?"
+title: "Content design in beta"
+description: "What content designers do in beta"
 tags: content-design
 order: 4
 ---
 
-## What is expected from a Content Designer in Beta
+During the beta phase, we refine and optimise user experience. We iterate and improve the product or service, testing with real users to make sure content supports a simple, clear and accessible experience.
 
-During the Beta phase, the product is closer to its final form, and the focus is on refining and optimising the user experience. As a Content Designer, you might be involved in:
+## What content designers do in beta
 
-- make sure all routes that users take into the service are now considered as valid end-to-end user journeys
-- taking your best idea from alpha and start building it for real with a select group of users (this is known as Private Beta)
-- working with the team to decide whether further changes are required to fine tune the final product
-- helping track down work to be done based on user feedback
-- ensuring that solutions are built for everyone - not just a select few
-- ensuring that solutions meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard
-- contributing and sharing any new design patterns that are developed to meet user needs within the NHS / GOV design communities
-- observing user research and analysing data and analytics
+Our content designers:
+
+- build on content findings from alpha
+- test prototypes with a select group of users (this is known as private beta)
+- make sure content supports interactions and works within selected components
+- observe user research, continuing to iterate based on user feedback
+- make sure content meets the [latest published WCAG guidance](https://www.w3.org/WAI/standards-guidelines/wcag/) to at least ‘AA’ standard
+- share any new content patterns we’ve developed with NHS and GOV design communities
+- collaborate with policy and subject matter experts to ensure content is accurate and compliant
+- collaborate with developers to identify error scenarios and create error messages
+- design accessible URLs and page titles across the user journey
+- work with the delivery team to decide when changes are ready to be released and measured

@@ -13,27 +13,27 @@ review:
   
 Chart titles should be appropriate, detailing the main message, key point or trend the chart is demonstrating.  
   
-Chart titles should be: 
+Chart titles should be:
 
-- front-loaded 
-- in the active voice 
-- in sentence case 
-- as concise as possible 
+- front-loaded
+- in the active voice
+- in sentence case
+- as concise as possible
 - 15 words or fewer  
   
 For example, ‘Croydon has the most monetary transactions out of all suppliers’.  
   
 Chart titles should also be tagged correctly. Whether you publish your chart in a document or on a webpage, the background code will have ‘tags’ for the heading structure.  
   
-Tags help users understand the structure of the document. They do this by putting visual cues on section headings and subheadings (for example, different font sizes and bold text).   
+Tags help users understand the structure of the document. They do this by putting visual cues on section headings and subheadings (for example, different font sizes and bold text).
 They also help screen reader users to better understand document structure. Screen reader software reads out tags and screen reader users use them to find the content they need.  
   
 ## Chart subtitles  
   
-Chart subtitles should provide a specific description of the data used in the chart. This must include the: 
+Chart subtitles should provide a specific description of the data used in the chart. This must include the:
 
-- statistical measure 
-- geographic coverage 
+- statistical measure
+- geographic coverage
 - time-period  
   
 For example, ‘Sum of all transactions (£) from Jan 2025 to Feb 2025 by supplier.’  
@@ -51,19 +51,22 @@ For example, only label every other year in a time series. If you do this, use t
   
 Commas should be used to separate thousands on chart label values, for example 9,000.  
   
-Only use colours that have the required level of contrast with the background. See the [Colours guidance](../colour/colour-guidance.md) for more information on this.  
+Only use colours that have the required level of contrast with the background. See the [colour guidance](../../colour/colour-guidance/) for more information on this.  
   
 ## Chart legends  
   
 Avoid legends where possible. If legends are used, the layout should be stated, and any lines and categories should be labelled directly.  
   
-### Bar charts  
-If legends are used, they should be presented in the same order and orientation as the stacks in the bars, or the bars in the clusters.  The legend layout should be stated just above the chart. Users can then match labels using positioning alongside colour, or alternative encoding methods.   
+### Bar charts
+
+If legends are used, they should be presented in the same order and orientation as the stacks in the bars, or the bars in the clusters.  The legend layout should be stated just above the chart. Users can then match labels using positioning alongside colour, or alternative encoding methods.
   
-### Line charts  
+### Line charts
+
 Try to place labels at the end of the lines, on the right-hand side of the chart. Legends rely on users matching labels to lines using colours which can be difficult for some users. Therefore, legends should only be used when essential, for example when lines are very close together.  
   
-### Pie and doughnut charts  
+### Pie and doughnut charts
+
 Categories should be labelled directly. Legends and keys rely on users matching labels to categories using colour alone. This fails [accessibility success criterion 1.4.1 Use of Colour][titles 4].  
   
 For more information about subtitles and legends, visit the [Government Analytics Framework accessible charts checklist][titles 3].  

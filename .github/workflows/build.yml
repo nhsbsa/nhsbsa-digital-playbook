@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          BASE_URL=${{ vars.BASE_URL }} npm run build    
+          NODE_ENV=production BASE_URL=${{ vars.BASE_URL }} npm run build    
           
       - name: Unit test and eslint check
         run: |

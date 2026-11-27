@@ -15,6 +15,14 @@ a.header-anchor {
   text-decoration: none;
 }
 
+/* Skip link */
+.nhsuk-skip-link:focus {
+	display:block;
+	position: static;
+	padding: 10px;
+	text-decoration: underline;
+}
+
 blockquote {
 	@extend .nhsuk-inset-text;
 	max-width: calc(100% - 80px);
@@ -202,18 +210,35 @@ a.nhsuk-footer__list-item-link:visited {
 }
 
 /* Cards */
-
 .nhsuk-card__header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 	h1,h2,h3 {
-		display: inline-block;
 		margin-bottom: 0px;
 	}
 	strong {
-		display: inline-block;
 		margin-left: auto;
+		flex-shrink: 0;
+	}
+}
+.app-pane__main-content .nhsuk-card-group__item {
+	width: 100%;
+	float: none;
+}
+@media (min-width: 58.75em) {
+	.app-pane__main-content .nhsuk-card-group__item {
+		width: 33.3333%;
+		float: left;
+	}	
+}
+@media (min-width: 48.0625em) {
+ .nhsuk-card__header {
+		display: block;
+	}
+	.nhsuk-card__header .nhsuk-tag {
+		margin-top: 5px;
 	}
 }
 
@@ -276,6 +301,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
+	text-wrap: auto;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -344,7 +370,7 @@ pre[class*="language-"] {
 }
 
 .namespace {
-	opacity: .7;
+	opacity: 1;
 }
 
 .token.property,
@@ -363,7 +389,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: rgb(89, 125, 15);
+	color: #2C4007B3;
 }
 
 .token.operator,
@@ -383,7 +409,7 @@ pre[class*="language-"] {
 
 .token.function,
 .token.class-name {
-  	color: #DD4A68;
+  	color: #D93656;
 }
 
 .token.regex,

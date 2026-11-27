@@ -7,8 +7,8 @@ header:
   service: "Business Services Authority DDaT playbook"
 footer:
   links:
-    - url: "/accessibility"
-      label: "Accessibility"
+    - url: "/accessibility-statement/"
+      label: "Accessibility statement"
     - url: "https://www.nhsbsa.nhs.uk/contact-us"
       label: "Contact us"
     - url: "/cookie-policy/"

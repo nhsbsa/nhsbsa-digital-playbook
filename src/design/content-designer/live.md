@@ -1,20 +1,20 @@
 ---
 layout: article
-title: "Content design during Live"
-description: "What does a Content Designer do at Live?"
+title: "Content design during live"
+description: "What content designers do in live"
 tags: content-design
 order: 5
 ---
 
-## What is expected from a Content Designer in Live
+During the live phase, we monitor content performance and identify areas for continuous improvement.
 
-During the Live phase, the product is in its final form, and the focus is on refining and optimising the user experience. As a Content Designer, you might be involved in:
+## What content designers do in live
 
-- make sure all routes that users take into the service are now considered as valid end-to-end user journeys
-- taking your best idea from alpha and start building it for real with a select group of users (this is known as Private Beta)
-- working with the team to decide whether further changes are required to fine tune the final product
-- helping track down work to be done based on user feedback
-- ensuring that solutions are built for everyone - not just a select few
-- ensuring that solutions meet the [latest published WCAG standard](https://www.w3.org/WAI/standards-guidelines/wcag/) to 'AA' standard
-- contributing and sharing any new design patterns that are developed to meet user needs within the NHS / GOV design communities
-- observing user research and analysing data and analytics
+Our content designers:
+
+- use analytics, feedback and user research to monitor how content is performing
+- review content so it stays accurate, up to date and aligned with any policy or service changes
+- respond to emerging user needs or policy changes, iterating and improving as needed
+- keep content consistent with style guides, design systems and content patterns, making sure it reflects current best practice
+- support ongoing accessibility and inclusive design improvements
+- contribute to continuous improvement and future roadmap planning
