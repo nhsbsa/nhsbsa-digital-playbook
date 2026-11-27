@@ -19,6 +19,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="{{ description | markdown("inline") | striptags(true) }}">
+  {% if title %}<meta data-pagefind-meta="title[content]" content="{{ title | escape }}">{% endif %}
   <meta name="robots" content="{{ robots | default('noindex') }}">
   {% endblock %}
   
@@ -119,6 +120,9 @@
     {{ header({
       "homeHref": homeUrl,
       "ariaLabel": siteMeta.header.description,
+      "showSearch": "true",
+      "searchAction": "/search/" | url,
+      "searchInputName": "q",
       "organisation": {
         "name": siteMeta.header.organisation,
         "descriptor": siteMeta.header.description
@@ -141,6 +145,7 @@
     <script src="{{ '/javascripts/nhsuk.min.js' | url }}"></script>
     <script src="{{ '/javascripts/application.js' | url }}"></script>
     <script src="{{ '/javascripts/cookie-banner.js' | url }}"></script>
+    <script src="{{ '/javascripts/search-autocomplete.js' | url }}"></script>
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 

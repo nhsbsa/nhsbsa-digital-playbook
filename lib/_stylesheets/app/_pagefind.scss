@@ -1,0 +1,264 @@
+/* Search uses the NHS typography, colours and focus treatment. */
+:root {
+  --pagefind-ui-primary: #{$color_nhsuk-blue};
+  --pagefind-ui-text: #{$color_nhsuk-black};
+  --pagefind-ui-background: #{$color_nhsuk-white};
+  --pagefind-ui-border: #{$color_nhsuk-grey-3};
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 0;
+  --pagefind-ui-font: "Frutiger W01", Arial, sans-serif;
+}
+
+.app-search {
+  max-width: 850px;
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+#search-results {
+  .pagefind-ui__form {
+    &::before {
+      top: 18px;
+      left: 18px;
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+    }
+  }
+
+  .pagefind-ui__search-input {
+    @include nhsuk-typography-responsive(19);
+
+    height: 56px;
+    padding: 8px 64px 8px 50px;
+    border: 2px solid $color_nhsuk-grey-1;
+    border-radius: 0;
+    font-weight: normal;
+
+    &::placeholder {
+      color: $color_nhsuk-grey-1;
+      opacity: 1;
+    }
+
+    &:focus {
+      border: 4px solid $nhsuk-focus-text-color;
+      padding-left: 48px;
+      box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color;
+      outline: $nhsuk-focus-width solid transparent;
+    }
+  }
+
+  .pagefind-ui__search-clear {
+    // The form includes the results. Anchor to the input's fixed height.
+    top: 6px;
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: $color_nhsuk-white;
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 12px auto;
+      background-color: $color_nhsuk-grey-1;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 6 12 12M6 18 18 6' stroke='black' stroke-width='2'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+
+    &:hover {
+      background-color: $color_nhsuk-grey-5;
+    }
+
+    &:focus {
+      background-color: $nhsuk-focus-color;
+      outline: $nhsuk-focus-width solid transparent;
+      box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color;
+    }
+  }
+
+  .pagefind-ui__drawer {
+    margin-top: nhsuk-spacing(5);
+  }
+
+  .pagefind-ui__message {
+    @include nhsuk-typography-responsive(19);
+
+    height: auto;
+    padding: 0 0 nhsuk-spacing(4);
+    margin: 0;
+  }
+
+  .pagefind-ui__results {
+    margin: 0;
+    list-style: none;
+  }
+
+  .pagefind-ui__result {
+    padding: nhsuk-spacing(4) 0;
+    border-color: $color_nhsuk-grey-3;
+  }
+
+  .pagefind-ui__result-inner {
+    margin-top: 0;
+  }
+
+  .pagefind-ui__result-title {
+    @include nhsuk-typography-responsive(24);
+
+    margin-bottom: nhsuk-spacing(2);
+  }
+
+  .pagefind-ui__result-link {
+    color: $color_nhsuk-blue;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+
+    &:visited {
+      color: $color_nhsuk-purple;
+    }
+
+    &:hover {
+      color: $nhsuk-link-hover-color;
+      text-decoration: none;
+    }
+
+    &:focus {
+      @include nhsuk-focused-text();
+    }
+  }
+
+  .pagefind-ui__result-excerpt {
+    @include nhsuk-typography-responsive(19);
+
+    margin: 0;
+    color: $color_nhsuk-black;
+  }
+
+  .pagefind-ui__result-nested {
+    margin: nhsuk-spacing(3) 0 0;
+    padding: 0 0 0 nhsuk-spacing(3);
+    border-left: 3px solid $color_nhsuk-grey-3;
+
+    .pagefind-ui__result-title {
+      @include nhsuk-typography-responsive(19);
+    }
+
+    .pagefind-ui__result-link::before {
+      content: none;
+    }
+  }
+
+  mark {
+    background-color: $color_nhsuk-yellow;
+    color: $color_nhsuk-black;
+  }
+
+  .pagefind-ui__button {
+    @include nhsuk-typography-responsive(19);
+
+    width: auto;
+    min-height: 48px;
+    height: auto;
+    padding: nhsuk-spacing(3) nhsuk-spacing(4);
+    margin-top: nhsuk-spacing(4);
+    background-color: $color_nhsuk-green;
+    border: 0;
+    border-radius: $nhsuk-border-radius;
+    box-shadow: 0 4px 0 $nhsuk-button-shadow-color;
+    color: $color_nhsuk-white;
+
+    &:hover {
+      background-color: $nhsuk-button-hover-color;
+    }
+
+    &:focus {
+      background-color: $nhsuk-focus-color;
+      box-shadow: 0 4px 0 $nhsuk-focus-text-color;
+      color: $nhsuk-focus-text-color;
+      outline: $nhsuk-focus-width solid transparent;
+    }
+  }
+}
+
+.app-search-start {
+  margin-top: nhsuk-spacing(6);
+  border-top: 1px solid $color_nhsuk-grey-3;
+  padding-top: nhsuk-spacing(5);
+}
+
+.app-search-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: nhsuk-spacing(2) nhsuk-spacing(4);
+
+  a {
+    display: inline-block;
+    padding: nhsuk-spacing(2) 0;
+  }
+}
+
+.nhsuk-header__search-wrap {
+  position: relative;
+}
+
+.app-search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  background-color: $color_nhsuk-white;
+  border: 1px solid $color_nhsuk-grey-3;
+  box-shadow: 0 4px 8px rgba($nhsuk-box-shadow-color, 0.2);
+  max-height: min(420px, 60vh);
+  overflow-y: auto;
+
+  &[hidden] {
+    display: none !important;
+  }
+}
+
+.app-search-suggestions__item {
+  border-bottom: 1px solid $color_nhsuk-grey-4;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.app-search-suggestions__link {
+  display: block;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: nhsuk-spacing(3);
+  color: $color_nhsuk-blue;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    background-color: $color_nhsuk-grey-5;
+    color: $nhsuk-link-hover-color;
+  }
+}
+
+.app-search-suggestions__item--active .app-search-suggestions__link {
+  background-color: $nhsuk-focus-color;
+  box-shadow: inset 0 -3px $nhsuk-focus-text-color;
+  color: $nhsuk-focus-text-color;
+  text-decoration: none;
+}

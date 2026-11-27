@@ -15,12 +15,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: [
-      'lib/_components/site-search/*',
-      'node_modules/',
-      '_site/',
-      'coverage/',
-    ],
+    ignores: ['node_modules/', '_site/', 'coverage/'],
   },
   ...compat.extends('eslint:recommended'),
   {
